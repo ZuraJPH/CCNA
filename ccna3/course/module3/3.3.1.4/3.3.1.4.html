@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.4 Balanceo de carga de PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Balanceo de carga de PVST+</h1>
+        <div>
+          <p>En la topología de la figura 1, se muestran tres switches conectados mediante enlaces troncales 802.1Q. Hay dos VLAN, 10 y 20, que se enlazan de forma troncal a través de estos enlaces. El objetivo es configurar el S3 como puente raíz para la VLAN 20 y el S1 como puente raíz para la VLAN 10. El puerto F0/3 en el S2 es el puerto de reenvío para la VLAN 20 y el puerto de bloqueo para la VLAN 10. El puerto F0/2 en el S2 es el puerto de reenvío para la VLAN 10 y el puerto de bloqueo para la VLAN 20. </p>
+          <p></p>
+          <p>Además de establecer un puente raíz, también es posible establecer uno secundario.  Un puente raíz secundario es un switch que se puede convertir en puente raíz para una VLAN si falla el puente raíz principal. Si se tiene en cuenta que los otros puentes de la VLAN retienen su prioridad de STP predeterminada, este switch se convierte en el puente raíz en el caso de producirse una falla en el puente raíz principal. </p>
+          <p></p>
+          <p>Los pasos para configurar PVST+ en esta topología de ejemplo son los siguientes:</p>
+          <p></p>
+          <p>
+            <b>Paso 1:</b> Seleccionar los switches que desea como puentes raíz principal y secundario para cada VLAN. Por ejemplo, en la figura 1, el S3 es el puente principal y el S1 es el puente secundario para la VLAN 20.</p>
+          <p></p>
+          <p>
+            <b>Paso 2:</b> Configurar el switch para que sea el puente primario de la VLAN con el comando <b>spanning-tree vlan </b><i>número</i><b> root primary</b>, como se muestra en la figura 2. </p>
+          <p></p>
+          <p>
+            <b>Paso 3:</b> Configurar el switch para que sea el puente secundario de la VLAN con el comando <b>spanning-tree vlan </b><i>número</i><b> root secondary</b>. </p>
+          <p></p>
+          <p>Otra forma de especificar el puente raíz es establecer la prioridad de árbol de expansión de cada switch en el menor valor, de modo que se seleccione el switch como puente principal para la VLAN asociada.</p>
+          <p></p>
+          <p>Observe que, en la figura 2, el S3 está configurado como puente raíz principal para la VLAN 20 y el S1 está configurado como puente raíz principal para la VLAN 10. El S2 mantuvo la prioridad de STP predeterminada.</p>
+          <p></p>
+          <p>En la ilustración, también se observa que el S3 está configurado como puente raíz secundario para la VLAN 10 y el S1 está configurado como puente raíz secundario para la VLAN 20. Esta configuración habilita el equilibrio de carga del árbol de expansión, en el que el tráfico de la VLAN 10 se dirige al puente raíz S1 y el de la VLAN 20 se dirige al puente raíz S3.</p>
+          <p></p>
+          <p>Como se muestra en la figura 3, otra forma de especificar el puente raíz es establecer la prioridad de árbol de expansión de cada switch en el menor valor, de modo que se seleccione el switch como puente principal para la VLAN asociada. Se puede establecer la prioridad de switch para cualquier instancia de árbol de expansión. Esta configuración afecta la posibilidad de que un switch se elija como puente raíz. Un valor menor provoca el aumento de la probabilidad de que el switch sea seleccionado. El rango varía entre 0 y 61440 en incrementos de 4096; el resto de los valores se descarta. Por ejemplo, un valor de prioridad válido sería 4096 x 2 = 8192. </p>
+          <p></p>
+          <p>Como se muestra en la figura 4, el comando <b>show spanning-tree active</b> solo muestra los detalles de configuración de árbol de expansión para las interfaces activas. El resultado que se muestra pertenece al S1 configurado con PVST+. Existen varios parámetros de comandos del IOS de Cisco relacionados con el comando <b>show spanning-tree</b>.</p>
+          <p></p>
+          <p>En la figura 5, el resultado muestra que la prioridad de la VLAN 10 es 4096, la más baja de las tres prioridades de VLAN respectivas. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 6 para configurar y verificar el árbol de expansión para el S1 y el S3. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches interconectados mediante enlaces troncales.  El switch 3 es el puente raíz principal de la VLAN 20 y el puente raíz secundario de la VLAN 10.  El switch 1 es el puente raíz principal de la VLAN 10 y el secundario de la VLAN 20. La figura 2 muestra los comandos para configurar los puentes raíz principal y secundario en los switches 1 y 3 usando las palabras clave primary y secondary. La figura 3 muestra los comandos para configurar el switch 1 para que sea la raíz de la VLAN 10 y el switch 3 para que sea la raíz de la VLAN 20 usando la prioridad de 4096. La figura 4 muestra el resultado del comando show spanning guion tree active en el switch 1. El resultado demuestra que el switch 1 es el puente raíz de la VLAN 10. La figura 5 muestra el resultado del comando show running guion config en el switch. Están resaltados los comandos del árbol de expansión. La figura 6 es una actividad interactiva que permite que el estudiante practique la configuración del switch 3 como raíz principal de la VLAN 20 y la raíz secundaria de la VLAN 10.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

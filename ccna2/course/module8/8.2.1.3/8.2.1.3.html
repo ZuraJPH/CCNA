@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.3 SLAAC y DHCPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>SLAAC y DHCPv6</h1>
+        <div>
+          <p>La decisión de si un cliente se configura para obtener su información de dirección IPv6 de forma automática mediante SLAAC, mediante DHCPv6 o mediante una combinación de ambos depende de la configuración dentro del mensaje RA. </p>
+          <p></p>
+          <p>Los dos indicadores son el indicador de configuración de dirección administrada (indicador M) y el indicador de otra configuración (indicador O). </p>
+          <p></p>
+          <p>Mediante distintas combinaciones de los indicadores M y O, los mensajes RA tienen una de tres opciones de direccionamiento para el dispositivo IPv6, como se muestra en la ilustración:</p>
+          <p>
+            <ul>
+              <li>SLAAC (anuncio de router solamente)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>DHCPv6 sin estado (anuncio de router y DHCPv6)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>DHCPv6 con estado (DHCPv6 solamente)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Independientemente de la opción que se utilice, en RFC 4861 se recomienda que todos los dispositivos IPv6 realicen la detección de direcciones duplicadas (DAD) en cualquier dirección de unidifusión, entre las que se incluyen las direcciones configuradas mediante SLAAC o DHCPv6. DAD se implementa mediante ICMPv6, especificado por RFC 4443.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> aunque el mensaje RA especifique el proceso que debe utilizar el cliente para obtener una dirección IPv6 de forma dinámica, el sistema operativo cliente puede elegir omitir el mensaje RA y utilizar los servicios de un servidor de DHCPv6 exclusivamente.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra las tres opciones de mensajes de anuncio de router.  La primera es SLAAC, en la cual el router determina que la computadora use solo la información del mensaje de RA. Esta es la configuración predeterminada.  La segunda opción es DHCPv6 sin estado mediante SLAAC y DHCP.  En esta opción, el router brinda la información en un mensaje de anuncio de router, pero también indica a la computadora que obtenga cierta información de un servidor DHCPv6.  La opción tres es DHCP con estado. En esta opción, el router indica a la computadora que obtenga toda la información desde un servidor DHCPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

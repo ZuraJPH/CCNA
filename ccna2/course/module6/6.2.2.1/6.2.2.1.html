@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.1 Configuración de enlaces troncales IEEE 802.1Q</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de enlaces troncales IEEE 802.1Q</h1>
+        <div>
+          <p>Un enlace troncal de VLAN es un enlace de capa 2 del modelo OSI entre dos switches que transporta el tráfico para todas las VLAN (a menos que se restrinja la lista de VLAN permitidas de manera manual o dinámica). Para habilitar los enlaces troncales, configure los puertos en cualquier extremo del enlace físico con conjuntos de comandos paralelos.</p>
+          <p></p>
+          <p>Para configurar un puerto de switch en un extremo de un enlace troncal, utilice el comando <b>switchport mode trunk</b>. Con este comando, la interfaz cambia al modo de enlace troncal permanente. El puerto establece una negociación de protocolo de enlace troncal dinámico (DTP) para convertir el enlace en un enlace troncal, incluso si la interfaz conectada a este no acepta el cambio. En este curso, el comando <b>switchport mode trunk</b> es el único método que se implementa para la configuración de enlaces troncales.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: la configuración de DTP va más allá del alcance de este curso.</p>
+          <p></p>
+          <p>En la figura 1, se muestra la sintaxis del comando de IOS de Cisco para especificar una VLAN nativa (distinta de la VLAN 1). En el ejemplo, se configura la VLAN 99 como VLAN nativa con el comando <b>switchport trunk native vlan 99</b>.</p>
+          <p></p>
+          <p>Utilice el comando <b>switchport trunk allowed vlan </b><i>lista-vlan</i> de Cisco IOS para especificar la lista de VLAN que se permitirán en el enlace troncal.</p>
+          <p></p>
+          <p>En la figura 2, las VLAN 10, 20 y 30 admiten las computadoras de Cuerpo docente, Estudiante e Invitado (PC1, PC2 y PC3). El puerto F0/1 del switch S1 se configuró como puerto de enlace troncal y reenvía el tráfico para las VLAN 10, 20 y 30. La VLAN 99 se configuró como VLAN nativa. </p>
+          <p></p>
+          <p>En la figura 3, se muestra la configuración del puerto F0/1 del switch S1 como puerto de enlace troncal. La VLAN nativa se cambia a VLAN 99 y la lista de VLAN permitidas se restringe a 10, 20, 30 y 99.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> esta configuración supone el uso de los switches Cisco Catalyst 2960 que utilizan de manera automática la encapsulación 802.1Q en los enlaces troncales. Es posible que otros switches requieran la configuración manual de la encapsulación. Siempre configure ambos extremos de un enlace troncal con la misma VLAN nativa. Si la configuración de enlace troncal 802.1Q no es la misma en ambos extremos, el software IOS de Cisco registra errores.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una tabla con los comandos para configurar un enlace troncal en un puerto de switch y sus descripciones. La figura dos muestra una LAN simple con cuatro VLAN.  Una llamada muestra las cuatro VLAN, su número y nombre, y las direcciones de red de cada VLAN. La figura tres muestra la sintaxis para configurar F0/1 como enlace troncal, establecer la VLAN nativa a 99 y configurar las LAN permitidas para que incluyan incluir 10, 20 y 30.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

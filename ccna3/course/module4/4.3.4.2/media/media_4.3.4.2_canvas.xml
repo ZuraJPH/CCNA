@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR"> 
+	
+<slide>
+<element type="ROUTER" textId="ID_router_txt1" x="90" y="80" width="500" height="160" />
+<text id="ID_router_txt1"><![CDATA[<pre>R2# <b>debug standby ?</b>
+  errors   HSRP errors
+  events   HSRP events
+  packets  HSRP packets terse
+  Display limited range of HSRP errors, events and packets
+  <cr>
+ </pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+<slide>
+<element type="IMAGE" src="media_4.3.4.2_s2.png" x="0" y="0" width="680" height="490" />
+<element type="TEXT" id="ID_static_1" text="172.16.10.2" x="117" y="254" align="center" width="61.55" />
+<element type="TEXT" id="ID_static_2" text="172.16.10.3" x="497" y="254" align="center" width="61.7" />
+<element type="TEXT" compId="ID_s2_txt02" x="253" y="255" width="170.8" expand="down" align="center" />
+<element type="TEXT" id="ID_static_3" text="G0/1" x="212" y="248" align="center" width="23.85" />
+<element type="TEXT" id="ID_static_4" text="G0/1" x="437" y="248" align="center" width="23.85" />
+<element type="TEXT" compId="ID_s2_txt01" x="268" y="193" width="140.7" expand="up" align="center" />
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+<slide>
+<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+<element type="ROUTER" textId="ID_router_txt2" x="90" y="80" width="500" height="160" />
+<text id="ID_router_txt2"><![CDATA[<pre>R2# <b>debug standby packets</b>
+*Dec  2 15:20:12.347: HSRP: Gi0/1 Grp 1 <span class="orange">Hello  in</span>  172.16.10.2
+  <span class="orange">Active</span> pri 150 vIP 172.16.10.1            
+
+*Dec  2 15:20:12.643: HSRP: Gi0/1 Grp 1 <span class="orange">Hello  out</span> 172.16.10.3
+  <span class="orange">Standby</span> pri 100 vIP 172.16.10.1
+    
+ </pre>]]></text>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt3" x="83" y="80" width="515" height="350" />
+<text id="ID_router_txt3"><![CDATA[<pre>!!!!!!R1 is powered off!!!!!
+R2# debug standby terse
+HSRP:
+  HSRP Errors debugging is on
+  HSRP Events debugging is on
+    (protocol, neighbor, redundancy, track, arp, interface)
+  HSRP Packets debugging is on
+    (Coup, Resign)
+R2#
+*Dec  2 16:11:31.855: HSRP: Gi0/1 Grp 1 Standby: c/<span class="orange">Active timer expired</span>
+  (172.16.10.2)
+*Dec  2 16:11:31.855: HSRP: Gi0/1 Grp 1 <span class="orange">Active router is local, was</span>
+  <span class="orange">172.16.10.2</span>
+*Dec  2 16:11:31.855: HSRP: Gi0/1 Nbr 172.16.10.2 no longer active for
+  group 1 (Standby)
+*Dec  2 16:11:31.855: HSRP: Gi0/1 Nbr 172.16.10.2 Was active or standby 
+  - start passive holddown
+*Dec  2 16:11:31.855: HSRP: Gi0/1 Grp 1 Standby router is unknown, was
+  local
+*Dec  2 16:11:31.855: HSRP: Gi0/1 Grp 1 <span class="orange">Standby -> Active</span>
+
+R2#
+</pre>]]></text>
+<element type="TEXT" compId="ID_s4_txt01" x="98" y="374" width="150.7" expand="right" align="left" />
+<element type="TEXT" subType="TITLE" compId="ID_s4_title"/>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt4" x="83" y="80" width="515" height="350" />
+<text id="ID_router_txt4"><![CDATA[<pre>R1# 
+*Dec  2 18:01:30.183: HSRP: Gi0/1 Nbr 172.16.10.2 Adv in, active 0
+  passive 1
+*Dec  2 18:01:30.183: HSRP: Gi0/1 Nbr 172.16.10.2 created
+*Dec  2 18:01:30.183: HSRP: Gi0/1 Nbr 172.16.10.2 is passive
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Nbr 172.16.10.2 Adv in, active 1
+  passive 1
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Nbr 172.16.10.2 is no longer passive
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Nbr 172.16.10.2 destroyed
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Grp <span class="orange">1 Coup   in  172.16.10.2 Listen</span> 
+  <span class="orange">pri 150 vIP 172.16.10.1</span>
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Grp <span class="orange">1 Active: j/Coup rcvd from higher</span>
+  <span class="orange">pri router (150/172.16.10.2)</span>
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Grp 1 Active router is 172.16.10.2,
+  was local
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Nbr 172.16.10.2 created
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Nbr 172.16.10.2 active for group 1
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Grp 1 Active -> Speak
+*Dec  2 18:01:32.443: %HSRP-5-STATECHANGE: GigabitEthernet0/1 Grp 1
+  state Active -> Speak
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Grp 1 Redundancy "hsrp-Gi0/1-1" 
+  state Active -> Speak
+*Dec  2 18:01:32.443: HSRP: Gi0/1 Grp 1 Removed 172.16.10.1 from ARP
+*Dec  2 18:01:32.443: HSRP: Gi0/1 IP Redundancy "hsrp-Gi0/1-1" update,
+  Active -> Speak
+*Dec  2 18:01:43.771: HSRP: Gi0/1 Grp 1 Speak: d/Standby timer expired
+  (unknown)
+*Dec  2 18:01:43.771: HSRP: Gi0/1 Grp 1 <span class="orange">Standby router is local</span>
+*Dec  2 18:01:43.771: HSRP: Gi0/1 Grp 1 <span class="orange">Speak -> Standby</span>
+
+    
+ </pre>]]></text>
+
+
+<element type="TEXT" subType="TITLE" compId="ID_s5_title"/>
+</slide>
+
+
+<slide>
+
+<element type="ROUTER" textId="ID_router_txt5" x="83" y="80" width="515" height="350" />
+<text id="ID_router_txt5"><![CDATA[<pre>R1(config)# <b>interface g0/1</b>
+R1(config-if)# <b>shutdown</b>
+R1(config-if)#
+*Dec  2 17:36:20.275: %HSRP-5-STATECHANGE: GigabitEthernet0/1
+   <span class="orange">Grp 1 state Active -> Init</span>
+*Dec  2 17:36:22.275: %LINK-5-CHANGED: Interface
+   GigabitEthernet0/1, changed state to administratively down
+*Dec  2 17:36:23.275: %LINEPROTO-5-UPDOWN: Line protocol on
+   Interface GigabitEthernet0/1, changed state to down
+R1(config-if)#
+!-----------------------------------------------------------
+R2#
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 <span class="orange">Resign in  172.16.10.2</span>
+   <span class="orange">Active</span>  pri 150 vIP 172.16.10.1
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 Standby: i/Resign rcvd
+   (150/172.16.10.2)
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 Active router is local,
+   was 172.16.10.2
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Nbr 172.16.10.2 no longer
+   active for group 1 (Standby)
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Nbr <span class="orange">172.16.10.2 Was active</span> 
+   <span class="orange">or standby - start passive holddown</span>
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 Standby router is
+   unknown, was local
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 Standby -> Active
+*Dec  2 17:36:30.699: %HSRP-5-STATECHANGE: GigabitEthernet0/1
+   Grp 1 state Standby -> Active
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 Redundancy "hsrp-
+   Gi0/1-1" state Standby -> Active
+*Dec  2 17:36:30.699: HSRP: Gi0/1 Grp 1 <span class="orange">Added 172.16.10.1 to</span>
+   <span class="orange">ARP (0000.0c9f.f001)</span>
+*Dec  2 17:36:30.699: HSRP: Gi0/1 IP Redundancy "hsrp-Gi0/1-1"
+   standby, local -> unknown
+*Dec  2 17:36:30.699: HSRP: Gi0/1 IP Redundancy "hsrp-Gi0/1-1"
+   update, Standby -> Active
+*Dec  2 17:36:33.707: HSRP: Gi0/1 IP Redundancy "hsrp-Gi0/1-1"
+   update, Active -> Active
+R2#
+*Dec  2 17:39:30.743: HSRP: Gi0/1 Nbr <span class="orange">172.16.10.2 Passive</span> 
+   <span class="orange">timer expired</span>
+*Dec  2 17:39:30.743: HSRP: Gi0/1 Nbr <span class="orange">172.16.10.2 is no longer</span>
+   <span class="orange">passive</span>
+*Dec  2 17:39:30.743: HSRP: Gi0/1 Nbr <span class="orange">172.16.10.2 destroyed</span>
+R2#
+
+
+    
+ </pre>]]></text>
+
+<element type="TEXT" subType="TITLE" compId="ID_s6_title"/>
+</slide>
+
+</slide>
+</data>

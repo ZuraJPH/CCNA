@@ -1,0 +1,1 @@
+En la figura se muestran tres routers interconectados.  Cada router tiene una imagen de un candado en él, y hay una flecha bidireccional entre cada router.  Esto demuestra que EIGRP puede utilizar la autenticación antes de compartir la información de routing.

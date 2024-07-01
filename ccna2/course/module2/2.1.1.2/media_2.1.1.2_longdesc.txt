@@ -1,0 +1,1 @@
+La figura muestra una tabla que compara la complejidad de la configuración, los cambios de topología, la escalabilidad, la seguridad, el uso de los recursos y la predictibilidad entre el routing  estático y el dinámico.

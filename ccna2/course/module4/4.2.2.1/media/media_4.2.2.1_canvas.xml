@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+	<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_4.2.2.1_A.png"/>
+	<element type="TEXT" compId="ID_s1_txt01" x="101" y="215" width="79.4" expand="down" align="left" size="12" />
+	<element type="TEXT" compId="ID_s1_txt02" x="483" y="215" width="79.4" expand="down" align="right" size="12" />
+	<element type="TEXT" compId="ID_s1_txt03" x="101" y="350" width="79.4" expand="down" align="left" size="12" />
+	<element type="TEXT" compId="ID_s1_txt04" x="483" y="315" width="79.4" expand="down" align="right" size="12" />
+	<element type="TEXT" compId="ID_s1_txt05" x="189" y="221" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt06" x="189" y="258" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt07" x="400" y="221" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt08" x="400" y="258" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt09" x="189" y="357" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt10" x="189" y="395" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt12" x="401" y="358" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt13" x="401" y="395" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt11" x="401" y="321" width="74.4" expand="up+down" align="center" size="12" />
+	<element type="TEXT" compId="ID_s1_txt14" x="408" y="138" width="79.4" expand="up" align="right" size="12" />
+	<element type="TEXT" compId="ID_s1_txt15" x="275.15" y="188" width="113" expand="up+down" align="center" size="12" />
+</slide>
+
+</data>

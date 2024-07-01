@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.2 Protocolo de autenticación de contraseña (PAP)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolo de autenticación de contraseña (PAP)</h1>
+        <div>
+          <p>PAP proporciona un método simple para que un nodo remoto establezca su identidad mediante un protocolo de enlace bidireccional. PAP no es interactivo. Como se muestra en la figura 1, cuando se utiliza el comando <b>ppp authentication pap</b>, se envía el nombre de usuario y la contraseña como un paquete de datos LCP, en lugar de que un dispositivo PPP envíe una solicitud de inicio de sesión y espere una respuesta, como en algunos mecanismos de autenticación.  </p>
+          <p></p>
+          <p>
+            <b>Proceso de PAP</b>
+          </p>
+          <p></p>
+          <p>Una vez que PPP completa la fase de establecimiento del enlace, el nodo remoto envía repetidamente un par de nombre de usuario y contraseña a través del enlace hasta que el nodo receptor lo confirma o finaliza la conexión.</p>
+          <p></p>
+          <p>En el nodo receptor, el dispositivo que ejecuta PPP verifica el nombre de usuario y la contraseña. Este dispositivo permite o deniega la conexión. Se devuelve un mensaje de aceptación o rechazo al solicitante, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>PAP no es un protocolo de autenticación seguro. Mediante PAP, las contraseñas se envían a través del enlace en texto no cifrado, y no existe protección contra los ataques de reproducción o los ataques repetidos de prueba y error. El nodo remoto tiene el control de la frecuencia y la temporización de los intentos de inicio de sesión.</p>
+          <p></p>
+          <p>No obstante, hay momentos en los que se justifica el uso de PAP. A pesar de sus limitaciones, PAP se puede utilizar en los siguientes entornos:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Una gran base instalada de aplicaciones cliente que no admiten CHAP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Incompatibilidades entre las distintas implementaciones de CHAP de los proveedores</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Situaciones en las que una contraseña de texto no cifrado debe estar disponible para simular un inicio de sesión en el host remoto</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra el inicio de una conexión PPP.  En la figura, el router 1 intenta conectarse al router 3.  El router 1 envía un nombre de usuario y una contraseña al router 3.  La figura 2 muestra que el router 3 evaluará el nombre de usuario y la contraseña mediante su base de datos local. El router 3 acepta o rechaza la conexión.  Este es el intercambio bidireccional de PAP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

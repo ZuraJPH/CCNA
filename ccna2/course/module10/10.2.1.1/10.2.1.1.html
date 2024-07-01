@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.1 Configuración del reloj del sistema</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración del reloj del sistema</h1>
+        <div>
+          <p>El reloj de software de un router o un switch se inicia cuando arranca el sistema y es de donde el sistema extrae la hora. Es importante sincronizar la hora en todos los dispositivos de la red porque todos los aspectos de administración, seguridad, solución de problemas, y planificación de redes requieren una marca de hora precisa. Cuando no se sincroniza la hora entre los dispositivos, será imposible determinar el orden de los eventos y la causa de un evento.</p>
+          <p></p>
+          <p>Generalmente, las configuraciones de fecha y hora en un router o un switch se pueden configurar de una de las siguientes maneras:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Configure manualmente la fecha y hora, tal como se muestra en la figura.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configurar protocolo de tiempo de red (NTP).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>A medida que una red crece, se hace difícil garantizar que todos los dispositivos de infraestructura operen con una hora sincronizada. Incluso en un entorno de red más pequeño, el método manual no es lo ideal. ¿Cómo obtener una fecha y una marca de hora precisas si se reinicia un router?</p>
+          <p></p>
+          <p>Una mejor solución es configurar el NTP en la red. Este protocolo permite que los routers de la red sincronicen sus ajustes de hora con un servidor NTP. Si un grupo de clientes NTP obtiene información de fecha y hora de un único origen, tendrá ajustes de hora más consistentes. Cuando se implementa NTP en la red, se lo puede configurar para sincronizarse con un reloj maestro privado o se puede sincronizar con un servidor NTP disponible públicamente en Internet.</p>
+          <p></p>
+          <p>NTP utiliza el puerto 123 de UDP y se documenta en RFC 1305.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">El router R1 se configura con el comando 'clock set 20:36:00 dec 11 2015'. En un mensaje de syslog se indica que se ha actualizado el reloj.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

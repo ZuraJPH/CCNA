@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.3 Edición de ACL estándar con nombre</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Edición de ACL estándar con nombre</h1>
+        <div>
+          <p>En un ejemplo anterior, se utilizaron los números de secuencia para editar una ACL estándar numerada IPv4. Mediante una referencia a los números de secuencia de la instrucción, se pueden insertar o eliminar fácilmente instrucciones individuales. Este método también se puede utilizar para editar las ACL estándar con nombre.</p>
+          <p></p>
+          <p>En la ilustración, se muestra un ejemplo de inserción de una línea en una ACL con nombre. </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>En el primer resultado del comando <b>show</b>, se puede ver que la ACL con el nombre NO_ACCESS tiene dos líneas numeradas que indican las reglas de acceso para una estación de trabajo con la dirección IPv4 192.168.11.10. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se pueden insertar o eliminar instrucciones desde el modo de configuración de listas de acceso con nombre. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Para agregar una instrucción para denegar otra estación de trabajo, se debe insertar una línea numerada. En el ejemplo, se agrega la estación de trabajo con la dirección IPv4 192.168.11.11 mediante el nuevo número de secuencia 15. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mediante el último resultado del comando <b>show</b>, se verifica que la nueva estación de trabajo ahora tiene el acceso denegado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: en el modo de configuración de listas de acceso con nombre, ingrese el comando <b>no </b><i>sequence-number</i> para eliminar rápidamente las instrucciones individuales.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el proceso de insertar una instrucción en una A.C.L existente.  La figura muestra una A.C.L existente denominada no guión bajo access. La A.C.L tiene dos entradas, línea 10 y línea.  La figura muestra luego la incorporación de una línea entre las dos líneas existentes. Esta línea se agrega mediante el comando 115 deny host 192 punto 168 punto 11 punto 11.  El contenido A.C.L se muestra con el comando show access guión lists, y en la imagen se resalta la línea número 15 que está entre las líneas 10 y 20.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

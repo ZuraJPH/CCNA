@@ -1,0 +1,24 @@
+<textcomponents>
+
+
+	<component id="ID_s1_title">
+	<text><![CDATA[<b>Opciones de configuración del PPP</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Autenticación</b><br/>PAP o CHAP]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[<b>Compresión</b>]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[<b>Multilink</b>]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Enlace WAN]]></text> 
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[Paquete]]></text> 
+	</component>
+
+</textcomponents>

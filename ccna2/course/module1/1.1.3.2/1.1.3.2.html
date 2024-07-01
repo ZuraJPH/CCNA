@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.3.2 Configuración de una interfaz de router IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una interfaz de router IPv4</h1>
+        <div>
+          <p>Una característica que distingue a los switches de los routers es el tipo de interfaces que admite cada uno. Por ejemplo, los switches de capa 2 admiten redes LAN y, por lo tanto, tienen varios puertos FastEthernet o Gigabit Ethernet. </p>
+          <p></p>
+          <p>Los routers admiten redes LAN y WAN, y pueden interconectar distintos tipos de redes; por lo tanto, admiten muchos tipos de interfaces. Por ejemplo, los ISR G2 tienen una o dos interfaces Gigabit Ethernet integradas y ranuras para tarjetas de interfaz WAN de alta velocidad (HWIC) para admitir otros tipos de interfaces de red, incluidas las interfaces seriales, DSL y de cable. </p>
+          <p></p>
+          <p>Para que una interfaz esté disponible, debe cumplir los siguientes requisitos: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Estar configurada con una dirección IP y una máscara de subred</b>: utilice el comando de <b>dirección IP</b><i> ip-address subnet-mask </i>para la configuración de interfaz.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Activar la interfaz:</b> las interfaces LAN y WAN no están activadas (<b>shutdown</b>) de manera predeterminada. Para habilitar una interfaz, esta se debe activar mediante el comando <b>no shutdown</b>. (Es como encender la interfaz.) La interfaz también debe estar conectada a otro dispositivo (un hub, un switch u otro router) para que la capa física se active.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Opcionalmente, la interfaz también se puede configurar con una descripción breve de hasta 240 caracteres. Es aconsejable configurar una descripción en cada interfaz. En las redes de producción, se obtienen rápidamente los beneficios de las descripciones de la interfaz ya que son útiles para resolver problemas e identificar una información de contacto y de conexión de terceros.</p>
+          <p></p>
+          <p>Según el tipo de interfaz, es posible que se requieran parámetros adicionales. Por ejemplo, en el entorno del laboratorio, la interfaz serial que se conecta al extremo del cable serial rotulado DCE se debe configurar con el comando <b>clock rate</b>. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Si se usa el comando <b>clock rate</b> por accidente en una interfaz DTE, se genera el mensaje de información "%Error: This command applies only to DCE interface" (%Error: este comando se aplica únicamente a la interfaz DCE).</p>
+          <p></p>
+          <p>En las figuras 1 a 3, se proporcionan ejemplos de configuración de las interfaces del router R1. En la Figura 3, observe que el estado de Serial0/0/0 es inactivo (down). El estado cambia a activo (up) cuando la interfaz Serial0/0/0 de R2 se configura y se activa.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para configurar el router R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra los comandos utilizados para configurar una descripción en una interfaz.  Los comandos se inician desde el modo de configuración global.  El primer comando pasa al modo de configuración de interfaz y es interface gigabit ethernet cero barra cero.  El siguiente comando configura la descripción y es description link to LAN 1.  El texto después de la descripción de la palabra se convierte en la descripción.  El siguiente comando de la figura asigna una dirección IP a la interfaz y es ip address 192 punto 168 punto 10 punto 1 255 punto 255 punto 255 punto 0.  La interfaz se enciende con el comando no shutdown. La figura dos configura una descripción y una dirección IP en el puerto de Ethernet gigabit cero barra uno.  Los comandos comienzan en el modo de configuración global.  El primer comando pasa al modo de configuración de interfaz y es interface gigabit ethernet cero barra uno.  El siguiente comando configura la descripción y es description link to LAN 2.  El siguiente comando de la figura asigna una dirección IP a la interfaz y es ip address 192 punto 168 punto 11 punto 1 255 punto 255 punto 255 punto 0.  La interfaz se enciende con el comando no shutdown. La figura tres configura una interfaz serial y comienza en el modo de configuración global.  El primer comando pasa al modo de configuración de interfaz y es interface serial cero barra cero barra cero.  El siguiente comando configura la descripción y es description link to R2.  El siguiente comando de la figura asigna una dirección IP a la interfaz y es ip address 209 punto 165 punto 200 punto 225 255 punto 255 punto 255 punto 252.  El siguiente comando configura una frecuencia de reloj en la interfaz serie y el comando es clock rate 128000.  La interfaz se enciende con el comando no shutdown. La figura cuatro es una actividad interactiva que permite que el estudiante configure la dirección IP, agregue una descripción y active una interfaz en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

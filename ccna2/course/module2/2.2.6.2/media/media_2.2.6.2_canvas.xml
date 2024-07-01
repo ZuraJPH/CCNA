@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<data>
+	  <slide type="MBAR">			
+
+	  			<element type="IMAGE" src="bg.png" x="0" y="0" width="680" height="490" />
+			
+				<slide>
+				   <element type="TEXT" subType="TITLE" compId="ID_s1_title"/>	
+				   <element type="IMAGE" src="media_2.2.6.2_B.png" x="0" y="0" width="680" height="490" />	
+	       		   <element type="ROUTER" textId="ID_router_txt1" x="65" y="156" width="550" height="312"  size="11"/>			
+	       		  
+	       		   <element type="TEXT" compId="ID_s1_txt02" x="65.9" y="104.55" width="104" align="right" expand="down" />   
+	       		   <element type="TEXT" compId="ID_s1_txt03" x="516" y="99.6" width="104" align="left" expand="right" />   
+				   <element type="TEXT" text="2001:DB:ACAD:2::99/64" x="146.05" y="39.15" width="132.35" align="left"/>   
+				   <element type="TEXT" text="209.165.200.238/27" x="152.8" y="56.45" width="108.25" align="left"/>   
+				   <element type="TEXT" text="Fa0/5" x="272.75" y="91.45" width="32.25" align="left"/>   
+				   <element type="TEXT" text="FE80::20" x="310.5" y="134" width="49" align="left"/>   
+				   <element type="TEXT" text="2001:DB:ACAD:1::/64" x="349.65" y="64.05" width="115" align="left"/>
+				   <element type="TEXT" text="198.51.100.0/30" x="361.9" y="81.3" width="89" align="left"/>
+				   <element type="TEXT" text="S0/0/0" x="418.9" y="118.4" width="35.95" align="left"/>
+
+				  
+				</slide> 
+
+				<slide>
+				   <element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+				   <element type="IMAGE" src="media_2.2.6.2_B.png" x="0" y="0" width="680" height="490" />
+	       		   <element type="ROUTER" textId="ID_router_txt2" x="65" y="160" width="550" height="266"  size="11"/>	
+	       		      
+	       		   <element type="TEXT" compId="ID_s2_txt02" x="65.9" y="104.55" width="104" align="right" expand="down" />   
+	       		   <element type="TEXT" compId="ID_s2_txt03" x="516" y="99.6" width="104" align="left" expand="right" />   
+				   <element type="TEXT" text="2001:DB:ACAD:2::99/64" x="146.05" y="45" width="132.35" align="left"/>   
+				   <element type="TEXT" text="209.165.200.238/27" x="152.8" y="61" width="108.25" align="left"/>   
+				   <element type="TEXT" text="Fa0/5" x="272.75" y="91.45" width="32.25" align="left"/>   
+				   <element type="TEXT" text="FE80::20" x="310.5" y="134" width="49" align="left"/>   
+				   <element type="TEXT" text="2001:DB:ACAD:1::/64" x="349.65" y="64.05" width="115" align="left"/>
+				   <element type="TEXT" text="198.51.100.0/30" x="361.9" y="81.3" width="89" align="left"/>
+				   <element type="TEXT" text="S0/0/0" x="418.9" y="118.4" width="35.95" align="left"/>
+				</slide> 
+
+				<slide>
+				   <element type="TEXT" subType="TITLE" compId="ID_s3_title"/>	
+				   <element type="ACTIVITY" subType="SYNTAX" compId="ID_s3_SC" x="25" y="60" width="630" height="388" resetId = "ID_s3_reset" showMeId="ID_s3_showme" showAllId="ID_s3_showall"/>
+				  		  
+				</slide> 
+
+
+				<text id="ID_router_txt1"><![CDATA[<pre>Branch(config)# ip route 209.165.200.238 255.255.255.255 198.51.100.2
+Branch(config)# ipv6 route 2001:db8:acad:2::99/128 2001:db8:acad:1::2
+Branch(config)# end
+Branch# show ip route | begin Gateway
+Gateway of last resort is not set
+ 
+      198.51.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        198.51.100.0/30 is directly connected, Serial0/0/0
+L        198.51.100.1/32 is directly connected, Serial0/0/0
+      209.165.200.0/32 is subnetted, 1 subnets
+<span class="text_color">S        209.165.200.38 [1/0] via 198.51.100.2
+Branch# show ipv6 route</span>
+<font face="_sans">&lt;se omitió el resultado&gt;</font>
+
+C   2001:DB8:ACAD:1::/64 [0/0]
+     via Serial0/0/0, directly connected
+L   2001:DB8:ACAD:1::1/128 [0/0]
+     via Serial0/0/0, receive
+<span class="text_color">S   2001:DB8:ACAD:2::99/128 [1/0]
+     via 2001:DB8:ACAD:1::2</span>
+L   FF00::/8 [0/0]
+     via Null0, receive
+Branch#</pre>]]></text> 
+
+<text id="ID_router_txt2"><![CDATA[<pre>Branch(config)# no ipv6 route 2001:db8:acad:2::99/128 2001:db8:acad:1::2
+Branch(config)# ipv6 route 2001:db8:acad:2::99/128 <span class="text_color">serial 0/0/0 fe80::2</span>
+Branch(config)# end
+Branch# show ipv6 route
+
+<font face="_sans"> &lt;se omitió el resultado&gt; </font>
+
+S   ::/0 [1/0]
+     via 2001:DB8:ACAD:1::2
+C   2001:DB8:ACAD:1::/64 [0/0]
+     via Serial0/0/0, directly connected
+L   2001:DB8:ACAD:1::1/128 [0/0]
+     via Serial0/0/0, receive
+<span class="text_color">S   2001:DB8:ACAD:2::99/128 [1/0]
+     via FE80::2, Serial0/0/0</span>
+L   FF00::/8 [0/0]
+     via Null0, receive
+Branch#
+</pre>]]></text> 
+	   </slide> 
+	</data>
+

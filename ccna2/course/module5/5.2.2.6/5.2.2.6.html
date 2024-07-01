@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.6 Puertos en estado de inhabilitación por errores</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Puertos en estado de inhabilitación por errores</h1>
+        <div>
+          <p>Cuando se configura un puerto con seguridad de puertos, una violación puede provocar que el puerto se inhabilite por errores. Cuando un puerto se inhabilita por errores, se desactiva eficazmente, y no se envía ni se recibe tráfico en ese puerto. En la consola (figura 1), se muestra una serie de mensajes relacionados con la seguridad del puerto. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> el estado del enlace y del protocolo del puerto cambia a down (inactivo).</p>
+          <p></p>
+          <p>El LED del puerto se apagará. El comando <b>show interfaces</b> identifica el estado del puerto como <b>err-disabled</b> (figura 2). El resultado del comando <b>show port-security interface</b> ahora muestra el estado del puerto como <b>secure-shutdown</b>. Debido a que el modo de violación de seguridad de puertos está establecido en shutdown, el puerto que experimenta la violación de seguridad pasa al estado de inhabilitación por errores. </p>
+          <p></p>
+          <p>El administrador debe determinar la causa de la violación de seguridad antes de volver a habilitar el puerto. Si hay un dispositivo no autorizado conectado a un puerto seguro, el puerto no se debe volver a habilitar hasta que se elimine la amenaza de seguridad. Para volver a habilitar el puerto, use el comando <b>shutdown</b> del modo de configuración de interfaz (figura 3). Luego, use el comando <b>no shutdown</b> del modo de configuración de interfaz para que el puerto funcione.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra los mensajes de error enviados a la consola de un switch cuando un puerto entra en el estado de inhabilitación por errores.  El mensaje contiene muchos detalles relacionados con la violación e incluye la dirección MAC que causó la violación. La figura dos muestra el resultado del comando show interface fast Ethernet cero barra 18.  El resultado muestra la información sobre el puerto, incluido el estado como err guión disabled.  La figura dos también muestra el resultado del comando show port guión security interface fast Ethernet cero barra 18.  Este resultado muestra información adicional sobre la seguridad del puerto especificado, incluida la información de la violación. La figura tres muestra el proceso de volver a activar un puerto que se desactivó debido a una violación de seguridad.  La figura comienza en el modo de configuración global y pasa al puerto con el comando interface fast Ethernet cero.  El puerto se desactiva con el comando shutdown.  El puerto se activa con el comando no shut.  Ahora el puerto funcionará nuevamente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

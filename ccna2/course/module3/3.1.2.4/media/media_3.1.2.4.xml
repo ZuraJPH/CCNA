@@ -1,0 +1,43 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Ventajas y desventajas del routing dinámico</b>]]></text>
+	</component>
+	
+	<component id='ID_table'>
+		<text><![CDATA[
+						 <table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+							<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"><br/> </font></td>
+		</tr>
+		
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#666263'><font size='1' color='#0E6360'>.</font></td>
+		</tr>
+							<tr>
+							  <td width='210px' bgcolor='#666263' class="mtitle" ><font  color='#ffffff'><b>Ventajas</b></font></td>
+							  <td width='210px' bgcolor='#666263' class="mtitle"><font  color='#ffffff'><b>Desventajas</b></font></td>
+							</tr>
+							<tr>
+							  <td bgcolor='#E9E7E8' valign="top">Adecuado en todas las topologías donde se requieren varios routers.</td>
+							  <td bgcolor='#E9E7E8' valign="top">La implementación puede ser más compleja.</td>
+							</tr>
+							<tr>
+							  <td bgcolor='#F2F2F2' valign="top">Por lo general, es independiente del tamaño de la red.</td>
+							  <td bgcolor='#F2F2F2' valign="top">Menos seguro. Se requieren opciones de configuración adicionales para proporcionarle protección.</td>
+							</tr> 
+							<tr>
+							  <td bgcolor='#E9E7E8' valign="top">Si es posible, adapta automáticamente la topología para volver a enrutar el tráfico.</td>
+							  <td bgcolor='#E9E7E8' valign="top">La ruta depende de la topología actual.</td>
+							</tr>	
+							<tr>
+							  <td bgcolor='#F2F2F2' valign="top">&nbsp;</td>
+							  <td bgcolor='#F2F2F2' valign="top">Requiere CPU, RAM y ancho de banda de enlace adicionales.</td>
+							</tr>
+						  </table>
+					]]>
+		</text>
+</component>
+
+
+</textcomponents>

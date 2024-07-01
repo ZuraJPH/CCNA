@@ -1,0 +1,1 @@
+La figura 1 muestra la DWDM y cómo puede administrar varias señales. La figura 2 muestra tres empresas conectadas mediante DWDM.

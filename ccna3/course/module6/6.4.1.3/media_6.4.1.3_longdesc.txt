@@ -1,0 +1,1 @@
+En la figura se muestran dos routers que ejecutan EIGRP y se identifica que las actualizaciones de routing se envían a la dirección link-local.

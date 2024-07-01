@@ -1,0 +1,8 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+#ID_txt09,#ID_txt11,#ID_txt15,#ID_txt17{background-color: #FFFFFF;
+padding-top: 5px !important;
+padding-bottom: 5px !important;
+box-shadow: 1px 1px 1px 1px #888888;border-radius: 3px;}

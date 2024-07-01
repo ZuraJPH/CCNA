@@ -1,0 +1,27 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+
+#RouterText{
+	letter-spacing:-0.5px;
+}
+.yellowCallOutLocal{
+border:2px solid #D3BA46;
+border-radius:5px;
+-moz-border-radius:5px; /* Firefox 3.6 and earlier */
+-webkit-border-radius:5px;
+-khtml-border-radius:5px;
+padding:2px 0 3px 3px;
+background:#FFFADD;
+}
+
+#textBoxCanvas,#ID_tbox01,#ID_tbox02,#ID_tbox03,#ID_tbox04,#ID_tbox05,#ID_tbox06,#ID_tbox07,#ID_tbox08,#ID_tbox09
+{
+	margin-left: -20px !important;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.1 Clasificación de los protocolos de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Clasificación de los protocolos de routing</h1>
+        <div>
+          <p>Los protocolos de routing dinámico se usan para facilitar el intercambio de información de routing entre los routers. Un protocolo de routing es un conjunto de procesos, algoritmos y mensajes que se usan para intercambiar información de routing y completar la tabla de routing con la elección de los mejores caminos que realiza el protocolo. El propósito de los protocolos de routing dinámico incluye lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Detección de redes remotas</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mantener la información de routing actualizada</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Escoger el mejor camino hacia las redes de destino</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Poder encontrar un mejor camino nuevo si la ruta actual deja de estar disponible</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los protocolos de routing se pueden clasificar en diferentes grupos según sus características. Específicamente, los protocolos de routing se pueden clasificar según lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Propósito:</b> protocolo de gateway interior (IGP) o protocolo de gateway exterior (EGP)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Operación:</b> protocolo de vector distancia, protocolo de estado de enlace, protocolo de vector ruta</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Comportamiento:</b>
+                <b></b>protocolo con clase (antiguo) o protocolo sin clase</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Por ejemplo, los protocolos de routing IPv4 se clasifican de la siguiente manera: </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv1 (antiguo):</b> IGP, vector distancia, protocolo con clase</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IGRP (antiguo):</b> IGP, vector distancia, protocolo con clase desarrollado por Cisco (cayó en desuso a partir del IOS 12.2)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv2:</b> IGP, vector distancia, protocolo sin clase</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EIGRP:</b> IGP, vector distancia, protocolo sin clase desarrollado por Cisco</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF:</b> IGP, estado de enlace, protocolo sin clase</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IS-IS:</b> IGP, estado de enlace, protocolo sin clase</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>BGP:</b> EGP, vector ruta, protocolo sin clase</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los protocolos de routing con clase, RIPv1 e IGRP, son protocolos antiguos y se utilizan solamente en redes antiguas. Estos protocolos de routing se convirtieron en los protocolos de routing sin clase RIPv2 y EIGRP, respectivamente. Los protocolos de routing de estado de enlace son protocolos sin clase naturalmente. </p>
+          <p></p>
+          <p>En la figura, se muestra una vista jerárquica de la clasificación de los protocolos de routing dinámico.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno es un gráfico descendente que clasifica los protocolos de routing dinámico.  El gráfico los divide en protocolos de gateway interior y protocolos de gateway exterior.  Los protocolos de gateway interior se subdividen en protocolos de routing de vector de distancia y protocolos de routing de estado de enlace.  Los protocolos de vector de distancia son RIP versión 1 y 2, y EIGRP.  Los protocolos de routing de estado de enlace son OSPF e IS-IS.  Los protocolos de routing exteriores se consideran protocolos de routing de vector de ruta y el único es BGP. Las figuras 2 a 4 destacan la clasificación de los protocolos de routing.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

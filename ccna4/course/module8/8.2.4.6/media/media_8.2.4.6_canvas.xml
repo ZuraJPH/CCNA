@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+
+<slide type="MBAR">	
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+		<element type="IMAGE" src="media_8.2.4.6.png" x="0" y="0" width="680" height="490" />
+		<element type="TEXT" id="ID_static_1" text="2001:DB8:ACAD:1::/64" x="82" y="252" align="center" width="108" color="#386B33"/>
+		<element type="TEXT" id="ID_static_2" text="2001:DB8:ACAD:2::/64" x="125" y="94" align="center" width="108" color="#386B33"/>
+		<element type="TEXT" id="ID_static_3" text="2001:DB8:ACAD:2::/64" x="472" y="94" align="center" width="108" color="#386B33"/>
+		<element type="TEXT" id="ID_static_4" text="2001:DB8:ACAD:4::/64" x="501" y="252" align="center" width="108" color="#386B33"/>
+		<element type="TEXT" id="ID_static_5" text="10.1.10.0/24" x="82" y="240" align="center" width="60" color="#652C8A"/>
+		<element type="TEXT" id="ID_static_6" text="172.16.1.0/24" x="501" y="240" align="center" width="66" color="#652C8A"/>
+		<element type="TEXT" id="ID_static_7" text="192.168.1.0/30" x="125" y="82" align="center" width="72" color="#652C8A"/>
+		<element type="TEXT" id="ID_static_8" text="192.168.1.4/30" x="472" y="82" align="center" width="72" color="#652C8A"/>
+		<element type="TEXT" id="ID_static_9" text="S0/0/0" x="275" y="78" align="center" width="32" bold="1" />
+		<element type="TEXT" id="ID_static_10" text=":2" x="316" y="111" align="center" width="9"  bold="1" />
+		<element type="TEXT" id="ID_static_11" text=".2" x="305" y="89" align="center" width="9"  bold="1" />
+		<element type="TEXT" id="ID_static_12" text="S0/0/1" x="374" y="78" align="center" width="30"  bold="1" />
+		<element type="TEXT" id="ID_static_13" text=":1" x="366" y="111" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_14" text=".5" x="374" y="89" align="center" width="9"  bold="1" />
+		<element type="TEXT" id="ID_static_15" text="S0/0/0" x="187" y="136" align="center" width="32"  bold="1" />
+		<element type="TEXT" id="ID_static_16" text=".1" x="206" y="148" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_17" text="S0/0/1" x="486" y="136" align="center" width="30"  bold="1" />
+		<element type="TEXT" id="ID_static_18" text=".6" x="487" y="149" align="center" width="9"  bold="1" />
+		<element type="TEXT" id="ID_static_19" text=":2" x="460" y="159" align="center" width="9"  bold="1" />
+		<element type="TEXT" id="ID_static_20" text=":1" x="227" y="159" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_21" text="G0/0" x="162" y="199" align="center" width="23" bold="1"  />
+		<element type="TEXT" id="ID_static_22" text=".1" x="192" y="202" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_23" text=":1" x="211" y="202" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_24" text="G0/0" x="517" y="199" align="center" width="23"  bold="1" />
+		<element type="TEXT" id="ID_static_25" text=".1" x="502" y="202" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_26" text=":1" x="484" y="202" align="center" width="8"  bold="1" />
+		<element type="TEXT" id="ID_static_27" text="2001:DB8:ACAD:4::100/64" x="475" y="395" align="center" width="126" color="#386B33"/>
+		<element type="TEXT" id="ID_static_28" text="172.16.1.100/24" x="475" y="383" align="center" width="78" color="#652C8A"/>
+		<element type="TEXT" id="ID_static_29" text="2001:DB8:ACAD:1::100/64" x="300" y="395" align="center" width="126" color="#386B33" />
+		<element type="TEXT" id="ID_static_30" text="10.10.1.100/24" x="300" y="383" align="center" width="72" color="#652C8A"/>
+		<element type="TEXT" id="ID_static_31" text="2001:DB8:ACAD:1:5075:D0FF:FE8E:9AD8/64" x="95" y="430" align="center" width="212" color="#386B33"/>
+		<element type="TEXT" id="ID_static_32" text="10.1.10.10/24" x="164" y="417" align="center" width="66" color="#652C8A"/>
+		<element type="TEXT" compId="ID_s1_txt04" x="518" y="344" width="50" expand="up+down" align="left" />
+		<element type="TEXT" compId="ID_s1_txt03" x="95" y="442" width="210" expand="right" align="center" size="11" />
+		<element type="TEXT" compId="ID_s1_txt05" x="343" y="344" width="50" expand="up+down" align="left" />
+		<element type="BUBBLE" compId="ID_s1_txt02" x="39" y="327" width="141" height="80" align="left" tailPosition="4" tailFlip="0" />
+		<element type="BUBBLE" compId="ID_s1_txt01" x="25" y="118" width="145" height="80" align="left" tailPosition="4" tailFlip="0" />
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	</slide>
+
+
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+		<element type="ROUTER" textId="ID_router_txt2_1" x="42" y="92" width="600" height="115" />
+		<element type="ROUTER" textId="ID_router_txt2_2" x="42" y="262" width="600" height="100" />
+		<element type="TEXT" compId="ID_s2_txt01" x="50" y="121" width="105" expand="right" align="left" color="#ffffff" />
+		<element type="TEXT" compId="ID_s2_txt02" x="50" y="291" width="105" expand="right" align="left" color="#ffffff" />
+		<element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#FFFFFF" />
+	</slide>
+
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+		<element type="ROUTER" textId="ID_router_txt3_1" x="42" y="92" width="600" height="100" />
+		<element type="ROUTER" textId="ID_router_txt3_2" x="42" y="262" width="600" height="125" />
+		<element type="TEXT" compId="ID_s3_txt01" x="50" y="121" width="105" expand="right" align="left" color="#ffffff" />
+		<element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#FFFFFF" />		
+	</slide>
+
+
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+		<element type="ROUTER" textId="ID_router_txt4" x="42" y="92" width="600" height="175" />
+		<element type="TEXT" compId="ID_s4_txt01" x="50" y="245" width="105" expand="right" align="left" color="#ffffff" />
+		<element type="TEXT" subType="TITLE" compId="ID_s4_title" color="#FFFFFF" />
+	</slide>
+
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+		<element type="ROUTER" textId="ID_router_txt5" x="42" y="92" width="600" height="215" />
+		<element type="TEXT" subType="TITLE" compId="ID_s5_title" color="#FFFFFF" />
+	</slide>
+
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+		<element type="ROUTER" textId="ID_router_txt6" x="42" y="92" width="600" height="155" />
+		<element type="TEXT" subType="TITLE" compId="ID_s6_title" color="#FFFFFF" />
+	</slide>
+
+
+
+<text id="ID_router_txt2_1"><![CDATA[<pre>
+R1# <b>show ip route</b>
+
+
+Gateway of last resort is 192.168.1.2 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.1.2</pre>]]>
+</text>
+<text id="ID_router_txt2_2"><![CDATA[<pre>
+C:\Windows\system32> <b>route print</b>
+
+
+Network Destination  Netmask   <span id="orange"><b> Gateway   </b></span>  Interface    Metric
+         0.0.0.0     0.0.0.0   <span id="orange"><b> 10.1.10.2 </b></span>  10.1.10.100      11
+</pre>]]>
+</text>
+
+<text id="ID_router_txt3_1"><![CDATA[<pre>R1# <b>show ipv6 route</b>
+
+
+S   ::/0 [1/0]
+     via 2001:DB8:ACAD:2::2</pre>]]></text>
+
+<text id="ID_router_txt3_2"><![CDATA[<pre>C:\Windows\system32> <b>ipconfig</b>
+Windows IP Configuration
+   Connection-specific DNS Suffix . :
+   Link-local IPv6 Address . . . . . : fe80::5075:d0ff:fe8e:9ad8%13
+   IPv4 Address. . . . . . . . . . . : 10.1.1.100
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.1.10.1</pre>]]></text>
+
+<text id="ID_router_txt4"><![CDATA[<pre>R1# <b>show ipv6 interface GigabitEthernet 0/0</b>
+GigabitEthernet0/0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::1 
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:1::1, subnet is 2001:DB8:ACAD:1::/64 
+  <b><span id="orange">Joined group address(es):
+    FF02::1
+    FF02::1:FF00:1</span></b></pre>]]></text>
+
+<text id="ID_router_txt5"><![CDATA[<pre>R1(config)# <b><span id="orange">ipv6 unicast-routing</span></b>
+R1(config)# <b>end</b>
+R1# <b>show ipv6 interface GigabitEthernet 0/0</b>
+GigabitEthernet0/0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::1 
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:ACAD:1::1, subnet is 2001:DB8:ACAD:1::/64 
+  Joined group address(es):
+    FF02::1
+    <span id="orange">FF02::2</span>
+    FF02::1:FF00:1 
+<b>&lt;se omitió el resultado&gt;</b>
+</pre>]]></text>
+
+
+<text id="ID_router_txt6"><![CDATA[<pre>PC1> <b>ipconfig</b>
+Windows IP Configuration
+ Connection-specific DNS Suffix :
+ IPv6 Address. . . . . . . . .  : 2001:db8:acad:1:5075:d0ff:fe8e:9ad8
+ Link-local IPv6 Address . . .  : <span id="orange"><b>fe80::5075:d0ff:fe8e:9ad8%13</b></span>
+ IPv4 Address. . . . . . . . .  : 10.1.1.100
+ Subnet Mask . . . . . . . . .  : 255.255.255.0
+ Default Gateway . . . . . . .  : <span id="orange"><b>fe80::1</b></span>
+                                  10.1.10.1</pre>]]></text>
+
+
+</slide>		
+</data>
+

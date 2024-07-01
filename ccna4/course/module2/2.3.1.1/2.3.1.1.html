@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.1 Opciones de configuración del PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Opciones de configuración del PPP</h1>
+        <div>
+          <p>En la sección anterior, se presentaron las opciones configurables de LCP para satisfacer los requisitos específicos de las conexiones WAN. PPP puede incluir varias opciones de LCP:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Autenticación:</b> los routers peers intercambian mensajes de autenticación. Las dos opciones de autenticación son: el protocolo de autenticación de contraseña (PAP, Password Authentication Protocol) y el protocolo de autenticación de intercambio de señales (CHAP, Challenge Handshake Authentication Protocol). </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Compresión:</b> aumenta el rendimiento eficaz en las conexiones PPP, pues reduce la cantidad de bits que deben desplazarse por el enlace. El protocolo descomprime la trama al llegar a su destino. Dos protocolos de compresión disponibles en los routers Cisco son Stacker y Predictor. Haga clic <a href="http://www.cisco.com/c/en/us/support/docs/wan/data-compression/14156-compress-overview.html" target="_blank">aquí</a> para obtener más información sobre Stacker y Predictor.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Detección de errores:</b> identifica fallas. Las opciones de calidad y número mágico contribuyen a asegurar el establecimiento de un enlace de datos confiable y sin bucles. El campo de número mágico ayuda a detectar enlaces que se encuentran en una condición de loop back. Hasta que no se negocie correctamente la opción de configuración de número mágico, este se debe transmitir como cero. Los números mágicos se generan de forma aleatoria en cada extremo de la conexión.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Devolución de llamada PPP:</b> la devolución de llamada PPP se usa para mejorar la seguridad. Con esta opción de LCP, un router Cisco puede funcionar como cliente o servidor de devolución de llamada. El cliente realiza la llamada inicial, solicita que el servidor le devuelva la llamada y termina la comunicación inicial. El router de devolución de llamada responde la llamada inicial y se comunica con el cliente sobre la base de sus instrucciones de configuración.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Multienlace:</b> esta alternativa proporciona balanceo de carga a través de las interfaces del router que PPP utiliza. El protocolo PPP multienlace, también conocido como MP, MPPP, MLP o multienlace, proporciona un método para propagar el tráfico a través de varios enlaces WAN físicos a la vez que proporciona la fragmentación y el rearmado de paquetes, la secuenciación adecuada, la interoperabilidad con varios proveedores y el balanceo de carga del tráfico entrante y saliente. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cuando se configuran las opciones, se inserta el valor de campo correspondiente en el campo de opción de LCP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una tabla de códigos de campo de opciones configurables en PPP.  La tabla es un resumen del texto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

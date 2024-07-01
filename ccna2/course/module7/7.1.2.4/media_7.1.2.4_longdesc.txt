@@ -1,0 +1,1 @@
+La figura muestra un ejemplo una máscara wildcard con todos ceros que coincide exactamente en todos los bits binarios con a dirección de I.P. La figura también muestra la máscara wildcard con todos unos que implica que coincidirá con cualquier dirección de I.P.

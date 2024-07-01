@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.1 Eliminación de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Eliminación de VLAN</h1>
+        <div>
+          <p>A veces, es necesario eliminar una VLAN de la base de datos de VLAN. Al eliminar una VLAN de un switch que está en el modo servidor VTP, la VLAN se elimina de la base de datos de VLAN para todos los switches del dominio VTP. Cuando elimina una VLAN de un switch que está en modo VTP transparente, la VLAN se elimina solo en ese switch o pila de switches específica.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: No puede eliminar VLAN predeterminadas (es decir, VLAN 1, 1002 a 1005).</p>
+          <p></p>
+          <p>La siguiente situación ilustra cómo eliminar una VLAN. Suponga que el S1 tiene configuradas las VLAN 10, 20 y 99, como se muestra en la figura 1. Observe que la VLAN 99 está asignada a los puertos Fa0/18 a Fa0/24.</p>
+          <p>Para eliminar una VLAN, utilice el comando del modo de configuración global <b>no vlan</b><i>id-de-vlan</i> . El la figura 2, se muestra cómo eliminar la VLAN 99 en el S1 y comprobar que se haya efectuado dicha eliminación.</p>
+          <p></p>
+          <p>Cuando elimina una VLAN, cualquier puerto asignado a esa VLAN queda inactivo. Este sigue asociado con la VLAN (y por eso está inactivo) hasta que lo asigna a una nueva VLAN.</p>
+          <p>En la figura 2, se puede observar que las interfaces Fa0/18 a 0/24 ya no se indican en las asignaciones de VLAN.  Todo puerto que no se ha movido a una VLAN activa no puede comunicarse con otras estaciones luego de eliminar la VLAN. Por lo tanto, antes de borrar una VLAN, reasigne todos los puertos de miembros a una VLAN distinta.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 es la salida de los comandos show vlan brief y show vlan. La figura 2 muestra la eliminación de una VLAN y su comprobación.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

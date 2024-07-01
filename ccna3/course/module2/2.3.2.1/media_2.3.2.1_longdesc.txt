@@ -1,0 +1,1 @@
+La figura muestra una topología con dos subredes separadas por un switch de capa tres. Hay enlaces troncales a cada lado del switch de capa tres que conducen a los switches de capa dos.

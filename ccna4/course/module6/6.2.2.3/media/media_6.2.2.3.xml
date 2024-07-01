@@ -1,0 +1,69 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Herramientas para implementar QoS</b>]]></text>
+    </component>
+    <component id='ID_s1_table'>
+        <text>
+            <![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+		<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"></font></td>
+		</tr>
+
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>	
+		 
+		<tr>
+			<td bgcolor='#666263' width="150"><font color='#FFFFFF'><b>Herramientas de QoS</b></font></td>
+			<td bgcolor='#666263'><font color='#FFFFFF'><b>Descripción</b></p></font></td>
+			
+		</tr>
+		<tr>
+			<td bgcolor='#E9E7E8'>Herramientas de clasificación y marcación</td>
+			<td bgcolor='#E9E7E8'><textformat blockindent="-12"><ul><li>Las sesiones, o flujos, se analizan para determinar a qué clase de tráfico pertenecen.</li><li>Los paquetes se marcan una vez que están determinados.</li></ul></textformat></td>
+		</tr>
+		<tr>
+			<td bgcolor='#F2F2F2'>Herramientas para evitar la congestión</td>
+			<td bgcolor='#F2F2F2'><textformat blockindent="-12"><ul><li>A las clases de tráfico se les asignan porciones de recursos de red según lo definido por la política de QoS.</li><li>La política de QoS también identifica cómo se puede descartar, demorar o volver a marcar selectivamente parte del tráfico para evitar la congestión.</li><li>La herramienta principal para evitar la congestión es WRED y se utiliza para regular el tráfico de datos del TCP de manera eficiente según el ancho de banda antes de que se descarten paquetes en la cola ocasionadas debido a desbordamientos de la cola.</li></ul></textformat></td>
+		</tr>
+		<tr>
+			<td bgcolor='#E9E7E8'>Herramientas de administración de congestión</td>
+			<td bgcolor='#E9E7E8'><textformat blockindent="-12"><ul><li>Cuando el tráfico excede los recursos de red disponibles, el tráfico se pone en cola para esperar la disponibilidad de recursos.</li><li>Las herramientas comunes de administración de congestión basadas en Cisco IOS incluyen los algoritmos CBWFQ y LLQ.</li></ul></textformat></td>
+		</tr>
+		
+	</table>]]>
+        </text>
+    </component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+        <text><![CDATA[<b>Secuencia de QoS</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text><![CDATA[Clasificación y marcación]]></text>
+    </component>
+    <component id='ID_txt02'>
+        <text><![CDATA[Prevención de congestión]]></text>
+    </component>
+    <component id='ID_txt03'>
+        <text><![CDATA[Administración de la congestión]]></text>
+    </component>
+    <component id='ID_txt04'>
+        <text><![CDATA[Clasificación]]></text>
+    </component>
+    <component id='ID_txt05'>
+        <text><![CDATA[Marcación]]></text>
+    </component>
+    <component id='ID_txt06'>
+        <text><![CDATA[Regulación y caídas selectivas]]></text>
+    </component>
+    <component id='ID_txt07'>
+        <text><![CDATA[Cola]]></text>
+    </component>
+    <component id='ID_txt08'>
+        <text><![CDATA[Planificación y modelado]]></text>
+    </component>
+    <component id='ID_txt09'>
+        <text><![CDATA[Ingreso]]></text>
+    </component>
+    <component id='ID_txt10'>
+        <text><![CDATA[Egreso]]></text>
+    </component><!-- end slide 2 --></textcomponents>

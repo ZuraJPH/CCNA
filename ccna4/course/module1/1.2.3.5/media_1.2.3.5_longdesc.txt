@@ -1,0 +1,1 @@
+La figura 1 muestra cómo dos sitios de sucursales remotas se conectan con la oficina principal mediante un túnel VPN. La figura 2 muestra cómo los trabajadores remotos pueden conectarse a la oficina principal mediante un túnel VPN. 

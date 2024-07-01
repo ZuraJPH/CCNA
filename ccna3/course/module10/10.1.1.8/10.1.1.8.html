@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.8 La prioridad OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La prioridad OSPF</h1>
+        <div>
+          <p>El DR se convierte en el centro de la recopilación y distribución de LSA, por lo tanto, dicho router debe contar con suficiente capacidad de memoria y de CPU para manejar la carga de trabajo. Es posible influenciar el proceso de elección de DR/BDR mediante configuraciones.</p>
+          <p></p>
+          <p>Si las prioridades de interfaz son iguales en todos los routers, se elige al router con la ID más alta como DR. Es posible configurar la ID del router para manipular la elección de DR/BDR. Sin embargo, el proceso solo funciona si hay un plan riguroso para establecer la ID de router de todos los routers. En las redes grandes, esto puede ser engorroso. </p>
+          <p></p>
+          <p>En vez de depender de la ID del router, es mejor controlar la elección mediante el establecimiento de prioridades de interfaz. Las prioridades son un valor específico de cada interfaz, lo que significa que proporcionan un mejor control en una red multiacceso. Esto también permite que un router sea el DR en una red y un DROTHER en otra. </p>
+          <p></p>
+          <p>Para establecer la prioridad de una interfaz, use los siguientes comandos: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf priority </b>
+                <i>value</i>
+                <b></b>- comando de interfaz OSPFv2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf priority </b>
+                <i>value</i>
+                <b></b>- comando de interfaz OSPFv3</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El<i> valor </i>puede ser:</p>
+          <p>
+            <ul>
+              <li>
+                <b>0:</b> no se convierte en DR ni en BDR.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>1</b> a <b>255:</b> cuanto más alto sea el valor de la prioridad, habrá más probabilidades de que el router se convierta en el DR o el BDR de la red.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la ilustración, todos los routers tienen la misma prioridad OSPF, porque el valor de la prioridad se establece de manera predeterminada en 1 para todas las interfaces de router. Por esta razón, para determinar el DR (R3) y el BDR (R2), se usa la ID del router. Si se cambia el valor de la prioridad en una interfaz de 1 a un valor más alto, se habilita el router para que se convierta en un router DR o BDR durante la siguiente elección. </p>
+          <p></p>
+          <p>Si la prioridad de la interfaz se configura después de habilitar OSPF, el administrador debe desactivar el proceso OSPF en todos los routers y, luego, volver a habilitarlo para forzar una nueva elección de DR/BDR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran tres routers conectados a un switch:  los routers uno, dos (el BDR) y tres (el DR).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

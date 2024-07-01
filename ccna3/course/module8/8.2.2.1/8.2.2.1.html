@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.1 Habilitación de OSPF en las interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Habilitación de OSPF en las interfaces</h1>
+        <div>
+          <p>El comando <b>network</b> determina qué interfaces participan en el proceso de routing para un área OSPFv2. Cualquier interfaz de un router que coincida con la dirección de red en el comando <b>network</b> está habilitada para enviar y recibir paquetes OSPF. El comando {119}network{120} también indica que la dirección de red (o de subred) para la interfaz está incluida en las actualizaciones de routing OSPF.<b></b></p>
+          <p>La sintaxis de comandos básica es <b>network </b><i>network-address wildcard-mask</i><b> area </b><i>area-id</i>.</p>
+          <p>La sintaxis<b> area </b><i>area-id </i>hace referencia al área OSPF. Al configurar OSPFv2 de área única, el comando <b>network </b>debe configurarse con el mismo valor<i> area-id </i>en todos los routers. Si bien se puede usar cualquier ID de área, es aconsejable utilizar una ID de área 0 con OSPFv2 de área única. Esta convención facilita la tarea si posteriormente se modifica la red para admitir OSPFv2 multiárea.</p>
+          <p>En la ilustración, se muestra la topología de referencia. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra la topología de referencia de OSPF. Los tres routers están configurados en un diseño triangular. Cada router está conectado con los otros dos routers mediante enlaces WAN seriales.  Cada router tiene una LAN local configurada en cada interfaz Gigabit Ethernet.  Uno de los tres routers tiene una interfaz de loopback configurada que simula una conexión a Internet.  Los tres routers se encuentran en el área 0 de OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

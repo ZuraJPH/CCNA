@@ -1,0 +1,73 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#flashContent {
+    width: 98%;
+    height: 98%;
+}
+
+#txt_q5 {
+    line-height: 11px !important;
+}
+
+#txt_col1 {
+    letter-spacing: -.4px;
+    padding: 0 2px;
+}
+
+.font11px {
+    font-size: 11px !important;
+}
+
+#txt_q1 {
+    top: 6px !important;
+}
+
+#txt_q2,
+#txt_q6 {
+    top: 15px !important;
+    line-height: 12px !important;
+}
+
+#txt_q5 {
+    top: 14px !important;
+}
+
+#txt_q3 {
+    top: 14px !important;
+}
+
+#span1 {
+    margin-left: 15px !important;
+}
+
+@media only screen and (device-width: 768px) {
+    #txt_q2 {
+        top: 18px !important;
+        line-height: 12px !important;
+    }
+    #txt_q6 {
+        top: 13px !important;
+        line-height: 10px !important;
+    }
+    #mc_table {
+        height: 380px !important;
+    }
+    #chck_btn,
+    #reset_btn {
+        margin-top: 30px !important;
+    }
+    #txt_q3 {
+        line-height: 12px !important;
+    }
+}
+
+.align {
+    margin-left: 13px !important;
+}

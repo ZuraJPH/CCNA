@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.5 Actualizaciones de estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Actualizaciones de estado de enlace</h1>
+        <div>
+          <p>Los routers inicialmente intercambian paquetes DBD de tipo 2, que son una lista abreviada de la LSDB del router emisor que los routers receptores usan para compararla con la LSDB local.</p>
+          <p></p>
+          <p>Los routers receptores usan paquetes LSR de tipo 3 para solicitar más información acerca de una entrada de la DBD. </p>
+          <p></p>
+          <p>El paquete LSU de tipo 4 se utiliza para responder a un paquete LSR.</p>
+          <p></p>
+          <p>Un paquete de tipo 5 se usa para acusar recibo de un paquete LSU de tipo 4.</p>
+          <p></p>
+          <p>Los paquetes LSU también se usan para reenviar actualizaciones de routing OSPF, como cambios de enlace. Específicamente, un paquete LSU puede contener 11 tipos de LSA OSPFv2, como se muestra en la ilustración. OSPFv3 cambió el nombre de varias de estas LSA y también contiene dos LSA adicionales.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> en ocasiones, la diferencia entre los términos LSU y LSA puede resultar confusa, ya que estos términos a menudo se usan de manera indistinta. Sin embargo, una LSU contiene una o más LSA.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa una tabla que enumera y describe los cinco tipos de paquetes de OSPF.  La figura tiene una segunda tabla que detalla los once tipos de paquetes de LSA.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

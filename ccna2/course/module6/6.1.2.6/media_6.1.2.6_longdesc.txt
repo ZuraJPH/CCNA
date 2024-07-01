@@ -1,0 +1,1 @@
+Las figuras uno a tres son actividades interactivas con escenarios que utilizan una red conmutada con seis computadoras conectadas a tres VLAN diferentes.  En cada caso, una PC envía un paquete de difusión y el estudiante debe colocar un paquete en cada PC que reciba el paquete de difusión.

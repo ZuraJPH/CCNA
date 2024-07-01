@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.3 Algoritmo de árbol de expansión: puente raíz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algoritmo de árbol de expansión: puente raíz</h1>
+        <div>
+          <p>Como se muestra en la figura 1, todas las instancias de árbol de expansión (LAN conmutada o dominio de difusión) tienen un switch designado como puente raíz. El puente raíz sirve como punto de referencia para todos los cálculos de árbol de expansión para determinar las rutas redundantes que deben bloquearse.</p>
+          <p></p>
+          <p>Un proceso de elección determina el switch que se transforma en el puente raíz. </p>
+          <p></p>
+          <p>En la figura 2, se muestran los campos de BID. El BID está compuesto por un valor de prioridad, una ID de sistema extendido y la dirección MAC del switch. El valor de la prioridad de puente se asigna automáticamente, pero puede modificarse. La ID del sistema extendido se utiliza para especificar una ID de VLAN o una ID de instancia de protocolo de árbol de expansión múltiple (MSTP). El campo de la dirección MAC contiene inicialmente la dirección MAC del switch que envía los datos.</p>
+          <p></p>
+          <p>Todos los switches del dominio de difusión participan del proceso de elección. Una vez que el switch arranca, comienza a enviar tramas BPDU cada dos segundos. Estas BPDU contienen el BID del switch y la ID de raíz. </p>
+          <p></p>
+          <p>El switch que tiene el BID más bajo se convierte en el puente raíz. Al principio, todos los switches se declaran a sí mismos como puente raíz. Luego, los switches intercambian las BPDU y acuerdan un puente raíz.</p>
+          <p></p>
+          <p>A medida que los switches reenvían sus tramas BPDU, los switches adyacentes en el dominio de difusión leen la información de la ID de raíz de las tramas BPDU. Si la ID de raíz que se recibe de una BPDU es inferior a la ID de raíz del switch receptor, este switch actualiza su ID de raíz e identifica al switch adyacente como puente raíz. Sin embargo, puede no ser un switch adyacente. Podría ser cualquier otro switch en el dominio de difusión. Luego el switch envía nuevas tramas de BPDU con el menor ID de raíz a los otros switches adyacentes. Finalmente, el switch con el menor BID es el que se identifica como puente raíz para la instancia de árbol de expansión.</p>
+          <p></p>
+          <p>Se elige un puente raíz para cada instancia de árbol de expansión. Es posible tener varios puentes raíz distintos para diferentes grupos de redes VLAN. Si todos los puertos de todos los switches pertenecen a la VLAN 1, solo se da una instancia de árbol de expansión. La ID del sistema extendido incluye la ID de VLAN y cumple una función en la determinación de las instancias de árbol de expansión.</p>
+          <p></p>
+          <p>El BID está compuesto por un número de prioridad de puente configurable y una dirección MAC. La prioridad de puente tiene un valor entre 0 y 65 535. De manera predeterminada, es 32 768. Si dos o más switches poseen la misma prioridad, el switch con la dirección MAC más baja se convertirá en el puente raíz. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El motivo por el que el valor de prioridad de puente en la figura 1 muestra 32 769 en lugar del valor predeterminado de 32 768 es porque el algoritmo STA también agrega el número de VLAN predeterminada (VLAN 1) al valor de prioridad. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches: S1, S2 y S3.  Cada uno está conectado a los otros dos con un enlace troncal.  El S2 tiene conectadas la PC1, PC2 y PC3.  El S1 tiene conectada la PC4.  Cada switch muestra la ID de puente, la prioridad y la dirección MAC.  El switch 1 está marcado como puente raíz porque posee el valor de prioridad más bajo. La figura 2 muestra los campos de la ID de puente.  Estos incluyen prioridad, la ID del sistema extendido y la dirección MAC.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

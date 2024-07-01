@@ -1,0 +1,9 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s1_txt05,#ID_s1_txt06,#ID_s1_txt07,#ID_s1_txt08,#ID_s1_txt09,#ID_s1_txt10,#ID_s1_txt11,#ID_s1_txt12,#ID_s1_txt13 {
+	padding-top: 6px !important;
+	padding-bottom: 6px !important;
+}

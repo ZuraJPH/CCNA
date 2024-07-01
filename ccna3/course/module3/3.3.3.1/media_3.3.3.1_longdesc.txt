@@ -1,0 +1,1 @@
+En la figura se muestra un diagrama de flujo para analizar la topología de STP. El diagrama de flujo corresponde a los pasos del texto que figura en esta página.

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.1 Decisiones de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Decisiones de routing</h1>
+        <div>
+          <p>Una de las funciones principales de los routers es determinar la mejor ruta para enviar paquetes. Para determinar la mejor ruta, el router busca en su tabla de routing una dirección de red que coincida con la dirección IP de destino del paquete.</p>
+          <p></p>
+          <p>La tabla de routing busca resultados en una de tres determinaciones de ruta:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Red conectada directamente:</b> si la dirección IP de destino del paquete pertenece a un dispositivo en una red que está conectada directamente a una de las interfaces del router, ese paquete se reenvía directamente al dispositivo de destino. Esto significa que la dirección IP de destino del paquete es una dirección host en la misma red que la interfaz del router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Red remota:</b> si la dirección IP de destino del paquete pertenece a una red remota, el paquete se reenvía a otro router. Sólo se pueden alcanzar las redes remotas mediante el reenvío de paquetes hacia otra red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ninguna ruta determinada:</b> si la dirección IP de destino del paquete no pertenece a una red conectada ni remota, el router determina si se dispone de un gateway de último recurso. El gateway de último recurso se establece cuando se configura o aprende una ruta predeterminada en un router. Si hay una ruta predeterminada, el paquete se reenvía al gateway de último recurso. Si el router no tiene una ruta predeterminada, el paquete se descarta.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En el diagrama de flujo lógico de la ilustración, se describe el proceso de decisión de reenvío de paquetes del router.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es un diagrama de flujo del proceso de decisión de reenvío de paquetes por el que pasa un router al recibir un paquete.  Este es un resumen de la lectura.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

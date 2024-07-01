@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.3 Herramientas de QoS</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Herramientas de QoS</h1>
+        <div>
+          <p>Hay tres categorías de herramientas de QoS, como se describe en la tabla de la figura 1:</p>
+          <p>
+            <ul>
+              <li>Herramientas de clasificación y marcación</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Herramientas para evitar la congestión</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Herramientas de administración de congestión</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Consulte la Figura 2 para comprender la secuencia de cómo se utilizan estas herramientas cuando se aplica QoS a los flujos de paquetes. </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, se clasifican los paquetes de ingreso (cuadros grises) y se marca su encabezado IP respectivo (cuadros de color).  Para evitar la congestión, luego se asignan recursos a los paquetes en base a las políticas definidas. Los paquetes son luego puestos en la cola y reenviados a la interfaz de egreso según la política definida de modelado y regulación de tráfico de QoS.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La clasificación y la marcación se pueden aplicar en el ingreso o en el egreso, mientras que las otras acciones de QoS, como la organización de la cola y el modelado, generalmente se realizan al egreso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla de tres categorías de herramientas de QoS. La figura 2 muestra la secuencia de cómo se usan las tres herramientas cuando se aplica QoS al flujo de paquetes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

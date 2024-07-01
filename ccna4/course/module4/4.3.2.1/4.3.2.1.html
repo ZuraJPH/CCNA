@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.1 Configuración de topología de IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de topología de IPv6</h1>
+        <div>
+          <p>En la figura 1, se muestra la topología que se utilizará para configurar las ACL de IPv6. Esta es similar a la topología de IPv4 anterior, excepto por el esquema de direccionamiento IPv6. Existen tres subredes 2001:DB8:CAFE::/64: </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:10::/64</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:11::/64</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:30::/64</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dos redes seriales conectan los tres routers:  </p>
+          <p>
+            <ul>
+              <li>2001:DB8:FEED:1::/64</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:FEED:2::/64</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En las figuras 2, 3 y 4, se muestra la configuración de la dirección IPv6 para cada uno de los routers. El comando <b>show ipv6 interface brief</b> se utiliza para verificar la dirección y el estado de la interfaz. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> el comando <b>no shutdown</b> y el comando <b>clock rate</b> no se muestran.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la red de referencia de ACL de tres routers.  R2 se encuentra en la parte superior de un triángulo y tiene una conexión WAN serie tanto con R1 como con R3.  No hay conexión directa entre R1 y R3.  R1 tiene dos interfaces gigabit activas para los segmentos de red locales y cada segmento tiene un switch con una computadora conectada a él.  R-1 tiene la red ipv6 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 0 dos puntos dos puntos barra diagonal 64 en la interfaz gigabit cero barra diagonal cero, y la red ipv6 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos barra diagonal 64 en la interfaz gigabit cero barra diagonal uno.  R-3 tiene una sola interfaz activa con la red ipv6 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 3 0 dos puntos dos puntos barra diagonal 64 en la interfaz gigabit cero barra diagonal uno.  La WAN serial entre R-1 y R-2 es 2 0 0 1 dos puntos D B 8 dos puntos F E E D dos puntos 1 dos puntos dos puntos barra diagonal 64. La WAN serial entre R-2 y R-3 es 2 0 0 1 dos puntos D B 8 dos puntos F E E D dos puntos 2 dos puntos dos puntos barra diagonal 64. La figura 2 muestra los comandos que se usan para configurar cada interfaz en R1. El primer comando es: interface gig cero barra diagonal cero.  El siguiente comando es ipv6  address 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 0 dos puntos dos puntos uno barra diagonal 64.  La interfaz siguiente es 0 barra diagonal cero barra diagonal cero y el comando para la dirección es ipv6 address 2 0 0 1 dos puntos D B 8 dos puntos F E E D dos puntos 1 dos puntos dos puntos uno barra diagonal 64.  La interfaz siguiente es la interfaz gigabit Ethernet cero barra diagonal uno y el comando de asignación de direcciones es ipv6  address 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos uno barra diagonal 64.  Los comandos se verifican mediante el comando show ipv6 interface brief.  Esta salida muestra las interfaces IPv6 activas y sus direcciones. La figura 3 muestra los comandos que se usan para configurar las direcciones en el router R-2. La figura 3 muestra los comandos que se usan para configurar las direcciones en el router R-3. Interface s0/0/1, ipv6 address 2001:d.b.8:feed:2::1/64, exit, interface g0/0, ipv6 address 2001:d.b.8:café:30::1/64, end, show ipv6 interface brief. GigabitEthernet 0/0 up and up, F.E.80::F.E.99:47F.F.:F.E.71:7A20, 2001:D.B.8:C.A.F.E:30::1, Serial 0/0/1 up and up, F.E.80::F.E.99:47F.F:F.E.71:7A20, 2001:D.B.8:F.E.E.D:2::1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

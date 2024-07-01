@@ -1,0 +1,35 @@
+<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Conexión del router]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Oficina en el hogar]]></text>
+	</component>
+	
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Internet]]></text>
+	</component>
+	
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[Nube]]></text>
+	</component>
+	
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[<b>Central</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_txt05'>
+		<text><![CDATA[<b>Sucursal</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_txt06'>
+		<text><![CDATA[<b>LAN</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_txt07'>
+		<text><![CDATA[<b>WAN</b>]]></text>
+	</component>
+
+</textcomponents>

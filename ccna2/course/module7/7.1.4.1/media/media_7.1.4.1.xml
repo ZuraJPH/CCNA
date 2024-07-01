@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Colocación de ACL</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Las ACL extendidas se colocan generalmente cerca del origen.]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Las ACL estándar se colocan generalmente cerca del destino.]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<font color="#F68026"><b>Origen</b></font>]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[<font color="#F68026"><b>Destino</b></font>]]></text> 
+  </component>
+</textcomponents>

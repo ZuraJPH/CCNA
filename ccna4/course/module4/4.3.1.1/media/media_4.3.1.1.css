@@ -1,0 +1,10 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_txt01 li.parent,#ID_txt02 li.parent {margin-left: 18px;
+    padding: 0;}
+	
+#ID_txt01 li,#ID_txt02 li { margin-left:30px;}
+ul { margin:0px; padding:0px;}

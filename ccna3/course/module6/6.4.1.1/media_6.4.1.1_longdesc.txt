@@ -1,0 +1,1 @@
+En la figura se muestran dos routers que ejecutan EIGRP. El diagrama muestra que cada router presenta tablas distintas para IPv4 e IPv6 para los vecinos, la topología y el routing.

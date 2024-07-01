@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.7 Construcción del árbol SPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Construcción del árbol SPF</h1>
+        <div>
+          <p>Cada router en el área de routing utiliza la base de datos de estado de enlace y el algoritmo SPF para armar el árbol SPF.</p>
+          <p>Por ejemplo, utilizando la información de estado de enlace de todos los demás routers, el R1 ahora puede comenzar a armar un árbol SPF de la red. Para comenzar, el algoritmo SPF interpreta el LSP de cada router para identificar las redes y los costos asociados.</p>
+          <p></p>
+          <p>En la figura 1, el R1 identifica sus redes conectadas directamente y los costos.</p>
+          <p></p>
+          <p>En las figuras 2 a 5, el R1 continúa agregando toda red desconocida y sus costos asociados al árbol SPF. Observe que el R1 ignora cualquier red que ya haya identificado.</p>
+          <p></p>
+          <p>A continuación, el algoritmo SPF calcula las rutas más cortas para llegar a cada red individual, lo que da como resultado el árbol SPF como se muestra en la figura 6. El R1 ahora tiene una vista de topología completa del área de estado de enlace.</p>
+          <p></p>
+          <p>Cada router construye su propio árbol SPF independientemente de los otros routers. Para garantizar el routing adecuado, las bases de datos de estado de enlace utilizadas para construir dichos árboles deben ser idénticas en todos los routers.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el router R1 con una interfaz Fast Ethernet activa y conectado a otros tres routers a través de cada uno de los tres enlaces WAN.  La figura muestra cómo el router R1 arma su base de datos de estado de enlace.  El primer paso es cuando R1 identifica a qué redes está conectado y el costo de cada red en ese enlace.  Por ejemplo, R1 está conectado a la red 10 punto 1 punto cero punto cero barra diagonal 16, con un costo de 2.  También está conectado a la red 10 punto 2 punto cero punto cero barra diagonal 16, con un costo de 20, a la red 10 punto 3 punto cero punto cero barra diagonal 16, con un costo de 5, y a la red 10 punto 4 punto cero punto cero barra diagonal 16, con un costo de 20. La figura dos muestra cómo el router R1 procesa la información recibida en un LSP recibido del router R2.  R1 agrega cada nueva red a su base de datos, pero ignora las redes que ya existen en la base de datos. La figura tres muestra que el router R1 procesa la información recibida en un LSP recibido del router R3.  R1 agrega cada nueva red a su base de datos, pero ignora las redes que ya existen en la base de datos. La figura cuatro muestra que el router R1 procesa la información recibida en un LSP recibido del router R4.  R1 agrega cada nueva red a su base de datos, pero ignora las redes que ya existen en la base de datos. La figura cinco muestra que el router R1 procesa la información recibida en un LSP recibido del router R2.  R1 agrega cada nueva red a su base de datos, pero ignora las redes que ya existen en la base de datos. La figura seis muestra el árbol de SPF resultante del router R1.  Esto muestra cada red de destino, la ruta más corta y el costo asociado.  Por ejemplo, R1 puede comunicarse con la red 10 punto 5 punto cero punto cero barra diagonal 16, a través de R2, con un costo de 22.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.4 VLAN de voz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>VLAN de voz</h1>
+        <div>
+          <p>Se necesita una VLAN separada para admitir la tecnología de voz sobre IP (VoIP). El tráfico de VoIP requiere:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Ancho de banda garantizado para asegurar la calidad de la voz </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Prioridad de la transmisión sobre los tipos de tráfico de la red</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Capacidad para ser enrutado en áreas congestionadas de la red</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Una demora inferior a 150 ms a través de la red</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para cumplir estos requerimientos, se debe diseñar la red completa para que admita VoIP. Los detalles sobre cómo configurar una red para que admita VoIP exceden el ámbito de este curso, pero es útil resumir cómo funciona una VLAN de voz entre un switch, un teléfono IP Cisco y una computadora.</p>
+          <p></p>
+          <p>En la figura, la VLAN 150 se diseña para enviar tráfico de voz. La computadora del estudiante PC5 está conectada al teléfono IP de Cisco y el teléfono está conectado al switch S3. La PC5 está en la VLAN 20 que se utiliza para los datos de los estudiantes. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un router conectado a una red conmutada.  Un switch tiene un teléfono VoIP conectado.  Hay llamadas en cada switch que indican que el switch admitirá la VLAN ciento cincuenta.  Esta es la VLAN de voz de manera predeterminada en los switches Cisco.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.4 Comando de control de calidad del enlace PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comando de control de calidad del enlace PPP</h1>
+        <div>
+          <p>LCP proporciona una etapa de determinación de la calidad del enlace. En esta fase, LCP prueba el enlace para determinar si la calidad de este es suficiente para usar protocolos de capa 3. </p>
+          <p></p>
+          <p>El comando <b>ppp quality </b><i>porcentaje </i>asegura que el enlace cumpla con el requisito de calidad establecido; de lo contrario, el enlace queda inactivo.</p>
+          <p></p>
+          <p>Los porcentajes se calculan para las direcciones entrantes y salientes. La calidad de la salida se calcula comparando la cantidad total de paquetes y bytes enviados con la cantidad total de paquetes y bytes que recibe el nodo de destino. La calidad de entrada se calcula comparando la cantidad total de paquetes y bytes recibidos con la cantidad total de paquetes y bytes que envía el nodo de destino. </p>
+          <p></p>
+          <p>Si no se mantienen el porcentaje de la calidad del enlace y el umbral configurado, el enlace se considera de baja calidad y se desactiva. LQM implementa una demora de modo que el enlace no rebote de un lado a otro.</p>
+          <p></p>
+          <p>La configuración <b>ppp quality 80</b>, que se muestra en la figura 1, establece una calidad mínima del 80%.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para configurar la encapsulación, la compresión y LQM de PPP en la interfaz Serial 0/0/1 del router R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers conectándose a una nube de WAN con PPP.  La figura muestra la salida del archivo de configuración, y se resalta la línea que dice ppp quality ochenta.  El comando utilizado para configurar la calidad es ppp quality.  A este comando le sigue un valor entre uno y cien. La figura 2 es una actividad interactiva que permite que el estudiante configure una interfaz serial con una dirección IP versión 4, una dirección IP versión 6, encapsulamiento PPP, compresión y un porcentaje de calidad.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

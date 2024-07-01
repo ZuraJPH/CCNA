@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+		<element type="IMAGE" src="media_2.1.2.2.png" x="0" y="0" width="680" height="490"/>
+		<element type="TEXT" compId="ID_txt01" x="54" y="100" width="571.3" expand="up+down" align="left" />
+		<element type="TEXT" compId="ID_txt09" x="54" y="280" width="571.3" expand="up+down" align="left" />
+		<element type="TEXT" compId="ID_txt02" x="50" y="146" width="84.95" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt03" x="136" y="146" width="82.15" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt04" x="219" y="146" width="81.2" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt05" x="303" y="146" width="158" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt06" x="465" y="146" width="80.15" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt07" x="551" y="146" width="78.2" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt18" x="54" y="194" width="578.6" expand="down" align="left" />
+		<element type="TEXT" compId="ID_txt17" x="54" y="376" width="578.6" expand="down" align="left" />
+		<element type="TEXT" compId="ID_txt10" x="50" y="327" width="84.95" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt11" x="136" y="327" width="82.15" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt12" x="219" y="327" width="81.2" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt13" x="303" y="327" width="77.7" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt15" x="465" y="327" width="80.15" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt16" x="551" y="327" width="78.2" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" compId="ID_txt14" x="382" y="327" width="78.75" expand="up+down" align="center" color="#ffffff" />
+		<element type="TEXT" subType="TITLE" compId="ID_title"/>
+	</slide>
+</data>
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.3 Verificación de la configuración del switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración del switch</h1>
+        <div>
+          <p>Cuando sospeche que hay un problema con una configuración del switch, utilice los distintos comandos de verificación para examinar la configuración e identificar el problema.</p>
+          <p></p>
+          <p>En la pantalla de salida de la figura 1, se muestran los resultados del comando <b>show interfaces </b><i>id-de-interfaz</i><b> </b>. Supongamos que ejecutó estos comandos porque sospecha que la VLAN 10 no se asignó al puerto F0/4 en el switch S1. En el área superior resaltada se muestra que el puerto F0/4 en el switch S1 está en modo de acceso, pero no se muestra que se haya asignado directamente a la VLAN 10. En el área inferior resaltada se confirma que el puerto F0/4 todavía está establecido en la VLAN predeterminada. Los comandos <b>show running-config</b> y <b>show interfaces </b><i>id-de-interfaz</i><b> switchport</b> son útiles para identificar problemas de asignación de VLAN y de configuración de puertos.</p>
+          <p></p>
+          <p>En la figura 2 se muestra que la comunicación entre el router R1 y el switch S1 se interrumpió después de modificar la configuración de un dispositivo. Se supone que el enlace entre el router y el switch es un enlace troncal. En la pantalla de salida, se muestran los resultados de los comandos <b>show interfaces </b><i>id_de_interfaz</i><b> switchport </b>y<b> show running-config</b>. El área superior resaltada confirma que el puerto F0/4 en el switch S1 está en el modo de acceso, no en el modo de enlace troncal. El área inferior resaltada también confirma que el puerto F0/4 se configuró para el modo de acceso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra los resultados del comando show interfaces id-de-interfaz switchport. Los campos de VLAN de modo administrativo y de modo de acceso aparecen resaltados. En la figura dos, se muestran los resultados de los comandos show interface f 0 barra diagonal 4 switchport y show running-configuration. El comando de acceso al modo de puerto de switch y el modo administrativo aparecen resaltados.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.2 VLAN faltantes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>VLAN faltantes</h1>
+        <div>
+          <p>Si todavía no hay conexión entre los dispositivos en una VLAN pero se descartaron los problemas de direccionamiento IP, consulte el diagrama de flujo de la figura 1 para llevar a cabo la resolución de problemas:</p>
+          <p></p>
+          <p>
+            <b>Paso 1</b>: Utilice el comando <b>show vlan</b> para verificar si el puerto pertenece a la VLAN esperada. Si el puerto se asignó a una VLAN incorrecta, utilice el comando <b>switchport access vlan</b> para corregir la pertenencia de VLAN. Utilice el comando <b>show mac address-table</b> para revisar qué direcciones se obtuvieron en un puerto determinado del switch y a qué VLAN se asignó ese puerto, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>
+            <b>Paso 2</b>: Si se elimina la VLAN a la que se asignó el puerto, el puerto pasa a estar inactivo. Los puertos de una VLAN eliminada no se indicarán en el resultado del comando <b>show vlan</b>. Utilice el comando <b>show interfaces switchport</b> para verificar que la VLAN inactiva está asignada al puerto, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>En el ejemplo de la figura 2, se muestran las direcciones MAC que se obtuvieron en la interfaz F0/1. Se puede observar que en la interfaz F0/1 de la VLAN 10 se obtuvo la dirección MAC 000c.296a.a21c. Si este no es el número de VLAN previsto, cambie la pertenencia de puerto de VLAN con el comando <b>switchport access vlan</b>.</p>
+          <p></p>
+          <p>Cada puerto de un switch pertenece a una VLAN. Si se elimina la VLAN a la que pertenece el puerto, este pasa a estar inactivo. Ninguno de los puertos que pertenecen a la VLAN que se eliminó puede comunicarse con el resto de la red. Utilice el comando <b>show interface f0/1 switchport</b> para verificar si el puerto está inactivo. Si el puerto está inactivo, no funciona hasta que se cree la VLAN con el comando de configuración global <b>vlan</b><i> id-vlan </i>o que se elimine la VLAN del puerto con el comando <b>no switchport access vlan </b><i>id-vlan </i>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno es un diagrama de flujo que muestra los pasos a seguir en el diagnóstico de los problemas de conectividad cuando las VLAN estén en uso. La figura dos muestra el resultado del comando “show mac address guión table interface fast ethernet cero barra uno” en el switch 1 y el resultado de “show interfaces fast ethernet cero barra uno switchport” en el switch 1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.3.1 Rutas estáticas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Rutas estáticas</h1>
+        <div>
+          <p>Después de configurar las interfaces conectadas directamente y de agregarlas a la tabla de routing, se puede implementar el routing estático o dinámico. </p>
+          <p></p>
+          <p>Las rutas estáticas se configuran de forma manual. Estas definen una ruta explícita entre dos dispositivos de red. A diferencia de los protocolos de routing dinámico, las rutas estáticas no se actualizan automáticamente y se deben reconfigurar de forma manual si se modifica la topología de la red. Los beneficios de utilizar rutas estáticas incluyen la mejora de la seguridad y la eficacia de los recursos. Las rutas estáticas consumen menos ancho de banda que los protocolos de routing dinámico, y no se usa ningún ciclo de CPU para calcular y comunicar las rutas. La principal desventaja de usar rutas estáticas es que no se vuelven a configurar de manera automática si se modifica la topología de la red.</p>
+          <p></p>
+          <p>Existen dos tipos de rutas estáticas comunes en la tabla de routing:</p>
+          <p>
+            <ul>
+              <li>Ruta estática a una red específica</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ruta estática predeterminada</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Las rutas estáticas se pueden configurar para llegar a una red remota específica. Las rutas estáticas IPv4 se configuran con el siguiente comando:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)#</span>
+            <span class="cmd">
+              <b> ip route </b>
+            </span>
+            <span class="cmd">
+              <i>network mask</i>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <i>next-hop-ip</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>exit-intf</i>
+            </span>
+            <span class="cmd">} </span>
+          </p>
+          <p></p>
+          <p>Las rutas estáticas se identifican en la tabla de routing con el código “<b>S</b>”.</p>
+          <p></p>
+          <p>Las rutas estáticas predeterminadas son similares a un gateway predeterminado en un host. Las rutas estáticas predeterminadas especifican el punto de salida que se debe utilizar cuando la tabla de routing no contiene una ruta para la red de destino. Las rutas estáticas predeterminadas son útiles cuando un router tiene solo un punto de salida a otro router, por ejemplo, cuando el router se conecta a un router central o a un proveedor de servicios. </p>
+          <p></p>
+          <p>Para configurar una ruta estática predeterminada IPv4, use el comando siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)#</span>
+            <span class="cmd">
+              <b> ip route 0.0.0.0 0.0.0.0</b>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <i>exit-intf</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>next-hop-ip</i>
+            </span>
+            <span class="cmd">}</span>
+          </p>
+          <p></p>
+          <p>En la ilustración, se proporciona una situación simple sobre cómo se pueden aplicar las rutas predeterminadas y estáticas. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una red que consta de dos routers y cinco direcciones de red entre los dos.  En el primer router se configura una ruta predeterminada al segundo router.  Esto es así porque el siguiente router es el router de salto siguiente para todo el tráfico de red que proviene del primer router, incluida Internet.  Una ruta predeterminada es la configuración más eficiente para el router.  El segundo router sólo necesita alcanzar dos redes que están conectadas directamente al primer router.  Para alcanzar con mayor eficacia esas dos redes, se configuran dos rutas estáticas en el segundo router que apuntan al primer router.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

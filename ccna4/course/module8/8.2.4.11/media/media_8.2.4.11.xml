@@ -1,0 +1,123 @@
+﻿<textcomponents>  
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>3.1.4 IA - D Clasificar los protocolos de routing dinámico</b>]]></text>
+</component>
+
+<component id="ID_s2_title">
+	<text><![CDATA[<b>3.1.4 IA - D Clasificar los protocolos de routing dinámico</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>Dirección MAC: 5475.D08E.9AD8</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+	<text><![CDATA[<b>SRV1</b>]]></text>
+</component>
+
+<component id="ID_s1_inst">
+	<text><![CDATA[<b>Actividad (parte 1): Solución de problemas de red</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Identifique el comando PC1 que ayudará a verificar la conectividad completa. La PC1 puede llegar a su gateway, pero no al SRV1. Haga clic en el botón 2 para continuar con la parte 2.]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>ipconfig -all</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>arp -all</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>netstat -all</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>traceroute</b></font>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Ha identificado correctamente el comando para solucionar este problema de red. Haga clic en el botón 2 para continuar.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No ha identificado correctamente el comando para solucionar este problema de red. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component>
+
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Actividad (parte 2): Solución de problemas de red</b>]]></text>
+</component>
+
+<component id='ID_s2_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s2_instr_body'>
+	<text><![CDATA[Identifique el comando PC1 que ayudará a verificar la conectividad de DNS. La PC1 no puede llegar al URL srv1.example.com, pero puede hacer ping a 172.16.1.100.]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>ipconfig -all</b></font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>arp -all</b></font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>netstat -all</b></font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[<font face="_typewriter" color="#393536"><b>traceroute</b></font>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Ha identificado correctamente el comando para solucionar este problema de red.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[No ha identificado correctamente el comando para solucionar este problema de red. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component>
+
+</textcomponents>

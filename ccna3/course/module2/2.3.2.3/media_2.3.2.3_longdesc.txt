@@ -1,0 +1,1 @@
+Las figuras uno a cuatro son las actividades diseñadas para probar el estudiante en su capacidad de solucionar problemas de switching de capa tres con una topología y las salidas de varios comandos show.

@@ -1,0 +1,18 @@
+<textcomponents>
+
+<component id="ID_title">
+	<text><![CDATA[<b>Ejemplo de cola FIFO</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[FIFO]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Sin encolamiento]]></text>
+</component>
+<component id="ID_txt03">	
+	<text><![CDATA[Interfaz de ingreso]]></text>
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[Interfaz de egreso]]></text>
+</component>
+</textcomponents>

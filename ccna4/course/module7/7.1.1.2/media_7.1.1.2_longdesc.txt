@@ -1,0 +1,1 @@
+La figura muestra cuántos dispositivos están conectados libremente con redes independientes y para un uso específico. Las redes son de HVAC, teléfono, electricidad, datos, video y seguridad física. La leyenda dice: “A medida que evoluciona la IoT, se interconectarán las redes individuales, entre ellas las de seguridad, análisis y administración”.

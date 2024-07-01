@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.1 Tipos de redes OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tipos de redes OSPF</h1>
+        <div>
+          <p>Para configurar los ajustes de OSPF, empiece por una implementación básica del protocolo de routing OSPF.  </p>
+          <p></p>
+          <p>OSPF define cinco tipos de redes, como se muestra en las figuras 1 a 5:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Punto a punto:</b> dos routers interconectados por medio de un enlace común. No hay otros routers en el enlace. Con frecuencia, esta es la configuración en los enlaces WAN. (figura 1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Multiacceso con difusión:</b> varios routers interconectados por medio de una red Ethernet. (figura 2)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Multiacceso sin difusión (NBMA):</b> varios routers interconectados en una red que no permite transmisiones por difusión, como Frame Relay. (figura 3)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Punto a multipunto:</b> varios routers interconectados en una topología de estrella (hub-and-spoke) por medio de una red NBMA. Con frecuencia, se usa para conectar sitios de sucursal (spokes, que significa “rayo”) a un sitio central (hub, que significa “concentrador”). (figura 4)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Enlaces virtuales:</b> una red OSPF especial que se usa para interconectar áreas OSPF distantes al área troncal. (figura 5)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Una red multiacceso es una red con varios dispositivos en los mismos medios compartidos, que comparten comunicaciones. Las LAN Ethernet son el ejemplo más común de redes multiacceso con difusión. En las redes de difusión, todos los dispositivos en la red pueden ver todas las tramas de difusión y de multidifusión. Son redes multiacceso ya que puede haber gran cantidad de hosts, impresoras, routers y demás dispositivos que formen parte de la misma red. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el router uno conectado al router dos. El router 2 está conectado a Internet.  Cada conexión es un enlace punto a punto. En la figura dos, se muestran los routers uno, dos, tres y cuatro conectados a un switch en una red de difusión. El router dos está conectado a Internet mediante un enlace punto a punto. En la figura tres, se muestran los routers uno, dos y tres conectados a través de una red Frame Relay configurada como red multiacceso sin difusión. El router dos está conectado a Internet mediante un enlace punto a punto. En la figura cuatro, se muestran los routers uno, dos y tres conectados en una red Frame Relay configurada como red punto a multipunto. El router dos está conectado a Internet mediante un enlace punto a punto. En la figura cinco, se muestran tres áreas.  El área cero tiene cuatro routers conectados a un switch y el router uno linda con las áreas cero y uno. El router dos se conecta al router uno con un cable serial y el router dos linda con el área cincuenta y uno.  El área cincuenta y uno tiene cuatro routers conectados con cables seriales.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

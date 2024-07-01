@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.2 Aplicación de ACL extendidas a las interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Aplicación de ACL extendidas a las interfaces</h1>
+        <div>
+          <p>En el ejemplo anterior, el administrador de red configuró una ACL para permitir que los usuarios de la red 192.168.10.0/24 exploren sitios web seguros e inseguros. Aunque se configuró, la ACL no filtrará el tráfico hasta que se aplique a una interfaz. Para aplicar una ACL a una interfaz, primero debe considerar si el tráfico que se filtrará es entrante o saliente. Cuando un usuario de la LAN interna accede a un sitio web en Internet, hay tráfico que sale hacia Internet. Cuando un usuario interno recibe un correo electrónico de Internet, el tráfico ingresa al router local. Sin embargo, cuando se aplica una ACL a una interfaz, los términos “entrada” y “salida” tienen otros significados. Desde el punto de vista de una ACL, la entrada y salida son respecto de la interfaz del router.</p>
+          <p></p>
+          <p>En la topología de la ilustración, el R1 tiene tres interfaces: una interfaz serial, S0/0/0, y dos interfaces Gigabit Ethernet, G0/0 y G0/1. Recuerde que una ACL extendida comúnmente se debería aplicar cerca del origen. En esta topología, la interfaz más cercana al origen del tráfico de destino es la interfaz G0/0.</p>
+          <p></p>
+          <p>La solicitud de tráfico web de los usuarios en la LAN 192.168.10.0/24 entra a la interfaz G0/0. El tráfico de retorno de las conexiones establecidas a los usuarios en la LAN sale de la interfaz G0/0. En el ejemplo, se aplica la ACL a la interfaz G0/0 en ambos sentidos. La ACL de entrada, 103, revisa el tipo de tráfico. La ACL de salida, 104, revisa si hay tráfico de retorno de las conexiones establecidas. Esto restringe el acceso a Internet desde 192.168.10.0 para permitir solamente la navegación de sitios web.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> las listas de acceso se podrían haber aplicado a la interfaz S0/0/0, pero en ese caso el proceso de ACL del router tendría que examinar todos los paquetes que ingresan al router y no solo el tráfico que va hacia 192.168.11.0 y que vuelve de esa red. Esto provocaría que el router realice un procesamiento innecesario.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la topología de la página anterior y los comandos utilizados para aplicar una ACL a una interfaz.  Una vez que se crea la ACL, se aplica a la interfaz deseada y en un sentido en particular.  El primer paso consiste en acceder a la interfaz deseada. En este ejemplo, el comando es: interface cero barra diagonal cero.  La ACL se aplica con el comando ip access guion group 103 in. La segunda ACL se coloca en la misma interfaz, pero en el sentido saliente con el comando ip access guion group out.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

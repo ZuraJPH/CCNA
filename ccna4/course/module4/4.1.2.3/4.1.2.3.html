@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.2.3 Dónde ubicar las ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dónde ubicar las ACL</h1>
+        <div>
+          <p>Cada ACL se debe colocar donde tenga más impacto en la eficiencia. Como se muestra en la ilustración, las reglas básicas son las siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Listas ACL extendidas:</b> coloque las listas ACL extendidas lo más cerca posible del origen del tráfico que se filtrará. De esta manera, el tráfico no deseado se deniega cerca de la red de origen, sin que cruce la infraestructura de red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Listas ACL estándar:</b> debido a que en las listas ACL estándar no se especifican las direcciones de destino, colóquelas tan cerca del destino como sea posible. Si una ACL estándar se ubicara en el origen del tráfico, la instrucción “permir” o “deny” se ejecutará según la dirección de origen determinada independientemente de adónde se dirige el tráfico.</li>
+            </ul>
+          </p>
+          <p>La colocación de la ACL y, por lo tanto, el tipo de ACL que se utiliza también puede depender de diversos factores:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Alcance del control del administrador de la red:</b> la colocación de la ACL puede depender de si el administrador de red controla tanto la red de origen como la de destino o no.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ancho de banda de las redes involucradas:</b> el filtrado del tráfico no deseado en el origen impide la transmisión de ese tráfico antes de que consuma ancho de banda en la ruta hacia un destino. Esto es de especial importancia en redes con un ancho de banda bajo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Facilidad de configuración:</b> si un administrador de red desea denegar el tráfico proveniente de varias redes, una opción es utilizar una única ACL estándar en el router más cercano al destino. La desventaja es que el tráfico de dichas redes utilizará ancho de banda de manera innecesaria. Se puede utilizar una ACL extendida en cada router donde se origina tráfico. Esto ahorra ancho de banda, ya que el tráfico se filtra en el origen, pero requiere la creación de ACL extendidas en varios routers.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Nota:</b> Para la certificación CCNA, la regla general es que las ACL extendidas se coloquen lo más cerca posible del origen y que las ACL estándar se coloquen lo más cerca posible del destino.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres routers y describe la ubicación de A.C.L.s.  Las ACL estándar se colocan generalmente cerca del destino.  Las ACL extendidas se colocan generalmente cerca del origen.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

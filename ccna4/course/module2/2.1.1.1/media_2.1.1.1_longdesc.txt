@@ -1,0 +1,1 @@
+La figura 1 muestra dos routers. Cada router está conectado a una WAN que proporciona un proveedor de servicios de Internet.  Cada router tiene una LAN en una interfaz Ethernet. La figura 2 es una animación que compara una conexión serial con una conexión paralela.  La conexión serial envía un bit, mientras que la conexión paralela está enviando ocho bits.  

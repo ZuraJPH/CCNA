@@ -1,0 +1,1 @@
+La figura ilustra dos situaciones. Una situación señala dos hosts que pertenecen a dos VLAN diferentes y cada VLAN requiere un router para permitir que se comuniquen entre sí. La segunda situación demuestra que un switch de capa 3 se utilizó en lugar del router y que dos interfaces virtuales conmutadas se crearon para permitir el routing entre VLAN.

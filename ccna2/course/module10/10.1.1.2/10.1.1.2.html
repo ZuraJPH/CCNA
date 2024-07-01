@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.2 Configuración y verificación del CDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración y verificación del CDP</h1>
+        <div>
+          <p>Para los dispositivos Cisco, el CDP está habilitado de manera predeterminada. Por motivos de seguridad, puede ser conveniente deshabilitar el CDP en un dispositivo de red de manera global, o por interfaz. Con el CDP, un atacante puede recolectar información valiosa sobre el diseño de la red, como direcciones IP, versiones de IOS, y tipos de dispositivos.</p>
+          <p></p>
+          <p>Para verificar el estado de CDP y mostrar información sobre CDP, ingrese el comando <b>show cdp</b>, tal como se indica en el Ejemplo 1.</p>
+          <p></p>
+          <p>Para habilitar el CDP globalmente para todas las interfaces admitidas en el dispositivo, ingrese <b>cdp run</b> en el modo de configuración global. CDP se puede deshabilitar para todas las interfaces del dispositivo con el comando <b>no cdp run</b>, en el modo de configuración global.</p>
+          <p></p>
+          <p>Para deshabilitar CDP en una interfaz específica, como la que entra en contacto con un ISP, ingrese <b>no cdp enable</b> en el modo de configuración de la interfaz. El CDP aún se encuentra habilitado en el dispositivo; sin embargo, no se enviarán más mensajes a la interfaz. Para volver a habilitar CDP en la interfaz específica, ingrese <b>cdp enable</b>, tal como se indica en la Figura 2.</p>
+          <p></p>
+          <p>En la Figura 3 se muestra un CDP deshabilitado a nivel global utilizando el comando <b>no cdp run</b> y vuelto a habilitar con el comando <b>cdp run</b>.</p>
+          <p></p>
+          <p>Para verificar el estado de CDP y mostrar una lista de sus componentes adyacentes, utilice el comando <b>show cdp neighbors</b>, en el modo EXEC con privilegios. El comando <b>show cdp neighbors</b> muestra información importante sobre los componentes adyacentes de CDP. Actualmente, este dispositivo no tiene ningún componente adyacente porque no está conectado físicamente a ningún otro dispositivo, tal como lo indican los resultados del comando <b>show cdp neighbors</b> en la Figura 4.</p>
+          <p></p>
+          <p>Utilice el comando <b>show cdp interface</b> para mostrar las interfaces que están habilitadas en CDP en el dispositivo. También se muestra el estado de cada interfaz. En la Figura 5 se muestra que cinco interfaces están habilitadas para CDP en el router con solo una conexión activa a otro dispositivo.</p>
+          <p></p>
+          <p>Utilice el Verificador de la sintaxis de la Figura 6 para practicar la configuración y verificación de CDP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la Tabla 1 se utiliza el comando 'show cdp entry' para mostrar los ajustes predeterminados para CDP, que se envían como mensajes CDP cada 60 segundos, con un tiempo de espera de 180 segundos, y con CDPv2 habilitado. En la Figura 2 de muestra el comando 'show cdp enable' configurado en la interfaz gigabitethernet 0/1 en un switch. En la Figura 3, CDP se deshabilita a nivel global con el comando 'no cdp run'. Luego, 'show cdp' verifica que esté deshabilitado. Finalmente, se vuelve a habilitar CDP a nivel global. En la Figura 4, la salida del comando 'show cdp neighbors' indica que el router no tiene ningún componente adyacente a CDP. En la Figura 5, la salida del comando 'show cdp interface' destaca que gigabitethernet 0/1 está activa. Todas las interfaces tienen CDP habilitado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

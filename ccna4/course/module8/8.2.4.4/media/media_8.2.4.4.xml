@@ -1,0 +1,23 @@
+﻿<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Diferencia entre dúplex</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Experimento importantes problemas de rendimiento al comunicarme con el SRV2.]]></text>
+	</component>
+	
+		<component id="ID_s2_title">
+		<text><![CDATA[<b>Funcionamiento del puerto del S1 en full-duplex</b>]]></text>
+	</component>
+		<component id="ID_s2_txt01">
+		<text><![CDATA[&lt;se omitió el resultado&gt;]]></text>
+	</component>
+		<component id="ID_s3_title">
+		<text><![CDATA[<b>Funcionamiento del puerto del S2 en half-duplex</b>]]></text>
+	</component>
+			<component id="ID_s3_txt01">
+		<text><![CDATA[&lt;se omitió el resultado&gt;]]></text>
+	</component>
+	
+</textcomponents>

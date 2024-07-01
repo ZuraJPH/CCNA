@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.3 Verificación de EIGRP: análisis de la tabla de routing IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de EIGRP: análisis de la tabla de routing IPv4</h1>
+        <div>
+          <p>Otra manera de verificar que EIGRP y otras funciones del router estén configuradas correctamente es examinar las tablas de routing IPv4 con el comando <b>show ip route</b>. Al igual que con cualquier protocolo de routing dinámico, el administrador de red debe verificar la información en la tabla de routing para asegurarse de que esté completada como se espera, con base en las configuraciones introducidas. Por esta razón, es importante tener un buen nivel de conocimiento de los comandos de configuración del protocolo de routing, así como de las operaciones del protocolo de routing y los procesos usados por dicho protocolo para armar la tabla de routing IP.</p>
+          <p></p>
+          <p>Observe que las salidas que se utilizan en todo este curso corresponden al IOS 15 de Cisco. Antes del IOS 15, el resumen automático de EIGRP estaba habilitado de manera predeterminada. El estado del resumen automático puede hacer una diferencia en la información que se muestra en la tabla de routing IPv4. Si se usa una versión anterior del IOS, se puede deshabilitar el resumen automático mediante el comando no auto-summary del modo de configuración del router: </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>no auto-summary</b>
+            </span>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra la topología del R1, el R2 y el R3.</p>
+          <p></p>
+          <p>En la figura 2, la tabla de routing IPv4 se examina mediante el comando <b>show ip route</b>. Las rutas EIGRP se indican en la tabla de routing con una <b>D</b>. Se usó la letra “D” para representar a EIGRP porque el protocolo se basa en al algoritmo DUAL. </p>
+          <p></p>
+          <p>El comando <b>show ip route</b> verifica que las rutas recibidas por los vecinos EIGRP estén instaladas en la tabla de routing IPv4. El comando <b>show ip route</b> muestra la tabla de routing completa, incluidas las redes remotas detectadas de manera dinámica, las rutas conectadas directamente y las rutas estáticas. Por esta razón, generalmente es el primer comando que se utiliza para verificar la convergencia. Una vez que el routing se configura correctamente en todos los routers, el comando <b>show ip route</b> muestra que cada router tiene una tabla de routing completa, con una ruta a cada red en la topología.</p>
+          <p></p>
+          <p>Observe que en el R1 se instalaron rutas a tres redes IPv4 remotas en su tabla de routing IPv4:</p>
+          <p>
+            <ul>
+              <li>La red 172.16.2.0/24, recibida del router R2 en la interfaz Serial0/0/0</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La red 192.168.1.0/24, recibida del router R2 en la interfaz Serial0/0/1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La red 192.168.10.8/30, recibida del R2 en la interfaz Serial0/0/0 y del R3 en la interfaz Serial0/0/1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El R1 tiene dos rutas hacia la red 192.168.10.8/30, porque su costo o métrica para llegar a esa red es la misma al utilizar ambos routers. Estas se conocen como “rutas del mismo costo”. El R1 utiliza ambas rutas para llegar a esta red, lo que se conoce como “equilibrio de carga”. La métrica de EIGRP se analiza más adelante en este capítulo.</p>
+          <p></p>
+          <p>En la figura 3, se muestra la tabla de routing del R2. Observe que se muestran resultados similares, incluida una ruta del mismo costo para la red 192.168.10.4/30.</p>
+          <p></p>
+          <p>En la figura 4, se muestra la tabla de routing del R3. De manera similar a los resultados para el R1 y el R2, las redes remotas se detectan mediante EIGRP, incluida una ruta del mismo costo para la red 172.16.3.0/30.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la salida que genera el comando “show ip route” en el router uno.  Las rutas EIGRP aparecen resaltadas en naranja. En la figura tres, se muestra la salida que genera el comando “show ip route” en el router dos.  Las rutas EIGRP aparecen resaltadas en naranja. En la figura cuatro, se muestra la salida que genera el comando “show ip route” en el router tres.  Las rutas EIGRP aparecen resaltadas en naranja.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

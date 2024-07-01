@@ -1,0 +1,132 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+.clr {
+    color: #FFFFFF !important;
+    margin-left: 19px;
+}
+
+#ID_static3_1 {
+    letter-spacing: -0.4px;
+    margin-left: 10px;
+}
+
+.clr1 {
+    color: #FFFFFF !important;
+    margin-left: 6px;
+}
+
+.clr2 {
+    color: #FFFFFF !important;
+    margin-left: 30px;
+}
+
+#ID_s3_txt01 {
+    background-color: #7C6D34;
+    border: 2px solid #393536;
+    border-radius: 4px;
+    padding: 5px 0px 5px 0px;
+}
+
+#ID_s3_txt02 {
+    background-color: #652C8A;
+    border: 2px solid #393536;
+    border-radius: 4px;
+    padding: 5px 0px 5px 0px;
+}
+
+#ID_s3_txt04 {
+    background-color: #666263;
+    border: 2px solid #393536;
+    border-radius: 4px;
+    padding: 5px 0px 5px 0px;
+}
+
+#ID_s3_txt03 {
+    background-color: #077A77;
+    border: 2px solid #393536;
+    border-radius: 4px;
+    padding: 5px 0px 5px 0px;
+}
+
+#ID_s3_txt05 {
+    background-color: #067EB2;
+    border: 2px solid #393536;
+    border-radius: 4px;
+    padding: 5px 0px 5px 0px;
+}
+
+
+/*#ID_s1_txt01,#ID_s1_txt02,#ID_s1_txt03,#ID_s1_txt04,#ID_s1_txt05,#ID_s1_txt06,#ID_s1_txt07,#ID_s1_txt08,#ID_s1_txt09,#ID_s1_txt10,#ID_s1_txt11{background:#DBECDA; padding: 3px 0 3px 0}
+
+
+#ID_static3_1{
+	letter-spacing: -1px;
+	line-height: 20px; 
+}
+
+
+.yellow{
+	 background-color: #FFF3B9;
+}
+.purple{
+	 background-color: #E0D5E6;
+	 letter-spacing: -1.4px;
+}
+.green{
+	 background-color: #DBECDA;
+}
+
+.lpink{
+	 background-color: #F3D0D6;
+}
+.mark{background-color:none;margin:4px 0 0 0}*/
+
+@media only screen and (device-width: 768px) {
+    .clr {
+        color: #FFFFFF !important;
+        margin-left: 8.5px;
+    }
+    .clr2 {
+        color: #FFFFFF !important;
+        margin-left: 11px;
+    }
+    #ID_static3_1 {
+        letter-spacing: -0.4px;
+        margin-left: 4px;
+    }
+    .clr1 {
+        color: #FFFFFF !important;
+        margin-left: -8px !important;
+    }
+    #ID_s3_txt01 {
+        background-color: #7C6D34;
+        border: 2px solid #393536;
+        border-radius: 4px;
+        padding: 5px 0px 5px 0px;
+    }
+    #ID_s3_txt02 {
+        background-color: #652C8A;
+        border: 2px solid #393536;
+        border-radius: 4px;
+        padding: 5px 0px 5px 0px;
+    }
+    #ID_s3_txt04 {
+        background-color: #666263;
+        border: 2px solid #393536;
+        border-radius: 4px;
+        padding: 5px 0px 5px 0px;
+    }
+    #ID_s3_txt03 {
+        background-color: #077A77;
+        border: 2px solid #393536;
+        border-radius: 4px;
+        padding: 5px 0px 5px 0px;
+    }
+    #ID_s3_txt05 {
+        background-color: #067EB2;
+        border: 2px solid #393536;
+        border-radius: 4px;
+        padding: 5px 0px 5px 0px;
+    }
+}

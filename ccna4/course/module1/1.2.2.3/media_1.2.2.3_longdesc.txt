@@ -1,0 +1,1 @@
+La figura 1 muestra dos oficinas que usan una línea ISDN para conectarse con sus proveedores. La figura 2 muestra cómo una línea ISDN BRI tiene dos líneas de 64 kilobits y una línea de 16 kilobits. La figura 3 muestra cómo una línea ISDN PRI tiene veintitrés líneas de 64 kilobits para un T1 o treinta líneas de 64 kilobits para un E3.

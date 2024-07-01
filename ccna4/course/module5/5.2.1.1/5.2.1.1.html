@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.1 Introducción a SNMP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a SNMP</h1>
+        <div>
+          <p>El protocolo simple de administración de redes (SNMP) se desarrolló para que los administradores puedan administrar nodos como servidores, estaciones de trabajo, routers, switches y dispositivos de seguridad en una red IP. Permite que los administradores de redes monitoreen y administren el rendimiento de la red, detecten y resuelvan problemas de red y planifiquen el crecimiento de la red. </p>
+          <p></p>
+          <p>SNMP es un protocolo de capa de aplicación que proporciona un formato de mensaje para la comunicación entre administradores y agentes. El sistema SNMP consta de tres elementos:</p>
+          <p>
+            <ul>
+              <li>Administrador de SNMP </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Agentes SNMP (nodo administrado)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Base de información de administración (MIB) </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para configurar SNMP en un dispositivo de red, primero es necesario definir la relación entre el administrador y el agente.</p>
+          <p></p>
+          <p>El administrador de SNMP forma parte de un sistema de administración de red (NMS). El administrador de SNMP ejecuta software de administración SNMP. Como se muestra en la ilustración, el administrador de SNMP puede recopilar información de un agente SNMP mediante una acción “get” y puede cambiar la configuración en un agente mediante la acción “set”. Además, lo agentes de SNMP pueden reenviar información directamente a un administrador de red mediante notificaciones. </p>
+          <p></p>
+          <p>El agente de SNMP y MIB se alojan en los dispositivos del cliente de SNMP. Los dispositivos de red que se deben administrar, como los switches, los routers, los servidores, los firewalls y las estaciones de trabajo, cuentan con un módulo de software de agente SMNP. Las MIB almacenan datos sobre el dispositivo y estadísticas operativas y deben estar disponibles para los usuarios remotos autenticados. El agente de SNMP es responsable de brindar acceso a la MIB local. </p>
+          <p></p>
+          <p>SNMP define cómo se intercambia la información de administración entre las aplicaciones de administración de red y los agentes de administración. El administrador de SNMP sondea los agentes y consulta la MIB para los agentes de SNMP en el puerto UDP 161. Los agentes de SNMP envían todas las notificaciones de SNMP al administrador de SNMP en el puerto UDP 162.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un host que actúa como administrador de SNMP en una red.  Hay otros tres dispositivos conectados a la misma red que operan como agentes de SNMP: un router, un switch y un firewall. El administrador de SNMP envía paquetes "get" (obtención) y "set" (definición) de SNMP a los agentes de SNMP. Los agentes de SNMP envían paquetes de notificación de SNMP al administrador de SNMP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

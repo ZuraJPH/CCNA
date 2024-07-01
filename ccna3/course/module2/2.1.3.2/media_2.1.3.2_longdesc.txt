@@ -1,0 +1,1 @@
+La figura uno muestra una tabla con los comandos de Cisco IOS para crear un número y nombre de VLAN. La figura dos muestra una LAN pequeña y la sintaxis para configurar VLAN 20 y nombrarla estudiante. La figura 3 es una actividad interactiva que permite que el estudiante practique cómo crear una VLAN.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.3 Mitigar ataques de VLAN</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mitigar ataques de VLAN</h1>
+        <div>
+          <p>La figura muestra la mejor manera de evitar ataques básicos de VLAN:</p>
+          <p>
+            <ul>
+              <li>Deshabilite las negociaciones de DTP (enlaces troncales automáticos) en los puertos sin enlaces troncales con el comando de configuración de interfaz <b>switchport mode access</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Habilite manualmente el enlace troncal en un puerto con enlaces troncales con el comando <b>switchport mode trunk</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Deshabilite las negociaciones de DTP (enlaces troncales automáticos) en los puertos con enlaces troncales con el comando de configuración de interfaz <b>switchport non-negotiate</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cambie la configuración de la VLAN nativa a otra opción que no sea VLAN 1. Elija una configuración de VLAN en desuso con el comando <b>switchport trunk native vlan </b><i>número-vlan </i>(comando del modo de configuración de interfaz)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Deshabilite los puertos en desuso y asígnelos a una VLAN en desuso.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos switches, cada uno con dos PC conectadas. La leyenda de la interconexión entre los dos switches dice: “Enlace troncal, (VLAN nativa = 10)”. El cuadro con flechas que apuntan a cada puerto de switch que se conecta a una PC dice: “Deshabilite DTP y configure las interfaces en modo de acceso”.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

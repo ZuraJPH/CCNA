@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.6 Configuración de interfaces pasivas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de interfaces pasivas</h1>
+        <div>
+          <p>De manera predeterminada, las actualizaciones de RIP se reenvían por todas las interfaces con RIP habilitado. Sin embargo, las actualizaciones de RIP solo se deben enviar por interfaces conectadas a otros routers con RIP habilitado.  </p>
+          <p></p>
+          <p>Por ejemplo, consulte la topología en la figura 1. RIP envía actualizaciones por su interfaz G0/0, aunque no existe ningún dispositivo RIP en esa LAN.  No hay manera de que el R1 tenga información acerca de esto y, como resultado, envía una actualización cada 30 segundos. El envío de actualizaciones innecesarias a una LAN impacta en la red de tres maneras:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Desperdicio de ancho de banda</b>: se utiliza ancho de banda para transportar actualizaciones innecesarias. Dado que las actualizaciones de RIP se transmiten por difusión o multidifusión, los switches también reenvían las actualizaciones por todos los puertos.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Desperdicio de recursos:</b> todos los dispositivos en la LAN deben procesar la actualización hasta las capas de transporte, punto en el cual los dispositivos descartan la actualización. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Riesgo de seguridad:</b> el anuncio de actualizaciones en una red de difusión constituye un riesgo de seguridad. Las actualizaciones RIP pueden interceptarse con software analizador de protocolos.  Las actualizaciones de enrutamiento se pueden modificar y enviar de regreso al router, y dañar la tabla de enrutamiento con métricas falsas que desorientan el tráfico. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilice el comando de configuración del router <b>passive-interface</b> para evitar que las actualizaciones de routing se transmitan a través de una interfaz del router y permitir que esa red se siga anunciando a otros routers. El comando detiene las actualizaciones de routing a través de la interfaz especificada. Sin embargo, la red a la que pertenece la interfaz especificada aún se anuncia en las actualizaciones de routing enviadas a otras interfaces.  </p>
+          <p></p>
+          <p>No es necesario que el R1, el R2, y el R3 reenvíen actualizaciones RIP por sus interfaces LAN. En la configuración de la figura 2, se identifica la interfaz G0/0 del R1 como pasiva. El comando <b>show ip protocols</b> se utiliza para verificar que la interfaz Gigabit Ethernet es pasiva. Observe que ya no se indica que la interfaz G0/0 envía o recibe actualizaciones de versión 2, sino que se encuentra en la sección Passive Interface(s) (Interfaces pasivas). Asimismo, observe que la red 192.168.1.0 aún se encuentra bajo Routing for Networks (Routing para redes), lo cual significa que esta red aún está incluida como una entrada de ruta en las actualizaciones RIP que se envían al R2. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> todos los protocolos de routing admiten el comando <b>passive-interface</b>.  </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar la interfaz LAN como interfaz pasiva en el R2 y en el R3.</p>
+          <p></p>
+          <p>Como alternativa, todas las interfaces se pueden convertir en pasivas con el comando <b>passive-interface default</b>. Las interfaces que no deben ser pasivas se pueden volver a habilitar con el comando <b>no passive-interface</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres routers conectados linealmente a través de enlaces WAN.  R1 está conectado a R2 a través de un enlace WAN serie y tiene una LAN en su interfaz Gigabit-Ethernet.  R2 está conectado tanto a R1 como a R3 a través de enlaces WAN serie y también tiene una LAN en su interfaz Gigabit-Ethernet.  R3 solo está conectado a R2 a través de un enlace WAN serie y tiene una LAN en su interfaz Gigabit-Ethernet.  Hay cinco direcciones de red diferentes en la figura.  La figura dos muestra los comandos necesarios para configurar una interfaz pasiva.  Los comandos se inician en el modo de configuración global y luego permiten el routing rip.  El siguiente comando desactiva las actualizaciones de RIP desde una interfaz especificada, y el comando utilizado es passive guión interface g cero barra cero.  Esto se confirmar mediante el comando show ip protocols barra vertical begin Default y se resalta la sección titulada Passive Interfaces, donde se incluye la interfaz gigabit Ethernet cero barra cero. La figura tres es un elemento de recursos interactivos que permite que el estudiante configure el routing rip y establezca una interfaz pasiva en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.4 Pasos de configuración de SNMPv3</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pasos de configuración de SNMPv3</h1>
+        <div>
+          <p>SNMPv3 se puede proteger en cuatro pasos. La figura muestra la sintaxis. A continuación se describe cada paso:</p>
+          <p></p>
+          <p>
+            <b>Paso 1:</b> Configure una ACL estándar que permita el acceso a administradores de SNMP autorizados.</p>
+          <p></p>
+          <p>
+            <b>Paso 2</b>. Configure una vista de SNMP con el comando de configuración global <b>snmp-server view</b> para indicar qué identificadores de objetos MIB (OID) podrá leer el administrador de SNMP. Se requiere la configuración de una visualización para limitar los mensajes SNMP a acceso de sólo lectura.</p>
+          <p></p>
+          <p>
+            <b>Paso 3.</b> Configure las funciones del grupo de SNMP con el comando de configuración global <b>snmp-server group</b>. Este comando tiene los siguientes parámetros (consulte la sintaxis en la figura):</p>
+          <p>
+            <ul>
+              <li>Configura un nombre para el grupo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Establece la versión de SNMP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Especifica la autenticación y la encriptación necesarias.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Asocia la vista del paso 2 al grupo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Especifica el acceso de lectura o de lectura y escritura.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Filtra el grupo con la ACL configurada en el paso 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paso 4</b>. Configure las funciones de usuario del grupo de SNMP con el comando de configuración global <b>snmp-server user</b>. El comando tiene los siguientes parámetros:</p>
+          <p>
+            <ul>
+              <li>Configura un nombre de usuario.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Asocia al usuario con el nombre de grupo configurado en el paso 3.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Establece la versión de SNMP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Establece el tipo de autenticación. Se prefiere el SHA y debe ser admitido por el software de administración de SNMP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Establece el tipo de encriptación. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configura una contraseña de encriptación.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los pasos y los comandos para proteger SNMPv3.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

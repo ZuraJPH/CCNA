@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.3 Verificación de una ruta estática predeterminada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de una ruta estática predeterminada</h1>
+        <div>
+          <p>En la ilustración, el resultado del comando <b>show ip route static</b> muestra el contenido de las rutas estáticas en la tabla de routing. Observe el asterisco (*)<b></b>junto a la ruta con el código "S". Como se muestra en la tabla de códigos de la ilustración, el asterisco indica que esta ruta estática es una ruta predeterminada candidata, razón por la cual se la selecciona como gateway de último recurso. </p>
+          <p></p>
+          <p>La clave para esta configuración es la máscara /0. La máscara de subred en una tabla de routing determina cuántos bits deben coincidir entre la dirección IP de destino del paquete y la ruta en la tabla de routing. Un 1 binario indica que los bits deben coincidir. Un 0 binario indica que los bits no tienen que coincidir. Una máscara /0 en esta entrada de ruta indica que no se requiere que ninguno de los bits coincida. La ruta estática predeterminada coincide con todos los paquetes para los cuales no existe una coincidencia más específica.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el diagrama estándar de laboratorio con el resultado del comando “show ip route static”.  Esto muestra la relación entre el gateway de último recurso en la parte superior del resultado y la ruta estática predeterminada en la parte inferior.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

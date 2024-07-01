@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.4 Consecuencias de las fallas del árbol de expansión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Consecuencias de las fallas del árbol de expansión</h1>
+        <div>
+          <p>La figura 1 muestra una red STP funcional. ¿Qué sucede cuando hay una falla de STP? Existen dos tipos de fallas de STP. Primero, STP puede bloquear erróneamente los puertos que deberían haber pasado al estado de reenvío. Se puede perder la conectividad para el tráfico que normalmente pasaría por este switch, pero el resto de la red no se ve afectada. En segundo lugar, STP puede mover erróneamente uno o más puertos al estado de reenvío, como se muestra para el S4 en la figura 2.</p>
+          <p></p>
+          <p>Recuerde que el encabezado de las tramas de Ethernet no incluye un campo TTL, lo que significa que los switches continúan reenviando indefinidamente cualquier trama que entre en un bucle de puente. Las únicas excepciones son las tramas que tienen la dirección de destino registrada en la tabla de direcciones MAC de los switches. Estas tramas simplemente se reenvían al puerto asociado a la dirección MAC y no ingresan a ningún bucle. Sin embargo, cualquier trama que un switch use para saturar los puertos ingresa al bucle (figura 2). Esto puede incluir difusiones, multidifusiones y unidifusiones con una dirección MAC de destino desconocida globalmente.</p>
+          <p></p>
+          <p>¿Cuáles son las consecuencias y los síntomas correspondientes de la falla de STP (figura 3)?</p>
+          <p></p>
+          <p>La carga de todos los enlaces en la LAN conmutada comienza a aumentar rápidamente a medida que ingresan cada vez más tramas al bucle. Este problema no se limita a los enlaces que forman el bucle, sino que además afecta al resto de los enlaces en el dominio conmutado, dado que las tramas saturan todos los enlaces. Cuando la falla del árbol de expansión se limita a una única VLAN, solo los enlaces de esa VLAN se ven afectados. Los switches y los enlaces troncales que no transportan esa VLAN funcionan con normalidad.</p>
+          <p></p>
+          <p>Si la falla del árbol de expansión creó un bucle de puente, el tráfico aumenta exponencialmente. Los switches saturan varios puertos con las difusiones. Esto crea copias de las tramas cada vez que los switches las reenvían.</p>
+          <p></p>
+          <p>Cuando el tráfico del plano de control comienza a ingresar al bucle (por ejemplo, mensajes de routing), los dispositivos que ejecutan esos protocolos comienzan a sobrecargarse rápidamente. Las CPU se acercan al 100% de utilización mientras intentan procesar una carga de tráfico del plano de control en constante aumento. En muchos casos, el primer indicio de esta tormenta de difusión en proceso es que los routers o los switches de capa 3 informan fallas en el plano de control y que están funcionando con una elevada carga de CPU. </p>
+          <p></p>
+          <p>Los switches experimentan modificaciones frecuentes en la tabla de direcciones MAC. Si existe un bucle, es posible que un switch vea que una trama con determinada dirección MAC de origen ingresa por un puerto y que después vea que otra trama con la misma dirección MAC de origen ingresa por otro puerto una fracción de segundo más tarde. Esto provoca que el switch actualice la tabla de direcciones MAC dos veces para la misma dirección MAC.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra cuatro switches que están interconectados.  Cada puerto está marcado con su modo, y el switch 2 está marcado como puente raíz.  Se muestran las prioridades y las direcciones MAC para cada switch. La figura 2 muestra cuatro switches que están interconectados.  Cada puerto está marcado con su modo, y el switch 2 está marcado como puente raíz.   El switch 4 tiene un puerto que ha pasado del estado de bloqueo al de reenvío de forma errónea. La figura 3 muestra cuatro switches que están interconectados.  Cada puerto está marcado con su modo, y el switch 2 está marcado como puente raíz.  Un paquete ingresa a la red en el switch 3 y rebota indefinidamente ahora que se incorporó un bucle en la topología.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

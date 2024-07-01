@@ -1,0 +1,5 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Vista de la topología de APIC-EM</b>]]></text>
+	</component>
+</textcomponents>

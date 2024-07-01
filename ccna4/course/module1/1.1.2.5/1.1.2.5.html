@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.5 Conmutación de paquetes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Conmutación de paquetes</h1>
+        <div>
+          <p>A diferencia de la conmutación de circuitos, la conmutación de paquetes divide los datos en tráfico en paquetes que se enrutan a través de una red compartida. Las redes con conmutación de paquetes no requieren que se establezca un circuito y permiten que muchos pares de nodos se comuniquen a través del mismo canal. </p>
+          <p></p>
+          <p>En una red de conmutación de paquetes (PSN), los switches determinan los enlaces a través de los que se deben enviar los paquetes según la información de direccionamiento en cada paquete. Los siguientes son dos enfoques de esta determinación de enlaces:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Sistemas sin conexión:</b> se debe transportar toda la información de direccionamiento en cada paquete. Cada switch debe evaluar la dirección para determinar adónde enviar el paquete. Un ejemplo de sistema sin conexión es Internet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Sistemas orientados a la conexión:</b> la red predetermina la ruta para un paquete, y cada paquete solo tiene que transportar un identificador. El switch determina la ruta siguiente al buscar el identificador en las tablas almacenadas en la memoria. El conjunto de entradas en las tablas identifica una ruta o un circuito particular a través del sistema. Si el circuito se establece en forma temporal mientras un paquete viaja a través de él y luego se divide nuevamente, se lo denomina “circuito virtual” (VC). Un ejemplo de un sistema orientado a la conexión es Frame Relay. En el caso de Frame Relay, los identificadores utilizados se denominan “identificadores de conexión de enlace de datos” (DLCI).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Debido a que varios usuarios comparten los enlaces internos entre los switches, el costo del switching de paquetes es inferior al del switching de circuitos. Sin embargo, los retrasos (latencia) y la variabilidad de retraso (vibración) son mayores en las redes de conmutación de paquetes que en las redes de conmutación de circuitos. Esto se debe a que se comparten los enlaces, y los paquetes se deben recibir por completo en un switch antes de pasar al siguiente. A pesar de la latencia y la vibración inherentes en las redes compartidas, la tecnología moderna permite el transporte satisfactorio de las comunicaciones de voz y video en estas redes.</p>
+          <p></p>
+          <p>Haga clic en el botón Reproducir de la figura para ver cómo funciona el switching de paquetes. En la animación, SRV1 envía datos a SRV2. Una vez que el paquete atraviesa la red del proveedor de servicios, llega al primer switch del proveedor. El paquete se agrega a la cola y se reenvía después de que se reenvíen todos los otros paquetes en la cola. Finalmente, el paquete llega a SRV2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación.  Los datos se transfieren entre dos servidores en una red conmutada por paquetes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

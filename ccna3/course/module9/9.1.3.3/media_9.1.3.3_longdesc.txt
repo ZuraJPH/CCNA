@@ -1,0 +1,1 @@
+Este es un elemento de medios interactivos que permite que el estudiante identifique los pasos que realiza OSPF al calcular la mejor ruta.

@@ -1,0 +1,1 @@
+En la figura se muestra una red con tres computadoras. La red está conectada a un router NAT, que está conectado a Internet.  Hay una tabla que asigna las direcciones privadas internas a direcciones públicas externas.  Esto demuestra NAT estática.

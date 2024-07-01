@@ -1,0 +1,163 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>MTU y MSS</b>]]></text>
+    </component>
+    <component id="ID_s1_txt01">
+        <text>
+            <![CDATA[<b>Ethernet</b>]]></text>
+    </component>
+    <component id="ID_s1_txt02">
+        <text>
+            <![CDATA[<b>IPv4</b>]]></text>
+    </component>
+    <component id="ID_s1_txt03">
+        <text>
+            <![CDATA[<b>TCP</b>]]></text>
+    </component>
+    <component id="ID_s1_txt04">
+        <text>
+            <![CDATA[<b>Carga útil</b>]]></text>
+    </component>
+    <component id="ID_s1_txt05">
+        <text>
+            <![CDATA[<b>FCS</b>]]></text>
+    </component>
+    <component id="ID_s1_txt06">
+        <text>
+            <![CDATA[MTU de Ethernet]]></text>
+    </component>
+    <component id="ID_s1_txt07">
+        <text>
+            <![CDATA[IP MTU]]></text>
+    </component>
+    <component id="ID_s1_txt08">
+        <text>
+            <![CDATA[TCP MSS]]></text>
+    </component>
+    <component id="ID_s1_txt09">
+        <text>
+            <![CDATA[20 bytes]]></text>
+    </component>
+    <component id="ID_s1_txt10">
+        <text>
+            <![CDATA[20 bytes]]></text>
+    </component>
+    <component id="ID_s1_txt11">
+        <text>
+            <![CDATA[1460 bytes]]></text>
+    </component>
+    <component id="ID_s1_txt12">
+        <text>
+            <![CDATA[1500 bytes]]></text>
+    </component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+        <text>
+            <![CDATA[<b>MSS ajustado con el encabezado PPPoE</b>]]></text>
+    </component>
+    <component id="ID_s2_txt01">
+        <text>
+            <![CDATA[<b>Ethernet</b>]]></text>
+    </component>
+    <component id="ID_s2_txt02">
+        <text>
+            <![CDATA[<b>PPPoE</b>]]></text>
+    </component>
+    <component id="ID_s2_txt03">
+        <text>
+            <![CDATA[<b>IPv4</b>]]></text>
+    </component>
+    <component id="ID_s2_txt04">
+        <text>
+            <![CDATA[<b>TCP</b>]]></text>
+    </component>
+    <component id="ID_s2_txt05">
+        <text>
+            <![CDATA[<b>Carga útil</b>]]></text>
+    </component>
+    <component id="ID_s2_txt06">
+        <text>
+            <![CDATA[MTU de Ethernet]]></text>
+    </component>
+    <component id="ID_s2_txt07">
+        <text>
+            <![CDATA[IP MTU]]></text>
+    </component>
+    <component id="ID_s2_txt08">
+        <text>
+            <![CDATA[TCP MSS]]></text>
+    </component>
+    <component id="ID_s2_txt09">
+        <text>
+            <![CDATA[20 bytes]]></text>
+    </component>
+    <component id="ID_s2_txt10">
+        <text>
+            <![CDATA[20 bytes]]></text>
+    </component>
+    <component id="ID_s2_txt11">
+        <text>
+            <![CDATA[1452 bytes]]></text>
+    </component>
+    <component id="ID_s2_txt12">
+        <text>
+            <![CDATA[1492 bytes]]></text>
+    </component>
+    <component id="ID_s2_txt13">
+        <text>
+            <![CDATA[<b>FCS</b>]]></text>
+    </component>
+    <component id="ID_s2_txt14">
+        <text>
+            <![CDATA[8 bytes]]></text>
+    </component><!-- end slide 2 --><!-- SLIDE 3--><component id="ID_s3_title">
+        <text>
+            <![CDATA[<b>Verifique el tamaño de MTU en una interfaz del marcador</b>]]></text>
+    </component>
+    <component id='ID_s3_txt01'>
+        <text>
+            <![CDATA[<b>Cliente</b>]]>
+        </text>
+    </component>
+    <component id='ID_s3_txt02'>
+        <text>
+            <![CDATA[<b>ISP</b>]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt03">
+        <text>
+            <![CDATA[&lt;se omitió el resultado&gt;]]>
+        </text>
+    </component><!-- end slide 3 --><!-- SLIDE 4--><component id="ID_s4_title">
+        <text>
+            <![CDATA[<b>Ajuste de TCP MSS</b>]]></text>
+    </component>
+    <component id='ID_s4_txt01'>
+        <text>
+            <![CDATA[<b>Cliente</b>]]>
+        </text>
+    </component>
+    <component id='ID_s4_txt02'>
+        <text>
+            <![CDATA[<b>ISP</b>]]>
+        </text>
+    </component><!-- end slide 4 --><!-- <component id="ID_s2_title">
+		<text><![CDATA[<b>Verify the MTU Size and Encapsulation</b>]]></text>
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Verify the R1 Routing Table</b>]]></text>
+	</component>
+	<component id="ID_s4_title">
+		<text><![CDATA[<b>View Current PPPoE Sessions</b>]]></text>
+	</component>
+	<component id="ID_s2_txt01">
+		<text><![CDATA[&lt;output omitted&gt;]]></text>
+	</component>
+	<component id="ID_s3_txt01">
+		<text><![CDATA[&lt;output omitted&gt;]]></text>
+	</component>
+	
+	<component id='ID_txt01'>
+		<text><![CDATA[Customer]]></text>
+	</component>
+	<component id='ID_txt02'>
+		<text><![CDATA[ISP]]></text>
+	</component> --></textcomponents>

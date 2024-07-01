@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.2.4 El comando de interfaz ipv6 eigrp</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>El comando de interfaz ipv6 eigrp</h1>
+        <div>
+          <p>EIGRP para IPv6 utiliza un método diferente para habilitar una interfaz para EIGRP. En lugar de usar el comando <b>network</b> del modo de configuración del router para especificar las direcciones de interfaz que coinciden, EIGRP para IPv6 se configura directamente en la interfaz.  </p>
+          <p></p>
+          <p>Utilice el siguiente comando del modo de configuración de interfaz para habilitar EIGRP para IPv6 en una interfaz:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)#</span>
+            <span class="cmd">
+              <b> ipv6 eigrp </b>
+            </span>
+            <span class="cmd">
+              <i>sistema-autónomo</i>
+            </span>
+          </p>
+          <p></p>
+          <p>El valor <i>autonomous-system</i> debe ser el mismo número que el utilizado para habilitar el proceso de routing EIGRP. De manera similar al comando<b> network </b>que se utiliza en EIGRP para IPv4, el comando e interfaz<b> ipv6 eigrp </b>lleva a cabo lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Habilita la interfaz para que forme adyacencias, y envíe o reciba actualizaciones de EIGRP para IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Incluye el prefijo (red) de esta interfaz en las actualizaciones de routing EIGRP para IPv6.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra la configuración para habilitar EIGRP para IPv6 en las interfaces de los routers R1 y R2. Observe el mensaje a continuación de la interfaz serial 0/0/0 en el R2: </p>
+          <p></p>
+          <p>
+            <span class="cmd">%DUAL-5-NBRCHANGE: EIGRP-IPv6 2: Neighbor FE80::1 (Serial0/0/0) is up: new adjacency</span>
+          </p>
+          <p></p>
+          <p>Este mensaje indica que el R2 formó una adyacencia EIGRP-IPv6 con el vecino en la dirección link-local FE80::1. Debido a que se configuraron direcciones link-local estáticas en los tres routers, es fácil determinar que esta adyacencia es con el router R1 (FE80::1).</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para habilitar EIGRP para IPv6 en las interfaces del R3.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Interfaz pasiva con EIGRP para IPv6</b>
+          </p>
+          <p>El mismo comando <b>passive-interface</b> que se utiliza para IPv4 se usa para configurar una interfaz como pasiva en EIGRP para IPv6. Como se muestra en la figura 3, se utiliza el comando <b>show ipv6 protocols</b> para verificar la configuración.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la sintaxis para activar IPv6 EIGRP en cada interfaz en el router uno y el router dos. La figura dos corresponde a una actividad interactiva que permite que el estudiante active IPv6 EIGRP en cada interfaz en el router tres. En la figura tres, se muestra la sintaxis para configurar una interfaz pasiva para EIGRP utilizando IPv6. El comando se introduce en el proceso de routing y es el mismo que el comando que se utiliza para IPv4.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

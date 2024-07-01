@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.2 Funcionamiento de DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de DHCPv4</h1>
+        <div>
+          <p>Como se muestra en la figura 1, DHCPv4 funciona en un modo cliente/servidor. Cuando un cliente se comunica con un servidor de DHCPv4, el servidor asigna o arrienda una dirección IPv4 a ese cliente. El cliente se conecta a la red con esa dirección IP arrendada hasta que caduque el arrendamiento. El cliente debe ponerse en contacto con el servidor de DHCP periódicamente para extender el arrendamiento. Este mecanismo de arrendamiento asegura que los clientes que se trasladan o se desconectan no mantengan las direcciones que ya no necesitan. Cuando caduca un arrendamiento, el servidor de DHCP devuelve la dirección al conjunto, donde se puede volver a asignar según sea necesario.</p>
+          <p></p>
+          <p>
+            <b>Origen del arrendamiento</b>
+          </p>
+          <p></p>
+          <p>Cuando el cliente arranca (o quiere unirse a una red), comienza un proceso de cuatro pasos para obtener un arrendamiento. Como se muestra en la figura 2, un cliente inicia el proceso con un mensaje de difusión DHCPDISCOVER con su propia dirección MAC para detectar los servidores de DHCPv4 disponibles.</p>
+          <p></p>
+          <p>
+            <b>Detección de DHCP (DHCPDISCOVER)</b>
+          </p>
+          <p>El mensaje DHCPDISCOVER encuentra los servidores de DHCPv4 en la red. Dado que el cliente no tiene información de IPv4 válida durante el arranque, utiliza direcciones de difusión de capa 2 y de capa 3 para comunicarse con el servidor. </p>
+          <p></p>
+          <p>
+            <b>Oferta de DHCP (DHCPOFFER)</b>
+          </p>
+          <p>Cuando el servidor de DHCPv4 recibe un mensaje DHCPDISCOVER, reserva una dirección IPv4 disponible para arrendar al cliente. El servidor también crea una entrada ARP que consta de la dirección MAC del cliente que realiza la solicitud y la dirección IPv4 arrendada del cliente. Como se muestra en la figura 3, el servidor de DHCPv4 envía el mensaje DHCPOFFER asignado al cliente que realiza la solicitud. El mensaje DHCPOFFER se envía como una unidifusión, y se utiliza la dirección MAC de capa 2 del servidor como la dirección de origen y la dirección MAC de capa 2 del cliente como el destino.</p>
+          <p></p>
+          <p>
+            <b>Solicitud de DHCP (DHCPREQUEST)</b>
+          </p>
+          <p>Cuando el cliente recibe el mensaje DHCPOFFER proveniente del servidor, envía un mensaje DHCPREQUEST, como se muestra en la figura 4. Este mensaje se utiliza tanto para el origen como para la renovación del arrendamiento. Cuando se utiliza para el origen del arrendamiento, el mensaje DHCPREQUEST sirve como notificación de aceptación vinculante al servidor seleccionado para los parámetros que ofreció y como un rechazo implícito a cualquier otro servidor que pudiera haber proporcionado una oferta vinculante al cliente.</p>
+          <p></p>
+          <p>Muchas redes empresariales utilizan varios servidores de DHCPv4. El mensaje DHCPREQUEST se envía en forma de difusión para informarle a este servidor de DHCPv4 y a cualquier otro servidor de DHCPv4 acerca de la oferta aceptada. </p>
+          <p></p>
+          <p>
+            <b>Acuse de recibo de DHCP (DHCPACK)</b>
+          </p>
+          <p>Al recibir el mensaje DHCPREQUEST, el servidor verifica la información del arrendamiento con un ping ICMP a esa dirección para asegurarse de que no esté en uso, crea una nueva entrada ARP para el arrendamiento del cliente y responde con un mensaje DHCPACK de unidifusión, como se muestra en la figura 5. El mensaje DHCPACK es un duplicado del mensaje DHCPOFFER, a excepción de un cambio en el campo de tipo de mensaje. Cuando el cliente recibe el mensaje DHCPACK, registra la información de configuración y realiza una búsqueda de ARP para la dirección asignada. Si no hay respuesta al ARP, el cliente sabe que la dirección IPv4 es válida y comienza a utilizarla como propia. </p>
+          <p></p>
+          <p>
+            <b>Renovación del arrendamiento</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Solicitud de DHCP (DHCPREQUEST)</b>
+          </p>
+          <p>Como se muestra en la figura 6, antes de que caduque el arrendamiento, el cliente envía un mensaje DHCPREQUEST directamente al servidor de DHCPv4 que ofreció la dirección IPv4 en primera instancia. Si no se recibe un mensaje DHCPACK dentro de una cantidad de tiempo especificada, el cliente transmite otro mensaje DHCPREQUEST de modo que uno de los otros servidores de DHCPv4 pueda extender el arrendamiento. </p>
+          <p></p>
+          <p>
+            <b>Acuse de recibo de DHCP (DHCPACK)</b>
+          </p>
+          <p>Al recibir el mensaje DHCPREQUEST, el servidor verifica la información del arrendamiento al devolver un DHCPACK, como se muestra en la figura 7. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el proceso de DHCP, que consta de un cliente configurado para DHCP que busca una dirección y un servidor DHCP que proporciona una dirección al cliente.  La figura dos muestra el primer paso del proceso en el que una computadora cliente envía un mensaje de difusión que solicita una dirección IP.  Este es la detección de DHCP. La figura tres muestra el paso dos del proceso en el que el servidor se identificó a sí mismo como servidor DHCP y ofrece una dirección IP al cliente. Este es un mensaje de unidifusión y es la oferta de DHCP La figura cuatro muestra el paso tres, en el que el cliente envía un mensaje de difusión que acepta la dirección IP ofrecida. Esta es la solicitud de DHCP. La figura cinco muestra el último paso, en el que el servidor envía un mensaje de unidifusión al cliente que confirma el acuse de recibo de que el cliente aceptó la dirección.  Este es la confirmación de DHCP (ack). La figura seis muestra cómo el cliente envía un mensaje de unidifusión al servidor que solicita la renovación del arrendamiento actual. La figura siete muestra que el servidor confirma el pedido de renovación del arrendamiento.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.1 Introducción a syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a syslog</h1>
+        <div>
+          <p>Cuando ocurren ciertos eventos en una red, los dispositivos de red tienen mecanismos de confianza para notificar mensajes detallados del sistema al administrador. Estos mensajes pueden ser importantes o no. Los administradores de red tienen una variedad de opciones para almacenar, interpretar y mostrar estos mensajes, así como para recibir esos mensajes que podrían tener el mayor impacto en la infraestructura de la red.</p>
+          <p></p>
+          <p>El método más común para acceder a los mensajes del sistema es utilizar un protocolo denominado syslog. </p>
+          <p></p>
+          <p>El término “syslog” se utiliza para describir un estándar. También se utiliza para describir el protocolo desarrollado para ese estándar. El protocolo syslog se desarrolló para los sistemas UNIX en la década de los ochenta, pero la IETF lo registró por primera vez como RFC 3164 en 2001. Syslog usa el puerto UDP 514 para enviar mensajes de notificación de eventos a través de redes IP a recopiladores de mensajes de eventos, como se muestra en la ilustración.</p>
+          <p></p>
+          <p>Muchos dispositivos de red admiten syslog, incluidos routers, switches, servidores de aplicación, firewalls y otros dispositivos de red. El protocolo syslog permite que los dispositivos de red envíen los mensajes del sistema a servidores de syslog a través de la red. </p>
+          <p></p>
+          <p>Existen varios paquetes de software diferentes de servidores de syslog para Windows y UNIX. Muchos de ellos son freeware.</p>
+          <p></p>
+          <p>El servicio de registro de syslog proporciona tres funciones principales:</p>
+          <p>
+            <ul>
+              <li>La capacidad de recopilar información de registro para el control y la resolución de problemas </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La capacidad de seleccionar el tipo de información de registro que se captura</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La capacidad de especificar los destinos de los mensajes de syslog capturados</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un router conectado a un switch.  Ambos están enviando mensajes del sistema a un servidor syslog.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.1 Configuración de SPAN local</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de SPAN local</h1>
+        <div>
+          <p>La función SPAN de los switches de Cisco envía una copia de cada trama que ingresa al puerto de origen, sale del puerto de destino y se dirige al analizador de paquetes o IPS. Se usa un número de sesión para identificar una sesión de SPAN local. </p>
+          <p></p>
+          <p>La figura 1 muestra la sintaxis del comando de configuración global <b>monitor session</b>. Este comando sirve para asociar un puerto de origen y un puerto de destino con una sesión de SPAN. Cada sesión usa un comando de <b>monitor session</b> diferente. Se puede especificar una VLAN en vez de un puerto físico.</p>
+          <p></p>
+          <p>Por ejemplo, en la Figura 2, PCA está conectado a F0/1 y una computadora con una aplicación analizadora de paquetes está conectada a F0/2. El objetivo es capturar todo el tráfico enviado o recibido por PCA en el puerto F0/1 y enviar una copia de esas tramas al analizador de paquetes (o a IPS) en el puerto F0/2. La sesión de SPAN del switch copiará todo el tráfico enviado y recibido por el puerto de origen F0/1 al puerto de destino F0/2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la sintaxis del comando de configuración global monitor session. La figura 2 muestra que PCA está conectado a F0/1 del switch S1 y que una computadora con una aplicación analizadora de paquetes está conectada a Fa0/2 en S1. El comando de configuración global de sesión de monitoreo sirve para enviar una copia de las tramas enviadas o recibidas en F0/1 al analizador de paquetes (o al IPS) en el puerto Fa0/2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Actividad: Identificar los pilares de IdC</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_instr_title'>
+		<text><![CDATA[Instrucciones]]></text>
+	</component>
+
+	<component id='ID_s1_instr_body'>
+		<text><![CDATA[Arrastre cada pilar para que coincida con la descripción.]]></text>
+	</component>
+
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+
+	<component id="ID_s1_CORRECT_TITLE">
+		<text><![CDATA[Correcto]]></text>
+	</component>
+
+	<component id="ID_s1_CORRECT_BODY">
+		<text><![CDATA[Ha relacionado correctamente cada pilar con su descripción.]]></text>
+	</component>
+
+	<component id="ID_s1_INCORRECT_TITLE">
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+	
+	<component id="ID_s1_INCORRECT_BODY">
+		<text><![CDATA[No ha relacionado correctamente cada pilar con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+	</component>
+
+	<component id='ID_s1_drag01'>
+		<text><![CDATA[Análisis de datos]]></text>
+	</component>
+
+	<component id='ID_s1_drag02'>
+		<text><![CDATA[Computación en la niebla]]></text>
+	</component>
+
+	<component id='ID_s1_drag03'>
+		<text><![CDATA[Administración y automatización]]></text>
+	</component>
+
+	<component id='ID_s1_drag04'>
+		<text><![CDATA[Conectividad de redes]]></text>
+	</component>
+
+	<component id='ID_s1_drag05'>
+		<text><![CDATA[Plataforma de habilitación de aplicaciones]]></text>
+	</component>
+
+	<component id='ID_s1_drag06'>
+		<text><![CDATA[Seguridad]]></text>
+	</component>
+
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[Permite a los dispositivos finales conectarse a una computadora, red y sistema de almacenamiento integrado local]]></text>
+	</component>
+
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Permite a una organización descubrir, contener y corregir con rapidez y eficacia un ataque para minimizar los daños]]></text>
+	</component>
+
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[Consta de componentes de infraestructura de red distribuida e interfaces específicas de IdC específicas de la aplicación]]></text>
+	</component>
+
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[Incluye herramientas de administración, como el director de la red de campo de IdC de Cisco]]></text>
+	</component>
+
+	<component id='ID_s1_txt05'>
+		<text><![CDATA[Identifica los dispositivos que pueden utilizarse para proporcionar conectividad de IdC a los diversos sectores]]></text>
+	</component>
+
+	<component id='ID_s1_txt06'>
+		<text><![CDATA[Ofrece la infraestructura para el alojamiento de aplicaciones y la movilidad de las aplicaciones entre la nube y la computación en la niebla]]></text>
+	</component>
+
+	<component id='ID_s1_target_header'>
+		<text><![CDATA[Pilar]]></text>
+	</component>
+
+	<component id='ID_s1_text_header'>
+		<text><![CDATA[Descripción]]></text>
+	</component><!-- end slide 1 --></textcomponents>

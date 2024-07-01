@@ -1,0 +1,7 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_txt03{
+	line-height: 12px !important;
+}

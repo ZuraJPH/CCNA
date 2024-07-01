@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.6 Protocolos de routing sin clase</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de routing sin clase</h1>
+        <div>
+          <p>Las redes modernas ya no utilizan la asignación de direcciones IP con clase y, por lo tanto, la máscara de subred no se puede determinar mediante el valor del primer octeto. Los protocolos de routing IPv4 sin clase (RIPv2, EIGRP, OSPF e IS-IS) incluyen la información de la máscara de subred con la dirección de red en las actualizaciones de routing. Los protocolos de routing sin clase admiten VLSM y CIDR. </p>
+          <p></p>
+          <p>Los protocolos de routing IPv6 son protocolos sin clase. La diferencia entre el tipo con clase y el tipo sin clase se aplica solo a los protocolos de routing IPv4. Se considera que todos los protocolos de routing IPv6 son protocolos sin clase, dado que incluyen la duración de prefijo con la dirección IPv6. </p>
+          <p></p>
+          <p>En las figuras 1 a 5, se ilustra la forma en que el routing sin clase resuelve los problemas que se generan con el routing con clase:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Figura 1:</b> en este diseño de red no contigua, se implementó el protocolo sin clase RIPv2 en los tres routers. Cuando el R1 reenvía una actualización al R2, RIPv2 incluye la información de la máscara de subred con la actualización 172.16.1.0/24.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Figura 2:</b> el R2 recibe, procesa y agrega dos entradas en la tabla de routing. En la primera línea, se muestra la dirección de red con clase 172.16.0.0 con la máscara de subred /24 de la actualización. Esto se conoce como “ruta principal”. En la segunda entrada, se muestra la dirección de red VLSM 172.16.1.0, con la dirección del siguiente salto y la salida. Esto se conoce como “ruta secundaria”.  Las rutas principales nunca incluyen una interfaz de salida ni la dirección IP del siguiente salto. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Figura 3:</b> cuando el R3 reenvía una actualización al R2, RIPv2 incluye la información de la máscara de subred con la actualización 172.16.2.0/24.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Figura 4:</b> el R2 recibe, procesa y agrega otra entrada de ruta secundaria 172.16.2.0/24 debajo de la entrada de la ruta principal 172.16.0.0. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Figura 5:</b> ahora el R2 tiene información acerca de las redes divididas en subredes. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el mismo diseño de red que la página anterior.  En esta figura, R1 está ejecutando la versión 2 de RIP. Por lo tanto, después de cada período de 30 segundos, envía una actualización de routing que consta de la dirección de red 172 punto 16 punto 1 punto 0 y ahora incluye la máscara de subred 255 punto 255 punto 255 punto 0.  La figura dos muestra R2 que recibe la actualización y agrega la red anunciada por R1 a su tabla de routing. Debido a que es una red de clase B con una máscara de subred no predeterminada, contendrá la dirección de clase como ruta principal y, luego, todas las rutas secundarias. La dirección que se agrega es 172 punto 16 punto 1 punto 0.  La figura tres muestra R3 que ejecuta la versión 2 de RIP. Por lo tanto, después de cada período de 30 segundos, envía una actualización de routing que consta de la dirección de red 172 punto 16 punto 2 punto 0 y ahora incluye la máscara de subred 255 punto 255 punto 255 punto 0. La figura cuatro muestra R2 que recibe la actualización y agrega la red anunciada por R3 a su tabla de routing como otra ruta secundaria.  La figura cinco muestra el resultado de un comando ping y un comando trace route que se envían de R2 a la dirección 172 punto 16 punto 1 punto 1. Esta vez los resultados son perfectos porque el router ya sabe exactamente dónde se encuentra el host especificado y solo hay una ruta para comunicarse con él.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

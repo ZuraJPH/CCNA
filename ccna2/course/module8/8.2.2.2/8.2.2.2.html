@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.2 Configuración de un router como cliente DHCPv6 sin estado</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de un router como cliente DHCPv6 sin estado</h1>
+        <div>
+          <p>En el ejemplo que se muestra en la figura, se utiliza un router Cisco como el cliente DHCPv6 sin estado. Esta no es una situación típica y se utiliza solo con fines de demostración. Generalmente, un cliente DHCPv6 sin estado es un dispositivo, como una computadora, una tablet PC, un dispositivo móvil o una cámara web.</p>
+          <p></p>
+          <p>El router cliente necesita una dirección IPv6 link-local en la interfaz para enviar y recibir mensajes IPv6, como mensajes RS y mensajes DHCPv6. La dirección link-local de un router se crea automáticamente cuando se habilita IPv6 en la interfaz. Esto puede suceder cuando se configura una dirección de unidifusión global en la interfaz o cuando se utiliza el comando <b>ipv6 enable</b>. Después de que el router reciba una dirección local de enlace, puede participar en la detección de vecinos IPv6. </p>
+          <p></p>
+          <p>En este ejemplo, se utiliza el comando <b>ipv6 enable</b>, porque el router aún no tiene una dirección de unidifusión global.</p>
+          <p></p>
+          <p>El comando <b>ipv6 address autoconfig</b> habilita la configuración automática del direccionamiento IPv6 mediante SLAAC. Se supone que el router del servidor está configurado para DHCPv6 sin estado, por lo que envía un mensaje RA para informar al router cliente que utilice DHCPv6 sin estado para obtener la información de DNS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un switch con dos routers conectados a él. Un router es un servidor DHCPv6 sin estado y el otro es un cliente DHCPv6.  La figura muestra los comandos utilizados para configurar el router como cliente DHCPv6.  La figura comienza en el modo de configuración global y el primer comando es interface g 0 barra 1.  El siguiente comando es ipv6 enable.  El comando final es ipv6 address autoconfig.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

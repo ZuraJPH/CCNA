@@ -1,0 +1,34 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Versiones del VTP</b>]]></text>
+    </component><!--s1 table--><component id="ID_s1_table01">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+    <tr class="mtable_title">
+            <td colspan="2" bgcolor='#FFFFFF'></td>
+        </tr>
+ 
+             <tr class="mtable_top">
+                <td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+            </tr>
+
+<tr>
+<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Versión de VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>Definición</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Versión 1 de VTP</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Modo de VTP predeterminado en todos los switches.</li><li>Admite el rango normal de VLAN únicamente.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Versión 2 de VTP</td>
+<td bgcolor='#ffffff'><textformat blockindent="-14"><ul><li>Admite el rango normal de VLAN únicamente.</li><li>Admite redes Token Ring antiguas.</li><li>Admite características avanzadas, que incluyen el formato no reconocido TLV (tipo-longitud-valor), el modo transparente dependiente de la versión y las verificaciones de consistencia.</li></ul></textformat></td>
+</tr>
+
+
+
+</table>]]>
+        </text>
+    </component><!-- end slide 2 --></textcomponents>

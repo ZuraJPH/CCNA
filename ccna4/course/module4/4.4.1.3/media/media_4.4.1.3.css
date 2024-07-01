@@ -1,0 +1,17 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#canvasId{height:398px !important;}
+
+#ID_txt04,#ID_txt02{line-height:1;
+}
+
+@media only screen and (device-width: 768px) {
+   ::-webkit-scrollbar-thumb {
+       border-radius: 3px;
+       background-color: rgba(0, 0, 0, .4);
+       ;
+   }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.1 Asegurar los puertos sin utilizar</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Asegurar los puertos sin utilizar</h1>
+        <div>
+          <p>
+            <b>Deshabilitar puertos en desuso</b>
+          </p>
+          <p></p>
+          <p>Un método simple que muchos administradores usan para contribuir a la seguridad de la red ante accesos no autorizados es inhabilitar todos los puertos del switch que no se utilizan. Por ejemplo, si un switch Catalyst 2960 tiene 24 puertos y hay tres conexiones Fast Ethernet en uso, es aconsejable inhabilitar los 21 puertos que no se utilizan. Navegue hasta todos los puertos que no se utilizan y emita el comando <b>shutdown</b> de Cisco IOS. Si, más adelante, se debe reactivar un puerto, se puede habilitar con el comando <b>no shutdown</b> La figura muestra el resultado parcial para esta configuración.</p>
+          <p></p>
+          <p>Realizar cambios de configuración a varios puertos de un switch es sencillo. Si se debe configurar un rango de puertos, use el comando <b>interface range</b>.</p>
+          <p></p>
+          <p>
+            <span class="cmd">Switch(config)# </span>
+            <span class="cmd">
+              <b>interface range</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>escriba el módulo/primer-número – último-número</i>
+            </span>
+          </p>
+          <p></p>
+          <p>El proceso de habilitación e inhabilitación de puertos puede llevar mucho tiempo, pero mejora la seguridad de la red y vale la pena el esfuerzo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el resultado del comando, show run.  Se resalta la sección de la interfaz que muestra muchos de los puertos del switch en estado desactivado para mayor seguridad.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

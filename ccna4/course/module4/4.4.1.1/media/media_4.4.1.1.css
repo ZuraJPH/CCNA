@@ -1,0 +1,8 @@
+
+/*   load the main media CSS file    */
+
+
+@import url('../../../common/styles/media2.css');
+
+#canvasId,#canvasId_{height:358px !important;overflow-y:hidden;}
+/*#ID_s1_txt12{background-color:#FDE6D4;border-color:#F68026;border:2px;border-radius: 3px; }*/

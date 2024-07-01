@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.2 Planificación para la redundancia</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Planificación para la redundancia</h1>
+        <div>
+          <p>
+            <b>Implementación de la redundancia </b>
+          </p>
+          <p></p>
+          <p>Para la mayoría de las organizaciones, la disponibilidad de la red es fundamental para satisfacer las necesidades empresariales. La redundancia es una parte importante del diseño de la red para prevenir interrupciones de los servicios de la red al minimizar la posibilidad de un punto único de falla. Un método para implementar la redundancia consiste en instalar equipos duplicados y proporcionar servicios de conmutación por falla para los dispositivos esenciales. </p>
+          <p></p>
+          <p>Otro método para implementar la redundancia es mediante rutas redundantes, como se muestra en la ilustración. Las rutas redundantes ofrecen rutas físicas alternativas para que los datos atraviesen la red. En una red conmutada, las rutas redundantes admiten una alta disponibilidad. Sin embargo, debido al funcionamiento de los switches, es posible que las rutas redundantes en una red Ethernet conmutada causen bucles lógicos en la capa 2. Por esta razón, se necesita el protocolo de árbol de expansión (STP).</p>
+          <p></p>
+          <p>STP elimina los bucles de capa 2 cuando se utilizan enlaces redundantes entre los switches. Para hacerlo, proporciona un mecanismo para deshabilitar rutas redundantes en una red conmutada hasta que la ruta se vuelva necesaria, por ejemplo, cuando ocurre una falla. Es un protocolo de estándares abiertos, que se utiliza en un entorno de conmutación para crear una topología lógica sin bucles. </p>
+          <p></p>
+          <p>En el capítulo "STP", se describen más detalles acerca de la redundancia LAN y el funcionamiento de STP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran varios switches interconectados con enlaces redundantes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

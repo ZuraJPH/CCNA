@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.5.1.3 Capítulo 2: Conexiones punto a punto</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.5.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 2: Conexiones punto a punto</h1>
+        <div>
+          <p>Las transmisiones seriales envían 1 bit por vez a través de un único canal de manera secuencial. Los puertos seriales son bidireccionales. Las comunicaciones seriales síncronas requieren una señal de reloj.</p>
+          <p>En general, los enlaces punto a punto son más costosos que los servicios compartidos; sin embargo, los beneficios pueden superar los costos. La disponibilidad constante es importante para algunos protocolos, como VoIP.</p>
+          <p>SONET es un estándar de red óptica que utiliza STDM para el uso eficaz del ancho de banda. En los Estados Unidos, las velocidades de transmisión de OC son especificaciones estandarizadas para SONET.</p>
+          <p>La jerarquía de ancho de banda que usan las portadoras es diferente en América del Norte (portadora T) y Europa (portadora E). En América del Norte, la velocidad en línea elemental es 64 kbps, o DS0. Para proporcionar velocidades en línea superiores, se agrupan varios DS0. </p>
+          <p>El punto de demarcación es aquel donde termina la responsabilidad del proveedor de servicios y comienza la responsabilidad del cliente. El CPE, que generalmente es un router, es el dispositivo DTE. El DCE suele ser un módem o una CSU/DSU.</p>
+          <p>HDLC de Cisco es una extensión de protocolo sincrónico de capa de enlace de datos orientada a bits de HDLC que usan muchos proveedores para proporcionar compatibilidad multiprotocolo. Este es el método de encapsulación predeterminado que se usa en las líneas seriales síncronas de Cisco.</p>
+          <p>PPP síncrono se utiliza para conectarse a dispositivos que no son de Cisco, controlar la calidad del enlace, proporcionar autenticación o agrupar enlaces para el uso compartido. PPP utiliza HDLC para encapsular datagramas. LCP es el protocolo PPP que se usa para establecer, configurar, probar y finalizar la conexión de enlace de datos. LCP puede autenticar un par mediante PAP o CHAP. El protocolo PPP usa una familia de NCP para admitir varios protocolos de capa de red simultáneamente. El protocolo PPP multienlace propaga el tráfico a través de enlaces agrupados mediante la fragmentación de paquetes y el envío simultáneo de estos fragmentos a través de varios enlaces a la misma dirección remota, donde se vuelven a armar.</p>
+          <p>PPP también admite la autenticación con PAP, CHAP o con ambos protocolos PAP y CHAP. PAP envía los datos de autenticación en texto sin encriptar. CHAP usa un protocolo de enlace tridireccional, mensajes periódicos de desafío y un hash unidireccional que ayuda a protegerse de los ataques de reproducción.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra estos tres protocolos de encapsulamiento WAN: líneas arrendadas (que incluye HDLC, PPP y SLIP), con conmutación de circuito (que incluye HDLC, PPP y SLIP) y con conmutación por paquetes (que incluye X punto 25, retransmisión de tramas y ATM).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

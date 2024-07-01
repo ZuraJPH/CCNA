@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.4 Comprobación de la ruta predeterminada IPv6 propagada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comprobación de la ruta predeterminada IPv6 propagada</h1>
+        <div>
+          <p>Verifique la configuración de la ruta estática predeterminada en el R2 mediante el comando <b>show ipv6 route static</b>, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para verificar que la ruta predeterminada se haya propagado al R1. Observe que el origen de la ruta es <b>OE2</b>, lo que especifica que se descubrió mediante OSPFv3. La designación “E2” indica que se trata de una ruta externa. </p>
+          <p></p>
+          <p>A diferencia de la tabla de routing IPv4, IPv6 no usa el asterisco para indicar que la ruta es una buena candidata para la ruta predeterminada.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, la salida del comando "show ipv6 route static" en el router dos indica la ruta estática predeterminada configurada. La figura dos es una actividad interactiva que permite que el estudiante practique cómo incluir en una lista las entradas de la tabla de routing para los routers dos y tres para, de este modo, comprobar que la ruta estática predeterminada esté configurada y se propague al router tres correctamente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

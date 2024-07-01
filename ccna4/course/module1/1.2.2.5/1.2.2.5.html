@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.5 ATM</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ATM</h1>
+        <div>
+          <p>La tecnología del modo de transferencia asíncrona (ATM) puede transferir voz, video y datos a través de redes privadas y públicas. Se construye sobre una arquitectura basada en celdas, en vez de una arquitectura basada en tramas. Las celdas ATM tienen siempre una longitud fija de 53 bytes. La celda ATM contiene un encabezado ATM de 5 bytes, seguido de 48 bytes de contenido ATM. Las celdas pequeñas y de longitud fija son adecuadas para transportar tráfico de voz y video, debido a que este tipo de tráfico no admite retrasos. El tráfico de voz y video no tiene que esperar a que se transmitan paquetes de datos más grandes.</p>
+          <p></p>
+          <p>La celda ATM de 53 bytes es menos eficaz que las tramas y los paquetes más grandes de Frame Relay. Además, la celda ATM tiene por lo menos 5 bytes de sobrecarga por cada contenido de 48 bytes. Cuando la celda transporta los paquetes de capa de red segmentados, la sobrecarga es mayor debido a que el switch ATM debe poder rearmar los paquetes en el destino. Una línea ATM típica necesita casi un 20% más de ancho de banda que Frame Relay para transportar el mismo volumen de datos de capa de red.</p>
+          <p></p>
+          <p>ATM se diseñó para ser extremadamente escalable y para admitir las velocidades de enlace de T1/E1 a OC-12 (622 Mb/s) y más. </p>
+          <p></p>
+          <p>ATM ofrece PVC y SVC, si bien los PVC son más comunes con las WAN. Al igual que sucede con otras tecnologías de uso compartido, ATM permite varios VC en una única conexión de línea arrendada al perímetro de la red.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cómo los sitios remotos pueden conectarse mediante un proveedor utilizando la tecnología ATM.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+canvas:not([height]){
+	height:490px !important;
+}
+
+
+/*
+
+#ID_title{
+top:10px!important;;
+}*/

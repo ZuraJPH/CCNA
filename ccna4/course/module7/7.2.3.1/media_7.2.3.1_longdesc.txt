@@ -1,0 +1,1 @@
+La figura muestra un hipervisor de tipo 1, el enfoque de instalación directa en el hardware. El servidor está compuesto por una capa de hardware, sobre esta capa está el hipervisor y sobre eso están los tres sistemas operativos que se muestran: Windows, Linux y UNIX.

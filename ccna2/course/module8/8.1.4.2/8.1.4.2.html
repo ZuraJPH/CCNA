@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.4.2 Verificación de la configuración de DHCPv4 del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de DHCPv4 del router</h1>
+        <div>
+          <p>Cuando el servidor de DHCPv4 está ubicado en una LAN distinta de la del cliente, la interfaz del router que interactúa con el cliente se debe configurar para retransmitir las solicitudes de DHCPv4 mediante la configuración de la dirección IPv4 de ayuda. Si la dirección IPv4 de ayuda no se configura correctamente, las solicitudes de cliente DHCPv4 no se reenvían al servidor de DHCPv4.</p>
+          <p></p>
+          <p>Siga estos pasos para verificar la configuración del router:</p>
+          <p></p>
+          <p>
+            <b>Paso 1: </b>Verificar que el comando <b>ip helper-address</b> esté configurado en la interfaz correcta. Este comando debe estar presente en la interfaz de entrada de la LAN que contiene las estaciones de trabajo cliente DHCPv4 y debe estar dirigido al servidor de DHCPv4 correcto. En la ilustración, el resultado del comando <b>show running-config</b> verifica que la dirección IPv4 de retransmisión DHCP4 hace referencia a la dirección del servidor de DHCPv4 en 192.168.11.6.</p>
+          <p></p>
+          <p>El comando <b>show ip interface</b> también se puede utilizar para verificar la retransmisión DHCPv4 en una interfaz.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: </b>Verificar que no se haya configurado el comando de configuración global <b>no service dhcp</b>. Este comando deshabilita toda la funcionalidad del servidor de DHCP y de retransmisión del router. El comando <b>service dhcp</b> no aparece en la configuración en ejecución, debido a que es la configuración predeterminada</p>
+          <p></p>
+          <p>En la ilustración, el comando <b>show running-config | include no service dhcp</b> verifica que el servicio DHCPv4 esté habilitado, debido a que no hay coincidencia para el comando <b>show running-config | include no service dhcp</b>. Si se hubiera deshabilitado el servicio, en el resultado se mostraría el comando <b>no service dhcp</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el resultado del comando show running-config barra vertical section interface gigabit Ethernet 0/0.  El resultado enumera los valores de configuración para la interfaz especificada, incluidas las configuraciones de DHCP.  En la figura, el resultado muestra una dirección IP y una dirección IP de ayuda.  En la figura se muestra el resultado del comando show running-config barra vertical include no service dhcp.  En el ejemplo el resultado queda en blanco.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

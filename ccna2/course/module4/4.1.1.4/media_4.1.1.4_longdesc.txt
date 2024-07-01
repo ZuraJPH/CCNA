@@ -1,0 +1,1 @@
+La figura muestra la diferencia entre un diseño de LAN de tres niveles con una capa principal de distribución y de acceso, y un diseño de dos niveles que tiene solo una capa de distribución y una capa de acceso.

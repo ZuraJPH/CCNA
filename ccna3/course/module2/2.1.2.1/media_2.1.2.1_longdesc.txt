@@ -1,0 +1,1 @@
+El gráfico representa la topología de referencia utilizada en los pasos para configurar el protocolo VTP.

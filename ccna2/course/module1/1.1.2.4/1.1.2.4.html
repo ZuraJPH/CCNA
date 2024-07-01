@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.4 Habilitación de IP en un host</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Habilitación de IP en un host</h1>
+        <div>
+          <p>Se puede asignar información de dirección IP a un host de dos formas:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Estática:</b> se asigna la dirección IP, la máscara de subred y el gateway predeterminado correctos al host de forma manual. También se puede configurar la dirección IP del servidor DNS.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dinámica:</b> un servidor proporciona la información de dirección IP mediante el protocolo de configuración dinámica de host (DHCP). El servidor de DHCP proporciona una dirección IP, una máscara de subred y un gateway predeterminado válidos para las terminales. El servidor también puede proporcionar otra información.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En las figuras 1 y 2, se proporcionan ejemplos de configuración estática y dinámica de direcciones IPv4. </p>
+          <p></p>
+          <p>Por lo general, las direcciones asignadas estáticamente se usan para identificar recursos de red específicos, como servidores e impresoras de red. También se pueden usar en redes más pequeñas con pocos hosts. Sin embargo, la mayoría de los dispositivos host adquieren su información de dirección IPv4 accediendo a un servidor DHCPv4. En las empresas grandes, se implementan servidores DHCPv4 dedicados que proporcionan servicios a muchas LAN. En un entorno más pequeño de sucursal u oficina pequeña, un switch Cisco Catalyst o un ISR Cisco pueden proporcionar los servicios de DHCPv4. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el applet de Windows para la conexión de red de área local. Se seleccionó la opción Protocolo de Internet.  En la figura, la configuración para la dirección IP se asigna estáticamente junto con la máscara de subred y el gateway predeterminado. La figura dos muestra la opción de dirección que se establece para obtener automáticamente la dirección IP y el servidor DNS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

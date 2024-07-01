@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.2 Instalación de una VM en un hipervisor</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Instalación de una VM en un hipervisor</h1>
+        <div>
+          <p>Cuando se instala un hipervisor de tipo 1 y se reinicia el servidor, sólo se muestra la información básica, como la versión de SO, la cantidad de RAM y la dirección IP. Una instancia de OS no se puede crear a partir de esta pantalla. Los hipervisores de tipo 1 requieren una “consola de administración” para administrar el hipervisor. El software de administración se utiliza para administrar varios servidores con el mismo hipervisor. La consola de administración puede consolidar los servidores automáticamente y encender o apagar los servidores, según sea necesario.</p>
+          <p></p>
+          <p>Por ejemplo, supongamos que el Servidor 1 de la figura se está quedando sin recursos. Para hacer que haya más recursos disponibles, la consola de administración mueve la instancia de Windows al hipervisor en el Servidor2.</p>
+          <p></p>
+          <p>La consola de administración proporciona la recuperación ante las fallas de hardware. Si falla un componente del servidor, la consola de administración mueve la VM a otro servidor automáticamente y sin inconvenientes. La consola de administración de Cisco Unified Computing System (UCS) se muestra en la figura 2. Cisco UCS Manager permite administrar todos los componentes de sofftware y hardware de Cisco UCS. Controla varios servidores y administra los recursos de miles de VM.</p>
+          <p></p>
+          <p>Algunas consolas de administración también permiten la sobreasignación. La sobreasignación se produce cuando se instalan varias instancias de SO, pero su asignación de memoria excede la cantidad total de memoria que tiene un servidor. Por ejemplo, un servidor tiene 16 GB de RAM, pero el administrador crea cuatro instancias de SO con 10 GB de RAM asignadas a cada una. Este tipo de asignación excesiva es habitual porque las cuatro instancias de SO requieren raramente los 10 GB completo de RAM en todo momento.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la migración de una instancia del sistema operativo entre dos hipervisores del servidor 1 al servidor 2. Ambos servidores tienen una capa de hardware y, sobre ésta, la capa de hipervisor. El servidor 1 muestra tres sistemas operativos: Windows, Linux y UNIX. Una flecha representa la migración del OS Windows del servidor 1 al servidor 2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

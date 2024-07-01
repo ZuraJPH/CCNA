@@ -1,0 +1,1 @@
+La figura es una actividad interactiva que muestra cuatro switches con las conexiones entre ellos.  Los puertos se rotulan con su modo de DTP.  El estudiante debe relacionar cada enlace con enlace troncal o de acceso en función de los modos de puerto.

@@ -1,0 +1,1 @@
+La figura muestra un router conectado al switch uno.  El switch uno está conectado a los switches dos y tres con un enlace troncal.  Los switches 2 y 3 cada uno tienen tres VLAN.

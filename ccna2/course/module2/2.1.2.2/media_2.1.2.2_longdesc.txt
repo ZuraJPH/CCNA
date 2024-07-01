@@ -1,0 +1,1 @@
+La figura muestra un router en Internet (R2) que se conecta a un router de rutas internas (R1) mediante una ruta estática.

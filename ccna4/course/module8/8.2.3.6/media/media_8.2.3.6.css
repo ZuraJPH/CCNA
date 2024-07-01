@@ -1,0 +1,13 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#ID_txt13{
+	background-color: #fff !important;
+}
+
+#ID_txt16{
+	background-color: #fff !important;
+}

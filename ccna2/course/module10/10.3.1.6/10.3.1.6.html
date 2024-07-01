@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.6 Creación de copias de respaldo y restauración mediante USB</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Creación de copias de respaldo y restauración mediante USB</h1>
+        <div>
+          <p>
+            <b>Copia de respaldo de las configuraciones mediante una unidad flash USB</b>
+          </p>
+          <p></p>
+          <p>Al realizar copias de respaldo en un puerto USB, se recomienda emitir el comando <b>show file systems</b> para verificar que la unidad USB esté presente y confirmar el nombre, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>A continuación, utilice el comando <b>copy run usbflash0:</b><i>/</i> para copiar el archivo de configuración a la unidad de memoria flash USB. Asegúrese de utilizar el nombre de la unidad flash tal como se indica en el sistema de archivos. La barra es optativa, pero indica el directorio raíz de la unidad flash USB. </p>
+          <p></p>
+          <p>El IOS le solicitará el nombre de archivo. Si el archivo ya existe en la unidad flash USB, el router solicitará la confirmación de sobrescritura, como se ve en la figura 2.</p>
+          <p></p>
+          <p>Utilice el comando <b>dir</b> para ver el archivo en la unidad USB, y el comando <b>more</b> para ver el contenido, como se muestra en la figura 3.</p>
+          <p></p>
+          <p>
+            <b>Restauración de las configuraciones mediante una unidad flash USB</b>
+          </p>
+          <p></p>
+          <p>Para volver a copiar el archivo, será necesario editar el archivo R1-Config de la unidad USB con un editor de texto.  Si suponemos que el nombre de archivo es <b>R1-Config</b>, utilice el comando <b>copy usbflash0:/R1-Config </b><i>configuración-de-arranque</i> para restaurar una configuración en ejecución.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la Figura 1 se muestra la salida del comando show file systems en un router.  El sistema de archivos usbflash0: está resaltado. En la Figura 2 se muestra la salida del comando "copy running-config usbflash0:" dos veces.  Once when the destination file does not exist and once when it does.  If the destination file already exists the user is prompted to over write it. En la Figura 3 se muestra la salida del comando "dir usbflash0:/".  También se demuestra la posibilidad de ver el archivo "R1-config" en flash con el comando "more usbflash0:/R1-Config".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.1 Términos de la tabla de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Términos de la tabla de routing</h1>
+        <div>
+          <p>Una tabla de routing armada dinámicamente proporciona mucha información, como se muestra en la ilustración. Por lo tanto, es de vital importancia comprender el resultado generado por la tabla de routing. Al analizar el contenido de una tabla de routing, se utilizan términos especiales.</p>
+          <p></p>
+          <p>La tabla de enrutamiento IP de Cisco no es una base de datos plana. La tabla de enrutamiento, en realidad, es una estructura jerárquica que se usa para acelerar el proceso de búsqueda cuando se ubican rutas y se reenvían paquetes. Dentro de esta estructura, la jerarquía incluye varios niveles. </p>
+          <p></p>
+          <p>Las rutas se analizan en términos de lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Ruta final</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ruta de nivel 1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ruta principal de nivel 1 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Rutas secundarias de nivel 2</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el resultado del comando show ip route barra vertical begin Gateway.  Esto muestra la tabla de routing para el router R1, que tiene tres rutas conectadas directamente con tres direcciones IP de interfaz, cinco rutas aprendidas a través de RIP, una ruta predeterminada candidata y un gateway de último recurso configurado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

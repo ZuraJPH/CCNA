@@ -1,0 +1,55 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Actividad: Identificar los pasos en el funcionamiento de DHCPv4</b><br><br>Ordene los pasos para mostrar un origen de arrendimiento DHCPv4.<br/>Arrastre cada uno de los pasos del origen de arrendamiento DHCPv4 al campo correspondiente, basándose en los números dentro de los círculos del gráfico.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Cliente de DHCPv4]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Servidor de DHCPv4]]></text>
+</component><!--Drag and Drop--><component id='ID_ip1_DS'>
+	<text><![CDATA[<font color="#393536">DHCPACK<br/>Acuse de recibo de DHCP</font>]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[<font color="#393536">DHCPDISCOVER<br/>Detección de DHCP</font>]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[<font color="#393536">DHCPREQUEST<br/>Solicitud de DHCP</font>]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[<font color="#393536">DHCPOFFER<br/>Oferta de DHCP</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Ordenó correctamente los pasos para originar una concesión DHCPv4.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[No ordenó correctamente los pasos para originar una concesión DHCPv4. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Verificar</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Restablecer</b>]]></text>
+</component>
+
+</textcomponents>

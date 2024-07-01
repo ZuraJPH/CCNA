@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.2 Números de sistema autónomo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Números de sistema autónomo</h1>
+        <div>
+          <p>EIGRP utiliza el comando<b> router eigrp </b><i>autonomous-system </i>para habilitar el proceso EIGRP. El número de sistema autónomo que se menciona en la configuración EIGRP no se relaciona con los números de sistema autónomo asignados globalmente por la Autoridad de números asignados de Internet (IANA), que usan los protocolos de routing externos. </p>
+          <p></p>
+          <p>Entonces ¿cuál es la diferencia entre el número de sistema autónomo asignado globalmente por IANA y el número de sistema autónomo de EIGRP?</p>
+          <p></p>
+          <p>El sistema autónomo asignado globalmente por IANA es un conjunto de redes bajo el control administrativo de una única entidad que presenta una política de routing común a Internet. En la figura, las empresas A, B, C y D se encuentran todas bajo el control administrativo de ISP1. Cuando anuncia rutas a ISP2, ISP1 presenta una política de routing común para todas estas empresas. </p>
+          <p></p>
+          <p>Las pautas para la creación, la selección y el registro de un sistema autónomo se describen en RFC 1930. IANA asigna los números de sistema autónomo globales y es la misma autoridad que asigna el espacio de direcciones IP. El registro regional de Internet (RIR) local tiene la responsabilidad de asignarles a las entidades un número de sistema autónomo de su bloque de números de sistema autónomo asignado. Antes de 2007, los números de sistema autónomo asignados eran números de 16 bits que iban de 0 a 65 535. En la actualidad, se asignan números de sistema autónomo de 32 bits, lo que aumenta la cantidad de números de sistema autónomo disponibles a más de 4000 millones. </p>
+          <p></p>
+          <p>Por lo general, solo los proveedores de servicios de Internet (ISP), los proveedores de troncales de Internet y las grandes instituciones conectadas a otras entidades requieren un número de sistema autónomo. Estos ISP y grandes instituciones utilizan el protocolo de routing de gateway exterior, el protocolo de gateway fronterizo (BGP), para propagar la información de routing. BGP es el único protocolo de routing que utiliza un número de sistema autónomo real en su configuración. </p>
+          <p></p>
+          <p>La gran mayoría de las empresas e instituciones con redes IP no necesitan un número de sistema autónomo, porque se encuentran bajo el control de una entidad más grande, como un ISP. Estas empresas usan protocolos de gateway interior, como RIP, EIGRP, OSPF e IS-IS para enrutar paquetes dentro de sus propias redes. Son una de muchas redes independientes dentro del sistema autónomo de ISP. ISP es responsable del routing de paquetes dentro del sistema autónomo y entre otros sistemas autónomos.</p>
+          <p></p>
+          <p>El número de sistema autónomo que se usa para la configuración EIGRP solo es importante para el dominio de routing EIGRP. Funciona como una ID de proceso para ayudar a los routers a realizar un seguimiento de varias instancias de EIGRP en ejecución. Esto es necesario porque es posible tener más de una instancia de EIGRP en ejecución en una red. Cada instancia de EIGRP se puede configurar para admitir e intercambiar actualizaciones de routing de diferentes redes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un ISP con un número de sistema autónomo que utiliza el EIGRP entre dos empresas y el OSPF entre las otras dos empresas.  El ISP uno está conectado al ISP dos y utiliza BGP entre ellas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

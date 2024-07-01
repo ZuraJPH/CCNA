@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.1 Capítulo 6: Calidad del servicio</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 6: Calidad del servicio</h1>
+        <div>
+          <p>La calidad de la transmisión de red se ve afectada por el ancho de banda de los enlaces entre el origen y el destino, las fuentes de demora al direccionar los paquetes a destino y la fluctuación o la variación en la demora de los paquetes recibidos. Sin mecanismos de QoS implementados, los paquetes se procesan en el orden en que se los recibe. Si hay congestión, los paquetes con plazos se descartarán con la misma frecuencia que los paquetes sin plazos.</p>
+          <p></p>
+          <p>Los paquetes de voz requieren una latencia que no supere los 150 milisegundos (ms). Las fluctuaciones no deben superar los 30 ms y la pérdida de paquetes de voz no debe ser superior al 1%. El tráfico de voz requiere por lo menos 30 KB/s de ancho de banda.</p>
+          <p></p>
+          <p>Los paquetes de video requieren una latencia que no supere los 400 milisegundos (ms). Las fluctuaciones no deben ser de más de 50 ms, y la pérdida de paquetes de video no debe ser superior al 1%. El tráfico de video requiere por lo menos 384 kb/s de ancho de banda.</p>
+          <p></p>
+          <p>Para los paquetes de datos, dos factores afectan la calidad de la experiencia (QoE) de los usuarios finales: </p>
+          <p>
+            <ul>
+              <li>¿Los datos provienen de una aplicación interactiva?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>¿Los datos son críticos?</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los cuatro algoritmos de puesta en cola que se analizan en este capítulo son los siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Primero en entrar, primero en salir</b> (FIFO): los paquetes se reenvían en el orden en el que se reciben.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Cola equitativa ponderada (WFQ)</b>: los paquetes se clasifican en diferentes flujos según la información del encabezado, incluido el valor de ToS.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Puesta en cola equitativa ponderada por clase (CBWFQ)</b>: los paquetes se asignan a las clases definidas por el usuario según las coincidencias con los criterios como protocolos, ACL e interfaces de entrada. El administrador de red puede asignar ancho de banda, ponderación y límite máximo de paquetes a cada clase.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Puesta en cola de baja latencia (LLQ)</b>: los datos susceptibles a las demoras, como datos de voz, se agregan a una cola de prioridad para que puedan enviarse primero (antes que los paquetes de otras colas).</li>
+            </ul>
+          </p>
+          <p>Los tres modelos de puesta en cola que se analizan en este capítulo son los siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Mejor esfuerzo</b>: es el modelo de puesta en cola predeterminado de las interfaces. Todos los paquetes se tratan de la misma manera. No hay QoS. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Servicios integrados (IntServ)</b>:IntServ permite proporcionar QoS de extremo a extremo que requieren las aplicaciones en tiempo real mediante la administración explícita de recursos de red para proporcionar QoS a flujos específicos de paquetes de usuario, también conocidos como microflujos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Servicios diferenciados (DiffServ)</b>: DiffServ usa un enfoque de QoS programable que depende de los dispositivos de red que se configuran para atender varias clases de tráfico con distintos requisitos de QoS. Aunque no hay garantía de QoS, el modelo DiffServ es más rentable y escalable que IntServ.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Algunas de las herramientas de QoS son:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Clasificación y marcado</b>: la clasificación determina la clase de tráfico a la que pertenecen los paquetes o las tramas. La marcación significa que estamos agregando un valor al encabezado de paquetes. Los dispositivos que reciben el paquete se basan en este campo para ver si coincide con una política definida.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Prevención de congestión</b>: las herramientas de prevención de congestión monitorean las cargas de tráfico de red para anticiparse a las congestiones y así evitarlas. A medida que las colas alcanzan el umbral máximo, se descarta un pequeño porcentaje de paquetes. Cuando se supera el umbral máximo, se descartan todos los paquetes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Modelado y vigilancia</b>: el modelado almacena en cola los paquetes sobrantes y programa la transmisión posterior del sobrante por intervalos. Se usa el modelado en el tráfico saliente. La vigilancia descarta o remarca el tráfico excedente. La vigilancia suele aplicarse al tráfico entrante.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra partes del globo, placa de circuito, cables de parche y código de programa. La leyenda dice “Resumen | Capítulo 6”</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

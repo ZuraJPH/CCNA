@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.5.3 Prueba de la ruta estática flotante IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.5.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Prueba de la ruta estática flotante IPv4</h1>
+        <div>
+          <p>Debido a que la ruta estática predeterminada en el R1 al R2 tiene una distancia administrativa de 1, el tráfico del R1 al R3 debe pasar por el R2. El resultado en la figura 1 confirma que el tráfico entre el R1 y el R3 atraviesa el R2. </p>
+          <p></p>
+          <p>¿Qué ocurriría si el R2 falla? Para simular esta falla, se desactivan ambas interfaces seriales del R2, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>Observe en la figura 3 que el R1 genera mensajes de forma automática que indican que la interfaz serial al R2 está inactiva. Si se observa la tabla de routing se verifica que la ruta predeterminada ahora apunta a R3 usando la ruta predeterminada estática flotante configurada con un valor de AD de 5 y un siguiente salto de 10.10.10.2.</p>
+          <p></p>
+          <p>El resultado en la figura 4 confirma que el tráfico ahora fluye directamente entre el R1 y el R3. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar con un enlace adicional entre el router uno y el router tres. La figura uno muestra el resultado del comando “trace route” en el router uno a la LAN del router tres con dos saltos. La figura dos muestra que serial cero cero cero y serial cero cero uno en el router dos están desactivados.  Esto debe hacer que la ruta estática flotante se convierta en la ruta preferida en el router uno.  La figura tres muestra el resultado del comando “show ip route static” en el router que confirma que la ruta estática flotante se ha convertido en la ruta preferida. La figura cuatro muestra el resultado del comando “trace route” en el router uno a la LAN del router tres con un salto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

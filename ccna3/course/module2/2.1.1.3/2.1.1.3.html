@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.3 Publicaciones del VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Publicaciones del VTP</h1>
+        <div>
+          <p>El VTP emite tres tipos de publicaciones:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Publicaciones de resumen</b>: informan a los switches adyacentes el nombre de dominio del VTP y el número de revisión de configuración.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Solicitud de publicación</b>: responde a un mensaje de publicación de resumen cuando la publicación de resumen contiene un número de revisión de configuración más alto que el valor actual.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Publicaciones de subgrupos</b>: contienen información de VLAN, incluido cualquier cambio.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>De forma predeterminada, los switches Cisco ejecutan publicaciones de resumen cada cinco minutos. Las publicaciones de resumen informan a los switches del VTP adyacentes el nombre de dominio de VTP actual y el número de revisión de la configuración.</p>
+          <p></p>
+          <p>El número de revisión de la configuración es un número de 32 bits que indica el nivel de revisión para un paquete VTP. Cada dispositivo de VTP rastrea el número de revisión de configuración del VTP que se le asigna.</p>
+          <p></p>
+          <p>Esta información se utiliza para determinar si la información recibida es más reciente que la versión actual. Cada vez que modifica una VLAN en un dispositivo VTP, la revisión de la configuración se incrementa en uno.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Para reiniciar una revisión de configuración en un switch, cambie el nombre de dominio VTP, y luego vuelva a cambiarlo al nombre original.</p>
+          <p></p>
+          <p>Cuando un switch recibe un paquete de publicación de resumen, compara el nombre de dominio de VTP con su propio nombre de dominio de VTP. Si el nombre es diferente, el switch simplemente ignora el paquete. Si el nombre es el mismo, el switch compara la revisión de configuración con su propia revisión. Si el número de revisión de la configuración es mayor o igual al número de revisión de configuración del paquete, se ignora el paquete. Si el número de revisión de la configuración es más bajo, se envía una solicitud de publicación que solicita para el mensaje de publicación del subgrupo.</p>
+          <p></p>
+          <p>El mensaje de publicación de subgrupo contiene información de la VLAN con cualquier cambio. Al agregar, eliminar o cambiar una VLAN en el servidor VTP, el servidor del VTP aumenta la revisión de configuración y emite una publicación de resumen. Una o varias publicaciones de subgrupos siguen la publicación de resumen que incluye la información de VLAN que incluye cualquier cambio. Este proceso se muestra en la figura.</p>
+          <p>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra el flujo de las publicaciones del protocolo VTP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

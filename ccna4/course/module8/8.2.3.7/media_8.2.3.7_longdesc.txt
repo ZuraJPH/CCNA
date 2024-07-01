@@ -1,0 +1,1 @@
+Esta actividad interactiva permite que el estudiante haga coincidir las capas de OSI con la descripción del problema correspondiente.

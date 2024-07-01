@@ -1,0 +1,1 @@
+La figura muestra la misma topología que la página anterior. Sin embargo, ahora el objetivo de la ACL es bloquear el tráfico FTP y Telnet desde un segmento de red en R-1 para que no llegue a un segmento de red en R-3.  La mejor posición de la ACL es en el router R-1, en la interfaz LAN y en el sentido entrante.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.5 Eliminación de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Eliminación de VLAN</h1>
+        <div>
+          <p>En la ilustración, el comando del modo de configuración global <b>no vlan </b><i>id-vlan </i>se utiliza para eliminar la VLAN 20 del switch. El switch S1 tenía una configuración mínima con todos los puertos en la VLAN 1 y una VLAN 20 sin usar en la base de datos de VLAN. El comando <b>show vlan brief</b> verifica que la VLAN 20 ya no esté presente en el archivo vlan.dat después de utilizar el comando <b>no vlan 20</b>.</p>
+          <p></p>
+          <p>
+            <b>Precaución</b>: Antes de borrar una VLAN, reasigne todos los puertos miembros a una VLAN distinta. Los puertos que no se trasladen a una VLAN activa no se podrán comunicar con otros hosts una vez que se elimine la VLAN y hasta que se asignen a una VLAN activa.</p>
+          <p></p>
+          <p>Alternativamente, se puede eliminar el archivo vlan.dat completo con el comando <b>delete flash:vlan.dat</b> del modo EXEC privilegiado. Se puede utilizar la versión abreviada del comando (<b>delete vlan.dat</b>) si no se trasladó el archivo vlan.dat de su ubicación predeterminada. Después de emitir este comando y de volver a cargar el switch, las VLAN configuradas anteriormente ya no están presentes. Esto vuelve al switch a la condición predeterminada de fábrica con respecto a la configuración de VLAN.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> para los switches Catalyst, el comando <b>erase startup-config</b> debe acompañar al comando <b>delete vlan.dat</b> antes de la recarga para restaurar el switch a la condición predeterminada de fábrica.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la sintaxis para eliminar una VLAN.  También se muestra el resultado del comando “show vlan brief” para verificar que se eliminó la VLAN.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

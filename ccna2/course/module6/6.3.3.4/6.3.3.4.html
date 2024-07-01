@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.4 Configuración de router-on-a-stick: verificación de subinterfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de router-on-a-stick: verificación de subinterfaces</h1>
+        <div>
+          <p>Los routers Cisco están configurados de manera predeterminada para enrutar el tráfico entre subinterfaces locales. Por lo tanto, no es necesario que esté habilitado el enrutamiento.</p>
+          <p></p>
+          <p>En la figura 1, el comando <b>show vlan</b> muestra información sobre las subinterfaces VLAN de Cisco IOS. El resultado muestra las dos subinterfaces VLAN, GigabitEthernet0/0.10 y GigabitEthernet0/0.30.</p>
+          <p></p>
+          <p>Examine la tabla de routing usando el comando <span class="cmd"><b></b></span><b>show ip route </b><span class="cmd"><b></b></span>(Figura 2). En el ejemplo, las rutas definidas en la tabla de routing indican que están asociadas a subinterfaces específicas, en lugar de interfaces físicas separadas. Hay dos rutas en la tabla de routing: una ruta va a la subred 172.17.10.0, que está conectada a la subinterfaz local G0/0.10; la otra ruta va a la subred 172.17.30.0, que está conectada a la subinterfaz local G0/0.30. El router utiliza la tabla de enrutamiento para determinar dónde enviar el tráfico que recibe. Por ejemplo, si el router recibe un paquete en la subinterfaz G0/0.10 destinado a la subred 172.17.30.0, identificará que debe enviar el paquete por la subinterfaz G0/0.30 para que llegue a los hosts en la subred 172.17.30.0.</p>
+          <p></p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar y verificar el router-on-a-stick en el R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el resultado del comando show vlan, desde la perspectiva de un router que se configuró para el routing entre VLAN como router-on-a-stick. La figura dos muestra el resultado de la tabla de routing IP desde la perspectiva de un router que se configuró para el routing entre VLAN como router-on-a-stick. La figura tres es un verificador de sintaxis que demuestra el proceso de creación de las subinterfaces, la configuración de la encapsulación y la activación de las interfaces físicas en un router que se utiliza para el routing entre VLAN como router-on-a-stick.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

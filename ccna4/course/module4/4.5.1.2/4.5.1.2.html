@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.5.1.2 Capítulo 4: Listas de control de acceso</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.5.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 4: Listas de control de acceso</h1>
+        <div>
+          <p>Los routers no filtran tráfico de manera predeterminada. El tráfico que ingresa al router se enruta solamente en función de la información de la tabla de routing.</p>
+          <p></p>
+          <p>El filtrado de paquetes controla el acceso a una red mediante el análisis de los paquetes entrantes y salientes y la transferencia o el descarte de estos según criterios como la dirección IP de origen, la dirección IP de destino y el protocolo incluido en el paquete. Un router que filtra paquetes utiliza reglas para determinar si permite o deniega el tráfico. Un router también puede realizar el filtrado de paquetes en la capa 4, la capa de transporte.</p>
+          <p></p>
+          <p>Una ACL es una lista secuencial de instrucciones permit o deny. La última instrucción de una ACL siempre es una denegación implícita de cualquier instrucción que bloquee todo el tráfico. Para que la denegación implícita de cualquier instrucción al final de la ACL no bloquee todo el tráfico, se puede agregar la instrucción <b>permit ip any any</b>.</p>
+          <p></p>
+          <p>Cuando el tráfico de la red atraviesa una interfaz configurada con una ACL, el router compara la información dentro del paquete con cada entrada, en orden secuencial, para determinar si el paquete coincide con una de las instrucciones. Si se encuentra una coincidencia, el paquete se procesa según corresponda.</p>
+          <p></p>
+          <p>Las ACL se configuran para aplicarse al tráfico entrante o al tráfico saliente.</p>
+          <p></p>
+          <p>Las ACL estándar se pueden utilizar para permitir o denegar el tráfico de direcciones IPv4 de origen únicamente. El destino del paquete y los puertos involucrados no se evalúan. La regla básica para la colocación de una ACL estándar es colocarla cerca del destino.</p>
+          <p></p>
+          <p>Las ACL extendidas filtran paquetes según varios atributos: el tipo de protocolo, la dirección IPv4 de origen o de destino y los puertos de origen o de destino. La regla básica para la colocación de una ACL extendida es colocarla lo más cerca posible del origen.</p>
+          <p></p>
+          <p>El comando de configuración global <b>access-list</b> define una ACL estándar con un número entre 1 y 99, o una ACL extendida con un número entre 100 y 199 y entre 2000 y 2699. Las listas ACL tanto estándar como extendidas pueden tener nombres en lugar de ser numeradas. El comando de nombre <b>ip access-list standard</b><i> se</i> se utiliza para crear una ACL denominada estándar, mientras que el comando <b>ip access-list extended</b><i> se</i> es para una lista de acceso extendida. Las ACE de IPv4 incluyen el uso de máscaras wildcard.</p>
+          <p></p>
+          <p>Una vez configurada la ACL, se la vincula a una interfaz con el comando <b>ip access-group</b> en modo de configuración de interfaz. Un dispositivo puede tener solo una ACL por protocolo, por dirección y por interfaz.</p>
+          <p></p>
+          <p>Para eliminar una ACL de una interfaz, primero introduzca el comando <b>no ip access-group</b> en la interfaz; luego, introduzca el comando global <b>no access-list</b> para eliminar toda la ACL.</p>
+          <p></p>
+          <p>Los comandos <b>show running-config</b> y <b>show access-lists</b> sirven para verificar la configuración de ACL. El comando <b>show ip interface</b> se utiliza para verificar la ACL en la interfaz y el sentido en el que se aplicó.</p>
+          <p></p>
+          <p>El comando <b>access-class</b> configurado en el modo de configuración de línea restringe las conexiones de entrada y salida entre una VTY determinada y las direcciones en una lista de acceso.</p>
+          <p></p>
+          <p>Al igual que las ACL de IPv4 denominada, los nombres en IPv6 son alfanuméricos, distinguen mayúsculas de minúsculas y deben ser únicos. A diferencia de IPv4, no hay necesidad de una opción estándar o extendida.</p>
+          <p></p>
+          <p>En el modo de configuración global, se usa el comando <b>ipv6 access-list</b><i> se</i> para crear una ACL IPv6. A diferencia de las ACL de IPv4, las ACL de IPv6 no utilizan máscaras wildcard. En cambio, se utiliza la longitud de prefijo para indicar cuánto de una dirección IPv6 de origen o destino debe coincidir.</p>
+          <p></p>
+          <p>Una vez configurada la ACL IPv6, se la vincula a una interfaz con el comando <b>ipv6 traffic-filter</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

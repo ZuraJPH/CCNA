@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.3.3 Asignación de puertos a las redes VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Asignación de puertos a las redes VLAN</h1>
+        <div>
+          <p>Después de crear una VLAN, el siguiente paso es asignar puertos a la VLAN. Un puerto de acceso puede pertenecer a una sola VLAN por vez; una excepción a esta regla es un puerto conectado a un teléfono IP, en cuyo caso, hay dos VLAN asociadas al puerto: una para voz y otra para datos.</p>
+          <p></p>
+          <p>En la figura 1, se muestra la sintaxis para definir un puerto como puerto de acceso y asignarlo a una VLAN. El comando <b>switchport mode access</b> es optativo, pero se aconseja como práctica recomendada de seguridad. Con este comando, la interfaz cambia al modo de acceso permanente.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> utilice el comando <b>interface range</b> para configurar varias interfaces simultáneamente.  </p>
+          <p></p>
+          <p>En el ejemplo de la figura 2, la VLAN 20 se asigna al puerto F0/18 del switch S1; por lo tanto, la computadora de estudiantes (PC2) está en la VLAN 20. Cuando se configura la VLAN 20 en otros switches, el administrador de red sabe que debe configurar las otras computadoras de estudiantes para que estén en la misma subred que la PC2 (172.17.20.0/24).</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para asignar una VLAN y utilice el comando <b>show vlan brief</b> para mostrar el contenido del archivo vlan.dat. </p>
+          <p></p>
+          <p>El comando <b>switchport access vlan</b> fuerza la creación de una VLAN si es que aún no existe en el switch. Por ejemplo, la VLAN 30 no está presente en la salida del comando <b>show vlan brief</b> del switch. Si se introduce el comando <b>switchport access vlan 30</b> en cualquier interfaz sin configuración previa, el switch muestra lo siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">% Access VLAN does not exist. Creating vlan 30</span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una tabla con los comandos de Cisco IOS para configurar un puerto para que esté en modo de acceso y sea miembro de una VLAN específica. La figura dos muestra una LAN pequeña y la sintaxis para configurar F0/18 para que sea un puerto de acceso y miembro de la VLAN 20. La figura tres es una actividad interactiva que permite a los estudiantes practicar la configuración de un puerto de switch para que sea un puerto de acceso y miembro de la VLAN 20.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

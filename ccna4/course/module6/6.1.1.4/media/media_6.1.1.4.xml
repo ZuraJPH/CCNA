@@ -1,0 +1,31 @@
+<textcomponents><!-- slide 01 --><component id="ID_s1_title">
+		<text><![CDATA[<b>El búfer de demora de reproducción compensa las fluctuaciones</b>]]>
+	</text>
+	</component>
+	<component id="ID_s1_text01">
+		<text><![CDATA[Flujo de audio de paquetes recibidos con fluctuaciones]]>
+	</text>
+	</component>
+	<component id="ID_s1_text02">
+		<text><![CDATA[Búfer de retardo de retransmisión]]>
+	</text>
+	</component>
+	<component id="ID_s1_text03">
+		<text><![CDATA[Flujo sin fluctuaciones enviado a la interfaz saliente]]>
+	</text>
+	</component><!-- slide 02 --><component id="ID_s2_title">
+		<text><![CDATA[<b>Paquete descartado debido a fluctuación excesiva</b>]]>
+	</text>
+	</component>
+	<component id="ID_s2_text01">
+		<text><![CDATA[Flujo de audio con fluctuación excesiva]]>
+	</text>
+	</component>
+	<component id="ID_s2_text02">
+		<text><![CDATA[Búfer de retardo de retransmisión]]></text>
+	</component>
+	<component id="ID_s2_text03">
+		<text><![CDATA[El paquete se descarta debido a la fluctuación excesiva]]>
+	</text>
+	</component>
+</textcomponents>

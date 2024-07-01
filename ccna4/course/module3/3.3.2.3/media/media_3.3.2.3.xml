@@ -1,0 +1,46 @@
+﻿<textcomponents>
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Túneles de concentrador a dispositivo radial y entre dispositivos radiales de DMVPN</b>]]></text>
+	</component>
+	<component id="ID_s2_text01">
+		<text><![CDATA[Concentrador]]></text>
+	</component>
+	<component id="ID_s2_text02">
+		<text><![CDATA[Dispositivo radial A]]></text>
+	</component>
+	<component id="ID_s2_text03">
+		<text><![CDATA[Spoke B]]></text>
+	</component>
+	<component id="ID_s2_text04">
+		<text><![CDATA[Spoke C]]></text>
+	</component>
+	<component id="ID_s2_text05">
+		<text><![CDATA[Túneles de concentrador a dispositivo radial]]></text>
+	</component>
+	<component id="ID_s2_text06">
+		<text><![CDATA[Túneles entre dispositivos radiales]]></text>
+	</component>
+
+
+<component id="ID_s1_title">
+		<text><![CDATA[<b>Túneles de concentrador a dispositivo radial de DMVPN</b>]]></text>
+	</component>
+
+	<component id="ID_s1_text01">
+		<text><![CDATA[Concentrador]]></text>
+	</component>
+	<component id="ID_s1_text02">
+		<text><![CDATA[Dispositivo radial A]]></text>
+	</component>
+	<component id="ID_s1_text03">
+		<text><![CDATA[Spoke B]]></text>
+	</component>
+	<component id="ID_s1_text04">
+		<text><![CDATA[Spoke C]]></text>
+	</component>
+<component id="ID_s1_text05">
+		<text><![CDATA[Túneles de concentrador a dispositivo radial]]></text>
+	</component>
+
+</textcomponents>

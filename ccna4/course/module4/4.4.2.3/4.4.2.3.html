@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.2.3 Solución de problemas de ACL IPv4. Ejemplo 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de ACL IPv4. Ejemplo 3</h1>
+        <div>
+          <p>En la ilustración, la red 192.168.11.0/24 puede utilizar Telnet para conectarse a 192.168.30.0/24, pero según la política de la empresa, esta conexión no debería permitirse. Los resultados del comando <b>show access-lists 130</b> indican que se encontró una coincidencia para la instrucción permit.</p>
+          <p></p>
+          <p>
+            <b>Solución</b>: La red 192.168.11.0/24 puede usar Telnet para conectarse a la red 192.168.30.0/24 porque el número de puerto de Telnet de la instrucción 10 de la lista de acceso 130 figura en la posición incorrecta en la instrucción de ACL. Actualmente, la instrucción 10 deniega cualquier paquete de origen con un número de puerto que equivalga a Telnet. Para denegar el tráfico de Telnet entrante en G0/1, debe denegar el número de puerto de destino equivalente a Telnet, por ejemplo, <b>10 deny tcp 192.168.11.0 0.0.0.255 192.168.30.0 0.0.0.255 eq telnet</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra otro ejemplo de error de ACL. y usa la misma topología de referencia.  Esta figura muestra la salida del siguiente comando ejecutado en R-1, show access guion lists 130. Se muestra la lista de acceso número 130.  Esta ACL en particular tiene 3 instrucciones.  La primera es 10 deny tcp any eq telnet any.  La segunda línea es 20 deny tcp 192 punto 168 punto 11 punto cero cero punto cero punto cero punto 255 host 192 punto 168 punto 31 punto 12 eq smtp y tuvo 12 coincidencias.  La última instrucción es 30 permit tcp any any.  El error aquí se debe al orden de las instrucciones de la primera línea de ACL.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

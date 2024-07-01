@@ -1,0 +1,1 @@
+La figura es una animación que es una continuación de la página anterior.  Cada router continuará actualizando su tabla de routing a medida que envía y recibe paquetes de actualización desde y hacia otros routers.  

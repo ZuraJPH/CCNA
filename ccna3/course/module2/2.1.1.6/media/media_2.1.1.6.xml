@@ -1,0 +1,127 @@
+﻿<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Situación de número de revisión de configuración del protocolo VTP incorrecto</b>]]></text>
+	</component>
+	
+	<component id='ID_txt01'>
+		<text><![CDATA[VLAN10]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[VLAN20]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[VLAN10]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[VLAN20]]></text>
+	</component>
+
+	<component id='ID_txt05'>
+		<text><![CDATA[VLAN20]]></text>
+	</component>
+
+	<component id='ID_txt06'>
+		<text><![CDATA[VLAN20]]></text>
+	</component>
+
+	<component id='ID_txt07'>
+		<text><![CDATA[Servidor VTP]]></text>
+	</component>
+
+	<component id='ID_txt08'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_txt09'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_txt10'>
+		<text><![CDATA[Enlaces troncales]]></text>
+	</component>
+
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[<b>Dominio de VTP = cisco1<b>]]></text>
+	</component>
+
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[<b>Número de revisión =<b>]]></text>
+	</component>
+
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[<b>VLAN =<b>]]></text>
+	</component>
+
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[<b>17<b>]]></text>
+	</component>
+
+	<component id='ID_s1_txt05'>
+		<text><![CDATA[<b>10,20<b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt01'>
+		<text><![CDATA[<b>Dominio de VTP = cisco1<b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt02'>
+		<text><![CDATA[<b>Número de revisión =<b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt03'>
+		<text><![CDATA[<b>VLAN =<b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt04'>
+		<text><![CDATA[<b>17<b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt05'>
+		<text><![CDATA[<b>10,20<b>]]></text>
+	</component>
+
+	<component id='ID_s3_txt01'>
+		<text><![CDATA[<b>Dominio de VTP = cisco1<b>]]></text>
+	</component>
+
+	<component id='ID_s3_txt02'>
+		<text><![CDATA[<b>Número de revisión =<b>]]></text>
+	</component>
+
+	<component id='ID_s3_txt03'>
+		<text><![CDATA[<b>VLAN =<b>]]></text>
+	</component>
+
+	<component id='ID_s3_txt04'>
+		<text><![CDATA[<b>17<b>]]></text>
+	</component>
+
+	<component id='ID_s3_txt05'>
+		<text><![CDATA[<b>10,20<b>]]></text>
+	</component>
+
+	<component id='ID_s4_txt01'>
+		<text><![CDATA[<b>Dominio de VTP = cisco1<b>]]></text>
+	</component>
+
+	<component id='ID_s4_txt02'>
+		<text><![CDATA[<b>Número de revisión =<b>]]></text>
+	</component>
+
+	<component id='ID_s4_txt03'>
+		<text><![CDATA[<b>VLAN =<b>]]></text>
+	</component>
+
+	<component id='ID_s4_txt04'>
+		<text><![CDATA[<b>35<b>]]></text>
+	</component>
+
+	<component id='ID_s4_txt05'>
+		<text><![CDATA[<b>30,40<b>]]></text>
+	</component>
+
+</textcomponents>

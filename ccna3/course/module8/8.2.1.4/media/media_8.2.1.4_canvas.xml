@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+  <slide type="MBAR"> 
+    <slide> 
+    <element type="TEXT" subType="TITLE" compId="ID_s1_title"/>  
+    <element type="IMAGE" src="8_2_1_4.jpg" x="0" y="0"  width="470" height="400"/> 
+    <element type="TEXT" compId="ID_s1_txt01" x="32" y="59" width="104" align="left" expand="right" />
+    <element type="TEXT" compId="ID_s1_txt02" x="332" y="136.9" width="95.3" align="center" expand="up+down" />
+
+    <element type="TEXT" text="RID: 2.2.2.2" x="82" y="150" width="64.35" align="left" expand="right" class="orangeCallOut" bold="1"/>
+    <element type="TEXT" text="RID: 1.1.1.1" x="11" y="224" width="64.35" align="left" expand="right" class="orangeCallOut" bold="1" />
+    <element type="TEXT" text="RID: 3.3.3.3" x="314" y="226" width="64.35" align="left" expand="right" class="orangeCallOut" bold="1" />
+
+
+    <element type="TEXT" text="172.16.2.0/24" x="162.8" y="85.95" width="88" align="left" bold="1"/>
+    <element type="TEXT" text="172.16.1.0/24" x="32.45" y="347.5" width="88" align="left" bold="1" />
+    <element type="TEXT" text="192.168.1.0/24" x="297.8" y="347.5" width="88" align="left" bold="1" />
+    <element type="TEXT" text="172.16.3.0/30" x="28" y="201.25" width="88" align="left" bold="1" />
+    <element type="TEXT" text="192.168.10.8/30" x="283" y="201.25" width="88" align="left" bold="1" />
+    <element type="TEXT" text="192.168.10.4/30" x="155.3" y="296.4" width="88" align="left" bold="1" />
+
+    <element type="TEXT" text="G0/0" x="166" y="125.4" width="28" align="left" bold="1"/>
+    <element type="TEXT" text=".1" x="201.6" y="125.4" width="13.35" align="left"/>
+    <element type="TEXT" text=".2" x="135" y="176.9" width="13.35"   align="left"/>
+    <element type="TEXT" text="S0/0/0" x="160.8" y="180.9" width="35.95" align="left"/>
+    <element type="TEXT" text="S0/0/1" x="200.8" y="180.9" width="35.95" align="left"/>
+    <element type="TEXT" text=".9" x="245.8" y="175.9" width="13.35"   align="left"/>
+
+    <element type="TEXT" text="S0/0/0" x="100.4" y="246.25" width="35.95" align="left"/>
+    <element type="TEXT" text="S0/0/1" x="98.4" y="262.25" width="35.95" align="left"/>
+    <element type="TEXT" text="S0/0/1" x="270" y="253.4" width="35.95" align="left"/>
+    <element type="TEXT" text="S0/0/0" x="260" y="276.45" width="35.95" align="left"/>
+
+    <element type="TEXT" text=".1" x="64.4" y="252.4" width="13.35"   align="left"/>
+    <element type="TEXT" text="G0/0" x="40.45" y="305.65" width="28"   align="left"/>
+    <element type="TEXT" text=".1" x="71.25" y="304.65" width="13.35"   align="left"/>
+    <element type="TEXT" text=".1" x="64.4" y="252.4" width="13.35"   align="left"/>
+    <element type="TEXT" text=".5" x="96.4" y="282.25" width="13.35"   align="left"/>
+    <element type="TEXT" text=".6" x="289" y="295.65" width="13.35"   align="left"/>
+    <element type="TEXT" text="G0/0" x="302.95" y="307.65" width="28"   align="left"/>
+    <element type="TEXT" text=".1" x="332.85" y="307.65" width="13.35"   align="left"/>
+    <element type="TEXT" text=".10" x="325" y="251.4" width="19.45"   align="left"/>
+      
+    </slide>
+    <slide>    
+    <element type="TEXT" subType="TITLE" compId="ID_s2_title"/> 
+    <element type="ROUTER" textId="ID_s2_txt01" x="7" y="50" width="426" height="335.55" size="11"/>
+
+    </slide>
+    <slide>
+    <!-- Title -->
+      <element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+    <!-- Syntax checker -->
+	  <element type="ACTIVITY" subType="SYNTAX" compId="ID_SC5" x="-10" y="40" width="530" height="355" size="10" resetId="ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>     
+    </slide>
+   </slide>
+
+ 
+   <text id="ID_s2_txt01"><![CDATA[
+    <pre>
+R1(config)# <b>router ospf 10</b>
+R1(config-router)# <b>router-id 1.1.1.1</b>
+R1(config-router)# <b>end</b>
+R1#
+*Mar 25 19:50:36.595: %SYS-5-CONFIG_I: Configured from console by console
+R1#
+R1# <b>show ip protocols </b>
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "ospf 10"
+   Outgoing update filter list for all interfaces is not set
+   Incoming update filter list for all interfaces is not set
+   <div class="highlight">Router ID 1.1.1.1</div>
+   Number of areas in this router is 0. 0 normal 0 stub 0 nssa
+   Maximum path: 4
+   Routing for Networks:
+   Routing Information Sources:
+   Gateway         Distance      Last Update
+   Distance: (default is 110)
+ 
+R1# 
+</pre>
+
+]]>
+  </text>
+     
+   
+</data>

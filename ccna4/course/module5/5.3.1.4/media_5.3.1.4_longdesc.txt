@@ -1,0 +1,1 @@
+La figura 1 muestra una tabla de terminología de SPAN remoto. La figura 2 muestra el tipo de puertos de RSPAN utilizados en una red.

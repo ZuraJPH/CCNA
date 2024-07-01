@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.2 Solución de problemas de la tabla de routing de OSPFv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de la tabla de routing de OSPFv2</h1>
+        <div>
+          <p>En la topología que se muestra en la figura 1, todos los routers están configurados para admitir el routing de OSPFv2. </p>
+          <p></p>
+          <p>Un vistazo a la tabla de routing del R1 (figura 2) nos permite saber que recibe información de la ruta predeterminada, la LAN del R2 (172.16.2.0/24) y el enlace entre el R2 y el R3 (192.18.10.8/30). Sin embargo, no recibe la ruta OSPFv2 LAN del R3. </p>
+          <p></p>
+          <p>El resultado que se muestra en la figura 3 corrobora la configuración de OSPFv2 en el R3. Observe que el R3 solo anuncia el enlace entre el R3 y el R2, pero no anuncia la LAN del R3 (192.168.1.0/24).</p>
+          <p></p>
+          <p>A fin de habilitar una interfaz para OSPFv2, se debe configurar un comando <b>network </b>coincidente en el proceso de routing de OSPFv2. El resultado de la figura 4 confirma que la LAN del R3 no se anuncia en OSPFv2. </p>
+          <p></p>
+          <p>En el ejemplo de la figura 5, se agrega un comando <b>network</b> para la LAN del R3. Ahora el R3 debería anunciar la LAN del R3 a sus vecinos OSPFv2.</p>
+          <p></p>
+          <p>El resultado de la figura 6 corrobora que la LAN del R3 ahora esté en la tabla de routing del R1. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. Se resalta la red interna, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la salida del comando "show ip route" en el router uno. En la figura tres, se muestra la salida del comando "show ip protocols" en el router tres.  Se resaltan las redes para las que el router tres realiza routing. En la figura cuatro, se muestra la salida del comando "show running barra diagonal config barra vertical section router ospf" en el router tres. En la figura cinco, se muestra la sintaxis para configurar una red para OSPF. En la figura seis, se muestra la salida del comando "show ip route ospf" en el router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.2 Priorización del tráfico</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Priorización del tráfico</h1>
+        <div>
+          <p>La calidad de servicio (QoS) es un requisito cada vez más importante para las redes hoy en día. Las nuevas aplicaciones disponibles para los usuarios, como las transmisiones de voz y de video en vivo, aumentan las expectativas de calidad de envíos.</p>
+          <p></p>
+          <p>La congestión se produce cuando se agregan varias líneas de comunicación en un mismo dispositivo, como un router, y luego muchos de esos datos se colocan en menos interfaces salientes o en una interfaz más lenta. La congestión también puede producirse cuando los paquetes de datos grandes impiden que paquetes más pequeños se transmitan a tiempo.</p>
+          <p></p>
+          <p>Cuando el volumen de tráfico es mayor de lo que se puede transportar en la red, los dispositivos colocan los paquetes en cola en la memoria hasta que haya recursos disponibles para transmitirlos. Los paquetes en cola causan retrasos, dado que los nuevos paquetes no se pueden transmitir hasta que no se hayan procesado los anteriores. Si sigue aumentando la cantidad de paquetes que se pondrán en cola, la memoria del dispositivo se llenará y los paquetes se descartarán. Una técnica de QoS que puede ayudarlo con este problema es la clasificación de datos en varias colas, como se muestra en la figura.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Un dispositivo implementa QoS solo cuando experimenta algún tipo de congestión.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres terminales, un servidor web, una PC y un teléfono IP, que envían paquetes a un router. Los paquetes del teléfono IP se marcan como de prioridad alta, los paquetes de la PC se marcan como de prioridad media y los paquetes del servidor web se marcan como de prioridad baja. El router combina los paquetes de las tres colas y los envía a la red. Un cuadro explicativo dice "Todos los tipos de comunicación tienen acceso a los medios. Un tipo particular de tráfico no puede usar todo el ancho de banda”.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

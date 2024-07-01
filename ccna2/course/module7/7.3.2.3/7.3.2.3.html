@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.2.3 Solución de problemas de ACL IPv4 estándar. Ejemplo 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de ACL IPv4 estándar. Ejemplo 3</h1>
+        <div>
+          <p>
+            <b>Política de seguridad</b>: Solo a la PC1 se le permite el acceso remoto de SSH a R1.</p>
+          <p></p>
+          <p>En la figura 1, la PC1 no puede tener acceso remoto a R1 mediante una conexión SSH. Al ver la sección de configuración en ejecución para las líneas VTY se revela que una ACL con el nombre PC1-SSH está correctamente aplicada a las conexiones entrantes. Las líneas VTY están configuradas correctamente para permitir solo conexiones SSH. En el resultado del comando show access-list, advierte que la dirección IPv4 es la interfaz G0/0 del R1, no la dirección IPv4 de la PC1. Además, observa que el administrador configuró una instrucción deny any explícita en la ACL. Esto es útil porque, en esta situación, verá coincidencias para que los intentos fallidos de acceso remoto a R1. </p>
+          <p></p>
+          <p>
+            <b>Solución</b>: La Figura 2 muestra el proceso para corregir el error. Debido a que la instrucción que se debe editar es la primera, utilizamos el número de secuencia 10 para eliminarla  ingresando <b>no 10</b>. Luego configuramos la dirección correcta IPv4 de la PC1. El comando <b>clear access-list counters</b> restablece el resultado para mostrar sólo las nuevas coincidencias. El intento de PC2 para acceeder remotamente a R1 es e, como se muestra en el resultado del comando <b>show access-list</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> La figura muestra una red de tres routers.  R2 se encuentra en la parte superior de un triángulo y tiene una conexión WAN serie tanto con R1 como con R3.  No hay conexión directa entre R1 y R3. R2 también tiene una conexión a Internet.  Los routers R1 y R3 tienen, cada uno, dos interfaces gigabit activas para los segmentos de red locales y cada segmento tiene un switch con una computadora conectada a él.  R1 tiene la red 192 punto 168 punto 10 punto cero en la interfaz gigabit cero barra cero, y la red 192 punto 168 punto 11 punto cero en la interfaz gigabit cero barra one.  R3 tiene la red 192 punto 168 punto 30 punto cero en la interfaz gigabit cero barra cero.  Todos los segmentos son redes clase C con una barra 24.  Esta es la referencia de topología para la siguiente serie de páginas.  La Figura 1 muestra el resultado de la sección de VTY de la configuración en ejecución y del comando show access-list. La Figura 2 muestra el proceso de eliminar la primera instrucción, aplicar la correcta y después ver el resultado del comando show access-list.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

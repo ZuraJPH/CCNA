@@ -1,0 +1,1 @@
+La figura muestra una tabla que compara el estándar, los recursos, el tiempo de convergencia y los cálculos del árbol para diversas variedades de STP.

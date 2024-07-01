@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.5.4 Configuración de una ruta estática flotante IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.5.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una ruta estática flotante IPv6</h1>
+        <div>
+          <p>Para configurar rutas estáticas flotantes IPv6 se utiliza el comando de configuración global <b>ipv6 route</b> y se especifica una distancia administrativa. Si no se configura ninguna distancia administrativa, se utiliza el valor predeterminado (1).</p>
+          <p></p>
+          <p>Consulte la topología en la Figura 1. En esta situación, la ruta predeterminada preferida desde R1 es a R2. La conexión al R3 se debe utilizar solo para respaldo.</p>
+          <p></p>
+          <p>El R1 se configura con una ruta estática predeterminada IPv6 que apunte al R2. Debido a que no está configurada ninguna distancia administrativa, se utiliza el valor predeterminado (1) para esta ruta estática. El R1 también se configura con una ruta estática flotante predeterminada IPv6 que apunta al R3 con una distancia administrativa de 5. Este valor es mayor que el valor predeterminado de 1 y, por lo tanto, esta ruta flota y no está presente en la tabla de routing, a menos que falle la ruta preferida.</p>
+          <p></p>
+          <p>La figura 2 verifica que ambas rutas estáticas predeterminadas IPv6 estén en la configuración en ejecución. La figura 3 verifica que la ruta estática predeterminada IPv6 al R2 esté instalada en la tabla de routing. Observe que la ruta de respaldo al R3 no está presente en la tabla de routing.</p>
+          <p></p>
+          <p>El proceso para probar la ruta estática flotante IPv6 es el mismo que el de la ruta estática flotante IPv4. Desactive las interfaces en el R2 para simular un error. El R1 instalará la ruta al R3 en la tabla de rutas y la utilizará para enviar el tráfico predeterminado.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra el diagrama de laboratorio estándar con un enlace adicional entre el router 1 y el router 3.  La figura muestra la sintaxis para crear una ruta estática predeterminada en el router 1 apuntando al router 2 y otra apuntando al router 3 con una distancia administrativa mayor de 5.  Esto hace que la primera ruta sea la preferida y la segunda sea una ruta estática flotante. La figura 2 muestra el resultado del comando "show ip route static" en el router 1.  Solo la primera ruta se muestra en el resultado, ya que es la ruta preferida. La figura 3 es una actividad interactiva que permite que el estudiante practique la configuración de rutas estáticas flotantes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

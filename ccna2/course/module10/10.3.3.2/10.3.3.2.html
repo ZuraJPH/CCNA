@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.3.2 Pasos para realizar una copia de respaldo de imágenes de IOS en un servidor TFTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pasos para realizar una copia de respaldo de imágenes de IOS en un servidor TFTP</h1>
+        <div>
+          <p>Para mantener las operaciones de red con el mínimo tiempo de inactividad, es necesario implementar procedimientos para realizar copias de seguridad de las imágenes del IOS de Cisco. Esto permite que el administrador de red copie rápidamente una imagen a un router en caso de que la imagen esté dañada o borrada.</p>
+          <p></p>
+          <p>En la figura 1, el administrador de red desea realizar una copia de seguridad del archivo de imagen actual en el router (c1900-universalk9-mz.SPA.152-4.M3.bin) en el servidor TFTP en 172.16.1.100.</p>
+          <p></p>
+          <p>Para realizar una copia de seguridad de la imagen del IOS de Cisco en un servidor TFTP, siga estos tres pasos:</p>
+          <p></p>
+          <p>
+            <b>Paso 1:  </b>Asegúrese de que haya acceso al servidor TFTP de red. Haga ping en el servidor TFTP para probar la conectividad, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>
+            <b>Paso 2:  </b>Verifique que el servidor TFTP tenga suficiente espacio en disco para admitir la imagen del software IOS de Cisco. Utilice el comando <b>show flash0:</b> en el router para determinar el tamaño del archivo de imagen del IOS de Cisco. El archivo del ejemplo tiene 68831808 bytes de longitud.</p>
+          <p></p>
+          <p>
+            <b>Paso 3:  </b>Copie la imagen al servidor TFTP con el comando <b>copy </b><i>url-de origen url-de destino, </i>tal como se muestra en la Figura 3.</p>
+          <p></p>
+          <p>Después de emitir el comando utilizando los URL de origen y de destino especificados, se solicita al usuario que introduzca el nombre del archivo de origen, la dirección IP del host remoto y el nombre del archivo de destino. A continuación, se inicia la transferencia.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 en el R2 para copiar el IOS en un servidor TFTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra un router y un servidor que demuestran que se puede realizar una copia de respaldo de IOS en un servidor TFTP. En la figura número dos se muestra el resultado exitoso de una operación de ping del router al servidor.  También se muestra la salida del comando "show flash colon zero" en el router. En la figura número tres se muestra la sintaxis para copiar el IOS de la memoria flash al servidor TFTP. En la figura número cuatro se muestra una actividad interactiva que permite que los alumnos practiquen cómo realizar una copia de seguridad de un archivo IOS en un servidor TFTP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

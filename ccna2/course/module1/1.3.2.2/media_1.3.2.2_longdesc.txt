@@ -1,0 +1,1 @@
+La figura muestra los dos códigos fuente de ruta para una ruta conectada directamente en un router.  La figura resalta cómo se aprendió la ruta, la red de destino y la interfaz en el router conectado a la red de destino.

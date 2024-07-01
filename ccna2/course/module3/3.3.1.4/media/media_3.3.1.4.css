@@ -1,0 +1,18 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#ID_routerOutput1{line-height:13.5px; font-size:10px !important;}
+#ID_header2{width:114px !important;}
+#dnd_1_drag_0_0,#dnd_1_drag_4_0,#dnd_1_drag_8_0,#dnd_1_drag_12_0
+{
+	left: -40px !important;
+}

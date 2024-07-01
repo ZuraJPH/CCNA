@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	  <slide type="MBAR">
+	  <!-- Slide 01 -->
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s1_header"/>
+			<element type="ROUTER"  textId="router_s1_text1"  x="3.1" y="53.45" width="434.25" height="310.35"/>		
+
+		</slide>
+		<!-- Slide 02 -->
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s2_header"/>
+			<element type="ROUTER"  textId="router_s2_text1"  x="3.1" y="53.45" width="434.25" height="320.35"/>		
+		</slide>
+		
+	<!-- Slide 03 -->
+		<slide> 	
+			<element type="ACTIVITY" subType="SYNTAX" compId="ID_s3_SC1" x="-10" y="35" width="500" height="370" resetId = "ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>	
+		</slide>
+		
+	  </slide>
+	  <text id="router_s1_text1"><![CDATA[<pre>R1(config)#<b> license accept end user agreement</b>
+R1(config)#<b> license boot module c1900 technology-package 
+datak9</b>
+% use 'write' command to make license boot config take 
+effect on next boot
+R1(config)# 
+*Apr 25 23:15:01.874: %IOS_LICENSE_IMAGE_APPLICATION-6-
+LICENSE_LEVEL: Module name = c1900 Next reboot level = 
+datak9 and License = datak9
+*Apr 25 23:15:02.502: %LICENSE-6-EULA_ACCEPTED: <span class = "orange">EULA for </span> 
+<span class = "orange">feature datak9 1.0 has been accepted.</span> 
+UDI=CISCO1941/K9:FTX1636848Z; StoreIndex=1:Built-In 
+License Storage
+R1(config)# </pre>]]></text>
+
+
+	  <text id="router_s2_text1"><![CDATA[<pre>R1#<b> show license</b>
+Index 1 Feature: ipbasek9                       
+        Period left: Life time
+        License Type: Permanent
+        License State: Active, In Use
+        License Count: Non-Counted
+        License Priority: Medium
+Index 2 Feature: securityk9                     
+        Period left: Life time
+        License Type: Permanent
+        License State: Active, In Use
+        License Count: Non-Counted
+        License Priority: Medium
+Index 3 Feature: <span class = "orange">datak9</span>                        
+<span class = "orange_block">        Period left: 8  weeks 4  days</span>        Period Used: 0  minute  0  second
+<span class = "orange_block">        License Type: EvalRightToUse</span>        License State: Active, Not in Use, EULA accepted
+        License Count: Non-Counted
+        License Priority: Low
+ &lt;se omitió el resultado&gt;
+</pre>]]></text>
+
+</data>
+

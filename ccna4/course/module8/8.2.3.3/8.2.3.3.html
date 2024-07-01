@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.3 Solución de problemas de capa de red</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de capa de red</h1>
+        <div>
+          <p>Los problemas de la capa de red incluyen cualquier problema que comprenda a un protocolo de capa 3, ya sea un protocolo de routing (como IPv4 o IPv6) o un protocolo de routing (como EIGRP, OSPF, entre otros). </p>
+          <p></p>
+          <p>Los síntomas frecuentes de los problemas de red en la capa de red incluyen los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Falla de red:</b> una falla de red se produce cuando esta no funciona o funciona parcialmente, lo que afecta a todos los usuarios y a todas las aplicaciones en la red. Los usuarios y los administradores de red normalmente detectan estas fallas en seguida, las que sin dudas son fundamentales para la productividad de la empresa.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rendimiento por debajo del nivel óptimo:</b> los problemas de optimización de la red por lo general comprenden a un subconjunto de usuarios, aplicaciones, destinos o un determinado tipo de tráfico. Es difícil detectar los problemas de optimización, y es incluso más difícil aislarlos y diagnosticarlos. Esto se debe a que varias capas suelen verse involucradas o incluso una sola computadora de host. Puede llevar tiempo determinar que el problema se encuentra en la capa de red.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la mayoría de las redes, se usan rutas estáticas junto con protocolos de routing dinámico. La configuración incorrecta de las rutas estáticas puede provocar un routing deficiente. En algunos casos, las rutas estáticas configuradas incorrectamente pueden generar bucles de routing que hacen que algunas partes de la red se vuelvan inalcanzables.</p>
+          <p></p>
+          <p>La resolución de problemas de protocolos de routing dinámico requiere una comprensión profunda de cómo funciona el protocolo de routing específico. Algunos problemas son comunes a todos los protocolos de routing, mientras que otros son específicos de un protocolo de routing particular.</p>
+          <p></p>
+          <p>No existe una única plantilla para resolver problemas de capa 3. Los problemas de routing se resuelven con un proceso metódico, por medio de una serie de comandos para aislar y diagnosticar el problema. </p>
+          <p></p>
+          <p>Las siguientes son algunas áreas que se deben explorar al diagnosticar un posible problema que involucre protocolos de routing:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Problemas de red generales:</b> con frecuencia, un cambio en la topología, como un enlace inactivo, puede tener efectos en otras áreas de la red que tal vez no sean evidentes en ese momento. Esto puede implicar instalar nuevas rutas, estáticas o dinámicas, o eliminar otras. Determine si algún elemento de la red cambió de manera reciente y si hay alguna persona trabajando en la infraestructura de la red en ese momento.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Problemas de conectividad:</b> revise si existe algún problema de conectividad o en los equipos, incluidos problemas de alimentación como cortes de energía y problemas ambientales (por ejemplo, recalentamiento). También revise si hay problemas de capa 1, como problemas de cableado, puertos defectuosos y problemas del ISP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Tabla de routing:</b> revise la tabla de routing para ver si existe algo inesperado, como rutas faltantes o imprevistas. Use los comandos <b>debug</b> para ver las actualizaciones de routing y el mantenimiento de la tabla de routing.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Problemas de vecinos:</b> si el protocolo de routing establece una adyacencia con un vecino, revise si hay algún problema con los routers en lo que respecta a la formación de adyacencias de vecinos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de datos de topología:</b> si el protocolo de routing usa una tabla o base de datos de topología, revíselas para ver si existe algo inesperado, como entradas faltantes o imprevistas.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el modelo de OSI con los síntomas y las causas en la capa de red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

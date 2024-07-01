@@ -1,0 +1,1 @@
+La figura es una tabla que compara IGRP con EIGRP.  Este es un resumen de la lectura.

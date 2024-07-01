@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.2.3 Opciones de BGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Opciones de BGP</h1>
+        <div>
+          <p>El BGP es utilizado por los sistemas autónomos para publicar las redes que se originaron dentro del AS o, en el caso de los ISP, las redes que se originaron en otros sistemas autónomos.</p>
+          <p></p>
+          <p>Por ejemplo, una empresa que se conecta al ISP utilizando BGP publicaría sus direcciones de red en su ISP. El ISP luego publicaría dichas redes en otros ISP (pares BGP). Finalmente, el resto de los sistemas autónomos en Internet aprenden sobre las redes originadas inicialmente por la empresa.</p>
+          <p></p>
+          <p>Existen tres maneras comunes mediante las cuales una organización puede elegir implementar el BGP en un entorno multilocalizado:</p>
+          <p></p>
+          <p>
+            <b>Solo ruta predeterminada</b>
+          </p>
+          <p>Los ISP anuncian una ruta predeterminada a la empresa A, como se muestra en la figura 1. Las flechas indican que el valor predeterminado está configurado en los ISP, no en la empresa A. Este es el método más simple para implementar el BGP. Sin embargo, debido a que la empresa recibe una sola ruta predeterminada de ambos ISP, se puede producir el routing por debajo del nivel óptimo. Por ejemplo, la empresa A puede elegir usar la ruta predeterminada desde ISP-1 cuando envía paquetes a una red de destino en los ISP-2 AS.</p>
+          <p></p>
+          <p>
+            <b>Ruta predeterminada y rutas del ISP</b>
+          </p>
+          <p>Los ISP publican su ruta predeterminada y su red en la empresa A, como se muestra en la Figura 2. Esta opción permite que la empresa A reenvíe el tráfico al ISP correspondiente para las redes anunciadas por ese ISP. Por ejemplo, la empresa A elegiría el ISP-1 para redes publicadas por el ISP-1. Para todas las demás redes, se puede usar una de las dos rutas predeterminadas, lo que significa que el routing por debajo del nivel óptimo aún puede tener lugar para el resto de las rutas de Internet.</p>
+          <p></p>
+          <p>
+            <b>Todas las rutas de Internet</b>
+          </p>
+          <p>Los ISP publican todas las rutas de Internet a la empresa A, como se muestra en la Figura 3. Debido a que la empresa A recibe todas las rutas de Internet de ambos ISP, la empresa A puede determinar qué ISP utilizará como la mejor ruta para reenviar tráfico hacia cualquier red. Si bien esto resuelve el problema del routing por debajo del nivel óptimo, el router BGP de la empresa A debe contener todas las rutas de Internet, que son actualmente las rutas a más de 550 000 redes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra cuando se utiliza solamente una ruta predeterminada. Una nube etiquetada como "AS 65000 Empresa A" tiene dos routers perimetrales. Uno de los routers perimetrales se conecta a un router perimetral dentro de la nube AS 65001 ISP-1. El otro router perimetral se conecta a un router perimetral dentro de una nube etiquetada como "AS 65002 ISP-2". La nube AS 65001 ISP-1 y la nube AS 65002 ISP-2 se conectan a la misma nube de Internet. El router perimetral dentro de la nube AS 65001 ISP-1 tiene una ruta predeterminada al router perimetral dentro de la nube AS 65000 Empresa A y la conexión es un protocolo eBGP uno. Asimismo, el router perimetral dentro de la nube AS 65002 ISP-2 tiene una ruta predeterminada configurada en ella, que apunta en la dirección del router perimetral dentro de la nube AS 65000 Empresa A. Esta conexión entre AS 65002 y AS 65001 también es un protocolo eBGP uno. La figura 2 tiene la misma topología que la figura 1. La diferencia es que el ISP-1 envía las rutas predeterminadas y todas las rutas de ISP-1 a AS 65000 Empresa A. ISP-2 envía una ruta predeterminada y todas las rutas de ISP-2. La figura 3 muestra cómo los routers ISP-1 e ISP-2 pueden enviar una ruta predeterminada y todas las rutas de Internet a la empresa A, pero los dos routers perimetrales de la empresa A tendrían que poder administrar todas las redes del mundo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

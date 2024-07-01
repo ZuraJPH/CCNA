@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.6 Uso de una interfaz loopback como ID del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Uso de una interfaz loopback como ID del router</h1>
+        <div>
+          <p>Una ID de router también se puede asignar mediante una interfaz loopback. </p>
+          <p></p>
+          <p>La dirección IPv4 de la interfaz loopback se debe configurar con una máscara de subred de 32 bits (255.255.255.255). Esto crea una ruta de host. Una ruta de host de 32 bits no se anuncia como ruta a otros routers OSPF. </p>
+          <p></p>
+          <p>En el ejemplo de la ilustración, se muestra cómo configurar una interfaz loopback con una ruta de host en el R1. El R1 usa la ruta de host como ID del router, suponiendo que no se configuró ninguna ID de router de manera explícita o que no se obtuvo anteriormente.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El comando <b>router-id</b> es el método preferido. Sin embargo, algunas versiones anteriores de IOS no reconocen el comando <b>router-id</b>; por lo tanto, la mejor forma de establecer la ID del router en esos routers es mediante una interfaz de loopback.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran los comandos utilizados para configurar una interfaz de loopback en un router para que funcione como la ID del router.  La figura comienza en el modo de configuración global.  El primer comando es interface loopback cero, que avanza a la configuración de la interfaz.  El siguiente comando es ip address uno punto uno punto uno punto uno 255 punto 255 punto 255 punto 255. Este comando establece la dirección IP.  Esta es ahora la ID del router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

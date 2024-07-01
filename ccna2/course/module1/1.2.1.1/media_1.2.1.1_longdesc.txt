@@ -1,0 +1,1 @@
+La figura muestra una computadora que envía un paquete de datos a través de tres routers a otra computadora.  La figura hace énfasis en que el nodo emisor utiliza las siete capas del modelo de OSI para enviar datos, y cada uno de los tres routers solo leerá hasta la capa tres del modelo.  La computadora receptora procesará las siete capas.

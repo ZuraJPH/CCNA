@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.3 Detección de dispositivos con LLDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Detección de dispositivos con LLDP</h1>
+        <div>
+          <p>Con LLDP habilitado, se pueden detectar los componentes adyacentes al dispositivo mediante el comando <b>show lldp neighbors</b>. Por ejemplo, considere la falta de documentación en la topología de la Figura 1. El administrador de redes solo sabe que el S1 está conectado a dos dispositivos. Si utiliza el comando <b>show lldp neighbors</b>, el administrador de redes detecta que S1 tiene un router y un switch como componentes adyacentes.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La letra B que se encuentra debajo de la funcionalidad correspondiente a S2 representa un puente (Bridge). Para esta salida, la palabra puente también puede significar el switch. </p>
+          <p></p>
+          <p>A partir de los resultados de <b> show lldp neighbors</b>, se puede construir una topología del switch S1 como se ilustra en la Figura 2. Cuando se necesiten más detalles sobre los componentes adyacentes, el comando <b>show lldp neighbors detail</b> puede proporcionar información como la versión de IOS, la dirección IP y la funcionalidad de los dispositivos adyacentes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la Figura 1 se muestra un switch S1 conectado a dos nubes y la salida del comando 'show lldp neighbors', que indica que el switch S1 tiene dos componentes adyacentes: el router R1 y el switch S2. El router R1 está conectado a la interfaz fastethernet 0/5 local y ese switch S2 está conectado a la interfaz fastethernet 0/4 local. En la Figura 2 se muestra un router R1 conectado al switch S1, que está conectado a otro switch S2. En la salida del comando 'show lldp neighbors detail' se destaca que la dirección IP de administración correspondiente al router R1 es 192.168.1.1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

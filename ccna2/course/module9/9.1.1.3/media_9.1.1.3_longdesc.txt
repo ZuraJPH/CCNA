@@ -1,0 +1,1 @@
+En la figura se muestra el router dos a una red a ambos lados. La red de la izquierda es una red interna y la de la derecha es una red externa. La red interna está conectada a una PC y tiene una dirección local. La red externa es un I.S.P. y tiene direcciones globales.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.4 Ruta estática resumida</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta estática resumida</h1>
+        <div>
+          <p>Para reducir el número de entradas en la tabla de routing, se pueden resumir varias rutas estáticas en una única ruta estática si se presentan las siguientes condiciones:</p>
+          <p>
+            <ul>
+              <li>Las redes de destino son contiguas y se pueden resumir en una única dirección de red. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Todas las rutas estáticas utilizan la misma interfaz de salida o la dirección IP del siguiente salto.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la ilustración, el R1 requiere cuatro rutas estáticas separadas para alcanzar las redes 172.20.0.0/16 a 172.23.0.0/16. En cambio, una ruta estática resumida puede configurarse y aún proporcionar conectividad a esas redes.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Consulte el Apéndice del capítulo para obtener más información sobre el cálculo y la configuración de rutas estáticas resumidas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un router (R1) que se conecta a otro router con 4 redes conectadas a él.  El R1 puede usar una sola ruta resumida para apuntar a las redes conectadas al otro router.  Las rutas resumidas son rutas estáticas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

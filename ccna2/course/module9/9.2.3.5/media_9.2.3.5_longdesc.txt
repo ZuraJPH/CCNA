@@ -1,0 +1,1 @@
+En las figuras uno a cinco se muestran las actividades que piden a los alumnos que hagan coincidir las direcciones y los números de puerto de origen y destino con la ubicación correcta en la topología para diferentes segmentos en la comunicación.

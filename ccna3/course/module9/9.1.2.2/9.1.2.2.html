@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.2 LSA de OSPF de tipo 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA de OSPF de tipo 1</h1>
+        <div>
+          <p>Como se muestra en la figura, todo router anuncia sus enlaces de OSPF con conexión directa mediante una LSA de tipo 1 y reenvía la información de su red a los vecinos OSPF. La LSA contiene una lista de las interfaces conectadas directamente, los tipos de enlace, los vecinos y los estados de enlace. </p>
+          <p></p>
+          <p>A las LSA de tipo 1 también se las denomina "entradas de enlace de router". </p>
+          <p></p>
+          <p>Las LSA de tipo 1 solo saturan el área que los origina. Los ABR, a la vez, anuncian a otras áreas las redes descubiertas a partir de las LSA de tipo 1 como LSA de tipo 3.</p>
+          <p></p>
+          <p>El ID de router que origina el área identifica el ID de enlace de una LSA de tipo 1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los mensajes de LSA de tipo uno que se propagan dentro de su propia área.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

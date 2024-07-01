@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.3.6 Comandos show básicos del switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.3.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos show básicos del switch</h1>
+        <div>
+          <p>Los switches emplean comandos comunes de IOS para realizar la configuración, controlar la conectividad y visualizar el estado actual del switch. Haga clic en los botones 1 a 4 para ver resultados de ejemplo de los comandos y los datos importantes que puede reunir el administrador a partir de esa información. </p>
+          <p></p>
+          <p>En relación con el puerto / la interfaz:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show port-security</b><b></b>: muestra los puertos que tienen activada la seguridad. Para examinar una interfaz específica, incluya la ID de la interfaz. La información que se incluye en el resultado es la siguiente: la cantidad máxima de direcciones permitidas, el conteo actual, el conteo de infracciones de seguridad y la acción que se debe realizar (figura 1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show port-security address</b><b></b>: muestra todas las direcciones MAC seguras configuradas en todas las interfaces del switch. (figura 2)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show interfaces</b>
+                <b></b>: muestra una o todas las interfaces con estado (del protocolo) de línea, ancho de banda, retraso, confiabilidad, encapsulación, dúplex y estadísticas de E/S. (figura 3)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show mac-address-table</b>
+                <b></b>: muestra todas las direcciones MAC que descubrió el switch, cómo se descubrieron esas direcciones (de forma dinámica o estática), el número de puerto y la VLAN asignada al puerto. (figura 4)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Al igual que los routers, los switches también admiten el comando <b>show cdp neighbors</b>.</p>
+          <p></p>
+          <p>Las mismas técnicas de administración dentro y fuera de banda utilizadas para los routers también se utilizan para configurar el switch.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el resultado que genera el comando show port guion security interface fast ethernet cero barra oblicua diecinueve en un switch. En la figura uno, se muestra el resultado que genera el comando show port guion security address en un switch. En la figura uno, se muestra el resultado que genera el comando show interfaces fast ethernet cero barra oblicua dieciocho en un switch. En la figura uno, se muestra el resultado que genera el comando mac guion address guion table en un switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

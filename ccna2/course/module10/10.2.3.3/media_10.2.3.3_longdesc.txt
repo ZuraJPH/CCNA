@@ -1,0 +1,1 @@
+En la figura número uno se muestran los comandos para configurar un router para que envíe mensajes del sistema a un servidor syslog. En la figura número dos se muestra la salida de un servidor syslog utilizando TFTP. 32.

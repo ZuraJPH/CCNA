@@ -1,0 +1,1 @@
+La figura 1 muestra el modelo de OSI con los síntomas y las causas en la capa de transporte. La figura 2 muestra errores comunes de configuración de ACL en la capa de transporte.

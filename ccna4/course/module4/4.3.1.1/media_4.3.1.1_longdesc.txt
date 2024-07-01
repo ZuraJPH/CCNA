@@ -1,0 +1,1 @@
+La figura indica que IPv4 tiene listas ACL estándar y extendidas, y estas pueden tener nombre o ser numeradas. La figura también indica que IPv6 solo tiene listas ACL con nombre que funcionan de manera similar a la ACL extendida en IPv4.

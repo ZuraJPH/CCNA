@@ -1,0 +1,1 @@
+La figura muestra el proceso de operación de NCP de PPP.  En la figura, dos routers han iniciado una conexión PPP y comienza el intercambio de datos de IP versión 4.  Cuando finaliza la transferencia de datos, NCP termina el enlace del protocolo y LCP finaliza la conexión PPP.

@@ -1,0 +1,17 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[Red corporativa]]></text>
+	</component>
+
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Tráfico excesivo de NIC defectuosa]]></text>
+	</component>
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[Tráfico duplicado]]></text>
+	</component>
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[<font color="#FFFFFF">Creo que PC1 puede tener un NIC defectuoso.</font>]]></text>
+	</component><!-- end slide 1 --></textcomponents>

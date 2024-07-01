@@ -1,0 +1,95 @@
+<textcomponents>
+<component id="ID_s1_title">
+  <text><![CDATA[<b>Configurar las ACL extendidas</b>]]></text> 
+</component>
+
+  <component id="ID_s1_table">
+  <text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable" width="600">
+  	<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"></font></td>
+		</tr>
+	<tr>
+
+		<td colspan='2' bgcolor='#4E4C4D' class="mtable_top"><font size='1' color='#4E4C4D'>.</font></td>
+	</tr>
+	<tr>
+	
+		
+		<td bgcolor='#666263' valign="top" width="155"><font color='#ffffff' ><b>Parámetro</b></font></td>
+		<td bgcolor='#666263'  valign="top" ><font color='#ffffff' ><b>Descripción</b></font></td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font face='_typewriter' color='#000000'><i>access-list-number</i></font></td>
+		<td bgcolor='#E9E7E8' valign="top">Identifica la lista de acceso con un número en el rango entre 100 y 199 (para una ACL IP extendida) y entre 2000 y 2699 (para una ACL IP expandida).</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font face='_typewriter' color='#000000'><B>deny</B></font></td>
+		<td bgcolor='#F2F2F2' valign="top">Deniega el acceso si las condiciones concuerdan.</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font face='_typewriter' color='#000000'><B>permit</B></font></td>
+		<td bgcolor='#E9E7E8' valign="top">Permite el acceso si las condiciones concuerdan.</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font face='_typewriter' color='#000000'><B>remark</B></font></td>
+		<td bgcolor='#F2F2F2' valign="top">Agrega un comentario sobre las entradas en una lista de acceso IP para facilitar la comprensión y el escaneo de la lista.</td>
+		
+    </tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font face='_typewriter' color='#000000'><i>Protocolo</i></font></td>
+		<td bgcolor='#E9E7E8' valign="top">Nombre o número de un protocolo de Internet. Las palabras clave más comunes son<font face='_typewriter' color='#000000'><b> icmp</b></font>,<font face='_typewriter' color='#000000'><b> ip</b></font>,<font face='_typewriter' color='#000000'><b> tcp</b></font> o<font face='_typewriter' color='#000000'><b> udp</b></font>. Para que haya coincidencia con cualquier protocolo de Internet (como ICMP, TCP y UDP), se usa la palabra clave <font face='_typewriter' color='#000000'><b>ip</b></font>.</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font face='_typewriter' color='#000000'><i>source</i></font></td>
+		<td bgcolor='#F2F2F2' valign="top">Número de la red o del host desde el que se envía el paquete.</td>
+		
+    </tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font face='_typewriter' color='#000000'><i>source-wildcard</i></font></td>
+		<td bgcolor='#E9E7E8' valign="top">Bits de wildcard para aplicar al origen.</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font face='_typewriter' color='#000000'><i>destination</i></font></td>
+		<td bgcolor='#F2F2F2' valign="top">Número de la red o del host al que se envía un paquete.</td>
+		
+    </tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font face='_typewriter' color='#000000'><i>destination-wildcard</i></font></td>
+		<td bgcolor='#E9E7E8' valign="top">Bits de wildcard para aplicar al destino.</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font face='_typewriter' color='#000000'><i>operator</i></font></td>
+		<td bgcolor='#F2F2F2' valign="top">(Opcional) Compara los puertos de origen y de destino. Los posibles operandos incluyen <font face='_typewriter' color='#000000'><B>lt </B></font>(menor que), <font face='_typewriter' color='#000000'><B>gt </B></font>(mayor que), <font face='_typewriter' color='#000000'><B>eq </B></font>(igual), <font face='_typewriter' color='#000000'><B>neq </B></font>(no igual), y <font face='_typewriter' color='#000000'><B>range </B></font>(rango de inclusión).</td>
+		
+    </tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font face='_typewriter' color='#000000'><i>Puerto</i></font></td>
+		<td bgcolor='#E9E7E8' valign="top">(Opcional) El número decimal o nombre de un puerto TCP o UDP.</td>
+		
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font face='_typewriter' color='#000000'><i>established</i></font></td>
+		<td bgcolor='#F2F2F2' valign="top">(Optativo) Solo para el protocolo TCP; indica una conexión establecida.</td>
+		
+    </tr>
+	
+	</table>]]></text>
+  </component><!-- slide 2--><component id="ID_s2_title">
+  <text><![CDATA[<b>Configurar las ACL extendidas</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01"><text><![CDATA[<textformat blockindent="-14"><li>La ACL 103 permite enviar solicitudes a los puertos 80 y 443.</li><li>La ACL 104 permite recibir respuestas de HTTP y HTTPS establecidos.</li></textformat>]]></text> 
+</component>
+
+
+
+
+
+</textcomponents>

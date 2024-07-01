@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.1.2 Operaciones lógicas de ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Operaciones lógicas de ACL</h1>
+        <div>
+          <p>
+            <b>ACL y routing, y procesos de ACL en un router</b>
+          </p>
+          <p></p>
+          <p>En la ilustración, se muestra la lógica de los procesos de routing y ACL. Cuando un paquete llega a una interfaz del router, el proceso del router es el mismo, ya sea si se utilizan ACL o no. Cuando una trama ingresa a una interfaz, el router revisa si la dirección de capa 2 de destino coincide con la dirección de capa 2 de la interfaz, o si dicha trama es una trama de difusión. </p>
+          <p></p>
+          <p></p>
+          <p>Si se acepta la dirección de la trama, se desmonta la información de la trama y el router revisa si hay una ACL en la interfaz de entrada. Si existe una ACL, el paquete se prueba en relación con las instrucciones de la lista. </p>
+          <p></p>
+          <p>Si el paquete coincide con una instrucción, se permite o se deniega. Si se acepta el paquete, se compara con las entradas en la tabla de routing para determinar la interfaz de destino. Si existe una entrada para el destino en la tabla de routing, el paquete se conmuta a la interfaz de salida. De lo contrario, se descarta. </p>
+          <p></p>
+          <p>A continuación, el router revisa si la interfaz de salida tiene una ACL. Si existe una ACL, el paquete se prueba en relación con las instrucciones de la lista. </p>
+          <p></p>
+          <p>Si el paquete coincide con una instrucción, se permite o se deniega.</p>
+          <p></p>
+          <p>Si no hay una ACL o si se permite el paquete, este se encapsula en el nuevo protocolo de capa 2 y se reenvía por la interfaz al siguiente dispositivo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La ilustración es un diagrama de flujo que describe el A.C.L y el proceso de enrutamiento en un router. El primer cuadro indica que la trama llega a la interfaz del router. Ese cuadro lleva a un cuadro de decisión. El cuadro de decisión consulta si la dirección de capa 2 coincide o no. Si la respuesta es negativa, la trama se envía a la papelera. Si la respuesta es afirmativa, se consulta si las ACL están en la interfaz o no. Si la respuesta es negativa, el paquete se reenvía a una interfaz saliente. Si la respuesta es afirmativa, se debe tomar otra decisión para determinar si hay coincidencia con la lista de instrucciones de ACL. Si la respuesta es negativa, se aplica la instrucción de denegación predeterminada y el paquete se envía a la papelera. Si la respuesta es afirmativa, se debe decidir si permitir el paquete. Si el paquete no se permite, se lo envía a la papelera. Si el paquete se permite, se lo reenvía a una interfaz saliente. A continuación, se consulta si hay ACL en la interfaz. Si la respuesta es negativa, el paquete se envía a un dispositivo. Si la respuesta es afirmativa, se consulta si hay coincidencia con una de las instrucciones de la ACL. Si la respuesta es negativa, se aplica la instrucción de denegación predeterminada y el paquete se envía a la papelera. Si la respuesta es afirmativa, se consulta si se debe permitir el paquete. Si la respuesta es negativa, el paquete se descarta (se lo envía a una papelera). Si la respuesta es afirmativa, el paquete se envía al dispositivo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.4.1.1 Capítulo 5: Seguridad y monitoreo de red</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 5: Seguridad y monitoreo de red</h1>
+        <div>
+          <p>En la Capa 2, ciertas vulnerabilidades exigen técnicas de mitigación especializadas:</p>
+          <p>
+            <ul>
+              <li>Los ataques de saturación de tablas de direcciones MAC se resuelven con seguridad de puertos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los ataques de VLAN se controlan desactivando DTP y siguiendo pautas básicas de configuración de puertos troncales.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los ataques de DHCP se resuelven con detección DHCP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El protocolo SNMP tiene tres elementos: el administrador, el agente y la MIB. El administrador de SNMP reside en NMS, mientras que el agente y la MIB se encuentran en los dispositivos cliente. El administrador de SNMP puede sondear a los dispositivos cliente para obtener información, o puede utilizar un mensaje de trap que le indica a un cliente que debe informar inmediatamente si llega a determinado umbral. SNMP también se puede utilizar para cambiar la configuración de un dispositivo. SNMPv3 es la versión recomendada porque proporciona seguridad. SNMP es una herramienta de administración remota integral y potente. Casi todos los elementos disponibles en un comando <b>show</b> están disponibles mediante SNMP.</p>
+          <p></p>
+          <p>El analizador de puertos conmutados (SPAN) se usa para duplicar el tráfico entrante o saliente del host. Suele implementarse para admitir analizadores de tráfico o dispositivos IPS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra partes del globo, placa de circuito, cables de parche y código de programa. La leyenda dice “Resumen | Capítulo 5”</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

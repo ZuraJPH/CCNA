@@ -1,0 +1,40 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+.static1 {
+    color: #f68026 !important;
+}
+
+#ID_s2_txt19 {
+    line-height: 10px;
+}
+
+#ID_r3_txt01 {
+    padding-left: 3px;
+}
+
+
+#ID_s1_txt03,#ID_s2_txt03
+{
+	letter-spacing: -0.7px !important;
+}
+
+#ID_s2_txt21 {
+    margin-left: -12px !important;
+}
+
+#ID_s2_txt20,
+#ID_s1_txt16 {
+    margin-left: -8px !important;
+}
+
+#purpleCallOut {
+    padding: 25px !important;
+}
+
+#ID_s1_txt14 {
+    background-color: #CCE9E7;
+    border: 2px solid #00918E;
+    border-radius: 3px;
+    padding: 3px 0px 3px 0px;
+}

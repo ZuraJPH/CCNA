@@ -1,0 +1,76 @@
+<textcomponents>
+
+<component id="ID_s0_title">
+<text><![CDATA[<b>Decisiones referidas a la función del puerto</b>]]></text>
+</component>
+
+<component id="ID_s0_txt01"><text><![CDATA[Enlace troncal3]]></text></component>
+<component id="ID_s0_txt02"><text><![CDATA[Enlace troncal2]]></text></component>
+<component id="ID_s0_txt03"><text><![CDATA[Enlace troncal1]]></text></component>
+
+<component id="ID_s0_txt04">
+<text><![CDATA[<b>F0/1</b><br/>ID de raíz = 24577.000A00333333<br/>ID de puente = 32769.000A00222222<br/>Costo de ruta = 19]]></text>
+</component>
+<component id="ID_s0_txt05">
+<text><![CDATA[<b>F0/2</b><br/>ID de raíz = 24577.000A00333333<br/>ID de puente = 32769.000A00222222<br/>Costo de ruta = 19]]></text>
+</component>
+<component id="ID_s0_txt06">
+<text><![CDATA[<b>F0/2</b><br/>ID de raíz = 24577.000A00333333<br/>ID de puente = 32769.000A00111111<br/>Costo de ruta = 19]]></text>
+</component>
+<component id="ID_s0_txt07">
+<text><![CDATA[<b>F0/1</b><br/>ID de raíz = 24577.000A00333333<br/>ID de puente = 24577.000A00333333<br/>Costo de ruta = 19]]></text>
+</component>
+<component id="ID_s0_txt08">
+<text><![CDATA[<b>F0/2</b><br/>ID de raíz = 24577.000A00333333<br/>ID de puente = 24577.000A00333333<br/>Costo de ruta = 19]]></text>
+</component>
+<component id="ID_s0_txt09">
+<text><![CDATA[<b>F0/1</b><br/>ID de raíz = 24577.000A00333333<br/>ID de puente = 32769.000A00111111<br/>Costo de ruta = 19]]></text>
+</component>
+
+<component id="ID_s0_txt10">
+<text><![CDATA[Puente<br/>raíz]]></text>
+</component>
+
+
+
+<component id="ID_s1_caption">
+<text><![CDATA[El switch S1 tiene la prioridad de puente más baja y, por lo tanto, es el puente raíz.]]></text>
+</component>
+
+<component id="ID_s2_caption">
+<text><![CDATA[El switch S1 configura sus dos puertos de enlace troncal como puertos designados.]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[Puertos designados]]></text>
+</component>
+
+<component id="ID_s3_caption">
+<text><![CDATA[El switch S2 configura el puerto F0/1 como puerto raíz.<br/>El switch S3 configura el puerto F0/1 como puerto raíz.]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[Puertos raíz]]></text>
+</component>
+
+<component id="ID_s4_caption">
+<text><![CDATA[El switch S2 y el switch S3 comparten un segmento de LAN común. Necesitan determinar cuál de ellos tiene la BID más baja para identificar qué switch puede configurar su puerto como un puerto designado.]]></text>
+</component>
+
+<component id="ID_s5_caption">
+<text><![CDATA[El switch S2 y el switch S3 intercambian tramas BPDU. El switch 3 identifica que el switch S2 tiene una BID inferior en función de la dirección MAC inferior del switch S2.]]></text></component>
+
+<component id="ID_s6_caption">
+<text><![CDATA[El switch 3 configura el puerto F0/2 como un puerto alternativo e ingresa al estado de bloqueo para evitar el bucle.]]></text>
+</component>
+<component id="ID_s6_txt01">
+<text><![CDATA[Puerto alternativo]]></text>
+</component>
+
+<component id="ID_s7_caption">
+<text><![CDATA[Debido a que el switch S2 tiene el BID más bajo, configura su puerto F0/2 como un puerto designado para completar el spanning tree.]]></text>
+</component>
+<component id="ID_s7_txt01">
+<text><![CDATA[Puerto designado]]></text>
+</component>
+
+
+</textcomponents>

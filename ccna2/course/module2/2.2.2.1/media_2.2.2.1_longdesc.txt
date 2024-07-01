@@ -1,0 +1,1 @@
+La figura muestra la sintaxis para configurar una ruta estática predeterminada.  La sintaxis es similar a una ruta estática estándar, excepto que la red de destino y la máscara de subred son todos ceros.

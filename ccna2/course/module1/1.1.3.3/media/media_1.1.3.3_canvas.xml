@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+	<slide>
+		<element type="IMAGE" src="1_1_3_3_A.jpg" width="600" height="400" x="-50" y="0"/>
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+		
+		<element type="TEXT" text="2001:0DB8:ACAD:1::/64" width="143" x="10" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:2::/64" width="143" x="10" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:3::/64" width="131" x="140" y="50"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:4::/64" width="143" x="280" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:5::/64" width="143" x="280" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text=":10" width="23" x="15" y="55"  align="left" />
+		<element type="TEXT" text=":10" width="23" x="15" y="115"  align="left" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="110" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="110" y="115"  align="right" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="288" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="288" y="113"  align="right" />
+		<element type="TEXT" text=":1 S0/0/0" width="38.2" x="170" y="88"  align="left" />
+		<element type="TEXT" text=":2 S0/0/0" width="38.2" x="240" y="95"  align="right" />
+	</slide>
+	
+	<slide>
+		<element type="IMAGE" src="1_1_3_3_B.jpg" width="600" height="400" x="-50" y="0"/>
+		<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+		
+		<element type="TEXT" text="2001:0DB8:ACAD:1::/64" width="143" x="10" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:2::/64" width="143" x="10" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:3::/64" width="131" x="140" y="50"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:4::/64" width="143" x="280" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:5::/64" width="143" x="280" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text=":10" width="23" x="15" y="55"  align="left" />
+		<element type="TEXT" text=":10" width="23" x="15" y="115"  align="left" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="110" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="110" y="115"  align="right" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="288" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="288" y="113"  align="right" />
+		<element type="TEXT" text=":1 S0/0/0" width="38.2" x="170" y="88"  align="left" />
+		<element type="TEXT" text=":2 S0/0/0" width="38.2" x="240" y="95"  align="right" />
+		<element type="IMAGE" src="1_1_3_3.jpg" width="360" height="217" x="90" y="185" subType="STD"/>
+	</slide>
+	
+	<slide>
+		<element type="IMAGE" src="1_1_3_3_C.jpg" width="600" height="400" x="-50" y="0"/>
+		<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+		
+		<element type="TEXT" text="2001:0DB8:ACAD:1::/64" width="143" x="10" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:2::/64" width="143" x="-8" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:3::/64" width="131" x="140" y="50"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:4::/64" width="143" x="280" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:5::/64" width="143" x="280" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text=":10" width="23" x="15" y="55"  align="left" />
+		<element type="TEXT" text=":10" width="23" x="15" y="115"  align="left" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="110" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="110" y="115"  align="right" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="288" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="288" y="113"  align="right" />
+		<element type="TEXT" text=":1 S0/0/0" width="38.2" x="170" y="88"  align="left" />
+		<element type="TEXT" text=":2 S0/0/0" width="38.2" x="240" y="95"  align="right" />
+		<element type="ROUTER" textId="staticTxt" width="450" height="210" x="10" y="190"  align="left" />
+	</slide>
+	
+	<slide>
+		<element type="IMAGE" src="1_1_3_3_C.jpg" width="600" height="400" x="-50" y="0"/>
+		<element type="TEXT" subType="TITLE" compId="ID_s4_title"/>
+	
+		<element type="TEXT" text="2001:0DB8:ACAD:1::/64" width="143" x="10" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:2::/64" width="143" x="-8" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:3::/64" width="131" x="140" y="50"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:4::/64" width="143" x="280" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:5::/64" width="143" x="280" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text=":10" width="23" x="15" y="55"  align="left" />
+		<element type="TEXT" text=":10" width="23" x="15" y="115"  align="left" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="110" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="110" y="115"  align="right" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="288" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="288" y="113"  align="right" />
+		<element type="TEXT" text=":1 S0/0/0" width="38.2" x="170" y="88"  align="left" />
+		<element type="TEXT" text=":2 S0/0/0" width="38.2" x="240" y="95"  align="right" />
+		<element type="ROUTER" textId="staticTxt1" width="450" height="210" x="10" y="190"  align="left" />
+	</slide>
+	
+	<slide>
+		<element type="IMAGE" src="1_1_3_3_C.jpg" width="600" height="400" x="-50" y="0"/>
+		<element type="TEXT" subType="TITLE" compId="ID_s5_title"/>
+		
+		<element type="TEXT" text="2001:0DB8:ACAD:1::/64" width="143" x="10" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:2::/64" width="143" x="-8" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:3::/64" width="131" x="140" y="50"  align="center"  bold="1"/>
+		<element type="TEXT" text="2001:0DB8:ACAD:4::/64" width="143" x="280" y="35"  align="center" bold="1" />
+		<element type="TEXT" text="2001:0DB8:ACAD:5::/64" width="143" x="280" y="155"  align="center"  bold="1"/>
+		<element type="TEXT" text=":10" width="23" x="15" y="55"  align="left" />
+		<element type="TEXT" text=":10" width="23" x="15" y="115"  align="left" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="110" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="110" y="115"  align="right" />
+		<element type="TEXT" text="G0/0 :1" width="30.8" x="288" y="65"  align="right" />
+		<element type="TEXT" text=":1 G0/1" width="30.8" x="288" y="113"  align="right" />
+		<element type="TEXT" text=":1 S0/0/0" width="38.2" x="170" y="88"  align="left" />
+		<element type="TEXT" text=":2 S0/0/0" width="38.2" x="240" y="95"  align="right" />
+		<element type="ROUTER" textId="staticTxt2" width="450" height="210" x="10" y="190"  align="left" />
+	</slide>
+	
+	<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s6_title" />		
+			<element type="ACTIVITY" subType="SYNTAX" compId="ID_SC" x="-30" y="25" width="540" height="375" resetId = "ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>	
+	</slide>
+</slide>
+	<text id="staticTxt"><![CDATA[<pre>R1(config)#<b> interface gigabitethernet 0/0</b>
+R1(config-if)#<b> description Link to LAN 1</b>
+R1(config-if)#<b> ipv6 address 2001:db8:acad:1::1/64</b>
+R1(config-if)#<b> no shutdown</b>
+R1(config-if)#<b> exit</b>
+R1(config)#
+*Feb  3 21:38:37.279: %LINK-3-UPDOWN: Interface 
+GigabitEthernet0/0, changed state to down
+*Feb  3 21:38:40.967: %LINK-3-UPDOWN: Interface 
+GigabitEthernet0/0, changed state to up
+*Feb  3 21:38:41.967: %LINEPROTO-5-UPDOWN: Line protocol 
+on Interface GigabitEthernet0/0, changed state to up
+R1(config)#
+	</pre>]]></text>
+	<text id="staticTxt1"><![CDATA[<pre>R1(config)#<b> interface gigabitethernet 0/1</b>     
+R1(config-if)#<b> description Link to LAN 2</b>  
+R1(config-if)#<b> ipv6 address 2001:db8:acad:2::1/64</b>  
+R1(config-if)#<b> no shutdown</b>  
+R1(config-if)#<b> exit</b>  
+R1(config)#  
+*Feb  3 21:39:21.867: %LINK-3-UPDOWN: Interface
+ GigabitEthernet0/1, changed state to down  
+*Feb  3 21:39:24.967: %LINK-3-UPDOWN: Interface
+ GigabitEthernet0/1, changed state to up  
+*Feb  3 21:39:25.967: %LINEPROTO-5-UPDOWN: Line protocol 
+on Interface GigabitEthernet0/1, changed state to up  
+R1(config)#  
+	</pre>]]></text>
+	<text id="staticTxt2"><![CDATA[<pre>R1(config)#<b> interface serial 0/0/0</b>            
+R1(config-if)#<b> description Link to R2</b>
+R1(config-if)#<b> ipv6 address 2001:db8:acad:3::1/64</b>
+R1(config-if)#<b> clock rate 128000</b>
+R1(config-if)#<b> no shutdown</b>
+R1(config-if)#
+*Feb  3 21:39:43.307: %LINK-3-UPDOWN: Interface 
+Serial0/0/0, changed state to down
+R1(config-if)#
+	</pre>]]></text>
+	
+</data>
+

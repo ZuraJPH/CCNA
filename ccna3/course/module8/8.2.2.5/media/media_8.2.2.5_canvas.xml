@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+		   <element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+		   <element type="ROUTER" textId="ID_r1_txt01" x="5" y="50" width="430" height="327.95"/>
+		</slide>
+		<slide>	
+			<element type="TEXT" subType="TITLE" compId="ID_s2_title" />
+			<element type="ROUTER" textId="ID_r2_txt01" x="5" y="50" width="430" height="320.95" size="10"/>
+		</slide>
+		<slide>
+   			<element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+			<element type="ACTIVITY" subType="SYNTAX" compId="ID_s3_SC01" x="-30" y="40" width="530" height="355" size="10" resetId="ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>			
+		</slide>
+		
+	</slide>
+	<text id="ID_r1_txt01"><![CDATA[
+	R1(config)# <b>router ospf 10</b><br />               
+	R1(config-router)# <b>passive-interface GigabitEthernet 0/0</b><br />
+	R1(config-router)# <b>end</b><br />
+	R1#
+	]]></text>
+		
+	<text id="ID_r2_txt01"><![CDATA[
+	<pre>R1# <b>show ip protocols</b> 
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "ospf 10"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 1.1.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    172.16.1.1 0.0.0.0 area 0
+    172.16.3.1 0.0.0.0 area 0
+    192.168.10.5 0.0.0.0 area 0
+<span class="highlight">  Passive Interface(s):
+    GigabitEthernet0/0</span>
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    3.3.3.3              110      00:08:35
+    2.2.2.2              110      00:08:35
+  Distance: (default is 110)
+
+R1#</pre>
+	]]></text>
+</data>

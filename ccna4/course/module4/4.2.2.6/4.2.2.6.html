@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.6 Edición de ACL extendidas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Edición de ACL extendidas</h1>
+        <div>
+          <p>Una ACL extendida se puede editar de dos maneras:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Método 1: editor de texto.</b> Con este método, la ACL se copia y pega en el editor de texto, donde se realizan los cambios. La lista de acceso actual se elimina mediante el comando <b>no access-list</b>. Luego, la ACL modificada se pega nuevamente en la configuración. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Método 2: números de secuencia.</b> Los números de secuencia se pueden utilizar para eliminar o para insertar una instrucción de ACL. El comando <b>ip access-list extended </b><i>se </i>se utiliza para ingresar al modo de configuración de ACL con nombre. Si la ACL es numerada en vez de tener un nombre, se utiliza el número de la ACL en el parámetro<i> se </i>. Las ACE se pueden insertar o eliminar.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la ilustración, se muestra que el administrador debe editar la ACL con nombre SURFING para corregir una errata en la instrucción de la red de origen. Para ver los números de secuencia actuales, se utiliza el comando <b>show access-lists</b>. La instrucción que se edita se identifica como instrucción 10. La instrucción original se elimina con el comando <b>no </b><i>número_secuencia </i>. La instrucción corregida se agrega y se reemplaza la instrucción original.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la salida del comando show access guion lists. La figura resalta una línea de la lista de acceso surfing que dice: 10 permit tcp 192 punto 168 punto 11 punto cero cero punto cero punto cero punto 255 any eq www  La figura indica que la red debe ser la red punto 10 y no la red punto 11.  La figura continúa con los comandos utilizados para corregir la ACL.  En primer lugar está el comando de configuración global ip access guion list extended surfing.  Luego, se elimina la siguiente línea incorrecta con el comando: no 10.  Se agrega una nueva línea 10 con el comando 10 permit tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 any eq www  La edición de la ACL se verifica con el comando show access guión lists.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

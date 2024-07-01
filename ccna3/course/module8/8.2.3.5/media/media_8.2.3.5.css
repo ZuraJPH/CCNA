@@ -1,0 +1,8 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+
+#router_text1{padding-left:2px;letter-spacing:-.95px}

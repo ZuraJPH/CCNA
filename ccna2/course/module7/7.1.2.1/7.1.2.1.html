@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.1 Introducción a las máscaras wildcard en ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a las máscaras wildcard en ACL</h1>
+        <div>
+          <p>
+            <b>Máscara wildcard</b>
+          </p>
+          <p></p>
+          <p>Las ACE de IPv4 incluyen el uso de máscaras wildcard. Una máscara wildcard es una cadena de 32 dígitos binarios que el router utiliza para determinar qué bits de la dirección debe examinar para obtener una coincidencia. </p>
+          <p></p>
+          <p>Como ocurre con las máscaras de subred, los números 1 y 0 en la máscara wildcard identifican lo que hay que hacer con los bits de dirección IPv4 correspondientes. Sin embargo, en una máscara wildcard, estos bits se utilizan para fines diferentes y siguen diferentes reglas. </p>
+          <p></p>
+          <p>Las máscaras de subred utilizan unos y ceros binarios para identificar la red, la subred y la porción de host de una dirección IPv4. Las máscaras wildcard utilizan unos y ceros binarios para filtrar direcciones IPv4 individuales o grupos de direcciones IPv4 para permitir o denegar el acceso a los recursos. </p>
+          <p></p>
+          <p>Las máscaras wildcard y las máscaras de subred se diferencian en la forma en que establecen la coincidencia entre los unos y ceros binarios. Las máscaras wildcard utilizan las siguientes reglas para establecer la coincidencia entre los unos y ceros binarios:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Bit 0 de máscara wildcard: se establece la coincidencia con el valor del bit correspondiente en la dirección. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Bit 1 de máscara wildcard: se omite el valor del bit correspondiente en la dirección.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1 se muestra cómo las diferentes máscaras wildcard filtran las direcciones IPv4. Recuerde que, en el ejemplo, el valor binario 0 indica un bit que debe coincidir y el valor binario 1 indica un bit que se puede ignorar. </p>
+          <p></p>
+          <p>A las máscaras wildcard a menudo se las denomina “máscaras inversas”. La razón es que, a diferencia de una máscara de subred en la que el 1 binario equivale a una coincidencia y el 0 binario no es una coincidencia, en las máscaras wildcard es al revés. </p>
+          <p></p>
+          <p>
+            <b>Uso de una máscara wildcard</b>
+          </p>
+          <p></p>
+          <p>En la tabla de la figura 2, se muestran los resultados de la aplicación de una máscara wildcard 0.0.255.255 a una dirección IPv4 de 32 bits. Recuerde que un 0 binario indica un valor con coincidencia.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> a diferencia de las ACL de IPv4, las ACL de IPv6 no utilizan máscaras wildcard. En cambio, se utiliza la longitud de prefijo para indicar cuánto de una dirección IPv6 de origen o destino debe coincidir. Las ACL IPv6 exceden el ámbito de este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra cinco máscaras wildcard de 8 bits.  El Ejemplo 1 es cero cero cero cero cero cero cero cero, que coincidirá con todos los bits de dirección en el octeto.  El ejemplo 2 es cero cero uno uno uno uno uno uno, que coincidirá con los primeros dos bits e ignorará los seis últimos bits de direccionamiento.  El ejemplo tres es cero cero cero cero uno uno uno uno, que coincidirá con los primeros cuatro bits e ignorará los cuatro últimos bits.  El ejemplo cuatro es uno uno uno uno uno uno cero cero, que ignorará los primeros seis bits de direccionamiento y hará coincidir los dos últimos.  El ejemplo cinco uno uno uno uno uno uno uno uno, que ignorará todos los bits del octeto. La figura muestra los resultados de aplicar una máscara wildcard cero punto cero punto 255 punto 255 a una dirección de 32 bits I.P.v.4.  También se incluye la máscara wildcard como 16 ceros bits  seguido de 16 unos bits.  Esto producirá la coincidencia de los primeros dos octetos en una dirección e ignorará los últimos dos octetos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

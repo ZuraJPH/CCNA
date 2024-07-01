@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.1 Protocolos de encapsulación WAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de encapsulación WAN</h1>
+        <div>
+          <p>En cada conexión WAN, se encapsulan los datos en las tramas antes de cruzar el enlace WAN. Para asegurar que se utilice el protocolo correcto, se debe configurar el tipo de encapsulación de capa 2 correspondiente. La opción de protocolo depende de la tecnología WAN y el equipo de comunicación. En la ilustración, se muestran los protocolos WAN más comunes y dónde se utilizan. Las siguientes son descripciones breves de cada tipo de protocolo WAN:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>HDLC:</b> es el tipo de encapsulación predeterminado en las conexiones punto a punto, los enlaces dedicados y las conexiones conmutadas por circuitos cuando el enlace utiliza dos dispositivos de Cisco. Ahora, HDLC es la base para PPP síncrono que usan muchos servidores para conectarse a una WAN, generalmente Internet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>PPP:</b> proporciona conexiones de router a router y de host a red a través de circuitos síncronos y asíncronos. PPP funciona con varios protocolos de capa de red, como IPv4 e IPv6. PPP se basa en el protocolo de encapsulamiento HDLC, pero también tiene mecanismos de seguridad incorporados como PAP y CHAP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de Internet de línea serial (SLIP):</b> es un protocolo estándar para conexiones seriales punto a punto mediante TCP/IP. PPP reemplazó ampliamente al protocolo SLIP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Procedimiento de acceso al enlace balanceado (LAPB) X.25:</b> es un estándar del UIT-T que define cómo se mantienen las conexiones entre un DTE y un DCE para el acceso remoto a terminales y las comunicaciones por computadora en las redes de datos públicas. X.25 especifica a LAPB, un protocolo de capa de enlace de datos. X.25 es un antecesor de Frame Relay.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Frame Relay:</b> es un protocolo de capa de enlace de datos conmutado y un estándar del sector que maneja varios circuitos virtuales. Frame Relay es un protocolo de última generación posterior a X.25. Frame Relay elimina algunos de los procesos prolongados (como la corrección de errores y el control del flujo) empleados en X.25. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ATM:</b> es el estándar internacional de retransmisión de celdas en el que los dispositivos envían varios tipos de servicios (como voz, video o datos) en celdas de longitud fija (53 bytes). Las celdas de longitud fija permiten que el procesamiento se lleve a cabo en el hardware, lo que disminuye las demoras en el tránsito. ATM aprovecha los medios de transmisión de alta velocidad, como E3, SONET y T3.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>HDLC y PPP son el tema principal de este curso. Los otros protocolos WAN mencionados se consideran tecnologías heredadas o no están contemplados en este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra estos tres protocolos de encapsulamiento WAN: líneas arrendadas (que incluye HDLC, PPP y SLIP), con conmutación de circuito (que incluye HDLC, PPP y SLIP) y con conmutación por paquetes (que incluye X punto 25, retransmisión de tramas y ATM).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

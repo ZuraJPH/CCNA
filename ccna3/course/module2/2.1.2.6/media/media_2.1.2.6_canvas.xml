@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR">
+
+<slide>
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+<element type="ROUTER" textId="ID_router_txt1" x="4" y="50" width="430" height="346.65" />
+<text id="ID_router_txt1"><![CDATA[<pre>S2# <b>show vlan brief</b>
+ 
+VLAN Name                  Status     Ports
+---- -------------------- --------- -------------------------------
+1    default               active     Fa0/2, Fa0/3, Fa0/4, Fa0/5
+                                      Fa0/6, Fa0/7, Fa0/8, Fa0/9
+                                      Fa0/10, Fa0/11, Fa0/12, Fa0/13
+                                      Fa0/14, Fa0/15, Fa0/16, Fa0/17
+                                      Fa0/18, Fa0/19, Fa0/20, Fa0/21
+                                      Fa0/22, Fa0/23, Fa0/24, Gi0/1
+                                      Gi0/2
+<span class="orange">10   SALES                 active
+20   MARKETING             active
+30   ACCOUNTING            active</span>
+1002 fddi-default          act/unsup
+1003 token-ring-default    act/unsup
+1004 fddinet-default       act/unsup
+1005 trnet-default         act/unsup
+S2#
+</pre>]]></text>
+
+</slide>
+
+
+<slide>
+	<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+<element type="ROUTER" textId="ID_router_txt2" x="4" y="50" width="430" height="346.65" />
+<text id="ID_router_txt2"><![CDATA[<pre>S2# <b>show vtp status</b> 
+VTP Version capable             : 1 to 3
+VTP Version running             : 1
+VTP Domain Name                 : CCNA
+VTP Pruning Mode                : Disabled
+VTP Traps Generation            : Disabled
+Device ID                       : b07d.4729.2400
+Configuration last modified by 0.0.0.0 at 3-1-93 02:02:45
+ 
+Feature VLAN:
+--------------
+VTP Operating Mode                : Client
+Maximum VLANs supported locally   : 255
+Number of existing VLANs          : 8
+<span class="orange">Configuration Revision            : 6</span>
+MD5 digest                        : 0xFE 0x8D 0x2D 0x21 0x3A 0x30 0x99 0xC8
+                                    0xDB 0x29 0xBD 0xE9 0x48 0x70 0xD6 0xB6
+S2#
+</pre>]]></text>
+</slide>
+
+<slide>
+	<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+<element type="ROUTER" textId="ID_router_txt3" x="4" y="50" width="430" height="346.65" />
+<text id="ID_router_txt3"><![CDATA[<pre>S2(config)# <b>vlan 99</b>
+VTP VLAN configuration not allowed when device is in CLIENT mode.
+S2(config)#
+</pre>]]></text>
+</slide>
+ 
+<slide>
+	<element type="TEXT" subType="TITLE" compId="ID_s4_title"/>
+	<element type="ACTIVITY" subType="SYNTAX" compId="ID_s4_SC" x="-34" y="40" width="500" height="368" resetId="ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>
+</slide>
+
+</slide>
+</data>
+

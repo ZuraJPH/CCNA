@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.5 Seguridad de puertos: verificación</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Seguridad de puertos: verificación</h1>
+        <div>
+          <p>
+            <b>Verificar la seguridad del puerto</b>
+          </p>
+          <p></p>
+          <p>Después de configurar la seguridad de puertos en un switch, revise cada interfaz para verificar que la seguridad de puertos y las direcciones MAC estáticas se configuraron correctamente. </p>
+          <p></p>
+          <p>
+            <b>Verificar los parámetros de seguridad de puerto</b>
+          </p>
+          <p></p>
+          <p>Para mostrar la configuración de seguridad de puertos para el switch o la interfaz especificada, use el comando <b>show port-security interface </b>[<i>id-interfaz</i>]. El resultado de la configuración de la seguridad del puerto dinámico se muestra en la figura 1. De manera predeterminada, se permite una dirección MAC en este puerto.</p>
+          <p></p>
+          <p>El resultado que se muestra en la figura 2 muestra los valores de la configuración de seguridad del puerto persistente. La cantidad máxima de direcciones se estableció en 10, como se configuró. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la dirección MAC se identifica como sticky MAC (MAC persistente).</p>
+          <p></p>
+          <p>Las direcciones MAC persistentes se agregan a la tabla de direcciones MAC y a la configuración en ejecución. Como se muestra en la figura 3, la dirección MAC persistente de la PC2 se agregó a la configuración en ejecución para S1.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Verificar las direcciones MAC seguras</b>
+          </p>
+          <p></p>
+          <p>Para mostrar todas las direcciones MAC seguras configuradas en todas las interfaces del switch o en una interfaz especificada con la información de vencimiento para cada una, use el comando <b>show port-security address</b>. Como se muestra en la figura 4, las direcciones MAC seguras se indican junto con los tipos. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el resultado del comando show port guión security interface fast Ethernet cero barra 18.  La configuración de máximo de direcciones MAC se establece como 1 en este ejemplo y se resalta. La figura dos resalta el hecho de que el nuevo número máximo está establecido como 50 y que las direcciones MAC persistentes ahora están establecidas como uno. La figura tres muestra el resultado del comando show run barra vertical begin fast Ethernet cero barra 19.  El resultado muestra la configuración del puerto, incluida la seguridad de puertos.  Una dirección MAC aparece en la configuración y representa una computadora que está conectada al puerto del switch y que se agregó al archivo de configuración en ejecución. La figura cuatro muestra el resultado del comando show port-security address.  La figura enumera la dirección MAC de la computadora que se agregó al switch en la figura anterior como una dirección MAC persistente segura.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

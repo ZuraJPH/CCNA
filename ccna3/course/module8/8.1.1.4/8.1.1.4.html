@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.4 Funcionamiento de estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de estado de enlace</h1>
+        <div>
+          <p>A fin de mantener la información de routing, los routers OSPF realizan el siguiente proceso genérico de routing de estado de enlace para alcanzar un estado de convergencia: </p>
+          <p></p>
+          <p>1. Establecimiento de las adyacencias de vecinos (figura 1): los routers con OSPF habilitado deben reconocerse entre sí en la red antes de poder compartir información. Los routers con OSPF habilitado envían paquetes de saludo por todas las interfaces con OSPF habilitado para determinar si hay vecinos presentes en esos enlaces. Si se detecta un vecino, el router con OSPF habilitado intenta establecer una adyacencia de vecino con ese vecino. </p>
+          <p></p>
+          <p>2. Intercambio de notificaciones de estado de enlace (figura 2): una vez que se establecen las adyacencias, los routers intercambian notificaciones de estado de enlace (LSA). Las LSA contienen el estado y el costo de cada enlace conectado directamente. Los routers saturan a los vecinos adyacentes con sus LSA. Los vecinos adyacentes que reciben las LSA saturan de inmediato a otros vecinos conectados directamente, hasta que todos los routers en el área tengan todas las LSA.</p>
+          <p></p>
+          <p>3. Creación de la tabla de topología (figura 3): una vez que se reciben las LSA, los routers con OSPF habilitado crean la tabla de topología (LSDB) sobre la base de las LSA recibidas. Finalmente, esta base de datos contiene toda la información sobre la topología de la red.</p>
+          <p></p>
+          <p>4. Ejecución del algoritmo SPF (figuras 4 y 5): a continuación, los routers ejecutan el algoritmo SPF. Los engranajes que se muestran en la ilustración se utilizan para indicar la ejecución del algoritmo SPF. El algoritmo SPF crea el árbol SPF. </p>
+          <p></p>
+          <p>En la figura 6, se muestra el contenido del árbol SPF del R1.</p>
+          <p></p>
+          <p>Las mejores rutas del árbol SPF se ofrecen a la tabla de routing IP. La ruta será insertada en la tabla de routing, a menos que haya un origen de rutas a la misma red con una distancia administrativa menor, como una ruta estática. Las decisiones de routing se toman sobre la base de las entradas de la tabla de routing.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio de la distribución en forma de diamante y está conectado a dos de los otros routers.  En la figura se muestran paquetes de saludo enviados y recibidos por todos los routers vecinos. En la figura dos, se muestran anuncios de estado de enlace que todos los routers envían y reciben. En la figura tres, se resalta un router que comienza a construir la tabla de topología, actualmente vacía. En la figura cuatro, se muestran engranajes de una rueda que representan que el router usará el algoritmo Primero la ruta más corta (SPF) al construir la tabla de topología. En la figura cinco, se muestra un router que se divide en varias ramas, como en un diagrama de árbol genealógico.  Esto representa el árbol SPF. En la figura seis, se indica el contenido del árbol SPF en una tabla.  La lista contiene todas las redes de destino, la ruta más corta para llegar a esas redes y el costo total de cada ruta.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

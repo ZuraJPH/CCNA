@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.4 Verificación de la configuración de interfaz OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de interfaz OSPF</h1>
+        <div>
+          <p>La forma más rápida de verificar la configuración de interfaz OSPFv2 es utilizar el comando <b>show ip ospf interface</b>. Este comando ofrece una lista detallada de cada interfaz con OSPFv2 habilitado. El comando es útil para determinar si se compusieron correctamente las instrucciones del comando <b>network</b>.</p>
+          <p></p>
+          <p>Para obtener un resumen de las interfaces con OSPFv2 habilitado, utilice el comando <b>show ip ospf interface brief</b>, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para recuperar y ver un resumen de las interfaces con OSPFv2 habilitado en el R2 mediante el comando <b>show ip ospf interface brief</b>. Observe que especificar el nombre de la interfaz como se hace en el comando <b>show ip ospf interface serial 0/0/1</b> proporciona información detallada de OSPFv2. </p>
+          <p></p>
+          <p>Continúe utilizando el verificador de sintaxis de la figura 2 para obtener un resumen de las interfaces con OSPFv2 habilitado en el R3 mediante el comando <b>show ip ospf interface brief</b>. Recupere y vea información adicional de la interfaz Serial 0/0/0 con el comando <b>show ip ospf interface serial 0/0/0</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra la salida del siguiente comando ejecutado en el router R1: show ip ospf interface brief.  La salida muestra tres interfaces que participan en OSPF, las direcciones IP, los costos y el área de OSPF. La figura dos es un elemento de medios interactivos que permite que el estudiante verifique la configuración de interfaz OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

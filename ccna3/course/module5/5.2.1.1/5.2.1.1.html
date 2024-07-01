@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.1 Funcionamiento del protocolo de routing dinámico</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento del protocolo de routing dinámico</h1>
+        <div>
+          <p>Todos los protocolos de routing están diseñados para descubrir redes remotas y adaptarse rápidamente cuando ocurre un cambio en la topología. El método que usa un protocolo de routing para lograr su propósito depende del algoritmo que use y de las características operativas de ese protocolo.  </p>
+          <p></p>
+          <p>En general, las operaciones de un protocolo de routing dinámico pueden describirse de la siguiente manera:</p>
+          <p>1. El router envía y recibe mensajes de routing en sus interfaces. </p>
+          <p>2. El router comparte mensajes de routing e información de routing con otros routers que están usando el mismo protocolo de routing. </p>
+          <p>3. Los routers intercambian información de routing para obtener información sobre redes remotas.  </p>
+          <p>4. Cuando un router detecta un cambio de topología, el protocolo de routing puede anunciar este cambio a otros routers. </p>
+          <p></p>
+          <p>Haga clic en <b>Reproducir</b> en la figura para ver una animación de un protocolo de routing dinámico en funcionamiento. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers, marcados como R1 y R2, conectados a través de un enlace WAN serial.  La figura es una animación que comienza cuando R1 crea un mensaje que contiene información de routing de red y envía la actualización al otro router.  El router receptor utiliza esta actualización para crear o para modificar su tabla de routing.  El router receptor envía una actualización cuando detecta un cambio en sus redes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

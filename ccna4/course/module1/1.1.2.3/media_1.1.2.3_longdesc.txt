@@ -1,0 +1,1 @@
+La figura muestra una red compleja con varios dispositivos WAN, incluidos el servidor de acceso, módem de Internet por acceso telefónico, el switch WAN, CSU/ DSU, los routers centrales, la red PSTN la red por cable, módem DSL y cable módem.

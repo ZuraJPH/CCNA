@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.3 Terminología de NAT</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Terminología de NAT</h1>
+        <div>
+          <p>Según la terminología de NAT, la red interna es el conjunto de redes sujetas a traducción. La red externa se refiere a todas las otras redes. </p>
+          <p></p>
+          <p>Al utilizar NAT, las direcciones IPv4 se designan de distinto modo, según si están en la red privada o en la red pública (Internet), y si el tráfico es entrante o saliente. </p>
+          <p></p>
+          <p>NAT incluye cuatro tipos de direcciones:</p>
+          <p>
+            <ul>
+              <li>Dirección local interna</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dirección global interna</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dirección local externa</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dirección global externa</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Al determinar qué tipo de dirección se utiliza, es importante recordar que la terminología de NAT siempre se aplica desde la perspectiva del dispositivo con la dirección traducida:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Dirección interna:</b> la dirección del dispositivo que se traduce por medio de NAT. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dirección externa:</b> la dirección del dispositivo de destino. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>NAT también usa los conceptos de local o global con relación a las direcciones:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Dirección local:</b> cualquier dirección que aparece en la porción interna de la red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dirección global:</b> cualquier dirección que aparece en la porción externa de la red. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la ilustración, la PC1 tiene la dirección local interna 192.168.10.10. Desde la perspectiva de la PC1, el servidor web tiene la dirección externa 209.165.201.1. Cuando se envían los paquetes de la PC1 a la dirección global del servidor web, la dirección local interna de la PC1 se traduce a 209.165.200.226 (dirección global interna). En general, la dirección del dispositivo externo no se traduce, ya que suele ser una dirección IPv4 pública.</p>
+          <p></p>
+          <p>Observe que la PC1 tiene distintas direcciones locales y globales, mientras que el servidor web tiene la misma dirección IPv4 pública en ambos casos. Desde la perspectiva del servidor web, el tráfico que se origina en la PC1 parece provenir de 209.165.200.226, la dirección global interna.</p>
+          <p></p>
+          <p>El router NAT, el R2 en la ilustración, es el punto de demarcación entre las redes internas y externas, así como entre las direcciones locales y globales.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra el router dos a una red a ambos lados. La red de la izquierda es una red interna y la de la derecha es una red externa. La red interna está conectada a una PC y tiene una dirección local. La red externa es un I.S.P. y tiene direcciones globales.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

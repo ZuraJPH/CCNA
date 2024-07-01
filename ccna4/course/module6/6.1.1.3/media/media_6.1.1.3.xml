@@ -1,0 +1,96 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Ejemplos de puntos de congestión</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text>
+			<![CDATA[<b>Agregación</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt02'>
+        <text>
+			<![CDATA[<b>Incompatibilidad de velocidad</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt03'>
+        <text>
+			<![CDATA[<b>LAN a WAN</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt04'>
+        <text>
+            <![CDATA[100 Mbps]]>
+        </text>
+    </component>
+    <component id='ID_txt05'>
+        <text>
+            <![CDATA[1000 Mbps]]>
+        </text>
+    </component>
+    <component id='ID_txt07'>
+        <text>
+            <![CDATA[100 Mbps]]>
+        </text>
+    </component>
+
+    <component id='ID_txt06'>
+        <text>
+            <![CDATA[1000 Mbps]]>
+        </text>
+    </component><!-- end slide 1 --><component id="ID_s2_title">
+        <text>
+            <![CDATA[<b>Causa de demora</b>]]></text>
+    </component>
+    <component id='ID_s2_table'>
+        <text>
+            <![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+		<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"></font></td>
+		</tr>
+
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>	
+		 
+		<tr>
+			<td bgcolor='#666263' width="140"><font color='#FFFFFF'><b>Demora</b></font></td>
+			<td bgcolor='#666263'><font color='#FFFFFF'><b>Descripción</b></p></font></td>
+			
+		</tr>
+		<tr>
+			<td bgcolor='#E9E7E8'>Demora de código</td>
+			<td bgcolor='#E9E7E8'>La cantidad fija de tiempo dedicado a comprimir los datos en el origen antes de transmitir el primer dispositivo de interconexión de redes, generalmente un switch.</td>
+			
+		</tr>
+        <tr>
+            <td bgcolor='#F2F2F2'>Demora de paquetización</td>
+            <td bgcolor='#F2F2F2'>El tiempo fijo que demora la encapsulación de un paquete con toda la información de encabezado necesaria.</td>
+            
+        </tr>
+        <tr>
+            <td bgcolor='#E9E7E8'>Demora de asignación de cola</td>
+            <td bgcolor='#E9E7E8'>La cantidad de tiempo variable que una trama o un paquete espera para transmitirse en el enlace.</td>
+            
+        </tr>
+        <tr>
+            <td bgcolor='#F2F2F2'>Demora de serialización</td>
+            <td bgcolor='#F2F2F2'>La cantidad fija de tiempo que lleva transmitir una trama al cable.</td>
+            
+        </tr>
+
+         <tr>
+            <td bgcolor='#E9E7E8'>Demora de propagación</td>
+            <td bgcolor='#E9E7E8'>La cantidad de tiempo variable que demora la trama para pasar enrte el origen y el destino.</td>
+            
+        </tr>
+        <tr>
+            <td bgcolor='#F2F2F2'>Demora de eliminación de fluctuación</td>
+            <td bgcolor='#F2F2F2'>La cantidad fija de tiempo que se demora en el almacenamiento en búfer de un flujo de paquetes y en el envío de estos a intervalos uniformes.</td>
+            
+        </tr>
+		
+	</table>]]>
+        </text>
+    </component>
+</textcomponents>

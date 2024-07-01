@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.1.3 Capítulo 8: DHCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 8: DHCP</h1>
+        <div>
+          <p>Todos los nodos en una red requieren una dirección IP única que se comunique con otros dispositivos. La asignación estática de información de direccionamiento IP en una red grande produce una carga administrativa que puede eliminarse mediante el uso de DHCPv4 y DHCPv6 para asignar de forma dinámica información de direccionamiento IPv4 e IPv6, respectivamente.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>DHCPv4 asigna dinámicamente, o arrienda, una dirección IPv4 de un conjunto de direcciones durante un período limitado según lo configurado en el servidor o hasta que el cliente ya no necesite la dirección. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>DHCPv4 comprende el intercambio de diversos paquetes entre el servidor de DHCPv4 y el cliente DHCPv4, lo que deriva en el arrendamiento de información de direccionamiento válida durante un período predefinido.</p>
+          <p></p>
+          <p>Los mensajes cuyo origen es el cliente (DHCPDISCOVER, DHCPREQUEST) son mensajes de difusión para permitir que todos los servidores de DHCPv4 en la red escuchen la solicitud de información de direccionamiento y la recepción de dicha información por parte del cliente. Los mensajes cuyo origen es el servidor de DHCPv4 (DHCPOFFER, DHCPACK) se envían como mensajes de unidifusión directamente al cliente.</p>
+          <p></p>
+          <p>Existen dos métodos disponibles para la configuración dinámica de las direcciones IPv6 de unidifusión global. </p>
+          <p>
+            <ul>
+              <li>Configuración automática de dirección independiente del estado (SLAAC)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protocolo de configuración dinámica de host para IPv6 (DHCPv6 con estado)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Con la configuración automática sin estado, el cliente utiliza información proporcionada por el mensaje RA IPv6 para seleccionar y configurar automáticamente una dirección IPv6 única. La opción de DHCPv6 sin estado informa al cliente que utilice la información del mensaje RA para el direccionamiento, pero que hay más parámetros de configuración disponibles de un servidor de DHCPv6. </p>
+          <p></p>
+          <p>DHCPv6 con estado es similar a DHCPv4. En este caso, el mensaje RA le informa al cliente que no utilice la información contenida en el mensaje RA. Toda la información de direccionamiento y de configuración de DNS se obtiene de un servidor de DHCPv6 con estado. El servidor de DHCPv6 mantiene la información de estado IPv6 de manera similar a la que un servidor de DHCPv4 asigna direcciones para IPv4.</p>
+          <p></p>
+          <p>Si el servidor de DHCP está ubicado en un segmento de red distinto del segmento del cliente DHCP, se debe configurar un agente de retransmisión. El agente de retransmisión reenvía mensajes específicos de difusión o multidifusión, incluidos los mensajes DHCP originados desde un host en un segmento LAN, y destinados para un servidor específico ubicado en otro segmento LAN.</p>
+          <p></p>
+          <p>La resolución de problemas con DHCPv4 y DHCPv6 incluye las mismas tareas:</p>
+          <p>
+            <ul>
+              <li>Resolver conflictos de dirección.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Verificar la conectividad física</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Probar la conectividad con una dirección IP estática.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Verificar la configuración de puertos del switch.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Probar el funcionamiento en la misma subred o VLAN.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un switch con un router y una computadora conectada a él.  La computadora emite el mensaje de solicitud de router IPv6, que es un mensaje de multidifusión para todos los routers.  El router recibe este mensaje y responde con un mensaje de anuncio de router, que es un mensaje de multidifusión para todos los nodos IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

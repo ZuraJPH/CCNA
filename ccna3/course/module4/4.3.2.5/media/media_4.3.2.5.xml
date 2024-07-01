@@ -1,0 +1,400 @@
+﻿<textcomponents><!--Slide 1--><component id="ID_s1_title">
+		<text><![CDATA[Actividad, parte 1: identificar la terminología y los estados del protocolo HSRP]]></text>
+	</component>
+
+	<component id="ID_s1_instr_title">
+		<text><![CDATA[Instrucciones]]></text>
+	</component>
+
+	<component id="ID_s1_instr_body">
+		<text><![CDATA[Seleccione sus respuestas en las listas desplegables.]]></text>
+	</component><!--feedback--><component id='ID_s1_titleCorrect'>
+		<text><![CDATA[Correcto]]></text>
+	</component>
+	
+	<component id='ID_s1_correctText'>
+		<text><![CDATA[Identificó correctamente los términos correctos del protocolo HSRP.]]></text>
+	</component>
+	
+	<component id='ID_s1_titleIncorrect'>
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+	
+	<component id='ID_s1_incorrectText'>
+		<text><![CDATA[No identificó correctamente los términos correctos del protocolo HSRP. Haga clic en Restablecer para intentarlo nuevamente. ]]></text>
+	</component>
+	
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component><!--ComboBox 1--><component id="ID_s1_txt01">
+		<text><![CDATA[<span class="colorChange">1. </span><textformat blockindent='14'>Se puede utilizar para determinar el router activo, el valor predeterminado es 100.</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt01'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB01_01'>
+		<text><![CDATA[HSRPv1]]></text>
+	</component>
+
+	<component id='ID_s1_CB01_02'>
+		<text><![CDATA[HSRPv2]]></text> 
+	</component>
+
+	<component id='ID_s1_CB01_03'>
+		<text><![CDATA[Adelantamiento]]></text>
+	</component>
+	
+	<component id='ID_s1_CB01_04'>
+		<text><![CDATA[Prioridad]]></text>
+	</component>
+
+	<component id='ID_s1_CB01_05'>
+		<text><![CDATA[Temporizadores]]></text>
+	</component><!--End ComboBox 1--><!--ComboBox 2--><component id="ID_s1_txt02">
+		<text><![CDATA[<span class="colorChange">2. </span><textformat blockindent='14'>Utiliza la dirección de multidifusión 224.0.0.102</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt02'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB02_01'>
+		<text><![CDATA[HSRPv1]]></text>
+	</component>
+
+	<component id='ID_s1_CB02_02'>
+		<text><![CDATA[HSRPv2]]></text> 
+	</component>
+
+	<component id='ID_s1_CB02_03'>
+		<text><![CDATA[Adelantamiento]]></text>
+	</component>
+	
+	<component id='ID_s1_CB02_04'>
+		<text><![CDATA[Prioridad]]></text>
+	</component>
+
+	<component id='ID_s1_CB02_05'>
+		<text><![CDATA[Temporizadores]]></text>
+	</component><!--End ComboBox 2--><!--ComboBox 3--><component id="ID_s1_txt03">
+		<text><![CDATA[<span class="colorChange">3. </span><textformat blockindent='14'>Se utiliza para forzar un nuevo proceso de elección del protocolo HSRP y debe estar habilitado.</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt03'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB03_01'>
+		<text><![CDATA[HSRPv1]]></text>
+	</component>
+
+	<component id='ID_s1_CB03_02'>
+		<text><![CDATA[HSRPv2]]></text> 
+	</component>
+
+	<component id='ID_s1_CB03_03'>
+		<text><![CDATA[Adelantamiento]]></text>
+	</component>
+	
+	<component id='ID_s1_CB03_04'>
+		<text><![CDATA[Prioridad]]></text>
+	</component>
+
+	<component id='ID_s1_CB03_05'>
+		<text><![CDATA[Temporizadores]]></text>
+	</component><!--End ComboBox 3--><!--ComboBox 4--><component id="ID_s1_txt04">
+		<text><![CDATA[<span class="colorChange">4. </span><textformat blockindent='14'>Utiliza la dirección de multidifusión 224.0.0.2</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt04'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB04_01'>
+		<text><![CDATA[HSRPv1]]></text>
+	</component>
+
+	<component id='ID_s1_CB04_02'>
+		<text><![CDATA[HSRPv2]]></text> 
+	</component>
+
+	<component id='ID_s1_CB04_03'>
+		<text><![CDATA[Adelantamiento]]></text>
+	</component>
+	
+	<component id='ID_s1_CB04_04'>
+		<text><![CDATA[Prioridad]]></text>
+	</component>
+
+	<component id='ID_s1_CB04_05'>
+		<text><![CDATA[Temporizadores]]></text>
+	</component><!--End ComboBox 4--><!--ComboBox 5--><component id="ID_s1_txt05">
+		<text><![CDATA[<span class="colorChange">5. </span><textformat blockindent='14'>Lo utiliza el router de reserva para determinar cuándo la conmutación por falla o adelantamiento debe ocurrir.</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt05'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB05_01'>
+		<text><![CDATA[HSRPv1]]></text>
+	</component>
+
+	<component id='ID_s1_CB05_02'>
+		<text><![CDATA[HSRPv2]]></text> 
+	</component>
+
+	<component id='ID_s1_CB05_03'>
+		<text><![CDATA[Adelantamiento]]></text>
+	</component>
+	
+	<component id='ID_s1_CB05_04'>
+		<text><![CDATA[Prioridad]]></text>
+	</component>
+
+	<component id='ID_s1_CB05_05'>
+		<text><![CDATA[Temporizadores]]></text>
+	</component><!--End ComboBox 5--><!--ComboBox 6--><component id="ID_s1_txt06">
+		<text><![CDATA[<span class="colorChange">6. </span><textformat blockindent='14'>Agrega soporte para la autenticación de MD5.</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt06'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB06_01'>
+		<text><![CDATA[HSRPv1]]></text>
+	</component>
+
+	<component id='ID_s1_CB06_02'>
+		<text><![CDATA[HSRPv2]]></text> 
+	</component>
+
+	<component id='ID_s1_CB06_03'>
+		<text><![CDATA[Adelantamiento]]></text>
+	</component>
+	
+	<component id='ID_s1_CB06_04'>
+		<text><![CDATA[Prioridad]]></text>
+	</component>
+
+	<component id='ID_s1_CB06_05'>
+		<text><![CDATA[Temporizadores]]></text>
+	</component><!--End ComboBox 6--><!--End Slide 1--><!--Slide 2--><component id="ID_s2_title">
+		<text><![CDATA[Actividad, parte 2: identificar la terminología y los estados del protocolo HSRP]]></text>
+	</component>
+
+	<component id="ID_s2_instr_title">
+		<text><![CDATA[Instrucciones]]></text>
+	</component>
+
+	<component id="ID_s2_instr_body">
+		<text><![CDATA[Seleccione sus respuestas en las listas desplegables.]]></text>
+	</component><!--feedback--><component id='ID_s2_titleCorrect'>
+		<text><![CDATA[Correcto]]></text>
+	</component>
+	
+	<component id='ID_s2_correctText'>
+		<text><![CDATA[Identificó correctamente los estados correctos del protocolo HSRP.]]></text>
+	</component>
+	
+	<component id='ID_s2_titleIncorrect'>
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+	
+	<component id='ID_s2_incorrectText'>
+		<text><![CDATA[No identificó correctamente los estados correctos del protocolo HSRP. Haga clic en “Restablecer” para intentarlo nuevamente. ]]></text>
+	</component>
+	
+	<component id='ID_s2_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s2_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component><!--ComboBox 1--><component id="ID_s2_txt01">
+		<text><![CDATA[1. <textformat blockindent='14'>El router no determinó la dirección IP virtual y todavía no ha visto un mensaje<br><span id="span1">de saludo del router activo. En este estado, el router espera para escuchar</span><br><span id="span1">al router activo.</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s2_CBprompt01'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s2_CB01_01'>
+		<text><![CDATA[Activo]]></text>
+	</component>
+
+	<component id='ID_s2_CB01_02'>
+		<text><![CDATA[Inicial]]></text> 
+	</component>
+
+	<component id='ID_s2_CB01_03'>
+		<text><![CDATA[Aprendemos]]></text>
+	</component>
+	
+	<component id='ID_s2_CB01_04'>
+		<text><![CDATA[Escuchar]]></text>
+	</component>
+
+	<component id='ID_s2_CB01_05'>
+		<text><![CDATA[Hablar]]></text>
+	</component>
+
+	<component id='ID_s2_CB01_06'>
+		<text><![CDATA[EN espera]]></text>
+	</component><!--End ComboBox 1--><!--ComboBox 2--><component id="ID_s2_txt02">
+		<text><![CDATA[2. <textformat blockindent='14'>El router envía mensajes de saludo periódicos y participa activamente en la <br><span id="span1">elección del router activo o de reserva.</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s2_CBprompt02'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s2_CB02_01'>
+		<text><![CDATA[Activo]]></text>
+	</component>
+
+	<component id='ID_s2_CB02_02'>
+		<text><![CDATA[Inicial]]></text> 
+	</component>
+
+	<component id='ID_s2_CB02_03'>
+		<text><![CDATA[Aprendemos]]></text>
+	</component>
+	
+	<component id='ID_s2_CB02_04'>
+		<text><![CDATA[Escuchar]]></text>
+	</component>
+
+	<component id='ID_s2_CB02_05'>
+		<text><![CDATA[Hablar]]></text>
+	</component>
+
+	<component id='ID_s2_CB02_06'>
+		<text><![CDATA[EN espera]]></text>
+	</component><!--End ComboBox 2--><!--ComboBox 3--><component id="ID_s2_txt03">
+		<text><![CDATA[3. <textformat blockindent='14'>Este estado se ingresa a través de un cambio de configuración o cuando una interfaz <br><span id="span1">está disponible por primera vez.</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s2_CBprompt03'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	<component id='ID_s2_CB03_01'>
+		<text><![CDATA[Activo]]></text>
+	</component>
+
+	<component id='ID_s2_CB03_02'>
+		<text><![CDATA[Inicial]]></text> 
+	</component>
+
+	<component id='ID_s2_CB03_03'>
+		<text><![CDATA[Aprendemos]]></text>
+	</component>
+	
+	<component id='ID_s2_CB03_04'>
+		<text><![CDATA[Escuchar]]></text>
+	</component>
+
+	<component id='ID_s2_CB03_05'>
+		<text><![CDATA[Hablar]]></text>
+	</component>
+
+	<component id='ID_s2_CB03_06'>
+		<text><![CDATA[EN espera]]></text>
+	</component><!--End ComboBox 3--><!--ComboBox 4--><component id="ID_s2_txt04">
+		<text><![CDATA[4. <textformat blockindent='14'>El router actualmente reenvía paquetes que se envían a la dirección MAC virtual <span id="span1">del grupo. El router envía mensajes de saludo periódicos.</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s2_CBprompt04'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s2_CB04_01'>
+		<text><![CDATA[Activo]]></text>
+	</component>
+
+	<component id='ID_s2_CB04_02'>
+		<text><![CDATA[Inicial]]></text> 
+	</component>
+
+	<component id='ID_s2_CB04_03'>
+		<text><![CDATA[Aprender]]></text>
+	</component>
+	
+	<component id='ID_s2_CB04_04'>
+		<text><![CDATA[Escuchar]]></text>
+	</component>
+
+	<component id='ID_s2_CB04_05'>
+		<text><![CDATA[Hablar]]></text>
+	</component>
+
+	<component id='ID_s2_CB04_06'>
+		<text><![CDATA[EN espera]]></text>
+	</component><!--End ComboBox 4--><!--ComboBox 5--><component id="ID_s2_txt05">
+		<text><![CDATA[5. <textformat blockindent='14'>El router es candidato a convertirse en el próximo router activo y envía <span id="span1">mensajes de saludo periódicos.</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s2_CBprompt05'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s2_CB05_01'>
+		<text><![CDATA[Activo]]></text>
+	</component>
+
+	<component id='ID_s2_CB05_02'>
+		<text><![CDATA[Inicial]]></text> 
+	</component>
+
+	<component id='ID_s2_CB05_03'>
+		<text><![CDATA[Aprender]]></text>
+	</component>
+	
+	<component id='ID_s2_CB05_04'>
+		<text><![CDATA[Escuchar]]></text>
+	</component>
+
+	<component id='ID_s2_CB05_05'>
+		<text><![CDATA[Hablar]]></text>
+	</component>
+
+	<component id='ID_s2_CB05_06'>
+		<text><![CDATA[EN espera]]></text>
+	</component><!--End ComboBox 5--><!--ComboBox 6--><component id="ID_s2_txt06">
+		<text><![CDATA[6. <textformat blockindent='14'>El router conoce la dirección IP virtual, pero el router no es el router activo <span id="span1">ni el router de reserva. Escucha los mensajes de saludo de esos routers.</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s2_CBprompt06'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s2_CB06_01'>
+		<text><![CDATA[Activo]]></text>
+	</component>
+
+	<component id='ID_s2_CB06_02'>
+		<text><![CDATA[Inicial]]></text> 
+	</component>
+
+	<component id='ID_s2_CB06_03'>
+		<text><![CDATA[Aprender]]></text>
+	</component>
+	
+	<component id='ID_s2_CB06_04'>
+		<text><![CDATA[Escuchar]]></text>
+	</component>
+
+	<component id='ID_s2_CB06_05'>
+		<text><![CDATA[Hablar]]></text>
+	</component>
+
+	<component id='ID_s2_CB06_06'>
+		<text><![CDATA[EN espera]]></text>
+	</component><!--End ComboBox 6--><!--End Slide 2--></textcomponents>

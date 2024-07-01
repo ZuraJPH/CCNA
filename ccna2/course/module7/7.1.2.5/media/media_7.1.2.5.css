@@ -1,0 +1,14 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#htmlMedia
+{
+	margin-left: 100px !important;
+}
+
+#ID_title
+{
+	margin-left: -100px !important;
+}

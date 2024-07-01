@@ -1,0 +1,1 @@
+La figura muestra tres switches, todos interconectados con un enlace punto uno Q.  Esto demuestra que los switches diferentes pueden ser el puente raíz para diferentes redes VLAN y que los puertos pueden reenviar para una VLAN mientras que bloquean para otra.

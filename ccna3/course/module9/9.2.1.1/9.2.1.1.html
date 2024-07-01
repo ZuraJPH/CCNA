@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.1 Implementación de OSPF multiárea</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Implementación de OSPF multiárea</h1>
+        <div>
+          <p>La implementación de OSPF puede ser de área única o multiárea. El tipo de implementación de OSPF que se elige depende de los requisitos de diseño de red específicos y de la topología existente.</p>
+          <p></p>
+          <p>Para implementar OSPF multiárea, se deben seguir cuatro pasos, los cuales se muestran en la ilustración. </p>
+          <p></p>
+          <p>Los pasos 1 y 2 forman parte del proceso de planificación. </p>
+          <p></p>
+          <p>
+            <b>Paso 1: Recopilar los parámetros y los requisitos de la red:</b> esto incluye determinar la cantidad de dispositivos host y de red, el esquema de asignación de direcciones IP (si ya se implementó), el tamaño del dominio y de las tablas de routing, el riesgo de cambios en la topología, si los routers existentes admiten OSPF y otras características de la red.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: Definir los parámetros de OSPF:</b> sobre la base de la información recopilada en el paso 1, el administrador de red debe determinar si la implementación preferida es OSPF de área única o multiárea. Si se selecciona OSPF multiárea, el administrador de red debe tener en cuenta varias consideraciones al determinar los parámetros de OSPF, incluido lo siguiente: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Plan de asignación de direcciones IP:</b> este rige la manera en que se puede implementar OSPF y qué tan bien se podría escalar la implementación de OSPF. Se debe crear un plan de asignación de direcciones IP detallado, junto con la información de división en subredes IP. Un buen plan de asignación de direcciones IP debe habilitar el uso de la sumarización y del diseño de OSPF multiárea. Este plan escala la red con mayor facilidad y optimiza el comportamiento de OSPF y la propagación de LSA.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Áreas OSPF:</b> la división de una red OSPF en áreas disminuye el tamaño de la LSDB y limita la propagación de las actualizaciones de estado de enlace cuando se modifica la topología. Se deben identificar los routers que van a cumplir la función de ABR y ASBR, además de los ABR y ASBR que van a realizar el resumen o la redistribución.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Topología de la red:</b> esta consta de enlaces que conectan los equipos de red y que pertenecen a áreas OSPF diferentes en un diseño de OSPF multiárea. La topología de la red es importante para determinar los enlaces principales y de respaldo. Los enlaces principales y de respaldo se definen mediante la modificación del costo de OSPF en las interfaces. También se debe usar un plan detallado de la topología de la red para determinar las distintas áreas OSPF, el ABR y el ASBR, además de los puntos de sumarización y redistribución, si se utiliza OSPF multiárea.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paso 3:</b> Configurar la implementación de OSPF multiárea según los parámetros.</p>
+          <p></p>
+          <p>
+            <b>Paso 4: </b>Verificar la implementación de OSPF multiárea según los parámetros.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una lista ordenada que explica los pasos del plan de implementación al configurar OSPF multiárea.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

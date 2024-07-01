@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.3.2 Desventajas de los protocolos de estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Desventajas de los protocolos de estado de enlace</h1>
+        <div>
+          <p>Como se resume en la figura 1, los protocolos de estado de enlace también tienen algunas desventajas en comparación con los protocolos de routing de vector distancia:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Requisitos de memoria:</b> los protocolos de estado de enlace requieren memoria adicional para crear y mantener la base de datos de estado de enlace y el árbol SPF.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Requisitos de procesamiento:</b> los protocolos de estado de enlace también pueden requerir un mayor procesamiento de CPU que los protocolos de routing vector distancia. El algoritmo SPF requiere un mayor tiempo de CPU que los algoritmos vector distancia, como Bellman-Ford, ya que los protocolos de estado de enlace arman un mapa completo de la topología. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Requisitos de ancho de banda:</b> la saturación de paquetes de estado de enlace puede ejercer un impacto negativo en el ancho de banda disponible en una red. Si bien esto sólo debería ocurrir durante la puesta en marcha inicial de los routers, también podría ser un problema en redes inestables.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Sin embargo, los protocolos de routing de estado de enlace modernos están diseñados para minimizar los efectos en la memoria, la CPU y el ancho de banda. La utilización y configuración de áreas múltiples puede reducir el tamaño de las bases de datos de estado de enlace. Las áreas múltiples pueden limitar el grado de envío masivo de la información de estado de enlace en un dominio de routing y enviar los LSP solo a aquellos routers que los necesitan. Cuando hay un cambio en la topología, solo los routers del área afectada reciben el LSP y ejecutan el algoritmo SPF. Esto puede ayudar a aislar un enlace inestable en un área específica en el dominio de routing. </p>
+          <p></p>
+          <p>Por ejemplo, en la figura 2 hay tres dominios de routing independientes: área 1, área 0 y área 51. Si una red en el área 51 deja de funcionar, solo los routers en esa área se saturan con el LSP que contiene la información sobre dicho enlace fuera de servicio. Únicamente los routers del área 51 necesitan actualizar sus bases de datos de estado de enlace, volver a ejecutar el algoritmo SPF, crear un nuevo árbol SPF y actualizar sus tablas de routing. Los routers de otras áreas descubren que esta ruta no funciona, pero esto se realiza con un tipo de LSP que no los obliga a volver a ejecutar su algoritmo SPF. Los routers de otras áreas pueden actualizar sus tablas de routing directamente. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra las desventajas del routing de estado de enlace. La figura 2 muestra tres conjuntos de cinco routers separados en dominios llamados "áreas".  La figura resalta el hecho de que los paquetes de estado de enlace que se originan en un área no se envían masivamente a otras áreas.  Por ejemplo, si un enlace en un área falla, solo otros routers en esa área recibirán un paquete de estado de enlace de actualizaciones con respecto al enlace defectuoso.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

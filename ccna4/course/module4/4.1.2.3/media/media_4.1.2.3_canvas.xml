@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+	<element type="IMAGE" src="media_4.1.2.3_topo.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" id="ID_static_1" text="S0/0/0" x="274" y="88" align="center" width="36" />
+<element type="TEXT" id="ID_static_2" text="S0/0/0" x="216" y="176" align="center" width="36" />
+<element type="TEXT" id="ID_static_3" text="G0/0" x="146" y="226" align="center" width="26" />
+<element type="TEXT" id="ID_static_4" text="192.168.11.0/24" x="255" y="328" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_5" text="192.168.10.10" x="110" y="433" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_6" text="192.168.11.10" x="206" y="433" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_7" text="192.168.30.12" x="389" y="433" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_8" text="192.168.31.12" x="495" y="433" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_9" text="192.168.30.0/24" x="325" y="275" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_10" text="192.168.31.0/24" x="540" y="275" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_11" text="S0/0/1" x="374" y="88" align="center" width="34" />
+<element type="TEXT" id="ID_static_12" text="S0/0/1" x="428" y="176" align="center" width="34" />
+<element type="TEXT" id="ID_static_13" text="G0/1" x="225" y="226" align="center" width="24" />
+<element type="TEXT" id="ID_static_14" text="192.168.10.0/24" x="40" y="275" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_15" text="G0/0" x="432" y="226" align="center" width="26" />
+<element type="TEXT" id="ID_static_16" text="G0/1" x="510" y="226" align="center" width="24" />
+<element type="BUBBLE" compId="ID_txt01" x="36" y="89" width="161" height="94" align="left" tailPosition="5" tailFlip="0" />
+<element type="BUBBLE" compId="ID_txt02" x="469" y="86" width="160" height="94" align="left" tailPosition="7" tailFlip="0" />
+<element type="TEXT" subType="TITLE" compId="ID_title"/>
+	
+</slide>
+		
+</data>

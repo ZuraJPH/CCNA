@@ -1,0 +1,1 @@
+La figura muestra el diagrama estándar del laboratorio.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN.  Hay una ruta estática predeterminada configurada en el router uno utilizando el argumento de siguiente salto.

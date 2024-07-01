@@ -1,0 +1,1 @@
+La figura muestra un router a una LAN única conectado al R 2 en Internet.  Se considera que este router es un router de rutas internas y la LAN es una red de rutas internas.

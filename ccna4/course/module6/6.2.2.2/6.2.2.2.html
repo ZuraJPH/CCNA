@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.2 Evitar la pérdida de paquetes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Evitar la pérdida de paquetes</h1>
+        <div>
+          <p>La pérdida de paquetes es generalmente el resultado de la congestión en una interfaz. La mayoría de las aplicaciones que utilizan el TCP experimentan una disminución de velocidad debido a que el TCP se ajusta automáticamente a la congestión en la red. Los segmentos caídos del TCP hacen que las sesiones del TCP reduzcan su tamaño de ventana. Algunas aplicaciones no utilizan TCP y no pueden manejar las caídas (flujos frágiles).</p>
+          <p></p>
+          <p>Los enfoques siguientes pueden prevenir los descartes en las aplicaciones sensibles:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Aumenta la capacidad de enlace para facilitar o evitar la congestión.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Garantizar el suficiente ancho de banda y aumentar el espacio en búfer para acomodar las ráfagas de tráfico de flujos frágil. Existen varios mecanismos disponibles en el software de calidad de servicio (QoS) de Cisco IOS que pueden garantizar el ancho de banda y proporcionar el reenvío prioritario a las aplicaciones sensibles a las caídas. Algunos ejemplos son WFQ, CBWFQ y LLQ.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Evitar la congestión el descartar paquetes de prioridad más baja antes de que se produzca la congestión. QoS de Cisco IOS proporciona mecanismos de espera que comienzan a descartar paquetes de prioridad más baja antes de que se produzca la congestión. Un ejemplo es la Detección Temprana Aleatoria Ponderada (WRED).</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.3.3 Pasos para copiar una imagen de IOS en un dispositivo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pasos para copiar una imagen de IOS en un dispositivo</h1>
+        <div>
+          <p>Cisco lanza sistemáticamente nuevas versiones del software IOS de Cisco para resolver advertencias y proporcionar nuevas características. En este ejemplo, se utiliza IPv6 para la transferencia, a fin de mostrar que TFTP también puede utilizarse a través de redes IPv6. </p>
+          <p></p>
+          <p>En la figura 1, se ilustra cómo copiar una imagen del software IOS de Cisco desde un servidor TFTP.  Se copiará un nuevo archivo de imagen (c1900-universalk9-mz.SPA.152-4.M3.bin) del servidor TFTP en 2001:DB8:CAFE:100::99 al router. </p>
+          <p></p>
+          <p>Siga estos pasos para actualizar el software en el router Cisco:</p>
+          <p></p>
+          <p>
+            <b>Paso 1: </b>Seleccione un archivo de imagen del IOS de Cisco que satisfaga los requisitos en términos de plataforma, características y software. Descargue el archivo de cisco.com y transfiéralo al servidor TFTP.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: </b>Verifique la conectividad al servidor TFTP. Haga ping al servidor TFTP desde el router. En el resultado de la figura 2, se muestra que se puede acceder al servidor TFTP desde el router.</p>
+          <p></p>
+          <p>
+            <b>Paso 3:  </b>Asegúrese de que haya suficiente espacio en la memoria flash en el router que se actualiza. Se puede verificar la cantidad de memoria flash disponible mediante el comando <b>show flash0:</b>. Compare el espacio disponible en la memoria flash con el tamaño del nuevo archivo de imagen. El comando <b>show flash0:</b> en la figura 3 se utiliza para verificar el espacio disponible en la memoria flash. En el ejemplo, el espacio disponible en la memoria flash es de 182.394.880 bytes. </p>
+          <p></p>
+          <p>
+            <b>Paso 4: </b>Copie el archivo de imagen del IOS del servidor TFTP al router con el comando <b>copy</b> que se muestra en la figura 4. Después de emitir este comando con los URL de destino y de origen especificados, se solicitará al usuario que introduzca la dirección IP del host remoto, el nombre del archivo de origen y el nombre del archivo de destino. Se iniciará la transferencia del archivo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra un router y un servidor para demostrar que el IOS se puede copiar de un servidor TFTP al router. En la figura número dos se muestra el resultado exitoso de una operación de ping del router al servidor. En la figura número tres se muestra la salida del comando "show flash colon zero" en el router. En la figura número cuatro se muestra la sintaxis para copiar el IOS del servidor TFTP a la memoria flash del router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

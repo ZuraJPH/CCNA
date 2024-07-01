@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.2 OSPF multiárea</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>OSPF multiárea</h1>
+        <div>
+          <p>Cuando se divide un área OSPF grande en áreas más pequeñas, esto se denomina “OSPF multiárea”. OSPF multiárea es útil en implementaciones de redes más grandes para reducir la sobrecarga de procesamiento y memoria.</p>
+          <p></p>
+          <p>Por ejemplo, cada vez que un router recibe información nueva acerca de la topología, como la adición, la eliminación o la modificación de un enlace, el router debe volver a ejecutar el algoritmo SPF, crear un nuevo árbol SPF y actualizar la tabla de routing. El algoritmo SPF representa una gran exigencia para el CPU y el tiempo que le toma realizar los cálculos depende del tamaño del área. Si hubiera demasiados routers en un área, la LSDB sería más grande y se incrementaría la carga en la CPU. Por lo tanto, la disposición de los routers en distintas áreas divide de manera eficaz una base de datos potencialmente grande en bases de datos más pequeñas y más fáciles de administrar.</p>
+          <p></p>
+          <p>OSPF multiárea requiere un diseño de red jerárquico. El área principal se denomina “área troncal” (área 0) y el resto de las áreas deben estar conectadas a esta. Con el routing jerárquico, aún se produce el routing entre las áreas (routing interárea). Sin embargo, la operación de routing de uso intensivo de CPU, que implica recalcular el algoritmo SPF, se realiza solo para las rutas dentro de un área. Un cambio en un área no provoca el recálculo del algoritmo SPF en otras áreas.</p>
+          <p></p>
+          <p>Como se ilustra en la figura 1, las posibilidades de topología jerárquica de OSPF multiárea presentan las siguientes ventajas:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Tablas de routing más pequeñas:</b> hay menos entradas de la tabla de routing, ya que las direcciones de red pueden resumirse entre áreas. Además, los routers de un área pueden recibir solo una ruta predeterminada para un destino fuera del área. Por ejemplo, el R1 resume las rutas del área 1 al área 0 y el R2 resume las rutas del área 51 al área 0. Además, el R1 y el R2 propagan una ruta estática predeterminada a las áreas 1 y 51.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Menor sobrecarga de actualización de estado de enlace:</b> minimiza los requisitos de procesamiento y memoria, ya que hay menos routers que intercambian LSA con información de topología detallada. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Menor frecuencia de cálculos de SPF:</b> localiza el impacto de un cambio de topología dentro de un área. Por ejemplo, minimiza el impacto de una actualización de routing, porque el envío masivo de LSA se detiene en la frontera del área.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2, suponga que un enlace entre dos routers internos en el área 51 falla. Solo los routers en el área 51 intercambian los LSA que requieren para volver a ejecutar el algoritmo SPF para este evento. R1 recibe un tipo diferente de LSA del área 51 y no recalcula el algoritmo SPF. Los diferentes tipos de LSA se analizan en secciones posteriores de este capítulo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra diez routers, que se han dividido en tres áreas más pequeñas. Los routers funcionan con más eficiencia debido a que las tablas de routing son más pequeñas, hay menos cantidad de LSA y se redujeron los procesos del algoritmo SPF. La figura dos muestra diez routers, que se han dividido en tres áreas más pequeñas; área 1, área 0 y área 51. El área 51 muestra que el intercambio de LSA solo se produce entre los routers en su propia área y no llega al área conectada 0.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

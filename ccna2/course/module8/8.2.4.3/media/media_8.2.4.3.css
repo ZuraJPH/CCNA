@@ -1,0 +1,12 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+#ID_title{margin-left:-110px;}
+
+#ID_router_txt1{padding-left:4px !important;}
+.orange1{width:38%;}
+.orange2{margin-top:2px !important;}
+#ID_router_txt1{line-height:14px;}
+#ID_txt01{color:#ffffff !important;}
+#ID_title{margin-left:-50px;}

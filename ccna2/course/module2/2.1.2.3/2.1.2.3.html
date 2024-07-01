@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.3 Ruta estática por defecto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta estática por defecto</h1>
+        <div>
+          <p>Una ruta predeterminada es una ruta que coincide con todos los paquetes y es utilizada por el router si un paquete no coincide con ninguna otra ruta más específica en la tabla de routing. Una ruta predeterminada puede ser aprendida de forma dinámica o configurada de manera estática. Una ruta estática predeterminada es simplemente una ruta estática con 0.0.0.0/0 como dirección IPv4 de destino. Al configurar una ruta estática predeterminada, se crea un gateway de último recurso. </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p>Las rutas estáticas predeterminadas se utilizan en los siguientes casos:</p>
+          <p>
+            <ul>
+              <li>Cuando ninguna otra ruta de la tabla de routing coincide con la dirección IP destino del paquete. En otras palabras, cuando no existe una coincidencia más específica. Se utilizan comúnmente cuando se conecta un router periférico de una compañía a la red ISP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cuando un router tiene otro router único al que está conectado. En esta situación, se conoce al router como router de rutas internas.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Consulte la figura para ver una situación de la ruta predeterminada de la red de rutas internas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un router en Internet (R2) que se conecta a un router de rutas internas(R1).  El R1 se conecta al mundo exterior mediante una ruta estática predeterminada que apunta a R2.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

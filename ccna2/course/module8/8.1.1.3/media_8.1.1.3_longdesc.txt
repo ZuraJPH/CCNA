@@ -1,0 +1,1 @@
+La figura muestra el formato de mensaje DHCPv4 y se enumeran los campos descritos en texto.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.2 Algoritmo de árbol de expansión: funciones de puerto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algoritmo de árbol de expansión: funciones de puerto</h1>
+        <div>
+          <p>La versión IEEE 802.1D de STP y RSTP utiliza el algoritmo de árbol de expansión (STA) para determinar qué puertos de switch de una red se deben colocar en estado de bloqueo para evitar bucles. El STA designa un único switch como puente raíz y lo utiliza como punto de referencia para todos los cálculos de rutas. En la ilustración, el puente raíz (el switch S1) se elige mediante un proceso de elección. Todos los switches que participan en STP intercambian tramas de BPDU para determinar qué switch posee el menor ID de puente (BID) en la red. El switch con el menor BID se transforma en el puente raíz en forma automática según los cálculos del STA.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> para simplificar, suponga que todos los puertos en todos los switches están asignados a la VLAN 1, hasta que se indique lo contrario. Cada switch posee una dirección MAC única asociada a la VLAN 1. </p>
+          <p></p>
+          <p>Una BPDU es una trama de mensaje que intercambian los switches para STP. Cada BPDU contiene un BID que identifica al switch que envió la BPDU. El BID contiene un valor de prioridad, la dirección MAC del switch emisor y una ID de sistema extendido optativa. El valor de BID más bajo lo determina la combinación de estos tres campos.</p>
+          <p></p>
+          <p>Después de determinar el puente raíz, el STA calcula la ruta más corta hacia el mismo. Todos los switches utilizan el STA para determinar los puertos que deben bloquearse. Mientras el STA determina las mejores rutas al puente raíz para todos los puertos de switch en el dominio de difusión, se evita que el tráfico se reenvíe a través de la red. El STA tiene en cuenta tanto los costos de ruta como de puerto cuando determina qué puertos bloquear. El costo de la ruta se calcula mediante los valores de costo de puerto asociados con las velocidades de los puertos para cada puerto de switch que atraviesa una ruta determinada. La suma de los valores de costo de puerto determina el costo de ruta total para el puente raíz. Si existe más de una ruta a escoger, el STA elige la de menor costo de ruta.</p>
+          <p></p>
+          <p>Una vez que el STA determinó las rutas más deseables en relación con cada switch, asigna funciones de puerto a los puertos de switch que participan. Las funciones de puerto describen la relación que estos tienen en la red con el puente raíz y si se les permite reenviar tráfico:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Puertos raíz</b>: puertos de switch más cercanos al puente raíz en términos de costo total al puente raíz. En la figura, el puerto raíz seleccionado por STP en S2 es F0/1, el enlace entre S2 y S1. El puerto raíz seleccionado por STP en S3 es F0/1, el enlace entre S3 y S1. Los puertos raíz se seleccionan por switch.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Puertos designados</b>: todos los puertos que no son raíz y que aún pueden enviar tráfico a la red. En la ilustración, los puertos de switch (F0/1 y F0/2) en el S1 son puertos designados. El puerto F0/2 del S2 también está configurado como puerto designado. Los puertos designados se seleccionan por segmento según el costo de cada puerto a cada lado del segmento y el costo total calculado por STP para que ese puerto vuelva al puente raíz. Si un extremo de un segmento es un puerto raíz, el otro extremo es un puerto designado. Todos los puertos en el puente raíz son puertos designados. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Puertos alternativos y de respaldo</b>: los puertos alternativos y de respaldo se configuran en estado de bloqueo para evitar bucles. En la ilustración, el STA configuró el puerto F0/2 en el S3 en la función alternativa. El puerto F0/2 en el S3 está en estado de bloqueo. Los puertos alternativos se seleccionan solo en los enlaces en los que ninguno de los extremos es un puerto raíz. Observe en la figura que solo un extremo del segmento está bloqueado. Esto permite una transición más rápida al estado de reenvío cuando es necesario. (Los puertos se bloquean solo cuando dos puertos del mismo switch proporcionan enlaces redundantes a través de la red).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Puertos deshabilitados</b>: un puerto deshabilitado es un puerto de switch que está desactivado.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Nota:</b> Los roles de puerto que se muestran son los definidos por RSTP. El rol definido originalmente por el STP 802.1D para los puertos alternativos y de respaldo era no designado.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres switches: S1, S2 y S3.  Cada uno está conectado a los otros dos con un enlace troncal.  El S2 tiene conectadas la PC1, PC2 y PC3.  El S1 tiene conectada la PC4. El diagrama muestra los diferentes roles de puerto del árbol de expansión.  Algunos puertos son puertos raíz (reenvío), algunos son puertos designados (reenvío) y algunos son puertos alternativos o no designado (bloqueo).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

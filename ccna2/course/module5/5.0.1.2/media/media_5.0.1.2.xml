@@ -1,0 +1,8 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Switches</b><br/><br/><textformat blockindent='-14'><ul><li>Identifican los hosts conectados, las ubicaciones de puertos y las direcciones MAC únicas.</li><li>Registran direcciones host únicas en una tabla de direcciones MAC.</li><li>Envían y reciben tráfico de datos mediante unidifusión, multidifusión y difusión.</li></ul></textformat>]]></text>
+</component>
+
+
+
+</textcomponents>

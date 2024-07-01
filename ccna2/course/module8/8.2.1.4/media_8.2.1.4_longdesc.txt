@@ -1,0 +1,1 @@
+La figura muestra el proceso de SLAAC de una computadora.  El router envía un mensaje de anuncio de router que contiene toda la información de direccionamiento que necesita la computadora.  Esta es la respuesta al mensaje de solicitud de router enviado por la computadora.  

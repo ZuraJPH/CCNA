@@ -1,0 +1,1 @@
+En la figura, se muestra un diseño de red empresarial grande.  El sitio principal se conecta a tres sitios remotos mediante diferentes conexiones, incluidas WAN, PSTN e Internet pública.

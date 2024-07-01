@@ -1,0 +1,20 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+
+#ID_s2_txt01 >div {
+	margin: 2px 0 2px 5px;
+	letter-spacing: -0.6px!important;
+	line-height: 14.3px !important; 
+}
+
+div .highlight{
+	background-color: #FACCA8;
+}
+
+#ID_s2_txt01 >div > div {
+	margin: 0 0 0 5px;
+}

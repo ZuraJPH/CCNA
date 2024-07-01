@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.1 Secuencia de arranque de un switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Secuencia de arranque de un switch</h1>
+        <div>
+          <p>Una vez que se enciende el switch Cisco, lleva a cabo la siguiente secuencia de arranque:</p>
+          <p></p>
+          <p>1. Primero, el switch carga un programa de autodiagnóstico al encender (POST) almacenado en la memoria ROM.  El POST verifica el subsistema de la CPU. Este comprueba la CPU, la memoria DRAM y la parte del dispositivo flash que integra el sistema de archivos flash.</p>
+          <p>2. A continuación, el switch carga el software del cargador de arranque. El cargador de arranque es un pequeño programa almacenado en la memoria ROM que se ejecuta inmediatamente después de que el POST se completa correctamente.</p>
+          <p>3. El cargador de arranque lleva a cabo la inicialización de la CPU de bajo nivel. Inicializa los registros de la CPU, que controlan dónde está asignada la memoria física, la cantidad de memoria y su velocidad. </p>
+          <p>4. El cargador de arranque inicia el sistema de archivos flash en la placa del sistema. </p>
+          <p>5. Por último, el cargador de arranque localiza y carga una imagen de software del sistema operativo de IOS en la memoria y delega el control del switch a IOS. </p>
+          <p></p>
+          <p>El cargador de arranque busca la imagen de Cisco IOS en el switch de la siguiente manera: el switch intenta arrancar automáticamente mediante la información de la variable de entorno BOOT. Si no se establece esta variable, el switch intenta cargar y ejecutar el primer archivo ejecutable que puede mediante una búsqueda recursiva y en profundidad en todo el sistema de archivos flash. Cuando se realiza una búsqueda en profundidad de un directorio, se analiza por completo cada subdirectorio que se encuentra antes de continuar la búsqueda en el directorio original. En los switches de la serie Catalyst 2960, el archivo de imagen generalmente se encuentra en un directorio que tiene el mismo nombre que el archivo de imagen (excepto la extensión de archivo .bin). </p>
+          <p></p>
+          <p>Luego, el sistema operativo IOS inicia las interfaces mediante los comandos del IOS de Cisco que se encuentran en el archivo de configuración de arranque, que se almacena en NVRAM.</p>
+          <p></p>
+          <p>En la ilustración, la variable de entorno BOOT se establece con el comando <b>boot system</b> del modo de configuración global. Observe que el IOS se ubica en una carpeta distinta y que se especifica la ruta de la carpeta. Use el <b></b>comando <b>show boot</b> para ver la configuración actual del archivo de arranque de IOS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el comando utilizado para establecer la variable de entorno de arranque para el IOS del switch que arranca en el modo de configuración global. El comando es boot system flash dos puntos barra c 2 9 6 0 guión lanbase k 9 guión m z punto 1 5 0 guión 2 punto S E barra c 2 9 6 0 guión lanbase k 9 guión m z punto 1 5 0 guión 2 punto S E punto bin.  La ubicación de almacenamiento es flash, el nombre después de la primera barra es una carpeta en la memoria flash y el nombre después de la segunda barra es el nombre de IOS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

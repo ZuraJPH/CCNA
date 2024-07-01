@@ -1,0 +1,1 @@
+La figura muestra una pila de seis switches de Cisco. Esta es la leyenda: EtherChannel puede proporcionar un ancho de banda flexible y escalable, con resistencia y capacidad para compartir la carga a través de los enlaces de red.

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.2 Máscara de comodín</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Máscara de comodín</h1>
+        <div>
+          <p>OSPFv2 utiliza la combinación de argumento de<i> network-address wildcard-mask </i>para habilitar OSPF en las interfaces. Por su diseño, OSPF es un protocolo sin clase; por lo tanto, siempre se requiere la máscara de comodín. Al identificar las interfaces que participan en un proceso de routing, la máscara de comodín generalmente es el valor inverso a la máscara de subred configurada en esa interfaz. </p>
+          <p></p>
+          <p>Una máscara de comodín es una cadena de 32 dígitos binarios que el router utiliza para determinar qué bits de la dirección debe examinar para obtener una coincidencia. En una máscara de subred, un 1 binario equivale a una coincidencia, y un 0 binario no es una coincidencia. En una máscara de comodín, sucede lo contrario:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Bit 0 de máscara de comodín:</b> coincide con el valor de bit correspondiente en la dirección. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Bit 1 de máscara de comodín:</b> omite el valor del bit correspondiente en la dirección.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El método más sencillo para calcular una máscara de comodín es restar la máscara de subred de la red a 255.255.255.255.</p>
+          <p></p>
+          <p>En el ejemplo de la figura 1, se calcula la máscara de comodín a partir de la dirección de red 192.168.10.0/24. Para hacerlo, se resta la máscara de subred 255.255.255.0 a 255.255.255.255, cuyo resultado es 0.0.0.255. Por lo tanto,192.168.10.0/24 es 192.168.10.0 con una máscara de comodín 0.0.0.255.</p>
+          <p></p>
+          <p>En el ejemplo de la figura 2, se calcula la máscara de comodín a partir de la dirección de red 192.168.10.64/26. Para hacerlo, se resta la máscara de subred 255.255.255.192 a 255.255.255.255, cuyo resultado es 0.0.0.63. Por lo tanto,192.168.10.0/26 es 192.168.10.0 con una máscara de comodín 0.0.0.63.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra cómo calcular una máscara de comodín (wildcard) de una red barra diagonal 24.  Este método escribe cuatro conjuntos de 255. La máscara de subred IPv4 aparece a continuación.  Luego se resta la máscara de subred de los cuatro conjuntos de 255, lo que resulta en la máscara de comodín.  La figura indica uno punto uno punto uno punto uno 255 punto 255 punto 255 punto 255. menos uno punto uno punto uno punto uno 255 punto 255 punto 255 punto cero.  La máscara de comodín que se obtiene como resultado es cero punto cero punto cero punto 255. En la figura dos, se muestra cómo calcular una máscara de comodín de una red barra diagonal 26.  La figura indica 255 punto 255 punto 255 punto 255 menos 255 punto 255 punto 255 punto 192.  La máscara de comodín que se obtiene como resultado es cero punto cero punto cero punto 63.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

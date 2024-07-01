@@ -1,0 +1,1 @@
+En la figura se muestran cuatro PC conectadas a una LAN que, a su vez, se conecta a dos routers físicos y a uno virtual.  El tráfico se enruta hacia el router de la izquierda desde el router virtual, que se encuentra en el medio.

@@ -1,0 +1,55 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+#ID_s2_txt01{ 
+	padding: 5px;
+	letter-spacing: -0.2px!important;
+	line-height: 14.1px !important;
+}
+
+#ID_s3_tx01 li { 
+	padding: 0 0 0 10px;
+}
+
+
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#ID_static_txt01  ,#ID_static_txt02 , #ID_static_txt03 , #ID_static_txt04 , #ID_static_txt05 , #ID_static_txt06{
+		font-size: 0.816666666666667em !important;
+	}
+
+	#ID_static_txt02{
+		left:-10px !important;
+	}
+
+	#ID_static_txt03{
+		left:-7px !important;
+	}
+	#ID_static_txt04{
+		left:-4px !important;
+	}
+
+	#ID_static_txt07{
+		left:-7px !important;
+	}
+
+	#ID_static_txt08{
+		left:-4.5px !important;
+	}
+	#ID_static_txt11{
+		left:-2px !important;
+	}
+	
+}

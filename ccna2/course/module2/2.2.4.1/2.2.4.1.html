@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.4.1 Ruta estática predeterminada IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta estática predeterminada IPv6</h1>
+        <div>
+          <p>Una ruta predeterminada es una ruta estática que coincide con todos los paquetes. En lugar de almacenar rutas para todas las redes en Internet, los routers pueden almacenar una única ruta predeterminada que represente cualquier red que no esté en la tabla de routing. Una ruta predeterminada no requiere que ningún bit más significativo coincida entre la ruta predeterminada y la dirección IPv6 de destino.</p>
+          <p></p>
+          <p>Los routers suelen utilizar rutas predeterminadas configuradas de forma local, o descubiertas por otro router, mediante un protocolo de routing dinámico. Se utilizan cuando ninguna otra ruta coincide con la dirección IP de destino del paquete en la tabla de routing. Es decir, si no existe una coincidencia más específica, entonces se utiliza la ruta predeterminada como el gateway de último recurso. </p>
+          <p></p>
+          <p>En general, las rutas estáticas predeterminadas se utilizan al conectar:</p>
+          <p>
+            <ul>
+              <li>El router perimetral de una empresa a la red de un proveedor de servicios.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un router con solo un router vecino ascendente. El router no tiene otros vecinos y, por lo tanto, se denomina “router de rutas internas”. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, la sintaxis del comando para una ruta estática predeterminada es similar a la sintaxis del comando de cualquier otra ruta estática, excepto que ipv6-prefix/prefix-length es<span class="cmd"><b></b></span><b>::/0</b> y coincide con todas las rutas. </p>
+          <p></p>
+          <p>La sintaxis del comando básico de una ruta estática predeterminada es la siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 route ::/0</b>
+                <span class="cmd">
+                  <b></b>
+                </span>{<i>ipv6-address </i>|<i> exit-intf</i>}</li>
+            </ul>
+          </p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la sintaxis para configurar una ruta estática predeterminada con IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

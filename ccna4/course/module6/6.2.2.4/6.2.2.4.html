@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.4 Clasificación y marcación</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Clasificación y marcación</h1>
+        <div>
+          <p>Antes de que a un paquete se le pueda aplicar una política de QoS, el mismo tiene que ser clasificado. La clasificación y la marcación nos permiten identificar o “marcar” los tipos de paquetes.  La clasificación determina la clase de tráfico al cual los paquetes o tramas pertenecen. Solo pueden aplicarse las políticas al tráfico después del marcado.</p>
+          <p></p>
+          <p>Cómo se clasifica un paquete depende de la implementación de QoS. Los métodos de clasificación de flujos de tráfico en la capa 2 y 3 incluyen el uso de interfaces, ACL y mapas de clase. El tráfico también se puede clasificar en las capas 4 a 7 mediante el uso del Reconocimiento de aplicaciones basado en la red (NBAR). </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> NBAR es una función de clasificación y detección del software Cisco IOS que opera con las funciones de QoS. NBAR excede el ámbito de este curso.</p>
+          <p></p>
+          <p>La marcación significa que estamos agregando un valor al encabezado de paquetes. Los dispositivos que reciben el paquete se basan en este campo para ver si coincide con una política definida. La marcación debe realizarse tan cerca de la fuente como sea posible. Esto determina el límite de confianza.</p>
+          <p></p>
+          <p>La forma en la que se marca el tráfico generalmente depende de la tecnología. La tabla de la figura describe algunos de los campos de marcado que se usan en diversas tecnologías. La decisión de marcar el tráfico de las capas 2 o 3 (o ambos) no es despreciable y debe tomarse tras considerar los siguientes puntos:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Se puede marcar la Capa 2 de las tramas para el tráfico no IP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El marcado en la capa 2 de las tramas es la única opción de QoS disponible para los switches que no tienen "reconocimiento de IP".</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El marcado de Capa 3 llevará la información de QoS de extremo a extremo.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una tabla de cinco herramientas de marcación de tráfico para QoS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

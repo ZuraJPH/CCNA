@@ -1,0 +1,59 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#ID_header02,
+#ID_header01,
+#ID_tbl02_header,
+#ID_txt01-2,
+#ID_txt02-1,
+#ID_txt02-2 {
+    line-height: 10px !important;
+}
+
+#ID_tbl01_txt05,
+#ID_tbl01_txt06,
+#ID_tbl01_txt03,
+#ID_tbl01_txt04 {
+    line-height: 8px;
+}
+
+#ID_tbl02_txt02,
+#ID_txt01-1,
+#ID_txt01-2 {
+    letter-spacing: -1px;
+}
+
+#ID_tbl02_header {
+    letter-spacing: -0.2px;
+}
+
+#ID_tbl01_txt05 font {
+    line-height: 7px;
+    font-size: 8px;
+}
+
+#ID_tbl01_txt05 font {
+    font-size: 8px;
+}
+
+#ID_tbl01_txt06 font {
+    font-size: 8px;
+}
+
+#ID_txt05,
+#ID_txt04 {
+    letter-spacing: -1.1px!important;
+}
+
+@media only screen and (device-width: 768px) {
+    #ID_txt05,
+    #ID_txt04 {
+        letter-spacing: -1.2px !important;
+    }
+}

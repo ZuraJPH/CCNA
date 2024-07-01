@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.5 Marcación en la capa 2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Marcación en la capa 2</h1>
+        <div>
+          <p>802.1Q es el estándar IEEE que admite etiquetado VLAN en la capa 2 de las redes Ethernet. Cuando se implementa 802.1Q, se agregan dos campos a la trama de Ethernet. Como se muestra en la figura 1, estos dos campos se insertan en la trama de Ethernet a continuación del campo de dirección MAC de origen. </p>
+          <p></p>
+          <p>El estándar 802.1Q también incluye el esquema de priorización de QoS conocido como IEEE 802.1p. El estándar 802.1p usa los tres primeros bits del campo de información de control de etiqueta (TCI). Conocido como campo de prioridad (PRI), este campo de 3 bits identifica las marcas de clase de servicio (CoS). Los 3 bits implican que una trama de Ethernet de capa 2 se puede marcar con uno de ocho niveles de prioridad (valores 0 a 7), como se muestra en la figura 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra los valores de clase de servicio (CoS) de Ethernet que se usan para la marcación de tráfico en la capa 2. La figura 2 muestra una tabla de descripción de cada valor de CoS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

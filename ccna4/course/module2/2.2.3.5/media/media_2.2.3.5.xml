@@ -1,0 +1,130 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Actividad: Identificar los pasos del proceso de negociación del enlace LCP</b>]]></text>
+</component>
+
+<component id='ID_txttitle'>
+  <text><![CDATA[Instrucción]]></text>
+</component>
+
+<component id='ID_txtbody'>
+  <text><![CDATA[Arrastre cada paso de negociación de enlace LCP a la ubicación correcta en el diagrama de flujo.]]></text>
+</component><!--Drag and Drop--><component id='ID_drag01'>
+	<text><![CDATA[Enviar<br>acuse de recibo de configuración]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[Procesar solicitud de configuración]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[Recibir acuse de recibo de configuración]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[Enviar<br>acuse de recibo negativo de configuración]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[Fase de autenticación]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[ Enviar<br>rechazo de<br/>configuración]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Identificó correctamente los pasos del proceso de negociación del enlace LCP.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No identificó correctamente los pasos del proceso de negociación del enlace LCP. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component>
+
+
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>Pasos de la negociación del enlace LCP</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Envía solicitud de configuración]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[¿Opciones LCP convenidas?]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[¿Opciones LCP no convenidas?]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[¿Opción de autenticación?]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Determinar nuevos parámetros de negociación]]></text> 
+</component>
+
+<component id="ID_txt07">
+  <text><![CDATA[Se establece el enlace]]></text> 
+</component>
+
+<component id="ID_txt08">
+  <text><![CDATA[<b>Leyenda</b>]]></text> 
+</component>
+
+<component id="ID_txt09">
+  <text><![CDATA[Iniciador]]></text> 
+</component>
+
+<component id="ID_txt10">
+  <text><![CDATA[Respondedor]]></text> 
+</component>
+
+<component id="ID_txt11">
+  <text><![CDATA[Sí]]></text> 
+</component>
+   
+<component id="ID_txt12">
+  <text><![CDATA[Sí]]></text> 
+</component>
+   
+<component id="ID_txt13">
+  <text><![CDATA[Sí]]></text> 
+</component>
+   
+<component id="ID_txt14">
+  <text><![CDATA[No]]></text> 
+</component>
+      
+<component id="ID_txt15">
+  <text><![CDATA[No]]></text> 
+</component>
+      
+<component id="ID_txt16">
+  <text><![CDATA[No]]></text> 
+</component>
+   
+</textcomponents>

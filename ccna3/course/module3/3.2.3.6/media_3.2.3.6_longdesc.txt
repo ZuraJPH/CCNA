@@ -1,0 +1,1 @@
+Esta actividad interactiva permite que los estudiantes relacionen una descripción con el tipo de árbol de expansión correspondiente.   Los tipos de árbol de expansión incluyen PVST+ y PVST+ rápido, o ambos.

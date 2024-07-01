@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.5 Estadísticas de ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Estadísticas de ACL</h1>
+        <div>
+          <p>Una vez que la ACL se aplicó a una interfaz y se realizaron algunas pruebas, el comando show access-lists muestra las estadísticas para cada instrucción que tiene coincidencias. En el resultado que se muestra en la figura 1, observe que se encontraron coincidencias para algunas de las instrucciones. Cuando se genera tráfico que debe coincidir con una instrucción de ACL, las coincidencias que se muestran en el resultado del comando <b>show access-lists</b> deberían aumentar. Por ejemplo, en este caso, si se hace ping de la PC1 a la PC3 o la PC4, en el resultado se mostrará un aumento en las coincidencias para la instrucción deny de ACL 1. </p>
+          <p></p>
+          <p>Tanto las instrucciones permit como las deny realizan un seguimiento de las estadísticas de coincidencias; sin embargo, recuerde que cada ACL tiene una instrucción deny any implícita como última instrucción. Esta instrucción no aparece en el comando show access-lists, por lo que no se muestran estadísticas para esa instrucción. Para ver las estadísticas de la instrucción deny any implícita, la instrucción se puede configurar manualmente y aparecerá en el resultado. </p>
+          <p></p>
+          <p>Durante la prueba de una ACL, se pueden borrar los contadores mediante el comando <b>clear access-list counters</b>. Este comando se puede utilizar solo o con el número o el nombre de una ACL específica. Como se muestra en la figura 2, este comando borra los contadores de estadísticas para una ACL.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra cómo ver las estadísticas de A.C.L.  La figura muestra el resultado del comando del modo EXEC privilegiado, listas del script de acceso show.  El resultado muestra las líneas para cada A.C.L y la cantidad de coincidencias para cada línea.  Por ejemplo, la línea 10 de A.C.L número 1 se muestra seguida de las siguientes palabras: 4 coincidencias.  Esto significa que ha habido cuatro paquetes que cumplieron la condición de la línea. 10.  En la ilustración, se envía un ping que coincidirá con la condición de la línea 10 y cuando se vean las estadísticas, la cantidad de coincidencias habrá aumentado. Figure two shows el uso del comando clear access guión list counters 1. El resultado del comando show access guión lists, ya no muestra ninguna conincidencia para la A.C.L.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

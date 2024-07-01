@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.3.1 Pautas generales para la creación de ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pautas generales para la creación de ACL</h1>
+        <div>
+          <p>La composición de ACL puede ser una tarea compleja. Para cada interfaz, puede haber varias políticas necesarias para administrar el tipo de tráfico que tiene permitido ingresar a la interfaz o salir de ella. El router en la ilustración tiene dos interfaces configuradas para IPv4 e IPv6. Si necesitáramos ACL para ambos protocolos, en ambas interfaces y en ambos sentidos, esto requeriría ocho ACL diferentes. Cada interfaz tendría cuatro ACL: dos ACL para IPv4 y dos ACL para IPv6. Para cada protocolo, una ACL es para el tráfico entrante y otra para el tráfico saliente.  </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> las ACL no deben configurarse en ambos sentidos. La cantidad de ACL y el sentido aplicado a la interfaz dependen de los requisitos que se implementen.</p>
+          <p></p>
+          <p>Las siguientes son algunas pautas para el uso de ACL:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Utilice las ACL en los routers de firewall ubicados entre su red interna y una red externa, como Internet. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Utilice las ACL en un router ubicado entre dos partes de la red para controlar el tráfico que entra a una parte específica de su red interna o que sale de esta. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configure las ACL en los routers de frontera, es decir, los routers ubicados en los límites de las redes. Esto proporciona una separación muy básica de la red externa o entre un área menos controlada y un área más importante de su propia red. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configure las ACL para cada protocolo de red configurado en las interfaces del router de frontera. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Reglas para aplicar las ACL</b>
+          </p>
+          <p></p>
+          <p>Se puede configurar una ACL por protocolo, por sentido y por interfaz: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Una ACL por protocolo:</b> para controlar el flujo de tráfico en una interfaz, se debe definir una ACL para cada protocolo habilitado en la interfaz. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Una ACL por sentido:</b> las ACL controlan el tráfico en una interfaz de a un sentido por vez. Se deben crear dos ACL diferentes para controlar el tráfico entrante y saliente. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Una ACL por interfaz:</b> las ACL controlan el tráfico para una interfaz, por ejemplo, GigabitEthernet 0/0.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un router con dos interfaces activas. Las interfaces entrante y saliente ejecutan I.P.v.4 e I.P.v.6.  Con dos interfaces y dos protocolos en ejecución, este router podría tener un total de ocho ACL distintas aplicadas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

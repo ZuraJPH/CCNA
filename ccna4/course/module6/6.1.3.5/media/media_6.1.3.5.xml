@@ -1,0 +1,35 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_title">
+		<text><![CDATA[<b>Ejemplo de CBWFQ</b>]]></text>
+	</component>
+	
+	<component id='ID_txt01'>
+		<text><![CDATA[Clase 1]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[Clase 2]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[Clase 3]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[WFQ]]></text>
+	</component>
+
+	<component id='ID_txt05'>
+		<text><![CDATA[El tráfico se agrupa en clases definidas por el usuario]]></text>
+	</component>
+
+	<component id='ID_txt06'>
+		<text><![CDATA[Interfaz de ingreso]]></text>
+	</component>
+
+	<component id='ID_txt07'>
+		<text><![CDATA[Clases definidas por el usuario]]></text>
+	</component>
+
+	<component id='ID_txt08'>
+		<text><![CDATA[Interfaz de egreso]]></text>
+	</component><!-- end slide 1 --></textcomponents>

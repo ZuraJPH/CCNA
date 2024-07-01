@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.5.1 Rutas estáticas flotantes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.5.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Rutas estáticas flotantes</h1>
+        <div>
+          <p>Las rutas estáticas flotantes son rutas estáticas que tienen una distancia administrativa mayor que la de otra ruta estática o la de rutas dinámicas. Son muy útiles para proporcionar un respaldo a un enlace principal, como se muestra en la ilustración. </p>
+          <p></p>
+          <p>De manera predeterminada, las rutas estáticas tienen una distancia administrativa de 1, lo que las hace preferibles a las rutas descubiertas mediante protocolos de routing dinámico. Por ejemplo, las distancias administrativas de algunos protocolos de routing dinámico comunes son las siguientes:</p>
+          <p>
+            <ul>
+              <li>EIGRP = 90</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IGRP = 100</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>OSPF = 110</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IS-IS = 115</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RIP = 120</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La distancia administrativa de una ruta estática se puede aumentar para hacer que la ruta sea menos deseable que la ruta de otra ruta estática o una ruta descubierta mediante un protocolo de routing dinámico. De esta manera, la ruta estática “flota” y no se utiliza cuando está activa la ruta con la mejor distancia administrativa. Sin embargo, si se pierde la ruta de preferencia, la ruta estática flotante puede tomar el control, y se puede enviar el tráfico a través de esta ruta alternativa. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers y cada uno tiene 2 rutas para conectarse al otro.  Una ruta es a través de la red interna y la otra puede realizarse a través de Internet.  Podría haber una ruta EIGRP primaria entre ellos.  El administrador puede configurar una ruta estática como ruta alternativa en caso de que falle la otra ruta.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.2.2 Cuándo no usar BGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cuándo no usar BGP</h1>
+        <div>
+          <p>El BGP no debe utilizarse cuando existe al menos una de las siguientes condiciones:</p>
+          <p>
+            <ul>
+              <li>Hay una sola conexión a Internet u otro AS. Esto se conoce como “localización simple”. En este caso, la empresa A puede ejecutar un IGP con el ISP o tanto la empresa A como el ISP utilizarán rutas estáticas, como se muestra en la figura. Aunque esto se recomienda solo en situaciones inusuales, en este curso, configurará un BGP de localización simple.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cuando hay una comprensión limitada del BGP.  Una configuración incorrecta de un router BGP puede producir errores de gran alcance más allá del AS local, y esto puede tener un impacto negativo en los routers en Internet.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Nota</b>: Existen algunas situaciones de localización simple donde el BGP puede ser apropiado, como la necesidad de una política de routing específica. Sin embargo, las políticas de routing están más allá del alcance de este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Para mostrar una conexión de localización simple, una nube de la empresa A con routers internos tiene un router que se conecta a un router dentro de una nube etiquetada como "AS 65001 ISP-1". Una flecha apunta fuera de la empresa A hacia AS 65001 ISP-1 con el texto "Ruta estática predeterminada". Una flecha apunta fuera de la nube AS 65001 hacia la nube de la empresa A con el texto "Ruta estática dada". Dentro de la nube AS 65001 ISP-1 hay varios routers. Una nube de Internet se conecta a la nube AS 65001. </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

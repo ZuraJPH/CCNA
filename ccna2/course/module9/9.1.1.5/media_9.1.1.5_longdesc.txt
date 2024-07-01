@@ -1,0 +1,1 @@
+En esta animación se demuestra cómo se establece el direccionamiento cuando un paquete viaja a través de un router de frontera NAT del origen al destino.

@@ -1,0 +1,1 @@
+La figura muestra la GUI de router inalámbrico de Packet Tracer para configurar DHCP.

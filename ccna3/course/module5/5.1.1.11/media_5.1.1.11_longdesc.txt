@@ -1,0 +1,1 @@
+La figura representa un elemento de medios interactivos que permite que el estudiante relacione una métrica de routing con el protocolo de routing correspondiente.

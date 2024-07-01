@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.8 Propagación y proceso de BPDU de 802.1D</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propagación y proceso de BPDU de 802.1D</h1>
+        <div>
+          <p>En principio, cada switch del dominio de difusión supone que es el puente raíz para una instancia de árbol de expansión, por lo que las tramas de BPDU que se envían contienen el BID del switch local como ID de raíz. De manera predeterminada, las tramas de BPDU se envían cada dos segundos después de que se enciende el switch. El valor predeterminado del temporizador de saludo especificado en la trama de BPDU es dos segundos. Cada switch mantiene información local acerca de su propio BID, el ID de raíz y el costo de la ruta hacia la raíz.</p>
+          <p></p>
+          <p>Cuando los switches adyacentes reciben una trama BPDU, comparan la ID de raíz de la trama BPDU con la ID de raíz local. Si la ID de raíz en la BPDU recibida es inferior a la local, el switch actualiza la ID de raíz local y la ID en sus mensajes de BPDU. Estos mensajes indican el nuevo puente raíz en la red. Si la ID de raíz local es inferior a la ID de raíz que se recibe en la trama BPDU, se descarta la trama.</p>
+          <p></p>
+          <p>La distancia al puente raíz está indicada por el costo de la ruta hacia la raíz en la BPDU. El costo del puerto de ingreso se suma al costo de la ruta raíz de la BPDU para determinar el costo interno de la ruta desde el switch hasta el puente raíz. Por ejemplo, si la BPDU se recibió en un puerto de switch Fast Ethernet, el costo de la ruta raíz en la BPDU se sumaría al costo del puerto de ingreso de 19 para obtener un costo interno hacia la ruta raíz acumulado. Este es el costo desde este switch hasta el puente raíz. </p>
+          <p></p>
+          <p>Después de que se ha actualizado una ID de raíz para identificar un nuevo puente raíz, todas las tramas de BPDU posteriores enviadas desde ese switch contienen el ID de raíz nuevo y el costo actualizado de la ruta hacia la raíz. De esta manera, todos los otros switches adyacentes pueden ver el menor ID de raíz identificado en todo momento. A medida que las tramas de BPDU se transmiten entre otros switches adyacentes, el costo de la ruta se actualiza en forma constante para indicar el costo de ruta total hacia el puente raíz. Todos los switches del árbol de expansión utilizan sus costos de ruta para identificar la mejor ruta posible al puente raíz. </p>
+          <p></p>
+          <p>A continuación se resume el proceso BPDU:</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La prioridad de puente es el factor decisivo inicial cuando se elige un puente raíz. Si las prioridades de todos los switches son la misma, el dispositivo con la dirección MAC más baja se convierte en el puente raíz.</p>
+          <p></p>
+          <p>1. En la figura 1, todos los switches se identifican como puente raíz. El S2 reenvía tramas BPDU por todos los puertos de switch.</p>
+          <p></p>
+          <p>2. En la figura 2, cuando S3 recibe una BPDU del switch S2, el S3 compara su ID de raíz con la trama de BPDU que recibió. Las prioridades son iguales, de manera que el switch debe examinar la parte de dirección MAC para determinar cuál es la de menor valor. S2 posee un valor de dirección MAC inferior, por lo que S3 actualiza su ID de raíz con la ID de raíz de S2. En ese momento, el S3 considera que el S2 es el puente raíz.</p>
+          <p></p>
+          <p>3. En la figura 3, S1 compara su ID de raíz con la que recibió en la trama de BPDU, identifica la ID de raíz local como el valor más bajo y descarta la BPDU de S2.</p>
+          <p></p>
+          <p>4. En la figura 4, S3 envía tramas de BPDU, y la ID de raíz incluida en la trama de BPDU es la del S2.</p>
+          <p></p>
+          <p>5. En la figura 5, S2 recibe la trama de BPDU y la descarta después de verificar que la ID de raíz de la BPDU coincide con su ID de raíz local. </p>
+          <p></p>
+          <p>6. En la figura 6, S1 descarta la trama de BPDU recibida de S3, ya que S1 tiene un valor de prioridad menor en su ID de raíz.</p>
+          <p></p>
+          <p>7. En la figura 7, S1 envía las tramas de BPDU.</p>
+          <p></p>
+          <p>8. En la figura 8, S3 identifica la ID de raíz en la trama BPDU como una de menor valor y, por lo tanto, actualiza sus valores de ID de raíz para indicar que S1 ahora es el puente raíz.</p>
+          <p></p>
+          <p>9. En la figura 9, S2 identifica la ID de raíz en la trama BPDU como una de menor valor y, por lo tanto, actualiza sus valores de ID de raíz para indicar que S1 ahora es el puente raíz.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches, cada uno conectado a los otros dos con un enlace troncal.  Cada switch tiene una leyenda que muestra la ID del puente raíz, su ID de puente y el costo de ruta.  Cada puente cree que es el puente raíz hasta que intercambia BPDU y se determina cuál lo es. La figura 2 muestra que el switch 3 recibe una BPDU del switch 2 con una ID de puente más baja, de modo que cambia su puente raíz por la ID de puente del switch 2. La figura 3 muestra que el switch 1 recibe una BPDU del switch 2.  El switch 1 tiene una ID más baja que el switch 2, por lo que sigue siendo el puente raíz. La figura 4 muestra que el switch 3 envía BPDU a los switches 1 y 2. La figura 5 muestra que el switch 2 recibe BPDU del switch 3.  El switch 2 tiene una ID menor, por lo que sigue siendo la raíz. La figura 6 muestra que el switch 1 recibe la BPDU del switch 3.  El switch 1 tiene una ID menor, por lo que sigue siendo la raíz. La figura 7 muestra el switch 1 que envía BPDU a los switches 2 y 3. La figura 8 muestra el switch 3 que recibe BPDU del switch 1 con una ID menor que su puente raíz ya cambiado, por lo que actualiza su ID de puente raíz con la del switch 1. La figura 8 muestra el switch 2 que recibe BPDU del switch 1 con una ID menor que su puente raíz ya cambiado, por lo que actualiza su ID de puente raíz con la del switch 1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

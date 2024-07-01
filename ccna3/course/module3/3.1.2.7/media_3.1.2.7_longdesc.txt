@@ -1,0 +1,1 @@
+La figura 1 muestra una tabla con los campos de BPDU y su tamaño en bytes. La figura 2 muestra una captura de Wireshark de un paquete de árbol de expansión.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.2 Análisis de NAT estática</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Análisis de NAT estática</h1>
+        <div>
+          <p>Con la configuración anterior, en la ilustración se muestra el proceso de traducción de NAT estática entre el cliente y el servidor web. En general, las traducciones estáticas se utilizan cuando los clientes en la red externa (Internet) necesitan llegar a los servidores en la red interna.</p>
+          <p></p>
+          <p>1. El cliente desea establecer una conexión al servidor web. El cliente envía un paquete al servidor web con la dirección IPv4 pública de destino 209.165.201.5. Esta es la dirección global interna del servidor web.</p>
+          <p>2. El primer paquete que recibe del cliente en su interfaz NAT externa ocasiona que el R2 revise su tabla de NAT. Una vez que se encuentra la dirección IPv4 de destino en la tabla de NAT, se traduce.</p>
+          <p>3. El R2 reemplaza la dirección global interna 209.165.201.5 por la dirección local interna 192.168.10.254. Luego, el R2 reenvía el paquete hacia el servidor web.</p>
+          <p>4. El servidor web recibe el paquete y responde al cliente con la dirección local interna, 192.168.10.254.</p>
+          <p>5a. El R2 recibe el paquete del servidor web en su interfaz NAT interna con la dirección de origen de la dirección local interna del servidor web, 192.168.10.254. </p>
+          <p>5b. El R2 busca una traducción para la dirección local interna en la tabla de NAT. La dirección se encuentra en esa tabla. R2 traduce la dirección de origen y la convierte en la dirección global interna de 209.165.201.5, y reenvía el paquete en dirección al cliente.</p>
+          <p>6. El cliente recibe el paquete y continúa la conversación. El router NAT lleva a cabo los pasos 2 a 5b para cada paquete. (El paso 6 no aparece en la ilustración).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra al router dos con una red interna con un servidor web a la izquierda y una red externa con una PC a la derecha.  Pueden verse paquetes que van y vienen entre la PC y el servidor web.  Pueden verse números junto a los elementos que indican el orden en el proceso de traducción para NAT estática. Debajo de la imagen se incluye una tabla de NAT estática.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

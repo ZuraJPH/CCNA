@@ -1,0 +1,1 @@
+La figura muestra el switch S1 conectado con las computadoras PC1 y PC2, con un trabajador, y con un switch de capa 3 que se conecta a la red corporativa. El trabajador se conecta al puerto SPAN en S1. PC1 envía el tráfico excesivo por falla de NIC a la red corporativa. El tráfico se duplica al trabajador.

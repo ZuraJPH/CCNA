@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.1 Puertos serie y paralelos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Puertos serie y paralelos</h1>
+        <div>
+          <p>Un tipo común de conexiones WAN es la conexión punto a punto. Como se muestra en la figura 1, las conexiones punto a punto se utilizan para conectar redes LAN a redes WAN de un proveedor de servicios, así como para conectar segmentos LAN dentro de una red empresarial. </p>
+          <p></p>
+          <p>Una conexión punto a punto de LAN a WAN también se denomina “conexión serial” o “conexión de línea arrendada”. Esto se debe a que las líneas se arriendan de una prestadora de servicios (generalmente, una compañía telefónica) y se las dedica para que las utilice la empresa que arrienda las líneas. Las empresas pagan una conexión continua entre dos sitios remotos, y la línea está continuamente activa y disponible. Las líneas arrendadas son un tipo de acceso WAN que se usa con frecuencia y, generalmente, el precio se basa en el ancho de banda requerido y en la distancia entre los dos puntos conectados.</p>
+          <p></p>
+          <p>Es importante comprender cómo funciona la comunicación serial punto a punto a través de una línea arrendada para tener un concepto general de cómo funcionan las WAN. </p>
+          <p></p>
+          <p>Las comunicaciones a través de una conexión serial son un método de transmisión de datos en el que los bits se transmiten en forma secuencial por un único canal. Esto equivale a una tubería con un ancho suficiente para que pase de a una pelota por vez. Pueden entrar varias pelotas en la tubería, pero de a una sola, y solo tienen un punto de salida (el otro extremo de la tubería). Los puertos serie son bidireccionales y a menudo se los denomina “puertos bidireccionales” o “puertos de comunicaciones”. </p>
+          <p></p>
+          <p>Esto es distinto de las comunicaciones paralelas, en las que los bits se pueden transmitir simultáneamente por varios cables. Haga clic en Reproducir en la figura 2 para ver una ilustración de la diferencia entre las conexiones seriales y las conexiones paralelas. En teoría, una conexión paralela transfiere datos ocho veces más rápido que una conexión serial. De acuerdo con esta teoría, una conexión paralela envía 1 byte (8 bits) en el tiempo en que una conexión serial envía un único bit. Sin embargo, las comunicaciones paralelas tienen problemas con el crosstalk a través de los cables, especialmente a medida que la longitud de estos aumenta. El sesgo de reloj también es un problema con las comunicaciones paralelas. El sesgo de reloj ocurre cuando los datos no llegan al mismo tiempo a través de los diferentes cables, lo que crea problemas de sincronización. Por último, muchas comunicaciones paralelas admiten solamente la comunicación unidireccional saliente, pero algunas admiten la comunicación semidúplex (comunicación bidireccional, solo en una dirección a la vez). </p>
+          <p></p>
+          <p>En una época, la mayoría de las computadoras incluían puertos serie y paralelos. Los puertos paralelos se utilizaban para conectar impresoras, computadoras y otros dispositivos que requerían un ancho de banda relativamente alto. Los puertos paralelos también se utilizaban entre los componentes internos. Para las comunicaciones externas, se utilizó principalmente un bus serial para conectarse a las líneas telefónicas y los dispositivos que podrían estar a una distancia adicional de lo que una transferencia paralela podría permitir. Debido a que las comunicaciones seriales son menos complejas y requieren circuitos más simples, las comunicaciones seriales son mucho menos costosas de implementar. Las comunicaciones seriales usan menos hilos, cables más económicos y menos pines de los conectores.</p>
+          <p></p>
+          <p>En la mayoría de las computadoras, los puertos paralelos y los puertos serie RS-232 se reemplazaron por las interfaces de bus serial universal (USB), de mayor velocidad. Para las comunicaciones de larga distancia, muchas WAN también usan la transmisión serial. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra dos routers. Cada router está conectado a una WAN que proporciona un proveedor de servicios de Internet.  Cada router tiene una LAN en una interfaz Ethernet. La figura 2 es una animación que compara una conexión serial con una conexión paralela.  La conexión serial envía un bit, mientras que la conexión paralela está enviando ocho bits.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

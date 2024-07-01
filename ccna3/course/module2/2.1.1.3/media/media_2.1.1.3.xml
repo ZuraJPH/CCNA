@@ -1,0 +1,19 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Publicaciones del VTP </b>]]></text>
+	</component>
+	
+	<component id='ID_txt01'>
+		<text><![CDATA[<b>Nueva VLAN agregada</b>]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[<b>Notificación de resumen del VTP</b>]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[<b>Solicitud de notificación del VTP</b>]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[<b>Notificación de subgrupo del VTP</b>]]></text>
+	</component><!-- end slide 1 --></textcomponents>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.4 Estados y temporizadores del HSRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Estados y temporizadores del HSRP</h1>
+        <div>
+          <p>Un router puede ser el router HSRP activo responsable del reenvío del tráfico para el segmento, o puede ser un router HSRP pasivo de reserva, listo para asumir un rol activo si falla el router activo. Cuando se configura una interfaz con HSRP o se habilita primero con una configuración HSRP existente, el router envía y recibe paquetes de saludo del HSRP para comenzar el proceso de determinar qué estado asumirá en el grupo HSRP.  En la figura se resumen los estados del protocolo HSRP.</p>
+          <p></p>
+          <p>De manera predeterminada, los routers activos y de reserva de HSRP envían paquetes de saludo a la dirección de multidifusión del grupo HSRP cada 3 segundos. El router de reserva se convertirá en activo si no recibe un mensaje de saludo del router activo después de 10 segundos. Puede bajar estas configuraciones del temporizador para agilizar las fallas o el intento de prioridad. Sin embargo, para evitar el aumento del uso de la CPU y cambios de estado de reserva innecesarios, no configure el temporizador de saludo a menos de 1 segundo o el temporizador de espera a menos de 4 segundos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

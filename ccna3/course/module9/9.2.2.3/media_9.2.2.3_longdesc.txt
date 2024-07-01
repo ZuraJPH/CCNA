@@ -1,0 +1,1 @@
+La figura uno muestra la salida recibida al usar el comando show ip route ospf y resalta las rutas interárea aprendidas en OSPF multiárea. La figura dos es una actividad interactiva que permite que el estudiante practique cómo utilizar el comando show ip route ospf en dos routers OSPF multiárea conectados.

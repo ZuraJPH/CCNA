@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.3 Entradas de redes IPv6 remotas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entradas de redes IPv6 remotas</h1>
+        <div>
+          <p>En la figura 1, se destacan las entradas de la tabla de routing para las tres redes remotas (es decir, la LAN del R2, la LAN del R3 y el enlace entre el R2 y el R3). Las tres entradas se agregaron mediante EIGRP. </p>
+          <p></p>
+          <p>La figura 2 muestra una entrada de la tabla de routing en el R1 para la ruta hacia la red remota 2001:DB8:CAFE:3::/64 en el R3. La entrada indica la siguiente información:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Origen de la ruta:</b> identifica el modo en que se descubrió la ruta. Los códigos comunes incluyen O (OSPF), D (EIGRP), R (RIP) y S (ruta estática).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Red de destino:</b> identifica la dirección de la red IPv6 remota.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Distancia administrativa:</b> identifica cuán confiable es el origen de la ruta. IPv6 utiliza las mismas distancias que IPv4.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Métrica:</b> identifica el valor asignado para llegar a la red remota. Los valores más bajos indican las rutas preferidas. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Siguiente salto:</b> identifica la dirección IPv6 del router siguiente al que se debe reenviar el paquete.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz de salida:</b> identifica la interfaz de salida que se debe utilizar para reenviar un paquete hacia el destino final.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cuando un paquete IPv6 llega a una interfaz del router, el router analiza el encabezado de IPv6 e identifica la dirección IPv6 de destino. A continuación, el router continúa con el proceso de búsqueda del siguiente router.</p>
+          <p></p>
+          <p>El router examina las rutas de red de nivel 1 en busca de la mejor coincidencia con la dirección de destino del paquete IPv6. Al igual que en IPv4, la coincidencia más larga es la mejor coincidencia. Por ejemplo, si hay varias coincidencias en la tabla de routing, el router elige la ruta con la coincidencia más larga.  La coincidencia se encuentra entre los bits del extremo izquierdo de la dirección IPv6 de destino del paquete y el prefijo IPv6 y la duración de prefijo en la tabla de routing IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la tabla de routing IPv6 para el router R1 que produce el comando show ip route.  La figura resalta las tres redes remotas descubiertas con EIGRP.  La figura dos muestra una de las entradas e identifica cada parte de la entrada.  La línea dice D para el origen EIGRP de la ruta, 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 3 dos puntos dos puntos barra 64 para la dirección de red, 90 para la distancia administrativa, barra 2 1 7 0 1 1 2 para la métrica.  La línea termina con via F E 8 0 dos puntos dos puntos 3 para la dirección IP de siguiente salto y serial cero barra cero barra cero para la interfaz de salida.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.2 Configuración de SSH</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de SSH</h1>
+        <div>
+          <p>Antes de configurar SSH, el switch debe tener configurado, como mínimo, un nombre de host único y los parámetros correctos de conectividad de red.</p>
+          <p></p>
+          <p>
+            <b>Paso 1: Verificar la compatibilidad con SSH</b>
+          </p>
+          <p></p>
+          <p>Use el comando <b>show ip ssh</b> para verificar que el switch admita SSH. Si el switch no ejecuta un IOS que admita características criptográficas, este comando no se reconoce. </p>
+          <p></p>
+          <p>
+            <b>Paso 2: Configurar el dominio IP</b>
+          </p>
+          <p></p>
+          <p>Configure el nombre de dominio IP de la red mediante el comando <b>ip domain-name </b><i>nombre-de-dominio </i>comando global configuration mode. En la figura 1, el valor de<i> nombre-de-dominio </i>es <b>cisco.com</b>.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: Generar pares de claves RSA</b>
+          </p>
+          <p></p>
+          <p>No todas las versiones del IOS utilizan la versión 2 de SSH de manera predeterminada, y la versión 1 de SSH tiene fallas de seguridad conocidas. Para configurar la versión 2 de SSH, emita el comando <b>ip ssh version 2</b> del modo de configuración global. La creación de un par de claves RSA habilita SSH automáticamente. Use el comando <b>crypto key generate rsa</b> del modo de configuración global para habilitar el servidor SSH en el switch y generar un par de claves RSA. Al crear claves RSA, se solicita al administrador que introduzca una longitud de módulo. La configuración de ejemplo en la figura 1 utiliza un tamaño de módulo de 1024 bits. Una longitud de módulo mayor es más segura, pero se tarda más en generarlo y utilizarlo.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> para eliminar el par de claves RSA, use el comando <b>crypto key zeroize rsa</b> del modo de configuración global. Después de eliminarse el par de claves RSA, el servidor SSH se deshabilita automáticamente.</p>
+          <p></p>
+          <p>
+            <b>Paso 4: Configurar la autenticación de usuario</b>
+          </p>
+          <p></p>
+          <p>El servidor SSH puede autenticar a los usuarios localmente o con un servidor de autenticación. Para usar el método de autenticación local, cree un par de nombres de usuario y contraseñas con el comando <b>username </b><i>Nombre de usuario</i><b> secret </b><i>Contraseña </i>comando global configuration mode. En el ejemplo, se asignó la contraseña <b>ccna</b> al usuario <b>admin</b>.</p>
+          <p></p>
+          <p>
+            <b>Paso 5: Configurar las líneas vty</b>
+          </p>
+          <p></p>
+          <p>Habilite el protocolo SSH en las líneas vty mediante el comando <b>transport input ssh</b> del modo de configuración de línea. El switch Catalyst 2960 tiene líneas vty que van de 0 a 15. Esta configuración evita las conexiones que no son SSH (como Telnet) y limita al switch a que acepte solo las conexiones SSH. Use el comando <b>line vty</b> del modo de configuración global y, luego, el comando <b>login local</b> del modo de configuración de línea para requerir la autenticación local de las conexiones SSH mediante la base de datos de nombres de usuarios locales.</p>
+          <p></p>
+          <p>
+            <b>Paso 6: Habilitar la versión 2 de SSH</b>
+          </p>
+          <p></p>
+          <p>De manera predeterminada, SSH admite las versiones 1 y 2. Si se admiten ambas versiones, en el resultado de <b>show ip ssh</b> se muestra que se admite la versión 1.99. La versión 1 tiene vulnerabilidades conocidas. Por esta razón, se recomienda habilitar únicamente la versión 2. Habilite la versión de SSH mediante el comando de configuración global <b>ip ssh version 2</b>.</p>
+          <p></p>
+          <p></p>
+          <p>Use el verificador de sintaxis de la figura 2 para configurar SSH en el switch S1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra los comandos utilizados para configurar un switch para la administración remota mediante SSH.  La figura comienza en el modo EXEC privilegiado.  El primer comando es configure terminal.  El siguiente comando es ip domain guión name cisco punto com, donde cisco punto com es un ejemplo de un nombre de dominio.  El siguiente comando es crypto key generate rsa.  El switch solicitará el tamaño del módulo, con un valor predeterminado de 512.  En la figura, se utiliza 1024.  El siguiente comando es username admin password ccna, donde admin y ccna son ejemplos. Este comando creará un nombre de usuario y una contraseña.  El siguiente paso es configurar las líneas de VTY para aceptar conexiones de SSH únicamente.  El comando es line vty 0 15.  El siguiente comando es transport input ssh.  El último comando es login local. La figura dos es una actividad interactiva que permite que el estudiante configure SSH en un switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

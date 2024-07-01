@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.6 Advertencias del VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Advertencias del VTP</h1>
+        <div>
+          <p>Algunos administradores de redes evitan el VTP porque podría presentar información errónea de la VLAN en el dominio VTP existente. Se utiliza el número de revisión de configuración para determinar si un switch debe mantener su base de datos de VLAN existente, o sobrescribirla con la actualización del VTP enviada por otro switch en el mismo dominio con la misma contraseña.</p>
+          <p></p>
+          <p>Agregar un switch con VTP habilitado a un dominio de VTP existente borrará las configuraciones de la VLAN existente en el dominio si el nuevo switch se configura con distintas VLAN y tiene un número de revisión de configuración más alto que el servidor VTP existente. El nuevo switch puede ser servidor VTP o switch de cliente. Esta propagación puede ser difícil de corregir. Por lo tanto, cuando un switch se agrega a una red, asegúrese de que tenga la configuración predeterminada del VTP.</p>
+          <p></p>
+          <p>Como se muestra en la figura, el switch S1 es el servidor VTP, mientras que los switches S2 y S3 son clientes VTP. Todos los switches están en el dominio cisco1 y la versión actual del VTP es 17. Además de la VLAN 1 predeterminada, el servidor VTP (S1) tiene las VLAN 10 y 20 configuradas. Estas VLAN fueron propagadas por el VTP a los otros dos switches.</p>
+          <p></p>
+          <p>Un técnico de redes agrega el S4 a la red debido a la necesidad de contar con capacidad adicional. Sin embargo, el técnico no borró la configuración de inicio o eliminó el archivo VLAN.DAT en el S4. El S4 tiene el mismo nombre de dominio VTP configurado que los otros dos switches pero su número de revisión es 35, que es un número más alto que el número de revisión en los otros dos switches.</p>
+          <p></p>
+          <p>El S4 tiene VLAN 1 y se configura con la VLAN 30 y 40. Pero no tiene las VLAN 10 y 20 en la base de datos. Desafortunadamente, debido a que el S4 tiene un número de revisión más alto, el resto de los switches en el dominio se sincronizarán con la revisión del S4. Como consecuencia, las VLAN 10 y 20 no existirán más en los switches, lo que deja sin conectividad a los clientes que están conectados a los puertos que pertenecen a VLAN no existentes.</p>
+          <p></p>
+          <p>El número de revisión de configuración del VTP se almacena en la NVRAM (o Flash en algunas plataformas) y no se restablece si borra la configuración del switch y lo vuelve a cargar. Para restablecer el número de revisión de configuración del VTP en cero tiene dos opciones:</p>
+          <p>
+            <ul>
+              <li>Cambie el dominio VTP del switch a un dominio VTP inexistente y luego vuelva a cambiar el dominio al nombre original.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cambie al modo VTP del switch al modo transparente y luego vuelva al modo anterior del VTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Los comandos para restablecer el número de revisión de configuración del VTP se analizan en el próximo tema.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa una situación del número de revisión de configuración del protocolo VTP incorrecto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

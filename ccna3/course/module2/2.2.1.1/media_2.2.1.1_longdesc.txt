@@ -1,0 +1,1 @@
+La figura 1 es la salida de los comandos show vlan brief y show vlan. La figura 2 muestra la eliminación de una VLAN y su comprobación.

@@ -1,0 +1,1 @@
+La figura es un elemento de recursos interactivos que permite que el estudiante clasifique las descripciones del tipo de routing como una característica del routing estático o característica del routing dinámico.

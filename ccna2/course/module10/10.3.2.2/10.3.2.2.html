@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.2.2 Nombres de archivo de imagen del IOS</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Nombres de archivo de imagen del IOS</h1>
+        <div>
+          <p>Al seleccionar o actualizar un router con IOS de Cisco, es importante elegir la imagen del IOS adecuada con el conjunto de características y la versión correctos. El archivo de imagen de Cisco IOS se basa en una convención de nomenclatura especial. El nombre del archivo de imagen de Cisco IOS contiene varias partes, cada una con un significado específico. Es importante comprender esta convención de nomenclatura al actualizar y seleccionar un software IOS de Cisco. </p>
+          <p></p>
+          <p>Como se muestra en la figura 1, el comando <b>show flash</b> muestra los archivos almacenados en la memoria flash, incluso los archivos de imagen de sistema.</p>
+          <p></p>
+          <p>En la figura 2, se ilustran las distintas partes de un archivo de imagen de sistema del IOS 15 en un dispositivo ISR G2:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Nombre de la imagen (c1900):</b> identifica la plataforma en la que se ejecuta la imagen. En este ejemplo, la plataforma es un router Cisco 1900.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>universalk9:</b> especifica la designación de la imagen. Las dos designaciones para un ISR G2 son universalk9 y universalk9_npe. Universalk9_npe no contiene cifrado seguro y está pensado para países con restricciones de cifrado. Las características se controlan mediante licencias y pueden dividirse en cuatro paquetes de tecnología. Estos son IP Base, Seguridad, Comunicaciones unificadas y Datos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>mz:</b> Indica dónde se ejecuta la imagen y si el archivo está comprimido. En este ejemplo, mz indica que el archivo se ejecuta desde la RAM y que está comprimido. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SPA:</b> indica que el archivo está firmado digitalmente por Cisco.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>152-4.M3:</b> especifica el formato del nombre del archivo para la imagen 15.2(4)M3. Esta es la versión del IOS, que incluye los números de la versión principal, de la versión secundaria, de la versión de mantenimiento y de la recopilación de mantenimiento. La M indica que se trata de una versión de mantenimiento extendido. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>bin: </b>La extensión del archivo. Esta extensión indica que este archivo es un archivo ejecutable binario.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La designación más común para ubicación de memoria y formato de compresión es mz. La primera letra indica la ubicación donde se ejecuta la imagen en el router. Las ubicaciones pueden incluir las siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>f:</b> flash </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>m:</b> RAM  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>r:</b> ROM  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>l:</b> Reubicable </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El formato de compresión puede ser z para zip o x para mzip. La compresión de archivos es un método que utiliza Cisco para comprimir algunas imágenes ejecutadas desde la RAM que es eficaz para reducir el tamaño de la imagen. Se autodescomprime, de modo que cuando la imagen se carga en la RAM para ejecutarse, la primera acción es la descompresión.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> las convenciones de nomenclatura, el significado de los campos, el contenido de la imagen y otros detalles del software IOS de Cisco están sujetos a cambios.</p>
+          <p></p>
+          <p>
+            <b>Requisitos de memoria</b>
+          </p>
+          <p></p>
+          <p>En la mayoría de los routers Cisco, incluso en los routers de servicios integrados, el IOS se almacena en la memoria CompactFlash como una imagen comprimida y se carga en la DRAM durante el arranque. Las imágenes de la versión 15.0 del software IOS de Cisco disponibles para los ISR Cisco 1900 y 2900 requieren 256 MB de memoria flash y 512 MB de memoria RAM. El ISR 3900 requiere 256 MB de memoria flash y 1 GB de RAM. Esto no incluye herramientas de administración adicionales, como Cisco Configuration Professional (Cisco CP). Para obtener detalles completos, consulte la ficha técnica del producto para el router específico. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la salida del comando "show flash colon zero" en el router uno.  El nombre de archivo de la imagen de IOS está resaltado. En la figura número dos se muestra un desglose para leer e interpretar cada sección del nombre de archivo de la imagen correspondiente a la versión 12.4 de IOS. En la figura número tres se muestra un desglose para leer e interpretar cada sección del nombre de archivo de la imagen correspondiente a la versión 15.2 de IOS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

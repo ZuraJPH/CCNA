@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.3.4 Balanceo de carga de IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Balanceo de carga de IPv6</h1>
+        <div>
+          <p>En la figura 1, se muestra la topología de la red EIGRP para IPv6.  Los enlaces seriales en la topología tienen el mismo ancho de banda que se utiliza en la topología EIGRP para IPv4.</p>
+          <p></p>
+          <p>En forma similar a la situación anterior para IPv4, el R3 tiene dos rutas EIGRP de igual costo para la red entre el R1 y el R2, 2001:DB8:CAFE:A001::/64. Una ruta es a través del R1 en FE80::1, y la otra es a través del R2 en FE80::2. </p>
+          <p></p>
+          <p>En la figura 2, se muestra que las métricas de EIGRP para las redes 2001:DB8:CAFE:A001::/64 y 172.16.3.0/30 son las mismas en la tabla de routing IPv6 y en la tabla de routing IPv4. Esto se debe a que la métrica compuesta de EIGRP es la misma en EIGRP para IPv6 y para IPv4. </p>
+          <p></p>
+          <p>
+            <b>Balanceo de carga con distinto costo</b>
+          </p>
+          <p></p>
+          <p>EIGRP para IPv4 y para IPv6 también puede equilibrar el tráfico en varias rutas con métricas diferentes. Este tipo de balanceo se denomina “balanceo de carga con distinto costo”. La configuración de un valor con el comando <b>variance</b> en el modo de configuración del router permite que EIGRP instale varias rutas sin bucles y con distinto costo en una tabla de routing local. </p>
+          <p></p>
+          <p>Para que se la instale en la tabla de routing local, una ruta que se descubre mediante EIGRP debe satisfacer dos criterios:</p>
+          <p>
+            <ul>
+              <li>La ruta no debe tener bucles y debe ser un sucesor factible o tener una distancia notificada inferior a la distancia total.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La métrica de la ruta debe ser inferior a la métrica de la mejor ruta (el sucesor) multiplicada por la variación configurada en el router.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Por ejemplo, si la variación es de 1, solo se instalan en la tabla de routing local las rutas con la misma métrica que el sucesor. Si la variación es de 2, se instala en la tabla de routing local cualquier ruta descubierta mediante EIGRP con una métrica inferior al doble de la métrica del sucesor.</p>
+          <p></p>
+          <p>Para controlar la manera en que el tráfico se distribuye entre las rutas cuando hay varias rutas con distintos costos para la misma red de destino, use el comando <b>trafﬁc-share balanced</b>. El tráfico se distribuye proporcionalmente de acuerdo con la proporción de los costos. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la topología de laboratorio estándar.  El enlace entre el router uno y el router dos se muestra como sesenta y cuatro kbps; el enlace entre el router uno y el router tres se muestra como mil quinientos cuarenta y cuatro kbps; y el enlace entre el router dos y el router tres se muestra como mil veinticuatro cuatro kbps. En la figura dos, se muestra el resultado generado por el comando "show i. p. v. 6. route e. i. g. r. p." en el router tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

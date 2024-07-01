@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.6.2 Configuración de las rutas de host estático IPv4 e IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.6.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de las rutas de host estático IPv4 e IPv6</h1>
+        <div>
+          <p>Una ruta de host puede ser una ruta estática configurada manualmente para dirigir el tráfico a un dispositivo de destino específico, como un servidor de autenticación. La ruta estática utiliza una dirección IP de destino y una máscara 255.255.255.255 (/32) para las rutas de host IPv4 y una longitud de prefijo /128 para las rutas de host IPv6. Las rutas estáticas se marcan con una “S” en el resultado de la tabla de routing. En la topología de la Figura 1, se configuran un IPv4 y una ruta de host IPv6 en el router BRANCH para acceder al servidor.</p>
+          <p></p>
+          <p>Para rutas estáticas IPv6, la dirección del siguiente salto puede ser la dirección link-local del router adyacente. Sin embargo, debe especificar un tipo de interfaz y un número de interfaz cuando usa una dirección de enlace local como siguiente salto, como se muestra en la Figura 2.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la Figura 3 para configurar y verificar las rutas de host estáticas IPv4 e IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Gráfico estático</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

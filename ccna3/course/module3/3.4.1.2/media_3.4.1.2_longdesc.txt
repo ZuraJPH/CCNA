@@ -1,0 +1,1 @@
+La figura muestra tres switches interconectados con enlaces troncales.  El switch 1 es el puente raíz de la VLAN 10 y el switch tres es el puente raíz de la VLAN 20.

@@ -1,0 +1,1 @@
+En la figura se muestra una tabla que compara las características de EIGRP para IPv4 e IPv6.

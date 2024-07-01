@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.1 Sistemas de archivos del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sistemas de archivos del router</h1>
+        <div>
+          <p>El sistema de archivos Cisco IOS (IFS) permite que el administrador navegue por distintos directorios, enumere los archivos en uno de ellos y cree subdirectorios en la memoria flash o en un disco. Los directorios disponibles dependen del dispositivo.</p>
+          <p></p>
+          <p>La figura 1 muestra el resultado del comando <b>show file systems</b>, que enumera todos los sistemas de archivos disponibles en un router Cisco 1941. Este comando proporciona información útil, como la cantidad de memoria disponible y libre, el tipo de sistema de archivos y los permisos. Los permisos incluyen solo lectura (ro), solo escritura (wo) y lectura y escritura (rw), los cuales se muestran en la columna Flags (Indicadores) del resultado del comando.</p>
+          <p></p>
+          <p>Si bien se enumeran varios sistemas de archivos, nos enfocaremos en los sistemas de archivos TFTP, flash y NVRAM. </p>
+          <p></p>
+          <p>Observe que el sistema de archivos flash también tiene un asterisco que lo precede. Esto indica que el sistema de archivos predeterminado actual es flash. El IOS de arranque está ubicado en la memoria flash; por lo tanto, se agrega el símbolo de almohadilla (#) a la entrada de flash para indicar que es un disco de arranque.</p>
+          <p></p>
+          <p>
+            <b>El sistema de archivos flash</b>
+          </p>
+          <p></p>
+          <p>En la Figura 2 se muestra la salida del comando <b>dir</b> (directorio). Como flash es el sistema de archivos predeterminado, el comando <b>dir</b> enumera el contenido de flash. Varios archivos están ubicados en la memoria flash, pero el de mayor interés específicamente es el último de la lista. se trata del nombre del archivo de imagen de Cisco IOS actual que se ejecuta en la memoria RAM.</p>
+          <p></p>
+          <p>
+            <b>El sistema de archivos NVRAM</b>
+          </p>
+          <p></p>
+          <p>Para ver el contenido de la memoria NVRAM, se debe cambiar el sistema de archivos predeterminado actual con el comando <b>cd</b> (cambiar directorio), como se muestra en la figura 3. El comando <b>pwd</b> (directorio de trabajo actual) verifica que estemos viendo el directorio NVRAM. Finalmente, el comando <b>dir</b> incluye el contenido de NVRAM en una lista. Si bien se enumeran varios archivos de configuración, el de mayor interés específicamente es el archivo de configuración de inicio.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la Figura 1 se muestra la salida del comando show file systems en un router. En la Figura 1 se muestra la salida del comando dir en un router.  The output displays the contents of flash. En la Figura 3 se muestra la salida del comando cd nvram:, seguida por el comando pwd.  El comando pwd "imprime el directorio de trabajo".  Luego, se emite el comando dir para incluir el contenido de NVRAM en una lista.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

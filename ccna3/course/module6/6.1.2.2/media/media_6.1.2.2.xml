@@ -1,0 +1,46 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Intervalos de saludo y tiempos en espera<br>predeterminados para EIGRP</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Hola</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Hola</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Hola</b>]]></text>
+</component><!--Table--><component id="ID_table">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+<tr>
+<td colspan='4' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#077A77'  valign="top" ><font color='#ffffff' size="11"><b>Ancho de banda</b></font></td>
+<td bgcolor='#077A77'  valign="top"><font color='#ffffff' size="11"><b>Enlace de ejemplo</b></font></td>
+<td bgcolor='#077A77'  valign="top"><font color='#ffffff' size="11"><b>Intervalo de saludo predeterminado</b></font></td>
+<td bgcolor='#077A77'  valign="top"><font color='#ffffff' size="11"><b>Tiempo de espera predeterminado</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>1,544 Mb/s</td>
+<td bgcolor='#ffffff'>Frame relay multipunto</td>
+<td bgcolor='#ffffff'>60 segundos </td>
+<td bgcolor='#ffffff'>180 segundos</td>
+</tr>
+
+<tr>
+<td bgcolor='#EFF8F7'> Superior a 1544 Mb/s</td>
+<td bgcolor='#EFF8F7'>T1, Ethernet</td>
+<td bgcolor='#EFF8F7'>5 segundos </td>
+<td bgcolor='#EFF8F7'>15 segundos</td>
+</tr>
+</table>]]></text>
+</component>
+
+</textcomponents>

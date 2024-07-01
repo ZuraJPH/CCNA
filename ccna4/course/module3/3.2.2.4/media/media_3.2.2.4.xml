@@ -1,0 +1,19 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_title">
+        <text>
+            <![CDATA[<b>Análisis del proceso de negociación de PPP</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text>
+            <![CDATA[<b>Cliente</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt02'>
+        <text>
+            <![CDATA[<b>ISP</b>]]>
+        </text>
+    </component>
+    <component id="ID_txt03">
+        <text>
+            <![CDATA[&lt;se omitió el resultado&gt;]]>
+        </text>
+    </component><!-- end slide 1 --></textcomponents>

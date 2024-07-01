@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.4 Arquitectura de SDN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Arquitectura de SDN</h1>
+        <div>
+          <p>En un router o una arquitectura de switches tradicionales, el plano de control y las funciones del plano de datos se producen en el mismo dispositivo. Las decisiones de routing y el envío de paquetes son responsabilidad del sistema operativo del dispositivo.</p>
+          <p></p>
+          <p>Las redes definidas por software (SDN) son una arquitectura de red que se desarrolló para virtualizar la red. Por ejemplo, las SDN pueden virtualizar el plano de control. También conocidas como SDN basadas en controladores, las SDN mueven el plano de control desde cada dispositivo de red a una inteligencia de la red central y una entidad de las políticas fabricación denominada controlador de SDN. Las dos arquitecturas se muestran en la Figura 1.</p>
+          <p></p>
+          <p>El controlador de SDN es una entidad lógica que permite que los administradores de red administren y determinen cómo el plano de datos de switches físicos y virtuales de los routers debe administrar el tráfico de red. Coordina, media y facilita la comunicación entre las aplicaciones y los elementos de red.</p>
+          <p></p>
+          <p>El marco de SDN se ilustra en la Figura 2. Observe el uso de interfaces de programación de aplicaciones (API) dentro del marco de SDN. Una API es un conjunto de solicitudes estandarizadas que definen la forma adecuada para que una aplicación solicite servicios de otra aplicación. El controlador de SDN usa los API ascendentes para comunicarse con las aplicaciones ascendentes. Estos administradores de red de ayuda de API forman el tráfico e implementan los servicios. El controlador de SDN también utiliza interfaces API descendentes para definir el comportamiento de los switches y routers virtuales descendentes. OpenFlow es la API original descendente ampliamente implementada. Open Networking Foundation es responsable de mantener el estándar de OpenFlow.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El tráfico en un centro de datos moderno se describe como (en sentido) vertical (que se produce entre los usuarios del centro de datos externos y los servidores del centro de datos) y (en sentido) transversal (que se produce entre los servidores del centro de datos).</p>
+          <p></p>
+          <p>Visite este sitio web para obtener más información sobre SDN, OpenFlow y Open Networking Foundation: <a href="https://www.opennetworking.org/sdn-resources/sdn-definition" target="_blank">https://www.opennetworking.org/sdn-resources/sdn-definition</a></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la arquitectura tradicional que se ve a la izquierda. Tiene tres dispositivos, cada uno con su propio plano de control y plano de datos. La arquitectura de SDN de la derecha tiene tres dispositivos, cada uno con un plano de datos que e controla con un controlador SDN centralizado. La figura 2 muestra el marco de trabajo de SDN, compuesto por la capa de aplicaciones donde se encuentran las aplicaciones empresariales y las aplicaciones de SDN y coordinación de la nube. Las API ascendentes interactúan con la capa siguiente, que es la capa del plano de control. Esto incluye el routing, la ingeniería de tráfico y la movilidad. Las API descendentes interactúan con la capa siguiente, que es la capa del plano de datos, donde los routers y los switches reenvían el tráfico.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

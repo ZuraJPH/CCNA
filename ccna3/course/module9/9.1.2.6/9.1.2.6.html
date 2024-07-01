@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.6 LSA de OSPF de tipo 5</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA de OSPF de tipo 5</h1>
+        <div>
+          <p>Las LSA externas de tipo 5 describen rutas a redes que se encuentran fuera del dominio de routing de OSPF. Las LSA de tipo 5 se originan en el ASBR y se envían masivamente hacia todo el dominio de routing. </p>
+          <p></p>
+          <p>A las LSA de tipo 5 también se las denomina “entradas de LSA externas”. </p>
+          <p></p>
+          <p>En la figura, el ASBR genera las LSA de tipo 5 para cada ruta externa y las envía masivamente al área. Los ABR posteriores también propagan la LSA de tipo 5 hacia otras áreas. Los routers de otras áreas utilizan la información de la LSA de tipo 5 para llegar a las rutas externas.</p>
+          <p></p>
+          <p>Durante una implementación grande de OSPF con muchas redes, la propagación de LSA de tipo 5 puede causar problemas de saturación significativos. Por esta razón, se recomienda con énfasis que se configure manualmente el resumen de ruta en el ASBR.</p>
+          <p></p>
+          <p>La ID de estado de enlace es el número de red externa.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los mensajes de LSA de tipo cinco generados por el ASBR. Los mensajes llevan la información sobre las direcciones de red externas. Luego, los ABR regeneran el mensaje en otras áreas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

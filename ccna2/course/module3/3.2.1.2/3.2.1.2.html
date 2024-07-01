@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.2 Anuncio de redes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Anuncio de redes</h1>
+        <div>
+          <p>Al ingresar en el modo de configuración de router RIP, el router recibe instrucciones para que ejecute RIPv1. Pero el router aún necesita conocer las interfaces locales que deberá utilizar para comunicarse con otros routers, así como las redes conectadas en forma local que deberá publicar a dichos routers.  </p>
+          <p></p>
+          <p>Para habilitar el routing RIP para una red, utilice <b>network </b><i>dirección de red </i>(comando del modo de configuración del router) Introduzca la dirección de red con clase para cada red conectada directamente. Este comando realiza lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Habilita el RIP en todas las interfaces que pertenecen a una red específica. Hace que las interfaces asociadas ahora envíen y reciban actualizaciones RIP.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Publica la red especificada en las actualizaciones de enrutamiento RIP enviadas a otros routers cada 30 segundos. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: RIPv1 es un protocolo de routing con clase para IPv4. Por lo tanto, si se introduce una dirección de subred, el IOS la convierte automáticamente a la dirección de red con clase.  Por ejemplo, si se introduce el comando <b>network 192.168.1.32</b>, se convertiría automáticamente a <b>network 192.168.1.0</b> en el archivo de configuración en ejecución. El IOS no proporciona un mensaje de error, sino que corrige la entrada e introduce la dirección de red con clase.  </p>
+          <p></p>
+          <p>En la figura 1, el comando <b>network</b> se utiliza para anunciar las redes conectadas directamente al R1.  </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para establecer una configuración similar en el R2 y en el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra los comandos de la línea de comandos para habilitar el routing de la versión 1 de RIP para una red específica en un router.  La figura comienza en el modo de configuración global.  El primer comando es router rip.  El siguiente comando usa la red de palabra clave seguida de la dirección de red.  En la figura, dos redes están configuradas en el router y el primer comando es network 192 punto 168 punto 1 punto 0.  El segundo comando es 192 punto 168 punto 2 punto 0.  Observe que cuando se utiliza RIP versión 1, una máscara de subred no aparece en los comandos. La figura dos es un elemento de recursos interactivos que permite que el estudiante ingrese los comandos necesarios para configurar RIP y anunciar las redes adecuadas en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

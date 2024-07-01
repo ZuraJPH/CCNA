@@ -1,0 +1,18 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#ID_txt11,#ID_txt12,#ID_txt13,#ID_txt14{
+	  text-shadow: 1px 0px 0px #ffffff , 0px 2px 0px #ffffff, 2px 0px 0px #ffffff, 
+  0px -1px 0px #ffffff, 1px 4px 5px #ffffff;
+}
+##ID_txt13{
+	font-size: 7px;
+}
+
+#image_15,#ID_txt13
+{
+	margin-left: -15px !important;
+}

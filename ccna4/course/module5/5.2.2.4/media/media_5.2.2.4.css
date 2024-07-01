@@ -1,0 +1,23 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+.routerOutput{
+	border: 2px solid #000000;
+	background-color:#E9E7E8 !important;
+	padding:5px 5px;
+	font-family: Courier New !important;
+ }
+
+ .outputText{ 
+    font-family: Courier New !important;
+	
+ }
+.orangeText{
+   color:#F68026;
+}
+.boldText{
+   font-weight:bold !important;
+}

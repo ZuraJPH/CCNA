@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.3 Traps del agente SNMP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Traps del agente SNMP</h1>
+        <div>
+          <p>NMS sondea periódicamente a los agentes SNMP que residen en los dispositivos administrados para solicitar datos a los dispositivos mediante la solicitud get. Con este proceso, una aplicación de administración de red puede recopilar información para controlar cargas de tráfico y verificar las configuraciones de los dispositivos administrados. La información puede visualizarse por una GUI en NMS. Se pueden calcular los promedios, los mínimos o los máximos, representar los datos gráficamente o establecer umbrales para activar un proceso de notificación cuando se exceden los umbrales. Por ejemplo, NMS puede controlar el uso de CPU de un router Cisco. El administrador de SNMP toma una muestra del valor periódicamente y presenta esta información en un gráfico para que el administrador de redes la use para crear una línea de base, redactar un informe o ver información en tiempo real. </p>
+          <p></p>
+          <p>El sondeo periódico de SNMP tiene desventajas. En primer lugar, existe un retraso entre el momento en el que ocurre un evento y el momento en el que NMS lo advierte (mediante el sondeo). En segundo lugar, existe un nivel de equilibrio entre la frecuencia del sondeo y el uso del ancho de banda. </p>
+          <p></p>
+          <p>Para mitigar estas desventajas, es posible que los agentes SNMP generen y envíen traps para informarle a NMS sobre ciertos eventos de inmediato. Las traps son mensajes no solicitados que alertan al administrador de SNMP sobre una condición o un evento en la red. Algunos ejemplos de las condiciones de trap incluyen, entre otros, la autenticación incorrecta de usuarios, los reinicios, el estado del enlace (activo o inactivo), el seguimiento de direcciones MAC, el cierre de una conexión TCP, la pérdida de conexión a un vecino u otros eventos importantes. Las notificaciones de trap reducen los recursos de red y de agente al eliminar la necesidad de algunas de las solicitudes de sondeo de SNMP. </p>
+          <p></p>
+          <p>En la figura 1, se muestra el uso de una trap de SNMP para alertar al administrador de red que la interfaz G0/0 falló. El software de NMS puede enviar un mensaje de texto al administrador de red, mostrar una ventana emergente en el software de NMS o mostrar el ícono del router en color rojo en la GUI de NMS.</p>
+          <p></p>
+          <p>El intercambio de todos los mensajes de SNMP se muestra en la figura 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un trabajador que envía una solicitud "get" de SNMP para controlar la variable de MIB en G0/0 del router R1. La interfaz de R1 G0/0 está inactiva, por lo que el router uno envía una notificación de SNMP al administrador de SNMP. El administrador puede configurarse para enviar una alerta de texto al administrador de red. La figura 2 muestra el intercambio de todos los mensajes SNMP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

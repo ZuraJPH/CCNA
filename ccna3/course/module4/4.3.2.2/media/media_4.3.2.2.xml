@@ -1,0 +1,11 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_title">
+		<text><![CDATA[<b>Topología del protocolo HSRP</b>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[Router virtual]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[Dirección IPv4 virtual<br/>172.16.10.1<br/>Dirección de MAC virtual<br/>0000.0C07.AC01]]></text>
+	</component><!-- end slide 1 --></textcomponents>

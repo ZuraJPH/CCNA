@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.1 Documentación de la red</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Documentación de la red</h1>
+        <div>
+          <p>Para que los administradores de red puedan monitorear y resolver problemas de red, deben tener un conjunto completo de documentación de red precisa y actual. Esta documentación incluye:</p>
+          <p>
+            <ul>
+              <li>Archivos de configuración, incluidos los de la red y los del sistema final</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Diagramas de topología física y lógica </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Niveles de rendimiento de referencia</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La documentación de red permite que los administradores de red diagnostiquen y corrijan de manera eficaz los problemas de la red, según el diseño y el rendimiento esperado de la red en condiciones de operación normales. Toda la información de documentación de red debe guardarse en una misma ubicación, ya sea como copia local o en un servidor protegido de la red. Debe realizarse una copia de seguridad del registro, la que se debe conservar en una ubicación diferente. </p>
+          <p></p>
+          <p>
+            <b>Archivos de configuración de red</b>
+          </p>
+          <p>Los archivos de configuración de red contienen registros precisos y actualizados del hardware y el software usados en una red. En los archivos de configuración de la red, debe existir una tabla para cada dispositivo de red utilizado con toda la información relevante sobre ese dispositivo.  </p>
+          <p></p>
+          <p>Por ejemplo, la figura 1 muestra una tabla de configuración de red de ejemplo para dos routers, mientras que la figura 2 muestra una tabla similar para un switch LAN.</p>
+          <p></p>
+          <p>La información que se podría reunir en una tabla de dispositivo incluye lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Tipo de dispositivo, designación de modelo</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Nombre de la imagen del IOS </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Nombre de host de red del dispositivo </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ubicación del dispositivo (edificio, piso, sala, rack, panel) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si es modular, incluya todos los tipos de módulo y números de ranura.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Direcciones de la capa de enlace de datos </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Direcciones de la capa de red </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cualquier información adicional importante sobre los aspectos físicos del dispositivo</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Archivos de configuración del sistema final</b>
+          </p>
+          <p>Los archivos de configuración del sistema final se centran en el hardware y el software usados en los dispositivos del sistema final, como servidores, consolas de administración de red y estaciones de trabajo de los usuarios. Un sistema final configurado incorrectamente puede tener un impacto negativo en el rendimiento general de una red. Por este motivo, para resolver problemas, puede ser muy útil tener un registro de línea de base de muestra del hardware y del software usado en los dispositivos incluido en el registro del sistema final, como se muestra en la figura 3.</p>
+          <p></p>
+          <p>Para resolver problemas, se podría registrar la siguiente información en la tabla de configuración del sistema final:</p>
+          <p>
+            <ul>
+              <li>Nombre del dispositivo (propósito) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sistema operativo y versión </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Direcciones IPv4 e IPv6 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Máscara de subred y longitud de prefijo</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Gateway predeterminado y servidor DNS </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Todas las aplicaciones de red con uso intensivo de ancho de banda utilizadas en el sistema terminal</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla que documenta los ajustes de configuración del router. Se muestran los siguientes elementos: nombre del dispositivo, modelo, nombre de la interfaz, dirección MAC, dirección IPv4, dirección IPv6 y protocolos de routing de IP. La figura 2 muestra una tabla que documenta los ajustes de configuración del switch. Incluye los siguientes elementos: información del switch, puerto, velocidad, dúplex, STP, PortFast, estado de enlaces troncales, EtherChannel (L2 o L3), VLAN y clave. La figura 3 muestra una tabla que documenta la configuración de terminales para P2C y SRV1, incluidos el sistema operativo, la dirección MAC, la dirección IP, el gateway predeterminado, el servidor DNS, las aplicaciones de red y las aplicaciones de uso intensivo de ancho de banda.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

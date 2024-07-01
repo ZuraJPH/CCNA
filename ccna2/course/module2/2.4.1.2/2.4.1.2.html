@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.4.1.2 Capítulo 2: Routing estático</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 2: Routing estático</h1>
+        <div>
+          <p>En este capítulo, aprendió cómo pueden utilizarse las rutas estáticas IPv4 e IPv6 para alcanzar redes remotas. Las redes remotas son redes a las que se puede llegar únicamente mediante el envío del paquete a otro router. Las rutas estáticas son fáciles de configurar. Sin embargo, en redes de gran tamaño, esta operación manual puede ser complicada. Las rutas estáticas aún se utilizan, incluso cuando se implementa un protocolo de routing dinámico.</p>
+          <p></p>
+          <p>Las rutas estáticas pueden configurarse con una dirección IP del siguiente salto que generalmente es la dirección IP del router del siguiente salto. Cuando se utiliza una dirección IP del siguiente salto, el proceso de la tabla de routing debe resolver esta dirección para una interfaz de salida. En enlaces seriales punto a punto, suele ser más eficaz configurar la ruta estática con una interfaz de salida. En redes de accesos múltiples, como Ethernet, se pueden configurar tanto una dirección IP del siguiente salto como una interfaz de salida en la ruta estática.</p>
+          <p></p>
+          <p>Las rutas estáticas tienen una distancia administrativa predeterminada de 1. Esta distancia administrativa también se aplica a las rutas estáticas configuradas con una dirección del siguiente salto y una interfaz de salida. </p>
+          <p></p>
+          <p>Solo se introduce una ruta estática en la tabla de routing si la dirección IP del siguiente salto se puede resolver a través de una interfaz de salida. Ya sea que la ruta estática esté configurada con una dirección IP del siguiente salto o una interfaz de salida, la ruta estática no se incluye en la tabla de routing si la interfaz de salida que se utiliza para reenviar ese paquete no se encuentra en esa tabla.</p>
+          <p></p>
+          <p></p>
+          <p>Una ruta predeterminada se configura con una dirección de red 0.0.0.0 y una máscara de subred 0.0.0.0 para IPv4, y el prefix/prefix-length ::/0 para IPv6. Si no existe una coincidencia más específica en la tabla de routing, dicha tabla utiliza la ruta predeterminada para reenviar el paquete a otro router. </p>
+          <p></p>
+          <p>Una ruta estática flotante se puede configurar para respaldar un enlace principal al manipular su valor administrativo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es el gráfico de resumen del capítulo</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

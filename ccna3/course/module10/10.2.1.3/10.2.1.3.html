@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.3 Comandos para solución de problemas de OSPF </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos para solución de problemas de OSPF </h1>
+        <div>
+          <p>Existen muchos comandos de OSPF distintos que se pueden usar para facilitar el proceso de resolución de problemas. A continuación, se resumen los comandos más comunes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols</b> (figura 1): se utiliza para verificar información fundamental de configuración de OSPFv2, como la ID del proceso OSPF, la ID del router, las redes que anuncia el router, los vecinos de los que el router recibe actualizaciones y la distancia administrativa predeterminada, que para OSPF es 110.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf neighbor</b> (figura 2): se utiliza para verificar que el router haya formado una adyacencia OSPFv2 con sus routers vecinos. Muestra la ID del router vecino, la prioridad del vecino, el estado de OSPFv2, el temporizador de tiempo muerto, la dirección IPv4 de la interfaz vecina y la interfaz mediante la cual se puede acceder al vecino. Si no se muestra la ID del router vecino o si este no se muestra en el estado FULL o 2WAY, los dos routers no formaron una adyacencia OSPFv2. Si dos routers no establecieron adyacencia, no se intercambiará la información de estado de enlace. Las bases de datos de estado de enlace incompletas pueden crear árboles SPF y tablas de routing imprecisos. Es posible que no existan rutas hacia las redes de destino o que estas no representen la ruta más óptima.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface</b> (figura 3): se usa para mostrar los parámetros de OSPFv2 que se configuraron en una interfaz, como la ID del proceso OSPFv2 a la que se asignó la interfaz, el área en la que están las interfaces, el costo de la interfaz y los intervalos de saludo y de tiempo muerto. Al agregar el nombre y número de la interfaz al comando, se muestra la salida para una interfaz específica.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf </b>(figura 4): se utiliza para examinar la ID del proceso OSPFv2 y la ID del router. Además, este comando muestra información de área OSPFv2 y la última vez que se calculó el algoritmo SPF. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route ospf</b> (figura 5): se utiliza para mostrar solo las rutas OSPFv2 detectadas en la tabla de routing IPv4. El resultado muestra que el R1 detectó cuatro redes remotas mediante OSPF2.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>clear ip ospf </b>[<i>process-id</i>]<b> process </b>: se usa para restablecer las adyacencias de vecinos OSPFv2.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> para obtener el comando equivalente de OSPFv3, simplemente reemplace <b>ip</b> por <b>ipv6</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la salida del comando "show ip protocols" en el router uno. En la figura dos, se muestra la salida del comando "show ip ospf neighbor" en el router uno. En la figura tres, se muestra la salida del comando "show ip ospf interface serial cero barra diagonal cero barra diagonal cero" en el router uno. En la figura cuatro, se muestra la salida del comando "show ip ospf" en el router uno. En la figura cinco, se muestra la salida del comando "show ip route ospf" en el router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

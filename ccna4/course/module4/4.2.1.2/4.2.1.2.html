@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.2 Filtrado de puertos y servicios</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrado de puertos y servicios</h1>
+        <div>
+          <p>La capacidad de filtrar por protocolos y números de puerto permite que los administradores de red creen ACL extendidas muy específicas. Se puede especificar una aplicación mediante la configuración del número o el nombre de un puerto bien conocido. </p>
+          <p></p>
+          <p>En la figura 1, se muestran algunos ejemplos de la forma en que un administrador especifica un número de puerto TCP o UDP colocándolo al final de la instrucción de la ACL extendida. Se pueden utilizar operaciones lógicas, por ejemplo, igual que (eq), distinto de (neq), mayor que (gt) y menor que (lt). </p>
+          <p></p>
+          <p>En la figura 2, se muestra cómo visualizar una lista de números de puerto y de palabras clave que pueden utilizarse al generar una ACL mediante el siguiente comando:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 101 permit tcp any any eq ?</b>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un ejemplo de una ACL extendida con números de puerto.  La figura muestra tres líneas de configuración. La primera línea es: access guion list 114 permit tcp. 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 any eq. 23.  Esto bloqueará el tráfico de Telnet.  Las dos líneas siguientes bloquean el tráfico FTP. Las líneas son: access guion list 114 permit tcp. 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 any igual 21, y access guion list 114 permit tcp. 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 any eq. 20.  La figura también muestra el método alternativo, que usa palabras clave en lugar de números de puerto.  Con este método, las tres líneas serían: access guion list 114 permit tcp. 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 any eq telnet, access guion list 114 permit tcp. 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 any eq ftp y access guion list 114 permit tcp. 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 any eq ftp guion data. La figura 2 muestra el uso del carácter de signo de interrogación en la CLI para obtener una lista de números de puerto.  Esta lista se muestra con el comando: access guion list 101 permit tcp any any eq signo de interrogación.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra la sintaxis para configurar una ruta estática.  La sintaxis es “ip route”, seguido por la dirección de red de destino, seguido de la máscara de red de destino, seguido por la interfaz de salida o la dirección IP del siguiente salto.

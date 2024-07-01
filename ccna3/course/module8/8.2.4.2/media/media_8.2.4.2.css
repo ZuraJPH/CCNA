@@ -1,0 +1,10 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+#ID_s4_txt01{line-height:14.5px;padding-left:5px;}
+.space{padding-left:17px;}
+.space1{padding-left:0px;}
+#ID_SC2{font-family:Courier New}
+#ID_sc_reset font{font-size:20px !important;}
+#ID_s4_txt01{margin-left:3px !important;}

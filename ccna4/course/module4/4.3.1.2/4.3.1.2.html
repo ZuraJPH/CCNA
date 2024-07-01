@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.1.2 Comparación entre ACL de IPv4 y de IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comparación entre ACL de IPv4 y de IPv6</h1>
+        <div>
+          <p>Aunque las ACL IPv4 e IPv6 son muy similares, hay tres diferencias fundamentales entre ellas: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La primera diferencia es el comando que se utiliza para aplicar una ACL de IPv6 a una interfaz. IPv4 utiliza el comando <b>ip access-group</b> para aplicar una ACL de IPv4 a una interfaz IPv4. IPv6 utiliza el comando <b>ipv6 traffic-filter</b> para realizar la misma función para las interfaces IPv6. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>A diferencia de las ACL de IPv4, las ACL de IPv6 no utilizan máscaras wildcard. En cambio, se utiliza la longitud de prefijo para indicar cuánto de una dirección IPv6 de origen o destino debe coincidir.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La última diferencia principal tiene que ver con la inclusión de dos instrucciones permit implícitas al final de cada lista de acceso de IPv6. Al final de todas las ACL IPv4 estándar o extendidas, hay una instrucción <b>deny any</b> o <b>deny ip any any</b> implícita. En IPv6 se incluye una instrucción <b>deny ipv6 any any</b> similar al final de cada ACL de IPv6. La diferencia es que IPv6 también incluye dos otras instrucciones implícitas de forma predeterminada: <b>permit icmp any any nd-na </b>y <b>permit icmp any any nd-ns.</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Estas dos instrucciones permiten que el router participe en el equivalente de ARP para IPv4 en IPv6. Recuerde que ARP se utiliza en IPv4 para resolver las direcciones de capa 3 a direcciones MAC de capa 2. Como se muestra en la ilustración, en IPv6 se utilizan mensajes ICMP de descubrimiento de vecinos (ND) para lograr el mismo propósito. ND utiliza mensajes de solicitud de vecino (NS) y de anuncio de vecino (NA).  </p>
+          <p></p>
+          <p>Los mensajes ND se encapsulan en paquetes IPv6 y requieren los servicios de la capa de red IPv6, mientras que ARP para IPv4 no utiliza la capa 3.  Dado que IPv6 utiliza el servicio de la capa 3 para el descubrimiento de vecinos, las ACL de IPv6 deben permitir implícitamente que los paquetes ND se envíen y reciban por una interfaz. Específicamente, se permiten tanto los mensajes de descubrimiento de vecinos-anuncio de vecino (nd-na) como los de descubrimiento de vecinos-solicitud de vecino (nd-ns).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un router que ejecuta IPv6 y envía el mensaje de solicitud de vecino ICMP.  Una computadora en el enlace responde con un mensaje de anuncio de vecino ICMP.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.4 Comando PPP Authentication</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comando PPP Authentication</h1>
+        <div>
+          <p>Para especificar el orden en que se solicitan los protocolos CHAP o PAP en la interfaz, utilice el comando de configuración de interfaz <b>ppp authentication</b>, como se muestra en la ilustración. Utilice la versión <b>no</b> de este comando para deshabilitar esta autenticación. </p>
+          <p></p>
+          <p>Se pueden habilitar PAP, CHAP, o ambos. Si ambos métodos están habilitados, se solicita el primer método especificado durante la negociación del enlace. Si el peer sugiere usar el segundo método o simplemente rechaza el primero, se debe probar con el segundo método. Algunos dispositivos remotos soportan sólo CHAP y algunos sólo PAP. El orden en que se especifican los métodos se basa en las preocupaciones sobre la capacidad del dispositivo remoto para negociar correctamente el método adecuado, así como la preocupación sobre la seguridad de la línea de datos. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los comandos de autenticación de PPP y las opciones de autenticación, PAP, CHAP, o ambas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

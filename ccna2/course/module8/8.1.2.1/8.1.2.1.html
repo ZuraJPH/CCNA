@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.1 Configuración de un servidor de DHCPv4 básico</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de un servidor de DHCPv4 básico</h1>
+        <div>
+          <p>Un router Cisco que ejecuta el software IOS de Cisco puede configurarse para que funcione como servidor de DHCPv4. El servidor de DHCPv4 que utiliza IOS de Cisco asigna y administra direcciones IPv4 de conjuntos de direcciones especificados dentro del router para los clientes DHCPv4. La topología que se muestra en la figura 1 se utiliza para ilustrar esta funcionalidad.</p>
+          <p></p>
+          <p>
+            <b>Paso 1: Excluir direcciones IPv4</b>
+          </p>
+          <p></p>
+          <p>El router que funciona como servidor de DHCPv4 asigna todas las direcciones IPv4 en un conjunto de direcciones DHCPv4, a menos que esté configurado para excluir direcciones específicas. Generalmente, algunas direcciones IPv4 de un conjunto se asignan a dispositivos de red que requieren asignaciones de direcciones estáticas. Por lo tanto, estas direcciones IPv4 no deben asignarse a otros dispositivos. Para excluir direcciones específicas, utilice el comando <b>ip dhcp excluded-address</b>, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>Se puede excluir una única dirección o un rango de direcciones especificando la dirección más baja y la dirección más alta del rango. Las direcciones excluidas deben incluir las direcciones asignadas a los routers, a los servidores, a las impresoras y a los demás dispositivos que se configuraron o se configurarán manualmente.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: Configurar un pool de DHCPv4</b>
+          </p>
+          <p></p>
+          <p>La configuración de un servidor de DHCPv4 implica definir un conjunto de direcciones que se deben asignar. Como se muestra en la figura 3, el comando <b>ip dhcp pool </b><i>nombre-del-conjunto</i> crea un conjunto con el nombre especificado y coloca al router en el modo de configuración de DHCPv4, que se identifica con el indicador Router(dhcp-config)#.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: Configurar tareas específicas</b>
+          </p>
+          <p></p>
+          <p>En la figura 4, se indican las tareas para finalizar la configuración del pool de DHCPv4. Algunas de ellas son optativas, mientras que otras deben configurarse. </p>
+          <p></p>
+          <p>El conjunto de direcciones y el router de gateway predeterminado deben estar configurados. Utilice la instrucción <b>network</b> para definir el rango de direcciones disponibles. </p>
+          <p>Utilice el comando <b>default-router</b> para definir el router de gateway predeterminado. Normalmente, el gateway es la interfaz LAN del router más cercano a los dispositivos clientes. Se requiere un gateway, pero se pueden indicar hasta ocho direcciones si hay varios gateways.</p>
+          <p></p>
+          <p>Otros comandos del pool de DHCPv4 son optativos. Por ejemplo, la dirección IPv4 del servidor DNS que está disponible para un cliente DHCPv4 se configura mediante el comando <b>dns-server</b>. El comando <b>domain-name </b><i>dominio</i> se utiliza para definir el nombre de dominio. La duración del arrendamiento de DHCPv4 puede modificarse mediante el comando <b>lease</b>. El valor de arrendamiento predeterminado es un día. El comando <b>netbios-name-server</b> se utiliza para definir el servidor WINS con NetBIOS.</p>
+          <p></p>
+          <p>
+            <b>Ejemplo de DHCPv4</b>
+          </p>
+          <p></p>
+          <p>Un ejemplo de configuración con parámetros básicos de DHCPv4 configurados en el router R1 se muestra en la Figura 5. R1 está configurado como servidor DHCPv4 para la LAN 192.168.10.0/24 mediante la topología de ejemplo de la Figura 1.</p>
+          <p></p>
+          <p>
+            <b>Deshabilitación de DHCPv4</b>
+          </p>
+          <p></p>
+          <p>El servicio DHCPv4 está habilitado de manera predeterminada. Para deshabilitar el servicio, utilice el comando del modo de configuración global <b>no service dhcp</b>. Utilice el comando del modo de configuración global <b>service dhcp</b> para volver a habilitar el proceso del servidor de DHCPv4. Si los parámetros no se configuran, habilitar el servicio no tiene ningún efecto.</p>
+          <p></p>
+          <p>Utilice la actividad del verificador de sintaxis en la figura 6 para configurar parámetros de DHCPv4 similares en el R1 para la LAN 192.168.11.0/24.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una topología de red de tres routers.  R2 se encuentra en el medio y tiene un enlace WAN serie con R1 y un enlace WAN serie con R3.  R1 y R3 no están directamente conectados.  R1 tiene dos redes LAN Gigabit Ethernet activas. Cada una de esas redes LAN tiene un switch conectado a ellas y cada switch está conectado a una computadora. También hay un servidor dhcp conectado a S2.  R3 tiene una LAN Gigabit Ethernet activa que contiene un switch y una computadora. La figura dos muestra los comandos utilizados para excluir direcciones específicas de un conjunto de DHCP.  El comando es ip dhcp excluded-address.  Esto es seguido inmediatamente por la dirección específica o el rango de direcciones.  Se muestran dos ejemplos. El primer ejemplo muestra un rango y el comando es ip dhcp excluded-address 192.168.10.1 192.168.10.9.  El segundo ejemplo enumera una sola dirección y el comando es ip dhcp excluded-address 192.168.10.254. La figura tres muestra el comando utilizado para crear el conjunto de DHCP El comando es ip dhcp pool seguido del nombre del conjunto.  El ejemplo es ip dhcp pool LAN-POOL-1. La figura cuatro enumera dos parámetros necesarios para configurar DHCP Estos dos parámetros definen el conjunto de direcciones y definen el router o gateway predeterminado.  Las tareas optativas incluyen la definición de un servidor DNS, la definición de un nombre de dominio, la configuración de un tiempo de arrendamiento de DHCP y la definición de un servidor WINS bios de red. La figura cinco continúa con el ejemplo de configuración de DHCP  El comando siguientes establece el rango de redes y el comando es network 192.168.10.0 255.255.255.0.  El siguiente comando es default-router 192.168 11.5.  El servidor DNS se configura con el comando, domain-name example.com La figura seis es una actividad interactiva que permite que el estudiante configure un router como servidor DHCPv4.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

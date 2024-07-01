@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.3 Configuración del encapsulamiento de HDLC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración del encapsulamiento de HDLC</h1>
+        <div>
+          <p>HDLC de Cisco es el método de encapsulación predeterminado que usan los dispositivos de Cisco en las líneas seriales síncronas. </p>
+          <p></p>
+          <p>Utilice HDLC de Cisco como protocolo punto a punto en las líneas arrendadas entre dos dispositivos de Cisco. Si conecta dispositivos que no son de Cisco, utilice PPP síncrono.</p>
+          <p></p>
+          <p>Si se modificó el método de encapsulación predeterminado, utilice el comando <b>encapsulation hdlc</b> en el modo EXEC privilegiado para volver a habilitar HDLC. </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, se deben seguir dos pasos para volver a habilitar la encapsulación HDLC:</p>
+          <p></p>
+          <p>
+            <b>Paso 1.</b> Ingrese al modo de configuración de interfaz de la interfaz serial.</p>
+          <p>
+            <b>Paso 2.</b> Introduzca el comando <b>encapsulation hdlc</b> para especificar el protocolo de encapsulación en la interfaz.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los pasos para configurar el encapsulamiento de HDLC.  La figura comienza en el modo de configuración global y el primer comando pasa a la interfaz deseada. El primer comando es interface serial cero barra diagonal cero barra diagonal cero.  El comando siguiente es encapsulation h d l c</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

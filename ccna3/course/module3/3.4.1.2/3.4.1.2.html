@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.1.2 Resumen</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resumen</h1>
+        <div>
+          <p>Los problemas que pueden surgir de una red de capa 2 redundante incluyen las tormentas de difusión, la inestabilidad de la base de datos MAC y la duplicación de tramas unidifusión. STP es un protocolo de capa 2 que asegura que exista solo una ruta lógica entre todos los destinos en la red mediante el bloqueo intencional de las rutas redundantes que pueden provocar un bucle.</p>
+          <p></p>
+          <p>STP envía tramas BPDU para la comunicación entre los switches. Se elige un switch como puente raíz para cada instancia de árbol de expansión. Los administradores pueden controlar esta elección cambiando la prioridad del puente. Los puentes raíz se pueden configurar para habilitar el balanceo de carga del árbol de expansión por VLAN o por grupo de VLAN, según el protocolo de árbol de expansión que se utilice. Después, STP asigna una función de puerto a cada puerto participante mediante un costo de ruta. El costo de la ruta hacia el puente raíz es igual a la suma de todos los costos de puerto a lo largo de la ruta hacia el puente raíz. Se asigna un costo de puerto automáticamente a cada puerto. Sin embargo, también se puede configurar de forma manual. Las rutas con el costo más bajo se convierten en las preferidas, y el resto de las rutas redundantes se bloquean.</p>
+          <p></p>
+          <p>PVST+ es la configuración predeterminada de IEEE 802.1D en los switches Cisco. Ejecuta una instancia de STP para cada VLAN. RSTP, un protocolo de árbol de expansión más moderno y de convergencia más rápida, se puede implementar en los switches Cisco por VLAN en forma de PVST+ rápido. El árbol de expansión múltiple (MST) es la implementación de Cisco del protocolo de árbol de expansión múltiple (MSTP), en la que se ejecuta una instancia de árbol de expansión para un grupo definido de VLAN.  Las características como PortFast y la protección BPDU aseguran que los hosts del entorno conmutado obtengan acceso inmediato a la red sin interferir en el funcionamiento del árbol de expansión.</p>
+          <p></p>
+          <p>El apilamiento de switches permite la conexión de hasta nueve switches Catalyst 3750 para configurarlos y presentarlos a la red como una sola entidad. STP ve la pila de switches como un switch único. Este beneficio adicional permite asegurar el diámetro máximo recomendado por el IEEE de siete switches. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres switches interconectados con enlaces troncales.  El switch 1 es el puente raíz de la VLAN 10 y el switch tres es el puente raíz de la VLAN 20.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

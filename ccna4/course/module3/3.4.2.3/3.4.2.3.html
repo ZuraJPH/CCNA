@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.2.3 Solucionar problemas de GRE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solucionar problemas de GRE</h1>
+        <div>
+          <p>Los problemas con GRE generalmente son debido a una o más de las siguientes configuraciones incorrectas:</p>
+          <p>
+            <ul>
+              <li>Las direcciones IP de interfaz de túnel no se encuentran en la misma red o las máscaras de subred no coinciden.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las interfaces del origen del túnel o el destino del túnel no están configuradas con la dirección IP correcta o se encuentran en el estado desactivado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El routing estático o dinámico no está configurado correctamente. </li>
+            </ul>
+          </p>
+          <p>Utilice el comando <b>show ip interface brief</b> en ambos routers para verificar que la interfaz del túnel esté activa y configurada con las direcciones IP correctas para la interfaz física y la interfaz del túnel. Además, verifique que la interfaz de origen en cada router esté activa y configurada con las direcciones IP correctas, como se muestra en la figura 1.</p>
+          <p></p>
+          <p>El routing puede causar un problema. Los dos routers necesitan una ruta predeterminada que apunte a Internet. Además, los dos routers deberán tener configurado el routing dinámico o estático correcto. Puede utilizar el comando <b>show ip ospf neighbor</b> para verificar la adyacencia de vecinos, como se muestra en la página anterior. Independientemente del routing utilizado, también puede utilizar el comando <b>show ip route</b> para verificar que las redes estén pasando entre los dos routers, como se muestra en la figura 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra cómo verificar que todas las interfaces necesarias estén activas con la misma topología que antes, con la excepción de que R1 a la izquierda tiene una LAN representada por la interfaz 10.0.0.1 de Loopback 0 y R2 tiene una LAN representada por la interfaz 172.16.0.1 de Loopback 0. El comando show ip interface brief se emite en R1 y en R2 para verificar que las interfaces seriales y las interfaces de túneles estén activas (up, up). La figura 2 muestra que las redes LAN representadas por las interfaces loopback se aprendieron a través de OSPF y la interfaz de Tunnel0 en los routers R1 y R2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra cuatro switches que están interconectados.  Cada puerto está marcado con su modo, y el switch 2 está marcado como puente raíz.  También se muestra el resultado del comando show spanning guion tree vlan 100.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.4 Video</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Video</h1>
+        <div>
+          <p>Sin QoS y una cantidad significativa de capacidad de ancho de banda adicional, la calidad de video normalmente disminuye. La imagen se muestra borrosa, dentada o en la cámara lenta. El audio de la fuente puede perder la sincronización con el video.</p>
+          <p></p>
+          <p>El tráfico de video tiende a ser imprevisible, inconsistente y a transmitirse por ráfagas, en comparación con el tráfico de voz. En comparación con la transmisión de voz, el video es menos resistente a pérdidas y tiene un mayor volumen de los datos por paquete, como se muestra en la Figura 1. Observe cómo los paquetes de voz llegan cada 20 ms y son de 200 bytes predecibles cada uno. En cambio, la cantidad y el tamaño de los paquetes de video varían cada 33 ms según el contenido del video. Por ejemplo, si la transmisión de video se compone de contenido que no cambia mucho de un cuadro a otro, los paquetes de video serán pequeños, y se necesitarán menos para mantener una experiencia de usuario aceptable. No obstante, si la transmisión de video consta de contenido que cambia rápidamente, como la secuencia de acción de una pelicula, entonces los paquetes de video serán más grandes y se necesitará mayor cantidad por cada intervalo de 33 ms para ofrecer una experiencia aceptable al usuario.</p>
+          <p></p>
+          <p>En la Tabla 2, se resumen las características del tráfico de video. Los puertos UDP, como 554 utilizados para el protocolo de transmisión en tiempo real (RSTP), deben tener prioridad sobre otro tráfico de red menos sensible al tiempo. Al igual que la voz, el video puede tolerar cierta cantidad de latencia, fluctuación, y pérdida sin ningún efecto notable. La latencia no debe ser superior a 400 milisegundos (ms). Las fluctuaciones no deben ser de más de 50 ms, y la pérdida de paquetes de video no debe ser superior al 1%. El tráfico de video requiere al menos 384 Kbps de ancho de banda.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la comparación entre el muestreo de voz y el muestreo de video. La figura 2 muestra las características del tráfico de video y los requisitos de transmisión unidireccional.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

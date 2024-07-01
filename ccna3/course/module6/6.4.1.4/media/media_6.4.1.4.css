@@ -1,0 +1,22 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+#htmlMedia {
+    margin-left: -70px !important;
+}
+
+#mc_table {
+    height: 300px!important;
+}
+
+#ID_titleCorrect,
+#ID_titleIncorrect {
+    margin-top: -13px !important;
+}
+
+@media only screen and (device-width: 768px) {
+    #ID_titleCorrect,
+    #ID_titleIncorrect {
+        margin-top: -13px !important;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.3.3 Listas ACL IPv4 estándar denominada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Listas ACL IPv4 estándar denominada</h1>
+        <div>
+          <p>En la figura 1, se muestran los pasos necesarios para crear una ACL estándar con nombre.</p>
+          <p></p>
+          <p>
+            <b>Paso 1:</b> En el modo de configuración global, utilice el comando <b>ip access-list</b> para crear una ACL denominada. Los nombres de las ACL son alfanuméricos, distinguen mayúsculas de minúsculas y deben ser únicos. El comando de nombre <b>ip access-list standard </b><i>se</i> usa para crear una con nombre estándar. Después de introducir el comando, el router se encuentra en el modo de configuración estándar (std) ACL denominada (nacl) como lo indica el segundo indicador en la Figura 1.</p>
+          <p></p>
+          <p>
+            <b>Paso 2</b>. En el modo de configuración de ACL con nombre, utilice las instrucciones <b>permit</b> o <b>deny</b> a fin de especificar una o más condiciones para determinar si un paquete se reenvía o se descarta. Puede utilizar <b>remark</b> para agregar un comentario a la ACL.</p>
+          <p></p>
+          <p>
+            <b>Paso 3.</b> Aplique la ACL a una interfaz con el comando <b>ip access-group</b>.<b> </b><i>nombre</i>. Especifique si la ACL se debe aplicar a los paquetes cuando ingresan por la interfaz (in) o cuando salen de la interfaz (out).</p>
+          <p></p>
+          <p>La figura 2 muestra los comandos que se utilizan para configurar una ACL estándar denominada en el router R1, en la que la interfaz G0/0 deniega el acceso del host 192.168.11.10 a la red 192.168.10.0. La ACL se llama NO_ACCESS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">El cuadro uno muestra los comandos utilizados para crear una A.C.L denominada. El primer comando es i.p. access guión list, seguido por estándar o extendida, seguida luego por el nombre de A.C.L. Esto traslada al router a un nuevo modo de config guión s.t.d. guión n.a.c.l. la instrucción permit o deny se ingresa después, junto con la instruccion de comentario opcional. Luego lo siguen las direcciones i.p. y el comando opcional, registro. El último paso es aplicar la A.C.L a una interfaz en un sentido específico. La figura dos configura una A.C.L denominada. El primer comando es i.p. access guión list standard no guión bajo access. El siguiente comando es deny host 192 punto 168 punto 11 punto 10. El siguiente comando es permit any. Luego se pasa el router a la interfaz especificada mediante el comando interface gigabit Ethernet cero barra cero. El último paso es aplicar la A.C.L mediante el comando i.p. access guión group no guión bajo access out.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

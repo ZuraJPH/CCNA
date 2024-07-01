@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.4 Mensajes Discover (Detección) y Offer (Oferta) de DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mensajes Discover (Detección) y Offer (Oferta) de DHCPv4</h1>
+        <div>
+          <p>Si un cliente está configurado para recibir su configuración IPv4 dinámicamente y desea unirse a la red, solicita valores de direccionamiento del servidor de DHCPv4. El cliente transmite un mensaje DHCPDISCOVER en su red local cuando arranca o detecta una conexión de red activa. Dado que el cliente no tiene forma de obtener información acerca de la subred a la que pertenece, el mensaje DHCPDISCOVER es una difusión IPv4 (dirección IPv4 de destino 255.255.255.255). El cliente aún no tiene una dirección IPv4 configurada, de modo que se utiliza la dirección IPv4 de origen 0.0.0.0. </p>
+          <p></p>
+          <p>Como se muestra en la figura 1, la dirección IPv4 del cliente (CIADDR), la dirección de gateway predeterminado (GIADDR) y la máscara de subred están marcados para indicar que se utiliza la dirección 0.0.0.0. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la información desconocida se envía como 0.0.0.0.</p>
+          <p></p>
+          <p>Cuando el servidor de DHCPv4 recibe el mensaje DHCPDISCOVER, responde con un mensaje DHCPOFFER. Este mensaje incluye información de configuración inicial para el cliente, como la dirección IPv4 que el servidor ofrece, la máscara de subred, la duración del arrendamiento y la dirección IPv4 del servidor de DHCPv4 que hace la oferta. </p>
+          <p></p>
+          <p>Es posible configurar el mensaje DHCPOFFER para que incluya otra información, como el tiempo de renovación del arrendamiento y la dirección DNS. </p>
+          <p></p>
+          <p>Como se muestra en la figura 2, el servidor de DHCP responde al mensaje DHCPDISCOVER asignando valores a la CIADDR y a la máscara de subred. La trama se crea mediante la dirección de hardware del cliente (CHADDR) y se envía al cliente que realiza la solicitud.</p>
+          <p></p>
+          <p>El cliente y el servidor envían mensajes de acuse de recibo, y finaliza el proceso. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el mensaje de descubrimiento de DHCPv4. Los mensajes consisten en la dirección MAC del cliente como el origen, una dirección MAC de destino de todas las F, una dirección IP 0.0.0.0 que se utiliza como IP de origen, la máscara de subred y el gateway predeterminado.  La dirección de destino es 255.255.255.255. La figura dos muestra el mensaje de oferta DHCPv4.  El servidor responde ofreciendo una dirección IP y una máscara de subred.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

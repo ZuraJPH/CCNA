@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.3.1 Entradas de la tabla de routing de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entradas de la tabla de routing de OSPF</h1>
+        <div>
+          <p>La figura 1 contiene una tabla de routing IPv4 de muestra para una topología de OSPF multiárea con un enlace a una red externa que no es OSPF, una ruta predeterminada proporcionada por la LSA de tipo 5 del ASBR. Las rutas OSPF en una tabla de routing IPv4 se identifican mediante los siguientes descriptores:</p>
+          <p>
+            <ul>
+              <li>
+                <b>O:</b> las LSA de router (tipo 1) y de red (tipo 2) describen los detalles dentro de un área. La tabla de routing refleja esta información de estado de enlace con la designación <b>O</b>, lo que significa que la ruta es intraárea.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O IA:</b> cuando un ABR recibe una LSA de router (tipo 1) en un área, envía una LSA de resumen (tipo 3) al área adyacente. Las LSA de resumen aparecen en la tabla de routing como IA (rutas interárea). Las LSA de resumen recibidas en un área también se reenvían a otras áreas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O E1</b> u <b>O E2:</b> en la tabla de routing, las LSA externas aparecen marcadas como rutas externas tipo 1 (E1) o externas tipo 2 (E2). El tipo 2 (E2) es el valor predeterminado. El estudio de la diferencia entre el tipo 1 (E1) y el tipo 2 (E2) no está contemplado en este curso.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra una tabla de routing IPv6 con entradas de tabla de routing intraárea, interárea y externas de OSPF.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una pantalla de salida del comando show ip route en Cisco IOS.  Se resaltan diferentes tipos de rutas de OSPF; incluidas las intraárea, interárea y rutas externas. La figura dos muestra una pantalla de salida del comando show ipv6 route en Cisco IOS.  Se resaltan diferentes tipos de rutas de OSPF; incluidas las intraárea, interárea y rutas externas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

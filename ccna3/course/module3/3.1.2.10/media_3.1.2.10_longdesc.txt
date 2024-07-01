@@ -1,0 +1,1 @@
+La figura es una actividad interactiva que muestra cuatro switches interconectados.  Una tabla muestra las prioridades y las direcciones MAC.  Esta actividad interactiva permite que el estudiante practique la definición de roles de puerto —raíz, designado y alternativo— de acuerdo con la información de la tabla.

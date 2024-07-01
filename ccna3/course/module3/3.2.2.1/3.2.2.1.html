@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.1 Descripción general de PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Descripción general de PVST+</h1>
+        <div>
+          <p>El estándar IEEE 802.1D original define un CST que asume solo una instancia de árbol de expansión para toda la red conmutada, independientemente de la cantidad de redes VLAN. Las redes que ejecutan CST presentan las siguientes características:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>No es posible compartir la carga. Un uplink debe bloquear todas las VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se preserva la CPU. Solo se debe calcular una instancia de árbol de expansión.</li>
+            </ul>
+          </p>
+          <p>Cisco desarrolló PVST+ para que una red pueda ejecutar una instancia independiente de la implementación de Cisco de IEEE 802.1D para cada VLAN en la red. Con PVST+, un puerto de enlace troncal en un switch puede bloquear una VLAN y seguir reenviando a otras VLAN. PVST+ se puede utilizar para implementar el balanceo de carga de capa 2. Los switches en un entorno de PVST+ requieren mayor procesamiento de CPU y consumo de ancho de banda de BPDU que una implementación tradicional de CST de STP porque cada VLAN ejecuta una instancia de STP aparte.</p>
+          <p></p>
+          <p>En un entorno PVST+, los parámetros de árbol de expansión se pueden ajustar para que la mitad de las VLAN reenvíen en cada enlace troncal de uplink. En la ilustración, el puerto F0/3 en el S2 es el puerto de reenvío para la VLAN 20, y el F0/2 en el S2 es el puerto de reenvío para la VLAN 10. Esto se logra mediante la configuración de un switch como puente raíz para la mitad de las VLAN en la red y de un segundo switch como puente raíz para la otra mitad de las VLAN. En la figura, S3 es el puente raíz para la VLAN 20, y el S1 es el puente raíz para la VLAN 10. Si hay varios puentes raíz STP por VLAN, se aumenta la redundancia en la red.</p>
+          <p></p>
+          <p>Las redes que ejecutan PVST+ presentan las siguientes características:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El balanceo de carga puede funcionar de forma óptima.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Una instancia de árbol de expansión para cada VLAN que se mantiene puede significar un gran desperdicio de ciclos de CPU para todos los switches en la red (además del ancho de banda que se utiliza en cada instancia para enviar su propia BPDU). Esto solo sería un problema si se configurara una gran cantidad de redes VLAN.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres switches, todos interconectados con un enlace punto uno Q.  Esto demuestra que los switches diferentes pueden ser el puente raíz para diferentes redes VLAN y que los puertos pueden reenviar para una VLAN mientras que bloquean para otra.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

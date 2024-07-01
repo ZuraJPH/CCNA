@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.4.3 Problemas comunes de configuración del HSRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas comunes de configuración del HSRP </h1>
+        <div>
+          <p>Los comandos <b>debug</b> en la página anterior ilustran el funcionamiento esperado del HSRP. También puede utilizar los comandos <b>debug</b> para detectar problemas comunes de configuración:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Los routers en HSRP no están conectados al mismo segmento de red. Si bien esto podría ser un problema de la capa física, también podría ser un problema de configuración de la subinterfaz de VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los routers HSRP no están configurados con las direcciones IPv4 de la misma subred. Los paquetes de saludo del HSRP son locales. No se enrutan más allá del segmento de red. Por lo tanto, un router de reserva no sabría cuándo falla el router activo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los routers HSRP no están configurados con la misma dirección IPv4 virtual. La dirección IPv4 virtual es el gateway predeterminado para terminales.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los routers en HSRP no están configurados con el mismo número de grupo HSRP. Esto hará que cada router asuma un rol activo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los terminales no se configuran con la dirección de gateway predeterminada correcta. Aunque no está relacionado directamente con el HSRP, configurar el servidor DHCP con una de las direcciones IP reales del router en HSRP significaría que los terminales tendrían solo conectividad a redes remotas cuando dicho router HSRP esté activo.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura para practicar la solución de problemas del protocolo HSRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

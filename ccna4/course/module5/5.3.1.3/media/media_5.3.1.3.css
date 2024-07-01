@@ -1,0 +1,8 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+.orangeCallOut{
+	padding: 8px 0px 5px 0px !important;
+}

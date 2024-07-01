@@ -1,0 +1,1 @@
+La figura muestra la sintaxis para eliminar una VLAN.  También se muestra el resultado del comando “show vlan brief” para verificar que se eliminó la VLAN.

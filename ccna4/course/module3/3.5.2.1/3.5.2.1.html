@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.2.1 Cuándo usar BGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cuándo usar BGP</h1>
+        <div>
+          <p>El uso de BGP resulta muy apropiado cuando un AS tiene conexiones a sistemas autónomos múltiples. Esto se conoce como “multilocalizado”.  Cada AS en la figura es multilocalizado porque cada AS tiene conexiones con al menos otros dos sistemas autónomos o pares BGP.</p>
+          <p></p>
+          <p>Antes de ejecutar BGP, es importante que el administrador de red conozca y entienda bien el BGP. Una configuración incorrecta de un router BGP puede tener consecuencias negativas en toda la Internet.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Para mostrar conexiones multilocalizadas, se muestran cinco nubes. Cada nube se conecta a otras dos o más nubes. En la nube etiquetada AS 65001, hay un router en el perímetro de la nube que se conecta a un router en el perímetro de la nube etiquetada AS 65002 y un router en el perímetro de la nube etiquetada AS 65004. Los routers que se conectan entre dos AS tienen una flecha entre las nubes que apunta hacia cada nube y tiene la palabra BGP. Dentro de AS 65001 hay varios routers y las palabras ISP-1 (EIGRP). La nube etiquetada AS 65002 Company (OSPF) tiene dos routers perimetrales: uno que se conecta a AS65001, como ya se mencionó, y un router que está en el extremo de la nube etiquetada AS 65003 ISP-3 (EIGRP). El router del perímetro de la nube etiquetada AS65003 también se conecta a un router en el perímetro de AS 65004 y a un router en el perímetro de AS 65005. La nube etiquetada AS 65004 tiene dos routers en el perímetro de la nube. Un router se conecta a otro router en el perímetro de AS 65001, como ya se mencionó, y el otro router se conecta al router en el perímetro de AS 65005. Hay varios otros routers en la nube etiquetados AS o65004 ISP-2 (OSPF). La nube AS 65005 tiene un solo router perimetral que se conecta con el router perimetral de AS 65003 y con uno de los routers perimetrales de AS 65004. La nube AS 65005 está etiquetada como "Proveedor de contenido" (OSPF) y tiene varios routers más.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.1 Replicación de puertos</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Replicación de puertos</h1>
+        <div>
+          <p>Un analizador de paquetes (también conocido como analizador de protocolos, detector de paquetes o analizador de tráfico) es una herramienta valiosa para ayudar a supervisar y a resolver los problemas de una red. Un analizador de paquetes es el software que captura los paquetes que ingresan y que salen de una tarjeta de interfaz de red (NIC). Por ejemplo, Wireshark es un analizador de paquetes que se usa comúnmente para capturar y analizar los paquetes en una computadora local.</p>
+          <p></p>
+          <p>¿Qué sucedería si un administrador de red deseara capturar los paquetes de muchos otros dispositivos fundamentales y no solo la NIC local? Una solución consiste en configurar los dispositivos de red para copiar y enviar el tráfico que va a los puertos de interés a un puerto conectado a un analizador de paquetes. El administrador luego podría analizar el tráfico de red de diversas fuentes en la red.</p>
+          <p></p>
+          <p>Sin embargo, la operación básica de una red conmutada moderna inhabilita la capacidad del analizador de paquetes para capturar el tráfico de otras fuentes. Por ejemplo, un usuario que ejecuta Wireshark puede capturar sólo el tráfico que entra a su NIC. No puede capturar el tráfico entre otro host y un servidor. El motivo es porque un switch de capa 2 completa la tabla de direcciones MAC en base a la dirección MAC de origen y el puerto de ingreso de la trama de Ethernet. Una vez que se crea la tabla, el switch solamente reenvía el tráfico destinado a una dirección MAC directamente al puerto correspondiente. Esto evita que un analizador de paquetes conectado a otro puerto del switch "escuche" otro tráfico del switch.</p>
+          <p></p>
+          <p>La solución a este dilema es habilitar los puertos reflejados. La función de puertos reflejados permite que un switch copie y envíe tramas de Ethernet desde puertos específicos al puerto de destino conectado a un analizador de paquetes. La trama original aún se reenvía de la manera habitual. </p>
+          <p></p>
+          <p>La figura muestra un ejemplo de replicación de puertos. Vale notar que el tráfico entre PC1 y PC2 también se envía a la computadora portátil con un analizador de paquetes instalado.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el switch S1 conectado con las computadoras PC1 y PC2, y con una computadora portátil. Muestra que el tráfico entre PC1 y PC2 también se envía a la computadora portátil con un analizador de paquetes instalado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

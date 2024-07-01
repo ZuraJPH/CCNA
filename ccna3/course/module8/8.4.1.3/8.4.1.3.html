@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.4.1.3 Capítulo 8: OSPF de área única</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 8: OSPF de área única</h1>
+        <div>
+          <p>La versión actual de OSPF para IPv4 es OSPFv2, introducida en RFC 1247 y actualizada en RFC 2328 por John Moy. En 1999, OSPFv3 para IPv6 se publicó en RFC 2740.</p>
+          <p></p>
+          <p>OSPF es un protocolo de routing de estado de enlace con una distancia administrativa predeterminada de 110 y se indica en la tabla de routing con el código de origen de ruta<b> O</b>. </p>
+          <p></p>
+          <p>OSPFv2 se habilita mediante el comando <b>router ospf </b><i>process-id </i>del modo de configuración global. El valor<i> process-id </i>tiene importancia en el ámbito local, lo que significa que no hace falta que coincida con otros routers OSPFv2 para establecer adyacencias con esos vecinos.</p>
+          <p></p>
+          <p>El comando <b>network</b> utilizado con OSPFv2 tiene la misma función que cuando se lo utiliza con otros protocolos de routing IGP, pero con una sintaxis ligeramente diferente. El valor<i> wildcard-mask </i>es el inverso de la máscara de subred, y el valor<i> area-id </i>debe establecerse en<b> 0</b>.</p>
+          <p></p>
+          <p>De manera predeterminada, los paquetes de saludo OSPF se envían cada 10 segundos en segmentos multiacceso y punto a punto, y cada 30 segundos en los segmentos NBMA (Frame Relay, X.25, ATM), y OSPF los usa para establecer adyacencias de vecinos. De manera predeterminada, el intervalo muerto es equivalente a cuatro veces el valor del intervalo de saludo. </p>
+          <p></p>
+          <p>Para que los routers establezcan una adyacencia, sus intervalos de saludo, intervalos muertos, tipos de red y máscaras de subred deben coincidir. Use el comando <b>show ip ospf neighbors</b> para verificar las adyacencias OSPFv2.</p>
+          <p></p>
+          <p>En una red multiacceso, OSPF elige un DR para que funcione como punto de recopilación y distribución de las LSA enviadas y recibidas. Un BDR se elige para cumplir la función del DR en caso de que este falle. Todos los demás routers se conocen como DROthers. Todos los routers envían sus LSA al DR, que luego satura con la LSA todos los demás routers en la red multiacceso. </p>
+          <p></p>
+          <p>El comando <b>show ip protocols</b> se utiliza para verificar la información importante de configuración OSPFv2, incluidas la ID del proceso OSPF, la ID del router y las redes que anuncia el router.</p>
+          <p></p>
+          <p>OSPFv3 se habilita en una interfaz, no en el modo de configuración del router. OSPFv3 necesita que se configuren direcciones link-local. Se debe habilitar el routing de unidifusión IPv6 para OSPFv3. Para habilitar una interfaz para OSPFv3, antes se requiere una ID de router de 32 bits. Se utilizan comandos de comprobación similares para OSPFv2 y OSPFv3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el contenido del paquete de saludo de OSPF.  En la figura se resaltan el tipo, la ID del router, la ID del área, la máscara de red, el intervalo de saludo, la prioridad del router, la ID del router designado, la ID del router designado de respaldo y la lista de vecinos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

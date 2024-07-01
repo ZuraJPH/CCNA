@@ -1,0 +1,1 @@
+La figura muestra un ejemplo de una tabla o de un gráfico que se utiliza para recopilar y documentar la información de red.  La tabla tiene los encabezados de columna siguientes: Dispositivo, Interfaz, Dirección I.P., Máscara de subred, y Gateway predeterminado.  Un administrador de redes completa la tabla para todos los dispositivos de una red.

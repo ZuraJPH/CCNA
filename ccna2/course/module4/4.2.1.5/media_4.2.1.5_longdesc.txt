@@ -1,0 +1,1 @@
+La figura muestra toda una trama, incluido el encabezado y el pie de página. El switching por corte comienza a reenviar la trama apenas recibe la MAC de destino (que es solo 14 bytes en el encabezado).

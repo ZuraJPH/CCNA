@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.3.2 Métodos de resolución de problemas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métodos de resolución de problemas</h1>
+        <div>
+          <p>Mediante los modelos en capas, existen tres métodos principales para resolver problemas de red:</p>
+          <p>
+            <ul>
+              <li>Ascendente </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Descendente</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Divide y vencerás</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cada método tiene sus ventajas y desventajas. En este tema, se describen los tres métodos y se proporcionan pautas para elegir el mejor método para una situación específica.</p>
+          <p></p>
+          <p>
+            <b>Método de resolución de problemas ascendente</b>
+          </p>
+          <p>En la resolución de problemas ascendente, se comienza por los componentes físicos de la red y se atraviesan las capas del modelo OSI de manera ascendente hasta que se identifica la causa del problema, como se muestra en la figura 1. La resolución de problemas ascendente es un buen método para usar cuando se sospecha que el problema es físico. La mayoría de los problemas de red residen en los niveles inferiores, de modo que, con frecuencia, la implementación del método ascendente es eficaz. </p>
+          <p></p>
+          <p>La desventaja del método de resolución de problemas ascendente es que requiere que revise cada dispositivo e interfaz en la red hasta que detecte la posible causa del problema. Recuerde que se debe registrar cada conclusión y cada posibilidad, de modo que es posible que haya mucho papeleo asociado a este enfoque. Otro desafío es determinar qué dispositivos se deben examinar primero.</p>
+          <p></p>
+          <p>
+            <b>Método de resolución de problemas descendente</b>
+          </p>
+          <p>En la figura 2, la resolución de problemas descendente comienza por las aplicaciones de usuario final y atraviesa las capas del modelo OSI de manera descendente hasta que se identifica la causa del problema. Antes de abordar las partes más específicas de la red, se prueban las aplicaciones de usuario final de un sistema final. Use este método para los problemas más simples o cuando crea que el problema está en un software.</p>
+          <p></p>
+          <p>La desventaja del enfoque descendente es que requiere que se revise cada aplicación de red hasta que se detecte la posible causa del problema. Se debe registrar cada conclusión y cada posibilidad. El desafío es determinar qué aplicación se debe examinar primero.</p>
+          <p></p>
+          <p>
+            <b>Método de resolución de problemas divide y vencerás</b>
+          </p>
+          <p>En la figura 3, se muestra el enfoque divide y vencerás para resolver un problema de red. El administrador de red selecciona una capa y hace pruebas en ambos sentidos desde esa capa.</p>
+          <p></p>
+          <p>En el método de resolución de problemas divide y vencerás, comienza por reunir las experiencias que el usuario tiene del problema, documenta los síntomas y, después, con esa información, hace una deducción fundamentada sobre la capa del modelo OSI en la que se debe comenzar la investigación. Cuando se verifica que una capa funciona correctamente, se puede suponer que las capas por debajo de ella funcionan. El administrador puede trabajar en las capas del modelo OSI en sentido ascendente. Si una capa de OSI no funciona correctamente, el administrador puede descender por el modelo de capas de OSI.</p>
+          <p></p>
+          <p>Por ejemplo, si los usuarios no pueden acceder al servidor web, pero pueden hacer ping al servidor, entonces el problema se encuentra por encima de la capa 3. Si el ping al servidor falla, es probable que el problema esté en una capa inferior del modelo OSI.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra el enfoque ascendente de solución de problemas con el modelo de OSI a partir de la capa física. La figura 2 muestra que el enfoque descendente de solución de problemas con el modelo de OSI a partir de la capa de aplicaciones. La figura 3 muestra el método de dividir y conquistar para solucionar problemas con el modelo de OSI a partir de la capa dos, tres o cuatro.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

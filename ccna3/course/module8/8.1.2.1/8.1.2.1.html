@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.1 Encapsulación de mensajes OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Encapsulación de mensajes OSPF</h1>
+        <div>
+          <p>Los mensajes OSPFv2 que se transmiten a través de un enlace Ethernet contienen la siguiente información:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Encabezado de la trama de Ethernet de enlace de datos</b>: identifica las direcciones MAC de multidifusión de destino 01-00-5E-00-00-05 o 01-00-5E-00-00-06 al encapsular un mensaje OSPFv2. (figura 1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Encabezado de paquetes IPv4</b>: identifica la dirección IP de origen y la dirección de destino. La dirección de destino es una de dos direcciones de multidifusión OSPFv2: 224.0.0.5 o 224.0.0.6. El encabezado también contiene un campo de protocolo que incluirá el código "89" para OSPF. (figura 2)  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Encabezado del paquete OSPF:</b> identifica el tipo de paquete OSPF, la ID del router y la ID del área. (figura 3)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Datos específicos del tipo de paquete OSPF:</b> contiene información del tipo de paquete OSPF. El contenido varía según el tipo de paquete. (figura 4)</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el encabezado de la trama de Ethernet de enlace de datos y se resaltan la dirección MAC de multidifusión de destino y la dirección MAC de origen. En la figura dos, se resalta el encabezado de paquetes IP, incluidas las direcciones IP de origen y destino. En la figura tres, se resalta el encabezado de paquetes OSPF que permite identificar el tipo de paquete OSPF, la ID del router y la ID del área. En la figura cuatro, se resalta la información del tipo de paquete OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

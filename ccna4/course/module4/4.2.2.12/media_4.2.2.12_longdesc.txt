@@ -1,0 +1,1 @@
+Figure shows the standard Packet Tracer Lab graphic, indicating there is a Packet Tracer lab for this section of the curriculum. El gráfico de la actividad de laboratorio contiene tres PC conectadas a SW1, PC1, PC2 y PC3. SW1 se conecta a RT1 para crear la red 172.31.1.96/27. RT1 se conecta a Internet a través de un enlace WAN y una red 209.165.1.0/30.

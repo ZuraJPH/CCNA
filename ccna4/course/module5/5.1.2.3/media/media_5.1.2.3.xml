@@ -1,0 +1,11 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>VLAN seguras</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Enlace troncal<br/>(VLAN nativa = 10)]]></text>
+	</component>
+	
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Deshabilitar DTP y configurar las interfaces en modo de acceso]]></text>
+	</component><!-- end slide 1 --></textcomponents>

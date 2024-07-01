@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.5 Verifique la configuración de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verifique la configuración de routing</h1>
+        <div>
+          <p>Con configuraciones de router-on-a-stick, un problema común es asignar una ID de VLAN incorrecta a la subinterfaz.</p>
+          <p></p>
+          <p>Como se muestra en la figura 1, el router R1 se configuró con la VLAN incorrecta en la subinterfaz G0/0.10, lo que evita que los dispositivos configurados en la VLAN 10 se comuniquen con la subinterfaz G0/0.10. Esto, a la vez, evita que dichos dispositivos puedan enviar datos a otras VLAN en la red.</p>
+          <p></p>
+          <p>El uso de los comandos <b>show interfaces</b> y <b>show running-config</b> puede ser útil para la solución de problemas de este tipo, tal como se muestra en la figura 2. </p>
+          <p></p>
+          <p>El comando <b>show interfaces</b> genera una salida importante, lo que a veces dificulta encontrar el problema, tal como se muestra en la figura 2. Sin embargo, en la sección superior resaltada muestra que la subinterfaz G0/0.10 en el router R1 utiliza la VLAN 100.</p>
+          <p></p>
+          <p>El comando <b>show running-config</b> confirma que la subinterfaz G0/0.10 en el router R1 se configuró para permitir el acceso al tráfico de la VLAN 100 y no al de la VLAN 10.</p>
+          <p></p>
+          <p>Para corregir este problema, configure la subinterfaz G0/0.10 para que esté en la VLAN correcta mediante el comando <b>encapsulation dot1q 10</b> en el modo de configuración de subinterfaz. Una vez asignada la subinterfaz a la VLAN correcta, los dispositivos en esa VLAN pueden acceder a ella, y el router puede realizar routing entre VLAN.</p>
+          <p></p>
+          <p>Con la correcta verificación, los problemas de configuración del router se resuelven rápidamente, lo que permite que el routing entre VLAN funcione de forma adecuada.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra un router que se ha configurado con la VLAN incorrecta en la subinterfaz G 0 barra diagonal 0 punto 10 en una topología de router-on-a-stick. Esto haría que los hosts en la VLAN diez no puedan enviar datos a otras VLAN en la red. En la figura dos, se muestra la salida del comando show interfaces y del comando show run; se hace hincapié en el tipo de encapsulamiento y en la asignación de VLAN.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

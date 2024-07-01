@@ -1,0 +1,91 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Solución de problemas del protocolo OSPF</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+  <text><![CDATA[¿Es correcta la tabla de vecinos?]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[¿Es correcta la tabla de routing?]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[¿El tráfico toma la ruta deseada?]]></text> 
+</component>
+  
+<component id="ID_s1_txt04">
+  <text><![CDATA[¿Problemas de conectividad debido al routing?]]></text> 
+</component>
+  
+<component id="ID_s1_txt05">
+  <text><![CDATA[¿La red es funcional?]]></text> 
+</component>
+   
+<component id="ID_s1_txt06">
+  <text><![CDATA[Sí]]></text> 
+</component>
+  
+<component id="ID_s1_txt07">
+  <text><![CDATA[Sí]]></text> 
+</component>
+  
+<component id="ID_s1_txt08">
+  <text><![CDATA[Sí]]></text> 
+</component>
+  
+<component id="ID_s1_txt09">
+  <text><![CDATA[Sí]]></text> 
+</component>
+
+<component id="ID_s1_txt10">
+  <text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt11">
+  <text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt12">
+  <text><![CDATA[No]]></text> 
+</component>
+             
+<component id="ID_btn01">
+  <text><![CDATA[<b>Solucionar problemas</b>]]></text> 
+</component>
+      
+<component id="ID_btn02">
+  <text><![CDATA[<b>Solucionar problemas</b>]]></text> 
+</component>
+     
+<component id="ID_btn03">
+  <text><![CDATA[<b>Solucionar problemas</b>]]></text> 
+</component>
+  
+<component id="ID_titleTxt01">
+  <text><![CDATA[Solucionar problemas]]></text> 
+</component>
+
+<component id="ID_bodyTxt01">
+  <text><![CDATA[<textformat blockindent='-14'><ul><li>¿Las interfaces son operativas?</li><li>¿Las interfaces están habilitadas para el protocolo OSPF?</li><li>¿El área del protocolo OSPF coincide?</li><li>¿Existe una interfaz que esté configurada como pasiva?</li></ul></textformat><br/>Comandos show<br/><textformat blockindent='14'><font face="_typewriter"><span class="innerText">show ip ospf neighbor</span><br/><span class="innerText">show ip interface brief</span><br/><span class="innerText">show ip ospf interface</span></font></textformat>]]></text> 
+</component>
+  
+<component id="ID_titleTxt02">
+  <text><![CDATA[Solucionar problemas]]></text> 
+</component>
+
+<component id="ID_bodyTxt02">
+  <text><![CDATA[<textformat blockindent='-14'><ul><li>¿Se anuncian las redes?</li><li>¿Existe una ACL que esté bloqueando anuncios?</li><li>¿Hay otro protocolo de routing con una menor AD que también se esté usando?</li><li>¿Todas las áreas están conectadas al área 0?</li></ul></textformat><br/>Comandos show<br/><textformat blockindent='14'><font face="_typewriter"><span class="innerText">show ip protocols</span><br/><span class="innerText">show ip route ospf</span></font></textformat>]]></text> 
+</component>
+  
+<component id="ID_titleTxt03">
+  <text><![CDATA[Solucionar problemas]]></text> 
+</component>
+
+<component id="ID_bodyTxt03">
+  <text><![CDATA[<textformat blockindent='-14'><ul><li>Verifique el costo del protocolo OSPF en una interfaz.</li><li>Verifique el ancho de banda de referencia del protocolo OSPF.</li></ul></textformat><br/>Comandos show<br/><textformat blockindent='14'><font face="_typewriter"><span class="innerText">show ip route ospf</span><br/><span class="innerText">show ip ospf interface</span></font></textformat>]]></text> 
+</component>
+  
+</textcomponents>

@@ -1,0 +1,1 @@
+Las figuras 1, 2 y 3 son actividades interactivas. Cada actividad muestra una topología diferente y el estudiante debe identificar si es antigua, router-on-a-stick o routing inter VLAN con switch multicapa.

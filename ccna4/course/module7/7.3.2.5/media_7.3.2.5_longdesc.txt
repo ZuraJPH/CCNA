@@ -1,0 +1,1 @@
+En la figura 1, la aplicación OnePK administra el plano de datos de tres dispositivos. En la figura 2, la aplicación Open Daylight se ejecuta en un controlador SDN que administra el plano de datos de tres dispositivos. En la figura 3, una aplicación de APIC-EM implementa una política en el controlador SDN que administra el plano de datos de tres dispositivos.

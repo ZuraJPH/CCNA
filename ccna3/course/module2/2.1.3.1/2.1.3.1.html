@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.3.1 Rangos de VLAN en los switches Catalyst</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Rangos de VLAN en los switches Catalyst</h1>
+        <div>
+          <p>Los distintos switches Cisco Catalyst admiten diversas cantidades de VLAN. La cantidad de VLAN que admiten es suficiente para satisfacer las necesidades de la mayoría de las organizaciones. Por ejemplo, los switches de las series Catalyst 2960 y 3560 admiten más de 4000 VLAN. Las VLAN de rango normal en estos switches se numeran del 1 al 1005, y las VLAN de rango extendido se numeran del 1006 al 4094. En la figura 1, se muestran las VLAN disponibles en un switch Catalyst 2960 que ejecuta IOS de Cisco, versión 15.x. En la tabla 2, se muestran las características de las VLAN de rango normal y de rango extendido.</p>
+          <p></p>
+          <p>
+            <b>VLAN de rango normal</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Se utiliza en redes de pequeños y medianos negocios y empresas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se identifica mediante una ID de VLAN entre 1 y 1005. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los ID de 1002 a 1005 se reservan para las VLAN Token Ring y FDDI.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las ID 1 y 1002 a 1005 se crean automáticamente y no se pueden eliminar.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las configuraciones se almacenan en un archivo de base de datos de VLAN, denominado vlan.dat. El archivo vlan.dat se encuentra en la memoria flash del switch. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El protocolo de enlace troncal de VLAN (VTP), que permite administrar la configuración de VLAN entre los switches, solo puede detectar y almacenar redes VLAN de rango normal.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>VLAN de rango extendido</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Posibilita a los proveedores de servicios que amplíen sus infraestructuras a una cantidad de clientes mayor. Algunas empresas globales podrían ser lo suficientemente grandes como para necesitar las ID de las VLAN de rango extendido.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se identifican mediante una ID de VLAN entre 1006 y 4094.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las configuraciones no se escriben en el archivo vlan.dat.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Admiten menos características de VLAN que las VLAN de rango normal.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se guardan en el archivo de configuración en ejecución de manera predeterminada. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VTP no aprende las VLAN de rango extendido.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la cantidad máxima de VLAN disponibles en los switches Catalyst es 4096, ya que el campo ID de VLAN tiene 12 bits en el encabezado IEEE 802.1Q.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la tabla 1, se muestran las VLAN disponibles en un switch Catalyst 2960. En la figura 2, se muestran las características de las VLAN de rango normal y de rango extendido. .</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

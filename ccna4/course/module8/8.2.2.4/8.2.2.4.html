@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.4 Resolución de problemas con un servidor de syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas con un servidor de syslog</h1>
+        <div>
+          <p>Syslog es un protocolo simple que un dispositivo IP, conocido como “cliente syslog”, usa para enviar mensajes de registro basados en texto a otro dispositivo IP, el servidor de syslog. Actualmente, Syslog se define en RFC 5424. </p>
+          <p></p>
+          <p>Implementar una instalación de registro es una parte importante de la seguridad y la resolución de problemas de red. Los dispositivos de Cisco pueden registrar información relacionada con cambios de configuración, infracciones de ACL, estado de interfaces y muchos otros tipos de eventos. Los dispositivos de Cisco pueden enviar mensajes de registro a varias instalaciones. Los mensajes de eventos se pueden enviar a uno o varios de los siguientes componentes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Consola:</b> el registro de la consola está activado de manera predeterminada. Los mensajes se registran en la consola y pueden verse al modificar o probar el router o switch con el software de emulación de terminales conectado al puerto de consolas del dispositivo de red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Líneas de las terminales:</b> las sesiones de EXEC habilitadas se pueden configurar para recibir mensajes de registro en cualquiera de las líneas de las terminales. Al igual que el registro de consolas, este tipo de registros no se almacena en el dispositivo de red, por lo que solo sirve al usuario en esa línea.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Registro con búfer:</b>
+                <i></i>el registro con búfer es un poco más útil como herramienta de solución de problemas porque los mensajes de registro se almacenan en la memoria por un tiempo. Sin embargo, cuando se reinicia el dispositivo, se borran los mensajes de registro.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traps de SNMP:</b> ciertos umbrales se pueden configurar previamente en los routers y otros dispositivos. Los eventos de router, como la superación de un umbral, se pueden procesar en el router y reenviar como notificaciones de SNMP a una estación de administración de redes SNMP externa. Las traps de SNMP son una instalación de registro de seguridad viable, pero requieren la configuración y el mantenimiento de un sistema SNMP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Syslog:</b> los routers y los switches Cisco se pueden configurar para reenviar mensajes de registro a un servicio de syslog externo. Este servicio puede residir en cualquier número de servidores o estaciones de trabajo, incluidos los sistemas basados en Microsoft Windows y Linux. Syslog es la instalación de registro de mensajes más popular, ya que proporciona capacidades de almacenamiento de registro a largo plazo y una ubicación central para todos los mensajes del router.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los mensajes de registro del IOS de Cisco se ubican en uno de ocho niveles, como se muestra en la figura 1. Cuanto menor es el número del nivel, mayor es el nivel de gravedad. De manera predeterminada, todos los mensajes del nivel 0 al 7 se registran en la consola. Si bien la capacidad para ver los registros en un servidor central de syslog es útil para resolver problemas, examinar una gran cantidad de datos puede ser una tarea abrumadora.  El comando <b>logging trap </b><i>level </i>limita los mensajes registrados en el servidor syslog según la gravedad. El nivel es el nombre o número de nivel de<i> gravedad</i>. Solo se registran los mensajes de número igual o menor que el nivel de<i> gravedad </i>especificado.</p>
+          <p></p>
+          <p>En el ejemplo de la figura 2, los mensajes de sistema del nivel 0 (emergencias) al 5 (notificaciones) se envían al servidor de syslog en 209.165.200.225.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla con los mensajes de Cisco IOS y su nivel de gravedad, palabra clave, descripción y definición. La figura 2 muestra los comandos que limitan los mensajes enviados a un servidor syslog.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

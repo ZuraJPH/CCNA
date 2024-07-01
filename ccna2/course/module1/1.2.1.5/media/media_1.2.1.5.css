@@ -1,0 +1,50 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+.stat_1{
+	letter-spacing: -0.5px !important;
+}
+.stat_1{
+	letter-spacing: -1px !important;
+}
+.static-1{
+letter-spacing: -1px !important;
+}
+.static-2{
+letter-spacing: -1px !important;
+}
+#ID_title{
+	margin-top: -2px !important;
+	font-size: 15px !important;
+}
+
+#ID_txt08,#ID_txt07,#ID_txt03,#ID_tbl01_txt04
+{
+	line-height:9px;
+	letter-spacing:-0.5px!important;
+}
+#ID_speech06,#ID_speech01{
+line-height:11px!important;
+}
+#ID_txt12{
+letter-spacing:-1px!important;}
+
+#image_36,#image_12{
+left:-11px!important;
+}
+
+@media only screen and (device-width: 768px) {
+    #ID_txt08, #ID_txt07, #makesmall, #ID_txt12{
+        letter-spacing:-1.2px !important;
+    }
+}
+
+#ID_title{
+	top: -5px !important;
+}

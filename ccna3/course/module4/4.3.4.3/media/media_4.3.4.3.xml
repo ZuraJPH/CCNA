@@ -1,0 +1,32 @@
+﻿<textcomponents>
+
+	<component id='ID_title'>
+		<text><![CDATA[<b>Solución de problemas del HSRP</b>]]></text>
+	</component>
+	<component id="ID_sc_reset">
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Mostrar]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Mostrar todo]]></text>
+	</component>
+
+    <component id="ID_SC6" fontSize="12" fontFace='_typewriter'  fontColor="#ffffff">
+                <feedback id="fb"><![CDATA[<b><font face="_sans" >***Debe ingresar todo el comando exacto. Los comandos que incluyen un nombre o una contraseña distinguen mayúsculas de minúsculas.***</font></b> ]]></feedback>
+              <existingcommands><![CDATA[<font face="_sans"><b>Emita el comando debug para ver los paquetes de saludo del HSRP.</b></font>]]></existingcommands>
+                <command prompt="R2#">
+                       <correctresponse><![CDATA[ debug standby packets]]></correctresponse>
+                                <deviceresponse><![CDATA[Dec 2 15:20:12.347: HSRP: Gi0/1 Grp 1 Hello in 172.16.10.2 Active pri 150 vIP 172.16.10.1<br>*Dec 2 15:20:12.643: HSRP: Gi0/1 Grp 1 Hello out 172.16.10.3 Standby pri 100 vIP 172.16.10.1<br><br>!!!!!!R1 is powered off!!!!!]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>El mensaje anterior se recibió en el R2. Emita el comando debug para ver los eventos del HSRP como el R2 asume la función de router activo del HSRP para la red 172.16.10.0/24.</font>]]></instruction>
+              </command>
+                <command prompt="R2#">
+                       <correctresponse><![CDATA[ debug standby terse]]></correctresponse>
+                                <deviceresponse><![CDATA[HSRP:<br>  HSRP Errors debugging is on<br>  HSRP Events debugging is on<br>    (protocol, neighbor, redundancy, track, arp, interface)<br>  HSRP Packets debugging is on<br>    (Coup, Resign)<br>R2#<br>*Dec 2 16:11:31.855: HSRP: Gi0/1 Grp 1 Standby: c/Active timer expired (172.16.10.2)<br>*Dec 2 16:11:31.855: HSRP: Gi0/1 Grp 1 Active router is local, was 172.16.10.2<br>*Dec 2 16:11:31.855: HSRP: Gi0/1 Nbr 172.16.10.2 no longer active for group 1 (Standby)<br>*Dec 2 16:11:31.855: HSRP: Gi0/1 Nbr 172.16.10.2 Was active or standby - start passive holddown<br>*Dec 2 16:11:31.855: HSRP: Gi0/1 Grp 1 Standby router is unknown, was local<br>*Dec 2 16:11:31.855: HSRP: Gi0/1 Grp 1 Standby -&gt; Active<br><output omitted><br>R2#<br>]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Usó correctamente los comandos debug para solucionar problemas del HSRP.</font>]]></instruction>
+              </command>
+<command prompt=""/>
+</component>
+ 
+</textcomponents>

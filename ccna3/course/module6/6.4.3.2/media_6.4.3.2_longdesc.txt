@@ -1,0 +1,1 @@
+La figura muestra la salida del comando “show ipv6 route” en el router 1.  La ID del proceso EIGRP, los valores K, la ID de router, la distancia administrativa y las interfaces aparecen resaltadas en color naranja.

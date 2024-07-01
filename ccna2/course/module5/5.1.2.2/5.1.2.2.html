@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.2 Configuración de puertos de switch en la capa física</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de puertos de switch en la capa física</h1>
+        <div>
+          <p>
+            <b>Dúplex y velocidad</b>
+          </p>
+          <p></p>
+          <p>Los puertos de switch se pueden configurar manualmente con parámetros específicos de dúplex y de velocidad. Use el comando <b>duplex</b> del modo de configuración de interfaz para especificar manualmente el modo dúplex de un puerto de switch. Use el comando <b>speed</b> del modo de configuración de interfaz para especificar manualmente la velocidad de un puerto de switch. En la figura 1, el puerto F0/1 de los switches S1 y S2 se configura manualmente con la palabra clave <b>full</b> para el comando <b>duplex</b> y la palabra clave <b>100</b> para el comando <b>speed</b>. </p>
+          <p></p>
+          <p>La configuración predeterminada de dúplex y velocidad para los puertos de switch en los switches Cisco Catalyst 2960 y 3560 es automática. Los puertos 10/100/1000 funcionan en el modo semidúplex o dúplex completo cuando se establecen en 10 Mb/s o 100 Mb/s, pero solo funcionan en el modo dúplex completo cuando se establecen en 1000 Mb/s (1 Gb/s). La autonegociación es útil cuando se desconoce la configuración de dúplex y de velocidad del dispositivo que se conecta al puerto o cuando es posible que dicha configuración cambie. Al conectarse a dispositivos conocidos, como servidores, estaciones de trabajo dedicadas o dispositivos de red, se recomienda establecer manualmente la configuración de dúplex y de velocidad.</p>
+          <p></p>
+          <p>Cuando se realiza la resolución de problemas de puertos de switch, se debe verificar la configuración de dúplex y de velocidad.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> si la configuración para el modo dúplex y la velocidad de puertos del switch presenta incompatibilidades, se pueden producir problemas de conectividad. Una falla de autonegociación provoca incompatibilidades en la configuración.</p>
+          <p></p>
+          <p>Todos los puertos de fibra óptica, como los puertos 1000BASE-SX, solo funcionan a una velocidad predefinida y siempre son dúplex completo.   </p>
+          <p></p>
+          <p>Use el verificador de sintaxis de la figura 2 para configurar el puerto F0/1 del switch S1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla con los comandos de configuración básicos para las interfaces de switch.  La CLI comienza en el mode EXEC con privilegios y el primer comando es configure terminal.  Esto pasa al modo de configuración global.  El siguiente comando es interface fast Ethernet cero barra uno, y la línea del switch se transforma en config guion if entre paréntesis.  Esto pasa al modo de configuración para la interfaz especificada.  El siguiente comando es duplex full. Este comando configura la opción de dúplex en completo.  El siguiente comando es speed 100. Este comando ajusta la velocidad en la interfaz a 100 megabits por segundo.  La configuración en ejecución se copia al archivo de configuración de arranque con el comando copy running guion config startup guion config. La figura dos es una actividad interactiva que permite que el estudiante configure una interfaz de puerto de switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

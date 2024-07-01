@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.1 NAT estática</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>NAT estática</h1>
+        <div>
+          <p>Existen tres tipos de traducción NAT: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traducción estática de direcciones (NAT estática):</b> asignación de direcciones uno a uno entre una dirección local y una global.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traducción dinámica de direcciones (NAT dinámica):</b> asignación de varias direcciones a varias direcciones entre direcciones locales y globales. Las traducciones se realizan en función de la disponibilidad; por ejemplo: si hay 100 direcciones locales internas y 10 direcciones globales internas, luego en un momento determinado solo 10 de las 100 direcciones locales internas pueden traducirse. Esta limitación de NAT dinámica hace que sea mucho menos útil para redes de producción que la traducción de direcciones de puertos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traducción de la dirección del puerto (PAT):</b> asignación de varias direcciones a una dirección entre direcciones locales y globales. Este método también se conoce como “sobrecarga” (NAT con sobrecarga). Por ejemplo: si hay 100 direcciones locales internas y 10 direcciones globales internas, PAT utiliza los puertos como parámetro adicional para proporcionar un efecto multiplicador, lo que permite reutilizar cualquiera de las 10 direcciones globales internas hasta 65 536 veces (según si el flujo se base en UDP, TCP o ICMP).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>NAT estática</b>
+          </p>
+          <p></p>
+          <p>La NAT estática consiste en una asignación uno a uno entre direcciones locales y globales. Estas asignaciones son configuradas por el administrador de red y se mantienen constantes.</p>
+          <p></p>
+          <p>En la ilustración, el R2 se configuró con las asignaciones estáticas para las direcciones locales internas del Svr1, la PC2 y la PC3. Cuando estos dispositivos envían tráfico a Internet, sus direcciones locales internas se traducen a las direcciones globales internas configuradas. Para las redes externas, estos dispositivos tienen direcciones IPv4 públicas.</p>
+          <p></p>
+          <p>La NAT estática resulta útil, en especial para los servidores web o los dispositivos que deben tener una dirección constante que sea accesible tanto desde Internet, como desde el servidor web de una empresa. También es útil para los dispositivos a los que debe poder acceder el personal autorizado cuando no está en su lugar de trabajo, pero no el público en general en Internet. Por ejemplo, un administrador de red puede acceder a la dirección global interna del Svr1 (209.165.200.226) desde la PC4 mediante SSH. El R2 traduce esta dirección global interna a la dirección local interna y conecta la sesión del administrador al Svr1. </p>
+          <p></p>
+          <p>La NAT estática requiere que haya suficientes direcciones públicas disponibles para satisfacer la cantidad total de sesiones de usuario simultáneas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra una red con tres computadoras. La red está conectada a un router NAT, que está conectado a Internet.  Hay una tabla que asigna las direcciones privadas internas a direcciones públicas externas.  Esto demuestra NAT estática.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

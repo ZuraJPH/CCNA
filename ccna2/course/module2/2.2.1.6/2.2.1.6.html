@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.6 Verificación de una ruta estática</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de una ruta estática</h1>
+        <div>
+          <p>Además de<span class="cmd"><b></b></span><b> ping</b><span class="cmd"><b></b></span> y<span class="cmd"><b></b></span><b> traceroute</b>, los comandos útiles para verificar las rutas estáticas incluyen:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route</b>
+                <span class="cmd">
+                  <b></b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route static</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route</b>
+                <span class="cmd">
+                  <b></b>
+                </span>
+                <i>red</i>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra un ejemplo del resultado que genera el comando <b>show ip route static</b>. En el ejemplo, el resultado se filtra con la barra vertical y el parámetro <b>begin</b>. El resultado refleja el uso de rutas estáticas con la dirección del siguiente salto. </p>
+          <p></p>
+          <p>En la figura 2, se muestra un ejemplo del resultado del comando <b>show ip route 192.168.2.1</b>.</p>
+          <p></p>
+          <p>En la figura 3, se verifica la configuración de <b>ip route</b> en la configuración en ejecución. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para verificar la configuración del routing del R2.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para verificar la configuración del routing del R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN. La figura uno muestra el resultado del comando “show ip route barra vertical begin gateway” en el router uno. La figura dos muestra el resultado del comando “show ip route 192.168.2.1” en el router uno. La figura tres muestra el resultado del comando “show running guión config barra vertical section ip route”. La figura cuatro es una actividad interactiva que permite a los alumnos practicar la verificación de la configuración de routing estático en el router dos. La figura cuatro es una actividad interactiva que permite a los alumnos practicar la verificación de la configuración de routing estático en el router tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

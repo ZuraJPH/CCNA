@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>		
+	<slide>	
+		<!--<element type="IMAGE" src="bg.jpg" x="0" y="0" width="680" height="490" />-->
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title" size="17"/>
+		<element type="ROUTER" textId="ID_router_txt1" x="90" y="110" width="500" height="280" size="11"/>
+	</slide>
+		
+
+	<text id="ID_router_txt1"><![CDATA[<pre>R1# <b>conf t</b>
+R1(config)# <b>interface g0/0</b>
+R1(config-if)# <b>shutdown</b>
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to 
+administratively down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, 
+changed state to down
+R1(config-if)# <b>exit</b>
+R1(config)# <b><font color="#F68026">service timestamps log datetime</font></b>
+R1(config)# <b>interface g0/0</b>
+R1(config-if)# <b>no shutdown</b>
+<b><font color="#F68026">*Mar  1 11:52:42:</font></b> %LINK-3-UPDOWN: Interface GigabitEthernet0/0, 
+changed state to down
+<b><font color="#F68026">*Mar  1 11:52:45:</font></b> %LINK-3-UPDOWN: Interface GigabitEthernet0/0, 
+changed state to up
+<b><font color="#F68026">*Mar  1 11:52:46:</font></b> %LINEPROTO-5-UPDOWN: Line protocol on Interface
+GigabitEthernet0/0, changed state to up
+R1(config-if)#</pre>]]></text>
+		
+</data>

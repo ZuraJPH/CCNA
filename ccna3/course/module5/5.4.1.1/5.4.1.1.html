@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.4.1.1 Resumen</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resumen</h1>
+        <div>
+          <p>Los routers utilizan protocolos de routing dinámico para facilitar el intercambio de información de routing entre ellos. El propósito de los protocolos de routing dinámico incluye lo siguiente: detección de redes remotas, mantenimiento de información de routing actualizada, selección de la mejor ruta hacia las redes de destino y capacidad para encontrar una mejor ruta nueva si la ruta actual deja de estar disponible. Si bien los protocolos de routing dinámico requieren menos sobrecarga administrativa que el routing estático, requieren dedicar parte de los recursos de un router a la operación del protocolo, incluidos tiempo de CPU y ancho de banda del enlace de red. </p>
+          <p></p>
+          <p>Las redes generalmente utilizan una combinación de routing estático y dinámico. El routing dinámico es la mejor opción para las redes grandes, y el routing estático es más adecuado para las redes de rutas internas.</p>
+          <p></p>
+          <p>Cuando se produce un cambio en la topología, los protocolos de routing propagan esa información por todo el dominio de routing. El proceso para lograr que todas las tablas de routing alcancen un estado de coherencia, en el cual todos los routers en el mismo dominio o área de routing tienen información completa y precisa acerca de la red, se denomina “convergencia”. Algunos protocolos de routing convergen más rápido que otros.</p>
+          <p></p>
+          <p>Los protocolos de routing usan métricas para determinar el mejor camino o la ruta más corta para llegar a una red de destino. Diferentes protocolos de routing pueden usar diferentes métricas. Por lo general, una métrica inferior indica un mejor camino. Las métricas utilizadas por los protocolos de routing dinámico incluyen saltos, ancho de banda, demora, confiabilidad y carga.</p>
+          <p></p>
+          <p>Los protocolos de routing pueden clasificarse como con clase o sin clase, vector distancia o estado de enlace, y protocolo de gateway interior o protocolo de gateway exterior. </p>
+          <p></p>
+          <p>Los protocolos vector distancia utilizan routers como “letreros” a lo largo de la ruta hacia el destino final. La única información que conoce el router sobre una red remota es la distancia o métrica para llegar a esa red y qué ruta o interfaz usar para alcanzarla. Los protocolos de routing vector distancia no tienen un mapa en sí de la topología de la red. Los protocolos de vector distancia modernos son RIPv2, RIPng y EIGRP. </p>
+          <p></p>
+          <p>Un router configurado con un protocolo de routing de estado de enlace puede crear una “vista completa” o una topología de la red al reunir información proveniente de todos los demás routers. Esta información se recopila utilizando paquetes de estado de enlace (LSP).</p>
+          <p></p>
+          <p>Los protocolos de routing de estado de enlace aplican el algoritmo de Dijkstra para calcular la mejor ruta. A este algoritmo se le llama comúnmente “algoritmo SPF” (Primero la ruta más corta). Para determinar el costo total de una ruta, este algoritmo utiliza costos acumulados a lo largo de cada ruta, de origen a destino. Los protocolos de routing de estado de enlace son IS-IS y OSPF.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Utilice el gráfico de resumen</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

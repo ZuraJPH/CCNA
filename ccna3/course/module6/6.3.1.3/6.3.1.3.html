@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.3 Convergencia de EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Convergencia de EIGRP</h1>
+        <div>
+          <p>La figura muestra los últimos pasos del proceso inicial de detección de rutas. </p>
+          <p>1. Después de recibir los paquetes de actualización EIGRP del R2, el R1 utiliza la información en la tabla de topología para actualizar su tabla de routing IP con la mejor ruta a cada destino, incluidos la métrica y el router del siguiente salto.</p>
+          <p>2. De la misma manera que el R1, el R2 actualiza su tabla de routing IP con las mejores rutas a cada red.</p>
+          <p></p>
+          <p>Llegado a este punto, se considera que EIGRP está en estado convergente en ambos routers.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran dos routers. Cada router ejecuta EIGRP. El router uno le envía un paquete de saludo al router dos.  El router dos le envía un paquete de actualización y de saludo al router uno.  El router uno le envía un paquete de acuse de recibo y un paquete de saludo al router dos.  Por último, el router dos envía un paquete de acuse de recibo de nuevo al router uno.  De esta manera, se completa el ciclo y ambas tablas de routing están actualizadas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar el tipo de SDN</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Una cada tipo con la descripción correspondiente.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Ha relacionado correctamente cada tipo con su descripción.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No ha relacionado correctamente cada tipo con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font size="15">Términos</font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Basadas en dispositivos]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Basadas en políticas]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Basadas en controladores]]></text>
+</component><!--Questions--><component id='ID_s1_target_header'>
+	<text><![CDATA[Tipo]]></text>
+</component>
+<component id='ID_s1_text_header'>
+	<text><![CDATA[Descripción]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Permite que los programadores creen aplicaciones utilizando C y a Java con Python para integrar e interactuar con los dispositivos Cisco.]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[Utiliza las aplicaciones integradas que automatizan tareas de configuración avanzada mediante un flujo de trabajo guiado y una GUI fácil de usar que no requiere habilidades de programación.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[No contiene un controlador SDN.]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[APIC-EM de Cisco es un ejemplo de este tipo.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[Los dispositivos son programables mediante aplicaciones que se ejecutan en el dispositivo mismo o en un servidor en la red.]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[De manera similar a las SDN basadas en políticas pero sin la capa de políticas adicional.]]></text> 
+</component>
+
+
+</textcomponents>

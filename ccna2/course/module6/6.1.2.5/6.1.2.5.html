@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.5 Etiquetado de VLAN de voz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Etiquetado de VLAN de voz</h1>
+        <div>
+          <p>Recuerde que, para admitir VoIP, se requiere una VLAN de voz separada. </p>
+          <p></p>
+          <p>Un puerto de acceso que se usa para conectar un teléfono IP de Cisco se puede configurar para usar dos VLAN separadas: una VLAN para el tráfico de voz y otra VLAN para el tráfico de datos desde un dispositivo conectado al teléfono. El enlace entre el switch y el teléfono IP funciona como un enlace troncal para transportar tanto el tráfico de la VLAN de voz como el tráfico de la VLAN de datos.</p>
+          <p></p>
+          <p>El teléfono IP Cisco contiene un switch integrado 10/100 de tres puertos. Los puertos proporcionan conexiones dedicadas para estos dispositivos:</p>
+          <p>
+            <ul>
+              <li>El puerto 1 se conecta al switch o a otro dispositivo VoIP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El puerto 2 es una interfaz interna 10/100 que envía el tráfico del teléfono IP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El puerto 3 (puerto de acceso) se conecta a una PC u otro dispositivo.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En el switch, el acceso está configurado para enviar paquetes del protocolo de descubrimiento de Cisco (CDP) que instruyen a un teléfono IP conectado para que envíe el tráfico de voz al switch en una de tres formas posibles, según el tipo de tráfico:</p>
+          <p>
+            <ul>
+              <li>En una VLAN de voz con una etiqueta de valor de prioridad de clase de servicio (CoS) de capa 2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>En una VLAN de acceso con una etiqueta de valor de prioridad de CoS de capa 2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>En una VLAN de acceso sin etiqueta (sin valor de prioridad de CoS de capa 2)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, la computadora del estudiante PC5 está conectada a un teléfono IP de Cisco, y el teléfono está conectado al switch S3. La VLAN 150 está diseñada para transportar tráfico de voz, mientras que la PC5 está en la VLAN 20, que se usa para los datos de los estudiantes.</p>
+          <p></p>
+          <p>
+            <b>Ejemplo de configuración</b>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra un resultado de ejemplo. El análisis de los comandos de voz de Cisco IOS excede el ámbito de este curso, pero las áreas resaltadas en el resultado de ejemplo muestran que la interfaz F0/18 se configuró con una VLAN configurada para datos (VLAN 20) y una VLAN configurada para voz (VLAN 150).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un switch conectado a un teléfono VoIP y una computadora conectada al teléfono.  Hay llamadas que indican que el switch está configurado para admitir el tráfico de voz, como también el tráfico para la VLAN 20.  Si el tráfico está destinado para el teléfono y es para la VLAN 150, se dirige al teléfono.  Sin embargo, si no está destinado al teléfono, se redirige a la PC. La figura dos muestra el resultado del comando “show interface f cero barra cero switchport” en un switch.  Se resaltan la VLAN de acceso y la VLAN de voz.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.2.1 Interfaces conectadas directamente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interfaces conectadas directamente</h1>
+        <div>
+          <p>Un router implementado recientemente, sin interfaces configuradas, tiene una tabla de routing vacía, como se muestra en la ilustración.</p>
+          <p></p>
+          <p>Antes de que el estado de la interfaz se considere up/up y se agregue a la tabla de routing IPv4, la interfaz debe cumplir con los siguientes requisitos:</p>
+          <p>
+            <ul>
+              <li>Se le debe asignar una dirección IPv4 o IPv6 válida.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se debe activar mediante el comando <b>no shutdown</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Debe recibir una señal portadora de otro dispositivo (router, switch, host, etc.).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Una vez que la interfaz está activa, la red de esa interfaz se incorpora a la tabla de routing como red conectada directamente.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el resultado del comando show ip route, que es una tabla de routing vacía.  Este es el resultado de ejecutar el comando en un router que no tiene interfaces configuradas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

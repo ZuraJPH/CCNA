@@ -1,0 +1,112 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar la terminología de calidad de la transmisión de red</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Una cada término con su descripción.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Ha relacionado correctamente cada término con su descripción.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No ha relacionado correctamente cada término con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font color="#FFFFFF" size="15">Pasos</font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Fluctuación de fase]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Pérdida de paquetes]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Demora de propagación]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[Ancho de banda]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Demora de código]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[Congestión]]></text>
+</component>
+
+<component id='ID_s1_drag07'>
+	<text><![CDATA[Cola]]></text>
+</component>
+
+<component id='ID_s1_drag08'>
+	<text><![CDATA[Demora de serialización]]></text>
+</component><!--Questions--><component id='ID_s1_target_header'>
+	<text><![CDATA[<font size="15">Término</font>]]></text>
+</component>
+<component id='ID_s1_text_header'>
+	<text><![CDATA[<font size="15">Descripción</font>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Esto sucede cuando ocurre una congestión.]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[La cantidad fija de tiempo que lleva transmitir una trama de la NIC al cable.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[Mantiene los paquetes en la memoria hasta que los recursos están disponibles para transmitirlos.]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[La cantidad de bits que se pueden transmitir en un solo segundo.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[La cantidad fija de tiempo dedicado a comprimir los datos en el origen antes de transmitir el primer dispositivo de interconexión de redes.]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[Cuando la demanda de ancho de banda excede la cantidad disponible.]]></text> 
+</component>
+
+<component id="ID_s1_txt07">
+  <text><![CDATA[Causado por las variaciones en la demora.]]></text> 
+</component>
+
+<component id="ID_s1_txt08">
+  <text><![CDATA[La cantidad de tiempo variable que demora la trama para atravesar los enlaces entre el origen y el destino.]]></text> 
+</component>
+
+</textcomponents>

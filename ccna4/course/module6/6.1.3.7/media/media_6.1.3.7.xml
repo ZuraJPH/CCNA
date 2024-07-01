@@ -1,0 +1,262 @@
+﻿<textcomponents><!--Slide 1--><component id="ID_s1_title">
+		<text><![CDATA[<b>Actividad: Comparar los algoritmos de encolamiento</b>]]></text>
+	</component>
+
+	<component id="ID_s1_instr_title">
+		<text><![CDATA[Instrucciones]]></text>
+	</component>
+
+	<component id="ID_s1_instr_body">
+		<text><![CDATA[Elija el algoritmo adecuado para cada característica.]]></text>
+	</component><!--feedback--><component id='ID_s1_titleCorrect'>
+		<text><![CDATA[Correcto]]></text>
+	</component>
+	
+	<component id='ID_s1_correctText'>
+		<text><![CDATA[Ha identificado correctamente los algoritmos de cola.]]></text>
+	</component>
+	
+	<component id='ID_s1_titleIncorrect'>
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+	
+	<component id='ID_s1_incorrectText'>
+		<text><![CDATA[No ha identificado correctamente los algoritmos de cola. Haga clic en “Restablecer” para intentarlo nuevamente.]]></text>
+	</component>
+	
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component><!--ComboBox 1--><component id="ID_s1_txt01">
+		<text><![CDATA[1.<textformat blockindent='14'>El ancho de banda asignado a los paquetes de una clase determina el orden en <br><span class="align">que se envían los paquete</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt01'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB01_01'>
+		<text><![CDATA[FIFO]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB01_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB01_03'>
+		<text><![CDATA[CBWFQ]]></text>
+	</component>
+
+	<component id='ID_s1_CB01_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 1--><!--ComboBox 2--><component id="ID_s1_txt02">
+		<text><![CDATA[2.<textformat blockindent='14'>Planifica simultáneamente el tráfico interactivo al frente de una cola para <br><span class="align">reducir el tiempo de respuesta</span></textformat>]]></text>
+	</component>
+	
+	<component id='ID_s1_CBprompt02'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB02_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB02_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB02_03'>
+		<text><![CDATA[CBWFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB02_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 2--><!--ComboBox 3--><component id="ID_s1_txt03">
+		<text><![CDATA[3.<textformat blockindent='14'>El tráfico importante o sensible al tiempo se puede descartar cuando se produce una <span class="align">congestión</span> en la interfaz de router o de switch</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt03'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB03_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB03_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB03_03'>
+		<text><![CDATA[CBWFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB03_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 3--><!--ComboBox 4--><component id="ID_s1_txt04">
+		<text><![CDATA[4.<textformat blockindent='14'>Proporciona compatibilidad para las clases de tráfico definidas por el usuario</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt04'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB04_01'>
+		<text><![CDATA[FIFO]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB04_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB04_03'>
+		<text><![CDATA[CBWFQ]]></text>
+	</component>
+
+	<component id='ID_s1_CB04_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 4--><!--ComboBox 5--><component id="ID_s1_txt05">
+		<text><![CDATA[5.<textformat blockindent='14'>Permite que los datos susceptibles a la demora, como la voz, se envíen antes que los<span class="align"> paquetes de otras colas</span></textformat>]]></text>
+	</component>-<component id='ID_s1_CBprompt05'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB05_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB05_02'>
+		<text><![CDATA[WFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB05_03'>
+		<text><![CDATA[CBWFQ]]></text>
+	</component>
+
+	<component id='ID_s1_CB05_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 5--><!--ComboBox 6--><component id="ID_s1_txt06">
+		<text><![CDATA[6.<textformat blockindent='14'>Efectivo para los enlaces grandes que tienen poca demora y congestión mínima</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt06'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB06_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB06_02'>
+		<text><![CDATA[WFQ]]></text>
+	</component>
+
+	<component id='ID_s1_CB06_03'>
+		<text><![CDATA[CBWFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB06_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 6--><!--ComboBox 7--><component id="ID_s1_txt07">
+		<text><![CDATA[7.<textformat blockindent='14'>Aplica la prioridad o los pesos para identificar el tráfico y clasificarlo en <span class="align"> conversaciones o flujos</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt07'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB07_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB07_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB07_03'>
+		<text><![CDATA[CBWFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB07_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 7--><!--ComboBox 8--><component id="ID_s1_txt08">
+		<text><![CDATA[8.<textformat blockindent='14'>Un método de programación automatizada que proporciona la asignación del ancho<span class="align"> de banda justo a todo el tráfico de red</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt08'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB08_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB08_02'>
+		<text><![CDATA[WFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB08_03'>
+		<text><![CDATA[CBWFQ]]></text>
+	</component>
+
+	<component id='ID_s1_CB08_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 8--><!--ComboBox 9--><component id="ID_s1_txt09">
+		<text><![CDATA[9.<textformat blockindent='14'>Los paquetes que cumplen los criterios de coincidencia para una clase constituyen el <span class="align">tráfico para esa clase</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt09'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB09_01'>
+		<text><![CDATA[FIFO]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB09_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB09_03'>
+		<text><![CDATA[CBWFQ]]></text>
+	</component>
+
+	<component id='ID_s1_CB09_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 9--><!--ComboBox 10--><component id="ID_s1_txt10">
+		<text><![CDATA[10.<textformat blockindent='14'>Clasifica el tráfico en distintos flujos en base a la dirección del encabezado de <span class="align"> paquetes</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt10'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB10_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB10_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB10_03'>
+		<text><![CDATA[CBWFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB10_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 10--><!--ComboBox 11--><component id="ID_s1_txt11">
+		<text><![CDATA[11.<textformat blockindent='14'>Se reserva una cola FIFO para cada clase, y el tráfico que pertenece a una clase es <br><span class="align1">dirigido a la cola para dicha clase</span></textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt11'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB11_01'>
+		<text><![CDATA[FIFO]]></text>
+	</component>
+
+	<component id='ID_s1_CB11_02'>
+		<text><![CDATA[WFQ]]></text> 
+	</component>
+
+	<component id='ID_s1_CB11_03'>
+		<text><![CDATA[CBWFQ]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB11_04'>
+		<text><![CDATA[LLQ]]></text>
+	</component><!--End ComboBox 11--><!--End Slide 1--></textcomponents>

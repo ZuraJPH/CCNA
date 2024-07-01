@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.1 Tipos de LSA de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tipos de LSA de OSPF</h1>
+        <div>
+          <p>Las LSA son los bloques funcionales de la LSDB de OSPF. De manera individual, funcionan como registros de la base de datos y proporcionan detalles específicos de las redes OSPF. En conjunto, describen toda la topología de un área o una red OSPF. </p>
+          <p></p>
+          <p>Actualmente, las RFC para OSPF especifican hasta 11 tipos de LSA diferentes (figura 1). Sin embargo, cualquier implementación de OSPF multiárea debe admitir las primeras cinco LSA: de la LSA 1 a la LSA 5 (figura 2). Este tema se centra en estas cinco primeras LSA.</p>
+          <p></p>
+          <p>Todo enlace de router se define como un tipo de LSA. El LSA comprende un campo de ID de enlace que identifica, por número y máscara de red, el objeto al cual se conecta el enlace. Según el tipo, el ID de enlace tiene diferentes significados. Las LSA varían según cómo se generaron y propagaron dentro del dominio de routing. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> OSPFv3 incluye tipos de LSA adicionales. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una tabla que identifica todos los tipos de LSA de OSPF, de uno a once. La figura dos muestra una tabla que identifica los tipos de LSA de OSPF más comunes, de uno a cinco.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

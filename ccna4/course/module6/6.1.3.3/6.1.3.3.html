@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.3.3 Mecanismo de cola primero en entrar, primero en salir</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mecanismo de cola primero en entrar, primero en salir</h1>
+        <div>
+          <p>En su forma más simple, la puesta en cola FIFO, también conocida como asignación por orden de llegada (FCFS), implica el almacenamiento en búfer y el reenvío de paquetes en el orden de llegada.</p>
+          <p></p>
+          <p>FIFO no tiene concepto de prioridad ni clases de tráfico, por lo que no toma decisiones sobre la prioridad de los paquetes. Hay una sola cola, y todos los paquetes se tratan por igual. Los paquetes se envían a la interfaz en el orden en que llegaron, como se muestra en la figura. Aunque el tráfico sea más importante o sensible al tiempo según la clasificación de prioridad, observe que el tráfico se envía en el orden en que se recibe.</p>
+          <p></p>
+          <p>Cuando se utiliza FIFO, el tráfico importante o sensible al tiempo se puede descartar cuando se produce una congestión en el router o en la interfaz del switch. Cuando no hay otras estrategias de cola configuradas, todas las interfaces, excepto las interfaces seriales en E1 (2048 mbps) y debajo utilizan FIFO de manera predeterminada. (Las interfaces seriales en E1 y debajo utilizan WFQ por defecto).</p>
+          <p></p>
+          <p>FIFO, que es el método más rápido de espera, es eficaz para enlaces grandes que tienen poco retraso y congestión mínima. Si su enlace tiene una congestión muy pequeña, la cola FIFO puede ser la única cola que necesite usar.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un ejemplo de puesta en cola FIFO.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

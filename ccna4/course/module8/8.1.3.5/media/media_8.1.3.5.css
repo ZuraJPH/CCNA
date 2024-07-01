@@ -1,0 +1,101 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+#txt_q1
+{
+    margin-top: 14px;
+    line-height: 14px !important;
+}
+#txt_q3{
+    margin-top: 7px;
+    line-height: 14px !important;
+} 
+#txt_q2 {
+    margin-top: 6px;
+    line-height: 14px !important;
+}
+
+#txt_q4 {
+	 margin-top: 11px;
+    letter-spacing: -0.1px;
+    line-height: 12px!important;
+}
+
+#txt_q5 {
+	margin-top: 7px;
+    letter-spacing: -0.1px;
+    line-height: 12px!important;
+}
+
+#txt_q6 {
+    letter-spacing: -0.1px;
+    margin-top: 17px !important;
+    line-height: 12px!important;
+}
+
+.spacing {
+    line-height: 12px!important;
+}
+
+#txt_col1,
+#txt_col2,
+#txt_col6 {
+    margin-top: 16px;
+}
+
+#txt_col3,
+#txt_col5 {
+    margin-top: 5px;
+}
+
+#mc_table {
+    height: 390px !important;
+}
+
+@media only screen and (device-width: 768px) {
+    #txt_q1,
+    #txt_q2,
+    #txt_q3 {
+        line-height: 12px!important;
+    }
+    #txt_q4 {
+        letter-spacing: -0.1px;
+        line-height: 12px!important;
+    }
+    #txt_q5 {
+        letter-spacing: -0.1px;
+        line-height: 12px!important;
+    }
+    #txt_q6 {
+        letter-spacing: -0.1px;
+        margin-top: 6px!important;
+        line-height: 12px!important;
+    }
+    .spacing {
+        line-height: 12px!important;
+    }
+    #txt_q4 {
+        margin-top: 5px!important;
+    }
+    #txt_q1 {
+        margin-top: 28px !important;
+    }
+    #txt_q2 {
+        margin-top: 18px !important;
+    }
+    #txt_q3 {
+        margin-top: 23px !important;
+    }
+    #txt_q4 {
+        margin-top: 22px !important;
+    }
+    #txt_q5 {
+        margin-top: 13px !important;
+    }
+    #txt_q6 {
+        margin-top: 28px !important;
+    }
+    #mc_table {
+        height: 400px !important;
+    }
+}

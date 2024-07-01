@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.1.2 Comparación de EIGRP para IPv4 e IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comparación de EIGRP para IPv4 e IPv6</h1>
+        <div>
+          <p>La siguiente es una comparación de las principales características de EIGRP para IPv4 e EIGRP para IPv6:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Rutas anunciadas:</b> EIGRP para IPv4 anuncia redes IPv4, mientras que EIGRP para IPv6 anuncia prefijos IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Vector distancia:</b> EIGRP para IPv4 y para IPv6 son protocolos de routing por vector de distancias avanzados. Ambos protocolos usan las mismas distancias administrativas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Tecnología de convergencia:</b> tanto EIGRP para IPv4 como para IPv6 usan el algoritmo DUAL. Ambos protocolos usan las mismas técnicas y procesos de DUAL, incluidos sucesor, FS, FD y RD.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Métrica:</b> tanto EIGRP para IPv4 como para IPv6 usan ancho de banda, retraso, confiabilidad y carga para su métrica compuesta. Ambos protocolos de routing usan la misma métrica compuesta y, de manera predeterminada, usan solo ancho de banda y retraso. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de transporte:</b> el protocolo de transporte confiable (RTP) es responsable de la entrega garantizada de paquetes EIGRP a todos los vecinos para ambos protocolos, EIGRP para IPv4 y para IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mensajes de actualización:</b> tanto EIGRP para IPv4 como para IPv6 envían actualizaciones incrementales cuando el estado de un destino cambia. Los términos “parcial” y “limitada” se usan para hacer referencia a las actualizaciones de ambos protocolos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mecanismo de detección de vecinos:</b> tanto EIGRP para IPv4 como EIGRP para IPv6 utilizan un simple mecanismo de saludo para detectar routers vecinos y formar adyacencias. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Direcciones de origen y destino:</b> EIGRP para IPv4 envía mensajes a la dirección de multidifusión 224.0.0.10. Estos mensajes utilizan la dirección IPv4 de origen de la interfaz de salida. EIGRP para IPv6 envía sus mensajes a la dirección de multidifusión FF02::A. Los mensajes EIGRP para IPv6 se originan en la dirección link-local IPv6 de la interfaz de salida.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Autenticación</b>: EIGRP para IPv4 y EIGRP para IPv6 usan la autenticación Message Digest 5 (MD5). El EIGRP designado también admite el algoritmo más sólido SHA256.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ID del router:</b> EIGRP para IPv4 y EIGRP para IPv6 usan un número de 32 bits para la ID del router EIGRP. La ID de router de 32 bits se representa con una notación decimal con puntos que comúnmente se considera una dirección IPv4. Si el router EIGRP para IPv6 no está configurado con una dirección IPv4, se debe utilizar el comando<b> eigrp router-id </b>para configurar una ID de router de 32 bits. El proceso para determinar la ID del router es el mismo para ambos protocolos EIGRP, para IPv4 y para IPv6.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra una tabla que compara las características de EIGRP para IPv4 e IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

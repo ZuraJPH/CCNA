@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.2 Completado dinámico de la tabla de direcciones MAC de un switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Completado dinámico de la tabla de direcciones MAC de un switch</h1>
+        <div>
+          <p>Los switches usan direcciones MAC para dirigir las comunicaciones de red a través del switch al puerto correspondiente hacia el destino. Un switch se compone de circuitos integrados y del software complementario que controla las rutas de datos a través del switch. Para definir qué puerto usar para transmitir una trama, el switch primero debe saber qué dispositivos existen en cada puerto. A medida que el switch descubre la relación entre puertos y dispositivos, crea una tabla denominada “tabla de direcciones MAC” o “tabla de memoria de contenido direccionable” (CAM).  CAM es un tipo de memoria especial que se usa en las aplicaciones de búsqueda de alta velocidad.</p>
+          <p></p>
+          <p>Los switches LAN determinan cómo manejar las tramas de datos entrantes mediante una tabla de direcciones MAC. El switch genera la tabla de direcciones MAC mediante el registro de la dirección MAC de cada dispositivo conectado a cada uno de los puertos. El switch usa la información de la tabla de direcciones MAC para enviar las tramas destinadas a un dispositivo específico por el puerto que se asignó a ese dispositivo.</p>
+          <p></p>
+          <p>El siguiente proceso de dos pasos se realiza para cada trama de Ethernet que ingresa a un switch.</p>
+          <p></p>
+          <p>
+            <b>Paso 1: Aprendizaje: Examinar la dirección MAC de origen</b>
+          </p>
+          <p></p>
+          <p>Se revisa cada trama que ingresa a un switch para obtener información nueva. Esto se realiza examinando la dirección MAC de origen de la trama y el número de puerto por el que ingresó al switch:</p>
+          <p>
+            <ul>
+              <li>Si la dirección MAC de origen no existe, se la agrega a la tabla, junto con el número de puerto de entrada. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si la dirección MAC de origen existe, el switch actualiza el temporizador de actualización para esa entrada. De manera predeterminada, la mayoría de los switches Ethernet guardan una entrada en la tabla durante cinco minutos.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> si la dirección MAC de origen existe en la tabla, pero en un puerto diferente, el switch la trata como una entrada nueva. La entrada se reemplaza con la misma dirección MAC, pero con el número de puerto más actual.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: Reenvío: Examinar la dirección MAC de destino</b>
+          </p>
+          <p></p>
+          <p>Si la dirección MAC de destino es una dirección de unidifusión, el switch busca una coincidencia entre la dirección MAC de destino de la trama y una entrada de la tabla de direcciones MAC:</p>
+          <p>
+            <ul>
+              <li>Si la dirección MAC de destino está en la tabla, reenvía la trama por el puerto especificado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si la dirección MAC de destino no está en la tabla, el switch reenvía la trama por todos los puertos, excepto el de entrada. Esto se conoce como unidifusión. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> si la dirección MAC de destino es de difusión o de multidifusión, la trama también se envía por todos los puertos, excepto el de entrada.</p>
+          <p></p>
+          <p>En la ilustración, haga clic en Reproducir para ver una demostración de cómo dos switches conectados arman tablas de direcciones MAC.</p>
+          <p></p>
+          <p>Haga clic en <a href="../../files/5.2.1.4%20Video%20Slides%20-%20MAC%20Address%20Tables%20on%20Connected%20Switches.pdf" target="_blank">aquí</a> para descargar el video de diapositivas de la demostración.</p>
+          <p></p>
+          <p>Haga clic en <a href="../../files/5.2.1.4%20Video%20-%20MAC%20Address%20Tables%20on%20Connected%20Switches.pdf" target="_blank">aquí</a> para leer la transcripción de este video.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra tres PC. Cada PC está conectada a un switch. Se envía una trama desde una PC al switch. La figura dos muestra tres PC. Cada PC está conectada a un switch. Se envía una trama de PC 1 al switch. El texto de la figura establece que la tabla de MAC del switch ha creado una nueva entrada que indica que el puerto 1 aprendió la dirección MAC de PC 1, y que el resto de los puertos están vacíos. La figura tres muestra un switch que reenvía una trama por los puertos 2 y 3 a PC 3 y PC 2. El switch no conoce las direcciones mac de PC 3 y PC 2. La figura cuatro muestra cómo PC 3 responde enviando una trama al switch. La figura cinco muestra que el switch ha procesado una trama que recibió de PC 3. La ficha de direcciones MAC ahora contiene la dirección MAC de PC 3. La figura seis muestra una trama vuelve a PC 1 desde el switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

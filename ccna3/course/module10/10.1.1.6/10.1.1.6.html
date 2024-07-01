@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.6 Proceso de elección del DR/BDR predeterminado</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Proceso de elección del DR/BDR predeterminado</h1>
+        <div>
+          <p>¿Cómo se eligen el DR y el BDR? La decisión de elección del DR y el BDR OSPF se hace según los siguientes criterios, en orden secuencial:</p>
+          <p></p>
+          <p>1. Los routers en la red seleccionan como DR al router con la prioridad de interfaz más alta. El router con la segunda prioridad de interfaz más alta se elige como BDR. La prioridad puede configurarse para que sea cualquier número entre 0 y 255. A mayor prioridad, mayores serán las probabilidades de que se elija al router como DR. Si la prioridad se establece en 0, el router no puede convertirse en el DR. La prioridad predeterminada de las interfaces multiacceso de difusión es 1. Por lo tanto, a menos que se configuren de otra manera, todos los routers tienen un mismo valor de prioridad y deben depender de otro método de diferenciación durante la elección del DR/BDR.</p>
+          <p>2. Si las prioridades de interfaz son iguales, se elige al router con la ID más alta como DR. El router con la segunda ID de router más alta es el BDR.</p>
+          <p></p>
+          <p>Recuerde que la ID del router se determina de tres maneras:</p>
+          <p>
+            <ul>
+              <li>La ID del router se puede configurar manualmente.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si no hay una ID de router configurada, la dirección IPv4 de loopback más alta determina la ID del router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si no hay interfaces de loopback configuradas, la ID del router la determina la dirección IPv4 activa más alta.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: En una red IPv6, si no hay direcciones IPv4 configuradas en el router, la ID del router debe configurarse manualmente con el comando<span class="cmd"><b></b></span><b>router-id </b><i>rid</i><span class="cmd"><i></i></span>; de lo contrario, OSPFv3 no se inicia.</p>
+          <p></p>
+          <p>En la ilustración, todas las interfaces Ethernet del router tienen una prioridad determinada de 1. Como resultado, según los criterios de selección descritos anteriormente, para seleccionar el DR y el BDR se usa la ID del router OSPF. El R3, con la ID de router más alta, se convierte en el DR, y el R2, que tiene la segunda ID de router más alta, se convierte en el BDR. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> las interfaces seriales tienen la prioridad predeterminada establecida en 0; por eso, no seleccionan DR ni BDR.</p>
+          <p></p>
+          <p>El proceso de elección del DR y el BDR ocurre en cuanto el primer router con una interfaz con OSPF habilitado se activa en la red multiacceso. Esto puede suceder cuando se encienden los routers OSPF preconfigurados o cuando OSPF se activa en la interfaz. El proceso de elección sólo toma unos pocos segundos. Si no terminaron de arrancar todos los routers en la red multiacceso, es posible que un router con una ID de router más baja se convierta en el DR. (Puede ser un router más económico que demore menos en arrancar). </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran tres routers conectados a un switch.  El router dos es la DR y el router tres es el BDR.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

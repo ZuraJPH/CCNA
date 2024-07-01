@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.1 Introducción a PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a PPP</h1>
+        <div>
+          <p>Recuerde que HDLC es el método de encapsulamiento serial predeterminado al conectar dos routers Cisco. Con un campo agregado de tipo de protocolo, la versión de HDLC de Cisco es exclusiva. Por eso, HDLC de Cisco solo puede funcionar con otros dispositivos de Cisco. Sin embargo, cuando existe la necesidad de conectarse a un router que no es de Cisco, se debe usar la encapsulación PPP, como se muestra en la ilustración.</p>
+          <p></p>
+          <p>La encapsulación PPP se diseñó cuidadosamente para conservar la compatibilidad con el hardware más usado que la admite. PPP encapsula tramas de datos para transmitirlas a través de enlaces físicos de capa 2. PPP establece una conexión directa mediante cables seriales, líneas telefónicas, líneas troncales, teléfonos celulares, enlaces de radio especializados o enlaces de fibra óptica. </p>
+          <p></p>
+          <p>PPP contiene tres componentes principales: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Entramado del estilo de HDLC para transportar paquetes multiprotocolo a través de enlaces punto a punto. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protocolo de control de enlace (LCP) extensible para establecer, configurar y probar la conexión de enlace de datos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Familia de protocolos de control de red (NCP) para establecer y configurar distintos protocolos de capa de red. PPP permite el uso simultáneo de varios protocolos de capa de red. Los NCP más comunes son el protocolo de control IPv4 y el protocolo de control IPv6. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Otros NCP incluyen el protocolo de control Appletalk, el protocolo de control Novell IPX, el protocolo de control de Cisco Systems, el protocolo de control SNA y el protocolo de control de compresión.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran dos topologías.  La primera topología consta de dos routers conectados por un enlace WAN que usa HDLC, que es el método de encapsulamiento predeterminado en un router Cisco.  La segunda topología también posee dos routers conectados por un enlace WAN, pero esta conexión utiliza un enlace PPP, ya que al menos un router no es de Cisco.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

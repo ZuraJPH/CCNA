@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.3.3 La tabla de routing EIGRP para IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La tabla de routing EIGRP para IPv6</h1>
+        <div>
+          <p>Al igual que con cualquier protocolo de routing, el objetivo es completar la tabla de routing IP con rutas a redes remotas y las mejores rutas para llegar a aquellas redes. Como con IPv4, es importante analizar la tabla de routing IPv6 y determinar si está completada con las rutas correctas. </p>
+          <p></p>
+          <p>La tabla de routing IPv6 se examina mediante el comando <b>show ipv6 route</b>. Las rutas EIGRP para IPv6 se muestran en la tabla de routing con una D, al igual que las rutas EIGRP para IPv4 en la tabla de routing IPv4.</p>
+          <p></p>
+          <p>En la figura 1, se muestra que el R1 tiene instaladas tres rutas EIGRP a redes IPv6 remotas en su tabla de routing IPv6:</p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:2::/64 a través del R3 (FE80::3), mediante su interfaz serial 0/0/1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:3::/64 a través del R3 (FE80::3), mediante su interfaz Serial 0/0/1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:A002::/64 a través del R3 (FE80::3), mediante su interfaz Serial 0/0/1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Las tres rutas utilizan al R3 como router de siguiente salto (sucesor). Observe que en la tabla de routing se utiliza la dirección link-local como la dirección del siguiente salto. Debido a que en cada router se configuraron todas las interfaces con una dirección link-local única y distinguible, es fácil reconocer que el router de siguiente salto a través de FE80::3 es el router R3.</p>
+          <p></p>
+          <p>En la figura 2, se muestra la tabla de routing IPv6 del R2. </p>
+          <p></p>
+          <p>En la figura 3, se muestra la tabla de routing del R3. Observe que el R3 tiene dos rutas del mismo costo a 2001:DB8:CAFE:A001::/64. Una ruta es a través del R1 en FE80::1, y la otra es a través del R2 en FE80::2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la salida del comando “show ipv6 route” en el router uno.  Las rutas EIGRP aparecen resaltadas en naranja para indicar que utilizan direcciones IPv6. La figura dos muestra la salida del comando “show ipv6 route” en el router dos.  Las rutas EIGRP aparecen resaltadas en naranja para indicar que utilizan direcciones IPv6. La figura tres muestra la salida del comando “show ipv6 route” en el router tres.  Las rutas EIGRP aparecen resaltadas en naranja para indicar que utilizan direcciones IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

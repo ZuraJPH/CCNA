@@ -1,0 +1,50 @@
+﻿<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Servicios de computación en la nube</b>]]></text>
+	</component>
+
+	<component id="ID_s1_header01">
+		<text><![CDATA[<font color="#FFFFFF">SaaS</font>]]></text>
+	</component>
+
+	<component id="ID_s1_header02">
+		<text><![CDATA[<font color="#FFFFFF">PaaS</font>]]></text>
+	</component>
+
+	<component id="ID_s1_header03">
+		<text><![CDATA[<font color="#FFFFFF">IaaS</font>]]></text>
+	</component>
+
+	<component id="ID_s1_header04">
+		<text><![CDATA[<font color="#FFFFFF">ITaaS</font>]]></text>
+	</component>
+	
+	<component id="ID_titleTxt01">
+		<text><![CDATA[Software como servicio]]></text>
+	</component>
+	<component id="ID_bodyTxt01">
+		<text><![CDATA[Aplicaciones entregadas a través de la Web a los usuarios finales.]]></text>
+	</component>
+
+	<component id="ID_titleTxt02">
+		<text><![CDATA[Plataforma como servicio (PaaS, Platform as a Service)]]></text>
+	</component>
+	<component id="ID_bodyTxt02">
+		<text><![CDATA[Herramientas y servicios utilizados para distribuir las aplicaciones.]]></text>
+	</component>
+	
+	<component id="ID_titleTxt03">
+		<text><![CDATA[Infraestructura como servicio]]></text>
+	</component>
+	<component id="ID_bodyTxt03">
+		<text><![CDATA[Hardware y software para alimentar los servidores, el almacenamiento, las redes y los sistemas operativos.]]></text>
+	</component>
+	
+	<component id="ID_titleTxt04">
+		<text><![CDATA[TI como servicio]]></text>
+	</component>
+	<component id="ID_bodyTxt04">
+		<text><![CDATA[Aplicaciones, plataformas e infraestructura de soporte para los profesionales de TI.]]></text>
+	</component>
+
+</textcomponents>

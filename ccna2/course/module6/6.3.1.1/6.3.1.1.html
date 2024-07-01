@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.1 ¿Qué es el routing entre VLAN?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>¿Qué es el routing entre VLAN?</h1>
+        <div>
+          <p>Las VLAN se utilizan para segmentar redes conmutadas. Los switches de capa 2, tales como los de la serie Catalyst 2960, se pueden configurar con más de 4000 VLAN. Una VLAN es un dominio de difusión, por lo que las computadoras en VLAN separadas no pueden comunicarse sin la intervención de un dispositivo de routing. Los switches de capa 2 tienen una funcionalidad muy limitada en cuanto a IPv4 e IPv6, y no pueden realizar las funciones de routing dinámico de los routers. Si bien los switches de capa 2 adquieren cada vez más funcionalidad de IP, como la capacidad de realizar routing estático, esto no es suficiente para abordar esta gran cantidad de VLAN.</p>
+          <p></p>
+          <p>Se puede usar cualquier dispositivo que admita routing de capa 3, como un router o un switch multicapa, para lograr la funcionalidad de routing necesaria. Independientemente del dispositivo empleado, el proceso de reenvío del tráfico de la red de una VLAN a otra mediante routing se conoce como “routing entre VLAN”. </p>
+          <p></p>
+          <p>Hay tres opciones para el routing entre VLAN:</p>
+          <p>
+            <ul>
+              <li>Routing entre VLAN antiguo </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Router-on-a-stick</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Switching de capa 3 mediante las SVI</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Este capítulo se centra en las primeras dos opciones. El switching de capa 3 mediante las SVI excede el alcance de este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología con dos hosts conectados a un switch. Luego el switch se conecta a un router con dos cables. Un host se conecta a través de una subred en la VLAN 10 y el segundo host se conecta a través de una segunda subred en la VLAN 30.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

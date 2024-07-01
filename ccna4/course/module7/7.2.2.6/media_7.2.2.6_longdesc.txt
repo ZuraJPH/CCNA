@@ -1,0 +1,1 @@
+La figura muestra un hipervisor de tipo 2, el enfoque de host. El servidor está compuesto por una capa de hardware, sobre esta capa está el sistema operativo del host, sobre ésta está el hipervisor y luego están los tres sistemas operativos que se muestran: Windows, Linux y UNIX.

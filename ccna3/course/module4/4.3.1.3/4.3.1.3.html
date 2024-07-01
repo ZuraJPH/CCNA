@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.1.3 Pasos para la conmutación por falla del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pasos para la conmutación por falla del router</h1>
+        <div>
+          <p>Cuando falla el router activo, el protocolo de redundancia hace que el router de reserva asuma el nuevo rol de router activo. Estos son los pasos que se llevan a cabo cuando falla el router activo:</p>
+          <p></p>
+          <p>1. El router de reserva deja de recibir los mensajes de saludo del router de reenvío.</p>
+          <p></p>
+          <p>2. El router de reserva asume la función del router de reenvío.</p>
+          <p></p>
+          <p>3. Debido a que el nuevo router de reenvío asume tanto la dirección IPv4 como la dirección MAC del router virtual, los dispositivos host no perciben ninguna interrupción en el servicio.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran cuatro PC conectadas a una LAN que, a su vez, se conecta a dos routers físicos y a uno virtual.  El enlace al router de la izquierda se desconecta y el router virtual redirige el tráfico al router de la derecha.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

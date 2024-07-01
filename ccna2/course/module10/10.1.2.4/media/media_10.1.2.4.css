@@ -1,0 +1,11 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#txt_q6
+{
+	line-height: 10px !important;
+	margin-top: 3px !important;
+	
+}

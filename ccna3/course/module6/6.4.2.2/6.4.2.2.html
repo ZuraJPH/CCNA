@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.2.2 Configuración de direcciones link-local IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de direcciones link-local IPv6</h1>
+        <div>
+          <p>Las direcciones link-local se crean de manera automática cuando se asigna una dirección IPv6 de unidifusión global a la interfaz. No se requieren direcciones de unidifusión global en una interfaz, pero sí se requieren direcciones link-local IPv6, como se muestra en la figura 1.</p>
+          <p></p>
+          <p>A menos que se configuren manualmente, los routers Cisco crean la dirección link-local utilizando el prefijo FE80::/10 y el proceso EUI-64. EUI-64 implica usar la dirección MAC de Ethernet de 48 bits, insertar FFFE en el medio e invertir el séptimo bit. Para las interfaces seriales, Cisco usa la dirección MAC de una interfaz Ethernet. Un router con varias interfaces seriales puede asignar la misma dirección link-local a cada interfaz IPv6, porque las direcciones link-local solo necesitan ser locales en el enlace.</p>
+          <p></p>
+          <p>Las direcciones link-local creadas con el formato EUI-64 o, en algunos casos, con ID de interfaces aleatorias, hacen que resulte difícil reconocer y recordar esas direcciones. Debido a que los protocolos de routing IPv6 utilizan direcciones link-local IPv6 para la asignación de direcciones de unidifusión y la información de dirección de siguiente salto en la tabla de routing, habitualmente se busca que sea una dirección fácil de reconocer. Configurar la dirección link-local manualmente permite crear una dirección reconocible y más fácil de recordar.</p>
+          <p></p>
+          <p>Las direcciones link-local pueden configurarse manualmente mediante el mismo comando de interfaz utilizado para crear las direcciones IPv6 de unidifusión globales, pero con diferentes parámetros:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 address</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>link-local-address</i>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <b>link-local</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Una dirección link-local tiene un prefijo dentro del rango de FE80 a FEBF. Cuando una dirección comienza con este hexteto (segmento de 16 bits), la palabra clave <b>link-local</b> debe escribirse después de la dirección. </p>
+          <p></p>
+          <p>En la figura 2, se muestra la configuración de una dirección link-local mediante el comando<b> ipv6 address </b>del modo de configuración de interfaz. La dirección link-local FE80::1 se utiliza para que sea posible reconocer fácilmente que pertenece al router R1. Se configura la misma dirección link-local IPv6 en todas las interfaces del R1. Se puede configurar FE80::1 en cada enlace, debido a que solamente tiene que ser única en ese enlace.</p>
+          <p></p>
+          <p>De manera similar al R1, en la figura 3 el router R2 se configura con FE80::2 como la dirección link-local IPv6 en todas sus interfaces.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en la figura 4 para configurar FE80::3 como la dirección link-local en todas las interfaces del R3.</p>
+          <p></p>
+          <p>Como se muestra en la figura 5, el comando<b> show ipv6 interface brief </b>se usa para verificar las direcciones link-local IPv6 y de unidifusión global en todas las interfaces. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP; la ruta interna aparece resaltada, menos el enlace entre el router dos y el ISP.  Se utilizan direcciones de la red LAN de IPv6. En la figura dos, se muestra la sintaxis para configurar una dirección link-local IPv6 en las interfaces del router uno. En la figura tres, se muestra la sintaxis para configurar una dirección link-local IPv6 en las interfaces del router dos. La figura cuatro corresponde a una actividad interactiva que permite que el estudiante configure las interfaces en el router tres con direcciones link-local. En la figura cinco, se muestra la salida que genera el comando “show ipv6 interface brief” en el router uno con las direcciones link-local resaltadas para cada interfaz.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

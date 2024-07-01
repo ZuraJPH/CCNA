@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.6 Ataques de DHCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ataques de DHCP</h1>
+        <div>
+          <p>DHCP es el protocolo que asigna automáticamente una dirección IP válida de un pool de DHCP a un host. </p>
+          <p></p>
+          <p>Hay dos tipos de ataques de DHCP que pueden dirigirse a una red conmutada: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ataque de suplantación de DHCP</b>: un atacante configura un servidor DHCP falso en la red para que envíe direcciones IP a los clientes. Este tipo de ataque obliga a los clientes a usar un servidor falso de sistema de nombres de dominio (DNS) y una computadora que está bajo el control del atacante como gateway predeterminado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ataque por agotamiento de DHCP</b>: un atacante satura el servidor DHCP con solicitudes de DHCP falsas y, con el tiempo, ocupa todas las direcciones IP disponibles del grupo de servidores DHCP. Una vez que se emiten estas direcciones IP, el servidor no puede emitir más direcciones; esta situación produce un ataque por denegación de servicio (DoS), ya que los nuevos clientes no pueden obtener acceso a la red. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Un ataque de DoS es todo ataque que se use para sobrecargar dispositivos y servicios de red específicos con tráfico ilegítimo, lo que evita que el tráfico legítimo llegue a dichos recursos.</p>
+          <p></p>
+          <p>El agotamiento de DHCP suele usarse antes de los ataques de suplantación de DHCP para denegar el servicio al servidor DHCP legítimo. Esto facilita la introducción de un servidor DHCP falso en la red.</p>
+          <p></p>
+          <p>Configure la detección DHCP y la seguridad de puertos en el switch para mitigar los ataques de DHCP. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una red de tres switches, una computadora cliente y un servidor DHCP.  Un atacante inserta un servidor DHCP dudoso en la red para tratar de iniciar un ataque por suplantación de DHCP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

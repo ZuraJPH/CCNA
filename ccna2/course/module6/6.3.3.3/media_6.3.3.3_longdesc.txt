@@ -1,0 +1,1 @@
+La figura muestra una topología de router-on-a-stick y los pasos necesarios para configurar las subinterfaces y el encapsulamiento de enlaces troncales en un router que tiene una sola conexión física a un switch.

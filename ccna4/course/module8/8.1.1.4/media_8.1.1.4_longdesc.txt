@@ -1,0 +1,1 @@
+La figura 1 muestra una red compleja con tres armarios de cableado y las instalaciones del ISP.  El diagrama muestra las interfaces y direcciones IP de todos los dispositivos.  Se resaltan los dispositivos y puertos de interés. La figura 2 muestra varios gráficos con tendencias de uso de CPU.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.1 Análisis de la topología STP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Análisis de la topología STP</h1>
+        <div>
+          <p>Para analizar la topología STP, siga estos pasos:</p>
+          <p></p>
+          <p>
+            <b>Paso 1:</b> Descubra la topología de capa 2. Utilice la documentación de red, si existe, o utilice el comando <b>show cdp neighbors</b> para descubrir la topología de capa 2.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: </b>Después de descubrir la topología de capa 2, aplique sus conocimientos de STP para determinar la ruta de capa 2 esperada. Es necesario saber qué switch es el puente raíz.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: </b>Utilice el comando <b>show spanning-tree vlan</b> para determinar qué switch es el puente raíz.</p>
+          <p></p>
+          <p>
+            <b>Paso 4: </b>Utilice el comando <b>show spanning-tree vlan</b> en todos los switches para descubrir cuáles son los puertos que están en estado de bloqueo o de reenvío, y para confirmar la ruta de capa 2 esperada.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un diagrama de flujo para analizar la topología de STP. El diagrama de flujo corresponde a los pasos del texto que figura en esta página.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

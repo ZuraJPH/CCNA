@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.4.1 Introducción a DTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a DTP</h1>
+        <div>
+          <p>Las interfaces troncales Ethernet admiten diferentes modos de enlace troncal. Una interfaz se puede establecer como troncal o no troncal, o esta puede negociar el enlace troncal con la interfaz vecina. La negociación de enlaces troncales entre dispositivos de red la maneja el protocolo de enlace troncal dinámico (DTP), que solo funciona de punto a punto.</p>
+          <p></p>
+          <p>DTP es un protocolo exclusivo de Cisco que se habilita de manera automática en los switches de las series Catalyst 2960 y Catalyst 3560. Los switches de otros proveedores no admiten el DTP. DTP maneja la negociación de enlaces troncales solo si el puerto del switch vecino está configurado en un modo de enlace troncal que admite DTP.</p>
+          <p></p>
+          <p>
+            <b>Precaución:</b> algunos dispositivos de interredes pueden reenviar tramas DTP de manera incorrecta, lo que puede causar errores de configuración. Para evitar esto, desactive DTP en las interfaces de los switches Cisco conectadas a dispositivos que no admiten DTP.</p>
+          <p></p>
+          <p>La configuración predeterminada de DTP para los switches Cisco Catalyst 2960 y 3560 es dinámico automático, como se muestra en la figura 1, en la interfaz F0/3 de los switches S1 y S3. </p>
+          <p></p>
+          <p>Para habilitar los enlaces troncales desde un switch Cisco hacia un dispositivo que no admite DTP, utilice los comandos <b>switchport mode trunk</b> y <b>switchport nonegotiate</b> del modo de configuración de interfaz. Esto hace que la interfaz se convierta en un enlace troncal, pero sin que genere tramas DTP.</p>
+          <p></p>
+          <p>En la figura 2, el enlace entre los switches S1 y S2 se convierte en un enlace troncal porque los puertos F0/1 de los switches S1 y S2 se configuraron para omitir todos los anuncios de DTP, así como para aparecer y permanecer en modo de puerto de enlace troncal. Los puertos F0/3 de los switches S1 y S3 se establecieron en modo dinámico automático, de modo que el resultado de la negociación es el estado de modo de acceso. Esto genera un enlace troncal inactivo. A fin de configurar un puerto para que esté en modo de enlace troncal, utilice el comando <b>switchport mode trunk</b>. No existe ambigüedad sobre el estado en que se encuentra el enlace troncal: este se encuentra siempre activo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el switch uno conectado a los switches dos y tres mediante enlaces troncales.  Los puertos de switch tienen llamadas que indican el modo en el que están configurados.  Los dos puertos para el enlace entre los switches uno y dos se configuran como puertos de enlace troncal.  Los puertos para el enlace entre los switches uno y tres se configuran como puertos en modo dinámico automático. En la figura dos, se muestra la misma LAN. El enlace entre los switches uno y dos formará un enlace troncal, ya que ambos puertos están configurados en modo de enlace troncal.  El enlace entre los switches uno y tres no formará un enlace troncal, ya que ambos están configurados en modo dinámico automático.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

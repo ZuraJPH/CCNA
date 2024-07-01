@@ -1,0 +1,8 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Configuración del encapsulamiento de HDLC</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<textformat blockindent="-14"><ul><li>Habilitación de la encapsulación HDLC.</li><li>HDLC es la encapsulación predeterminada en las interfaces seriales.</li></ul><textformat>]]></text> 
+  </component>
+</textcomponents>

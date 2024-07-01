@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.2 Resolución de problemas de la capa de enlace de datos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de la capa de enlace de datos</h1>
+        <div>
+          <p>La resolución de problemas de capa 2 puede ser un proceso desafiante. La configuración y el funcionamiento de estos protocolos son fundamentales para crear redes con ajustes precisos y en condiciones de funcionamiento. Los problemas de capa 2 causan síntomas específicos que, al reconocerse, ayudan a identificar el problema rápidamente. </p>
+          <p></p>
+          <p>Los síntomas frecuentes de los problemas de red en la capa de enlace de datos incluyen los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Falta de funcionalidad o conectividad en la capa de red o en las capas superiores:</b> algunos problemas de capa 2 pueden detener el intercambio de tramas a través de un enlace, mientras que otros solo provocan un deterioro del rendimiento de la red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Funcionamiento de la red por debajo de los niveles de rendimiento de línea de base:</b> en una red, pueden ocurrir dos tipos de funcionamiento deficiente en la capa 2. En primer lugar, que las tramas elijan una ruta deficiente al destino, pero lleguen. En este caso, la red podría experimentar un uso de ancho de banda elevado en enlaces que no deberían tener ese nivel de tráfico.  En segundo lugar, que se descarten algunas tramas. Estos problemas se pueden identificar mediante las estadísticas del contador de errores y los mensajes de error de la consola en el switch o el router. En un entorno Ethernet, un ping extendido o continuo también revela si se descartan tramas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Difusiones excesivas:</b> los sistemas operativos usan difusiones y multidifusiones ampliamente para detectar los servicios de red y otros hosts. Por lo general, las difusiones excesivas son el resultado de una de las siguientes situaciones: aplicaciones programadas o configuradas incorrectamente, grandes dominios de difusión de capa 2 o problemas de red subyacentes, como bucles de STP o rutas inestables.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mensajes de la consola:</b> a veces, un router reconoce que se produjo un problema de capa 2 y envía mensajes de alerta a la consola. Generalmente, un router hace esto cuando detecta un problema con la interpretación de las tramas entrantes (problemas de encapsulación o entramado) o cuando se esperan keepalives pero no llegan. El mensaje de la consola más común que indica que existe un problema de Capa 2 es un mensaje que indica que el protocolo de línea está desactivado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los problemas en la capa de enlace de datos que con frecuencia provocan problemas de conectividad o rendimiento de la red incluyen los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Errores de encapsulación:</b> un error de encapsulación ocurre porque los bits que el emisor coloca en un campo determinado no son los que el receptor espera ver. Esta condición se produce cuando la encapsulación en un extremo de un enlace WAN está configurada de manera diferente de la encapsulación que se usa en el otro extremo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Errores de asignación de direcciones</b>: en las topologías, como punto a multipunto o Ethernet de transmisión, es vital asignar una dirección de destino de capa 2 correcta a la trama. Esto asegura su llegada al destino correcto. Para lograr esto, el dispositivo de red debe encontrar la coincidencia entre una dirección de destino de capa 3 y la dirección de capa 2 correcta mediante mapas estáticos o dinámicos. En un entorno dinámico, la asignación de información de capa  2 y capa 3 puede fallar porque los dispositivos pueden haber estado configurados específicamente para no responder a las solicitudes de ARP, la información de capa 2 o capa 3 almacenada en caché puede haber cambiado físicamente, o las respuestas de ARP no válidas se reciben por un error de configuración o un ataque a la seguridad.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Errores de entramado:</b> las tramas generalmente operan en grupos de bytes de 8 bits. Cuando una trama no termina en un límite de bytes de 8 bits, se produce un error de entramado. Cuando sucede esto, el receptor puede tener problemas para determinar dónde termina una trama y dónde comienza la otra. Un número excesivo de tramas no válidas puede impedir el intercambio de keepalives válidos. Los errores de encuadre pueden deberse al ruido en la línea serial, un cable mal diseñado (demasiado largo o mal blindado), una falla de NIC, una diferencia entre dúplex o un error de configuración de reloj de línea de unidad de servicio de canal (CSU).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Fallas o bucles de STP:</b> el objetivo del protocolo de árbol de expansión (STP) es convertir una topología física redundante en una topología de árbol mediante el bloqueo de los puertos redundantes. La mayoría de los problemas de STP se relacionan con el reenvío de bucles, que se produce cuando no se bloquean puertos en una topología redundante y el tráfico se reenvía en círculos indefinidamente, lo que implica una saturación excesiva provocada por una tasa elevada de cambios en la topología STP. En una red configurada correctamente, un cambio de topología debería ser un evento inusual. Cuando un enlace entre dos switches se activa o se desactiva, llegado el momento se produce un cambio de topología cuando el estado de STP del puerto cambia por hacia reenvío o desde reenvío. Sin embargo, cuando un puerto es inestable (oscila entre los estados activo y inactivo), provoca cambios de topología repetitivos y saturación, u ocasiona la convergencia lenta o reiterada de STP. Esto puede ser el resultado de una incompatibilidad entre la topología real y la topología registrada, un error de configuración, como una configuración incoherente de los temporizadores de STP, una sobrecarga de CPU de switch durante la convergencia o un defecto de software.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el modelo de OSI con los síntomas y las causas en la capa de enlace de datos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

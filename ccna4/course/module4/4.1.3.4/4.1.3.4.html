@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.3.4 Verificación de listas ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de listas ACL</h1>
+        <div>
+          <p>Como se muestra en la figura 1, el comando <b>show ip interface</b> se utiliza para verificar la ACL en la interfaz. El resultado de este comando incluye el número o el nombre de la lista de acceso y el sentido en el que se aplicó la ACL. El resultado muestra que la lista de acceso 1 se aplica a la interfaz de salida S0/0/0 del router R1 y que la lista de acceso NO_ACCESS se aplica a la interfaz g0/0, también en sentido de salida.</p>
+          <p></p>
+          <p>En el ejemplo de la figura 2, se muestra el resultado de emitir el comando <b>show access-lists</b> en el router R1. Para ver una lista de acceso individual, utilice el comando <b>show access-lists</b> seguido del número o el nombre de la lista de acceso. Es posible que las instrucciones de NO_ACCESS se vean extrañas. Observe que el número de secuencia 15 se muestra antes que el número de secuencia 10. Esto se debe al proceso interno del router y se analizará más adelante en esta sección.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el uso del comando show i.p. interface para mostrar cualquier A.C.L. aplicada.  La figura muestra el resultado del comando show i.p. interface serial cero barra cero barra cero. Se resalta la siguiente línea: outgoing access list is 1.  El comando se ejecuta nuevamente para la interfaz de Gigabit Ethernet y el resultado de la lista de acceso saliente es no guión bajo access list, que es una A.C.L con nombre. La figura dos muestra el resultado del comando show access guión lists.  Se mostrarán los contenidos totales de todo las A.C.L en un router, pero no especifica donde se ubica cada A.C.L.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

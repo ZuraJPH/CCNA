@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.4 ID de router EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ID de router EIGRP</h1>
+        <div>
+          <p>La ID de router EIGRP se utiliza para identificar de forma única a cada router en el dominio de routing EIGRP. </p>
+          <p></p>
+          <p>La ID de router se utiliza en los protocolos de routing EIGRP y OSPF. Sin embargo, el rol de la ID de router es más importante en OSPF. En las implementaciones de IPv4 EIGRP, el uso de la ID del router no es tan evidente. EIGRP para IPv4 utiliza la ID de router de 32 bits para identificar el router de origen para la redistribución de rutas externas. La necesidad de una ID de router es más evidente en el análisis de EIGRP para IPv6. Mientras que la ID del router es necesaria para la redistribución, los detalles de la redistribución de EIGRP exceden el ámbito de este currículo. Para la finalidad de este currículo, solo es necesario comprender qué es la ID de router y cómo se determina.</p>
+          <p></p>
+          <p>Para determinar la ID de router, un router Cisco IOS utilizará estos tres criterios en orden:</p>
+          <p></p>
+          <p>1. Usar la dirección configurada con el comando<b> eigrp router-id </b><i>dirección-ipv4 </i>del modo de configuración del router.</p>
+          <p></p>
+          <p>2. Si la ID de router no está configurada, elija la dirección IPv4 más alta de cualquiera de sus interfaces loopback.</p>
+          <p></p>
+          <p>3. Si no se configuró ninguna interfaz loopback, elija la dirección IPv4 activa más alta de cualquiera de sus interfaces físicas.</p>
+          <p></p>
+          <p>Si el administrador de red no configura explícitamente una ID de router mediante el uso del comando<b> eigrp router-id</b>, EIGRP genera su propia ID de router a partir de una dirección de loopback o una dirección IPv4 física. Una dirección de loopback es una interfaz virtual y se encuentra en estado up de manera automática cuando está configurada. No es necesario que la interfaz esté habilitada para EIGRP, lo que significa que no se necesita que esté incluida en uno de los comandos <b>network</b> de EIGRP. Sin embargo, la interfaz debe estar en el estado up/up.</p>
+          <p></p>
+          <p>Según el criterio descrito anteriormente, en la figura se muestran las ID de router EIGRP predeterminadas, que se determinan sobre la base de la dirección IPv4 activa más alta de los routers.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El comando<b> eigrp router-id </b>se utiliza para configurar la ID del router. Algunas versiones del IOS aceptan el comando<b> router-id</b>, sin tener que especificar<b> eigrp</b> primero. Sin embargo, la configuración en ejecución muestra<b> eigrp router-id</b>, independientemente de cuál sea el comando que se utiliza.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos y el ISP. Hay una leyenda para cada router que incluye la ID de router.  La ID de router será más importante con la implementación de IPv6 de EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

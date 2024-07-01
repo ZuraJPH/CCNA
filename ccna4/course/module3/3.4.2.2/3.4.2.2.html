@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.2.2 Verificar GRE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificar GRE</h1>
+        <div>
+          <p>Existen varios comandos que se pueden utilizar para controlar los túneles GRE y resolver los problemas relacionados. Para determinar si la interfaz de túnel está activa o inactiva, utilice el comando <b>show ip interface brief</b>, el cual se muestra en la figura 1.</p>
+          <p></p>
+          <p>Para verificar el estado de un túnel GRE, utilice el comando <b>show interface tunnel</b>. El protocolo de línea en una interfaz de túnel GRE permanece activo mientras haya una ruta al destino del túnel. Antes de implementar un túnel GRE, la conectividad IP ya debe estar operativa entre las direcciones IP de las interfaces físicas en extremos opuestos del túnel GRE potencial. El protocolo de transporte de túnel se muestra en el resultado, que también aparece en la figura 1.</p>
+          <p></p>
+          <p>Si también se configuró OSPF para intercambiar rutas a través del túnel GRE, verifique que se haya establecido una adyacencia OSPF a través de la interfaz de túnel con el comando <b>show ip ospf neighbor</b>. En la figura 2, observe que la dirección de interconexión para el vecino OSPF está en la red IP creada para el túnel GRE.</p>
+          <p></p>
+          <p>En la figura 3, utilice el verificador de sintaxis para configurar y verificar un túnel GRE en el R2 seguido del R1.</p>
+          <p></p>
+          <p>GRE se considera una VPN porque es una red privada que se crea con tunneling a través de una red pública. Mediante la encapsulación, un túnel GRE crea un enlace virtual punto a punto a los routers Cisco en puntos remotos a través de una internetwork IP. Las ventajas de GRE son que se puede utilizar para canalizar el tráfico que no es IP a través de una red IP, lo que permite la expansión de la red mediante la conexión de subredes multiprotocolo en un entorno de backbone de protocolo único. Además, GRE admite el tunneling de multidifusión IP. Esto significa que se pueden utilizar los protocolos de routing a través del túnel, lo que habilita el intercambio dinámico de información de routing en la red virtual. Por último, es habitual crear túneles GRE IPv6 a través de IPv4, donde IPv6 es el protocolo encapsulado e IPv4 es el protocolo de transporte. En el futuro, es probable que estas funciones se inviertan cuando IPv6 pase a cumplir la función de protocolo IP estándar.</p>
+          <p></p>
+          <p>Sin embargo, GRE no proporciona cifrado ni ningún otro mecanismo de seguridad. Por lo tanto, los datos que se envían a través de un túnel GRE no son seguros. Si se necesita una comunicación de datos segura, se deben configurar redes VPN con IPsec o SSL.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra los comandos que se usan para verificar que el túnel GRE esté activo (show ip interface brief e interface Tunnel 0). La figura 2 muestra que es importante verificar la adyacencia de los vecinos del protocolo de routing cuando se utiliza un túnel GRE; el ejemplo dado para el router R1 es show ip ospf neighbor. La figura 3 es el Syntax Checker para configurar y verificar un túnel GRE. Se utiliza la misma topología que en las figuras anteriores y muestra la topología de configuración de túneles GRE con el router R1 a la izquierda conectándose a través de S0/0/0 a la nube de Internet. En el extremo derecho de la nube de Internet hay una conexión al router R2 mediante S0/0/0. Hay un cilindro de túnel GRE sobre la nube de Internet. Los extremos izquierdo y derecho del túnel están etiquetados con "Tunnel0". Tunnel0 a la izquierda es 192.168.2.1. Tunnel0 a la derecha es 192.168.2.2. R1 S0/0/0 es 209.165.201.1 y R2 S0/0/0 es 198.133.219.87. </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

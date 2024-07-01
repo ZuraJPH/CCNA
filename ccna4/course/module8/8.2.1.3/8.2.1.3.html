@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.3 Configuración de IP SLA de ejemplo </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de IP SLA de ejemplo </h1>
+        <div>
+          <p>Para entender cómo se configura un IP SLA simple, consulte la topología de la figura 1. </p>
+          <p></p>
+          <p>La configuración de la figura 2 establece un número de operación de 1 para la operación de IP SLA. Se pueden configurar varias operaciones de IP SLA en un dispositivo. Cada operación se identifica con su número de operación. El comando <b>icmp-echo</b> identifica la dirección de destino que se supervisará. En el ejemplo, está configurado para monitorear la interfaz S1 de R3. El comando <b>frequency</b> establece la frecuencia de IP SLA a intervalos de 30 segundos.</p>
+          <p></p>
+          <p>El comando <b>ip sla schedule</b> programa la operación número 1 de IP SLA para que empiece de inmediato (ahora) y continúe hasta que se cancele manualmente (para siempre).</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Use el comando <b>no ip sla schedule </b><i>operation-number</i> para cancelar la operación de SLA. La configuración de la operación de SLA se preserva y se puede reprogramar cuando sea necesario.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

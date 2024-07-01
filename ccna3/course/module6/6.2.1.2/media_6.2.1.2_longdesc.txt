@@ -1,0 +1,1 @@
+En la figura se muestra un ISP con un número de sistema autónomo que utiliza el EIGRP entre dos empresas y el OSPF entre las otras dos empresas.  El ISP uno está conectado al ISP dos y utiliza BGP entre ellas.

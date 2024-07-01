@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+<slide>
+<element type="IMAGE" src="media_3.5.3.2.A.png" x="0" y="0" width="680" height="490"/>
+<element type="ROUTER" textId="ID_router_txt1" x="40" y="285.7" width="600" height="100" />
+<!--<text id="ID_router_txt1"><![CDATA[<pre>Company-A(config)# router bgp 65000 Company-A(config-router)# neighbor 209.165.201.1 remote-as 65001 Company-A(config-router)# network 198.133.219.0 mask 255.255.255.0</pre>]]></text>-->
+<element type="TEXT" compId="ID_s1_txt01" x="80" y="110" width="100" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt03" x="575" y="152" width="63" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s1_txt02" x="419" y="110" width="100" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt04" x="265" y="115" width="82" expand="up" align="center" color="#f26200" />
+<element type="TEXT" id="ID_static_1" text="G0/1 .2" x="239" y="144" align="left" width="24" />
+<element type="TEXT" id="ID_static_2" text="G0/1 .1" x="344" y="144" align="right" width="24" />
+<element type="TEXT" id="ID_static_3" text="209.165.201.0/27" x="260" y="190" align="center" width="93" />
+<element type="TEXT" id="ID_static_4" text="198.133.219.0/24" x="80" y="176" align="center" width="93" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" src="media_3.5.3.2.B.png" x="0" y="0" width="680" height="490"/>
+<element type="ROUTER" textId="ID_router_txt2" x="40" y="285.7" width="600" height="100" />
+<!--<text id="ID_router_txt2"><![CDATA[<pre>ISP-1(config)# router bgp 65001 ISP-1(config-router)# neighbor 209.165.201.2 remote-as 65000 ISP-1(config-router)# network 0.0.0.0</pre>]]></text>-->
+<element type="TEXT" compId="ID_s2_txt01" x="80" y="110" width="100" expand="down" align="center" />
+<element type="TEXT" compId="ID_s2_txt04" x="265" y="115" width="82" expand="up" align="center" color="#f26200" />
+<element type="TEXT" compId="ID_s2_txt03" x="575" y="152" width="63" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s2_txt02" x="419" y="110" width="100" expand="down" align="center" />
+<element type="TEXT" id="ID_static_5" text="G0/1 .2" x="239" y="144" align="left" width="24" />
+<element type="TEXT" id="ID_static_6" text="G0/1 .1" x="344" y="144" align="right" width="24" />
+<element type="TEXT" id="ID_static_7" text="209.165.201.0/27" x="260" y="190" align="center" width="93" />
+<element type="TEXT" id="ID_static_8" text="198.133.219.0/24" x="80" y="176" align="center" width="93" />
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+</slide>
+	
+	
+	
+<text id="ID_router_txt1"><![CDATA[<pre>
+Company-A(config)#<b>router bgp 65000</b>
+Company-A(config-router)#<b>neighbor 209.165.201.1 remote-as 65001</b>
+Company-A(config-router)#<>bnetwork 198.133.219.0 mask 255.255.255.0</b>
+
+</pre>]]></text>
+
+<text id="ID_router_txt2"><![CDATA[<pre>
+ISP-1(config)#<b>router bgp 65001</b>
+ISP-1(config-router)#<b>neighbor 209.165.201.2 remote-as 65000</b>
+ISP-1(config-router)#<b>network 0.0.0.0</b>
+
+</pre>]]></text>
+
+	
+</data>
+

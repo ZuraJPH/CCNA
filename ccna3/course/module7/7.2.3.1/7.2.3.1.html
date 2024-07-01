@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.1 Interfaz pasiva</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interfaz pasiva</h1>
+        <div>
+          <p>Una razón por la que es posible que en las tablas de routing no se muestren las rutas correctas es el comando <b>passive-interface</b>. Con EIGRP en ejecución en una red, el comando <b>passive-interface</b> detiene las actualizaciones de routing salientes y entrantes. Por esa razón, los routers no se convierten en vecinos.</p>
+          <p></p>
+          <p>Para verificar si cualquier interfaz en un router está configurada como pasiva, utilice el comando <b>show ip protocols</b> del modo EXEC privilegiado. En la figura 1, se muestra que la interfaz GigabitEthernet 0/0 del R2 está configurada como interfaz pasiva, porque no hay vecinos en ese enlace.</p>
+          <p></p>
+          <p>Además de estar configurada en interfaces que no tienen vecinos, una interfaz pasiva puede habilitarse en interfaces por motivos de seguridad. En la figura 2, observe que el sombreado del dominio de routing EIGRP es diferente de las topologías anteriores. La red 209.165.200.224/27 ahora está incluida en las actualizaciones de EIGRP del R2. Sin embargo, por motivos de seguridad, el administrador de red no desea que el R2 forme una adyacencia de vecino EIGRP con el router ISP.</p>
+          <p></p>
+          <p>En la figura 3, se muestra la incorporación del comando <b>network</b> 209.165.200.224/27 en el R2. El R2 ahora anuncia esta red a los otros routers en el dominio de routing EIGRP. </p>
+          <p></p>
+          <p>El comando <b>passive-interface</b> del modo de configuración del router está configurado en Serial 0/1/0 para evitar que se envíen actualizaciones de EIGRP del R2 al router ISP. El comando <b>show ip eigrp neighbors</b> en el R2 verifica que ese router no haya establecido una adyacencia de vecino con ISP.</p>
+          <p></p>
+          <p>En la figura 4, se muestra que el R1 tiene una ruta EIGRP a la red 209.165.200.224/27 en su tabla de routing IPv4 (el R3 también tiene una ruta EIGRP a esa red en la tabla de routing IPv4). Sin embargo, el R2 no tiene una adyacencia de vecino con el router ISP. </p>
+          <p></p>
+          <p>
+            <b>EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>También se aplican comandos y criterios de solución de problemas similares en EIGRP para IPv6.</p>
+          <p></p>
+          <p>Los siguientes son los comandos equivalentes que se utilizan con EIGRP para IPv6:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router(config-rtr)# </span>
+                <span class="cmd">
+                  <b>passive-interface </b>
+                </span>
+                <span class="cmd">
+                  <i>tipo número</i>
+                </span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra un router con tres cables de serie y una LAN.  La interfaz de LAN está encerrada en un círculo.  El resultado generado por el comando "show i. p. protocols" se presenta a continuación y se resaltan las interfaces pasivas.  La interfaz de LAN es la única interfaz pasiva. En la figura dos, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. En la figura tres, se muestra el resultado para configurar el enlace entre el router dos y el ISP como una interfaz pasiva. En la figura cuatro, se muestra el resultado que genera el comando "show i. p. route" en el router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

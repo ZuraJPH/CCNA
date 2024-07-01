@@ -1,0 +1,1 @@
+La figura muestra los mensajes de LSA de tipo uno que se propagan dentro de su propia área.

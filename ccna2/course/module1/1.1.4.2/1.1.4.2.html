@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.4.2 Verificación de la configuración de interfaz IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de interfaz IPv6</h1>
+        <div>
+          <p>Los comandos para verificar la configuración de interfaz IPv6 son similares a los comandos que se usan para IPv4. </p>
+          <p></p>
+          <p>El comando <b>show ipv6 interface brief</b> de la Figura 1 muestra un resumen para cada una de las interfaces. El resultado "up/up" en la misma línea que el nombre de interfaz indica el estado de interfaz de capa 1/capa 2. Esto es lo mismo que las columnas Status (Estado) y Protocol (Protocolo) en el comando IPv4 equivalente. </p>
+          <p></p>
+          <p>El resultado muestra dos direcciones IPv6 configuradas por interfaz. Una de las direcciones es la dirección de unidifusión global de IPv6 que se introdujo manualmente. La otra, que comienza con FE80, es la dirección de unidifusión link-local para la interfaz. La dirección link-local se agrega automáticamente a una interfaz cuando se asigna una dirección de unidifusión global. Las interfaces de red IPv6 deben tener una dirección link-local, pero no necesariamente una dirección de unidifusión global.</p>
+          <p></p>
+          <p>El resultado del comando <b>show ipv6 interface gigabitethernet 0/0</b> que se muestra en la Figura 2 indica el estado de interfaz y todas las direcciones IPv6 que pertenecen a la interfaz. Además de la dirección link-local y la dirección de unidifusión global, el resultado incluye las direcciones de multidifusión asignadas a la interfaz, las cuales comienzan con el prefijo FF02.</p>
+          <p></p>
+          <p>Como se muestra en la Figura 3, el comando <b>show ipv6 route</b> se puede utilizar para verificar si las redes IPv6 y las direcciones específicas de la interfaz IPv6 se instalaron en la tabla de routing IPv6. El comando <b>show</b><b>ipv6</b><b>route</b> muestra solamente las redes IPv6, no las redes IPv4.</p>
+          <p></p>
+          <p>En la tabla de routing, una “<b>C</b>” junto a una ruta indica que se trata de una red conectada directamente. Cuando la interfaz de router se configura con una dirección de unidifusión global y su estado es “up/up”, se agrega el prefijo y la longitud de prefijo IPv6 a la tabla de routing IPv6 como una ruta conectada. </p>
+          <p></p>
+          <p>La dirección IPv6 de unidifusión global configurada en la interfaz también se instala en la tabla de routing como una ruta local. La ruta local tiene un prefijo /128. La tabla de routing utiliza las rutas locales para procesar eficazmente los paquetes cuyo destino es la dirección de la interfaz del router.</p>
+          <p></p>
+          <p>El comando <b>ping</b> para IPv6 es idéntico al comando que se utiliza con IPv4, excepto que se utiliza una dirección IPv6. Como se muestra en la Figura 4, el comando <b>ping</b> se utiliza para verificar la conectividad de capa 3 entre R1 y PC1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el resultado del comando show ip v 6 interfaces brief.  Esto enumera la dirección y la información de estado solo para las interfaces. La figura dos muestra la salida del comando show ip v6 interface gigabit ethernet cero barra cero.  Esto muestra información más detallada, como la dirección de multidifusión asignada a la interfaz. La figura tres muestra el resultado del comando de ruta IPv6, que es la tabla de rutas IPv6 del router. La figura cuatro muestra el uso y el resultado del comando ping en una interfaz IPv6.  El comando es ping 2 0 0 1 dos puntos d b 8 dos puntos a c a d dos puntos 1 dos puntos dos puntos 10.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

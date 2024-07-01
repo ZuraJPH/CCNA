@@ -1,0 +1,1 @@
+En la figura uno, se muestra la salida del comando show ipv6 route OSPF.  La salida indica tres rutas de la tabla de routing para el router R1 que se reconocieron mediante OSPF. La figura dos es un elemento de medios interactivos que permite que el estudiante verifique la tabla de routing IPv6 en los routers R2 y R3.

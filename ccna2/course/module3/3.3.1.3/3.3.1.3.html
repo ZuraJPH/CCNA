@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.3 Entradas de red remota</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entradas de red remota</h1>
+        <div>
+          <p>En la ilustración, se muestra una entrada de la tabla de routing IPv4 en el R1 para la ruta hacia la red remota 172.16.4.0 en el R3. La entrada indica la siguiente información:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Origen de la ruta:</b> identifica el modo en que se descubrió la ruta. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Red de destino:</b> identifica la dirección de la red remota.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Distancia administrativa (AD)</b>: identifica la confiabilidad del origen de la ruta. La AD para las rutas estáticas es 1 y la AD para las rutas conectadas es 0. Los protocolos de routing dinámico tienen una AD mayor que 1 según el protocolo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Métrica:</b> identifica el valor asignado para llegar a la red remota. Los valores más bajos indican las rutas preferidas. La métrica para rutas estáticas y conectadas es 0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Siguiente salto:</b> identifica la dirección IPv4 del router siguiente al que se debe reenviar el paquete.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Marca de hora de la ruta:</b> identifica cuándo fue la última comunicación con la ruta.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz de salida:</b> identifica la interfaz de salida que se debe utilizar para reenviar un paquete hacia el destino final.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa una vista en detalle de una entrada de red remota en la tabla de routing.  La línea dice R por RIP como el origen de la ruta, 172 punto 16 punto 4 punto 0 barra 28 para la red de destino, 120 barra 2 para la distancia administrativa de RIP, la cantidad de saltos de router a los que está la red, y esta es la métrica.  La línea continúa con 209 punto 165 punto 200 punto 226 para la dirección IP de siguiente salto, cero cero dos puntos cero cero dos puntos doce para la marca de tiempo de la actualización, y por último serial cero barra cero barra cero para la interfaz de salida.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

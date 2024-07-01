@@ -1,0 +1,1 @@
+La figura muestra los pasos y los comandos para proteger SNMPv3.

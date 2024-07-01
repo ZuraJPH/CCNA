@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.2 Ejemplos de máscara wildcard </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de máscara wildcard </h1>
+        <div>
+          <p>
+            <b>Máscaras wildcard para establecer coincidencias con subredes IPv4</b>
+          </p>
+          <p></p>
+          <p>Se necesita práctica para calcular la máscara wildcard. En la figura 1, se proporcionan tres ejemplos de máscara wildcard. </p>
+          <p></p>
+          <p>En el primer ejemplo, la máscara wildcard estipula que cada bit en la IPv4 192.168.1.1 debe coincidir con exactitud. </p>
+          <p></p>
+          <p>En el segundo ejemplo, la máscara wildcard estipula que no habrá coincidencias. </p>
+          <p></p>
+          <p>En el tercer ejemplo, la máscara wildcard estipula que cualquier host dentro de la red 192.168.1.0/24 tendrá una coincidencia. </p>
+          <p></p>
+          <p>
+            <b>Máscaras wildcard para establecer coincidencias con rangos</b>
+          </p>
+          <p></p>
+          <p>Los dos ejemplos en la figura 2 son más complejos. En el ejemplo 1, los primeros dos octetos y los primeros cuatro bits del tercer octeto deben coincidir con exactitud. Los cuatro últimos bits del tercer octeto y el último octeto pueden ser cualquier número válido. Esto genera una máscara que verifica el rango de redes 192.168.16.0 a 192.168.31.0.</p>
+          <p></p>
+          <p>En el ejemplo 2, se muestra una máscara wildcard que coincide con los primeros dos octetos y el bit con menor importancia del tercer octeto. El último octeto y los primeros siete bits en el tercer octeto pueden ser cualquier número válido. Esto genera una máscara que permite o deniega todos los hosts de subredes impares de la red principal 192.168.0.0.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">El cuadro uno enumera tres ejemplos de direcciones I.P.v.4 y de máscaras wildcard.  El Ejemplo 1 tiene una máscara wildcard de 32 ceros, por lo tanto ordena al A.C.L que coincida exactamente  con la dirección I.P.  El ejemplo dos tiene una máscara wildcard de 32 unos, por lo tanto cualquier dirección de I.P. será una coincidencia.  El ejemplo tres tiene una máscara wildcard de 24 ceros desde a izquierda y yendo hacia la derecha, seguida de ocho unos.  Esto coincide efectivamente con una red de clase C donde coinciden los primeros 24 bits.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

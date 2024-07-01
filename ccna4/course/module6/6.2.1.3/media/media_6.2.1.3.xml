@@ -1,0 +1,41 @@
+﻿<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Ventajas y desventajas del modelo de mejor esfuerzo</b>]]></text>
+	</component>
+	
+<component id="ID_table">
+<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='3' class="mtable">
+
+	<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"></font></td>
+		</tr>
+
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>
+	<tr>
+		<td width="298" bgcolor='#666263' valign="top" class="width"><font color='#ffffff'><b>Beneficios</b></font></td>
+		<td width="298" bgcolor='#666263' valign="top"><font color='#ffffff'><b>Desventajas</b></font></td>
+	 </tr>
+	<tr>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Este modelo es el más escalable.</td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>No hay garantías de entrega.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2'><font color='#393536'>La escalabilidad solo se encuentra limitada por los límites de ancho de banda, en cuyo caso todo el tráfico se ve igualmente afectado.</td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Los paquetes llegarán cuando puedan y en cualquier orden posible, si es que llegan.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8'>No se requieren mecanismos de QoS especiales.</td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Ningún paquete tiene trato preferencial.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Es el modelo más fácil y rápido de implementar.</td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Los datos críticos se tratan del mismo modo que el correo electrónico informal.</td>
+	</tr>
+
+</table>]]></text>
+</component>
+	
+</textcomponents>

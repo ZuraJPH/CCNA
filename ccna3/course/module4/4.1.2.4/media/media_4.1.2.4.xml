@@ -1,0 +1,229 @@
+﻿<textcomponents>
+
+<component id='ID_s1_inst'> <text><![CDATA[<b>Actividad. Parte 1: unir los términos relacionados con la negociación de los protocolos PAgP y LACP con las descripciones.</b><br><br>Arrastre los términos relacionados con la negociación de interfaces PAgP y LACP a las descripciones correspondientes en la tabla. Haga clic en el botón 2 para continuar la actividad.]]></text> </component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Coloca una interfaz en un estado de respuesta pasivo. No inicia negociaciones PAgP.]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Inicia las negociaciones LACP con otras interfaces.]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Inicia activamente las negociaciones PAgP con otras interfaces.]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[Fuerza un estado EtherChannel sin iniciar negociaciones PAgP o LACP.]]></text>
+</component>
+
+<component id='ID_s1_txt05'>
+	<text><![CDATA[Coloca una interfaz en un estado de respuesta pasivo. No inicia negociaciones LACP.]]></text>
+</component>
+
+
+<component id='ID_s1_txt08'>
+	<text><![CDATA[<b>Término</b>]]></text>
+</component>
+
+<component id='ID_s1_txt09'>
+	<text><![CDATA[<b>Descripción de los términos relacionados con la negociación PAgP y LACP</b>]]></text>
+</component><!--Drag and Drop--><component id='ID_s1_traget01'>
+	<text><![CDATA[<font color="#393536">Activo</font>]]></text>
+</component>
+
+<component id='ID_s1_traget02'>
+	<text><![CDATA[<font color="#393536">Automático</font>]]></text>
+</component>
+
+<component id='ID_s1_traget03'>
+	<text><![CDATA[<font color="#393536">Activado</font>]]></text>
+</component>
+
+<component id='ID_s1_traget04'>
+	<text><![CDATA[<font color="#393536">Pasivo</font>]]></text>
+</component>
+
+<component id='ID_s1_traget05'>
+	<text><![CDATA[<font color="#393536">Deseado</font>]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Unió correctamente los términos relacionados con la negociación de interfaces PAgP y LACP con las descripciones. Haga clic en el botón 2 para continuar.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No unió correctamente los términos relacionados con la negociación de interfaces PAgP y LACP con las descripciones. Haga clic en Restablecer y vuelva a intentarlo.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Verificar</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Restablecer</b>]]></text>
+</component><!--slide02--><component id='ID_s2_inst'> <text><![CDATA[<b>Actividad. Parte 2: identificar los modos del protocolo PAgP</b><br><br>Revise la topología y luego compare los modos de negociación del protocolo PAgP del switch 1 y el switch 2 en la tabla. Determine si se establecería un EtherChannel. Arrastre una respuesta Yes (Sí) o No a los campos proporcionados. Haga clic en el botón 3 para continuar la actividad.]]></text> </component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[<b>Modo de switch 1</b>]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Deseado]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Automático]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Activado]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[Automático]]></text>
+</component>
+
+<component id='ID_s2_txt06'>
+	<text><![CDATA[Activado]]></text>
+</component>
+
+<component id='ID_s2_txt07'>
+	<text><![CDATA[<b>Modo de switch 2</b>]]></text>
+</component>
+
+<component id='ID_s2_txt08'>
+	<text><![CDATA[Deseado]]></text>
+</component>
+
+<component id='ID_s2_txt09'>
+	<text><![CDATA[Automático]]></text>
+</component>
+
+<component id="ID_s2_txt10"><text><![CDATA[No configurado]]></text></component>
+<component id="ID_s2_txt11"><text><![CDATA[Deseado]]></text></component>
+<component id="ID_s2_txt12"><text><![CDATA[Deseado]]></text></component>
+<component id="ID_s2_txt13"><text><![CDATA[¿Se estableció el EtherChannel?]]></text></component>
+<component id="ID_s2_txt14"><text><![CDATA[Negociación PAgP]]></text></component><!--Drag and Drop--><component id='ID_s2_traget01'>
+	<text><![CDATA[<font color="#393536">Sí</font>]]></text>
+</component>
+
+<component id='ID_s2_traget02'>
+	<text><![CDATA[<font color="#393536">No</font>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Identificó correctamente el establecimiento de EtherChannels al comparar los modos de negociación PAgP. Haga clic en el botón 3 para continuar.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[No identificó correctamente el establecimiento de EtherChannel después de comparar los modos de negociación PAgP. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Verificar</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Restablecer</b>]]></text>
+</component><!--slide03--><component id='ID_s3_inst'> <text><![CDATA[<b>Actividad. Parte 3: identificar los modos del protocolo LACP</b><br><br>Revise la topología y luego compare los modos de negociación del protocolo LACP del switch 1 y el switch 2 en la tabla. Determine si se establecería un EtherChannel. Arrastre una respuesta Yes (Sí) o No a los campos proporcionados.]]></text> </component>
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[<b>Modo de switch 1</b>]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[Pasivo]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[Activado]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Activado]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+	<text><![CDATA[Pasivo]]></text>
+</component>
+
+<component id='ID_s3_txt06'>
+	<text><![CDATA[Pasivo]]></text>
+</component>
+
+<component id='ID_s3_txt07'>
+	<text><![CDATA[<b>Modo de switch 2</b>]]></text>
+</component>
+
+<component id='ID_s3_txt08'>
+	<text><![CDATA[Activado]]></text>
+</component>
+
+<component id='ID_s3_txt09'>
+	<text><![CDATA[Activo]]></text>
+</component>
+
+<component id="ID_s3_txt10"><text><![CDATA[Activado]]></text></component>
+<component id="ID_s3_txt11"><text><![CDATA[Activo]]></text></component>
+<component id="ID_s3_txt12"><text><![CDATA[Pasivo]]></text></component>
+<component id="ID_s3_txt13"><text><![CDATA[¿Se estableció el EtherChannel?]]></text></component>
+<component id="ID_s3_txt14"><text><![CDATA[Negociación LACP]]></text></component><!--Drag and Drop--><component id='ID_s3_traget01'>
+	<text><![CDATA[<font color="#393536">Sí</font>]]></text>
+</component>
+
+<component id='ID_s3_traget02'>
+	<text><![CDATA[<font color="#393536">No</font>]]></text>
+</component>
+
+
+
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Identificó correctamente el establecimiento de EtherChannels al comparar los modos de negociación LACP.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[No identificó correctamente el establecimiento de EtherChannel después de comparar los modos de negociación LACP. Haga clic en “Restablecer” para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Verificar</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Restablecer</b>]]></text>
+</component>
+
+
+</textcomponents>

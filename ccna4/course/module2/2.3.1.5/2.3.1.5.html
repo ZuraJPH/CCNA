@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.5 Comandos de PPP multienlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos de PPP multienlace</h1>
+        <div>
+          <p>El protocolo PPP multienlace (también conocido como MP, MPPP, MLP o multienlace) proporciona un método para propagar el tráfico a través de varios enlaces WAN físicos. Además, el protocolo PPP multienlace proporciona la fragmentación y el rearmado de paquetes, la secuenciación adecuada, la interoperabilidad con varios proveedores y el balanceo de carga del tráfico entrante y saliente. </p>
+          <p></p>
+          <p>MPPP permite fragmentar los paquetes y enviarlos simultáneamente a la misma dirección remota a través de varios enlaces punto a punto. Todos los enlaces físicos se activan en respuesta a un umbral de carga definido por el usuario. MPPP puede medir la carga solo en el tráfico entrante o solo en el tráfico saliente, pero no la carga combinada del tráfico entrante y saliente.</p>
+          <p></p>
+          <p>La configuración de MPPP requiere dos pasos, como se muestra en la ilustración. </p>
+          <p></p>
+          <p>
+            <b>Paso 1. </b> Cree un grupo multienlace. </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El comando <b>interface multilink </b><i>número </i>crea la interfaz multienlace. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>En el modo de configuración de interfaz, se asigna una dirección IP a la interfaz de multienlace. En este ejemplo, se configuran direcciones IPv4 e IPv6 en los routers R3 y R4.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La interfaz está habilitada para el protocolo PPP multienlace. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se asigna un número de grupo multienlace a la interfaz.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paso 2. </b> Asigne las interfaces al grupo multienlace. </p>
+          <p></p>
+          <p>Cada interfaz que forma parte del grupo multienlace tiene las siguientes características:</p>
+          <p>
+            <ul>
+              <li>Está habilitada para la encapsulación PPP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Está habilitada para el protocolo PPP multienlace.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Está vinculada al paquete multienlace mediante el número de grupo multienlace configurado en el paso 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>Para deshabilitar el multienlace PPP, use el comando <b>no ppp multilink</b> en cada una de las interfaces en paquete. Por ejemplo:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R3(config)# </span>
+            <span class="cmd">
+              <b>interface s0/0/0</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R3(config-if)# </span>
+            <span class="cmd">
+              <b>no ppp multilink</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R3(config-if)# </span>
+            <span class="cmd">
+              <b>interface s0/0/1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R3(config-if)# </span>
+            <span class="cmd">
+              <b>no ppp multilink</b>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers conectados con dos puertos seriales desde cada router, que forman un paquete multienlace PPP.  La figura muestra la salida del archivo de configuración, y se resaltan las líneas que hacen referencia al paquete.  La primera sección resaltada crea el paquete y la primera línea es ppp multilink.  La segunda línea es ppp multilink group 1.  Cada una de las dos interfaces seriales utilizadas en el paquete multienlace tiene las mismas dos líneas que en el archivo de configuración.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

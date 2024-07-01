@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.2.5 Ejemplo de ubicación de una ACL extendida</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplo de ubicación de una ACL extendida</h1>
+        <div>
+          <p>La regla básica para la colocación de una ACL extendida es colocarla lo más cerca posible del origen. Esto evita que el tráfico no deseado se envíe a través de varias redes y luego sea denegado cuando llegue a destino. Sin embargo, los administradores de red solo pueden colocar las listas ACL en los dispositivos que controlan. Por lo tanto, la colocación se debe determinar en el contexto de hasta dónde se extiende el control del administrador de red. </p>
+          <p></p>
+          <p>En la figura, el administrador de la empresa A, que incluye las redes 192.168.10.0/24 y 192.168.11.0/24 (conocidas como .10 y .11 en este ejemplo) desea controlar el tráfico hacia la empresa B. Específicamente, el administrador desea denegar el tráfico FTP y Telnet de la red .11 a la red 192.168.30.0/24 (.30, en este ejemplo) de la empresa B. Al mismo tiempo, se debe permitir que el resto del tráfico de la red .11 salga de la empresa A sin restricciones.</p>
+          <p></p>
+          <p>Existen varias formas de lograr estos objetivos. Una ACL extendida en el R3 que bloquee Telnet y FTP de la red .11 cumpliría el objetivo, pero el administrador no controla el R3. Además, esta solución también permite que el tráfico no deseado cruce toda la red y luego sea bloqueado en el destino. Esto afecta la eficacia general de la red.</p>
+          <p></p>
+          <p>Una mejor solución es colocar una ACL extendida en R1 que especifique tanto las direcciones de origen como las de destino (red .11 y red .30, respectivamente) y que aplique la regla “No se permite que el tráfico de Telnet y FTP de la red .11 vaya a la red .30”. La figura muestra dos interfaces en R1 en las que sería posible aplicar la ACL extendida:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz S0/0/0 del R1 (de salida):</b> una de las posibilidades es aplicar una ACL extendida de salida en la interfaz S0/0/0. Debido a que la ACL extendida puede examinar tanto la dirección de origen como la de destino, solo se deniegan los paquetes FTP y Telnet de 192.168.11.0/24, y el R1 reenvía el resto del tráfico de 192.168.11.0/24 y de otras redes. La desventaja de colocar la ACL extendida en esta interfaz es que la ACL debe procesar todo el tráfico que sale de S0/0/0, incluidos los paquetes de 192.168.10.0/24.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz G0/1 del R1 (de entrada):</b> la aplicación de una ACL extendida al tráfico que ingresa a la interfaz G0/1 implica que solamente los paquetes de la red 192.168.11.0/24 están sujetos al procesamiento de la ACL en R1. Debido a que el filtro se debe limitar solo a aquellos paquetes que salen de la red 192.168.11.0/24, la aplicación de una ACL extendida a G0/1 es la mejor solución.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la misma topología que la página anterior. Sin embargo, ahora el objetivo de la ACL es bloquear el tráfico FTP y Telnet desde un segmento de red en R-1 para que no llegue a un segmento de red en R-3.  La mejor posición de la ACL es en el router R-1, en la interfaz LAN y en el sentido entrante.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

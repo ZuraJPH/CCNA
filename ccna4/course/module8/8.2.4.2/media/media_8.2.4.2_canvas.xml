@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR"> 
+	
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_8.2.4.2A.png" />
+<!-- <element type="TEXT" id="ID_static_1" text="SRV1" x="492" y="355" align="center" width="27" />
+<element type="TEXT" id="ID_static_2" text="SRV2" x="354" y="265" align="center" width="29" /> -->
+<element type="TEXT" id="ID_static_3" text="2001:DB8:ACAD:1:5075:D0FF:FE8E:9AD8/64" x="110" y="387" align="center" width="233" color="#386B33" />
+<element type="TEXT" id="ID_static_4" text="S0/0/0" x="293" y="95" align="center" width="35" bold="1" />
+<element type="TEXT" id="ID_static_5" text=":2" x="328" y="128" align="center" width="10" color="#386B33" />
+<element type="TEXT" id="ID_static_6" text=".2" x="317" y="115" align="center" width="10" color="#652C8A"/>
+<element type="TEXT" id="ID_static_7" text="S0/0/1" x="389" y="94" align="center" width="33"  bold="1" />
+<element type="TEXT" id="ID_static_8" text=":1" x="382" y="128" align="center" width="8"  color="#386B33"/>
+<element type="TEXT" id="ID_static_9" text=".5" x="389" y="106" align="center" width="10" color="#652C8A" />
+<element type="TEXT" id="ID_static_10" text="S0/0/0" x="171" y="133" align="center" width="35"  bold="1" />
+<element type="TEXT" id="ID_static_11" text=".1" x="191" y="146" align="center" width="8" color="#652C8A" />
+<element type="TEXT" id="ID_static_12" text="S0/0/1" x="481" y="145" align="center" width="33"  bold="1" />
+<element type="TEXT" id="ID_static_13" text=".6" x="462" y="158" align="center" width="10" color="#652C8A" />
+<element type="TEXT" id="ID_static_14" text=":2" x="461" y="174" align="center" width="10" color="#386B33" />
+<element type="TEXT" id="ID_static_15" text=":1" x="221" y="165" align="center" width="8" color="#386B33" />
+<element type="TEXT" id="ID_static_16" text="G0/0" x="157" y="200" align="center" width="25"  bold="1" />
+<element type="TEXT" id="ID_static_17" text=".1" x="173" y="212" align="center" width="8" color="#652C8A" />
+<element type="TEXT" id="ID_static_18" text=":1" x="196" y="201" align="center" width="8" color="#386B33" />
+<element type="TEXT" id="ID_static_19" text="G0/0" x="511" y="200" align="center" width="25"  bold="1" />
+<element type="TEXT" id="ID_static_20" text=".1" x="511" y="212" align="center" width="8" />
+<element type="TEXT" id="ID_static_21" text=":1" x="487" y="201" align="center" width="8" color="#386B33" />
+<element type="TEXT" id="ID_static_22" text="172.16.1.100/24" x="438" y="384" align="center" width="139" color="#652C8A"/>
+<element type="TEXT" id="ID_static_22A" text="2001:DB8:ACAD:4::100/64" x="438" y="400" align="center" width="139" color="#386B33"/>
+<element type="TEXT" id="ID_static_23" text="10.1.10.10/24" x="157" y="375" align="center" width="72" color="#652C8A"/>
+<element type="TEXT" compId="ID_s1_txt01" x="245" y="355" width="169" expand="up" align="left" class="orangeCallOut" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+<element type="TEXT" compId="ID_s1_txt02" x="110" y="401" width="214" expand="down" align="left" />
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="ROUTER" textId="ID_router_txt1" x="40" y="50" width="600" height="400" />
+<!--<text id="ID_router_txt1"><![CDATA[<pre>PC1> ping 172.16.1.100 Pinging 172.16.1.100 with 32 bytes of data: Reply from 172.16.1.100: bytes=32 time=8ms TTL=254 Reply from 172.16.1.100: bytes=32 time=1ms TTL=254 Reply from 172.16.1.100: bytes=32 time=1ms TTL=254 Reply from 172.16.1.100: bytes=32 time=1ms TTL=254 Ping statistics for 172.16.1.100: Packets: Sent = 4, Received = 4, Lost = 0 (0% loss), Approximate round-trip times in milliseconds: Minimum = 1ms, Maximum = 8ms, Average = 2ms</pre>]]></text>-->
+<element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#fff"/>
+</slide>
+
+
+
+
+
+
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="ROUTER" textId="ID_router_txt2" x="40" y="50" width="600" height="400" />
+<!--<text id="ID_router_txt2"><![CDATA[<pre>C:Windowssystem32> tracert 172.16.1.100 Tracing route to 172.16.1.100 over a maximum of 30 hops 1 1 ms <1 ms <1 ms 10.1.10.1 2 2 ms 2 ms 1 ms 192.168.1.2 3 2 ms 2 ms 1 ms 192.168.1.6 4 2 ms 2 ms 1 ms 172.16.1.100 Trace complete.</pre>]]></text>-->
+<element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#fff"/>
+</slide>
+
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="ROUTER" textId="ID_router_txt3" x="40" y="50" width="600" height="400" />
+<!--<text id="ID_router_txt3"><![CDATA[<pre>R1# ping 2001:db8:acad:4::100 Type escape sequence to abort. Sending 5, 100-byte ICMP Echos to 2001:DB8:ACAD:4::100, timeout is 2 seconds:!!!!! Success rate is 100 percent (5/5), round-trip min/avg/max = 56/56/56 ms R1# traceroute 2001:db8:acad:4::100 Type escape sequence to abort. Tracing the route to 2001:DB8:ACAD:4::100 1 2001:DB8:ACAD:2::2 20 msec 20 msec 20 msec 2 2001:DB8:ACAD:3::2 44 msec 40 msec 40 msec R1#</pre>]]></text>-->
+<element type="TEXT" subType="TITLE" compId="ID_s4_title" color="#fff"/>
+</slide>
+	</slide>
+
+	<text id="ID_router_txt1"><![CDATA[<pre>PC1> <b>ping 172.16.1.100</b>
+Pinging 172.16.1.100 with 32 bytes of data:
+Reply from 172.16.1.100: bytes=32 time=8ms TTL=254
+Reply from 172.16.1.100: bytes=32 time=1ms TTL=254
+Reply from 172.16.1.100: bytes=32 time=1ms TTL=254
+Reply from 172.16.1.100: bytes=32 time=1ms TTL=254
+Ping statistics for 172.16.1.100:
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round-trip times in milliseconds:
+Minimum = 1ms, Maximum = 8ms, Average = 2ms
+</pre>]]></text>
+	<text id="ID_router_txt2"><![CDATA[<pre>C:\Windows\system32> <b>tracert 172.16.1.100</b>
+Tracing route to 172.16.1.100 over a maximum of 30 hops
+1   1 ms   <1 ms   <1 ms    10.1.10.1
+2   2 ms    2 ms    1 ms    192.168.1.2
+3   2 ms    2 ms    1 ms    192.168.1.6
+4   2 ms    2 ms    1 ms    172.16.1.100
+Trace complete.
+</pre>]]></text>
+	<text id="ID_router_txt3"><![CDATA[<pre>R1# <b>ping 2001:db8:acad:4::100</b>
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2001:DB8:ACAD:4::100, 
+timeout is 2 seconds:!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 
+56/56/56 ms
+R1# <b>traceroute 2001:db8:acad:4::100</b>
+Type escape sequence to abort.
+Tracing the route to 2001:DB8:ACAD:4::100
+
+  1 2001:DB8:ACAD:2::2 20 msec 20 msec 20 msec
+  2 2001:DB8:ACAD:3::2 44 msec 40 msec 40 msec
+R1#
+</pre>]]></text>
+	 
+</data>

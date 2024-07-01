@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR">
+
+	<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+	<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	<element type="IMAGE" src="media_8.2.4.7_A.png" x="0" y="0" width="680" height="490" />
+
+	<element type="TEXT" compId="ID_s1_txt01" x="10" y="167" width="130" expand="up+down" align="left" size="11" class="orangeCallOut" />
+<element type="TEXT" compId="ID_txt02" x="157" y="427" width="214" expand="down" align="left" size="11" />
+<element type="TEXT" compId="ID_s1txt01" x="503" y="216" width="124" expand="down" align="center" size="11" class="orangeCallOut" />
+<element type="TEXT" id="ID_static_8" text="10.1.10.10/24" x="166" y="402" align="center" width="8" color="#652C8A" />
+<element type="TEXT" id="ID_static_6" text="2001:DB8:ACAD:1:5075:D0FF:FE8E:9AD8/64" x="166" y="414" align="center" width="8" color="#386B33" />
+<element type="TEXT" id="ID_static_3" text="2001:DB8:ACAD:1::/64" x="208" y="244" align="center" width="119"  color="#386B33" />
+<element type="TEXT" id="ID_static_4" text="2001:DB8:ACAD:2::/64" x="139" y="96" align="center" width="119"  color="#386B33" />
+<element type="TEXT" id="ID_static_5" text="2001:DB8:ACAD:3::/64" x="425" y="96" align="center" width="119"  color="#386B33" />
+<element type="TEXT" id="ID_static_7" text="10.1.10.0/24" x="208" y="231" align="center" width="66" color="#652C8A"  />
+<element type="TEXT" id="ID_static_9" text="192.168.1.0/30" x="139" y="85" align="center" width="79" color="#652C8A"  />
+<element type="TEXT" id="ID_static_10" text="192.168.1.4/30" x="425" y="85" align="center" width="79" color="#652C8A"  />
+<element type="TEXT" id="ID_static_11" text="S0/0/0" x="266" y="91" align="center" width="35" bold="1" />
+<element type="TEXT" id="ID_static_12" text=":2" x="315" y="131" align="center"  bold="1" width="10" />
+<element type="TEXT" bold="1"  id="ID_static_13" text=".2" x="295" y="102" align="center" width="10" />
+<element type="TEXT"  bold="1" id="ID_static_14" text="S0/0/1" x="372" y="91" align="center" width="33" />
+<element type="TEXT" bold="1"  id="ID_static_15" text=":1" x="355" y="131" align="center" width="8" />
+<element type="TEXT"  bold="1" id="ID_static_16" text=".5" x="372" y="104" align="center" width="10" />
+<element type="TEXT"  bold="1" id="ID_static_17" text="S0/0/0" x="184" y="126" align="center" width="35" />
+<element type="TEXT"  bold="1" id="ID_static_18" text=".1" x="204" y="138" align="center" width="8" />
+<element type="TEXT" bold="1"  id="ID_static_19" text="S0/0/1" x="450" y="126" align="center" width="33" />
+<element type="TEXT" bold="1"  id="ID_static_20" text=".6" x="452" y="138" align="center" width="10" />
+<element type="TEXT" bold="1"  id="ID_static_21" text=":2" x="426" y="176" align="center" width="10" />
+<element type="TEXT"  bold="1" id="ID_static_22" text=":1" x="238" y="154" align="center" width="8" />
+<element type="TEXT" bold="1"  id="ID_static_23" text="G0/0" x="160" y="203" align="center" width="25" />
+<element type="TEXT" bold="1"  id="ID_static_24" text=".1" x="191" y="203" align="center" width="8" />
+<element type="TEXT"  bold="1" id="ID_static_25" text=":1" x="209" y="203" align="center" width="8" />
+<element type="TEXT" bold="1"  id="ID_static_26" text="G0/0" x="473" y="197" align="center" width="25" />
+<element type="TEXT" bold="1"  id="ID_static_27" text=".1" x="473" y="208" align="center" width="8" />
+<element type="TEXT" bold="1"  id="ID_static_28" text=":1" x="453" y="197" align="center" width="8" />
+<element type="TEXT" id="ID_static_29" text="172.16.1.100/24" x="434" y="400" align="left" width="139"  color="#652C8A" />
+<element type="TEXT" id="ID_static_29" text="2001:DB8:ACAD:4::100/64" x="434" y="414" align="left" width="139"  color="#386B33" />
+<element type="TEXT" id="ID_static_30" text="10.1.10.100/24" x="314" y="354" align="left" width="139" color="#652C8A"  />
+<element type="TEXT" id="ID_static_30" text="2001:DB8:ACAD:1::100/64" x="314" y="368" align="left" width="139" color="#386B33"  />
+</slide>
+		
+<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+	<element type="ROUTER" textId="ID_router_txt1" x="40" y="52" width="600" height="407" size="11" />
+	<element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#FFFFFF" />
+</slide>
+		
+<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+	<element type="ROUTER" textId="ID_router_txt2" x="40" y="52" width="600" height="407" size="11" />
+	<element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#FFFFFF" />
+</slide>
+
+<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+	<element type="IMAGE" src="media_8.2.4.7_D.png" x="0" y="0" width="680" height="490" />
+	<element type="TEXT" compId="ID_s4_txt01" x="135" y="38" width="152" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s4_txt02" x="167" y="132" width="86" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s4_txt10" x="216" y="292" width="35" expand="right" align="left" />
+<element type="TEXT" compId="ID_s4_txt03" x="162" y="243" width="97" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s4_txt04" x="159" y="364" width="103" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s4_txt11" x="290" y="232" width="31" expand="right" align="left" />
+<element type="TEXT" compId="ID_s4_txt12" x="292" y="120" width="28" expand="up" align="left" />
+<element type="TEXT" compId="ID_s4_txt13" x="509" y="120" width="27" expand="up" align="left"  />
+<element type="TEXT" compId="ID_s4_txt14" x="429" y="191" width="31" expand="right" align="left" />
+<element type="TEXT" compId="ID_s4_txt15" x="217" y="185" width="31" expand="right" align="left" />
+<element type="TEXT" compId="ID_s4_txt17" x="291" y="342" width="35" expand="right" align="left" />
+<element type="TEXT" compId="ID_s4_txt16" x="95" y="342" width="35" expand="right" align="right" />
+<element type="TEXT" compId="ID_s4_txt05" x="34" y="431" width="148" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s4_txt06" x="237" y="431" width="151" expand="up+down" align="center"/>
+<element type="TEXT" compId="ID_s4_txt08" x="373" y="319" width="108" expand="up+down" align="center"/>
+<element type="TEXT" compId="ID_s4_txt09" x="549" y="132" width="109" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s4_txt07" x="381" y="132" width="88" expand="up+down" align="center" />
+</slide>
+
+<text id="ID_router_txt1"><![CDATA[<code>R1# <b>show ip route</b>
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile
+       B - BGP, D - EIGRP, EX - EIGRP external, O - OSPF
+       IA - OSPF inter area, N1 - OSPF NSSA external type 1
+       N2 - OSPF NSSA external type 2, E1 - OSPF external type 1
+       E2 - OSPF external type 2 i - IS-IS, su - IS-IS summary
+       L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default
+       U - per-user static route, o - ODR
+       P - periodic downloaded static route, H - NHRP l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.1.2 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.1.2
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.1.10.0/24 is directly connected, GigabitEthernet0/0
+L        10.1.10.1/32 is directly connected, GigabitEthernet0/0
+      172.16.0.0/24 is subnetted, 1 subnets
+D        172.16.1.0 [90/41024256] via 192.168.1.2, 05:32:46,
+         Serial0/0/0
+      192.168.1.0/24 is variably subnetted, 3 subnets, 2 masks
+C        192.168.1.0/30 is directly connected, Serial0/0/0
+L        192.168.1.1/32 is directly connected, Serial0/0/0
+D        192.168.1.4/30 [90/41024000] via 192.168.1.2, 05:32:46,
+         Serial0/0/0
+R1#</code>]]></text>
+
+<text id="ID_router_txt2"><![CDATA[<pre>R1# <b>show ipv6 route</b>
+IPv6 Routing Table - default - 7 entries
+Codes: C - Connected, L - Local, S - Static 
+       U - Per-user Static route, B - BGP, R - RIP
+       I1 - ISIS L1, I2 - ISIS L2, A - ISIS interarea
+       IS - ISIS summary, D - EIGRP, EX - EIGRP external
+       ND - ND Default, NDp - ND Prefix, DCE - Destination
+       NDr - Redirect, O - OSPF Intra, OI - OSPF Inter
+       OE1 - OSPF ext 1, OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1
+       ON2 - OSPF NSSA ext 2
+S   ::/0 [1/0]
+     via 2001:DB8:ACAD:2::2
+C   2001:DB8:ACAD:1::/64 [0/0]
+     via GigabitEthernet0/0, directly connected
+L   2001:DB8:ACAD:1::1/128 [0/0]
+     via GigabitEthernet0/0, receive
+C   2001:DB8:ACAD:2::/64 [0/0]
+     via Serial0/0/0, directly connected
+L   2001:DB8:ACAD:2::1/128 [0/0]
+     via Serial0/0/0, receive
+D   2001:DB8:ACAD:3::/64 [90/41024000]
+     via FE80::2, Serial0/0/0
+D   2001:DB8:ACAD:4::/64 [90/41024256]
+     via FE80::2, Serial0/0/0
+L   FF00::/8 [0/0]
+     via Null0, receive
+R1#
+</pre>]]></text>		
+<text id="ID_ip"><![CDATA[<font color="#652C8A">172.16.1.0/24</font><br><font color="#F68026"> 2001:DB8:ACAD:4::/64</font>]]></text>
+
+	</slide>
+</data>

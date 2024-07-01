@@ -1,0 +1,1 @@
+La figura muestra una tabla que indica si un puerto recibirá BPDU, reenviará datos recibidos en la interfaz, reenviará los datos que provienen desde otra interfaz a través de un switch, o detectará direcciones MAC para los 5 modos diferentes de STP. Los cinco modos son bloqueo, escucha, aprendizaje, reenvío y desactivado.

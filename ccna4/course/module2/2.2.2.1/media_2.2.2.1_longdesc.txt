@@ -1,0 +1,1 @@
+La figura muestra la arquitectura en capas de PPP en la capa física.  La figura resalta la capa física e indica que PPP puede utilizar medios físicos sincrónicos, como servicios de línea arrendada o medios físicos asíncronos, como los que utiliza el servicio telefónico básico para las conexiones de módem de Internet por acceso telefónico.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="1000" height="490" src="../../../common/images/page_backgrounds/bg_activity.jpg" />
+		<element type="IMAGE" x="0" y="0" width="1000" height="490" src="media_8.2.3.7.png" />
+
+		<element type="TEXTBOX" titleId="ID_instr_title" bodyId="ID_instr_body" x="25" y="55" width="350" height="118" animated="0" subType="ROLLOVER" />
+
+		<element type="TEXT" compId="ID_osi_txt07" x="125" y="208" width="151" expand="up+down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_osi_txt06" x="125" y="240" width="151" expand="up+down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_osi_txt05" x="125" y="273" width="151" expand="up+down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_osi_txt04" x="125" y="305" width="151" expand="up+down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_osi_txt03" x="125" y="338" width="151" expand="up+down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_osi_txt02" x="125" y="372" width="151" expand="up+down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_osi_txt01" x="125" y="404" width="151" expand="up+down" align="center" color="#ffffff" />
+
+		<!-- <element type="TEXT" compId="ID_OSInum07" x="40" y="110" width="16.2" expand="right" align="center" size="16" color="#01928f" />
+		<element type="TEXT" compId="ID_OSInum06" x="40" y="141" width="16.2" expand="right" align="center" size="16" color="#01928f" />
+		<element type="TEXT" compId="ID_OSInum05" x="40" y="173" width="16.2" expand="right" align="center" size="16" color="#01928f" />
+		<element type="TEXT" compId="ID_OSInum04" x="40" y="204" width="16.2" expand="right" align="center" size="16" color="#01928f" />
+		<element type="TEXT" compId="ID_OSInum03" x="40" y="236" width="16.2" expand="right" align="center" size="16" color="#01928f" />
+		<element type="TEXT" compId="ID_OSInum02" x="40" y="267" width="16.2" expand="right" align="center" size="16" color="#01928f" />
+		<element type="TEXT" compId="ID_OSInum01" x="40" y="299" width="16.2" expand="right" align="center" size="16" color="#01928f" /> -->
+
+		
+		<element type="TEXT" compId="ID_inst" x="35" y="7" width="934" expand="down" align="center" size="17" color="#ffffff" />
+		<element type="TEXT" compId="ID_text01" width="185" x="790" y="55.6" align="center" expand="left+right"/>
+		<element type="ACTIVITY" subType="MCTABLE"  x="409" y="80" width="561" height="352">
+		<subelement type="CHECK" x="-385" y="380" width="167" height="21" compId="ID_Button01"/>
+		<subelement type="RESET" x="-200" y="380" width="167" height="21" compId="ID_Button02"/>
+		<subelement type="FEEDBACK" x="-80" y="65" width="298.45" height="200" correctTitleId="ID_titleCorrect" correctBodyId="ID_correctText" wrongTitleId="ID_titleIncorrect" wrongBodyId="ID_IncorrectText"/>
+		</element>
+	</slide>
+
+</data>

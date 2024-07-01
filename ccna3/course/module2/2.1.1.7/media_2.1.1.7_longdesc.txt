@@ -1,0 +1,1 @@
+Esta actividad requiere la selección del modo del protocolo VTP correcto para cada definición.

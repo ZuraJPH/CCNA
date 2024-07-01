@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR" >		
+	<!-- Slide 1-->	
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title" />
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s1_caption" x="70" y="414.8" width="478.4" height="35" />
+		
+		</slide>	
+		
+	<!-- Slide 2-->
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.A.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title"/>
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s2_caption" x="40" y="434.8" width="478.4" height="35" />
+		<element type="TEXT" compId="ID_s2_txt01" x="155" y="239.35" width="133.5" expand="up" align="center" size="10" class="orangeCallOut" />
+		
+		</slide>
+	
+	<!-- Slide 3-->
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.B.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title"/>
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s3_caption" x="40" y="434.8" width="478.4" height="35" />
+		<element type="TEXT" compId="ID_s3_txt01" x="155" y="242" width="133.5" expand="up" align="center" size="10" class="orangeCallOut" />
+		
+		</slide>
+		
+	<!-- Slide 4-->
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.C.png" />	
+		<element type="IMAGE" x="-10" y="0" width="680" height="490" src="media_3.1.2.5.D_A.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title"/>
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s4_caption" x="40" y="434.8" width="478.4" height="35" />
+		
+		
+		</slide>
+		
+	<!-- Slide 5-->
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.D.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title"/>
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s5_caption" x="40" y="434.8" width="478.4" height="35" />
+		
+		</slide>
+		
+	<!-- Slide 6-->
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.E.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title"/>
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s6_caption" x="40" y="434.8" width="478.4" height="35" />
+		<element type="TEXT" compId="ID_s6_txt01" x="155" y="235" width="133.5" expand="up" align="center" size="10" class="orangeCallOut" />
+		
+		</slide>		
+		
+	<!-- Slide 7-->
+		<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.2.5.F.png" />	
+		<element type="TEXT" subType="TITLE" compId="ID_s0_title"/>
+		<element type="TEXT" id="ID_static_1" text="F0/1" x="281.9" y="168.9" align="left" width="30" size="10"/>
+		<element type="TEXT" id="ID_static_2" text="F0/2" x="345.65" y="168.9" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_3" text="F0/1" x="399.65" y="184.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_4" text="F0/1" x="347.65" y="256.15" align="left" width="30" size="10" />
+		<element type="TEXT" id="ID_static_5" text="F0/2" x="285.9" y="256.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_6" text="F0/2" x="236.65" y="184.15" align="right" width="30" size="10" />
+		<element type="TEXT" id="ID_static_7" text="S1" x="376.45" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_8" text="S2" x="295.75" y="286" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" id="ID_static_9" text="S3" x="220" y="170" align="center" width="46.5" color="#ffffff" size="10" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt01" x="285" y="133" width="89" expand="up" align="center" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt02" x="199" y="218" width="80" expand="left" align="right" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt03" x="382.65" y="218" width="84" expand="right" align="left" size="10" color="#652c8a" bold="1"/>
+		<element type="TEXT" compId="ID_s0_txt04" x="26" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt05" x="22" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt06" x="76" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt07" x="460" y="112" width="200" expand="up" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt08" x="460" y="163" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt09" x="380" y="278" width="200" expand="down" align="left" size="10" bgColor="#E9E7E8" corner="5" border="2" borderColor="#7B797A" />
+		<element type="TEXT" compId="ID_s0_txt10" x="376.3" y="136.45" width="68" expand="up" align="center" />
+		
+		<element type="TEXTBOX"  bodyId="ID_s7_caption" x="40" y="434.8" width="478.4" height="35" />
+		<element type="TEXT" compId="ID_s7_txt01" x="125" y="240" width="133.5" expand="up" align="center" size="10" class="orangeCallOut" />
+		</slide>
+		
+	</slide>
+</data>

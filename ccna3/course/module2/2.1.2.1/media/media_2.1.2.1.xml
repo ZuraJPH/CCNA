@@ -1,0 +1,47 @@
+﻿<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b> </b>]]></text>
+	</component>
+	
+	<component id='ID_txt01'>
+		<text><![CDATA[VLAN10]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[VLAN20]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[VLAN30]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[VLAN10]]></text>
+	</component>
+
+	<component id='ID_txt05'>
+		<text><![CDATA[VLAN20]]></text>
+	</component>
+
+	<component id='ID_txt06'>
+		<text><![CDATA[VLAN30]]></text>
+	</component>
+
+	<component id='ID_txt07'>
+		<text><![CDATA[Servidor<br>VTP]]></text>
+	</component>
+
+	<component id='ID_txt08'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_txt09'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_txt10'>
+		<text><![CDATA[Enlaces troncales]]></text>
+	</component>
+
+</textcomponents>

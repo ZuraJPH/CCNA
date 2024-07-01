@@ -1,0 +1,1 @@
+La figura muestra dos oficinas conectadas a través de un proveedor de servicios.  La oficina de Nueva York utiliza un T3, que es el estándar en EE. UU. La oficina en Londres utiliza un E3, que es el estándar en Europa.

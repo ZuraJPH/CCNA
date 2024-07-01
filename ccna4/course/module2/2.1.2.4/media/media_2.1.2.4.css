@@ -1,0 +1,5 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+.colorr{color:#f68026 !important;}

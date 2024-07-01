@@ -1,0 +1,1 @@
+La figura muestra la tabla de routing para el router R1. La tabla indica cuatro redes conectadas directamente, siete redes remotas, la interfaz de salida y el costo.

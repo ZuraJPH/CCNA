@@ -1,0 +1,1 @@
+La figura resume las tres P. para usar A.C.L.  Estas son A.C.L. por protocolo, por sentido, y por interfaz.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+	<!-- slide 01 -->
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.1.1.4_A.png" />
+
+<element type="TEXT" compId="ID_s1_txt01" x="517" y="227" width="83" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s1_txt02" x="517" y="390" width="83" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s1_txt03" x="410" y="100" width="83" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt04" x="409" y="211" width="83" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt05" x="409" y="307" width="83" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt06" x="415" y="436" width="67" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt07" x="216" y="104" width="131" expand="down" align="center" color="#652c8a" />
+<element type="TEXT" compId="ID_s1_txt08" x="230" y="252" width="73" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s1_txt09" x="124" y="277" width="58" expand="down" align="left" />
+<element type="TEXT" compId="ID_s1_txt10" x="87" y="422" width="301" expand="up" align="center" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	</slide>
+
+	<!-- slide 02 -->
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_photo.jpg" />
+<element type="TEXT" compId="ID_s2_txt01" x="99" y="206" width="171" expand="down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_s2_txt02" x="405" y="207" width="171" expand="down" align="center" color="#ffffff" />
+<element type="TEXT" compId="ID_s2_txt03" x="252" y="417" width="171" expand="down" align="center" color="#ffffff" />
+<element type="IMAGE" x="404" y="60" width="170" height="136" subType="STD" src="3_1_1_4_A.jpg" />
+<element type="IMAGE" x="100" y="60" width="170" height="136" subType="STD" src="3_1_1_4_B.jpg" />
+<element type="IMAGE" x="251" y="271" width="170" height="136" subType="STD" src="3_1_1_4_C.jpg" />
+<element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#FFFFFF"/>
+	</slide>
+	</slide>
+
+</data>

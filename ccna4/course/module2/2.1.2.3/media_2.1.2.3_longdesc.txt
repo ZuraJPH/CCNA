@@ -1,0 +1,1 @@
+La figura muestra los pasos para configurar el encapsulamiento de HDLC.  La figura comienza en el modo de configuración global y el primer comando pasa a la interfaz deseada. El primer comando es interface serial cero barra diagonal cero barra diagonal cero.  El comando siguiente es encapsulation h d l c

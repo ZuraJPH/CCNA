@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.3 Verificación de la configuración de enlace troncal</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de enlace troncal</h1>
+        <div>
+          <p>En la figura 1, se muestra la configuración del puerto F0/1 del switch S1. La configuración se verifica con el comando <b>show interfaces </b><i>id-interfaz </i><b>switchport</b>. </p>
+          <p></p>
+          <p>En el área superior resaltada, se muestra que el modo administrativo del puerto F0/1 se estableció en <b>trunk</b>. El puerto está en modo de enlace troncal. En la siguiente área resaltada, se verifica que la VLAN nativa es la VLAN 99. Más abajo en el resultado, en el área inferior resaltada, se muestra que todas las VLAN están habilitadas en el enlace troncal.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para configurar un enlace troncal que admita todas las VLAN en la interfaz F0/1 con la VLAN 99 como VLAN nativa. Verifique la configuración de enlace troncal con el comando <b>show interfaces f0/1 switchport</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la sintaxis para configurar el puerto F0/1 como puerto de enlace troncal y establecer la VLAN nativa como 99.  El resultado de “show interfaces f0/1 switchport” también se muestra para verificar que los cambios se hayan aplicado correctamente. La figura dos es una actividad interactiva que permite a los estudiantes practicar la configuración de un puerto como puerto de enlace troncal y establecer la VLAN nativa.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

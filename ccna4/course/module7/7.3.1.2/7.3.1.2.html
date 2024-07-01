@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.2 Plano de control y plano de datos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Plano de control y plano de datos</h1>
+        <div>
+          <p>Un dispositivo de red contiene los siguientes planos:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Plano de control</b>: Suele considerarse el cerebro del dispositivo. Se utiliza para tomar decisiones de reenvío. El plano de control contiene los mecanismos de reenvío de ruta de capa 2 y capa 3, como las tablas de vecinos de protocolo de routing y las tablas de topología, las tablas de routing IPv4 e IPv6, STP, y la tabla ARP. La información que se envía al plano de control es procesada por la CPU.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Plano de datos</b>: También conocido como plano de reenvío, este plano suele ser la estructura de switch que conecta lo varios puertos de red de un dispositivo. El plano de datos de cada dispositivo se utiliza para reenviar los flujos de tráfico. Los routers y los switches utilizan la información del plano de control para reenviar el tráfico entrante desde la interfaz de egreso correspondiente. Por lo general, la información del plano de datos es procesada por un procesador especial del plano de datos, como un procesador de señal digital (DSP) sin que se involucre a la CPU.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El ejemplo de la figura 1 muestra cómo Cisco Express Forwarding (CEF) usa el plano de control y el plano de datos para procesar los paquetes.</p>
+          <p></p>
+          <p>CEF es una tecnología de switching de IP de capa 3 que permite que el reenvío de los paquetes ocurra en el plano de datos sin que se consulte el plano de control. En CEF, la tabla de routing del plano de control rellena previamente la tabla de base de información de reenvío (FIB) de CEF en el plano de datos. La tabla de ARP del plano de control se completa con la tabla de adyacencia. Luego el plano de datos reenvía directamente los paquetes en función de la información del FIB y la tabla de adyacencia, sin necesidad de consultar la información del plano de control.</p>
+          <p></p>
+          <p>Para virtualizar la red, un controlador centralizado realiza y elimina la función del plano de control de cada dispositivo, como se muestra en la Figura 2. El controlador centralizado comunica las funciones del plano de control a cada dispositivo. Cada dispositivo ahora puede enfocarse en el envío de datos mientras el controlador centralizado administra el flujo de datos, mejora la seguridad y proporciona otros servicios.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la arquitectura para Cisco Express Forwarding (CEF) en un switch de capa 3. La figura tiene cuatro rectángulos. En la parte superior hay un rectángulo que representa el plano de control. El rectángulo del plano de control tiene tres engranajes y la palabra CPU. Debajo del plano de control hay tres rectángulos más. De izquierda a derecha, son la interfaz de ingreso, el plano de datos, que está justo debajo del plano de control, y la interfaz de salida. Hay cinco flechas que van de izquierda a derecha, cada una representa un paquete de IP diferente. Las flechas ingresan a la interfaz de ingreso por la izquierda, pasan por el plano de datos y por la figura de FIB y la tabla de adyacencia y, por último, por la interfaz de salida hasta salir del diagrama. La figura 2 muestra las funciones del plano de control y del plano de datos. La figura muestra el controlador centralizado con el plano de control. El plano de control tiene flechas que conducen a una pila de cinco planos de datos debajo, una flecha hacia cada plano de datos, con el texto: "El controlador envía las instrucciones de reenvío a cada dispositivo”.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

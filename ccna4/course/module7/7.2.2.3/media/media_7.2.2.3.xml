@@ -1,0 +1,75 @@
+﻿<textcomponents>
+
+    <component id="ID_s1_title">
+		<text><![CDATA[<b>Instalación del SO del hipervisor</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Servidor web]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+	<text><![CDATA[Servidor de correo electrónico]]></text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Servidor SQL]]></text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Servidor de archivos]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[SO Windows]]></text>
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[SO Windows]]></text>
+	</component>
+	<component id="ID_s1_txt07">
+		<text><![CDATA[SO Windows]]></text>
+	</component>
+	<component id="ID_s1_txt08">
+		<text><![CDATA[SO Windows]]></text>
+	</component>
+	<component id="ID_s1_txt09">
+		<text><![CDATA[Hipervisor]]></text>
+	</component>
+	<component id="ID_s1_txt10">
+		<text><![CDATA[Hardware]]></text>
+	</component>
+	<component id="ID_s1_txt11">
+		<text><![CDATA[<b>Servidor1</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt12">
+		<text><![CDATA[Servidor DHCP]]></text>
+	</component>
+	<component id="ID_s1_txt13">
+	<text><![CDATA[Servidor de AD]]></text>
+	</component>
+	<component id="ID_s1_txt14">
+		<text><![CDATA[Servidor RADIUS]]></text>
+	</component>
+	<component id="ID_s1_txt15">
+		<text><![CDATA[Servidor NMS]]></text>
+	</component>
+	<component id="ID_s1_txt16">
+		<text><![CDATA[SO Windows]]></text>
+	</component>
+	<component id="ID_s1_txt17">
+		<text><![CDATA[SO Windows]]></text>
+	</component>
+	<component id="ID_s1_txt18">
+		<text><![CDATA[SO Linux]]></text>
+	</component>
+	<component id="ID_s1_txt19">
+		<text><![CDATA[SO Linux]]></text>
+	</component>
+	<component id="ID_s1_txt20">
+		<text><![CDATA[Hipervisor]]></text>
+	</component>
+	<component id="ID_s1_txt21">
+		<text><![CDATA[Avanzado]]></text>
+	</component>
+	<component id="ID_s1_txt22">
+		<text><![CDATA[<b>Servidor2</b>]]></text>
+	</component>
+	
+</textcomponents>

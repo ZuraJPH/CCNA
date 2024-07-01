@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="1000" height="490" src="../../../common/images/page_backgrounds/bg_activity.jpg" />
+<element type="IMAGE" x="0" y="0" width="1000" height="680"  src="media_6.1.3.7.png" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#ffffff"/>
+<element type="TEXTBOX" titleId="ID_s1_instr_title" bodyId="ID_s1_instr_body" x="25" y="55" size="11" width="225" height="280" />
+
+<element type="ACTIVITY" subType="DROPDOWN" x="312" y="42" width="670" height="400">
+<subelement type="QUESTION"  compId="ID_s1_txt01" answer='ID_s1_CBprompt01,ID_s1_CB01_01,ID_s1_CB01_02,ID_s1_CB01_03,ID_s1_CB01_04' correctAnswer="ID_s1_CB01_04"  x="490" y="60" dropdownX="330" dropdownY="50" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt02" answer='ID_s1_CBprompt02,ID_s1_CB02_01,ID_s1_CB02_02,ID_s1_CB02_03,ID_s1_CB02_04' correctAnswer="ID_s1_CB02_02"  x="490" y="96" dropdownX="330" dropdownY="86" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt03" answer='ID_s1_CBprompt03,ID_s1_CB03_01,ID_s1_CB03_02,ID_s1_CB03_03,ID_s1_CB03_04'  correctAnswer="ID_s1_CB03_01"  x="490" y="131" dropdownX="330" dropdownY="121" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt04" answer='ID_s1_CBprompt04,ID_s1_CB04_01,ID_s1_CB04_02,ID_s1_CB04_03,ID_s1_CB04_04'  correctAnswer="ID_s1_CB04_03"  x="490" y="166" dropdownX="330" dropdownY="156" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt05" answer='ID_s1_CBprompt05,ID_s1_CB05_01,ID_s1_CB05_02,ID_s1_CB05_03,ID_s1_CB05_04' correctAnswer="ID_s1_CB05_04"  x="490" y="201" dropdownX="330" dropdownY="191" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt06" answer='ID_s1_CBprompt06,ID_s1_CB06_01,ID_s1_CB06_02,ID_s1_CB06_03,ID_s1_CB06_04' correctAnswer="ID_s1_CB06_01"  x="490" y="236" dropdownX="330" dropdownY="226" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt07" answer='ID_s1_CBprompt07,ID_s1_CB07_01,ID_s1_CB07_02,ID_s1_CB07_03,ID_s1_CB07_04' correctAnswer="ID_s1_CB07_02"  x="490" y="271" dropdownX="330" dropdownY="261" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt08" answer='ID_s1_CBprompt08,ID_s1_CB08_01,ID_s1_CB08_02,ID_s1_CB08_03,ID_s1_CB08_04'  correctAnswer="ID_s1_CB08_02"  x="490" y="306" dropdownX="330" dropdownY="296" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt09" answer='ID_s1_CBprompt09,ID_s1_CB09_01,ID_s1_CB09_02,ID_s1_CB09_03,ID_s1_CB09_04'  correctAnswer="ID_s1_CB09_03"  x="490" y="341" dropdownX="330" dropdownY="331" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt10" answer='ID_s1_CBprompt10,ID_s1_CB10_01,ID_s1_CB10_02,ID_s1_CB10_03,ID_s1_CB10_04' correctAnswer="ID_s1_CB10_02"  x="490" y="376" dropdownX="330" dropdownY="366" ></subelement>
+<subelement type="QUESTION"  compId="ID_s1_txt11" answer='ID_s1_CBprompt11,ID_s1_CB11_01,ID_s1_CB11_02,ID_s1_CB11_03,ID_s1_CB11_04' correctAnswer="ID_s1_CB11_03"  x="490" y="411" dropdownX="330" dropdownY="401" ></subelement>
+<subelement type="CHECK"  compId="ID_s1_CHECK" x="62.5" y="410.7" width="150" height="21"/>
+<subelement type="RESET"  compId="ID_s1_RESET" x="62.5" y="446" width="150" height="21"/>
+<subelement type="FEEDBACK" x="400" y="157.5" width="300" height="175" correctTitleId="ID_s1_titleCorrect" correctBodyId="ID_s1_correctText" wrongTitleId="ID_s1_titleIncorrect" wrongBodyId="ID_s1_incorrectText" />
+</element>
+
+</slide>
+
+</data>

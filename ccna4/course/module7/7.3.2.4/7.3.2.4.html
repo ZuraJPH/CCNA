@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.2.4 Topología de nodo principal-nodo secundario</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Topología de nodo principal-nodo secundario</h1>
+        <div>
+          <p>La estructura Cisco ACI está compuesta por la APIC y los switches de la serie 9000 de Cisco Nexus mediante topología de nodo principal y secundario de dos niveles, como se muestra en la figura. Los switches de nodo secundario siempre se adjuntan a los nodos principales, pero nunca se adjuntan entre sí. De manera similar, los switches principales solo se adjuntan a la hoja y a los switches de núcleo (no se muestran). En esta topología de dos niveles, todo está a un salto de todo lo demás.</p>
+          <p></p>
+          <p>Los APIC de Cisco y todos los demás dispositivos de la red se adjuntan físicamente a los switches de nodo secundario.</p>
+          <p></p>
+          <p>En comparación con una SDN, el controlador de APIC no manipula la ruta de datos directamente. En cambio, el APIC centraliza la definición de políticas y programas a los que cambia el nodo secundario para reenviar tráfico según las políticas definidas.</p>
+          <p></p>
+          <p>Para la virtualización, la ACI es compatible con entornos de varios proveedores de hipervisor que se conectarían a los switches secundarios, incluidos los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Microsoft (Hyper-V/SCVMM/Azure Pack)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Red Hat Enterprise Linux OS (KVM OVS/OpenStack)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VMware (ESX/vCenter/vShield)</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la topología de nodo principal y secundario de ACI. En la parte superior de la topología está el nodo principal con dos switches Cisco Nexus 9500. Cada switch 9500 se conecta a cuatro switches Cisco Nexus 9300 con enlaces Ethernet de 40 Gigabits. Los switches 9300 son parte de la capa del nodo secundario. Los cuatro switches 9300 se conectan a un servidor rotulado “Todos los demás dispositivos de red” con varios enlaces Ethernet de 10 Gigabits. El diagrama también muestra los switches 9300 conectados a un cuadro con la palabra APIC y los símbolos de reloj, alarma, candado y persona.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

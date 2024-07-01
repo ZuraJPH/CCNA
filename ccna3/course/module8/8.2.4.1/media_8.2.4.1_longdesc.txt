@@ -1,0 +1,1 @@
+En la figura uno, se muestra la topología de referencia de OSPF. En la figura dos, se muestra la salida del siguiente comando ejecutado en el router R1: show ip ospf. En la figura aparecen dos routers vecinos: R2 y R3. La figura tres representa un elemento de medios interactivos que permite que el estudiante verifique los vecinos OSPF del router R1.

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.3.2 Registro predeterminado</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Registro predeterminado</h1>
+        <div>
+          <p>De manera predeterminada, los routers y switches de Cisco envían mensajes de registro a la consola para todos los niveles de gravedad. En algunas versiones del IOS, el dispositivo también almacena en búfer los mensajes de registro de manera predeterminada. Para habilitar estas dos configuraciones, utilice los comandos de configuración global <b>logging console</b> y <b>logging buffered</b>, respectivamente. </p>
+          <p></p>
+          <p>El comando <b>show logging</b> muestra la configuración predeterminada del servicio de registro en un router Cisco, como se muestra en la ilustración. En las primeras líneas del resultado, se proporciona información sobre el proceso de registro, y al final del resultado se indican los mensajes de registro.</p>
+          <p></p>
+          <p>En la primera línea resaltada, se indica que este router se registra en la consola y se incluyen mensajes de depuración. Esto en realidad significa que todos los mensajes del nivel de depuración, así como cualquier mensaje de nivel inferior (como los mensajes del nivel de notificación), se registran en la consola. En la mayoría de los routers Cisco IOS, el nivel de gravedad predeterminado es 7: depuración. El resultado también indica que se registraron 32 de estos mensajes.</p>
+          <p></p>
+          <p>En la segunda línea resaltada, se indica que este router se registra en un búfer interno. Dado que en este router se habilitó el registro en un búfer interno, el comando <b>show logging</b> también indica los mensajes en ese búfer. Puede ver algunos de los mensajes del sistema que se registraron al final del resultado.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra la salida del comando show logging en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.3.4 El comando boot system</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>El comando boot system</h1>
+        <div>
+          <p>Para actualizar a la imagen de IOS copiada luego de guardar la imagen en la memoria flash del router, configure el router para que cargue la nueva imagen durante el inicio; para ello, utilice el comando <b>boot system </b>, tal como se indica en la Figura 1. Guarde la configuración. Vuelva a cargar el router para que arranque con la nueva imagen. Una vez iniciado el router, utilice el comando <b>show version</b> para confirmar que se haya cargado la nueva imagen (mire la Figura 2).</p>
+          <p></p>
+          <p>Durante el arranque, el código bootstrap analiza el archivo de configuración de inicio en la NVRAM para detectar los comandos <b>boot system</b> que especifican el nombre y la ubicación de la imagen del software IOS de Cisco que se debe cargar. Se pueden introducir varios comandos <b>boot system</b> de manera secuencial para proporcionar un plan de arranque que tenga tolerancia a fallas. </p>
+          <p></p>
+          <p>Si no hay comandos <b>boot system</b> en la configuración, de manera predeterminada, el router carga y ejecuta la primera imagen válida del IOS de Cisco en la memoria flash.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la sintaxis para configurar el router para que se inicie desde un archivo IOS específico en la memoria flash.  Esto resulta útil cuando se esté probando una nueva versión y todavía no se desea quitar la anterior. En la figura número dos se muestra la salida del comando "show version" en el router uno.  Se resaltan la nueva versión de Cisco IOS y el nombre del archivo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

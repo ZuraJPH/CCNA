@@ -1,0 +1,1 @@
+La figura muestra los resultados de una prueba de ping a un host remoto desde la perspectiva de una PC en una VLAN y subred separadas a través de una topología de routing entre VLAN de router-on-a-stick.

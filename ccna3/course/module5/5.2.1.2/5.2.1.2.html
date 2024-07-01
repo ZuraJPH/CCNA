@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.2 Arranque en frío</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Arranque en frío</h1>
+        <div>
+          <p>Todos los protocolos de routing siguen los mismos patrones de funcionamiento. Para ayudar a ilustrar esto, considere la siguiente situación en la que los tres routers ejecutan RIPv2. </p>
+          <p></p>
+          <p>Cuando un router se enciende, no tiene ninguna información sobre la topología de la red. Ni siquiera tiene conocimiento de que existen dispositivos en el otro extremo de sus enlaces. La única información que tiene un router proviene de su propio archivo de configuración almacenado en la NVRAM. Una vez que se un router arranca correctamente, aplica la configuración guardada. Si la asignación de direcciones IP está configurada de forma correcta, en primer lugar el router detecta sus propias redes conectadas directamente. </p>
+          <p></p>
+          <p>Haga clic en Reproducir en la ilustración para ver una animación de la detección inicial de las redes conectadas para cada router. </p>
+          <p></p>
+          <p>Observe la forma en que los routers avanzan a través del proceso de arranque y, luego, detectan las redes conectadas directamente y las máscaras de subred. Esta información se agrega a sus tablas de routing de la siguiente manera:</p>
+          <p>
+            <ul>
+              <li>El R1 agrega la red 10.1.0.0 disponible a través de la interfaz FastEthernet 0/0, y 10.2.0.0 está disponible a través de la interfaz Serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R2 agrega la red 10.2.0.0 disponible a través de la interfaz Serial 0/0/0, y 10.3.0.0 está disponible a través de la interfaz Serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R3 agrega la red 10.3.0.0 disponible a través de la interfaz Serial 0/0/1, y 10.4.0.0 está disponible a través de la interfaz FastEthernet 0/0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Con esta información inicial, los routers proceden a encontrar orígenes de ruta adicionales para sus tablas de routing. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres routers conectados linealmente a través de enlaces WAN.  El router R1 está conectado a R2 a través de un enlace WAN serial y tiene una LAN en una interfaz Ethernet.  R2 está conectado a R1 y a R3 a través de enlaces WAN seriales y, por lo tanto, tiene dos redes.  R3 está conectado a R2 solamente a través de un enlace WAN serial y tiene una LAN en una interfaz Ethernet.  La animación muestra cómo se crea la tabla de routing a medida que cada router le agrega sus propias redes conectadas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

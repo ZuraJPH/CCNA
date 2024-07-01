@@ -1,0 +1,54 @@
+﻿<textcomponents><!--slide 1--><component id='ID_s1_title'>
+	<text><![CDATA[<b>Comprobar que los clientes VTP hayan recibido la<br>información de la VLAN nueva</b>]]></text>
+</component><!--slide 2--><component id='ID_s2_title'>
+	<text><![CDATA[<b>Comprobar el estado del protocolo VTP en el S2</b>]]></text>
+</component><!--slide 3--><component id='ID_s3_title'>
+	<text><![CDATA[<b>Intentar configurar VLAN en un cliente</b>]]></text>
+</component><!--slide 4--><component id="ID_s4_title">
+	<text><![CDATA[<b>Configurar y comprobar el protocolo VTP</b>]]></text>
+</component><!--Syntax Checker Button Text--><component id="ID_sc_reset">
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Mostrar]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Mostrar todo]]></text>
+	</component><!--End Syntax Checker Button Text--><component id="ID_s4_SC" fontSize="11" fontFace='_typewriter'  fontColor="#ffffff">
+                <feedback id="fb"><![CDATA[<b><font face="_sans" color="#ffffff">***Debe introducir el comando exacto y completo. Los comandos que incluyen un nombre o una contraseña distinguen mayúsculas de minúsculas.***</font></b> ]]></feedback>
+              <existingcommands><![CDATA[<font face="_sans"><b>Visualice la configuración actual del protocolo VTP en el S1.</b></font>]]></existingcommands>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ show vtp status]]></correctresponse>
+                                <deviceresponse><![CDATA[VTP Version capable : 1 to 3<br>VTP version running : 1<br>VTP Domain Name : <br>VTP Pruning Mode : Disabled<br>VTP Traps Generation : Disabled<br>Device ID : 0cd9.96e8.8a00<br>Configuration last modified by 0.0.0.0 at 0-0-00 00:00:00<br><br>Feature VLAN:<br>--------------<br>VTP Operating Mode : Transparent<br>Maximum VLANs supported locally : 255<br>Number of existing VLANs : 5<br>Configuration Revision : 0<br>MD5 digest : 0x57 0xCD 0x40 0x65 0x63 0x59 0x47 0xBD <br>                                    0x56 0x9D 0x4A 0x3E 0xA5 0x69 0x35 0xBC <br>S1#]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b><ul>Ingrese al modo de configuración global en el S1 y luego emita los siguientes comandos:<li>Configure el S1 como servidor VTP.</li><li>Configure el protocolo VTP con CCNA como nombre de dominio.</li><li>Establezca la contraseña del protocolo VTP en cisco12345.</li><li>Salga del modo de configuración global.</li><li>Visualice la contraseña del protocolo VTP para su comprobación.</li><li>Visualice la configuración del protocolo VTP para comprobar los demás cambios realizados en él.</li></font>]]></instruction>
+              </command>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ configure terminal]]></correctresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ vtp mode server]]></correctresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ vtp domain CCNA]]></correctresponse>
+                                <deviceresponse><![CDATA[S1(config)#<br>*Mar 1 00:06:13.108: %SW_VLAN-6-VTP_DOMAIN_NAME_CHG: VTP domain name changed to CCNA.]]></deviceresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ vtp password cisco12345]]></correctresponse>
+                                <deviceresponse><![CDATA[S1(config)#<br>Setting device VTP password to cisco12345]]></deviceresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ exit]]></correctresponse>
+              </command>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ show vtp password]]></correctresponse>
+                                <deviceresponse><![CDATA[VTP Password: cisco12345<br>S1#]]></deviceresponse>
+              </command>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ show vtp status]]></correctresponse>
+                                <deviceresponse><![CDATA[VTP Version capable : 1 to 3<br>VTP version running : 1<br>VTP Domain Name : CCNA<br>VTP Pruning Mode : Disabled<br>VTP Traps Generation : Disabled<br>Device ID : 0cd9.96e8.8a00<br>Configuration last modified by 0.0.0.0 at 0-0-00 00:00:00<br>Local updater ID is 0.0.0.0 (no valid interface found)<br><br>Feature VLAN:<br>--------------<br>VTP Operating Mode : Server<br>Maximum VLANs supported locally : 255<br>Number of existing VLANs : 5<br>Configuration Revision : 0<br>MD5 digest : 0xDE 0x44 0xC1 0x44 0x10 0x06 0x45 0x4D <br>                                    0x3A 0x44 0x64 0x4B 0x9D 0xA0 0x2E 0x35 <br>]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Configuró y comprobó correctamente el protocolo VTP.</font>]]></instruction>
+              </command>
+<command prompt=""/>
+ </component>
+
+</textcomponents>

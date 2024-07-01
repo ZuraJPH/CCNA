@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.3.2 Protocolo de routing de gateway interior mejorado</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolo de routing de gateway interior mejorado</h1>
+        <div>
+          <p>El protocolo de routing de gateway interior (IGRP) fue el primer protocolo de routing IPv4 exclusivo desarrollado por Cisco en 1984. Tenía las siguientes características de diseño:</p>
+          <p>
+            <ul>
+              <li>Se utilizan el ancho de banda, el retraso, la carga y la confiabilidad para crear una métrica compuesta.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De manera predeterminada, las actualizaciones de routing se transmiten cada 90 segundos.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Límite máximo de 255 saltos.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En 1992, el protocolo IGRP se vio reemplazado por IGRP mejorado (EIGRP). Al igual que RIPv2, EIGRP también introdujo compatibilidad con VLSM y CIDR. Con EIGRP se aumenta la eficiencia, se reducen las actualizaciones de routing y se admite el intercambio seguro de mensajes.  </p>
+          <p></p>
+          <p>En la tabla de la ilustración, se resumen las diferencias entre IGRP y EIGRP. </p>
+          <p></p>
+          <p>EIGRP también introdujo lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Actualizaciones dirigidas limitadas:</b> no se envían actualizaciones periódicas. Solo se propagan los cambios de la tabla de routing, siempre que se produce un cambio. Esto reduce la cantidad de carga que el protocolo de routing coloca en la red. Que las actualizaciones sean dirigidas y limitadas significa que EIGRP solo envía actualizaciones a los vecinos que las necesitan. Se utiliza menos ancho de banda, especialmente en redes grandes con muchas rutas. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mecanismo de saludo keepalive:</b> se intercambia periódicamente un pequeño mensaje de saludo para mantener adyacencias con los routers vecinos. Esto implica un uso muy bajo de los recursos de red durante la operación normal, en comparación con las actualizaciones periódicas. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mantenimiento de una tabla de topología:</b> se mantienen todas las rutas recibidas de los vecinos (no sólo las mejores rutas) en una tabla de topología. DUAL puede insertar rutas de respaldo en la tabla de topología de EIGRP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Convergencia rápida:</b> en la mayoría de los casos, se trata del IGP más rápido para realizar la convergencia debido a que mantiene rutas alternativas, lo que permite una convergencia casi instantánea. Si una ruta principal falla, el router puede utilizar la ruta alternativa ya identificada. El cambio a la ruta alternativa es inmediato y no implica interacción con otros routers.   </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Compatibilidad con varios protocolos de capa de red:</b> EIGRP utiliza módulos dependientes de protocolo (PDM), lo que significa que es el único protocolo compatible con otros protocolos además de IPv4 e IPv6, como el IPX antiguo y AppleTalk. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una tabla que compara IGRP con EIGRP.  Este es un resumen de la lectura.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

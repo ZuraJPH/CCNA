@@ -1,0 +1,15 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+
+#ID_s5_txt01 {
+    position: absolute;
+    top: 40px;
+	left:4px;}

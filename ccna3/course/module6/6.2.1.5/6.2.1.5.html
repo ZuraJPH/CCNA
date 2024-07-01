@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.5 Configuración de la ID del router del protocolo EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de la ID del router del protocolo EIGRP </h1>
+        <div>
+          <p>El comando<b> eigrp router-id </b><i>dirección-ipv4 </i>de configuración del router es el método preferido que se utiliza para configurar la ID de router EIGRP. Este método tiene precedencia sobre cualquier dirección IPv4 de loopback o interfaz física configurada. La sintaxis del comando es:</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> La dirección IPv4 utilizada para indicar la ID de router es en realidad cualquier número de 32 bits que se muestre en notación decimal con puntos. </p>
+          <p></p>
+          <p>La ID de router <i>dirección-ipv4</i> se puede configurar con cualquier dirección IPv4, excepto por 0.0.0.0 y 255.255.255.255. La ID del router debe ser un número único de 32 bits en el dominio de routing EIGRP; de lo contrario, pueden ocurrir incongruencias de routing.</p>
+          <p></p>
+          <p>En la figura 1, se muestra la configuración de la ID de router EIGRP en los routers R1 y R2.</p>
+          <p></p>
+          <p>Si una ID de router no se configura explícitamente, el router usaría la dirección IPv4 más alta configurada en una interfaz loopback. La ventaja de utilizar una interfaz loopback es que, a diferencia de las interfaces físicas, las interfaces loopback no pueden fallar. No hay cables ni dispositivos adyacentes reales de los que dependa la interfaz loopback para encontrarse en estado up. Por lo tanto, usar una dirección de loopback como ID del router puede proporcionar una ID de router más coherente que usar una dirección de interfaz.</p>
+          <p></p>
+          <p>Si no se utiliza el comando <b>eigrp router-id</b> y hay interfaces loopback configuradas, EIGRP elige la dirección IPv4 más alta de cualquiera de las interfaces loopback. Los siguientes comandos se utilizan para habilitar y configurar una interfaz loopback:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)#</span>
+            <span class="cmd">
+              <b> interface loopback </b>
+            </span>
+            <span class="cmd">
+              <i>número</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">Router(config-if)#</span>
+            <span class="cmd">
+              <b> dirección ip </b>
+            </span>
+            <span class="cmd">
+              <i>dirección-ipv4</i>
+            </span>
+            <span class="cmd">
+              <b></b>
+            </span>
+            <span class="cmd">
+              <i>máscara-subred</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <b>Verificación del proceso EIGRP</b>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra la salida de <b>show ip protocols</b> para el R1, incluida la ID del router. El comando <b>show ip protocols</b> muestra los parámetros y el estado actual de cualquier proceso de protocolo de routing activo, incluidos EIGRP y OSPF. El comando<b> show ip protocols </b>muestra diferentes tipos de salidas específicos de cada protocolo de routing. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar y verificar la ID del router para el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la sintaxis para configurar una ID de router EIGRP para el router uno y el router dos. En la figura dos, se muestra la salida que genera el comando “show ip protocols” en el router uno.  La ID de router se muestra resaltada. La figura tres corresponde a una actividad interactiva que permite que el estudiante realice la configuración de una ID de router EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

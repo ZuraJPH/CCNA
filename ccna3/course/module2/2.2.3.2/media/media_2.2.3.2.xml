@@ -1,0 +1,40 @@
+﻿<textcomponents>
+
+    <component id="ID_title">
+        <text>
+            <![CDATA[<b>Problemas comunes con enlaces troncales</b>]]></text>
+    </component>
+
+    <component id="ID_table01">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+<tr >
+<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+</tr>
+
+<tr>
+<td width="85px" bgcolor='#077A77'><font color='#ffffff'><b>Componentes del VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>Definición</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Falta de concordancia del modo de enlace troncal</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-13"><ul><li>Por ejemplo, un puerto de enlace troncal está configurado en enlace troncal y el otro lado está configurado como un puerto de acceso. Otro ejemplo es que ambos lados estén configurados en el modo de DTP automático. Es posible que también haya otras diferencias.</li><li>Estos errores de configuración hacen que el vínculo de enlace troncal deje de funcionar.</li><li>Corrija esta situación desactivando la interfaz, corrigiendo las configuraciones de modo del DTP, y vuelva a habilitar la interfaz.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>VLAN permitidas en enlaces troncales</td>
+<td bgcolor='#ffffff'><textformat blockindent="-13"><ul><li>No se actualizó la lista de VLAN permitidas en un enlace troncal con los requisitos de enlace troncal de VLAN actuales.</li><li>En este caso, se envía tráfico inesperado o ningún tráfico al enlace troncal.</li><li>Configure las VLAN correctas permitidas en el enlace troncal.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Falta de concordancia de la VLAN nativa</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-13"><ul><li>Cuando las VLAN nativas no coinciden, los switches generarán los mensajes informativos que le permiten conocer el problema.</li><li>Asegúrese de que ambos lados de un enlace troncal usan la misma VLAN nativa.</li></ul></textformat></td>
+</tr>
+
+
+</table>]]>
+        </text>
+    </component>
+   
+</textcomponents>

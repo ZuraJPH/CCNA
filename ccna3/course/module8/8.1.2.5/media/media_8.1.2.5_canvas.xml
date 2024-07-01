@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+		<slide>		
+			<element type="TEXT" subType="TITLE" compId="ID_title" />
+			<element type="TEXT" subType="TABLE" compId="ID_table01" x="5" y="33" width="450" height="360" size="10"/>
+			<element type="TEXT" subType="TABLE" compId="ID_table02" x="182.20" y="237" width="285" height="159" size="10"/>	
+			<element type="TEXTBOX"   bodyId="ID_Body_txt01" x="-30" y="217" width="190" height="180"/>
+		</slide>
+
+</data>

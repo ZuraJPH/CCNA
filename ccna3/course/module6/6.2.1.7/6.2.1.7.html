@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.7 El comando de red y la máscara de comodín</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>El comando de red y la máscara de comodín</h1>
+        <div>
+          <p>De manera predeterminada, cuando se usan el comando <b>network</b> y una dirección de red IPv4, como 172.16.0.0, todas las interfaces en el router que pertenecen a esa dirección de red con clase se habilitan para EIGRP. Sin embargo, puede haber ocasiones en las que el administrador de red no desee incluir a todas las interfaces dentro de una red al habilitar EIGRP. Por ejemplo, en la figura 1, suponga que un administrador desea habilitar EIGRP en el R2, pero solo para la subred 192.168.10.8 255.255.255.252, en la interfaz S0/0/1.</p>
+          <p></p>
+          <p>Para configurar EIGRP con el fin de que anuncie solo subredes específicas, utilice la opción<i> wildcard-mask </i>con el comando network:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>network</b>
+            </span>
+            <span class="cmd">
+              <i>network-address</i>
+            </span>
+            <span class="cmd">
+              <b></b>
+            </span>[<span class="cmd"><i>wildcard-mask</i></span>]</p>
+          <p></p>
+          <p>Una máscara de comodín es similar a lo inverso de una máscara de subred. En una máscara de subred, los 1 binarios son importantes, mientras que los 0 binarios no. En una máscara de comodín, los 0 binarios son importantes, mientras que los 1 binarios no. Por ejemplo, lo inverso de una máscara de subred 255.255.255.252 es 0.0.0.3. </p>
+          <p></p>
+          <p>El cálculo de una máscara de comodín puede ser desalentador al comienzo, pero es bastante fácil de hacer. Para calcular el valor inverso de la máscara de subred, reste el valor de la máscara de subred 255.255.255.255 de la siguiente manera:</p>
+          <p></p>
+          <p>
+            <span class="cmd">   255.255.255.255 </span>
+          </p>
+          <p>
+            <span class="cmd"> - 255.255.255.252  </span>
+          </p>
+          <p>
+            <span class="cmd">   ---------------</span>
+          </p>
+          <p>
+            <span class="cmd">     0.  0.  0.  3   </span>Máscara de comodín</p>
+          <p></p>
+          <p>En la figura 2, continúa la configuración de red EIGRP del R2. El comando <b>network 192.168.10.8 0.0.0.3</b> habilita específicamente EIGRP en la interfaz S0/0/1, un miembro de la subred 192.168.10.8 255.255.255.252. </p>
+          <p></p>
+          <p>La configuración de una máscara de comodín es la sintaxis de comando oficial del comando <b>network</b> de EIGRP. Sin embargo, las versiones de Cisco IOS también aceptan una máscara de subred para usar en su lugar. Por ejemplo, en la figura 3, se muestra la configuración de la misma interfaz S0/0/1 en el R2, solo que en este caso se utiliza una máscara de subred en el comando <b>network</b>. Observe que en la salida del comando<b> show running-config</b> el IOS convirtió el comando de la máscara de subred a su máscara de comodín.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para configurar los comandos <b>network</b> de EIGRP para el router R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos e ISA. La interfaz serial del router dos que apunta al router tres está encerrada en un círculo, incluida la dirección IP del punto nueve. En la figura dos, se muestra la sintaxis para configurar las instrucciones de la red de EIGRP para la interfaz serial que aparece en el círculo en el router dos utilizando la máscara de comodín (wildcard). En la figura tres, se muestra la salida que genera el comando "show running dash config" en el router dos.  En la sección de EIGRP, la red que se acabo de configurar aparece resaltada. La figura cuatro corresponde a una actividad interactiva que permite que el estudiante realice la configuración de EIGRP en el router tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

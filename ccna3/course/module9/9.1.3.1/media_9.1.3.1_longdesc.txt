@@ -1,0 +1,1 @@
+La figura uno muestra una pantalla de salida del comando show ip route en Cisco IOS.  Se resaltan diferentes tipos de rutas de OSPF; incluidas las intraárea, interárea y rutas externas. La figura dos muestra una pantalla de salida del comando show ipv6 route en Cisco IOS.  Se resaltan diferentes tipos de rutas de OSPF; incluidas las intraárea, interárea y rutas externas.

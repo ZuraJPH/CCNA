@@ -1,0 +1,1 @@
+En la figura se muestra la salida que genera el comando “show ip interface” en el router uno.  Los valores de ancho de banda y retraso, además de la confiabilidad y carga, aparecen resaltados en color naranja en todas las interfaces.

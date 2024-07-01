@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.5 Protocolos de routing con clase</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de routing con clase</h1>
+        <div>
+          <p>La mayor diferencia entre los protocolos de routing con clase y sin clase es que los protocolos de routing con clase no envían información de la máscara de subred en las actualizaciones de routing. Los protocolos de routing sin clase incluyen información de la máscara de subred en las actualizaciones de routing. </p>
+          <p></p>
+          <p>Los dos protocolos de routing IPv4 originales que se desarrollaron fueron RIPv1 e IGRP, que se crearon cuando las direcciones de red se asignaban según las clases (es decir, clase A, B o C). En ese entonces, no era necesario que un protocolo de routing incluyera la máscara de subred en la actualización de routing, debido a que era posible determinar la máscara de red sobre la base del primer octeto de la dirección de red.  </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> solo RIPv1 e IGRP son protocolos con clase. El resto de los protocolos de routing IPv4 e IPv6 son protocolos sin clase. El direccionamiento con clase nunca fue parte de IPv6. </p>
+          <p></p>
+          <p>El hecho de que RIPv1 e IGRP no incluyan información de la máscara de subred en sus actualizaciones significa que no pueden proporcionar máscaras de subred de longitud variable (VLSM) ni routing entre dominios sin clase (CIDR).  </p>
+          <p></p>
+          <p>Los protocolos de routing con clase también generan problemas en las redes no contiguas. Que una red sea no contigua significa que las subredes de la misma dirección de red principal con clase están separadas por una dirección de red con clase diferente.  </p>
+          <p></p>
+          <p>Consulte la topología que se muestra en la figura 1 para ver un ejemplo de las limitaciones del routing con clase. Observe que las LAN del R1 (172.16.1.0/24) y del R3 (172.16.2.0/24) son subredes de la misma red de clase B (172.16.0.0/16), Están separadas por diferentes subredes con clase (192.168.1.0/30 y 192.168.2.0/30) de las mismas redes de clase C (192.168.1.0/24 y 192.168.2.0/24).</p>
+          <p></p>
+          <p>Cuando el R1 reenvía una actualización al R2, RIPv1 no incluye información de la máscara de subred con la actualización, sino que solamente reenvía la dirección de red de clase B 172.16.0.0.  </p>
+          <p></p>
+          <p>El R2 recibe la actualización y la procesa. A continuación, crea una entrada para la red de clase B 172.16.0.0/16 y la agrega en la tabla de routing, como se muestra en la figura 2.  </p>
+          <p></p>
+          <p>En la figura 3, se muestra que cuando el R3 reenvía una actualización al R2, tampoco incluye información de la máscara de subred y, por lo tanto, solamente reenvía la dirección de red con clase 172.16.0.0. </p>
+          <p></p>
+          <p>En la figura 4, el R2 recibe y procesa la actualización y agrega otra entrada para la dirección de red con clase 172.16.0.0/16 a su tabla de routing. Cuando hay dos entradas con métricas idénticas en la tabla de routing, el router comparte la carga de tráfico por igual entre los dos enlaces. Esto se conoce como “equilibrio de carga”.  </p>
+          <p></p>
+          <p>Como se muestra en la figura 5, esto perjudica la conectividad de una red no contigua. Observe el comportamiento irregular de los comandos <b>ping</b> y <b>traceroute</b>.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra tres routers conectados linealmente a través de enlaces WAN.  R-1 está conectado a R-2 a través de un enlace WAN serie, y tiene una LAN en una interfaz Ethernet.  La LAN es la dirección de red 172 punto 16 punto 1 punto 0 barra diagonal 24.  El enlace WAN es la red 192 punto 168 punto 1 punto 0 barra diagonal 24.  R2 está conectado a R3 a través de un enlace WAN serial y la dirección de red es 192 punto 168 punto 1 punto 0 barra diagonal 24.  R3 tiene una LAN en una interfaz Ethernet con la dirección de red 172 punto 16 punto 2 punto 0 barra diagonal 24.  R1 ejecuta la versión 1 de RIP. Por lo tanto, después de cada período de 30 segundos, envía una actualización de routing que consta de la dirección de red 172 punto 16 punto 1 punto 0 sin la máscara de subred.  La figura dos muestra R2 que recibe la actualización y agrega la red anunciada por R1 a su tabla de routing. Dado que es una red de clase B, la dirección que se agrega es 172 punto 16 punto 0 punto 0.  Agregará la máscara de subred de una barra diagonal 16 a la tabla ya que la red es de clase B.  Observe que la red real en R1 utiliza una barra diagonal 24. La figura tres muestra R3 que ejecuta la versión 1 de RIP. Por lo tanto, después de cada período de 30 segundos, envía una actualización de routing que consta de la dirección de red 172 punto 16 punto 2 punto 0 sin la máscara de subred.  La figura cuatro muestra R2 que recibe la actualización y agrega la red anunciada por R3 a su tabla de routing. Dado que es una red de clase B, la dirección que se agrega es 172 punto 16 punto 0 punto 0.  Agregará la máscara de subred de una barra diagonal 16 a la tabla ya que la red es de clase B.  La figura cinco muestra el resultado de un comando ping y un comando trace route que se envían de R2 a la dirección 172 punto 16 punto 1 punto 1.  Algunos de los pings se reciben y otros se pierden.  Estos resultados se deben a que R2 tiene dos rutas al host 172 punto 16 punto 1 punto 1 porque la tabla de routing muestra que con la red de clase B 172 punto 16 punto 0 punto 0 se puede establecer comunicación tanto desde la interfaz serial cero barra diagonal cero barra diagonal cero como desde la interfaz cero barra diagonal cero barra diagonal uno.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

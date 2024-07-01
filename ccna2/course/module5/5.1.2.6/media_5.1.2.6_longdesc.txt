@@ -1,0 +1,1 @@
+La figura es un diagrama de flujo que representa la resolución de los problemas de conexión en un switch.

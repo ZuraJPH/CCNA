@@ -1,0 +1,1 @@
+La figura uno muestra el resultado que genera el comando "show i. p. route" en el router tres. La figura dos muestra el resultado que genera el comando "show i. p. protocols" en el router tres.

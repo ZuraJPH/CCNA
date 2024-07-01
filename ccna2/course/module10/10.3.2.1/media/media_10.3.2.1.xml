@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Modelo de paquetes de IOS para routers ISR G2</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Seguridad</b><br>Firewall Cisco IOS, SSL VPN, DMVPN, IPS, GET VPN, IPsec, etc.<br>Dispositivos: 1900, 2900, 3900]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[<b>Comunicación unificada</b><br>CUBE, SRST, gateway de voz, CUCME, DSP, VXML, etc.<br>Dispositivos: 2900, 3900]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[<b>Datos</b><br>MPLS, BFD, RSVP, L2VPN, L2TPv3, IP SLA, etc.<br>Dispositivos: 1900, 2900, 3900]]></text> 
+  </component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[<b>Base IP</b><br>BGP, OSPF, EIGRP, ISIS, RIP, PBR, IGMP, Multidifusión<br>Imagen predeterminada de los routers de acceso<br>Dispositivos: 1900, 2900, 3900]]></text> 
+  </component>
+  
+  
+</textcomponents>

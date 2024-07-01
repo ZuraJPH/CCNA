@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.2 Encapsulación de HDLC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Encapsulación de HDLC</h1>
+        <div>
+          <p>HDLC es un protocolo sincrónico de capa de enlace de datos orientado a bits desarrollado por la Organización Internacional para la Estandarización (ISO). El estándar actual para HDLC es ISO 13239. HDLC se desarrolló a partir del estándar de control de enlace de datos síncronos (SDLC) propuesto en la década de los setenta. HDLC proporciona servicio orientado a la conexión y sin conexión.</p>
+          <p></p>
+          <p>HDLC utiliza la transmisión serial síncrona, que proporciona una comunicación sin errores entre dos puntos. HDLC define una estructura de trama de capa 2 que permite el control del flujo y de errores mediante el uso de acuses de recibo. Cada trama presenta el mismo formato ya sea una trama de datos o una trama de control.</p>
+          <p></p>
+          <p>Cuando las tramas se transmiten por enlaces síncronos o asíncronos, esos enlaces no tienen ningún mecanismo para marcar ni el principio ni el fin de las tramas. Por este motivo, HDLC utiliza un delimitador de trama, o indicador, para marcar el principio y el fin de cada trama.</p>
+          <p></p>
+          <p>Cisco desarrolló una extensión del protocolo HDLC para resolver la incapacidad de proporcionar compatibilidad multiprotocolo. Si bien HDLC de Cisco (también conocido como cHDLC) es un protocolo exclusivo, Cisco permitió que muchos otros proveedores de equipos de red lo implementen. Las tramas HDLC de Cisco contienen un campo para identificar el protocolo de red que se encapsula. En la ilustración, se compara el estándar HDLC con HDLC de Cisco.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el formato de trama HDLC estándar y el formato de trama HDLC de Cisco.  HDLC estándar admite solo entornos de un único protocolo. HDLC de Cisco usa un campo de datos de protocolo para admitir entornos multiprotocolo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.2 Opciones de siguiente salto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Opciones de siguiente salto</h1>
+        <div>
+          <p>En este ejemplo, las figuras 1 a 3 muestran las tablas de routing de los routers R1, R2 y R3. Cada router tiene entradas solo para redes conectadas directamente y sus direcciones locales asociadas. Ninguno de los routers tiene conocimiento de las redes que están fuera de las interfaces conectadas directamente.</p>
+          <p></p>
+          <p>Por ejemplo, el R1 no tiene conocimiento de las redes:</p>
+          <p>
+            <ul>
+              <li>2001:DB8:ACAD:2::/64: LAN en el R2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:ACAD:5::/64: red serial entre el R2 y el R3</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:ACAD:3::/64: LAN en el R3</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 4, se muestra un ping correcto del R1 al R2. En la figura 5, se muestra un ping incorrecto a la LAN del R3. Esto se debe a que el R1 no tiene una entrada en su tabla de routing para esa red.</p>
+          <p></p>
+          <p>El siguiente salto se puede identificar mediante una dirección IPv6, una interfaz de salida, o ambas. El modo en que se especifica el destino genera uno de los siguientes tres tipos de ruta: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta estática IPv6 de siguiente salto</b>: solo se especifica la dirección IPv6 del siguiente salto</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta estática IPv6 conectada directamente</b>: solo se especifica la interfaz de salida del router</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta estática IPv6 completamente especificada</b>: se especifican la dirección IPv6 del siguiente salto y la interfaz de salida</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN. La figura uno muestra el resultado del comando “show ipv6 route” en el router uno. La figura dos muestra el resultado del comando “show ipv6 route” en el router dos. La figura tres muestra el resultado del comando “show ipv6 route” en el router tres. La figura cuatro muestra el resultado de utilizar el comando “ping ipv6" en el router uno para hacer ping a la dirección del siguiente salto en el router dos. La figura cinco muestra el resultado de utilizar el comando “ping ipv6" en el router uno para hacer ping a la interfaz de la red LAN en el router 3.  Este ping no tiene éxito porque no hay una ruta hacia este destino en la tabla de routing del router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

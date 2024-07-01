@@ -1,0 +1,1 @@
+En la figura, se muestran los routers uno, dos, tres y cuatro conectados a un switch en una red de difusión. El router dos está conectado a Internet mediante un enlace punto a punto.

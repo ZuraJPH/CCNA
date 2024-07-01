@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.2 Verificación de PPPoE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de PPPoE</h1>
+        <div>
+          <p>Como se muestra en la Figura 1, el router del cliente se conecta al router ISP utilizando DSL. Ambos routers fueron configurados para PPPoE. El comando <b>show ip interface brief</b> se emite en R1 para verificar la dirección IPv4 asignada automáticamente a la interfaz de marcador por el router ISP.</p>
+          <p></p>
+          <p>Como se muestra en la figura 2, el comando <b>show interface dialer</b> en R1 verifica el encapsulamiento de MTU y PPP configurado en la interfaz del marcador.</p>
+          <p>En la figura 3, se muestra la tabla de routing en R1.</p>
+          <p></p>
+          <p>Tenga en cuenta que se instalaron dos rutas de host /32 para 10.0.0.0 en la tabla de routing R1. La primera ruta de host para la dirección asignada a la interfaz del marcador. La segunda ruta de host es la dirección IPv4 del ISP. La instalación de esas dos rutas de host es el comportamiento predeterminado para PPPoE.</p>
+          <p></p>
+          <p>Como se muestra en la figura 4, el comando <b>show pppoe session</b> se utiliza para mostrar información acerca de las sesiones de PPPoE actualmente activas. El resultado muestra las direcciones de Ethernet MAC locales y remotas de ambos routers. Las direcciones MAC de Ethernet se pueden verificar utilizando el comando<b> show interfaces</b> en cada router.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la verificación de que la interfaz de marcador está activa. A la izquierda se ve una LAN conectada al router de cliente R1 etiquetada "G0/0". A la derecha de R1 mediante G0/1 sale un cable que va a un módem. G0/1 está etiquetado con ".1" y el módem está etiquetado con "10.1.3.0/24". El módem se conecta a otro módem dentro de la nube del ISP. El módem del ISP se conecta al router R2 mediante la interfaz G0/1 etiquetada ".2". R2 también está dentro de la nube del ISP. Se muestra la siguiente salida: R1# show ip interface brief. La salida son 6 columnas indicadas como interface, IP-address, OK? Method, status y protocol. La primera línea es la siguiente: Embeeded-service-engine0/0, unassigned, yes, unset, administratively down, down. La segunda línea es: gigabitEthernet0/0, unassigned, yes, unset, administratively down, down. La tercera línea es: gigabitEthernet0/1, unassigned, yes, unset, up, up. La cuarta línea es: serial0/0/0, unassigned, yes, unset, administratively down, down. La quinta línea es: serial0/0/1, unassigned, yes, unset, administratively down, down. La sexta línea está resaltada y muestra: dialer2, 10.1.3.1, yes, IPCP, up, up. La séptima línea es: virtual-access1, unassigned, yes, unset, up, up. La octava línea es: virtual-access2, unassigned, yes, unset, up, up. La figura 2 muestra la misma topología que la figura 1 e indica verificar el tamaño en MTU y el encapsulamiento. Debajo de la topología se encuentra la siguiente salida de comando: R1# show interface dialer 2, dialer2 is up, line protocol is up (spoofing), hardware is unknown, Internet address is 10.1.3.1/32, MTU1492 bytes, (which is highlighted) BW 56 Kbit/sec, dly 20000 usec, reliability 255/255, txload 1/255, rxload 1/255, encapsulation ppp (which is highlighted), lcp closed, loopback not set, keepablive set (10 sec) dtr is pulsed for 1 seconds on reset, <salida omitida>. La figura 3 es la misma topología para verificar la tabla de routing de R1 y tiene la siguiente salida de comando: R1# show ip route, <output omitted>, gateway of last resort is 0.0.0.0 to network 0.0.0.0, S8 0.0.0.0/0 is directly connected, dialer2, 10.0.0.0/32 is subnetted, 2 subnets. Se resalta la siguiente línea: C 10.1.3.1 is directly connected, dialer2. Se resalta la siguiente línea: C 10.1.3.2 is directly connected, dialer2. R1#. La figura 4 tiene la misma topología que las figuras 1 a 3 y se centra en cómo ver las sesiones de PPPoE actuales. Se muestra la siguiente salida: R1# show pppoe session, 1 client session. Uniq ID, PPPoE, RemMAC (resaltada), port, VT, VA, state, SID, LocMAC (resaltada), VA-st, type, N/A, 1 30f7.0da3.1641 (resaltada) Gi0/1, Di2, Vi2, up, 30f7.0da3.0da1 (resaltada), up, R1#.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

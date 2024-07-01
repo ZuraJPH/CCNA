@@ -1,0 +1,1 @@
+Estas figuras se basan en el diagrama de laboratorio estándar. La figura uno muestra el resultado del comando “show ipv6 route static” en el router uno. La figura dos muestra el resultado de un ping desde el router uno a la interfaz LAN del router tres.  Este ping es exitoso porque ya se configuraron todas las rutas estáticas.

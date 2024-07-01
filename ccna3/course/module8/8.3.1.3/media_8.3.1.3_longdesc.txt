@@ -1,0 +1,1 @@
+En la figura, se indican las diferencias entre OSPFv2 y OSPFv3.

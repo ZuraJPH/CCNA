@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.2 Routing entre VLAN con interfaces virtuales de switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routing entre VLAN con interfaces virtuales de switch</h1>
+        <div>
+          <p>En los comienzos de las redes conmutadas, el switching era rápido (a menudo, tenía la velocidad del hardware, es decir que la velocidad era equivalente al tiempo físico que tomaba recibir las tramas y reenviarlas a otros puertos) y el routing era lento (debía procesarse mediante software). Esto hizo que los diseñadores de redes ampliaran la porción conmutada de la red al máximo posible. El acceso, la distribución y las capas de núcleo solían configurarse para comunicarse en la capa 2, pero esta topología generaba problemas de bucles. Para resolver estos problemas, se utilizaron tecnologías de árbol de expansión a fin de prevenir los bucles sin necesidad de renunciar a la flexibilidad y la redundancia de las conexiones entre switches.</p>
+          <p></p>
+          <p>Sin embargo, a medida que las tecnologías de redes evolucionaron, el routing se volvió más rápido y económico. Hoy en día, el routing se puede llevar a cabo a la velocidad del cable. Una consecuencia de esta evolución es que el routing se puede transferir a las capas de núcleo y de distribución (y, en ocasiones, incluso a la capa de acceso) sin afectar el rendimiento de la red. </p>
+          <p></p>
+          <p>Muchos usuarios están en VLAN separadas, y cada VLAN suele ser una subred distinta. Por lo tanto, resulta lógico configurar los switches de distribución como gateways de capa 3 para los usuarios de la VLAN de cada switch de acceso. Esto significa que cada switch de distribución debe tener direcciones IP que coincidan con la VLAN de cada switch de acceso. Esto se puede lograr mediante el uso de interfaces virtuales de switch (Switch Virtual Interfaces, SVI) y de puertos enrutados.</p>
+          <p></p>
+          <p>Los puertos de capa 3 (enrutados) se suelen implementar entre la capa de distribución y la capa de núcleo. </p>
+          <p></p>
+          <p>La arquitectura de red representada no depende del árbol de expansión, porque no existen bucles físicos en la porción de capa 2 de la topología. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología de red ordenada en una estructura jerárquica con switches de capa 2 existentes en la capa de acceso y switches de capa 3 en las capas de distribución y núcleo. Todos los dispositivos están conectados con redundancia.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

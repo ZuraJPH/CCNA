@@ -1,0 +1,1 @@
+En la figura, se pueden ver tres personas en un armario de cableado.  En la leyenda, se puede leer que el modelo de diseño jerárquico de tres capas desglosa el diseño en capas, lo que simplifica el diseño de red y, por lo tanto, la implementación y la administración de la red.

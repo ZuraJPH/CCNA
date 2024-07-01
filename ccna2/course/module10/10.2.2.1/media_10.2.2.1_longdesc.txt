@@ -1,0 +1,1 @@
+En la figura se muestra un router conectado a un switch.  Ambos están enviando mensajes del sistema a un servidor syslog.

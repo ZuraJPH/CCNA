@@ -1,0 +1,1 @@
+La figura muestra una lista ordenada que explica los pasos del plan de implementación al configurar OSPF multiárea.

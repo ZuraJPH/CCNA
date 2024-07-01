@@ -1,0 +1,1 @@
+Esta figura es un video en el que se demuestra cómo administrar archivos de Cisco IOS entre un router y una computadora que ejecutan un servidor TFTP.

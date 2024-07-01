@@ -1,0 +1,1 @@
+La figura presenta una tabla en la que se describen las versiones 1 y 2 del protocolo VTP.

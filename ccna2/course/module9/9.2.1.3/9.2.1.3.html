@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.3 Verificación de NAT estática</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de NAT estática</h1>
+        <div>
+          <p>Un comando que resulta útil para verificar el funcionamiento de NAT es <b>show ip nat translations</b>. Este comando muestra las traducciones NAT activas. A diferencia de las traducciones dinámicas, las traducciones estáticas siempre figuran en la tabla de NAT. En la figura 1, se muestra el resultado de este comando con el ejemplo de configuración anterior. Debido a que el ejemplo es una configuración NAT estática, siempre figura una traducción en la tabla de NAT, independientemente de que haya comunicaciones activas. Si se emite el comando durante una sesión activa, el resultado también indica la dirección del dispositivo externo, como se muestra en la figura 1.</p>
+          <p></p>
+          <p>Otro comando útil es <b>show</b><b> ip nat statistics</b>. Como se muestra en la figura 2, el comando <b>show ip nat statistics</b> muestra información sobre la cantidad total de traducciones activas, los parámetros de configuración NAT, la cantidad de direcciones en el conjunto y la cantidad de direcciones que se asignaron. </p>
+          <p></p>
+          <p>Para verificar que la traducción NAT funcione, es conveniente borrar las estadísticas de todas las traducciones anteriores con el comando <b>clear ip nat statistics</b> antes de realizar la prueba.</p>
+          <p></p>
+          <p>Antes de cualquier comunicación con el servidor web, el comando <b>show ip nat statistics</b> no muestra ningún acierto actual. Una vez que el cliente establece una sesión con el servidor web, el comando <b>show ip nat statistics</b> registra un aumento a cinco resultados coincidentes en la interfaz interna (Serial0/0/0). De este modo, se verifica que se lleva a cabo la traducción de NAT estática en el R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la salida del comando "show i. p. nat translations" sin sesiones activas.  Las direcciones externas están en blanco.  También se muestra la salida del comando "show i. p. nat translations" con una sesión activa.  Las direcciones externas están presentes.  Esto demuestra que las traducciones NAT siempre están presentes con NAT estática. En la figura número dos se muestra la salida del comando "clear i. p. nat statistics" seguida por el comando "show i. p. nat statistics" sin ningún resultado coincidente.  Cuando una PC establece una sesión con el servidor web, la salida del comando “show i. p. nat statistics” se muestra con cinco resultados coincidentes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

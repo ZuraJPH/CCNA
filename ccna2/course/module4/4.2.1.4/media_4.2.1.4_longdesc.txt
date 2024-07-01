@@ -1,0 +1,1 @@
+La figura muestra toda una trama, incluido el encabezado y el pie de página. El switching de almacenamiento y reenvío recibe la trama completa antes de tomar una decisión de reenvío.

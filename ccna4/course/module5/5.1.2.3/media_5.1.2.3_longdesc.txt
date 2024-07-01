@@ -1,0 +1,1 @@
+La figura muestra dos switches, cada uno con dos PC conectadas. La leyenda de la interconexión entre los dos switches dice: “Enlace troncal, (VLAN nativa = 10)”. El cuadro con flechas que apuntan a cada puerto de switch que se conecta a una PC dice: “Deshabilite DTP y configure las interfaces en modo de acceso”.

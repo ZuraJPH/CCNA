@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.1 Usos del routing estático </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Usos del routing estático </h1>
+        <div>
+          <p>Antes de identificar los beneficios de los protocolos de routing dinámico, considere los motivos por los que los profesionales de red utilizan el routing estático.  El routing dinámico definitivamente tiene varias ventajas sobre el routing estático, sin embargo, el routing estático todavía se utiliza en redes hoy en día.  De hecho, las redes generalmente usan una combinación de routing estático y dinámico. </p>
+          <p></p>
+          <p>El routing estático tiene varios usos principales, entre ellos: </p>
+          <p>
+            <ul>
+              <li>Facilita el mantenimiento de la tabla de routing en redes más pequeñas en las cuales no está previsto que crezcan significativamente. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Realiza routing desde y hacia una red de rutas internas, que es una red con una sola ruta predeterminada hacia fuera y sin conocimiento de redes remotas. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Permite acceder a una única ruta predeterminada (la cual se utiliza para representar una ruta hacia cualquier red que no tiene una coincidencia más específica con otra ruta en la tabla de routing). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la ilustración, se proporciona una situación de ejemplo de routing estático. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers conectados por un enlace serial.  Cada router tiene 2 redes locales en los puertos gigabit Ethernet.  La figura identifica el router izquierdo como R-1 y el router de la derecha como R-2.  La figura explica que R-2 está conectado a Internet y constituye la única ruta para que los datos salgan de R-1. Por lo tanto, R-1 tendrá una ruta estática predeterminada que significa esto.  R-2 sabe que solo hay dos redes conectadas a R-1, por lo que requiere 2 entradas de ruta estática en la tabla de routing para alcanzar esas dos redes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

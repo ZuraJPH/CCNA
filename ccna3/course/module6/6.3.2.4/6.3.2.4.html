@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.4 Métrica de retraso</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métrica de retraso</h1>
+        <div>
+          <p>El retraso es la medida del tiempo que tarda un paquete en atravesar la ruta. La métrica del retardo (DLY) es un valor estático determinado en función del tipo de enlace al cual se encuentra conectada la interfaz y se expresa en microsegundos. El retardo no se mide en forma dinámica. En otras palabras, el router no hace un seguimiento realmente del tiempo que les toma a los paquetes llegar al destino. El valor de retardo, como el valor de ancho de banda, es un valor predeterminado que el administrador de red puede modificar.</p>
+          <p></p>
+          <p>Cuando se utiliza para determinar la métrica de EIGRP, el retraso es la acumulación (suma) de todos los retrasos de las interfaces a lo largo de la ruta (medida en decenas de microsegundos). </p>
+          <p></p>
+          <p>En la tabla de la figura 1, se muestran los valores de retraso predeterminados para diversas interfaces. Observe que el valor predeterminado es de 20 000 microsegundos para las interfaces seriales y de 10 microsegundos para las interfaces GigabitEthernet.</p>
+          <p></p>
+          <p>Utilice el comando <b>show interfaces</b> para verificar el valor de retraso en una interfaz, como se muestra en la figura 2. Si bien una interfaz con varios anchos de banda puede tener el mismo valor de retraso predeterminado, Cisco recomienda no modificar el parámetro de retraso, salvo que el administrador de red tenga una razón específica para hacerlo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra una tabla con diferentes tipos de medios y sus valores de retraso correspondientes. En la figura dos, se muestra la salida que genera el comando “show interface”. Los valores de retraso aparecen resaltados.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

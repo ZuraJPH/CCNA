@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide>
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_1.1.2.3.png" />
+        <element type="TEXT" compId="ID_txt04" x="334" y="165" width="119" expand="left+right" align="center" />
+        <element type="TEXT" compId="ID_txt06" x="331" y="225" width="119" expand="up+down" align="center" />
+        <element type="TEXT" compId="ID_txt05" x="240" y="225" width="45" expand="up+down" align="right" />
+        <element type="TEXT" compId="ID_txt07" x="502" y="225" width="45" expand="up+down" align="left" />
+        <element type="TEXT" compId="ID_txt03" x="160" y="198" width="69" expand="down" align="center" />
+        <element type="TEXT" compId="ID_txt11" x="244" y="350" width="105" expand="up+down" align="center" />
+        <element type="TEXT" compId="ID_txt14" x="440" y="350" width="105" expand="up+down" align="center" />
+        <element type="TEXT" compId="ID_txt02" x="269" y="100" width="119" expand="up" align="left" />
+        <element type="TEXT" compId="ID_txt01" x="121" y="113" width="39" expand="right" align="left" />
+        <element type="TEXT" compId="ID_txt12" x="121" y="419" width="39" expand="right" align="left" />
+        <element type="TEXT" compId="ID_txt13" x="325" y="426" width="69" expand="up+down" align="left" />
+        <element type="TEXT" compId="ID_txt16" x="522" y="415" width="39" expand="left" align="right" />
+        <element type="TEXT" compId="ID_txt15" x="392" y="426" width="69" expand="up+down" align="right" />
+        <element type="TEXT" compId="ID_txt10" x="420" y="79" width="119" expand="left" align="right" />
+        <element type="TEXT" compId="ID_txt09" x="470" y="138" width="69" expand="up" align="right" />
+        <element type="TEXT" compId="ID_txt08" x="540" y="165" width="46" expand="down" align="left" />
+        <element type="TEXT" subType="TITLE" compId="ID_title" />
+    </slide>
+</data>

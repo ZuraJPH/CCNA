@@ -1,0 +1,1 @@
+En la figura se muestra cómo se conforma una dirección local única IPv6.  Los campos que se muestran de la dirección son los siguientes: el prefijo, el ID global, el ID de subred y el ID de la interface.

@@ -1,0 +1,1 @@
+La figura uno es un gráfico descendente que clasifica protocolos de routing dinámico y resalta protocolos de gateway interior.

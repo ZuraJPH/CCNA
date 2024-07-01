@@ -1,0 +1,23 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#mediaContainer{
+
+}
+
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {*/
+	#ID_txt02, #ID_txt03, #ID_txt05 , #ID_txt06{
+		left:14px !important;
+	}
+
+	#text_9 , #text_8 , #text_19 , #text_18{
+		  font-size: 0.85em !important;
+		  left : 10px !important;
+	}
+/*}*/
+#text_14,#text_13,#text_23,#text_24
+{
+	letter-spacing: -0.8px !important; 
+}

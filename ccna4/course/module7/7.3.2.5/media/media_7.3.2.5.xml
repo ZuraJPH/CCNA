@@ -1,0 +1,99 @@
+﻿<textcomponents>
+    <component id="ID_s1_title">
+		<text><![CDATA[<b>SDN basada en dispositivos</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[OnePK]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Aplicación]]></text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[Dispositivo 1]]></text>
+	</component>
+	<component id="ID_s1_txt07">
+		<text><![CDATA[Dispositivo 2]]></text>
+	</component>
+	<component id="ID_s1_txt08">
+		<text><![CDATA[Dispositivo 3]]></text>
+	</component>
+	
+	
+    <component id="ID_s2_title">
+		<text><![CDATA[<b>SDN basada en controlador</b>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt01">
+		<text><![CDATA[OpenDaylight]]></text>
+	</component>
+	<component id="ID_s2_txt02">
+	<text><![CDATA[Aplicación]]></text>
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Controlador SDN]]></text>
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s2_txt05">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s2_txt06">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[Dispositivo 1]]></text>
+	</component>
+	<component id="ID_s2_txt08">
+		<text><![CDATA[Dispositivo 2]]></text>
+	</component>
+	<component id="ID_s2_txt09">
+		<text><![CDATA[Dispositivo 3]]></text>
+	</component>
+	
+    <component id="ID_s3_title">
+		<text><![CDATA[<b>SDN basada en políticas</b>]]></text>
+	</component>
+	
+	<component id="ID_s3_txt01">
+		<text><![CDATA[APIC-EM]]></text>
+	</component>
+	<component id="ID_s3_txt02">
+	<text><![CDATA[Aplicación]]></text>
+	</component>
+	<component id="ID_s3_txt03">
+	<text><![CDATA[Política]]></text>
+	</component>
+	<component id="ID_s3_txt04">
+		<text><![CDATA[Controlador SDN]]></text>
+	</component>
+	<component id="ID_s3_txt05">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s3_txt06">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s3_txt07">
+		<text><![CDATA[Plano de datos]]></text>
+	</component>
+	<component id="ID_s3_txt08">
+		<text><![CDATA[Dispositivo 1]]></text>
+	</component>
+	<component id="ID_s3_txt09">
+		<text><![CDATA[Dispositivo 2]]></text>
+	</component>
+	<component id="ID_s3_txt10">
+		<text><![CDATA[Dispositivo 3]]></text>
+	</component>
+		
+</textcomponents>

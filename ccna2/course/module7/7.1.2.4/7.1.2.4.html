@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.4 Palabras clave de las máscaras wildcard</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Palabras clave de las máscaras wildcard</h1>
+        <div>
+          <p>Trabajar con representaciones decimales de los bits binarios de máscaras wildcard puede ser tedioso. Para simplificar esta tarea, las palabras clave<b> host </b>y<b> any</b> ayudan a identificar los usos más comunes de las máscaras wildcard. Estas palabras clave eliminan la necesidad de introducir máscaras wildcard para identificar un host específico o toda una red. También facilitan la lectura de una ACL, ya que proporcionan pistas visuales en cuanto al origen o el destino de los criterios.</p>
+          <p></p>
+          <p>La palabra clave<b> host </b>reemplaza la máscara 0.0.0.0. Esta máscara indica que todos los bits de direcciones IPv4 deben coincidir para filtrar solo una dirección de host.</p>
+          <p>La opción <b>any</b> sustituye la dirección IP y la máscara 255.255.255.255. Esta máscara establece que se omita la dirección IPv4 completa o que se acepte cualquier dirección. </p>
+          <p></p>
+          <p>
+            <b>Ejemplo 1: proceso de máscara wildcard con una única dirección IPv4</b>
+          </p>
+          <p></p>
+          <p>En el ejemplo 1 en la ilustración, en vez de introducir <b>192.168.10.10 0.0.0.0</b>, puede utilizar <b>host 192.168.10.10</b>. </p>
+          <p></p>
+          <p>
+            <b>Ejemplo 2: proceso de máscara wildcard con coincidencia con cualquier dirección IPv4</b>
+          </p>
+          <p></p>
+          <p>En el ejemplo 2 en la ilustración, en vez de introducir <b>0.0.0.0 255.255.255.255</b>, puede utilizar la palabra clave<b> any</b> (cualquier) sola.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un ejemplo una máscara wildcard con todos ceros que coincide exactamente en todos los bits binarios con a dirección de I.P. La figura también muestra la máscara wildcard con todos unos que implica que coincidirá con cualquier dirección de I.P.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

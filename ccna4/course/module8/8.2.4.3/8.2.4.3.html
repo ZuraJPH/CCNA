@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.3 Paso 1: Verificar la capa física</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 1: Verificar la capa física</h1>
+        <div>
+          <p>Todos los dispositivos de red son sistemas de computación especializados. Como mínimo, estos dispositivos constan de una CPU, RAM y espacio de almacenamiento, que permiten que el dispositivo arranque y ejecute el sistema operativo y las interfaces. Esto permite la recepción y la transmisión del tráfico de la red. Cuando un administrador de red determina que existe un problema en un dispositivo determinado y que el problema puede estar relacionado con el hardware, vale la pena verificar el funcionamiento de estos componentes genéricos. Los comandos del IOS de Cisco usados con más frecuencia son <b>show processes cpu</b>, <b>show memory</b> y <b>show interfaces</b>. En este tema, se analiza el comando <b>show interfaces</b>.</p>
+          <p></p>
+          <p>Al resolver problemas relacionados con el rendimiento en los que se sospecha que el hardware es el culpable, se puede usar el comando <b>show interfaces</b> para verificar las interfaces que atraviesa el tráfico. </p>
+          <p></p>
+          <p>En el resultado del comando <b>show interfaces</b> en la ilustración, se indican varias estadísticas importantes que se pueden revisar:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Descartes de la cola de entrada:</b> los descartes de la cola de entrada (y los contadores ignorados y de limitación relacionados) indican que, en algún momento, se entregó al router más tráfico del que podía procesar. Esto no indica necesariamente un problema. Podría ser normal durante los picos de tráfico. Sin embargo, podría ser una indicación de que la CPU no puede procesar los paquetes a tiempo, por lo que, si este número es permanentemente alto, vale la pena tratar de detectar en qué momentos aumentan estos contadores y cómo se relaciona eso con el uso de CPU.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Descartes de la cola de salida:</b> los descartes de la cola de salida indican que se descartaron paquetes debido a la congestión en la interfaz. Es normal ver descartes de salida en cualquier punto donde la agregación de tráfico de entrada es superior al tráfico de salida. Durante los picos de tráfico, si el tráfico se entrega a la interfaz más rápidamente de que lo que se puede enviar, se descartan paquetes. Sin embargo, incluso si esto se considera un comportamiento normal, provoca el descarte de paquetes y retrasos en la cola, de modo que es posible que las aplicaciones afectadas por esas situaciones, como VoIP, tengan problemas de rendimiento. Los descartes de salidas frecuentes pueden ser indicio de que se debe implementar un mecanismo de puesta en cola avanzado para aplicar o modificar QoS. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Errores de entrada:</b> los errores de entrada (input errors) indican errores que se experimentan durante la recepción de la trama, como errores de CRC. Una cantidad elevada de errores de CRC podría indicar problemas de cableado, problemas de hardware de interfaz o, en una red basada en Ethernet, incompatibilidades de dúplex.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Errores de salida:</b> los errores de salida (output errors) indican errores durante la transmisión de una trama, por ejemplo, colisiones. En la actualidad, en la mayoría de las redes basadas en Ethernet, la transmisión full-duplex es la norma y la transmisión half-duplex es la excepción. En la transmisión full-duplex, no pueden ocurrir colisiones en las operaciones; por lo tanto, las colisiones (especialmente las colisiones tardías) indican con frecuencia incompatibilidades de dúplex.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la salida del comando show interfaces gigabit ethernet zero slash zero en el router 1.  Se resaltan las colas de entrada y de salida.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

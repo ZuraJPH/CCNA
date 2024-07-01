@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.3 Capítulo 10: Ajustes y solución de problemas del protocolo OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 10: Ajustes y solución de problemas del protocolo OSPF</h1>
+        <div>
+          <p>OSPF define cinco tipos de red: punto a punto, multiacceso con difusión, multiacceso sin difusión, punto a multipunto y enlaces virtuales. </p>
+          <p></p>
+          <p>Las redes multiacceso pueden suponer dos desafíos para OSPF en relación con la saturación con LSA: la creación de varias adyacencias y la saturación intensa con LSA. La solución para administrar la cantidad de adyacencias y la saturación con LSA en una red multiacceso son el DR y el BDR. Si el DR deja de producir paquetes de saludo, el BDR se asciende a sí mismo y asume la función de DR.</p>
+          <p></p>
+          <p>Los routers en la red seleccionan como DR al router con la prioridad de interfaz más alta. El router con la segunda prioridad de interfaz más alta se elige como BDR. A mayor prioridad, mayores serán las probabilidades de que se elija al router como DR. Si se establece en 0, el router no puede convertirse en el DR. La prioridad predeterminada de las interfaces multiacceso de difusión es 1. Por lo tanto, a menos que se configuren de otra manera, todos los routers tienen un mismo valor de prioridad y deben depender de otro método de diferenciación durante la elección del DR/BDR. Si las prioridades de interfaz son iguales, se elige al router con la ID más alta como DR. El router con la segunda ID de router más alta es el BDR. La incorporación de un router nuevo no inicia un nuevo proceso de elección. </p>
+          <p></p>
+          <p>Para propagar una ruta predeterminada en OSPF, el router debe estar configurado con una ruta estática predeterminada y se debe agregar el comando <b>default-information originate</b> a la configuración. Verifique las rutas mediante el comando <b>show ip route</b> o <b>show ipv6 route</b>.</p>
+          <p></p>
+          <p>Para ayudar a OSPF a determinar la ruta correcta, se debe cambiar el ancho de banda de referencia a un valor superior, a fin de admitir redes con enlaces más rápidos que 100 Mb/s. Para ajustar el ancho de banda de referencia, use el comando<b> auto-cost reference-bandwidth </b><i>Mbps </i>del modo de configuración del router. Para ajustar el ancho de banda de interfaz, use el comando<b> bandwidth </b><i>kilobits </i>del modo de configuración de interfaces. El costo se puede configurar de forma manual en una interfaz con el comando <b>ip ospf cost </b><i>value </i>del modo de configuración de interfaces. </p>
+          <p></p>
+          <p>Los intervalos de saludo y tiempo muerto de OSPF deben coincidir, de lo contrario, no se crea una adyacencia de vecino. Para modificar estos intervalos, use los siguientes comandos de interfaz:</p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf hello-interval </b>
+                <i>seconds</i>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf dead-interval </b>
+                <i>seconds</i>
+                <b></b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf hello-interval </b>
+                <i>seconds</i>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf dead-interval </b>
+                <i>seconds</i>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Al solucionar problemas de vecinos OSPF, tenga en cuenta que los estados FULL o 2WAY son normales. La solución de problemas de OSPFv2 se puede resumir con los siguientes comandos:<b></b></p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf neighbor </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route ospf </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>clear ip ospf </b>[<i>process-id</i>]<b> process</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La resolución de problemas de OSPFv3 es similar a la de OSPFv2. Los siguientes son los comandos equivalentes que se utilizan con OSPFv3:<b> show ipv6 protocols</b>,<b> show ipv6 ospf neighbor</b>,<b> show ipv6 ospf interface</b>,<b> show ipv6 ospf</b>,<b> show ipv6 route ospf</b> y <b>clear ipv6 ospf </b>[<i>process-id</i>]<b> process</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran los routers uno, dos, tres y cuatro conectados a un switch en una red de difusión. El router dos está conectado a Internet mediante un enlace punto a punto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

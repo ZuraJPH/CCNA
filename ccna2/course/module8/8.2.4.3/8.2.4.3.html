@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.3 Depuración de DHCPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Depuración de DHCPv6</h1>
+        <div>
+          <p>Cuando el router está configurado como servidor de DHCPv6 con estado o sin estado, el comando <b>debug ipv6 dhcp detail</b> es útil para verificar la recepción y la transmisión de mensajes DHCPV6. Como se muestra en la ilustración, un router DHCPv6 con estado recibió un mensaje SOLICIT de un cliente. El router utiliza la información de direccionamiento en su pool IPV6-STATEFUL para la información de asignación.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el resultado del comando debug ipv6 dhcp detail.  La figura resalta la línea del resultado que indica que IPv6 DHCP recibió un mensaje de solicitud de un host y que IPv6 DHCP usa interface pool ipv6 guión stateful.  La figura también resalta el resultado que indica que se crea una vinculación para una dirección específica en el conjunto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

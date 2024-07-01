@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.3 Comando network</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comando network</h1>
+        <div>
+          <p>Existen varias maneras de identificar las interfaces que participan en el proceso de routing OSPFv2.</p>
+          <p>En la figura 1, se muestran los comandos requeridos para determinar qué interfaces del R1 participan en el proceso de routing OSPFv2 para un área. Observe el uso de las máscaras de comodín para identificar las respectivas interfaces sobre la base de sus direcciones de red. Dado que se trata de una red OSPF de área única, todas las ID de área se establecen en 0. </p>
+          <p>Como alternativa, OSPFv2 puede habilitarse con el comando <b>network </b><i>intf-ip-address</i><b> 0.0.0.0</b><b><i> area </i></b><i>area-id </i>del modo de configuración del router.</p>
+          <p>En la figura 2, se proporciona un ejemplo de cómo especificar la dirección IPv4 de interfaz con una máscara de comodín de cuádruple cero. Al ingresar <b>network 172.16.3.1 0.0.0.0 area 0</b> en el R1, se le indica al router que habilite la interfaz Serial0/0/0 para el proceso de routing. Como resultado, el proceso OSPFv2 anuncia la red que se encuentra en esta interfaz (172.16.3.0/30).</p>
+          <p>La ventaja de especificar la interfaz es que no se necesita calcular la máscara de comodín. OSPFv2 usa la dirección y máscara de subred de la interfaz para determinar qué red debe anunciar.</p>
+          <p>Algunas versiones de IOS permiten introducir la máscara de subred en lugar de la máscara de comodín. Luego, IOS convierte la máscara de subred al formato de la máscara de comodín. </p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para anunciar las redes conectadas a R2 (172.16.2.0/24, 172.16.3.0/30 y 192.168.10.8/30).</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> mientras completa el verificador de sintaxis, observe los mensajes informativos que describen la adyacencia entre el R1 (1.1.1.1) y el R2 (2.2.2.2). El esquema de direccionamiento IPv4 utilizado para la ID del router facilita la identificación del vecino.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran los comandos de CLI utilizados para asignar una interfaz a un área OSPF. La figura comienza en el modo de configuración global. El primer comando es router ospf 10, donde diez es una ID de proceso arbitraria. Con este comando, OSPF se activa como el protocolo de routing.  El siguiente comando se utiliza para identificar las interfaces que participarán en OSPF. Se basa en la dirección IP y la máscara de subred.  En la figura, el comando es network 172 punto 16 punto 1 punto cero cero punto cero punto cero punto 255 area cero.  Este comando activa OSPF en la interfaz de la red especificada.  El siguiente comando es network 172 punto 16 punto 1 punto cero cero punto cero punto cero punto 3 area cero.  El último comando es network 192 punto 168 punto 10 punto 4 cero punto cero punto cero punto 255 area cero.  En la figura dos, se muestran los comandos de CLI utilizados para asignar interfaces a un área OSPF de cuádruple cero.  La figura comienza en el modo de configuración global y el primer comando activa OSPF como el protocolo de routing. El comando es router ospf 10, donde diez es una ID de proceso arbitraria.  El siguiente comando se utiliza para identificar las interfaces que participarán en OSPF. Se basa en la dirección IP y una máscara de comodín de cuádruple cero.  En la figura, el comando es network 172 punto 16 punto 1 punto 1 cero punto cero punto cero punto cero area cero.  El siguiente comando es network 172 punto 16 punto 3 punto 1 cero punto cero punto cero punto cero area cero.  El último comando es network 192 punto 168 punto 10 punto 5 cero punto cero punto cero punto cero area cero.  La figura tres es un elemento de medios interactivos que permite que el estudiante anuncie redes en OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

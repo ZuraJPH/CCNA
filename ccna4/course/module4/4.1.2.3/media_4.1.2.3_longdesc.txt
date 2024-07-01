@@ -1,0 +1,1 @@
+La figura muestra tres routers y describe la ubicación de A.C.L.s.  Las ACL estándar se colocan generalmente cerca del destino.  Las ACL extendidas se colocan generalmente cerca del origen.

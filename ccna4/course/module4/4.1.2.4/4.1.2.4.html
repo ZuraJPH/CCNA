@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.2.4 Ejemplo de ubicación de una ACL estándar</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplo de ubicación de una ACL estándar</h1>
+        <div>
+          <p>En la ilustración, el administrador desea impedir que el tráfico que se origina en la red 192.168.10.0/24 llegue a la red 192.168.30.0/24.</p>
+          <p></p>
+          <p>Si la ACL estándar se coloca en la interfaz de salida del R1 (no se muestra en la figura), eso evitaría que el tráfico de la red 192.168.10.0/24 alcance cualquier red a la que se pueda llegar a través de la interfaz Serial 0/0/0 del R1.</p>
+          <p></p>
+          <p>De acuerdo con las pautas básicas de colocación de ACL estándar cerca del destino, en la ilustración se muestran dos interfaces posibles del R3 a las que aplicar la ACL estándar:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz S0/0/1 del R3:</b> la aplicación de una ACL estándar para impedir que el tráfico de 192.168.10.0/24 ingrese a la interfaz S0/0/1 evita que dicho tráfico llegue a 192.168.30.0/24 y al resto de las redes con las que se puede comunicar R3. Esto incluye la red 192.168.31.0/24. Dado que el objetivo de la ACL es filtrar el tráfico destinado solo a 192.168.30.0/24, no se debe aplicar una ACL estándar a esta interfaz.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz G0/0 del R3:</b> al aplicar una ACL estándar al tráfico que sale por la interfaz G0/0, se filtran los paquetes que van de 192.168.10.0/24 a 192.168.30.0/24. Esto no afecta a las otras redes con las que se puede comunicar R3. Los paquetes de 192.168.10.0/24 aún pueden llegar a 192.168.31.0/24.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una red de tres routers en un formato triangular.  R-2 se encuentra en la parte superior del triángulo, y tiene una conexión WAN serial a R-1 y a R-3.  No hay conexión directa entre R1 y R3.  Los routers R1 y R3 tienen, cada uno, dos interfaces gigabit activas para los segmentos de red locales.  El objetivo es bloquear que todo el tráfico que se origina en R-1 alcance a R-3. El A.C.L se coloca en la interfaz de salida en la dirección saliente en el router R-3.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

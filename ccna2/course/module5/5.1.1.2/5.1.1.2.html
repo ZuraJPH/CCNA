@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.2 Recuperación tras un bloqueo del sistema</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Recuperación tras un bloqueo del sistema</h1>
+        <div>
+          <p>El cargador de arranque proporciona acceso al switch si no se puede usar el sistema operativo debido a la falta de archivos de sistema o al daño de estos. El cargador de arranque tiene una línea de comandos que proporciona acceso a los archivos almacenados en la memoria flash. </p>
+          <p></p>
+          <p>Se puede acceder al cargador de arranque mediante una conexión de consola con los siguientes pasos:</p>
+          <p></p>
+          <p>
+            <b>Paso 1</b>: Conecte una computadora al puerto de consola del switch con un cable de consola. Configure el software de emulación de terminal para conectarse al switch.</p>
+          <p>
+            <b>Paso 2</b>: Desconecte el cable de alimentación del switch. </p>
+          <p>
+            <b>Paso 3</b>: Vuelva a conectar el cable de alimentación al switch, espere 15 segundos y, a continuación, presione y mantenga presionado el botón <b>Mode</b> (Modo) mientras el LED del sistema sigue parpadeando con luz verde. </p>
+          <p>
+            <b>Paso 4</b>: Continúe oprimiendo el botón <b>Modo</b> hasta que el LED del sistema se torne ámbar por un breve instante y luego verde, después suelte el botón <b>Modo</b>.</p>
+          <p>
+            <b>Paso 5</b>: Aparece la petición de entrada <b>switch:</b> del cargador de arranque en el software de emulación de terminal en la computadora.</p>
+          <p></p>
+          <p>La <b></b>línea de comandos de boot loader admite comandos para formatear el sistema de archivos flash, volver a instalar el software del sistema operativo y recuperar una contraseña perdida u olvidada. Por ejemplo, el comando <b>dir</b> se puede usar para ver una lista de archivos dentro de un directorio específico, como se muestra en la figura.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: observe que, en este ejemplo, el IOS se ubica en la raíz de la carpeta de la memoria flash.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el resultado del comando dir flash dos puntos.  Este comando muestra el contenido de la memoria flash y la figura enumera los diferentes archivos, incluido el archivo de IOS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

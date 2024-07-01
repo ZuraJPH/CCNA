@@ -1,0 +1,26 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s4_txt01, #ID_s5_txt01, #ID_s6_txt01 {line-height:16px; position:relative; left:2px !important;}
+span#ID_s2_txt01, span#ID_s3_txt01{font-family:arial !important; font-size:11px !important; position:relative; left:-2px;}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#ID_static_5  ,#ID_static_13 , #ID_static_14 , #ID_static_18, #ID_static_19 , 
+	#ID_static_20, #ID_static_21, #ID_static_22{
+		font-size: 0.70em !important;
+	}
+
+	#ID_static_20{
+		left:4px !important;
+	}
+	
+
+	
+}
+
+
+#ID_static_13{
+	letter-spacing: -0.3px !important;
+}

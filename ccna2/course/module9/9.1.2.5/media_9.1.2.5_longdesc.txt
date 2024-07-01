@@ -1,0 +1,1 @@
+En la figura se muestran dos tablas.  En una de las tablas se muestra de qué manera NAT utiliza un conjunto de direcciones globales para elegir las direcciones. En la segunda tabla se muestra de qué manera PAT utiliza una única dirección, pero agrega un número de puerto exclusivo a la asignación.

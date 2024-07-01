@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.1 Conectividad de capa 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Conectividad de capa 3</h1>
+        <div>
+          <p>Un requisito para que se forme una adyacencia de vecinos entre dos routers conectados directamente es la conectividad de capa 3. Mediante el análisis del resultado del comando <b>show ip interface brief</b>, un administrador de red puede verificar que el estado de las interfaces de conexión y del protocolo de dichas interfaces sea activo. Un ping de un router a otro router conectado directamente debería confirmar la conectividad IPv4 entre los dispositivos. En la ilustración, se muestra el resultado del comando <b>show ip interface brief</b> para el R1. El R1 muestra conectividad al R2, y los pings se realizan correctamente. </p>
+          <p></p>
+          <p>Si el ping no es exitoso, utilice el comando <b>show cdp neighbor</b> para verificar las conexiones de capa 1 y de capa 2 al vecino. Si el resultado no muestra al router vecino, verifique la capa 1 y controle el cableado, las conexiones y las interfaces. Si el resultado del comando muestra el vecino, las capas 1 y 2 están verificadas y dirigen el problema a la capa 3.</p>
+          <p></p>
+          <p>Los problemas en la capa 3 incluyen errores en la configuración de direcciones IP, subredes, direcciones de red, etc. Por ejemplo, las interfaces de los dispositivos conectados deben estar en una subred común. Un mensaje de registro que informa que los vecinos EIGRP no están en una subred común indica que hay una dirección IPv4 incorrecta en una de las dos interfaces EIGRP vecinas.</p>
+          <p></p>
+          <p>
+            <b>EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>También se aplican comandos y criterios de solución de problemas similares en EIGRP para IPv6.</p>
+          <p></p>
+          <p>El comando equivalente que se usa con EIGRP para IPv6 es <b>show ipv6 interface brief</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran dos routers conectados con un cable serial.  También se muestra el resultado generado por el comando "show i. p. interface brief" y el comando "ping" a continuación.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

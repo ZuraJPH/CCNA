@@ -1,0 +1,201 @@
+﻿<textcomponents><!--Slide 1--><component id="ID_s1_title">
+		<text><![CDATA[Actividad: identifique los conceptos y las operaciones del protocolo VTP]]></text>
+	</component>
+
+	<component id="ID_s1_instr_title">
+		<text><![CDATA[Instrucciones]]></text>
+	</component>
+
+	<component id="ID_s1_instr_body">
+		<text><![CDATA[Elija el modo del protocolo VTP adecuado para cada definición.]]></text>
+	</component><!--feedback--><component id='ID_s1_titleCorrect'>
+		<text><![CDATA[Correcto]]></text>
+	</component>
+	
+	<component id='ID_s1_correctText'>
+		<text><![CDATA[Identificó correctamente el modo del protocolo VTP.]]></text>
+	</component>
+	
+	<component id='ID_s1_titleIncorrect'>
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+	
+	<component id='ID_s1_incorrectText'>
+		<text><![CDATA[No identificó correctamente el modo del protocolo VTP. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+	</component>
+	
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component><!--ComboBox 1--><component id="ID_s1_txt01">
+		<text><![CDATA[1. <textformat blockindent='14'>No se pueden crear, cambiar o eliminar las VLAN</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt01'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB01_01'>
+		<text><![CDATA[Cliente VTP]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB01_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB01_03'>
+		<text><![CDATA[VTP transparente]]></text>
+	</component><!--End ComboBox 1--><!--ComboBox 2--><component id="ID_s1_txt02">
+		<text><![CDATA[2. <textformat blockindent='14'>Las redes VLAN que se crean o se eliminan, o a las que se les cambia el nombre en estos switches son locales a ese switch solamente</textformat>]]></text>
+	</component>
+	
+	<component id='ID_s1_CBprompt02'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB02_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB02_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB02_03'>
+		<text><![CDATA[VTP transparente]]></text> <!--answer--></component><!--End ComboBox 2--><!--ComboBox 3--><component id="ID_s1_txt03">
+		<text><![CDATA[3. <textformat blockindent='14'>Casos en que las redes VLAN se pueden crear, eliminar o renombrar para el dominio</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt03'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB03_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB03_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB03_03'>
+		<text><![CDATA[VTP transparente]]></text> <!--answer--></component><!--End ComboBox 3--><!--ComboBox 4--><component id="ID_s1_txt04">
+		<text><![CDATA[4. <textformat blockindent='14'>Almacena solo la información de la red VLAN para todo el dominio mientras el switch está activado</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt04'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB04_01'>
+		<text><![CDATA[Cliente VTP]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB04_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB04_03'>
+		<text><![CDATA[VTP transparente]]></text>
+	</component><!--End ComboBox 4--><!--ComboBox 5--><component id="ID_s1_txt05">
+		<text><![CDATA[5. <textformat blockindent='14'>Anuncia la información de la red VLAN del dominio del protocolo VTP a otros switches habilitados para el protocolo VTP <span class="alignment">en el mismo dominio del protocolo VTP</span></textformat>]]></text>
+	</component>-<component id='ID_s1_CBprompt05'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB05_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB05_02'>
+		<text><![CDATA[Servidor VTP]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB05_03'>
+		<text><![CDATA[VTP transparente]]></text>
+	</component><!--End ComboBox 5--><!--ComboBox 6--><component id="ID_s1_txt06">
+		<text><![CDATA[6. <textformat blockindent='14'>Se debe configurar en este modo para crear redes VLAN extendidas</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt06'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB06_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB06_02'>
+		<text><![CDATA[Servidor VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB06_03'>
+		<text><![CDATA[VTP transparente]]></text> <!--answer--></component><!--End ComboBox 6--><!--ComboBox 7--><component id="ID_s1_txt07">
+		<text><![CDATA[7. <textformat blockindent='14'>No participa en el protocolo VTP</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt07'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB07_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB07_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB07_03'>
+		<text><![CDATA[VTP transparente]]></text> <!--answer--></component><!--End ComboBox 7--><!--ComboBox 8--><component id="ID_s1_txt08">
+		<text><![CDATA[8. <textformat blockindent='14'>Almacena la información de VLAN para todo el dominio en la NVRAM</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt08'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB08_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB08_02'>
+		<text><![CDATA[Servidor VTP]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB08_03'>
+		<text><![CDATA[VTP transparente]]></text>
+	</component><!--End ComboBox 8--><!--ComboBox 9--><component id="ID_s1_txt09">
+		<text><![CDATA[9. <textformat blockindent='14'>Un reinicio del switch borra la información de la red VLAN</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt09'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB09_01'>
+		<text><![CDATA[Cliente VTP]]></text> <!--answer--></component>
+
+	<component id='ID_s1_CB09_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB09_03'>
+		<text><![CDATA[VTP transparente]]></text>
+	</component><!--End ComboBox 9--><!--ComboBox 10--><component id="ID_s1_txt10">
+		<text><![CDATA[10. <textformat blockindent='14'>Reenvía los anuncios del protocolo VTP sin hacer cambios en la base de datos de la red VLAN local</textformat>]]></text>
+	</component>
+
+	<component id='ID_s1_CBprompt10'>
+		<text><![CDATA[Seleccione una respuesta...]]></text>
+	</component>
+	
+	<component id='ID_s1_CB10_01'>
+		<text><![CDATA[Cliente VTP]]></text>
+	</component>
+
+	<component id='ID_s1_CB10_02'>
+		<text><![CDATA[Servidor VTP]]></text> 
+	</component>
+
+	<component id='ID_s1_CB10_03'>
+		<text><![CDATA[VTP transparente]]></text> <!--answer--></component><!--End ComboBox 10--></textcomponents>

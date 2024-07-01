@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.1 VTP: Descripción general</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>VTP: Descripción general</h1>
+        <div>
+          <p>A medida que aumenta el número de switches en una red de empresas pequeñas o medianas, la administración general requerida para administrar las VLAN y los enlaces troncales en una red se convierte en un desafío. En redes más grandes, la administración de VLAN puede volverse desalentadora. Como se muestra en la figura 1, suponga que las VLAN 10, 20 y 99 ya se implementaron, y ahora debe agregar la VLAN 30 a todos los switches. Agregar la VLAN manualmente en esta red incluiría la configuración de switches 12.</p>
+          <p>El protocolo de troncal VLAN (VTP) permite que un administrador de redes maneje las VLAN en un switch configurado como servidor VTP. El servidor VTP distribuye y sincroniza la información de la VLAN en los enlaces troncales a los switches habilitados por el VTP en toda la red conmutada. Esto minimiza los problemas causados por las configuraciones incorrectas y las inconsistencias de configuración.</p>
+          <p>
+            <b>Nota</b>: El VTP solo aprende sobre las VLAN de rango normal (ID de VLAN 1 a 1005). Las VLAN de rango extendido (ID mayor a 1005) no son admitidas por la versión 1 o versión 2 de VTP. La versión 3 del protocolo VTP admite VLAN extendidas, pero este tema no se trata en este curso.</p>
+          <p>
+            <b>Nota</b>: El protocolo VTP guarda configuraciones de VLAN en una base de datos llamada <b>vlan.dat</b>.</p>
+          <p>En la tabla de la figura 2 se incluye una breve descripción de los componentes principales del protocolo VTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura 1, se muestra una topología con varios switches. La figura 2 presenta una tabla en la que se describen componentes del protocolo VTP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.3 Virtualización de la red</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Virtualización de la red</h1>
+        <div>
+          <p>La virtualización del servidor oculta los recursos del servidor (por ejemplo, la cantidad y la identidad de los servidores físicos, de los procesadores y del SO) de los usuarios del servidor. Esta práctica puede crear problemas si el centro de datos está utilizando las arquitecturas de red tradicionales.</p>
+          <p></p>
+          <p>Por ejemplo, las LAN virtuales (VLAN) utilizadas por las VM se deben asignar al mismo puerto de switch que el servidor físico que ejecuta el hipervisor. Sin embargo, las VM son trasladables, y el administrador de la red debe poder agregar, descartar y cambiar los recursos y los de la red. Este proceso es difícil de hacer con los switches de red tradicionales.</p>
+          <p></p>
+          <p>Otro problema es que los flujos de tráfico difieren considerablemente del modelo cliente-servidor tradicional. Generalmente, un centro de datos tiene una cantidad considerable de tráfico que se intercambia entre los servidores virtuales (denominado "tráfico entre nodos"). Estos flujos cambian en la ubicación y la intensidad en el tiempo, lo que requiere un enfoque flexible a la administración de recursos de red.</p>
+          <p></p>
+          <p>Las infraestructuras de red existentes pueden responder a los requisitos cambiantes relacionados con la administración de los flujos de tráfico utilizando las configuraciones de calidad de servicio (QoS) y de ajustes de nivel de seguridad para los flujos individuales. Sin embargo, en empresas grandes que utilizan equipos de varios proveedores, cada vez que se activa una nueva VM, la reconfiguración necesaria puede llevar mucho tiempo.</p>
+          <p></p>
+          <p>¿Podría la infraestructura de red también beneficiarse de la virtualización? Si esto es así, ¿de qué manera podría hacerlo?</p>
+          <p></p>
+          <p>La respuesta está en la manera en que los dispositivos de red funcionan con un plano de datos y un plano de control, como se describe más adelante en este capítulo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

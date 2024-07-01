@@ -1,0 +1,1 @@
+La figura muestra una PC de cliente remoto, un router AAA con un servidor ACS de Cisco conectado. La figura 1 muestra los pasos necesarios para la autenticación de AAA local. La figura 2 muestra los pasos necesarios para la autenticación de AAA basada en servidor. La figura 3 muestra que las autenticaciones de AAA pueden usar protocolos TACACS+ o RADIUS.

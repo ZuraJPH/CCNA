@@ -1,0 +1,13 @@
+@import url('../../../common/styles/media2.css');
+
+#ID_router_txt1 span{
+color:#f26200;
+font-weight:bold;
+overflow-x: hidden;
+overflow-y: hidden;
+
+}
+
+#ID_router_txt1{
+	letter-spacing: -0.2px !important;
+}

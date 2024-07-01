@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.2 Verificación de la configuración de SNMP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de SNMP</h1>
+        <div>
+          <p>Existen varias soluciones de software para ver el resultado de SNMP. Para nuestros fines, el servidor de syslog Kiwi muestra los mensajes de SNMP asociados a las traps de SNMP. </p>
+          <p></p>
+          <p>La PC1 y el R1 están configurados para demostrar el resultado en un administrador de SNMP en relación con las traps de SNMP. </p>
+          <p></p>
+          <p>Como se muestra en la figura 1, se asignó la dirección IP 192.168.1.3/24 a la PC1. El servidor de syslog Kiwi está instalado en la PC1.</p>
+          <p></p>
+          <p>Después de que se configura el R1, cada vez que ocurre un evento que califique como trap, se envían traps de SNMP al administrador de SNMP. Por ejemplo, si se activa una interfaz, se envía una trap al servidor. Los cambios de configuración en el router también activan el envío de traps de SNMP al administrador de SNMP. Se puede ver una lista de más de 60 tipos de notificación de traps con el comando <b>snmp-server enable traps ?</b> En la configuración de R1, no se especifican tipos de notificación "trap" en el comando <b>snmp-server enable traps </b><i>tipos-de-notificación</i> , por lo que se envían todas las notificaciones.</p>
+          <p></p>
+          <p>En la figura 2, hay una casilla de verificación activada en el menú <b>Configuración</b> para indicar que el administrador de redes quiere que el software administrador de SNMP detecte las notificación de SNMP en el puerto UDP 162.</p>
+          <p></p>
+          <p>En la figura 3, la fila superior del resultado de trap de SNMP que se muestra indica que el estado de la interfaz GigabitEthernet0/0 cambió a up (activo). Además, cada vez que se pasa del modo EXEC privilegiado al modo de configuración global, el administrador de SNMP recibe una trap, como se muestra en la fila resaltada. </p>
+          <p></p>
+          <p>Para verificar la configuración SNMP, utilice cualquier variante del comando <b>show snmp</b> del modo EXEC privilegiado. El comando más útil es simplemente el comando <b>show snmp</b>, ya que muestra la información que suele ser de interés al examinar la configuración SNMP.  A menos que haya una configuración SNMPv3 involucrada, la mayoría de las otras opciones de comandos solo muestran partes seleccionadas del resultado del comando <b>show snmp</b>. En la figura 4, se proporciona un ejemplo del resultado de <b>show snmp</b>.</p>
+          <p></p>
+          <p>El resultado del comando <b>show snmp</b> no muestra información relacionada con la cadena de comunidad SNMP o, si corresponde, con la ACL asociada. La figura 5 muestra la cadena de comunidad de SNMP y la información de ACL, con el comando <b>show snmp community</b>.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 6 para configurar y verificar SNMP en el R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra a un trabajador conectado a una red y una lista con varios comandos de configuración de SNMP básicos. La figura 2 muestra una captura de pantalla de la sección de SNMP de la configuración del servidor kiwi syslog.  La figura 3 muestra una captura de pantalla de la pantalla de mensajes del administrador de SNMP del servidor kiwi syslog. La figura 4 muestra el resultado del comando "show snmp" en el router R1. La figura 5 muestra el resultado del comando "show snmp community" en el router R1. La figura 6 es una actividad interactiva que permite que el estudiante practique la configuración y verificación de SNMP en el router R1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

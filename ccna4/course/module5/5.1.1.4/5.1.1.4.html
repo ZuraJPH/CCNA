@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.4 Ataque de saturación de tablas de direcciones MAC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ataque de saturación de tablas de direcciones MAC</h1>
+        <div>
+          <p>Uno de los ataques más básicos y más comunes de switch LAN es el ataque por saturación de direcciones MAC. Este ataque también se conoce como ataque por sobrecarga de tabla de direcciones MAC o ataque por sobrecarga de la tabla CAM. </p>
+          <p></p>
+          <p>Pensemos qué sucede cuando un switch recibe las tramas entrantes. La tabla de direcciones MAC del switch tiene las direcciones MAC asociadas con cada puerto físico y la VLAN asociada con cada puerto. Cuando un switch de la Capa 2 recibe una trama, el switch busca en la tabla de direcciones MAC la dirección MAC de destino. Todos los modelos de switches Catalyst utilizan una tabla de direcciones MAC para la conmutación en la Capa 2. A medida que llegan las tramas a los puertos del switch, se registran las direcciones MAC de origen en la tabla de direcciones MAC. Si la dirección MAC tiene una entrada en la tabla, el switch reenvía la trama al puerto correspondiente. Si la dirección MAC no existe en la tabla de direcciones MAC, el switch satura todos los puertos con la trama, excepto el puerto en el cual se la recibió. </p>
+          <p></p>
+          <p>Las figuras 1 a 3 muestran esta conducta predeterminada del switch.</p>
+          <p></p>
+          <p>En la figura 1, el host A envía tráfico al host B. El switch recibe las tramas y agrega la dirección MAC de origen del host A a la tabla de direcciones MAC. A continuación, el switch busca la dirección MAC de destino en la tabla de direcciones MAC. Si el switch no encuentra la MAC de destino en la tabla de direcciones MAC, copia la trama y la envía masivamente (por saturación) por todos los puertos de switch, a excepción del puerto de recepción.</p>
+          <p></p>
+          <p>En la figura 2, el host B recibe y procesa la trama. A continuación, envía una respuesta al host A. El switch recibe la trama entrante del host B. El switch ahí agrega la dirección MAC de origen y la asignación de puerto del host B a la tabla de direcciones MAC. El switch busca la dirección MAC de destino en la tabla de direcciones MAC y reenvía las tramas desde el puerto 1 hasta el host A. </p>
+          <p></p>
+          <p>La tabla de direcciones MAC del switch con el tiempo se aprende todas las direcciones MAC que están conectadas y reenvía las tramas solo entre puertos de comunicación. En la figura 3, por ejemplo, todas las tramas enviadas por el host A (o por cualquier otro host) al host B se reenvía por el puerto 2 del switch. No se transmite desde todos los puertos porque el switch conoce la ubicación de la dirección MAC de destino.</p>
+          <p></p>
+          <p>Un atacante puede aprovecharse de esta conducta predeterminada del switch para crear un ataque por saturación de direcciones MAC. Las tablas de direcciones MAC poseen límite de tamaño. Los ataques por saturación de MAC se aprovechan de esta limitación con direcciones MAC de origen falsas que colman la tabla de direcciones MAC del switch y saturan el switch. </p>
+          <p></p>
+          <p>Las figuras 4 y 5 muestran cómo se genera un ataque por saturación de tabla de direcciones MAC.</p>
+          <p></p>
+          <p>En la figura 4, un atacante usa una herramienta de ataque a la red y envía continuamente al switch tramas con direcciones MAC de origen y destino falsas generadas al azar. El switch sigue actualizando la tabla de direcciones MAC con la información de las tramas falsas. </p>
+          <p></p>
+          <p>A la larga, la tabla de direcciones MAC se colma de direcciones MAC falsas y pasa al modo de apertura ante falla. En este modo, el switch transmite todas las tramas a todas las máquinas en la red. Como resultado, el atacante puede capturar todas las tramas, incluso las tramas que no están dirigidas a su tabla de direcciones MAC.</p>
+          <p></p>
+          <p>En la figura 5, el switch está en modo de apertura ante falla y transmite todas las tramas recibidas por todos los puertos. Por lo tanto, las tramas enviadas del host A al host B también se transmiten del puerto 3 del switch y son visibles para el atacante.</p>
+          <p></p>
+          <p>Configure la seguridad de puertos del switch para mitigar los ataques por sobrecarga de la tabla de direcciones MAC.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un switch con tres computadoras conectadas: host A, host B y host C. La figura muestra el envío de un paquete del host A al host B. Como el switch no tiene una entrada en la tabla MAC para el host B, el switch saturará la trama. La figura 2 muestra la respuesta del host B ante la saturación. Mientras host B envía una respuesta al host A, el switch agrega al host B a la tabla de direcciones MAC.  Al mismo tiempo, e host C descarta el paquete porque no es el host B. La figura 3 muestra el envío de otro paquete del host A al host B. Ahora que el switch tiene una entrada de dirección MAC para el host B, el paquete se envía directamente al host B. La figura 4 muestra el envío desde el host C de paquetes de datos con direcciones MAC falsas de origen y destino para tratar de saturar y colapsar el switch. La figura 5 muestra una tabla de direcciones MAC completa en un switch. Con esto se logra que todos los paquetes se transmitan al puerto correspondiente.  El switch está saturado y ahora funciona como concentrador.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

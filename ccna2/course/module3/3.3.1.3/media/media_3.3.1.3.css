@@ -1,0 +1,51 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+
+#col1{margin-left: -3px;
+   }
+#col2{left: 16px;
+    letter-spacing: 0px;
+    position: absolute;}
+#col3{left: 108px;
+    letter-spacing: -0.7px;
+    position: absolute;}
+#col4{left: 158px;
+      position: absolute;}
+#col5{left: 183px;
+    letter-spacing: 0.3px;
+    position: absolute;}
+#col6{left: 296px;
+    letter-spacing: 0.3px;
+    position: absolute;}
+#col7{position:absolute;left:364px;letter-spacing:1px;}
+
+@media only screen and (device-width: 768px) {
+#router_text2{letter-spacing:-.081px;padding-left:1.6px}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #router_text2{letter-spacing:-.081px;padding-left:1.6px}
+
+  
+    #col6{
+        letter-spacing: 0.75px;
+    }
+    #col2{
+        
+        letter-spacing: -0.1px;
+    }
+     #col3{
+       margin-left: -2px;
+        letter-spacing: -0.1px;
+    }
+   
+}
+#ID_txt08,#ID_txt09,#ID_txt10,#ID_txt11,#ID_txt12,#ID_txt13,#ID_txt14
+{
+    margin-left: -12px;
+}
+

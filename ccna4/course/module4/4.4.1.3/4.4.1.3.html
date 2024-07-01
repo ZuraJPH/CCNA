@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.1.3 Proceso de decisión de ACL estándar</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Proceso de decisión de ACL estándar</h1>
+        <div>
+          <p>Las ACL estándar solo examinan la dirección IPv4 de origen. El destino del paquete y los puertos involucrados no se tienen en cuenta. </p>
+          <p></p>
+          <p>El proceso de decisión de una ACL estándar se detalla en la ilustración. El software IOS de Cisco prueba las direcciones en relación con cada una de las condiciones de la ACL. La primera coincidencia determina si el software acepta o rechaza la dirección. Dado que el software deja de probar las condiciones después de la primera coincidencia, el orden de las condiciones es fundamental. Si no coincide ninguna condición, la dirección se rechaza.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un diagrama de flujo con el funcionamiento de una ACL estándar. Un paquete entrante ingresa al router y se consulta si hay una lista de acceso estándar en esta interfaz. Si la respuesta es negativa, se consulta si la dirección IP de destino está en la tabla de routing. Los resultados de esta consulta se analizan más adelante. Si hay una ACL estándar en la interfaz, se consulta si la dirección de origen coincide con una entrada de la lista de ACL. Si la respuesta es negativa, se consulta si ésta era la última entrada de ACL. Si la respuesta es afirmativa, el paquete se envía a la papelera y se envía un mensaje que indica que no se halló el destino. Si la respuesta es negativa, se pasa a la siguiente instrucción para avanzar por las entradas de la lista de ACL. Si la dirección de origen coincide con una entrada de la lista de ACL, se consulta si dicha entrada está en estado de permitir o de denegar. Si está en estado de denegar, el paquete se envía a la papelera y el router envía un mensaje que indica que no se halló el destino. Si la entrada está en estado de permitir, se consulta si la dirección IP de destino está en la tabla de routing. Si la respuesta es negativa, el paquete se envía a la papelera y se envía un mensaje que indica que no se halló el destino. Si la dirección IP de destino está en la tabla de routing, el paquete se envía a la interfaz saliente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

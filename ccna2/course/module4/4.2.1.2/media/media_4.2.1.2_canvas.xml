@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+	<element type="IMAGE" subType="bg" bgType="VIDEO" />
+	<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	<element type="VIDEO" videoId="4314027836001" x="20" y="60" width="640" height="360"/>
+</slide>
+</data>

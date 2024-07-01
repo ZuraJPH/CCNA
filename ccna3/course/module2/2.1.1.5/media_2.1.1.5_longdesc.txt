@@ -1,0 +1,1 @@
+En la figura 1, se muestra la salida del comando show vtp status. En la figura 2, se describen los parámetros del comando show vtp status.

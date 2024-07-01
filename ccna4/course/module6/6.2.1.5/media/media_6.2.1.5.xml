@@ -1,0 +1,64 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Ejemplo simple de DiffServ</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text>
+            <![CDATA[Clasificación del tráfico]]>
+        </text>
+    </component>
+    <component id='ID_txt02'>
+        <text>
+            <![CDATA[Troncal de IP]]>
+        </text>
+    </component>
+    <component id='ID_txt03'>
+        <text>
+            <![CDATA[Nodo que no reconoce QoS]]>
+        </text>
+    </component>
+    <component id='ID_txt04'>
+        <text>
+            <![CDATA[Nodo que no reconoce QoS]]>
+        </text>
+    </component>
+    <component id='ID_txt05'>
+        <text>
+            <![CDATA[Mecanismos manuales de la política de QoS]]>
+        </text>
+    </component>
+    <component id='ID_txt06'>
+        <text>
+            <![CDATA[Clasificación del tráfico]]>
+        </text>
+    </component><!-- end slide 1 --><component id="ID_s2_title">
+        <text>
+            <![CDATA[<b>Ventajas y desventajas del modelo DiffServ</b>]]></text>
+    </component>
+    <component id='ID_s2_table'>
+        <text>
+            <![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+		<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"></font></td>
+		</tr>
+
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>	
+		 
+		<tr>
+			<td bgcolor='#666263'><font color='#FFFFFF'><b>Beneficios</b></font></td>
+			<td bgcolor='#666263'><font color='#FFFFFF'><b>Desventajas</b></p></font></td>
+			
+		</tr>
+		<tr>
+			<td bgcolor='#E9E7E8'><textformat blockindent="-12"><ul><li>Gran escalabilidad</li><li>Proporciona distintos niveles de calidad</li></ul></textformat></td>
+			<td bgcolor='#E9E7E8'><textformat blockindent="-12"><ul><li>Sin garantía absoluta de la calidad del servicio</li><li>Requiere un conjunto de mecanismos complejos para trabajar en conjunto en la red</li></ul></textformat></td>
+			
+		</tr>
+		
+	</table>]]>
+        </text>
+    </component>
+</textcomponents>

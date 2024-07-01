@@ -1,0 +1,1 @@
+La figura muestra dos columnas con modelos de protocolos de comunicación. En la columna izquierda está el modelo OSI y en la derecha está el modelo TCP/IP. Una flecha va de la capa 2 del modelo TCP/IP hacia arriba hasta la capa de aplicación. En la capa 2, una leyenda dice "Compromiso inicial”. En el medio de la flecha hacia arriba, una leyenda dice "Comprometido”.

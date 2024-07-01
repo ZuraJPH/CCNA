@@ -1,0 +1,33 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#ID_txt11{
+	letter-spacing:-0.3px !important;
+}
+#ID_txt19,#ID_txt18,#ID_txt20,#ID_txt21
+{
+	line-height:11px;
+}
+#ID_speech05,#ID_speech06{line-height:10px!important;}
+
+#ID_txt04,#ID_txt05,#ID_txt08,#ID_txt07{
+letter-spacing:-0.6px !important;
+line-height:9px !important;
+}
+
+@media only screen and (device-width: 768px) {
+    #ID_txt08,#ID_txt07{
+        letter-spacing:-1.2px !important;
+    }
+}
+
+#text_14
+{
+	letter-spacing: -1px !important;
+}

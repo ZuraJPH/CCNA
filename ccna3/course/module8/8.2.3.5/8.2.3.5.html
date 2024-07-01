@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.5 Ajuste del ancho de banda de interfaz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ajuste del ancho de banda de interfaz</h1>
+        <div>
+          <p>
+            <b>Ajuste del ancho de banda de interfaz</b>
+          </p>
+          <p></p>
+          <p>Para ajustar el ancho de banda de interfaz, use el comando <b>bandwidth </b><i>kilobits </i>de configuración de interfaces. Utilice el comando <b>no bandwidth</b> para restaurar el valor predeterminado.</p>
+          <p></p>
+          <p>En el ejemplo de la figura 1, se ajusta el ancho de banda de la interfaz Serial 0/0/1 del R1 a 64 kb/s. Una verificación rápida confirma que la configuración del ancho de banda de la interfaz ahora es de 64 kb/s. </p>
+          <p></p>
+          <p>Se debe ajustar el ancho de banda en cada extremo de los enlaces seriales, de lo cual se deriva lo siguiente:</p>
+          <p>
+            <ul>
+              <li>El R2 requiere que su interfaz S0/0/1 se ajuste a 1024 kb/s.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R3 requiere que su interfaz serial 0/0/0 se ajuste a 64 kb/s y que su interfaz serial 0/0/1 se ajuste a 1024 kb/s.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para ajustar la interfaz serial del R2 y del R3.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Nota:</b> un concepto erróneo habitual de los estudiantes nuevos en la tecnología de redes y en IOS de Cisco es suponer que el comando <b>bandwidth</b> cambia el ancho de banda físico del enlace. Este comando solo modifica la métrica de ancho de banda que usan EIGRP y OSPF. El comando no modifica el ancho de banda real en el enlace.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran los comandos de CLI necesarios para ajustar el ancho de banda en una interfaz.  La figura comienza en el modo de configuración global y el primer comando es interface serial cero barra diagonal cero barra diagonal uno.  El siguiente comando es bandwidth 64.  En la figura, se muestra la salida del comando show interfaces serial cero barra diagonal cero barra diagonal uno barra vertical include BW. En la salida, el ancho de banda se indica como 64 kbps.  Se muestra la salida del comando show ip ospf interface serial cero barra diagonal cero barra diagonal uno barra vertical include cost.  El costo del enlace es 15 625. La figura dos representa un elemento de medios interactivos que permite que el estudiante ajuste anchos de banda de la interfaz.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.2 Componentes </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Componentes </h1>
+        <div>
+          <p>Se recomienda un enfoque sistemático hacia la solución de problemas. Por ejemplo, consulte el diagrama de flujo de la figura para diagnosticar problemas de conectividad de EIGRP. Haga clic en los botones de solución de problemas en la figura para ver las preguntas y las herramientas de solución de problemas para cada situación de solución de problemas.</p>
+          <p></p>
+          <p>Después de configurar EIGRP, el primer paso es probar la conectividad a la red remota. Si el ping falla, confirme las adyacencias de vecinos EIGRP. </p>
+          <p></p>
+          <p>Los vecinos EIGRP deben primero establecer adyacencias entre sí para luego poder intercambiar rutas. Una adyacencia de vecinos EIGRP podría fallar por distintos motivos comunes, entre ellos los siguientes:</p>
+          <p>
+            <ul>
+              <li>La interfaz entre los dispositivos está inactiva.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los dos routers tienen números de sistema autónomo EIGRP que no coinciden.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>No están habilitadas las interfaces adecuadas para el proceso EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Una interfaz está configurada como pasiva.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Otros motivos que afectan las adyacencias de vecinos incluyen valores K mal configurados, tiempos de intervalo de saludo y de espera incompatibles, y autenticación de EIGRP mal configurada.</p>
+          <p></p>
+          <p>Luego de establecer una adyacencia de vecinos, EIGRP comienza el proceso de intercambiar información de routing. Si dos routers son vecinos EIGRP, pero aún hay un problema de conexión, podría producirse un problema de routing. Algunos de los problemas que pueden causar un problema de conectividad para EIGRP son los siguientes:</p>
+          <p>
+            <ul>
+              <li>No se anuncian las redes adecuadas en routers remotos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Una interfaz pasiva configurada incorrectamente, o una ACL, bloquea los anuncios de las redes remotas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El resumen automático provoca un routing incongruente en una red no contigua.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si todas las rutas requeridas están en la tabla de routing, pero la ruta que toma el tráfico es incorrecta, verifique los valores del ancho de banda de la interfaz.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra un diagrama de flujo que describe los pasos para diagnosticar problemas de conectividad de EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

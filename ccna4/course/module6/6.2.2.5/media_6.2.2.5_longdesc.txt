@@ -1,0 +1,1 @@
+La figura 1 muestra los valores de clase de servicio (CoS) de Ethernet que se usan para la marcación de tráfico en la capa 2. La figura 2 muestra una tabla de descripción de cada valor de CoS.

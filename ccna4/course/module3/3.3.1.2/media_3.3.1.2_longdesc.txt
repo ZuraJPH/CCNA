@@ -1,0 +1,1 @@
+La figura de las conexiones a Internet de VPN muestra tres tipos de conexiones VPN a una nube de Internet: sucursal, usuario móvil y SOHO. Cada tipo tiene una conexión de conducto etiquetada como "VPN" que van a la nube de Internet. Otra conexión de conducto va desde la nube de Internet a un edificio etiquetado como "Sitio central". 

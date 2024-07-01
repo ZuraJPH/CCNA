@@ -1,0 +1,1 @@
+La figura 1 muestra una topología de SNMPv3 con autenticación. Un NMS se comunica con los nodos administrados a través de un túnel encriptado.

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.1 Comandos para la resolución de problemas de EIGRP básico </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos para la resolución de problemas de EIGRP básico </h1>
+        <div>
+          <p>EIGRP se usa generalmente en redes empresariales grandes. La resolución de problemas relacionados con el intercambio de información de routing es una habilidad fundamental para un administrador de red. Esto es particularmente cierto para los administradores que participan en la implementación y el mantenimiento de grandes redes empresariales enrutadas que usan EIGRP como el protocolo de gateway interior (IGP). Existen varios comandos útiles para la resolución de problemas en redes EIGRP. </p>
+          <p></p>
+          <p>Con el comando <b>show ip eigrp neighbors</b>, se verifica que el router reconozca a sus vecinos. El resultado de la figura 1 indica dos adyacencias de vecinos EIGRP correctas en el R1.</p>
+          <p></p>
+          <p>En la figura 2, se verifica que el router descubrió la ruta a una red remota mediante EIGRP con el comando <b>show ip route</b>. El resultado muestra que el R1 descubrió alrededor de cuatro redes remotas mediante EIGRP.</p>
+          <p></p>
+          <p>En la figura 3, se muestra el resultado del comando <b>show ip protocols</b>. Este comando arroja las distintas configuraciones de EIGRP.</p>
+          <p></p>
+          <p>
+            <b>EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>También se aplican comandos y criterios de solución de problemas similares en EIGRP para IPv6.</p>
+          <p></p>
+          <p>Los siguientes son los comandos equivalentes que se utilizan con EIGRP para IPv6:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 eigrp neighbors</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 route</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el resultado generado por el comando "show i. p. e. i. g. r. p. neighbors" en el router uno. Se enumeran dos vecinos. En la figura dos, se muestra el resultado generado por el comando "show i. p. route e. i. g. r. p.". En la figura tres, se muestra el resultado generado por el comando "show i. p. protocols".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

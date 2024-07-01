@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.2 Parámetros EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Parámetros EIGRP</h1>
+        <div>
+          <p>En la resolución de problemas en una red EIGRP, una de las primeras cosas que hay que verificar es que todos los routers que participan en la red EIGRP estén configurados con el mismo número de sistema autónomo. El comando <b>router eigrp </b><i>número-as </i>inicia el proceso EIGRP, y lo sigue el número de sistema autónomo. El valor del argumento<i> número-as </i>debe ser el mismo en todos los routers que están en el mismo dominio de routing EIGRP.</p>
+          <p></p>
+          <p>En la figura 1, se muestra que todos los routers deberían participar en el número de sistema autónomo 1. En la figura 2, con el comando <b>show ip protocols</b> se verifica que el R1, el R2 y el R3 usan el mismo número de sistema autónomo.</p>
+          <p></p>
+          <p>
+            <b>EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>También se aplican comandos y criterios de solución de problemas similares en EIGRP para IPv6.</p>
+          <p></p>
+          <p>Los siguientes son los comandos equivalentes que se utilizan con EIGRP para IPv6:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router(config)# </span>
+                <span class="cmd">
+                  <b>ipv6 router eigrp </b>
+                </span>
+                <span class="cmd">
+                  <i>número-as</i>
+                </span>
+                <span class="cmd">
+                  <b></b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Nota:</b> en la parte superior del resultado, el mensaje “IP Routing is NSF aware” (el routing IP reconoce NSF) se refiere a reenvío continuo (NSF). Esta capacidad permite que los peers EIGRP de un router defectuoso retengan la información de routing que este anunció y sigan usando esa información hasta que el router defectuoso vuelva a funcionar con normalidad y pueda intercambiar información de routing. Para obtener más información, consulte: <a href="http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/eigrp-nsf-awa.html" target="_blank">http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/eigrp-nsf-awa.html</a></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. La red interna está resaltada, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra el resultado que genera el comando "show i. p. protocols" en los routers uno, dos y tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

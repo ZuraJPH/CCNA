@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.1.1 Protocolos de routing IGP y EGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de routing IGP y EGP</h1>
+        <div>
+          <p>RIP, EIGRP y OSPF son protocolos de gateway interior (IGP). Los ISP y sus clientes, como corporaciones y otras empresas, generalmente utilizan un IGP para enrutar el tráfico dentro de sus redes. Los IGP se utilizan para intercambiar información de routing dentro de una red de una empresa o de un sistema autónomo (AS).</p>
+          <p></p>
+          <p>El protocolo de gateway fronterizo (BGP) es un protocolo de gateway exterior (EGP) utilizado para el intercambio de información de routing entre sistemas autónomos, como ISP, empresas y proveedores de contenido (por ejemplo, YouTube, Netflix, etc.).  </p>
+          <p></p>
+          <p>En el BGP, se asigna a cada AS un número AS de 16 o 32 bits único que lo identifica de manera única en Internet.  En la figura, se muestra un ejemplo de cómo se utilizan los IGP.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> También hay números AS privados. Sin embargo, los números AS privados están más allá del alcance de este curso.</p>
+          <p></p>
+          <p>Los protocolos de routing internos utilizan una métrica específica, como el costo de OSPF, para determinar las mejores rutas hacia las redes de destino. BGP no utiliza una sola métrica, a diferencia de los IGP. Los routers BGP intercambian varios atributos de ruta que incluyen una lista de números de AS (salto por salto) necesarios para lograr una red de destino.  Por ejemplo, en la Figura 1 AS 65002 pueden utilizar la ruta AS de 65003 y 65005 para llegar a una red dentro del proveedor de contenido AS 65005. El BGP se conoce como un protocolo de routing de vector de ruta.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la ruta AS es uno de varios atributos que pueden ser utilizados por el BGP para determinar el mejor camino. Sin embargo, los atributos de ruta y la determinación del mejor camino de BGP exceden el alcance de este curso.</p>
+          <p></p>
+          <p>Las actualizaciones de BGP se encapsulan sobre el TCP en el puerto 179. Por lo tanto, BGP conserva las propiedades orientadas a la conexión TCP, lo que asegura que las actualizaciones de BGP se transmitan de manera confiable.</p>
+          <p></p>
+          <p>Los protocolos de routing de IGP se utilizan para enrutar el tráfico dentro de la misma organización, y son administrados por una sola organización. En cambio, el BGP se utiliza para el enrutamiento entre redes administradas por dos organizaciones diferentes. El BGP es utilizado por un AS para publicar sus redes y, en algunos casos, las redes aprendidas de otros sistemas autónomos, en el resto de Internet.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Para mostrar IGP y EGP, se muestran cinco nubes. Cada nube se conecta a otras dos o más nubes. En la nube etiquetada AS 65001, hay un router en el perímetro de la nube que se conecta a un router en el perímetro de la nube etiquetada AS 65002 y un router en el perímetro de la nube etiquetada AS 65004. Los routers que se conectan entre dos AS tienen una flecha entre las nubes que apunta hacia cada nube y tiene la palabra BGP. Dentro de AS 65001 hay varios routers y las palabras ISP-1 (EIGRP). La nube etiquetada AS 65002 Company (OSPF) tiene dos routers perimetrales: uno que se conecta a AS65001, como ya se mencionó, y un router que está en el extremo de la nube etiquetada AS 65003 ISP-3 (EIGRP). El router del perímetro de la nube etiquetada AS65003 también se conecta a un router en el perímetro de AS 65004 y a un router en el perímetro de AS 65005. La nube etiquetada AS 65004 tiene dos routers en el perímetro de la nube. Un router se conecta a otro router en el perímetro de AS 65001, como ya se mencionó, y el otro router se conecta al router en el perímetro de AS 65005. Hay varios otros routers en la nube etiquetados AS o65004 ISP-2 (OSPF). La nube AS 65005 tiene un solo router perimetral que se conecta con el router perimetral de AS 65003 y con uno de los routers perimetrales de AS 65004. La nube AS 65005 está etiquetada como "Proveedor de contenido" (OSPF) y tiene varios routers más.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

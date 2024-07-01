@@ -1,0 +1,1 @@
+La figura muestra un switch de capa 3 con una PC legítima y dos PC de atacante conectadas. La figura muestra una operación de seguridad de puerto en una topología, donde la cantidad permitida de direcciones MAC en un puerto se limita a uno.

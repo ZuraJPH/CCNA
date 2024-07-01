@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.3.5 Comandos básicos de CLI del switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos básicos de CLI del switch</h1>
+        <div>
+          <p>En la configuración básica del switch, se incluyen el nombre de host para la identificación, las contraseñas para la seguridad y la asignación de direcciones IP para la conectividad. Para el acceso dentro de banda, el switch debe tener una dirección IP. En la figura 1, se muestran los comandos que se introducen para habilitar un switch.</p>
+          <p></p>
+          <p>En la figura 2, se muestran los resultados de los comandos de configuración que se introdujeron en la figura 1. Verifique y guarde los cambios en la configuración del switch mediante el comando <b>copy running-config startup-config</b>. Para borrar la configuración del switch, utilice el comando <b>erase startup-config</b> y, luego, el comando <b>reload</b>. Es posible que también sea necesario borrar toda información de VLAN mediante el comando <b>delete flash:vlan.dat</b>.  Cuando se haya establecido la configuración del switch, visualícela con el comando <b>show running-config</b>. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra un ejemplo de una configuración de switch. En la figura dos, se muestra el resultado que genera el comando show run.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

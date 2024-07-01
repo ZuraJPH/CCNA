@@ -1,0 +1,1 @@
+En la figura uno, se muestra un switch conectado a un teléfono IP y un punto de acceso inalámbrico.  Ambos reciben alimentación por Ethernet. En la figura dos, se muestra un switch Cisco Catalyst 3650 y un switch de transferencia PoE Catalyst.  Hay tres dispositivos PoE conectados al switch de transferencia.

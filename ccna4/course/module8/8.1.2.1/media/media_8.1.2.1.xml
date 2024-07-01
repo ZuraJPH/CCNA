@@ -1,0 +1,114 @@
+﻿<textcomponents>
+
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Etapa 1</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Etapa 1:</b> Recolección de los síntomas]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[<b>Etapa 2:</b> Aislamiento del problema]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[<b>Etapa 3:</b> Implementación de medidas correctivas]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[¿Problema resuelto?]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Si no reparó el problema o si generó uno nuevo, deshaga las medidas correctivas y comience nuevamente.]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[Registre la solución y guarde los cambios.]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[Sí]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Etapa 2</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Etapa 1:</b> Recolección de los síntomas]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Etapa 2:</b> Aislamiento del problema]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[<b>Etapa 3:</b> Implementación de medidas correctivas]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[¿Problema resuelto?]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Si no reparó el problema o si generó uno nuevo, deshaga las medidas correctivas y comience nuevamente.]]></text>
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[Registre la solución y guarde los cambios.]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_s2_txt08">
+<text><![CDATA[Sí]]></text>
+</component>
+
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Etapa 3</b>]]></text>
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Etapa 1:</b> Recolección de los síntomas]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[<b>Etapa 2:</b> Aislamiento del problema]]></text>
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[<b>Etapa 3:</b> Implementación de medidas correctivas]]></text>
+</component>
+
+<component id="ID_s3_txt04">
+<text><![CDATA[¿Problema resuelto?]]></text>
+</component>
+
+<component id="ID_s3_txt05">
+<text><![CDATA[Si no reparó el problema o si generó uno nuevo, deshaga las medidas correctivas y comience nuevamente.]]></text>
+</component>
+
+<component id="ID_s3_txt06">
+<text><![CDATA[Registre la solución y guarde los cambios.]]></text>
+</component>
+
+<component id="ID_s3_txt07">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_s3_txt08">
+<text><![CDATA[Sí]]></text>
+</component>
+
+</textcomponents>

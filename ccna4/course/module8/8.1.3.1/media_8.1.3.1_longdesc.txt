@@ -1,0 +1,1 @@
+La figura 1 muestra el modelo de OSI con los equipos asociados con cada capa. La figura 2 muestra los modelos de OSI y de TCPIP, y la asignación de capas entre ellos.

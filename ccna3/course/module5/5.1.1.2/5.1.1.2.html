@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.2 Protocolos de routing IGP y EGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de routing IGP y EGP</h1>
+        <div>
+          <p>Un sistema autónomo (AS) es un conjunto de routers bajo una administración común, como una empresa o una organización. Los AS también se conocen como “dominios de routing”. Los ejemplos típicos de AS son la red interna de una empresa y la red de un ISP.  </p>
+          <p></p>
+          <p>Debido a que Internet se basa en el concepto de AS, se requieren dos tipos de protocolos de routing: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de gateway interior (IGP):</b> se utiliza para el routing dentro de un AS. También se lo denomina “routing interno de AS”. Las empresas, las organizaciones e incluso los proveedores de servicios utilizan un IGP en sus redes internas. Los IGP incluyen RIP, EIGRP, OSPF e IS-IS. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de gateway exterior (EGP):</b> se utiliza para el routing entre distintos AS. AS. Los proveedores de servicios y las empresas grandes pueden interconectarse mediante un EGP. El protocolo de gateway fronterizo (BGP) es el único EGP viable actualmente y es el protocolo de routing oficial utilizado en Internet.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> dado que BGP es el único EGP disponible, no se suele utilizar el término EGP. En cambio, la mayoría de los ingenieros simplemente hacen referencia a BGP. </p>
+          <p></p>
+          <p>En el ejemplo de la ilustración, se proporcionan situaciones simples en las que se destaca la implementación de IGP, de BGP y del routing estático: </p>
+          <p>
+            <ul>
+              <li>
+                <b>ISP-1:</b> es un AS que utiliza IS-IS como IGP. Se interconecta con otros sistemas autónomos y proveedores de servicios que utilizan BGP para controlar explícitamente el modo en que se enruta el tráfico. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ISP-2:</b> es un AS que utiliza OSPF como IGP. Se interconecta con otros sistemas autónomos y proveedores de servicios que utilizan BGP para controlar explícitamente el modo en que se enruta el tráfico. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>AS-1:</b> se trata de una organización grande que utiliza EIGRP como IGP. Dado que es un entorno de host múltiples (es decir, se conecta a dos proveedores de servicios distintos), utiliza BGP para controlar explícitamente la forma en que el tráfico ingresa al AS y sale de él. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>AS-2:</b> se trata de una organización mediana y utiliza OSPF como IGP.  También es un entorno de host múltiples, por lo que utiliza BGP para controlar explícitamente la forma en que el tráfico ingresa al AS y sale de él. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>AS-3:</b> se trata de una organización pequeña con routers más antiguos dentro del AS y utiliza RIP como IGP. Dado que tiene conexión simple (es decir, conecta a solo un proveedor de servicios), no se requiere BGP.  En cambio, se implementa routing estático entre el AS y el proveedor de servicios. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> BGP excede el ámbito de este curso, motivo por el cual no se lo describe en detalle. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran cuatro redes separadas, interconectadas a través de enlaces WAN.  En la figura, dos redes utilizan OSPF internamente, una utiliza EIGRP y la otra utiliza IS-IS. Todos los enlaces WAN que las conectan utilizan BGP.  Una de las redes de OSPF tiene conectada una red de rutas internas que utiliza RIP.  Esta red utiliza routing estático para el acceso a la red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

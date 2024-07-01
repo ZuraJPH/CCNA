@@ -1,0 +1,1 @@
+En la figura se muestran dos routers. Cada router ejecuta EIGRP. El router uno le envía un paquete de saludo al router dos.  El router dos le envía un paquete de actualización y de saludo al router uno.  El router uno le envía un paquete de acuse de recibo y un paquete de saludo al router dos.  

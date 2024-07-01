@@ -1,0 +1,1 @@
+La figura muestra un switch con un router y una computadora conectada a él.  La computadora emite el mensaje de solicitud de router IPv6, que es un mensaje de multidifusión para todos los routers.  El router recibe este mensaje y responde con un mensaje de anuncio de router, que es un mensaje de multidifusión para todos los nodos IPv6.

@@ -1,0 +1,1 @@
+Esta figura se basa en el diagrama estándar de laboratorio. La figura muestra la sintaxis para configurar una ruta estática predeterminada en el router uno que apunte a la interfaz serial del router dos.  La sintaxis es "ipv6 route dos puntos dos puntos barra cero" seguida por la dirección IPv6 de siguiente salto.

@@ -1,0 +1,1 @@
+La figura muestra los campos de ID de puente en dos formatos.  Uno con la ID del sistema extendido y el otro, sin ella.  Sin ella, la prioridad toma 2 bytes.  Con ella, la prioridad utiliza 4 bits y la ID del sistema utiliza los otros 12 bits.

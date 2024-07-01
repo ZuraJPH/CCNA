@@ -1,0 +1,1 @@
+La figura muestra un switch con un router y una computadora conectada a él.  El router está configurado para funcionar como servidor DHCP y la computadora es un cliente DHCP  El router puede proporcionar la dirección IP y demás información al cliente.

@@ -1,0 +1,1 @@
+La figura muestra una tabla que enumera los LED de un switch Cisco Catalyst 2960.

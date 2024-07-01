@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide type="MBAR">
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="TEXT" compId="ID_s1_table" x="40" y="121" width="600" height="347.05" />
+            <element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#ffffff" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.5.3.3.A.png" />
+            <element type="ROUTER" textId="ID_router_txt1" x="40" y="215.1" width="600" height="223" />
+            <element type="TEXT" compId="ID_s2_txt05" x="69" y="255" width="100.5" expand="left" align="left" color="#ffffff" />
+            <element type="TEXT" compId="ID_s2_txt01" x="80" y="81" width="100.25" expand="down" align="center" />
+            <element type="TEXT" compId="ID_s2_txt04" x="265" y="88" width="82.4" expand="up" align="center" color="#9f5824" />
+            <element type="TEXT" compId="ID_s2_txt03" x="575" y="122" width="62.95" expand="up+down" align="center" />
+            <element type="TEXT" compId="ID_s2_txt02" x="419" y="81" width="99.9" expand="down" align="center" />
+            <element type="TEXT" id="ID_static_1" text="G0/1 .2" x="239.4" y="114.6" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_2" text="G0/1 .1" x="344.25" y="114.6" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_3" text="209.165.201.0/27" x="252.5" y="158.35" align="center" width="92.95" />
+            <element type="TEXT" id="ID_static_4" text="198.133.219.0/24" x="78.25" y="144.6" align="center" width="92.55" />
+            <element type="TEXT" subType="TITLE" compId="ID_s2_title" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.5.3.3.A.png" />
+            <element type="ROUTER" textId="ID_router_txt2" x="40" y="215.1" width="600" height="223" />
+            <element type="TEXT" compId="ID_s3_txt01" x="80" y="81" width="100.25" expand="down" align="center" />
+            <element type="TEXT" compId="ID_s3_txt04" x="265" y="88" width="82.4" expand="up" align="center" color="#9f5824" />
+            <element type="TEXT" compId="ID_s3_txt03" x="575" y="122" width="62.95" expand="up+down" align="center" />
+            <element type="TEXT" compId="ID_s3_txt02" x="419" y="81" width="99.9" expand="down" align="center" />
+            <element type="TEXT" id="ID_static_5" text="G0/1 .2" x="239.4" y="114.6" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_6" text="G0/1 .1" x="344.25" y="114.6" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_7" text="209.165.201.0/27" x="252.5" y="158.35" align="center" width="92.95" />
+            <element type="TEXT" id="ID_static_8" text="198.133.219.0/24" x="78.25" y="144.6" align="center" width="92.55" />
+            <element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_3.5.3.3.A.png" />
+            <element type="ROUTER" textId="ID_router_txt3" x="40" y="215.1" width="600" height="223" />
+            <element type="TEXT" compId="ID_s4_txt01" x="80" y="81" width="100.25" expand="down" align="center" />
+            <element type="TEXT" compId="ID_s4_txt04" x="265" y="85" width="82.4" expand="up" align="center" color="#9f5824" />
+            <element type="TEXT" compId="ID_s4_txt03" x="575" y="122" width="62.95" expand="up+down" align="center" />
+            <element type="TEXT" compId="ID_s4_txt02" x="419" y="81" width="99.9" expand="down" align="center" />
+            <element type="TEXT" id="ID_static_9" text="G0/1 .2" x="239.4" y="114.6" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_10" text="G0/1 .1" x="344.25" y="114.6" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_11" text="209.165.201.0/27" x="252.5" y="158.35" align="center" width="92.95" />
+            <element type="TEXT" id="ID_static_12" text="198.133.219.0/24" x="78.25" y="144.6" align="center" width="92.55" />
+            <element type="TEXT" subType="TITLE" compId="ID_s4_title" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="ACTIVITY" subType="SYNTAX" compId="ID_s4_SC" x="25" y="60" width="630" height="388" resetId="ID_s5_reset" showMeId="ID_s5_showme" showAllId="ID_s5_showall" />
+            <element type="TEXT" subType="TITLE" compId="ID_s5_title" color="#ffffff" />
+        </slide>
+    </slide>
+    <text id="ID_router_txt1">
+        <![CDATA[<pre>Company-A# show ip route 
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, <span class="align">B - BGP</span> 
+
+
+Gateway of last resort is 209.165.201.1 to network 0.0.0.0 
+<span class="align">B*   0.0.0.0/0 [20/0] via 209.165.201.1, 00:36:03</span> 
+     10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks 
+C       198.133.219.0/24 is directly connected, GigabitEthernet0/0 
+L       198.133.219.1/32 is directly connected, GigabitEthernet0/0
+     209.165.201.0/24 is variably subnetted, 2 subnets, 2 masks 
+C       209.165.201.0/27 is directly connected, GigabitEthernet0/1 
+L       209.165.201.2/32 is directly connected, GigabitEthernet0/1 
+Company-A#</pre>]]></text>
+    <text id="ID_router_txt2">
+        <![CDATA[<pre>Company-A# show ip bgp 
+BGP table version is 3, local router ID is 209.165.201.2
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+Origin codes: i - IGP, e - EGP, ? - incomplete 
+RPKI validation codes: V valid, I invalid, N Not found 
+
+     Network           Next Hop            Metric LocPrf Weight Path 
+*>   <span class="align">0.0.0.0           209.165.201.1</span>         0              </span class="align">0   65001 i</span> 
+*>   <span class="align">198.133.219.0/24  0.0.0.0</span>               0            32768 i 
+Company-A#</pre>]]></text>
+    <text id="ID_router_txt3">
+        <![CDATA[<pre>Company-A# show ip bgp summary 
+BGP router identifier <span class="align">209.165.201.2, local AS number 65000</span>
+BGP table version is 3, main routing table version 3 
+2 network entries using 288 bytes of memory 
+2 path entries using 160 bytes of memory 
+2/2 BGP path/bestpath attribute entries using 320 bytes of memory 
+1 BGP AS-PATH entries using 24 bytes of memory 
+0 BGP route-map cache entries using 0 bytes of memory 
+0 BGP filter-list cache entries using 0 bytes of memory 
+BGP using 792 total bytes of memory 
+BGP activity 2/0 prefixes, 2/0 paths, scan interval 60 secs 
+
+Neighbor       V     AS MsgRcvd MsgSent  TblVer InQ OutQ  Up/Down  State/PfxRcd 
+<span class="align">209.165.201.1</span>  4  <span class="align">65001</span>      66      66       3   0    0  00:56:11            1 
+Company-A#</pre>]]></text>
+</data>

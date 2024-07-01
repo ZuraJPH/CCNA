@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Práctica de laboratorio]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Configuración de routing entre VLAN basado en enlaces troncales 801.2Q]]></text>
+	</component>
+	
+</textcomponents>

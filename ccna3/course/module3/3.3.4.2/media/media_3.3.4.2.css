@@ -1,0 +1,8 @@
+@import url('../../../common/styles/media2.css');
+#ID_s2_txt01,#ID_s2_txt02,#ID_s2_txt03
+{
+	font-weight: bold !important;
+}
+#ID_s1_title,#ID_s2_title{
+	margin-left: 115px;
+}

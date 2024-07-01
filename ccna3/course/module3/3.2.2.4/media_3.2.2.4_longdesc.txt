@@ -1,0 +1,1 @@
+La figura es una actividad interactiva que muestra tres switches interconectados con un enlace troncal.  El switch uno es la raíz de la VLAN 100 y el switch dos es la raíz de la VLAN 200.  Esta actividad permite que el estudiante practique la definición del estado de puerto en el switch tres para cada una de las redes VLAN.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide>
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_4.4.2.5.png" />
+        <element type="TEXT" id="ID_static_1" text="192.168.10.10" x="110.25" y="310.65" align="center" width="75.15" bold="1"/>
+        <element type="TEXT" id="ID_static_2" text="192.168.10.0/24" x="70.55" y="162.9" align="center" width="85.55" bold="1"/>
+        <element type="TEXT" id="ID_static_3" text="S0/0/0" x="205.15" y="85.7" align="center" width="35.85" />
+        <element type="TEXT" id="ID_static_4" text="192.168.11.0/24" x="258.4" y="212.05" align="center" width="85.55" bold="1"/>
+        <element type="TEXT" id="ID_static_5" text="192.168.11.10" x="206.7" y="310.85" align="center" width="75.15" bold="1"/>
+        <element type="TEXT" id="ID_static_6" text="192.168.30.12" x="332.2" y="311.1" align="center" width="75" bold="1"/>
+        <element type="TEXT" id="ID_static_7" text="192.168.31.12" x="436.75" y="310.15" align="center" width="75" bold="1"/>
+        <element type="TEXT" id="ID_static_8" text="192.168.30.0/24" x="295.1" y="162.2" align="center" width="85.55" bold="1"/>
+        <element type="TEXT" id="ID_static_9" text="192.168.31.0/24" x="479.55" y="210.75" align="center" width="85.55" bold="1"/>
+        <element type="TEXT" id="ID_static_10" text="S0/0/1" x="407.25" y="85.55" align="center" width="34.05" />
+        <element type="TEXT" id="ID_static_11" text="G0/0" x="155.05" y="135.15" align="center" width="25.65" />
+        <element type="TEXT" id="ID_static_12" text="S0/0/0" x="249.35" y="57.6" align="center" width="35.85" />
+        <element type="TEXT" id="ID_static_13" text="S0/0/1" x="348.35" y="55.9" align="center" width="34.05" />
+        <element type="TEXT" id="ID_static_14" text="G0/1" x="243.25" y="127.9" align="center" width="23.85" />
+        <element type="TEXT" id="ID_static_15" text="G0/1" x="465" y="125.6" align="center" width="23.85" />
+        <element type="TEXT" id="ID_static_16" text="G0/0" x="379.25" y="126.95" align="center" width="25.65" />
+        <element type="ROUTER" textId="ID_router_txt1" x="40" y="380" width="600" height="90" />
+        <!--<text id="ID_router_txt1"><![CDATA[<pre>R2# show access-lists 150 Extended IP access list 150 10 deny tcp any host 192.168.31.12 eq telnet 20 permit ip any any</pre>]]></text>-->
+    </slide>
+    <text id="ID_router_txt1">
+        <![CDATA[<pre>R2# <b>show access-lists 150</b>
+Extended IP access list 150
+	10 deny tcp any host 192.168.31.12 eq telnet
+	20 permit ip any any</pre>]]></text>
+</data>

@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>DSL asimétrico en el espectro electromagnético</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+<text><![CDATA[POTS]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Datos de ADSL]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Corriente arriba]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Descendente]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[0 KHz ~ 4 KHz]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[26 KHz ~ 138 KHz]]></text>
+</component>
+
+<component id="ID_txt07">
+   <text>
+      <![CDATA[138 KHz ~ 1100 KHz]]></text>
+</component>
+</textcomponents>

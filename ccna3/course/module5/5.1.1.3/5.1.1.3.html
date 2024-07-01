@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.3 Protocolos de routing vector distancia</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de routing vector distancia</h1>
+        <div>
+          <p>“Vector distancia” significa que las rutas se anuncian proporcionando dos características:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Distancia:</b> identifica la distancia hasta la red de destino. Se basa en una métrica como el conteo de saltos, el costo, el ancho de banda y el retraso, entre otros. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Vector:</b> especifica el sentido en que se encuentra el router de siguiente salto o la interfaz de salida para llegar al destino. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Por ejemplo, en la ilustración, el R1 tiene información de que la distancia para llegar a la red 172.16.3.0/24 es de un salto y de que el sentido es a través de la interfaz S0/0/0 hacia el R2. </p>
+          <p></p>
+          <p>Un router que utiliza un protocolo de routing vector distancia no tiene la información de la ruta completa hasta la red de destino. Los protocolos vector distancia utilizan routers como letreros a lo largo de la ruta hacia el destino final. La única información que conoce el router sobre una red remota es la distancia o métrica para llegar a esa red y qué ruta o interfaz usar para alcanzarla. Los protocolos de routing de vector distancia no tienen un mapa de la topología de red como otros tipos de protocolos de routing.</p>
+          <p></p>
+          <p>Hay cuatro IGP vector distancia IPv4:</p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv1:</b> protocolo antiguo de primera generación</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv2:</b> protocolo de routing vector distancia simple</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IGRP:</b> protocolo exclusivo de Cisco de primera generación (obsoleto y reemplazado por EIGRP)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EIGRP:</b> versión avanzada del routing vector distancia</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers conectados por un enlace WAN serial.  La figura muestra que la distancia indica hasta dónde llega la red y el vector indica en qué dirección se dirige la red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

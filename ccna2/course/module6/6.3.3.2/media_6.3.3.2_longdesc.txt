@@ -1,0 +1,1 @@
+La figura muestra una topología de router-on-a-stick y los pasos necesarios para configurar las VLAN y un enlace troncal en un switch que tiene una sola conexión física a un router.

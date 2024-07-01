@@ -1,0 +1,1 @@
+En la figura se muestran dos routers conectados entre sí a través de un enlace serial WAN.  Cada router tiene dos redes locales conectadas a las interfaces de red LAN.  Cualquier red que se asigne a la interfaz local de un router se considera una red conectada directamente y todas las redes conectadas a otros routers se consideran redes remotas.

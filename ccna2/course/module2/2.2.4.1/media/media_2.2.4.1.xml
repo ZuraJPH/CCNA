@@ -1,0 +1,51 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Sintaxis de ruta estática predeterminada IPv6</b>]]></text>
+	</component>
+	
+	<component id='ID_table'>
+		<text><![CDATA[
+						 <table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+
+						 	
+
+							
+								<tr>
+									<td colspan='2' bgcolor='#4E4C4D' class="mtable_top"><font size='1' color='#4E4C4D'>.</font></td>
+								</tr> 
+							  
+								<tr>
+								  <td width='100px' bgcolor='#666263' class="mtitle"><font  color='#ffffff'><b>Parámetro</b></font></td>
+								  <td  bgcolor='#666263' class="mtitle"><font  color='#ffffff'><b>Descripción</b></font></td>
+								</tr>
+
+								<tr>
+
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">::/0</font></td>
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536'>Coincide con cualquier prefijo IPv6 independientemente de la longitud de prefijo.</font></td>
+								</tr>
+								
+								<tr>
+								  <td bgcolor='#F2F2F2' valign="top"><font color='#393536' face="_typewriter">ipv6-address</font></td>
+								  <td bgcolor='#F2F2F2' valign="top"><font color='#393536'><textformat blockindent='-14'>
+										<ul><li>Se la suele denominar “dirección IPv6 del router de siguiente salto”.</li>
+										<li>Suele utilizarse para la conexión a un medio de difusión (es decir, Ethernet).</li>
+										<li>Por lo general, crea una búsqueda recursiva.</li></ul>
+									</textformat></font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">interfaz-salida</font></td>
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536'><textformat blockindent='-14'>
+										<ul><li>Use la interfaz de salida para reenviar paquetes a la red de destino.</li>
+										<li>También se la denomina “ruta estática conectada directamente”.</li>
+										<li>Suele utilizarse para conectarse en una configuración punto a punto.</li></ul>
+									</textformat></font></td>
+								</tr>      
+							  </table>
+					]]>
+		</text>
+</component>
+
+
+</textcomponents>

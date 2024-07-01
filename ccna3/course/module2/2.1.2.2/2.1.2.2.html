@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.2 Paso 1: Configure el servidor VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 1: Configure el servidor VTP</h1>
+        <div>
+          <p>Confirme que todos los switches están configurados con las configuraciones predeterminadas para evitar cualquier problema con los números de revisión de configuración. Configure el S1 como servidor VTP con el comando de configuración global <b>vtp mode server</b>, como se muestra en la figura 1.</p>
+          <p>Emita el comando <b>show vtp status</b> para confirmar que el S1 es el servidor VTP, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>Observe que el número de revisión de configuración todavía está configurado en 0 y la cantidad de VLAN existentes es 5. Esto sucede porque no se configuró ninguna VLAN todavía y el switch no pertenece a un dominio VTP. Las 5 VLAN son la VLAN 1 predeterminada y las VLAN 1002-1005.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura 1, se muestran los comandos para configurar el protocolo VTP. En la figura 2, se muestra la salida del comando show vtp status.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

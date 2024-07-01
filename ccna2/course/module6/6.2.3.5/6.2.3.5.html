@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.5 Modo de puerto incorrecto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modo de puerto incorrecto</h1>
+        <div>
+          <p>Por lo general, los enlaces troncales se configuran estáticamente con el comando <b>switchport mode trunk</b>. Los puertos de enlace troncal de los switches Cisco Catalyst utilizan DTP para negociar el estado del enlace. Cuando un puerto en un enlace troncal se configura con un modo de enlace troncal que no es compatible con el puerto de enlace troncal vecino, no se puede formar un enlace troncal entre los dos switches. </p>
+          <p></p>
+          <p>En la situación que se describe en la figura 1, la PC4 no puede conectarse al servidor web interno. La topología indica una configuración válida. ¿Por qué hay un problema? </p>
+          <p>Verifique el estado de los puertos de enlace troncal del switch S1 con el comando <b>show interfaces trunk</b>. El resultado que se muestra en la figura 2 indica que la interfaz Fa0/3 del switch S1 actualmente no es un enlace troncal. Si se examina la interfaz F0/3, se descubre que el puerto del switch está configurado estáticamente en modo enlace troncal. Si se examinan los enlaces troncales del switch S3, se descubre que no hay puertos de enlace troncal activos. Si se sigue examinando, se descubre que la interfaz Fa0/3 está en modo de acceso estático. Esto sucede porque el puerto se configuró con el comando <b>switchport mode access</b>. Esto explica la inactividad del enlace troncal.</p>
+          <p></p>
+          <p>Para resolver el problema, vuelva a configurar el modo de enlace troncal de los puertos F0/3 del switch S3, como se muestra en la figura 3. Después del cambio de configuración, el resultado del comando <b>show interfaces</b> indica que el puerto del switch S3 ahora está en modo de enlace troncal. El resultado de la PC4 indica que esta recuperó la conectividad al servidor Web/TFTP que se encuentra en la dirección IPv4 172.17.10.30.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una LAN con una PC conectada al switch 3 y un servidor Web conectado al switch 1.  Los enlaces entre los switches son enlaces troncales con las VLAN adecuadas permitidas.  La PC tiene una llamada que indica que no puede conectarse al servidor Web. La figura dos muestra el resultado del comando “show interfaces trunk” en el switch 1 y el comando “show interface f0/3 switchport” en el switch 1. El modo de F0/3 se resalta y está configurado como dinámico automático.  También se muestra el resultado del comando “show interfaces trunk” en el switch 3.  No hay enlaces troncales en el switch 3.  También se muestra el resultado del comando “show interfaces f0/3” en el switch 3.  El modo de puerto se resalta y se configura como "dynamic auto". La figura 3 muestra la sintaxis para configurar el puerto F0/3 en los switches 1 y 3 como puerto de enlace troncal y el resultado de un ping exitoso desde la PC al servidor Web.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

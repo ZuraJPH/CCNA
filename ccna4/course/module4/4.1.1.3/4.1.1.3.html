@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.3 Una conversación TCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Una conversación TCP</h1>
+        <div>
+          <p>Los administradores pueden controlar el tráfico de red basándose en varias características, incluido el puerto TCP que se solicita. Es más fácil comprender cómo filtra el tráfico una ACL si se examina el diálogo que se produce durante una conversación TCP, por ejemplo, cuando se solicita una página web.</p>
+          <p></p>
+          <p>Cuando un cliente solicita datos a un servidor web, IP administra la comunicación entre la computadora (origen) y el servidor (destino). TCP administra la comunicación entre el navegador web (aplicación) y el software del servidor de red.</p>
+          <p></p>
+          <p>En la animación que se muestra en la figura 1, se ilustra cómo se lleva a cabo una conversación TCP/IP. Los segmentos TCP se marcan con indicadores que denotan su objetivo: la sesión comienza (se sincroniza) con un indicador SYN, el indicador ACK es un acuse de recibo de un segmento esperado, y un indicador FIN finaliza la sesión. Un indicador SYN/ACK confirma que la transferencia está sincronizada. Los segmentos de datos TCP incluyen el protocolo del nivel más alto necesario para dirigir los datos de aplicación a la aplicación correcta.</p>
+          <p></p>
+          <p>Los segmentos de datos TCP también identifican el puerto que coincide con el servicio solicitado. En la figura 2, se muestran los rangos de puertos UDP y TCP. La figura 3 muestra una lista de números de puertos conocidos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 es una animación que muestra los pasos de una conversación TCP entre dispositivos.  Estos pasos incluyen el intercambio de tres vías del envío de la sincronización de TCP, el envío del acuse de recibo, el envío de los datos y el envío de los paquetes FIN. La figura 2 muestra los tres rangos que se usan para los números de puerto.  Los puertos 0 a 1023 están clasificados como puertos conocidos.  Los números 1024 a 49151 son puertos registrados.  Los puertos 49152 a 65535 se consideran puertos privados y/o dinámicos. La figura 3 muestra una docena de los números de puerto más conocidos y comunes, incluidos FTP (20 y 21), SSH (22), SMTP (25), DNS (53), DHCP (67 y 68), TFTP (69), HTTP (80), POP3 (110), IMAP (143), SNMP (161) y HTTPS (443).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

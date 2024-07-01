@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.6 Lista de VLAN incorrecta</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Lista de VLAN incorrecta</h1>
+        <div>
+          <p>Para que el tráfico de una VLAN se transmita a través de un enlace troncal, debe estar permitido en dicho enlace. Para hacerlo, utilice el comando <b>switchport trunk allowed vlan</b><b><i></i></b><i>id-vlan</i> . </p>
+          <p></p>
+          <p>En la figura 1, se agregaron la VLAN 20 (Estudiantes) y la PC5 a la red. La documentación se ha actualizado para mostrar que las VLAN permitidas en el enlace troncal son las 10, 20 y 99. En esta situación, la PC5 no puede conectarse al servidor de correo electrónico para estudiantes. </p>
+          <p></p>
+          <p>Verifique los puertos de enlace troncal del switch S1 con el comando <b>show interfaces trunk</b>, como se muestra en la figura 2. El comando <b>show interfaces trunk</b> es una excelente herramienta para revelar problemas frecuentes de enlace troncal. El comando revela que la interfaz F0/3 del switch S3 se configuró correctamente para permitir las VLAN 10, 20 y 99. Si se examina la interfaz F0/3 del switch S1, se descubre que las interfaces F0/1 y F0/3 permiten solo las VLAN 10 y 99. Alguien actualizó el registro pero olvidó volver a configurar los puertos del switch S1.</p>
+          <p></p>
+          <p>Vuelva a configurar los puertos F0/1 y F0/3 del switch S1 con el comando <b>switchport trunk allowed vlan 10,20,99</b>, como se muestra en la figura 3. El resultado muestra que ya se agregaron las VLAN 10, 20 y 99 a los puertos F0/1 y F0/3 del switch S1. La PC5 recuperó la conectividad al servidor de correo electrónico para estudiantes que se encuentra en la dirección IPv4 172.17.20.10.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una LAN con dos computadoras conectadas al switch 3, un servidor de correo electrónico conectado al switch 1 y un servidor Web conectado al switch 1.  Una de las computadoras en el switch 3 tiene una llamada que indica que no puede conectarse al servidor de correo electrónico.  Está en una VLAN diferente, pero tiene una dirección IP en la misma subred que el servidor de correo electrónico. La figura dos muestra el resultado del comando “show interfaces trunk” en los switches 1 y 3.  Las VLAN permitidas en F0/3 se resaltan y al switch 1 le falta VLAN 20. La figura 3 muestra la sintaxis para agregar la VLAN 20 al puerto F0/3 en el switch 1 y el resultado del comando “show interfaces trunk” en el switch 1.  También se muestra el resultado de un ping exitoso desde PC5.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura uno es un diagrama de flujo que muestra los pasos a seguir en el diagnóstico de los problemas de enlaces troncales cuando las VLAN estén en uso. La figura 2 muestra el resultado del comando “show interfaces F0/1 trunk” en el switch 1.

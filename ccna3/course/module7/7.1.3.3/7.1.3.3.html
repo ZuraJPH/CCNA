@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.3.3 Balanceo de carga de IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Balanceo de carga de IPv4</h1>
+        <div>
+          <p>El balanceo de carga de igual costo es la capacidad de un router de distribuir tráfico saliente a través de todas las interfaces que tienen la misma métrica desde la dirección de destino. El balanceo de carga usa los segmentos de red y el ancho de banda de manera más eficiente. En el caso de IP, el software IOS de Cisco aplica de manera predeterminada el balanceo de carga con hasta cuatro rutas de igual costo. </p>
+          <p></p>
+          <p>En la figura 1, se muestra la topología de la red EIGRP para IPv4.  En esta topología, el R3 tiene dos rutas EIGRP de igual costo para la red entre el R1 y el R2, 172.16.3.0/30. Una ruta es a través del R1 en 192.168.10.4/30, y la otra es a través del R2 en 192.168.10.8/30.</p>
+          <p></p>
+          <p>El comando <b>show ip protocols</b> se puede usar para verificar la cantidad de rutas de igual costo que actualmente están configuradas en el router. El resultado de la figura 2 muestra que el R3 usa la opción predeterminada de cuatro rutas de igual costo.</p>
+          <p></p>
+          <p>La tabla de routing mantiene ambas rutas. En la figura 3, se muestra que el R3 tiene dos rutas EIGRP de igual costo para la red 172.16.3.0/30. Una ruta es a través del R1 en 192.168.10.5, y la otra es a través del R2 en 192.168.10.9. Si se observa la topología de la figura 1, puede parecer que la ruta a través del R1 es la mejor ruta, porque hay un enlace de 1544 kb/s entre el R3 y el R1, mientras que el enlace al R2 es solo de 1024 kb/s. Sin embargo, EIGRP solo usa el ancho de banda más lento en la métrica compuesta, que es el enlace de 64 kb/s entre el R1 y el R2. Las dos rutas tienen el mismo enlace de 64 kb/s como el ancho de banda más lento, lo que da como resultado que ambas rutas sean iguales.</p>
+          <p></p>
+          <p>Cuando se aplica switching de procesos a un paquete, el balanceo de carga de rutas de igual costo se produce por paquete. Cuando se aplica switching rápido a los paquetes, el balanceo de carga de rutas de igual costo se produce por destino. Cisco Express Forwarding (CEF) puede realizar balanceo de carga tanto por paquete como por destino.</p>
+          <p></p>
+          <p>De manera predeterminada, el IOS de Cisco permite que el balanceo de carga use hasta cuatro rutas de igual costo. Sin embargo, esto se puede modificar. Con el comando <b>maximum-paths</b> del modo de configuración del router, pueden mantenerse hasta 32 rutas de igual costo en la tabla de routing. </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>maximum-paths</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>valor</i>
+            </span>
+          </p>
+          <p></p>
+          <p>El argumento<i> valor </i>se refiere a la cantidad de rutas que deben mantenerse para el balanceo de carga. Si el valor se establece en <b>1</b>, el balanceo de carga se deshabilita. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el resultado que genera el comando "show i. p. route" en el router tres. La figura dos muestra el resultado que genera el comando "show i. p. protocols" en el router tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

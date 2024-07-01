@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.3 PortFast y protección BPDU</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>PortFast y protección BPDU</h1>
+        <div>
+          <p>PortFast es una característica de Cisco para los entornos PVST+. Cuando un puerto de switch se configura con PortFast, ese puerto pasa del estado de bloqueo al de reenvío de inmediato, omitiendo los estados de transición de STP 802.1D usuales (los estados de escucha y aprendizaje). Puede utilizar PortFast en los puertos de acceso para permitir que estos dispositivos se conecten a la red inmediatamente, en lugar de esperar a que STP IEEE 802.1D converja en cada VLAN. Los puertos de acceso son puertos conectados a una única estación de trabajo o a un servidor.</p>
+          <p></p>
+          <p>En una configuración de PortFast válida, nunca se deben recibir BPDU, ya que esto indicaría que hay otro puente o switch conectado al puerto, lo que podría causar un bucle de árbol de expansión. Los switches Cisco admiten una característica denominada “protección BPDU”. Cuando se habilita, la protección BPDU pone el puerto en estado errdisabled (deshabilitado por error) al recibir una BPDU. Esto desactiva el puerto completamente. La característica de protección BPDU proporciona una respuesta segura a la configuración no válida, ya que se debe volver a activar la interfaz de forma manual.</p>
+          <p></p>
+          <p>La tecnología Cisco PortFast es útil para DHCP. Sin PortFast, un equipo puede enviar una solicitud de DHCP antes de que el puerto se encuentre en estado de enviar e impedirle al host la posibilidad de obtener una dirección IP utilizable y cualquier otra información. Debido a que PortFast cambia el estado al de reenvío de manera inmediata, la PC siempre obtiene una dirección IP utilizable (si se configuró el servidor DHCP correctamente y se ha producido una comunicación con el servidor de DHCP). </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> debido a que el propósito de PortFast es minimizar el tiempo que los puertos de acceso deben esperar a que converja el árbol de expansión, solo se debe utilizar en puertos de acceso. Si habilita PortFast en un puerto que se conecta a otro switch, corre el riesgo de crear un bucle de árbol de expansión.</p>
+          <p></p>
+          <p>Para configurar PortFast es un puerto de switch, introduzca el comando <b>spanning-tree portfast</b> del modo de configuración de interfaz en cada interfaz en la que se deba habilitar PortFast, como se muestra en la figura 2. El comando <b>spanning-tree portfast default</b> del modo de configuración global habilita PortFast en todas las interfaces no troncales.</p>
+          <p></p>
+          <p>Para configurar la protección BPDU en un puerto de acceso de capa 2, utilice el comando <b>spanning-tree bpduguard enable</b> del modo de configuración de interfaz. El comando <b>spanning-tree portfast bpduguard default</b> del modo de configuración global habilita la protección BPDU en todos los puertos con PortFast habilitado.</p>
+          <p></p>
+          <p>Para verificar que se hayan habilitado PortFast y la protección BPDU para un puerto de switch, utilice el comando <b>show running-config</b>, como se muestra en la figura 3.  La característica PortFast y la protección BPDU están deshabilitadas en todas las interfaces de manera predeterminada.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para configurar y verificar los switches S1 y S2 con PortFast y la protección BPDU.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches interconectados mediante enlaces troncales.  Hay tres PC conectadas al switch 2.  Los puertos a los que están conectadas las PC están configurados con PortFast y protección de BPDU porque son puertos de extremo. La figura 2 muestra los comandos para configurar un puerto de extremo para que utilice PortFast y protección de BPDU. La figura 3 muestra el resultado del comando show running guion config interface F0 barra 11. La figura 4 es una actividad interactiva que permite que el estudiante practique configurar PortFast y la protección de BPDU en una interfaz.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

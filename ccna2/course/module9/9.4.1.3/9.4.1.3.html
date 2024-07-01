@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.4.1.3 Capítulo 9: NAT para IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 9: NAT para IPv4</h1>
+        <div>
+          <p>En este capítulo, se explicó cómo se utiliza NAT para contribuir a mitigar el agotamiento del espacio de direcciones IPv4. La NAT para IPv4 permite que los administradores de red utilicen el espacio de direcciones privadas definido en RFC 1918, a la vez que proporciona conectividad a Internet, mediante una única dirección pública o una cantidad limitada de estas.</p>
+          <p></p>
+          <p>NAT conserva el espacio de direcciones públicas y reduce la sobrecarga administrativa de forma considerable al administrar las adiciones, los movimientos y las modificaciones. NAT y PAT se pueden implementar para conservar espacio de direcciones públicas sin afectar la conexión al ISP. Sin embargo, NAT presenta desventajas en términos de sus efectos negativos en el rendimiento de los dispositivos, la movilidad y la conectividad de extremo a extremo, y se debe considerar como una implementación a corto plazo para el agotamiento de direcciones, cuya solución a largo plazo es IPv6.</p>
+          <p></p>
+          <p>En este capítulo, se analizó la NAT para IPv4, incluido lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Las características, la terminología y las operaciones generales de NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los diferentes tipos de NAT, incluidas la NAT estática, la NAT dinámica y PAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las ventajas y las desventajas de NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La configuración, la verificación y el análisis de la NAT estática, la NAT dinámica y PAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La forma en la que se puede usar el reenvío a puerto asignado para acceder a un dispositivo interno desde Internet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Por qué NAT está disponible pero no es un componente integral de las redes IPv6</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La resolución de problemas de NAT mediante los comandos <b>show</b> y <b>debug</b></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra el router uno con dos redes LAN conectadas. El router 1 también está conectado al router 2 mediante un enlace serie.  El router 2 también está conectado a un ISP. Las redes conectadas al router 1 son internas y usan direcciones privadas.  Hay una referencia que indica que se trata de una red de rutas internas.  El router 2 tiene una referencia que indica que se trata de un router de frontera habilitado con NAT.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

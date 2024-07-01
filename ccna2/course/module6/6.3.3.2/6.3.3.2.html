@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.2 Configuración de router-on-a-stick: configuración del switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de router-on-a-stick: configuración del switch</h1>
+        <div>
+          <p>Para habilitar el routing entre VLAN utilizando el método router-on-a stick, comience por habilitar el enlace troncal en el puerto del switch que está conectado al router.</p>
+          <p></p>
+          <p>En la ilustración, el router R1 se conecta al switch S1 en el puerto de enlace troncal F0/5. Las VLAN 10 y 30 se agregaron al switch S1. </p>
+          <p></p>
+          <p>Debido a que el puerto del switch F0/5 está configurado como puerto de enlace troncal, no necesita asignarse a ninguna VLAN. Para configurar el puerto del switch F0/5 como un puerto de enlace troncal, ejecute el comando <span class="cmd"><b></b></span><b>switchport mode trunk </b><span class="cmd"><b></b></span>en el modo de configuración de interfaz para el puerto F0/5. </p>
+          <p></p>
+          <p>Ahora se puede configurar el router para que realice routing entre VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología de router-on-a-stick y los pasos necesarios para configurar las VLAN y un enlace troncal en un switch que tiene una sola conexión física a un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

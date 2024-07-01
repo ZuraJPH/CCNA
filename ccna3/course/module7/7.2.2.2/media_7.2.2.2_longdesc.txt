@@ -1,0 +1,1 @@
+En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. La red interna está resaltada, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra el resultado que genera el comando "show i. p. protocols" en los routers uno, dos y tres.

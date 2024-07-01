@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.1 Funcionamiento de SSH</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de SSH</h1>
+        <div>
+          <p>Shell seguro (SSH) es un protocolo que proporciona una conexión de administración segura (cifrada) a un dispositivo remoto. SSH debe reemplazar a Telnet para las conexiones de administración. Telnet es un protocolo más antiguo que usa la transmisión no segura de texto no cifrado de la autenticación de inicio de sesión (nombre de usuario y contraseña) y de los datos transmitidos entre los dispositivos que se comunican. SSH proporciona seguridad para las conexiones remotas mediante el cifrado seguro cuando se autentica un dispositivo (nombre de usuario y contraseña) y también para los datos transmitidos entre los dispositivos que se comunican. SHH se asigna al puerto TCP 22. Telnet se asigna al puerto TCP 23.  </p>
+          <p></p>
+          <p>En la figura 1, un atacante puede controlar los paquetes mediante Wireshark. Se puede dirigir un flujo de Telnet para que capture el nombre de usuario y la contraseña.</p>
+          <p></p>
+          <p>En la figura 2, el atacante puede capturar el nombre de usuario y la contraseña del administrador desde la sesión de Telnet de texto no cifrado.</p>
+          <p></p>
+          <p>En la figura 3, se muestra la vista de Wireshark de una sesión de SSH. El atacante puede hacer un seguimiento de la sesión mediante la dirección IP del dispositivo administrador.</p>
+          <p></p>
+          <p>Sin embargo, en la figura 4, el nombre de usuario y la contraseña están cifrados.</p>
+          <p></p>
+          <p>Para habilitar SSH en un switch Catalyst 2960, el switch debe usar una versión del software IOS que incluya características y capacidades criptográficas (cifradas). En la figura 5, use el comando <b>show version</b> en el switch para ver qué IOS se ejecuta actualmente en el dispositivo. Un nombre de archivo de IOS que incluye la combinación “k9” admite características y capacidades criptográficas (cifradas).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno es un archivo de captura de paquetes para una sesión de Telnet con Wireshark. La figura dos muestra los detalles de la sesión de Telnet.  Estos datos pueden leerse debido a que no están cifrados. La figura tres es un archivo de captura de paquetes de una sesión de SSH. La figura cuatro muestra los detalles de la sesión de SSH y datos están cifrados y no pueden leerse. La figura cinco muestra el resultado del comando, show version, que muestra el IOS actual que se ejecuta en el switch.  La letra K y el número 9 en el nombre indican que admite características criptográficas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

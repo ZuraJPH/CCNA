@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.5 Configuración de una ruta estática completamente especificada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una ruta estática completamente especificada</h1>
+        <div>
+          <p>
+            <b>Ruta estática completamente especificada</b>
+          </p>
+          <p>Una ruta estática completamente especificada tiene determinadas tanto la interfaz de salida como la dirección IP del siguiente salto. Este es otro tipo de ruta estática que se utiliza en versiones más antiguas de IOS, antes de CEF. Esta forma de ruta estática se utiliza cuando la interfaz de salida es una interfaz de acceso múltiple y se debe identificar explícitamente el siguiente salto. El siguiente salto debe estar conectado directamente a la interfaz de salida especificada.</p>
+          <p></p>
+          <p>Suponga que el enlace de red entre el R1 y el R2 es un enlace Ethernet y que la interfaz GigabitEthernet 0/1 del R1 está conectada a dicha red, como se muestra en la figura 1. CEF no está habilitado. Para eliminar la búsqueda recursiva, se puede implementar una ruta estática conectada directamente utilizando el siguiente comando:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>ip route 192.168.2.0 255.255.255.0 GigabitEthernet 0/1</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Sin embargo, esto puede causar resultados incongruentes o inesperados. La diferencia entre una red Ethernet de accesos múltiples y una red serial punto a punto es que esta última solo tiene un dispositivo más en esa red, el router que se encuentra en el otro extremo del enlace. Con las redes Ethernet, es posible que existan muchos dispositivos diferentes que comparten la misma red de accesos múltiples, incluyendo hosts y hasta routers múltiples. La designación de la interfaz de salida Ethernet en la ruta estática por sí sola no provee al router información suficiente para determinar qué dispositivo es el dispositivo del siguiente salto. </p>
+          <p></p>
+          <p>El R1 sabe que el paquete se debe encapsular en una trama de Ethernet y que se debe enviar desde la interfaz GigabitEthernet 0/1. Sin embargo, el R1 no conoce la dirección IPv4 del siguiente salto; por lo tanto, no puede determinar la dirección MAC de destino para la trama de Ethernet.</p>
+          <p></p>
+          <p>Según la topología y las configuraciones de otros routers, esta ruta estática puede funcionar o no. Cuando la interfaz de salida sea una red Ethernet, se recomienda utilizar una ruta estática completamente especificada, incluidas la interfaz de salida y la dirección del siguiente salto. </p>
+          <p></p>
+          <p>Como se muestra en la figura 2, al reenviar paquetes al R2, la interfaz de salida es GigabitEthernet 0/1 y la dirección IPv4 del siguiente salto es 172.16.2.2.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: si se utiliza CEF, ya no se necesita una ruta estática completamente especificada. Debe utilizarse una ruta estática con una dirección del siguiente salto.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en las figuras 3 y 4 para configurar y verificar las rutas estáticas completamente especificadas en el R2 y el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN. La figura 1 muestra la configuración de las dos LAN a las que el router 1 no está conectado, la LAN del router 2 y la LAN del router 3, además de la WAN entre el router 2 y el router 3.  Las rutas estáticas se configuraron con una ruta estática totalmente calificada.  Este tipo de ruta tiene interfaz de salida y dirección de siguiente salto. La figura 2 muestra el proceso de búsqueda para que el router 1 se comunique con la LAN en el router 3.  La figura tres es una actividad interactiva que permite que el estudiante configure una ruta estática totalmente calificada en el router dos para llegar a la LAN del router tres. La figura 4 es una actividad interactiva que permite que el estudiante configure rutas estáticas en el router 3 a las redes del otro lado del router 2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

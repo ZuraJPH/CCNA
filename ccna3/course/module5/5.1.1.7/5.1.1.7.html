@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.7 Características de los protocolos de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Características de los protocolos de routing</h1>
+        <div>
+          <p>Los protocolos de routing se pueden comparar según las siguientes características:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Velocidad de convergencia</b>: define cuán rápido comparten información de routing y alcanzan un estado de conocimiento coherente los routers de la topología de la red. Cuanto más rápida sea la convergencia, más preferible será el protocolo. Los loops de routing pueden ser el resultado de tablas de routing incongruentes que no se han actualizado debido a la lenta convergencia de una red sujeta a cambios. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Escalabilidad</b>: define cuán grande puede ser una red, según el protocolo de routing implementado. Cuanto más grande sea la red, más escalable debe ser el protocolo de routing. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Con clase o sin clase (uso de VLSM):</b> los protocolos de routing con clase no incluyen la máscara de subred y no admiten VLSM.  Los protocolos de routing sin clase incluyen la máscara de subred en las actualizaciones. Los protocolos de routing sin clase admiten VLSM y una mejor sumarización de ruta.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Uso de recursos</b>: incluye los requisitos de un protocolo de routing, como el espacio de memoria (RAM), la utilización de la CPU y el uso del ancho de banda del enlace. Una mayor cantidad de requisitos de recursos exige hardware más potente para admitir la operación del protocolo de routing además de los procesos de reenvío de paquetes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Implementación y mantenimiento</b>: describen el nivel de conocimiento necesario para que un administrador de red ponga en funcionamiento y mantenga la red según el protocolo de routing implementado. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la tabla de la ilustración, se resumen las características de cada protocolo de routing. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una tabla que compara protocolos de routing.  Por ejemplo, RIP se considera un protocolo convergente lento que se usa en redes pequeñas y es fácil de implementar.  La versión 1 de RIP no utiliza VLSM; sin embargo, la versión 2 sí lo usa.  EIGRP, OSPF e ISIS logran la convergencia rápidamente, se usan en redes grandes, utilizan VLSM y son protocolos más complejos de implementar y mantener.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

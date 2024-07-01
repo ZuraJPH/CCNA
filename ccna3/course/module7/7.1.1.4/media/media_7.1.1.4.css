@@ -1,0 +1,13 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#ID_static_8,#ID_static_10
+{
+	letter-spacing: -1px !important
+}
+#ID_static_9{
+	letter-spacing: -1.5px !important
+}

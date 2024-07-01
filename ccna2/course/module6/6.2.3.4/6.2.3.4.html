@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.4 Problemas comunes con enlaces troncales</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas comunes con enlaces troncales</h1>
+        <div>
+          <p>En general, los problemas de enlaces troncales se deben a una configuración incorrecta. Al configurar las VLAN y los enlaces troncales en una infraestructura conmutada, los errores de configuración más frecuentes son los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Incompatibilidad de VLAN nativa:</b> los puertos de enlace troncal se configuraron con VLAN nativas diferentes. Este error de configuración genera notificaciones de consola y puede causar problemas de routing entre VLAN, entre otros inconvenientes. Esto representa un riesgo de seguridad. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Incompatibilidades de modo de enlace troncal:</b> un puerto de enlace troncal está configurado en un modo que no es compatible para enlaces troncales en el puerto par correspondiente. Estos errores de configuración hacen que el vínculo de enlace troncal deje de funcionar. Asegúrese de que se configuren ambos lados del enlace troncal con el comando <b>switchport mode trunk</b>. Los demás comandos de configuración de enlace troncal superan el alcance de este curso.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>VLAN permitidas en enlaces troncales:</b> no se actualizó la lista de VLAN permitidas en un enlace troncal con los requisitos de enlace troncal de VLAN actuales. En este caso, se envía tráfico inesperado o ningún tráfico al enlace troncal.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si se detecta un problema con un enlace troncal y se desconoce la causa, comience la resolución de problemas con un examen de los enlaces troncales para determinar si hay una incompatibilidad de VLAN nativa. Si esa no es la causa, verifique si hay una incompatibilidad de modo de enlace troncal y, por último, revise la lista de VLAN permitidas en el enlace troncal. En las dos páginas siguientes, se analiza cómo solucionar problemas frecuentes de los enlaces troncales. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la tabla que enumera los problemas comunes con los enlaces troncales, sus resultados y un ejemplo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

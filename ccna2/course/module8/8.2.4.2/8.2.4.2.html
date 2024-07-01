@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.2 Verificación de la configuración de DHCPv6 del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de DHCPv6 del router</h1>
+        <div>
+          <p>Las configuraciones del router para los servicios DHCPv6 con estado y sin estado tienen muchas similitudes, pero también incluyen diferencias significativas. En la figura 1, se muestran los comandos de configuración para los dos tipos de servicios DHCPv6.</p>
+          <p></p>
+          <p>
+            <b>Mediante DHCPv6 con estado </b>
+          </p>
+          <p></p>
+          <p>Los routers configurados para servicios DHCPv6 con estado tienen el comando <b>address prefix</b> para proporcionar información de direccionamiento.</p>
+          <p>Para servicios DHCPv6 con estado, se utiliza el comando del modo de configuración de interfaz <b>ipv6 nd managed-config-flag</b>. En este caso, el cliente omite la información de direccionamiento en el mensaje RA y se comunica con un servidor de DHCPv6 para obtener información de direccionamiento y otra información.</p>
+          <p></p>
+          <p>
+            <b>DHCPv6 sin estado</b>
+          </p>
+          <p></p>
+          <p>Para servicios DHCPv6 sin estado, se utiliza el comando del modo de configuración de interfaz <b>ipv6 nd other-config-flag</b>. Esto le informa al dispositivo que utilice SLAAC para la información de direccionamiento y un servidor de DHCPv6 sin estado para otros parámetros de configuración.</p>
+          <p></p>
+          <p>El comando <b>show ipv6 interface</b> puede utilizarse para ver la configuración actual para determinar el método de asignación. Como se muestra en la figura 2, la última línea del resultado indica la forma en que los clientes obtienen direcciones y otros parámetros.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno enumera los comandos utilizados para configurar los servicios DHCPv6 con estado en un router.  El ejemplo comienza en el modo de configuración global y los comandos son los siguientes.  El primer comando es ipv6 unicast guion routing.  El siguiente comando es dhcp pool ipv6  guión stateful.  El siguiente comando es address prefix 2 0 0 1 dos puntos d b 8 dos puntos c a f e dos puntos 1 dos puntos dos puntos barra 64 lifetime infinite.  El siguiente comando es dns guion server 2 0 0 1 dos puntos d b 8 dos puntos c a f e dos puntos a a a a dos puntos dos puntos 5.  El siguiente comando es domain guion ejemplo punto com.  El conjunto DHCPv6 se ha configurado y el siguiente conjunto de comandos vincula el conjunto a la interfaz.  La CLI del ejemplo pasa a la interfaz local primero con el comando exit. Al comando exit lo sigue el comando interface g cero barra uno.  El siguiente comando es ipv6 address 2 0 0 1 dos puntos d b 8 dos puntos c a f e dos puntos 1 dos puntos dos puntos 1 barra 64.  El siguiente comando es dhcp pool ipv6.  guion stateful.  El último comando es ipv6 nd managed guion config guion flag.  Se destaca el comando address prefix y el comando administrado ipv6 nd para indicar que estos comandos son específicos de la configuración con estado.  La figura también enumera los comandos para configurar los servicios DHCPv6 sin estado.  El ejemplo comienza en el modo de configuración global y los comandos son los siguientes.  El primer comando es ipv6 unicast guion routing.  El siguiente comando es dhcp pool ipv6 guion stateless.  El siguiente comando es dns guion server 2 0 0 1 dos puntos d b 8 dos puntos c a f e dos puntos a a a a dos puntos dos puntos 5.  El siguiente comando es domain guion ejemplo punto com.  El conjunto DHCPv6 se ha configurado y el siguiente conjunto de comandos vincula el conjunto a la interfaz.  La CLI del ejemplo pasa a la interfaz local primero con el comando exit. Al comando exit lo sigue el comando interface g cero barra uno.  El siguiente comando es ipv6 address 2 0 0 1 dos puntos d b 8 dos puntos c a f e dos puntos 1 dos puntos dos puntos 1 barra 64.  El siguiente comando es dhcp pool ipv6 guion stateless.  El último comando es ipv6 nd other guion config guion flag.  El comando ipv6 nd other guión config guión flag se resalta en la figura para indicar que es específico de la configuración DHCPv6 sin estado. La figura dos muestra el resultado de tres configuraciones diferentes cuando se ejecuta el comando show ipv6 interface en una interfaz específica del router.  El primer resultado es para SLAAC, y la figura resalta la línea que indica que “hosts use stateless autoconfig for address” (los hosts utilizan asegura la configuración automática sin estado para la dirección).  El siguiente resultado es para DHCPv6 sin estado., y la figura resalta la línea que indica que “hosts use DHCP to obtain other configuration” (los hosts utilizan DHCP para obtener otra configuración).  El tercer resultado es para DHCPv6 con estado, y la figura resalta la línea que indica que “hosts use DHCP to obtain routable addresses” (los hosts utilizan DHCP para obtener direcciones enrutables).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

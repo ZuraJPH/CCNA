@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.1 Propagación de una ruta estática predeterminada en OSPFv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propagación de una ruta estática predeterminada en OSPFv2</h1>
+        <div>
+          <p>
+            <b>Propagación de una ruta estática predeterminada</b>
+          </p>
+          <p></p>
+          <p>Con OSPF, el router conectado a Internet se utiliza para propagar una ruta predeterminada a otros routers en el dominio de routing OSPF. Este router a veces se denomina router perimetral, de gateway o de entrada. Sin embargo, en la terminología de OSPF, el router ubicado entre un dominio de routing OSPF y una red que no es OSPF también se denomina “router de frontera de sistema autónomo” (ASBR). </p>
+          <p></p>
+          <p>En la figura 1, el R2 tiene conexión simple a un proveedor de servicios (ISP). Por lo tanto, todo lo que se requiere para que el R2 llegue a Internet es una ruta estática predeterminada al proveedor de servicios.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: En este ejemplo, para simular la conexión al proveedor de servicios, se usa una interfaz de loopback con la dirección IPv4 209.165.200.225. </p>
+          <p></p>
+          <p>Para propagar una ruta predeterminada, el router perimetral (R2) debe configurarse con lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Una ruta estática predeterminada mediante el comando <b>ip route 0.0.0.0 0.0.0.0 </b>{<i>dirección-ip</i><b> | </b><i>exit-intf</i>}.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El comando<b> default-information originate </b>del modo de configuración del router. Esto ordena al R2 que sea el origen de la información de la ruta predeterminada y que propague la ruta estática predeterminada en las actualizaciones OSPF.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra cómo configurar una ruta estática predeterminada IPv4 al proveedor de servicios y hacer que se propague en OSPFv2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. Se resalta la red interna, excepto el enlace entre el router dos y el ISP. En la figura dos, se muestra la sintaxis para configurar una ruta estática predeterminada y propagar esa ruta estática con el proceso de routing OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

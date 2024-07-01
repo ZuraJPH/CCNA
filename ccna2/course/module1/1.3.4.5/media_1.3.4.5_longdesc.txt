@@ -1,0 +1,1 @@
+La figura muestra una red de dos routers conectados a la nube de Internet a través de un enlace WAN, y cada uno tiene dos redes activas en los puertos gigabit Ethernet.  El resultado se muestra desde el comando show ipv6 route que se ejecuta en uno de los routers.  La lista incluye tres rutas locales, tres direcciones IP de interfaz y dos rutas aprendidas de EIGRP.

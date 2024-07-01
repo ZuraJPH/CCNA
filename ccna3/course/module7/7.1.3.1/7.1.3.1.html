@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.3.1 Utilización del ancho de banda de EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Utilización del ancho de banda de EIGRP</h1>
+        <div>
+          <p>
+            <b>Ancho de banda de EIGRP para IPv4</b>
+          </p>
+          <p></p>
+          <p>De manera predeterminada, EIGRP usa solo hasta el 50% del ancho de banda de una interfaz para la información de EIGRP. Esto impide que el proceso EIGRP utilice en exceso los enlaces y que no permita suficiente ancho de banda para el routing de tráfico normal. </p>
+          <p></p>
+          <p>Use el comando <b>ip bandwidth-percent eigrp</b> para configurar el porcentaje del ancho de banda que EIGRP puede utilizar en una interfaz. </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip bandwidth-percent eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as porcentaje</i>
+            </span>
+          </p>
+          <p></p>
+          <p>En la figura 1, el R1 y el R2 comparten un enlace muy lento de 64 kb/s. La configuración para limitar el ancho de banda que utiliza EIGRP se muestra en la figura 2. El comando <b>ip bandwidth-percent eigrp</b> usa el ancho de banda configurado (o el ancho de banda predeterminado) para calcular el porcentaje que EIGRP puede usar. En este ejemplo, EIGRP se limita a no más del 50% del ancho de banda del enlace. Por eso, EIGRP nunca usa más de 32 kb/s del ancho de banda del enlace para el tráfico de paquetes EIGRP.</p>
+          <p></p>
+          <p>Para restaurar el valor predeterminado, utilice la versión<b> no </b>de este comando.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para limitar el ancho de banda que EIGRP usa entre el R2 y el R3 al 75% del ancho de banda del enlace.</p>
+          <p></p>
+          <p>
+            <b>Ancho de banda de EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>Para configurar el porcentaje del ancho de banda que puede utilizar EIGRP para IPv6 en una interfaz, utilice el comando<b> ipv6 bandwidth-percent eigrp </b>en el modo de configuración de interfaz. Para restaurar el valor predeterminado, utilice la versión<b> no </b>de este comando.</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 bandwidth-percent eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as porcentaje</i>
+            </span>
+          </p>
+          <p></p>
+          <p>En la figura 4, se muestra la configuración de las interfaces entre el R1 y el R2 para limitar el ancho de banda que utiliza EIGRP para IPv6. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la topología de laboratorio estándar.  El enlace entre el router uno y el router dos se muestra como sesenta y cuatro kbps; el enlace entre el router uno y el router tres se muestra como mil quinientos cuarenta y cuatro kbps; y el enlace entre el router dos y el router tres se muestra como mil veinticuatro cuatro kbps. En la figura dos, se muestra la sintaxis para configurar el ancho de banda máximo que EIGRP usará en una interfaz del router uno y router dos. En la figura tres, se muestra una actividad interactiva que permite que el estudiante practique configurar el ancho de banda máximo que EIGRP usará en una interfaz. En la figura dos, se muestra la sintaxis para configurar el ancho de banda máximo que EIGRP usará en una interfaz del router uno y router dos mediante IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.3 Configuración del resumen automático de EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración del resumen automático de EIGRP </h1>
+        <div>
+          <p>A partir de Cisco IOS versión 15.0(1)M y versión 12.2(33), el resumen automático de EIGRP para IPv4 se encuentra deshabilitado de manera predeterminada. Antes, el resumen automático se encontraba habilitado de manera predeterminada. Es decir que EIGRP realizaba el ⁪resumen automático cada vez que la topología EIGRP cruzaba un límite entre dos redes principales con clase diferentes.</p>
+          <p></p>
+          <p>En la figura 1, el resultado del comando <b>show ip protocols</b> en el R1 indica que el ⁪resumen automático de EIGRP está deshabilitado. Este router ejecuta IOS 15.2; por ende, el ⁪resumen automático de EIGRP está deshabilitado de manera predeterminada. En la figura 2, se muestra la tabla de routing actual del R3. Observe que la tabla de routing IPv4 del R3 contiene todas las redes y subredes dentro del dominio de routing EIGRP.</p>
+          <p></p>
+          <p>Para habilitar el ⁪resumen automático de EIGRP, use el comando <b>auto-summary</b> en el modo de configuración del router, como se muestra en la figura 3:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>router eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>auto-summary</b>
+            </span>
+          </p>
+          <p></p>
+          <p>La forma <b>no</b> de este comando se usa para deshabilitar la el ⁪resumen automático.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para habilitar el ⁪resumen automático en el R3. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el resultado que genera el comando "show i. p. protocols" en el router uno.  El ⁪resumen automático deshabilitado aparece resaltado. En la figura dos, se muestra el resultado generado por el comando "show i. p. route e. i. g. r. p.".  Aparecen las tres subredes, ya que el resumen automático está deshabilitado. En la figura tres, se muestra el resultado generado por el comando "router e. i. g. r. p. one" seguido por el comando "auto guion summary" en los routers uno y dos.  La figura cuatro es una actividad interactiva que permite que el estudiante practique visualizar la tabla de routing EIGRP y habilitar el resumen automático.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

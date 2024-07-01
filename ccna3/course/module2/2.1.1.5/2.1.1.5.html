@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.5 Configuración predeterminada del protocolo VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración predeterminada del protocolo VTP</h1>
+        <div>
+          <p>El comando EXEC privilegiado <b>show vtp status</b> muestra el estado del protocolo VTP. La ejecución del comando en un switch de la serie Cisco 2960 Plus genera la salida que se muestra en la figura.</p>
+          <p></p>
+          <p>A continuación, se describe brevemente la salida del comando para los parámetros <b>show vtp status</b>.</p>
+          <p></p>
+          <p>Versión de VTP que se puede ejecutar y que se está ejecutando</p>
+          <p>
+            <ul>
+              <li>Muestra la versión del VTP que el switch es capaz de ejecutar y la versión que está ejecutando.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De forma predeterminada, los switches implementan la versión 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La mayoría de los switches admiten la versión 2 mientras que los switches más nuevos también admiten la versión 3.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Nombre de dominio del VTP</p>
+          <p>
+            <ul>
+              <li>Nombre que identifica el dominio administrativo para el switch.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De manera predeterminada, el nombre de dominio del VTP es NULL. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Modo de depuración del VTP</p>
+          <p>
+            <ul>
+              <li>Muestra si la depuración está activada o desactivada.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De manera predeterminada, la depuración VTP está deshabilitada.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Generación de traps del VTP</p>
+          <p>
+            <ul>
+              <li>Muestra si las traps del VTP se envían hacia la estación de administración de red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De manera predeterminada, las traps del VTP están deshabilitadas.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Identificador del dispositivo</p>
+          <p>
+            <ul>
+              <li>La dirección MAC del switch.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Última modificación de la configuración</p>
+          <p>
+            <ul>
+              <li>Fecha y hora de la modificación de configuración más reciente.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Muestra la dirección IP del switch que generó el cambio de configuración a la base de datos.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Modo operativo del VTP</p>
+          <p>
+            <ul>
+              <li>Puede ser servidor, cliente o transparente.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De manera predeterminada, un switch está en modo servidor VTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cantidad máxima de VLAN admitidas localmente</p>
+          <p>
+            <ul>
+              <li>La cantidad de VLAN admitidas varía según las plataformas de switches.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cantidad de VLAN existentes</p>
+          <p>
+            <ul>
+              <li>Incluye la cantidad de VLAN predeterminadas y configuradas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La cantidad predeterminada de VLAN existentes varía según las plataformas de switches</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Revisión de la configuración</p>
+          <p>
+            <ul>
+              <li>Número de revisión de la configuración actual de este switch.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El número de revisión es un número de 32 bits que indica el nivel de revisión para un paquete de VTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El número de configuración predeterminado para un switch es cero.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cada vez que se agrega o elimina una VLAN, se aumenta el número de revisión de la configuración.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cada dispositivo de VTP rastrea el número de revisión de configuración del VTP que se le asigna.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>MD5 Digest</p>
+          <p>
+            <ul>
+              <li>Checksum de 16 bytes de la configuración del VTP.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura 1, se muestra la salida del comando show vtp status. En la figura 2, se describen los parámetros del comando show vtp status.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

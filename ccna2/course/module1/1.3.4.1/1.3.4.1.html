@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.4.1 Routing dinámico </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routing dinámico </h1>
+        <div>
+          <p>Los routers usan protocolos de routing dinámico para compartir información sobre el estado y la posibilidad de conexión de redes remotas. Los protocolos de routing dinámico realizan diversas actividades, como la detección de redes y el mantenimiento de las tablas de routing.</p>
+          <p></p>
+          <p>El descubrimiento de redes es la capacidad de un protocolo de routing de compartir información sobre las redes que conoce con otros routers que también están usando el mismo protocolo de routing. En lugar de depender de las rutas estáticas configuradas manualmente hacia redes remotas en cada router, los protocolos de routing dinámico permiten que los routers descubran estas redes de forma automática a través de otros routers. Estas redes y la mejor ruta hacia cada una se agregan a la tabla de routing del router y se identifican como redes descubiertas por un protocolo de routing dinámico específico.</p>
+          <p></p>
+          <p>Durante la detección de redes, los routers intercambian rutas y actualizan sus tablas de routing. Los routers convergen una vez que finalizan el intercambio y actualizan sus tablas de routing. Luego, los routers conservan las redes en sus tablas de routing. </p>
+          <p></p>
+          <p>En la ilustración, se proporciona una situación simple sobre cómo dos routers vecinos intercambiarían inicialmente la información de routing. En este intercambio simplificado, el R1 se presenta y detalla las redes que puede alcanzar. El R2 responde con su lista de redes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers conectados a través de un enlace WAN y ambos están ejecutando el protocolo de routing dinámico EIGRP.  Cada router tiene tres redes conectadas y publica esas redes al otro router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

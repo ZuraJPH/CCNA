@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.3.1 Configuración de un router como cliente DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de un router como cliente DHCPv4</h1>
+        <div>
+          <p>En ocasiones, los routers Cisco en oficinas pequeñas y oficinas domésticas (SOHO) y en los sitios de sucursales deben configurarse como clientes DHCPv4 de manera similar a los equipos cliente. El método específico utilizado depende del ISP. Sin embargo, en su configuración más simple, se utiliza la interfaz Ethernet para conectarse a un cable módem o a un módem DSL. Para configurar una interfaz Ethernet como cliente DHCP, utilice el comando del modo de configuración de interfaz <b>ip address dhcp</b>.</p>
+          <p></p>
+          <p>En la figura 1, suponga que un ISP se configuró para proporcionar direcciones IP del rango de red 209.165.201.0/27 a clientes selectos. Después de que se configura la interfaz G0/1 con el comando <b>ip address dhcp</b>, el comando <b>show ip interface g0/1</b> confirma que la interfaz está activada y que la dirección fue asignada por un servidor de DHCPv4. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para configurar la interfaz que está conectada al ISP, a fin de adquirir una dirección del servidor de DHCP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el comando utilizado para configurar un router para obtener una dirección IP a través de DHCP.  El comando se ejecuta desde el modo de configuración de interfaz y el ejemplo comienza en el modo de configuración global.  El primer comando que se muestra es interface g cero barra uno.  El siguiente comando es ip address dhcp.  En la ilustración se muestra el resultado del comando show ip interface g cero barra uno. Este comando muestra una dirección IP y una línea que indica que la dirección está determinada por DHCP La figura dos es una actividad interactiva que permite que el estudiante configure un router como cliente DHCP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

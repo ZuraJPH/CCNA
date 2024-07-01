@@ -1,0 +1,9 @@
+<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+	<element type="IMAGE" src="media_3.3.2.1.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" compId="ID_txt02" x="284" y="206" width="118" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_txt03" x="47" y="284" width="94" expand="down" align="center" />
+<element type="TEXT" compId="ID_txt04" x="434" y="294" width="132" expand="down" align="center" />
+<element type="TEXT" compId="ID_txt05" x="205" y="284" width="87" expand="down" align="center" />
+<element type="TEXT" subType="TITLE" compId="ID_title"/>
+</slide>

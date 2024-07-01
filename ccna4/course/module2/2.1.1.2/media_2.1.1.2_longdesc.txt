@@ -1,0 +1,1 @@
+La figura muestra dos edificios que representan dos ciudades.  La primera es Nueva York y la segunda es Londres.  Esto representa dos oficinas de una empresa que están separadas por una distancia grande.  Cada edificio tiene un router que se conecta una CSU o DSU, que luego se conecta a la WAN de un proveedor de servicios. Esto permite una conexión entre las dos oficinas.  

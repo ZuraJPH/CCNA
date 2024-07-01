@@ -1,0 +1,60 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Las WAN operan en las capas 1 y 2</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Modelo OSI</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Aplicación]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Presentación]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Sesión]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Transporte]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Red]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[Enlace de datos]]></text>
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[Física]]></text>
+	</component>
+	<component id="ID_txt09">
+		<text><![CDATA[<b>Servicios WAN</b>]]></text>
+	</component>
+	<component id="ID_txt10">
+		<text><![CDATA[HDLC, PPP, Frame Relay, WAN Ethernet, MPLS, VSAT, banda ancha]]></text>
+	</component>
+	<component id="ID_txt11">
+		<text><![CDATA[Conexiones eléctricas, mecánicas y operativas]]></text>
+	</component>
+	
+	<component id="ID_s1_layer07">
+		<text><![CDATA[<font size="22" class="font22">7</font>]]></text>
+	</component>
+		<component id="ID_s1_layer06">
+		<text><![CDATA[<font size="22" class="font22">6</font>]]></text>
+	</component>
+		<component id="ID_s1_layer05">
+		<text><![CDATA[<font size="22" class="font22">5</font>]]></text>
+	</component>
+		<component id="ID_s1_layer04">
+		<text><![CDATA[<font size="22" class="font22">4</font>]]></text>
+	</component>
+		<component id="ID_s1_layer03">
+		<text><![CDATA[<font size="22" class="font22">3</font>]]></text>
+	</component>
+		<component id="ID_s1_layer02">
+		<text><![CDATA[<font size="22" class="font22">2</font>]]></text>
+	</component>
+		<component id="ID_s1_layer01">
+		<text><![CDATA[<font size="22" class="font22">1</font>]]></text>
+	</component>
+</textcomponents>

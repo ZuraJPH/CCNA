@@ -1,0 +1,1 @@
+La figura enumera las siguientes medidas comunes utilizadas por los protocolos de routing: ancho de banda, costo de demora y saltos.

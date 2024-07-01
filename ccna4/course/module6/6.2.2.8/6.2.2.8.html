@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.8 Prevención de congestión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Prevención de congestión</h1>
+        <div>
+          <p>La administración de congestión incluye los métodos de espera y de programación, donde el tráfico excesivo se almacena en búfer o se pone en cola (y a veces se descarta) mientras espera ser enviado en una interfaz de egreso. Las herramientas para evitar la congestión son más simples. Las cargas de tráfico de la red, en un esfuerzo por anticipar y evitar la congestión en los cuellos de botella de la red común y de internetwork antes de que la congestión se convierta en un problema. Estas herramientas pueden supervisar la profundidad promedio de la cola, como se detalla en la figura. Cuando la cola está por debajo del umbral mínimo, no hay descartes. A medida que la cola alcanza el umbral máximo, se descarta un pequeño porcentaje de paquetes. Cuando se supera el umbral máximo, se descartan todos los paquetes.</p>
+          <p></p>
+          <p>Algunas técnicas de prevención de congestionamiento proporcionan un trato preferencial para determinar qué paquetes se descartan. Por ejemplo, QoS de IOS de Cisco incluye detección temprana aleatoria ponderada (WRED) como posible solución de prevención de congestión. El algoritmo WRED permite evitar la congestión en las interfaces de red al brindar administración del búfer y permitir que el tráfico TCP disminuya antes de que se agoten los buffers. El uso de WRED ayuda a evitar las eliminaciones de cola y maximiza el uso de la red y el rendimiento de las aplicaciones basadas en TCP. No se evita la congestión para el tráfico basado en el protocolo de datagrama de usuario (UDP), como el tráfico de voz. En el caso del tráfico basado en UDP, los métodos como la puesta en cola y las técnicas de compresión ayudan a reducir, e incluso a prevenir, la pérdida de paquetes UDP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra algunos mecanismos para evitar la congestión. La figura muestra tres cuadros apilados. El cuadro superior es de “descartes completos”, el cuadro medio es de “% de descarte” y el cuadro inferior es de “sin descartes”. El cuadro explicativo que apunta a la parte superior del cuadro superior dice “cola completa”; el cuadro explicativo que apunta a la parte inferior del cuadro superior dice “umbral máximo”. El cuadro explicativo que apunta a la parte superior del cuadro inferior dice “umbral mínimo”; el cuadro explicativo que apunta a la parte inferior del cuadro inferior dice “cola vacía”.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.5.2 Direcciones IPv6 locales únicas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.5.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Direcciones IPv6 locales únicas</h1>
+        <div>
+          <p>Las direcciones IPv6 locales únicas (ULA) se asemejan a las direcciones privadas en IPv4 definidas en RFC 1918, pero también existen diferencias considerables. El objetivo de las ULA es proporcionar espacio de direcciones IPv6 para las comunicaciones dentro de un sitio local, no tienen el propósito de proporcionar espacio adicional de direcciones IPv6 ni un nivel de seguridad.</p>
+          <p></p>
+          <p>Como se muestra en la ilustración, las ULA tienen el prefijo FC00::/7, lo que produce un rango de primer hexteto que va desde FC00 hasta FDFF. El bit siguiente se establece en 1 si el prefijo se asigna localmente. Es posible que en el futuro se pueda establecer en 0. Los 40 bits siguientes corresponden a una ID global seguida de una ID de subred de 16 bits. Estos primeros 64 bits se combinan para crear el prefijo de la ULA. Esto permite que los 64 bits restantes se utilicen para la ID de interfaz o, en términos de IPv4, la porción de host de la dirección.</p>
+          <p></p>
+          <p>Las direcciones locales únicas se definen en RFC 4193. Las ULA también se conocen como “direcciones IPv6 locales” (no se deben confundir con las direcciones IPv6 link-local) y tienen varias características, incluidas las siguientes: </p>
+          <p>
+            <ul>
+              <li>Permiten que los sitios se combinen o se interconecten de manera privada, sin generar conflictos entre direcciones y sin necesidad de volver a numerar las interfaces que usan estos prefijos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Son independientes de cualquier ISP y se pueden usar para las comunicaciones dentro de un sitio sin tener conectividad a Internet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>No se pueden enrutar a través de Internet; sin embargo, si se filtran por routing o DNS, no existe conflicto con otras direcciones.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Las ULA no son tan sencillas como las direcciones definidas en RFC 1918. A diferencia de las direcciones IPv4 privadas, el IETF no tenía la intención de utilizar una forma de NAT para traducir entre las direcciones locales únicas y las direcciones IPv6 de unidifusión global. </p>
+          <p></p>
+          <p>La comunidad de Internet continúa analizando la implementación y los posibles usos de las direcciones IPv6 locales únicas. Por ejemplo: el IETF está considerando la posibilidad de permitir la opción de asignar los ID globales de 40 bits centralmente cuando se utilice el prefijo FC00::/8 de ULA, y de generar los ID globales de 40 bits aleatoriamente, o quizás asignarlos manualmente, cuando se utilice el prefijo FD00::/8 de ULA. El resto de la dirección sigue siendo igual. Todavía usamos 16 bits para el ID de subred y 64 bits para el ID de la interfaz.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la especificación original de IPv6 asignaba el espacio de direcciones para las direcciones locales de sitio, definidas en RFC 3513. El IETF dejó en desuso las direcciones locales de sitio en RFC 3879 porque el término “sitio” resultaba algo ambiguo. Las direcciones locales de sitio tenían el rango de prefijos FEC0::/10 y todavía pueden encontrarse en documentos antiguos de IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra cómo se conforma una dirección local única IPv6.  Los campos que se muestran de la dirección son los siguientes: el prefijo, el ID global, el ID de subred y el ID de la interface.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

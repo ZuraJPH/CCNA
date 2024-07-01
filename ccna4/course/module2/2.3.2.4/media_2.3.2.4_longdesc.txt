@@ -1,0 +1,1 @@
+La figura muestra los comandos de autenticación de PPP y las opciones de autenticación, PAP, CHAP, o ambas.

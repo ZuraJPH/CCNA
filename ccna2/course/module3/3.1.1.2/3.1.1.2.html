@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.2 Componentes del protocolo de routing dinámico</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Componentes del protocolo de routing dinámico</h1>
+        <div>
+          <p>Los protocolos de routing se usan para facilitar el intercambio de información de routing entre los routers. Un protocolo de routing es un conjunto de procesos, algoritmos y mensajes que se usan para intercambiar información de routing y completar la tabla de routing con la elección de los mejores caminos que realiza el protocolo. El propósito de los protocolos de routing dinámico incluye lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Descubrir redes remotas</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mantener la información de routing actualizada</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Escoger el mejor camino hacia las redes de destino</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Poder encontrar un mejor camino nuevo si la ruta actual deja de estar disponible</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los componentes principales de los protocolos de routing dinámico incluyen los siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Estructuras de datos:</b> por lo general, los protocolos de routing utilizan tablas o bases de datos para sus operaciones. Esta información se guarda en la RAM.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mensajes del protocolo de routing:</b> los protocolos de routing usan varios tipos de mensajes para descubrir routers vecinos, intercambiar información de routing y realizar otras tareas para descubrir la red y conservar información precisa acerca de ella. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Algoritmo:</b> un algoritmo es una lista finita de pasos que se usan para llevar a cabo una tarea. Los protocolos de routing usan algoritmos para facilitar información de routing y para determinar el mejor camino.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>Estos protocolos permiten a los routers compartir información en forma dinámica sobre redes remotas y ofrecer esta información automáticamente en sus propias tablas de routing. En la figura haga clic en Reproducir para ver una animación sobre este proceso.</p>
+          <p></p>
+          <p>Los protocolos de routing determinan la mejor ruta hacia cada red y, a continuación, esa ruta se ofrece a la tabla de routing. La ruta se instalará en la tabla de routing si no hay otro origen de routing con una distancia administrativa menor. Por ejemplo, una ruta estática con una distancia administrativa de 1 tendrá prioridad sobre la misma red descubierta por un protocolo de routing dinámico. Uno de los beneficios principales de los protocolos de routing dinámico es que los routers intercambian información de routing cuando se produce un cambio en la topología. Este intercambio permite a los routers obtener automáticamente información sobre nuevas redes y también encontrar rutas alternativas cuando se produce una falla de enlace en la red actual.  </p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación que tiene tres routers conectados en un diseño triangular. Cada router está conectado a los otros dos routers.  La animación muestra cómo cada uno de los tres routers envía un paquete de actualización a los otros dos routers</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

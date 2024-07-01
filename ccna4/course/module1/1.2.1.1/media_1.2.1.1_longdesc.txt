@@ -1,0 +1,1 @@
+La figura 1 es un gráfico que muestra cómo la red empresarial puede tener acceso WAN. La figura 2 muestra un ISP y sus conexiones a varios suscriptores mediante diferentes tecnologías de acceso WAN.

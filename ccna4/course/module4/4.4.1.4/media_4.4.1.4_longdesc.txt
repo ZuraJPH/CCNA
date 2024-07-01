@@ -1,0 +1,1 @@
+La figura muestra un diagrama de flujo de la prueba que los routers hacen a los paquetes con una ACL extendida.

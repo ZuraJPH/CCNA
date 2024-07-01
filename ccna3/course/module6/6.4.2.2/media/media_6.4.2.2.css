@@ -1,0 +1,20 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+
+.spanBackgroundColor{background-color:#F2AA79}
+
+#ID_SC4 li{
+	line-height:13px;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+#ID_static_1, #ID_static_4, #ID_static_5, #ID_static_6, #ID_static_12{
+	letter-spacing:-1.1px !important;
+	}
+}

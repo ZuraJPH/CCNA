@@ -1,0 +1,1 @@
+La figura 1 muestra la comparación entre el muestreo de voz y el muestreo de video. La figura 2 muestra las características del tráfico de video y los requisitos de transmisión unidireccional.

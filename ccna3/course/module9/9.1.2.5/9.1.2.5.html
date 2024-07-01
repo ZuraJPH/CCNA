@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.5 LSA de OSPF de tipo 4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA de OSPF de tipo 4</h1>
+        <div>
+          <p>Las LSA de tipo 4 y tipo 5 se utilizan en conjunto para identificar un ASBR y anunciar redes externas que llegan a un dominio de routing de OSPF. </p>
+          <p></p>
+          <p>El ABR genera una LSA de resumen de tipo 4 solo cuando existe un ASBR en el área. Una LSA de tipo 4 identifica el ASBR y le asigna una ruta. Todo tráfico destinado a una red externa requiere conocimiento de la tabla de routing del ASBR que originó las rutas externas.</p>
+          <p></p>
+          <p>Como se muestra en la ilustración, el ASBR envía una LSA de tipo 1 para identificarse como ASBR. La LSA incluye un bit especial llamado "bit externo" (e bit) que se utiliza para identificar el router como un ASBR. Cuando el ABR1 recibe la LSA de tipo 1, reconoce el e bit, genera una LSA de tipo 4 y la propaga a la red troncal (área 0). Los ABR posteriores propagan la LSA de tipo 4 hacia otras áreas.</p>
+          <p></p>
+          <p>La ID de estado de enlace se establece en la ID del router ASBR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los mensajes de LSA de tipo cuatro generados por los ABR. Estos mensajes anuncian el ASBR a otras áreas y se propagan a través de todas las áreas conectadas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

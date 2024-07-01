@@ -1,0 +1,1 @@
+En la figura se muestran cuatro PC conectadas a una LAN que, a su vez, se conecta a dos routers físicos y a uno virtual.  El enlace al router de la izquierda se desconecta y el router virtual redirige el tráfico al router de la derecha.

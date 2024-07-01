@@ -1,0 +1,1 @@
+En esta animación se muestran dos computadoras conectadas a un router NAT. Las computadoras necesitan acceso a Internet.  Cuando ambas computadoras utilizan el mismo número de puerto en su interior, el router NAT seguirá asignando otro número de puerto externo.

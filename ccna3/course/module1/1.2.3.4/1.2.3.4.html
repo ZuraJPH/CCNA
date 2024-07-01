@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.3.4 Comandos show básicos del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos show básicos del router</h1>
+        <div>
+          <p>A continuación, se muestran algunos de los comandos de IOS más utilizados para visualizar y verificar el estado operativo del router y la funcionalidad de la red IPv4 relacionada con este estado. Hay comandos similares disponibles para IPv6 para los que debe reemplazarse <b>ip</b> con<b> ipv6</b>. Estos comandos se clasifican en varias categorías. </p>
+          <p></p>
+          <p>En relación con el enrutamiento:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols</b><b></b>: muestra información sobre los protocolos de routing configurados. Si el protocolo RIP está configurado, en la información se incluye la versión del protocolo RIP, las redes que anuncia el router, si el ⁪resumen automático está activado, los vecinos de los que el router recibe actualizaciones y la distancia administrativa predeterminada, que para RIP es 120. (figura 1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route</b><b></b>: muestra la información de la tabla de routing, que incluye los códigos de routing, las redes conocidas, la distancia administrativa y las métricas, la forma en que se descubrieron las rutas, el siguiente salto, las rutas estáticas y las rutas predeterminadas. (figura 2)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En relación con la interfaz:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show interfaces</b>: muestra las interfaces con estado (del protocolo) de línea, ancho de banda, retraso, confiabilidad, encapsulación, dúplex y estadísticas de E/S. Si no se señala una interfaz específica, se mostrarán todas las interfaces. Si se especifica una interfaz después del comando, solo se mostrará la información sobre esa interfaz (figura 3) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interfaces</b>
+<b></b>: muestra información de la interfaz, que incluye el estado del protocolo, la dirección IPv4, si hay una dirección de ayuda configurada y si hay una ACL habilitada en la interfaz. Si no se señala una interfaz específica, se mostrarán todas las interfaces. Si se especifica una interfaz después del comando, solo se mostrará la información sobre esa interfaz (figura 4)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interface brief</b><b></b>: muestra todas las interfaces con información de direccionamiento IPv4 y los estados de interfaz y de protocolo de línea. (figura 5)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show protocols</b>: muestra información acerca del protocolo de routing que está habilitado y el estado del protocolo de las interfaces. (figura 6)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Otros comandos relacionados con la conectividad incluyen el comando <b>show cdp neighbors</b> (figura 7). Este comando muestra información acerca de los dispositivos conectados Cisco directamente, que incluye la ID del dispositivo, la interfaz local a la que está conectado el dispositivo, la capacidad (R = router, S = switch), la plataforma y la ID del puerto del dispositivo remoto. La opción de <b>detalles</b> incluye información de direccionamiento IP y la versión del IOS.<b></b></p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en la figura 8 para verificar la configuración del router con estos comandos <b>show</b>. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el resultado que genera el comando show i.p. protocols en un router. En la figura dos, se muestra el resultado que genera el comando show i.p. route barra vertical begin gateway. En la figura tres, se muestra el resultado que genera el comando show i.p. o.s.p.f. neighbor en un router. En la figura cuatro, se muestra el resultado que genera el comando show interfaces gigabit ethernet cero barra oblicua cero en un router. En la figura cinco, se muestra el resultado que genera el comando show i.p. interface gigabit ethernet cero barra oblicua cero en un router. En la figura seis, se muestra el resultado que genera el comando show i.p. interface brief en un router. En la figura siete, se muestra el resultado que genera el comando show protocols en un router. En la figura ocho, se muestra el resultado que genera el comando show c.d.p. neighbors en un router. En la figura nueve, se muestra una actividad interactiva que permite que el estudiante practique usar los comandos que se vieron en esta sección.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

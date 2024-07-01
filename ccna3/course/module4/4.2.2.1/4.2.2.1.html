@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.1 Verificación de EtherChannel</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de EtherChannel</h1>
+        <div>
+          <p>Existe una variedad de comandos para verificar una configuración EtherChannel. Primero, el comando <b>show interface port-channel</b> muestra el estado general de la interfaz de canal de puertos. En la figura 1, la interfaz de canal de puertos 1 está activa.</p>
+          <p></p>
+          <p>Cuando se configuren varias interfaces de canal de puertos en el mismo dispositivo, use el comando <b>show etherchannel summary</b> para mostrar una única línea de información por canal de puertos. En la figura 2, el switch tiene configurado un EtherChannel; el grupo 1 usa LACP. </p>
+          <p></p>
+          <p>El grupo de interfaces consta de las interfaces FastEthernet0/1 y FastEthernet0/2. El grupo es un EtherChannel de capa 2 y está en uso, según lo indican las letras SU junto al número de canal de puertos.</p>
+          <p></p>
+          <p>Use el comando <b>show etherchannel port-channel</b> para mostrar la información sobre una interfaz de canal de puertos específica, como se muestra en la figura 3. En el ejemplo, la interfaz de canal de puertos 1 consta de dos interfaces físicas, FastEthernet0/1 y FastEthernet0/2. Esta usa LACP en modo activo. Está correctamente conectada a otro switch con una configuración compatible, razón por la cual se dice que el canal de puertos está en uso.</p>
+          <p></p>
+          <p>En cualquier miembro de una interfaz física de un grupo EtherChannel, el comando <b>show interfaces etherchannel</b> puede proporcionar información sobre la función de la interfaz en el EtherChannel, como se muestra en la figura 4. La interfaz FastEthernet0/1 forma parte del grupo EtherChannel 1. El protocolo para este EtherChannel es LACP.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para verificar EtherChannel en el switch S1. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la salida del comando show interface port guion channel 1.  Este comando muestra información de estado del EtherChannel. La figura 2 muestra la salida del comando show ether channel summary.  Este comando muestra una línea de información por canal de puertos cuando múltiples interfaces de canal de puertos están configuradas en el mismo dispositivo. La figura 3 muestra la salida del comando show ether channel port guion channel.  Este comando muestra información sobre una interfaz específica del canal de puertos. La figura resalta el protocolo y los puertos configurados en el canal de puertos especificado. La figura 4 muestra la salida del comando show interfaces f cero barra diagonal uno ether channel.  Este comando muestra información sobre el rol de la interfaz especificada en el EtherChannel. En la figura se resaltan distintos datos del EtherChannel, como el estado de puerto y la información de puerto asociado. La figura cinco es una actividad interactiva para que el estudiante ejecute comandos show para visualizar la información de estado de los EtherChannel en un switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

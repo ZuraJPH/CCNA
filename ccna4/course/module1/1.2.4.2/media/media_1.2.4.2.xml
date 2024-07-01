@@ -1,0 +1,12 @@
+﻿<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b></b>]]></text>
+</component>
+
+
+<component id="ID_bullets">
+	<text><![CDATA[<textformat blockindent='-16'><li>¿Debería WAN utilizar una infraestructura de privadas o públicas?</li><li>Para una WAN privada, ¿la conexión debe ser dedicada o de conmutación?</li><li>Para WAN pública, ¿qué tipo de acceso a la VPN se requiere?</li><li>¿Qué opciones de conexión disponibles a nivel local?</li><li>¿Cuál es el costo de las opciones de conexión disponibles?</li></textformat>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.2 Filtrado de paquetes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrado de paquetes</h1>
+        <div>
+          <p></p>
+          <p></p>
+          <p>Una ACL es una lista secuencial de instrucciones permit (permitir) o deny (denegar), conocidas como “entradas de control de acceso” (ACE). Las ACE también se denominan comúnmente “instrucciones de ACL”. Cuando el tráfico de la red atraviesa una interfaz configurada con una ACL, el router compara la información dentro del paquete con cada ACE, en orden secuencial, para determinar si el paquete coincide con una de las ACE. Este proceso se denomina filtrado de paquetes</p>
+          <p></p>
+          <p>El filtrado de paquetes controla el acceso a una red mediante el análisis de los paquetes entrantes y salientes y la transferencia o el descarte de estos según criterios  determinados. El filtrado de paquetes puede producirse en la capa 3 o capa 4, como se muestra en la ilustración. Las ACL estándar filtran sólo en la Capa 3. Las ACL extendidas filtran en las capas 3 y 4. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: las ACL extendidas van más allá del alcance de este curso.</p>
+          <p></p>
+          <p>El criterio de filtrado establecido en cada ACE de una ACL de IPv4 estándar es la dirección IPv4 de origen. Un router configurado con una ACL de IPv4 estándar recupera la dirección IPv4 de origen del encabezado del paquete. El router comienza en la parte superior de la ACL y compara la dirección con cada ACE de manera secuencial. Cuando encuentra una coincidencia, el router realiza la instrucción, que puede ser permitir o denegar el paquete. Una vez que se halla una coincidencia, las ACE restantes de la ACL, si las hubiera, no se analizan. Si la dirección IPv4 de origen no coincide con ninguna ACE en la ACL, se descarta el paquete. </p>
+          <p></p>
+          <p>La última instrucción de una ACL es siempre una denegación implícita. Esta sentencia se inserta automáticamente al final de cada ACL, aunque no esté presente físicamente. La denegación implícita bloquea todo el tráfico. Debido a esta denegación implícita, una ACL que no tiene, por lo menos, una instrucción permit bloqueará todo el tráfico.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la Figura se muestran las siete capas del modelo O.S.I.  Hay un texto que indica, “el filtrado de paquetes funciona en la capa 3 y la capa 4 ".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

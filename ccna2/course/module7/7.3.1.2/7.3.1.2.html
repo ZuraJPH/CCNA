@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.2 El orden de las ACE en una ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>El orden de las ACE en una ACL</h1>
+        <div>
+          <p>El IOS de Cisco aplica una lógica interna al aceptar y procesar las ACE estándar. Como se mencionó anteriormente, las ACE se procesan de forma secuencial; por lo tanto, el orden en que se introducen las ACE es importante.</p>
+          <p></p>
+          <p>Por ejemplo, en la figura 1, la ACL 3 contiene dos ACE. La primera ACE utiliza una máscara wildcard para denegar un rango de direcciones que incluye todos los hosts en la red 192.168.10.0/24. La segunda ACE es una instrucción que examina un host específico, 192.168.10.10, que pertenece a la red 192.168.10.0/24. La lógica interna del IOS para las listas de acceso estándar rechaza la segunda instrucción y envía un mensaje de error, porque es un subconjunto de la instrucción anterior. </p>
+          <p></p>
+          <p>La configuración en la figura 2 de la ACL 4 tiene las mismas dos instrucciones, pero en orden inverso. Esta es una secuencia válida de instrucciones, porque la primera instrucción se refiere a un host específico, no a un rango de hosts.</p>
+          <p></p>
+          <p>En la figura 3, la ACL 5 muestra que se puede configurar una instrucción de host después de una instrucción que denota un rango de hosts. El host no debe estar dentro del rango que abarca una instrucción anterior. La dirección host 192.168.11.10 no forma parte de la red 192.168.10.0/24, por lo que se trata de una instrucción válida.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una entrada de lista de acceso en conflicto en una A.C.L actual.  La primera línea es la lista 3 del script de acceso deniegan 192 a punto del punto 10 del punto 168 cero punto cero cero punto el punto cero 255.  Esto es seguido por el comando access guión ist 3 permit host 192 punto 168 punto 10 punto 10, que entra en conflicto con la instrucción deny any y genera un mensaje de error que se envía a la consola. La figura dos muestra los mismos dos comandos utilizados en la ilustración anterior, pero en el orden inverso. Esta secuencia de comandos es validada por el router. La figura tres muestra dos entradas que no están en conflicto.  El primer comando es access guión list 5 deny 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255.  A este comando le sigue access guión list 5 permit host 192 punto 168 punto 11 punto 10.  El host no se ve afectado por la red en la instrucción deny por lo que se acepta.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

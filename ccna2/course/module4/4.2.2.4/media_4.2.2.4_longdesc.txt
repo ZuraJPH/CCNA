@@ -1,0 +1,1 @@
+Las figuras uno a nueve son los elementos de recursos interactivos que evalúan la capacidad del estudiante de determinar los límites de los dominios de colisión y los dominios de difusión. Cada figura presenta una topología de red diferente y pide que el estudiante dibuje formas alrededor de cada dominio.  

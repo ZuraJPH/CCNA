@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.5 Switching por método de corte</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Switching por método de corte</h1>
+        <div>
+          <p>Una ventaja del switching por método de corte es que el switch tiene la capacidad de iniciar el reenvío de una trama antes que con el switching por almacenamiento y envío. El switching por corte tiene dos características principales: el reenvío rápido de tramas y el switching libre de fragmentos.</p>
+          <p></p>
+          <p>
+            <b>Reenvío rápido de tramas</b>
+          </p>
+          <p></p>
+          <p>Como se indica en la ilustración, los switches que usan el método de corte pueden tomar una decisión de reenvío tan pronto como encuentran la dirección MAC de destino de la trama en la tabla de direcciones MAC. El switch no tiene que esperar a que el resto de la trama ingrese al puerto de entrada antes de tomar la decisión de reenvío.</p>
+          <p></p>
+          <p>Con los controladores MAC y los ASIC actuales, los switches que usan el método de corte pueden decidir rápidamente si necesitan examinar una mayor parte de los encabezados de una trama para propósitos de filtrado adicional. Por ejemplo, el switch puede analizar más allá de los primeros 14 bytes (la dirección MAC de origen, la dirección MAC de destino y los campos de EtherType) y examinar 40 bytes adicionales para llevar a cabo las funciones más sofisticadas relacionadas con las capas 3 y 4 de IPv4.</p>
+          <p></p>
+          <p>El switching por método de corte no descarta la mayoría de las tramas no válidas. Las tramas con errores se reenvían a otros segmentos de la red.  Si hay un índice de error alto (tramas no válidas) en la red, el switching por método de corte puede tener un impacto negativo en el ancho de banda; de esta forma, se obstruye el ancho de banda con las tramas dañadas y no válidas.</p>
+          <p></p>
+          <p>
+            <b>Libre de fragmentos </b>
+          </p>
+          <p></p>
+          <p>El switching libre de fragmentos es una forma modificada del switching por método de corte en la cual el switch espera a que pase la ventana de colisión (64 bytes) antes de reenviar la trama. Esto significa que cada trama se registra en el campo de datos para asegurarse de que no se produzca la fragmentación. El switching libre de fragmentos proporciona una mejor verificación de errores que el de corte, con prácticamente ningún aumento de latencia. </p>
+          <p></p>
+          <p>La velocidad de latencia más baja del switching por corte hace que resulte más adecuado para las aplicaciones muy exigentes de tecnología informática de alto rendimiento (HPC) que requieren latencias de proceso a proceso de 10 microsegundos o menos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra toda una trama, incluido el encabezado y el pie de página. El switching por corte comienza a reenviar la trama apenas recibe la MAC de destino (que es solo 14 bytes en el encabezado).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

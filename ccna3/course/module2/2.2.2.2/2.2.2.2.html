@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.2 Verificación de problemas de configuración de direcciones IP y máscaras de subred</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de problemas de configuración de direcciones IP y máscaras de subred</h1>
+        <div>
+          <p>A cada interfaz o subinterfaz se le debe asignar una dirección IP que corresponda a la subred a la cual está conectada. Un error común es configurar incorrectamente una dirección IP para una subinterfaz. En la figura 1, se muestra la salida del comando <b>show running-config</b>. El área resaltada muestra que la subinterfaz G0/0.10 en el router R1 tiene la dirección IPv4 172.17.20.1. La VLAN para esta subinterfaz debería admitir tráfico de la VLAN 10. La dirección IPv4 se configuró de manera incorrecta. El comando <b>show ip interface</b> resulta útil en esta configuración. La segunda área resaltada muestra la dirección IPv4 incorrecta.</p>
+          <p></p>
+          <p>Algunas veces, el problema es que el dispositivo de usuario final, como una computadora personal, está mal configurado. En la figura 2, se muestra la configuración IPv4 para la PC1 que aparece en pantalla. La dirección IPv4 es 172.17.20.21, con la máscara de subred 255.255.255.0. Sin embargo, en esta situación la PC1 debería estar en la VLAN 10, con la dirección 172.17.10.21 y la máscara de subred 255.255.255.0.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: si bien la configuración de las ID de subinterfaz de manera que coincidan con el número de VLAN facilita la administración de la configuración entre VLAN, no es un requisito. Al trabajar en la solución de problemas de asignación de direcciones, asegúrese de que la subinterfaz esté configurada con la dirección correcta para esa VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la salida del comando show running-config y se hace hincapié en una dirección IP mal configurada para una subinterfaz. En la figura dos, se muestra la salida del comando ip config en un host de Windows y se hace hincapié en una dirección IP mal configurada en la interfaz de red. Una llamada indica que la PC debe tener una dirección IP dentro de la subred adecuada para poder comunicarse correctamente en la red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

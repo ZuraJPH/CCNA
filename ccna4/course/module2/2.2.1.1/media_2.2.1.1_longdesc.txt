@@ -1,0 +1,1 @@
+En la figura se muestran dos topologías.  La primera topología consta de dos routers conectados por un enlace WAN que usa HDLC, que es el método de encapsulamiento predeterminado en un router Cisco.  La segunda topología también posee dos routers conectados por un enlace WAN, pero esta conexión utiliza un enlace PPP, ya que al menos un router no es de Cisco.

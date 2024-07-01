@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.2 Configuración del routing entre VLAN antiguo: configuración del switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración del routing entre VLAN antiguo: configuración del switch</h1>
+        <div>
+          <p>Para configurar el routing entre VLAN antiguo, comience con la configuración del switch. </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, el router R1 está conectado a los puertos del switch F0/4 y F0/5, que se configuraron para las VLAN 10 y 30 respectivamente.</p>
+          <p></p>
+          <p>Use el comando de configuración global <b>vlan</b><i> id_de_vlan </i>para crear las VLAN. En este ejemplo las VLAN 10 y 30 se crearon en el switch S1. </p>
+          <p></p>
+          <p>Una vez que se crean las VLAN, los puertos de switch se asignan a las VLAN adecuadas. El comando <b>switchport access vlan</b><i> id_de_vlan </i>se ejecuta desde el modo de configuración de interfaz en el switch para cada interfaz a la cual se conecta el router.</p>
+          <p></p>
+          <p>En este ejemplo, las interfaces F0/4 y F0/11 se asignaron a la VLAN 10 con el comando <b>switchport access vlan 10</b>. Se utilizó el mismo proceso para asignar la interfaz F0/5 y F0/6 en el switch S1 a la VLAN 30. </p>
+          <p></p>
+          <p>Finalmente, para proteger la configuración y no perderla después de una recarga del switch, se ejecuta el comando <b>copy running-config startup-config</b> para guardar una copia de seguridad de la configuración en ejecución en la configuración de inicio.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los comandos necesarios para configurar un switch para el routing entre VLAN antiguo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

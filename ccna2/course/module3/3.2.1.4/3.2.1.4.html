@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.4 Habilitación y verificación de RIPv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Habilitación y verificación de RIPv2</h1>
+        <div>
+          <p>De manera predeterminada, cuando hay un proceso de RIP configurado en un router Cisco, este ejecuta RIPv1, como se muestra en la figura 1. Sin embargo, a pesar de que el router sólo envía mensajes de RIPv1, puede interpretar los mensajes de RIPv1 y RIPv2. Los routers RIPv1 simplemente ignoran los campos de RIPv2 en la entrada de ruta. </p>
+          <p></p>
+          <p>Utilice el comando del modo de configuración del router <b>version 2</b> para habilitar RIPv2, como se muestra en la figura 2. Observe la forma en que el comando <b>show ip protocols</b> verifica que el R2 ahora está configurado para enviar y recibir solamente mensajes de versión 2. El proceso de RIP ahora incluye la máscara de subred en todas las actualizaciones, lo que hace que RIPv2 sea un protocolo de routing sin clase.  </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Configurar <b>version 1</b> habilita RIPv1 solamente, mientras que configurar <b>no version</b> revierte el router a la configuración predeterminada, mediante la cual se envían actualizaciones de la versión 1 pero se está a la escucha de actualizaciones de la versión 1 y la versión 2. </p>
+          <p></p>
+          <p>En la figura 3, se verifica que ya no haya rutas RIP en la tabla de routing. Esto se debe a que el R1 ahora está a la escucha de actualizaciones RIPv2 únicamente. El R2 y el R3 todavía envían actualizaciones RIPv1. Por lo tanto, se debe configurar el comando <b>version 2</b> en todos los routers en el dominio de routing. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para habilitar RIPv2 en el R2 y en el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el resultado del comando show ip protocols y se resalta la sección que indica que el router envía la versión uno, pero puede recibir actualizaciones de la versión uno y la versión dos. La figura dos muestra los comandos necesarios para habilitar RIP versión 2 en un router.  La figura comienza en el modo de configuración global y habilita el RIP con el comando router rip.  El siguiente comando es version 2, que posibilita el RIP versión 2 y deshabilita el RIP versión 1.  Se muestra el resultado del comando show ip protocols, y ahora el router envía y recibe solo la versión 2 del RIP. La figura tres muestra el resultado del comando show ip route barra vertical begin Gateway. Esto muestra la tabla de routing, que no tiene rutas de RIP ya que en la figura anterior el comando version 2 habilitó solamente la versión 2 en el router y ahora se ignoran las actualizaciones de RIP versión 1. La figura cuatro es un elemento de recursos interactivos que permite que el estudiante configure el RIP versión 2 en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

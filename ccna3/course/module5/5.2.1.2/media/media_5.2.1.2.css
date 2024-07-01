@@ -1,0 +1,28 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;	
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#play,#pause,#fforward,#rewind,#start,#end{
+width:40px;
+}
+
+#text_42,#text_45,#text_40,#text_38,#text_35,#text_33,#text_30,#text_28,#text_25,#text_23,#text_20,#text_18,#text_8{
+	letter-spacing: -1px !important;
+}
+
+#text_37,#text_39,#text_34,#text_32,#text_27,#text_22,#text_19,#text_17,#text_29,#text_24{
+	left:-7px !important;
+}
+
+#text_44,#text_41,#text_6,#text_10{
+	left:-5px !important;
+}

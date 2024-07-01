@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.3 Problemas con la redundancia de capa 1: tormentas de difusión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas con la redundancia de capa 1: tormentas de difusión</h1>
+        <div>
+          <p>Una tormenta de difusión se produce cuando existen tantas tramas de difusión atrapadas en un bucle de Capa 2, que se consume todo el ancho de banda disponible. Como consecuencia, no hay ancho de banda disponible para el tráfico legítimo y la red deja de estar disponible para la comunicación de datos. Esto es una denegación de servicio (DoS) eficaz.</p>
+          <p></p>
+          <p>La tormenta de difusión es inevitable en una red con bucles. A medida que más dispositivos envían difusiones a través de la red, más tráfico se concentra en el bucle, lo que consume recursos. Finalmente, se crea una tormenta de difusión que hace fallar la red.</p>
+          <p></p>
+          <p>Existen otras consecuencias de las tormentas de difusión. Debido a que el tráfico de difusión se envía a todos los puertos del switch, todos los dispositivos conectados deben procesar todo el tráfico de difusión que fluye indefinidamente en la red con bucles. Esto puede hacer que el terminal no funcione bien a causa de los requisitos de procesamiento que se necesitan para mantener una carga de tráfico tan elevada en la NIC.</p>
+          <p></p>
+          <p>Haga clic en el botón <b>Reproducir</b> de la figura para ver una animación de una tormenta de difusión. Cuando se detenga la animación, lea el texto a la derecha de la topología. La animación continuará después de una pausa breve.</p>
+          <p></p>
+          <p>En la animación:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La PC1 envía una trama de difusión a la red con bucles. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La trama de difusión crea un bucle entre todos los switches interconectados en la red.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La PC4 también envía una trama de difusión a la red con bucles. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La trama de difusión de la PC4 queda atrapada en el bucle entre todos los switches interconectados, al igual que la trama de difusión de la PC1. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>A medida que más dispositivos envían difusiones a través de la red, más tráfico se concentra en el bucle, lo que consume recursos. Finalmente, se crea una tormenta de difusión que hace fallar la red.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Cuando la red se satura por completo con tráfico de difusión que genera un bucle entre los switches, el switch descarta el tráfico nuevo porque no lo puede procesar.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Una tormenta de difusión puede desarrollarse en segundos, porque los dispositivos conectados a una red están enviando periódicamente tramas de difusión, como lo solicita el ARP. Como resultado, cuando se crea un bucle, la red conmutada se desactiva con rapidez.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Esta animación muestra tres switches: S1, S2 y S3.  Cada uno está conectado a los otros dos con un enlace troncal.  El S2 tiene conectadas la PC1, PC2 y PC3.  El S1 tiene conectada la PC4.  La animación muestra cómo una tormenta de difusión puede degradar el rendimiento de la red cuando existe un bucle de capa dos.  Los switches continúan reenviando las difusiones y replicándolas al mismo tiempo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

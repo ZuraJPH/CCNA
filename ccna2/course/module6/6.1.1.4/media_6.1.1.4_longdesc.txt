@@ -1,0 +1,1 @@
+La figura muestra un router conectado a una red conmutada.  Un switch tiene un teléfono VoIP conectado.  Hay llamadas en cada switch que indican que el switch admitirá la VLAN ciento cincuenta.  Esta es la VLAN de voz de manera predeterminada en los switches Cisco.

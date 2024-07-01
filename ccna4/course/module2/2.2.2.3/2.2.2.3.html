@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.3 PPP: protocolo de control de red (NCP)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>PPP: protocolo de control de red (NCP)</h1>
+        <div>
+          <p>PPP permite que varios protocolos de capa de red funcionen en el mismo enlace de comunicación. Para cada protocolo de capa de red que se usa, PPP utiliza un NCP separado, como se muestra en la figura 1. Por ejemplo, IPv4 utiliza el protocolo de control IP (IPCP) e IPv6 utiliza el protocolo de control IPv6 (IPv6CP).</p>
+          <p></p>
+          <p>Los protocolos NCP incluyen campos funcionales que contienen códigos estandarizados para indicar el protocolo de capa de red que PPP encapsula. En la figura 2, se indican los números de los campos de protocolo PPP. Cada NCP administra las necesidades específicas requeridas por sus respectivos protocolos de capa de red. Los distintos componentes NCP encapsulan y negocian las opciones para varios protocolos de capa de red. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la arquitectura en capas de PPP en la capa de red.  La figura destaca la capa de red y está mostrando soporte tanto para IP versión 4 como para IP versión 6.  PPP utiliza NCP para negociar los protocolos de capa 3 que se utilizarán para transportar paquetes de datos. Estos protocolos proporcionan campos funcionales que contienen códigos estandarizados para indicar el tipo de protocolo de capa de red que encapsula PPP. La figura 2 es una tabla con los números de campo de protocolo PPP.  La tabla incluye el valor hexadecimal de 8 0 2 1 para el protocolo IP versión 4 y 8 0 5 7, para el protocolo de IP versión 6.  El valor C 0 2 3 es para el protocolo de autenticación de contraseñas y C 2 2 3 es para el protocolo de autenticación por desafío mutuo.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

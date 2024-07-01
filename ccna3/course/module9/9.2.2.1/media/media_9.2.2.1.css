@@ -1,0 +1,31 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+.alignment{
+	letter-spacing:-0.6px !important;
+	}
+	
+.alignment1{
+	letter-spacing:-1px !important;
+	}
+	
+@media only screen and (device-width: 768px) {
+.alignment2{
+letter-spacing:-0.8px !important;
+}
+
+.alignment{
+letter-spacing:-1.2px !important;
+}
+}

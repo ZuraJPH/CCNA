@@ -1,0 +1,1 @@
+La figura muestra una tabla con los campos de una BPDU versión 2 de RSTP.  Otra tabla muestra el desglose del campo de indicadores y sus bits individuales.

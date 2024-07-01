@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.5 Ataques de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ataques de VLAN</h1>
+        <div>
+          <p>La arquitectura VLAN simplifica el mantenimiento de la red y mejora el rendimiento, pero también posibilita el uso indebido. Existen diversos ataques relacionados con VLAN. </p>
+          <p></p>
+          <p>La figura muestra un tipo de amenaza de VLAN: el ataque de suplantación de switch. El atacante intenta acceder a la VLAN configurando un host para que suplante a un switch y use el protocolo de enlace troncal 802.1Q y la función de protocolo de enlace troncal dinámico (DTP) patentada por Cisco para establecer un enlace troncal con el switch que se conecta. Si tiene éxito y el switch establece un enlace troncal con el host, el atacante podrá acceder a todas las VLAN del switch y podrá desviar (es decir, enviar y recibir) tráfico en todas las VLAN.</p>
+          <p></p>
+          <p>Hay varias maneras de mitigar los ataques de VLAN:</p>
+          <p>
+            <ul>
+              <li>Configure explícitamente los enlaces de acceso</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Deshabilite explícitamente los enlaces troncales automáticos</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Habilite manualmente los enlaces troncales</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Deshabilite los puertos sin usar, conviértalos en puertos de acceso y asígnelos a una VLAN de agujero negro</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cambie la VLAN nativa predeterminada </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Implemente seguridad de puertos</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos switches interconectados con enlace troncal 802.1Q. La PC del atacante está conectada al switch izquierdo. El switch derecho se conecta a Server1 de VLAN10. También se conecta a Server2. El atacante intenta acceder a la VLAN configurando la PC para que suplante a un switch y use el protocolo de enlace troncal 802.1Q y la función de protocolo de enlace troncal dinámico (DTP) patentada por Cisco para establecer un enlace troncal con el switch izquierdo.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.4 Construcción del paquete de estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Construcción del paquete de estado de enlace</h1>
+        <div>
+          <p>El tercer paso en el proceso de routing de estado de enlace es que cada router cree un paquete de estado de enlace (LSP) que contiene el estado de cada enlace conectado directamente. </p>
+          <p></p>
+          <p>Una vez que un router establece sus adyacencias puede armar su LSP, el que contiene la información de estado de enlace de sus enlaces. Una versión simplificada de LSP del R1, que se muestra en la ilustración, contendría lo siguiente:</p>
+          <p></p>
+          <p>1. R1; Red Ethernet 10.1.0.0/16; Costo 2</p>
+          <p>2. 2. R1 -> R2; Red serial punto a punto; 10.2.0.0/16; Costo 20</p>
+          <p>3. 2. R1 -> R3; Red serial punto a punto; 10.3.0.0/16; Costo 5</p>
+          <p>4. R1 -> R4; Red serial punto a punto; 10.4.0.0/16; Costo 20</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio y está conectado a dos de los otros routers.  La figura tiene costos de enlace en cada enlace entre routers.  La figura se centra en el router R1, que tiene tres enlaces WAN seriales activos y una red local en una interfaz Fast Ethernet.  La figura muestra el router R1 mientras crea un paquete de estado de enlace que enviará por una interfaz a un vecino.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

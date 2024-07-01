@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.6 Marcación en la capa 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Marcación en la capa 3</h1>
+        <div>
+          <p>IPv4 e IPv6 especifican un campo de 8 bits en sus encabezados de paquetes para marcar los paquetes. Como se muestra en la figura 1, IPv4 e IPv6 admiten un campo de 8 bits para marcado, el campo de tipo de servicio (ToS) para IPv4 y el campo de clase de tráfico para IPv6.</p>
+          <p></p>
+          <p>Estos campos se utilizan para transportar la marcación de paquete asignada por las herramientas de la clasificación de QoS. Luego, los dispositivos receptores remiten al campo para reenviar los paquetes según la política QoS asignada correspondiente.</p>
+          <p></p>
+          <p>La figura 2 muestra el contenido del campo de 8 bits. En RFC 791, el estándar original de IP especificaba el campo de preferencia de IP (IPP) que se utilizará para las marcaciones de QoS. Sin embargo, en la práctica, estos tres bits no proporcionaban suficiente granularidad para implementar QoS. </p>
+          <p></p>
+          <p>RFC 2474 reemplaza RFC 791 y redefine el campo de ToS al cambiar el nombre y ampliar el campo de IPP. El campo nuevo, como se muestra en la figura 2, tiene 6 bits asignados para QoS. Conocido como campo de punto de código de servicios diferenciados (DSCP), estos seis bits ofrecen un máximo de 64 clases de servicio posibles. Los dos bits restantes de notificación de congestión extendida (ECN) de IP pueden usarse en los routers con reconocimiento de ECN para marcar paquetes en vez de descartarlos. La marcación de ECN informa a los routers corriente abajo que hay congestión en el flujo de paquetes.</p>
+          <p></p>
+          <p>Los 64 valores de DSCP se organizan en tres categorías: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Mejor esfuerzo (BE)</b>: es el valor predeterminado para todos los paquetes IP. El valor de DSCP es 0. El comportamiento por salto es enrutamiento normal. Cuando un router experimenta congestión, estos paquetes se descartan. No se implementa plan de QoS.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Reenvío acelerado (EF)</b>: RFC 3246 define EF como valor decimal 46 de DSCP (binario <b>101</b>110). Los primeros 3 bits (101) se asocian directamente al valor 5 de CoS de capa 2 que se utiliza para el tráfico de voz. En la capa 3, Cisco recomienda que EF solo se use para marcar paquetes de voz.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Reenvío asegurado (AF)</b>: RFC 2597 define AF para usar los 5 bits más significativos de DSCP a fin de indicar las colas y las preferencias de descarte. Como se muestra en la figura 3, los primeros 3 bits más significativos se usan para designar la clase. La clase 4 es la mejor cola y la clase 1 es la peor. El 4.° y 5.° bit más significativos se usan para indicar la preferencia de descarte. El 6.° bit más significativo se establece en cero. La fórmula de AFxy muestra cómo se calculan los valores de AF. Por ejemplo, AF32 pertenece a la clase 3 (binario 011) y tiene una preferencia media de descarte (binario 10). El valor de DSCP completo es 28 porque se incluye el 6.° bit en 0 (binario 011100). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como los primeros 3 bits más significativos del campo DSCP indican la clase, estos bits también se denominan bits de selector de clase (CS). Como se muestra en la figura 4, estos 3 bits se asocian directamente a los 3 bits del campo de CoS y del campo de IPP para mantener la compatibilidad con 802.1p y RFC 791. </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p>La tabla de la figura 5 muestra cómo los valores de CoS se asocian a los selectores de clase y al valor de 6 bits de DSCP correspondiente. Esta misma tabla se puede usar para asociar los valores de IPP a los selectores de clase.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra el encabezado de campo IPv4 e IPv6 que se utiliza para la marcación de tráfico. La figura 2 muestra el contenido del campo de 8 bits (tipo de servicio para IPv4 o clase de tráfico para IPv6). La figura 3 muestra los valores de reenvío asegurado (AF) definidos por RFC 2597. La figura 4 muestra la asignación directa de bits de CoS y bits de CS. La figura 5 muestra los valores de CoS asociados a los selectores de clase y al valor de 6 bits de DSCP 6 correspondiente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

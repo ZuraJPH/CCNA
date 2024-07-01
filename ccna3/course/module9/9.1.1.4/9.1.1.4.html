@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.4 Tipos de routers de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tipos de routers de OSPF</h1>
+        <div>
+          <p>Distintos tipos de routers OSPF controlan el tráfico que entra a las áreas y sale de estas. Los routers OSPF se categorizan según la función que cumplen en el dominio de routing.</p>
+          <p></p>
+          <p>Existen cuatro tipos diferentes de routers de OSPF: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Router interno:</b> es un router cuyas interfaces están todas en la misma área. Todos los routers internos de un área tienen LSDB idénticas (figura 1).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Router de respaldo:</b> es un router que se encuentra en el área troncal. El área troncal se establece en el área 0 (figura 2).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Router de frontera de área</b>
+                        <b>(ABR):</b> este es un router que tiene interfaces conectadas a muchas áreas. Debe mantener una LSDB para cada área a la que está conectado; puede hacer routing entre áreas. Los ABR son puntos de salida para cada área. Esto significa que la información de routing que se destina hacia otra área puede llegar únicamente mediante el ABR del área local. Es posible configurar los ABR para resumir la información de routing que proviene de las LSDB de las áreas conectadas. Los ABR distribuyen la información de routing en la red troncal. Luego, los routers troncales reenvían la información a otros ABR. En una red multiárea, un área puede tener uno o más ABR (figura 3).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Router de frontera de sistema autónomo (ASBR):</b> este router tiene al menos una interfaz conectada a una red externa. Una red externa es una red que no es parte de este dominio de routing OSPF. Por ejemplo, una conexión de red con un ISP. Un ASBR puede importar información de una red externa hacia la red OSPF, y viceversa, mediante un proceso llamado "redistribución de rutas" (figura 4).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La redistribución en OSPF de diversas áreas ocurre cuando un ASBR conecta diferentes dominios de routing (por ejemplo, EIGRP y OSPF) y los configura para intercambiar y anunciar información de routing entre dichos dominios de routing. Una ruta estática, incluida una ruta predeterminada, también se puede redistribuir como ruta externa en el dominio de routing OSPF.</p>
+          <p></p>
+          <p>Un router se puede clasificar como uno o más tipos de router. Por ejemplo, si un router se conecta a las áreas 0 y 1, y además mantiene información de routing de redes externas, puede pertenecer a tres categorías diferentes: router troncal, ABR o ASBR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una LAN con tres áreas; área 1, área 0 y área 51. Los routers contenidos en cada una de estas áreas están marcados como routers internos. La figura dos indica que a todos los routers alojados dentro del área 0 y a los que se conectan con otras áreas se los conoce como routers troncales. La figura tres indica que a los routers que se conectan con otras áreas se los conoce como routers de frontera de área (ABR). La figura cuatro indica que al router conectado entre las áreas y conectado a Internet se lo conoce como router de frontera de sistema autónomo (ASBR).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

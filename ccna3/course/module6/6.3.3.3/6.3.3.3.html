@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.3 Sucesor y distancia factible</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sucesor y distancia factible</h1>
+        <div>
+          <p>En la figura 1, se muestra la topología para este tema. Un sucesor es un router vecino que se utiliza para el envío de paquetes y es la ruta de menor costo hacia la red de destino. La dirección IP de un sucesor se muestra en una entrada de la tabla de routing a continuación de la palabra “via”. </p>
+          <p></p>
+          <p>FD es la métrica más baja calculada para llegar a la red de destino. FD es la métrica indicada en la tabla de routing como el segundo número dentro de paréntesis. Al igual que en otros protocolos de routing, esto también se conoce como la “métrica para la ruta”. </p>
+          <p></p>
+          <p>Analice la tabla de routing para el R2 en la figura 2 y observe que la mejor ruta EIGRP para la red 192.168.1.0/24 es a través del router R3 y que la distancia factible es 3 012 096. Esta es la métrica que se calculó en el tema anterior.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra la salida que genera el comando “show ip route” en el router dos.  Aparece una ruta de EIGRP con la dirección de la métrica y del sucesor resaltada en color naranja.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

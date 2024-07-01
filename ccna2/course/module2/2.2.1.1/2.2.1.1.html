@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.1 Comando ip route</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comando ip route</h1>
+        <div>
+          <p>Las rutas estáticas se configuran con el comando<b> ip route </b>de configuración global. La sintaxis básica del comando se muestra en la figura.</p>
+          <p></p>
+          <p>Se requieren los siguientes parámetros para configurar el routing estático:</p>
+          <p>
+            <ul>
+              <li>
+                <i>dirección de red</i>
+                <b></b>: dirección de red de destino de la red remota que se agrega a la tabla de routing, también llamada “prefijo”.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <i>máscara-subred</i>
+                <b></b>: máscara de subred, o simplemente máscara, de la red remota que se agrega a la tabla de routing. La máscara de subred puede modificarse para resumir un grupo de redes. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Además, deberá utilizarse uno de los siguientes parámetros o ambos:</p>
+          <p>
+            <ul>
+              <li>
+                <i>dirección-ip</i>
+                <b></b>: dirección IP del router de conexión que se va a utilizar para reenviar el paquete a la red de destino remota. Se la suele denominar “siguiente salto”. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <i>exit-intf</i>
+                <b></b>: interfaz de salida que se va a utilizar para reenviar el paquete al siguiente salto.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>La <i>Distancia</i> distancia se utiliza para crear una ruta estática flotante al establecer una distancia administrativa mayor que la de una ruta descubierta de forma dinámica.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la sintaxis para configurar una ruta estática.  La sintaxis es “ip route”, seguido por la dirección de red de destino, seguido de la máscara de red de destino, seguido por la interfaz de salida o la dirección IP del siguiente salto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

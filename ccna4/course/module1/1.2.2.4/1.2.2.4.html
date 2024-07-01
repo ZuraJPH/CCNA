@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.4 Frame Relay</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Frame Relay</h1>
+        <div>
+          <p>La retransmisión de tramas (Frame Relay) es una tecnología WAN multiacceso sin difusión (NBMA) simple de capa 2 que se utiliza para interconectar las redes LAN de una empresa. Para conectarse a varios sitios mediante PVC, se puede usar una única interfaz de router. Los PVC se usan para transportar tráfico de voz y datos entre origen y destino y admiten velocidades de datos de hasta 4 Mb/s, si bien algunos proveedores ofrecen velocidades aun mayores.</p>
+          <p></p>
+          <p>Los routers perimetrales solo requieren una única interfaz, incluso cuando se usan varios circuitos virtuales (VC). La línea arrendada al perímetro de la red de retransmisión de tramas permite conexiones rentables entre las redes LAN que se encuentran dispersas.</p>
+          <p></p>
+          <p>Frame Relay crea PVC que se identifican únicamente por un identificador de conexión de enlace de datos (DLCI). Los PVC y los DLCI aseguran la comunicación bidireccional de un dispositivo DTE a otro. </p>
+          <p></p>
+          <p>Por ejemplo, en la ilustración, el R1 usa el DLCI 102 para llegar al R2, mientras que el R2 usa el DLCI 201 para llegar al R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cómo los sitios remotos pueden conectarse mediante un proveedor utilizando retransmisión de tramas (Frame Relay).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

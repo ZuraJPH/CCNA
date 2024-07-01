@@ -1,0 +1,40 @@
+<textcomponents>
+    <component id="ID_title">
+        <text>
+            <![CDATA[<b>El comando<font face='_typewriter'> ppp authentication</font> </b>]]></text>
+    </component>
+    <component id="ID_txt01">
+        <text><![CDATA[<font face="_typewriter"><b>ppp authentication {chap | chap pap | pap chap | pap}</b></font>]]></text>
+    </component>
+    <component id="ID_table">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+
+	<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size = "15" color='#393536'><b>El comando <font face="_typewriter"><b>ppp authentication</b></font><b></font></td>
+		</tr>
+
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' width="100"><font color='#000000' face="_typewriter"><b>chap</b></font></td>
+		<td bgcolor='#E9E7E8' width="498"><font color='#393536'><font color='#393536'>Habilita CHAP en una interfaz serial.</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2'><font color='#000000' face="_typewriter"><b>pap</b></font></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Habilita PAP en una interfaz serial.</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8'><font color='#000000' face="_typewriter"><b>chap pap</b></font></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'><font color='#393536'>Habilita CHAP y PAP y realiza la autenticación de CHAP antes que la de PAP.</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2'><font color='#393536' face="_typewriter"><b>pap chap</b></font></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Habilita CHAP y PAP y realiza la autenticación de PAP antes que la de CHAP.</font></td>
+	</tr>
+	
+</table>]]>
+        </text>
+    </component>
+</textcomponents>

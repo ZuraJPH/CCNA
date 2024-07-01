@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.2 Comprobación de la ruta predeterminada propagada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comprobación de la ruta predeterminada propagada</h1>
+        <div>
+          <p>En la ilustración, se muestra una parte de las tablas de routing IPv4 del R1 y el R3.  </p>
+          <p></p>
+          <p>En las tablas de routing del R1 y el R3, observe el origen de routing y la distancia administrativa de la nueva ruta predeterminada que se descubrieron mediante EIGRP. La entrada de la ruta predeterminada que se descubrió mediante EIGRP se identifica por lo siguiente:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>D:</b> esta ruta se descubrió en una actualización de routing EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>*:</b> la ruta es candidata para una ruta predeterminada.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EX:</b> la ruta es una ruta EIGRP externa, en este caso, una ruta estática fuera del dominio de routing EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>170:</b> distancia administrativa de una ruta EIGRP externa.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Observe que el R1 selecciona al R3 como el sucesor a la ruta predeterminada, porque tiene una distancia factible menor. Las rutas predeterminadas proporcionan una ruta predeterminada para salir del dominio de routing y, al igual que las rutas resumidas, minimizan el número de entradas en la tabla de routing.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra el resultado del comando "show i. p. route" en los routers uno y tres, que demuestra que dichos routers aprendieron la ruta estática predeterminada a través del EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

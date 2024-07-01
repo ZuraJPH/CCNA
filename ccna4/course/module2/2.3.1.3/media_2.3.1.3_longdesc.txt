@@ -1,0 +1,1 @@
+La figura muestra dos routers conectándose a una nube de WAN con PPP.  La figura muestra la salida del archivo de configuración. Se resalta la línea de la salida que dice compress predictor.  Esta línea configura el algoritmo de compresión de Predictor en la interfaz serial.  La otra opción de compresión es el algoritmo de Stacker y se configuraría con el comando compress stac.

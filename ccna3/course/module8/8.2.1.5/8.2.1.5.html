@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.5 Modificación de una ID de router </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modificación de una ID de router </h1>
+        <div>
+          <p>En ocasiones, es necesario modificar una ID de router, por ejemplo, cuando un administrador de red establece un nuevo esquema de ID de router para la red. Sin embargo, una vez que un router selecciona una ID de router, un router OSPFv2 activo no permite que se modifique la ID del router hasta que se vuelva a cargar el router o se borre el proceso OSPFv2.</p>
+          <p></p>
+          <p>En la figura 1, observe que la ID del router actual es 192.168.10.5. La ID del router debería ser 1.1.1.1. </p>
+          <p></p>
+          <p>En la figura 2, se asigna la ID de router 1.1.1.1 al R1. Observe que aparece un mensaje informativo que indica que se debe borrar el proceso OSPFv2 o se debe volver a cargar el router. Esto ocurre debido a que el R1 ya tiene adyacencias con otros vecinos que utilizan la ID de router 192.168.10.5. Se deben volver a negociar esas adyacencias utilizando la nueva ID de router 1.1.1.1.</p>
+          <p></p>
+          <p>El método preferido para restablecer la ID del router es borrar el proceso OSPF. </p>
+          <p></p>
+          <p>En la figura 3, se borra el proceso de routing de OSPFv2 con el comando <b>clear ip ospf process</b> del modo EXEC con privilegios. Esto obliga al protocolo OSPFv2 en el R1 a pasar a los estados Down e Init. Observe los mensajes de cambio de adyacencia de Full a Down y de Loading a Full. El comando <b>show ip protocols</b> verifica que se haya cambiado la ID del router.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para modificar la ID del router para el R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la salida del comando show ip protocols. En la salida, se resalta la línea que muestra la ID del router. Para este router, la ID es 192 punto 168 punto 10 punto 5.  En la figura dos, se muestran los comandos utilizados para cambiar la ID del router y comienza en modo de configuración global.  El primer comando es router ospf. 10.  Con este comando, se configura OSPF en el router y se establece el proceso en 10.  El siguiente comando es router guion id uno punto uno punto uno punto uno.  Con este comando, se establece la ID del router.  El router muestra la directiva para que el usuario recargue o utilice el comando clear ip ospf process para que este tenga efecto.  En la figura tres, se muestra el comando clear ip ospf process ejecutado desde el modo EXEC privilegiado.  Como resultado, el router, básicamente, reinicia el protocolo de routing.  En la figura también se resalta la salida del router que muestra las adyacencias actuales que cambian su estado de Full a Down y luego de Load a Full.  Se muestra la nueva ID del router uno punto uno punto uno punto uno. La figura cuatro es un elemento de medios interactivos que permite que el estudiante modifique la ID de router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

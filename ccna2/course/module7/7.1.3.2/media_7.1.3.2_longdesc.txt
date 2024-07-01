@@ -1,0 +1,1 @@
+La figura muestra una tabla con las mejores prácticas de A.C.L.  Estas pautas incluyen basar las A.C.L. en la política de seguridad de una organización, preparar una descripción de los objetivos de cada A.C.L., utilizar un editor de texto para crear, editar, y guardar cada A.C.L., y probar A.C.L.s. en un entorno de prueba.

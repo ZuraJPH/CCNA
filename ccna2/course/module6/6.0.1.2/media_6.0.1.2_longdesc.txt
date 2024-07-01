@@ -1,0 +1,1 @@
+La figura muestra un router conectado a dos switches con tres VLAN cada uno.

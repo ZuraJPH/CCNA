@@ -1,0 +1,1 @@
+La figura muestra una topología de OSPF multiárea IPv4.

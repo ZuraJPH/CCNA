@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.4 Verificación de NAT dinámica</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de NAT dinámica</h1>
+        <div>
+          <p>El resultado del comando <b>show ip nat translations</b> que aparece en la figura 1 muestra los detalles de las dos asignaciones de NAT anteriores. El comando muestra todas las traducciones estáticas que se configuraron y todas las traducciones dinámicas que se crearon a causa del tráfico. </p>
+          <p></p>
+          <p>Si se agrega la palabra clave <b>verbose</b>, se muestra información adicional acerca de cada traducción, incluido el tiempo transcurrido desde que se creó y se utilizó la entrada. </p>
+          <p></p>
+          <p>De manera predeterminada, las entradas de traducciones caducan luego de 24 horas, a menos que se hayan reconfigurado los temporizadores con el comando <b>ip nat translation timeout </b><i>tiempodeespera-segundos</i> en el modo de configuración global.</p>
+          <p></p>
+          <p>Para borrar entradas dinámicas antes de se exceda el tiempo de espera, utilice el comando <b>clear ip nat translation</b> en modo EXEC con privilegios (Figura 2).  Es útil borrar las entradas dinámicas al probar la configuración NAT. Como se muestra en la tabla, este comando se puede utilizar con palabras clave y variables para controlar qué entradas se deben borrar. Se pueden borrar entradas específicas para evitar interrumpir las sesiones activas. Utilice el comando <b>clear ip nat translation *</b> en modo EXEC con privilegios para borrar todas las traducciones de la tabla. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> solo se borran de la tabla las traducciones dinámicas. Las traducciones estáticas no pueden borrarse de la tabla de traducción.</p>
+          <p></p>
+          <p>En la figura 3, el comando <b>show ip nat statistics</b> muestra la información sobre la cantidad total de traducciones activas, los parámetros de configuración NAT, la cantidad de direcciones en el conjunto y la cantidad de direcciones que se asignaron.</p>
+          <p></p>
+          <p>También puede utilizar el comando <b>show running-config</b> y buscar los comandos de NAT, ACL, interfaz o conjunto con los valores requeridos. Examínelos detenidamente y corrija cualquier error que detecte.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestran las salidas de los comandos "show i. p. nat translations" y "show i. p. nat translations verbose". En la figura número dos se muestran las salidas de los comandos "clear i. p. nat translations" y "show i. p. nat translations".  No hay traducciones porque acaban de borrarse.  A continuación se incluye una tabla con la sintaxis para el comando "clear i. p. nat translations" con todas las opciones. En la figura número tres se muestra la salida del comando "clear i. p. nat statistics".  PC 1 y PC 2 establecen sesiones con el servidor web.  Se muestra la salida del comando "show i. p. statistics".  Se resalta la información del conjunto.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

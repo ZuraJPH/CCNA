@@ -1,0 +1,85 @@
+<textcomponents><!--slide1 content--><component id="ID_s1_title">
+<text><![CDATA[<b>Tipos de paquetes EIGRP</b>]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Nota:</b> el protocolo IGRP es un protocolo IGP con vector de distancia que no está incluido en este cuadro.]]></text> 
+</component>
+
+<component id="ID_s1_table">
+		<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' style="width:420px;height:133px;">
+		<tr class="liner">
+			<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+		</tr>
+		
+		<tr>
+			<td colspan="1"  bgcolor='#0E6360' valign="top"><font color='#ffffff'><b>Tipo de paquete</b></font></td>
+			<td colspan="1" bgcolor='#0E6360' valign="top"><font color='#ffffff'><b>Se utiliza para…</b></font></td>			
+		</tr>	
+			
+		<tr>		
+		<td  bgcolor="#EFF8F7" width="120" valign="top"><font color='#393536'>Saludo</font></td>
+		<td  bgcolor="#EFF8F7" valign="top"><font color='#393536'>Descubrir otros routers EIGRP en la red.</font></td>			 
+		</tr>
+		
+		<tr>		
+		<td  bgcolor="#EFF8F7" width="120" valign="top"><font color='#393536'>Actualización</font></td>
+		<td  bgcolor="#EFF8F7" valign="top"><font color='#393536'>Confirmar la recepción de un paquete EIGRP.</font></td>			 
+		</tr>
+		
+		<tr>		
+		<td  bgcolor="#FFFFFF" width="120" valign="top"><font color='#393536'>Acuse de recibo</font></td>
+		<td  bgcolor="#FFFFFF" valign="top"><font color='#393536'>Transmitir información de routing a destinos conocidos.</font></td>			 
+		</tr>
+		
+		<tr>		
+		<td  bgcolor="#FFFFFF" width="120" valign="top"><font color='#393536'>Consulta</font></td>
+		<td  bgcolor="#FFFFFF" valign="top"><font color='#393536'>Solicitar información específica de un router vecino.</font></td>		 
+		</tr>
+		
+		<tr>		
+		<td  bgcolor="#EFF8F7" width="120" valign="top"><font color='#393536'>Respuesta</font></td>
+		<td  bgcolor="#EFF8F7" valign="top"><font color='#393536'>Responder a una consulta.</font></td>		 
+		</tr>
+	
+	</table>]]></text> 
+	</component><!--slide2 content--><component id="ID_s2_title">
+<text><![CDATA[<b>Los mensajes EIGRP se envían a través de IP</b>]]></text> 
+</component>
+
+
+<component id="ID_s2_header01">
+<text><![CDATA[<b>EIGRP para IPv4 a través de IPv4</b>]]></text> 
+</component>
+
+<component id="ID_s2_header02">
+<text><![CDATA[<b>EIGRP para IPv6 a través de IPv6</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Encabezado de IPv4]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Protocolo 88]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Mensaje EIGRP para IPv4]]></text> 
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[Encabezado de IPv6]]></text> 
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Encabezado siguiente 88]]></text> 
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[Mensaje EIGRP para IPv6]]></text> 
+</component>
+
+
+
+</textcomponents>

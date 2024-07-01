@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.2 Método 2: usar números de secuencia</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Método 2: usar números de secuencia</h1>
+        <div>
+          <p>Como se muestra en la ilustración, en la configuración inicial de la ACL 1 se incluyó una instrucción de host para el host 192.168.10.99. pero eso fue un error. Se debería haber configurado el host 192.168.10.10. Para editar la ACL con los números de secuencia, siga estos pasos:</p>
+          <p></p>
+          <p>
+            <b>Paso 1: </b>Muestre la ACL actual mediante el comando <b>show access-lists 1</b>. El resultado de este comando se analizará en mayor detalle más adelante en esta sección. El número de secuencia se muestra al principio de cada instrucción. El número de secuencia se asignó automáticamente cuando se introdujo la instrucción de la lista de acceso. Observe que la instrucción que está mal configurada tiene el número de secuencia 10.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: </b>Introduzca el comando <b>ip access-lists standard</b> que se utiliza para configurar las ACL con nombre. El número de la ACL, 1, se utiliza como nombre. Primero, la instrucción mal configurada se debe eliminar con el comando <b>no 10</b>, donde “10” se refiere al número de secuencia. Luego, se agrega una nueva instrucción de número de secuencia 10 mediante el comando <b>10 deny host 192.168.10.10</b>.  </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> las instrucciones no se pueden sobrescribir con el mismo número de secuencia que el de una instrucción existente. Primero se debe eliminar la instrucción actual y, luego, se puede agregar la nueva.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: </b>Verifique los cambios mediante el comando <b>show access-lists</b>.</p>
+          <p></p>
+          <p>Como se mencionó anteriormente, el IOS de Cisco implementa una lógica interna en las listas de acceso estándar. Es posible que el orden en que se introducen las ACE estándar no sea el orden en que se almacenen, se muestren o se procesen en el router. El comando <b>show access-lists</b> muestra las ACE con sus números de secuencia.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el proceso de editar A.C.L. numeradas mediante números de secuencia.  La figura comienza en el modo de configuración global y el primer comando crea la A.C.L.  Este comando es access guión list uno deny host 192 punto 168 punto 10 punto 99.  El siguiente comando access guión list 1 permit 192 punto 168 punto cero punto cero cero punto cero punto 255 punto 255.  El contenido de la A.C.L se muestra mediante el comando show access guión lists. En la ilustración se resalta la línea que es incorrecta.  Esta A.C.L se accede con el comando i.p. access guión list standard 1.  La línea se elimina mediante el comando no 10.  Una nueva línea 10 se agrega con el comando 10 deny host 192 punto 168 punto 10 punto 10.  El contenido de la A.C.L se muestra con el comando show access guión lists. En la ilustración se resalta la línea ahora corregida.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

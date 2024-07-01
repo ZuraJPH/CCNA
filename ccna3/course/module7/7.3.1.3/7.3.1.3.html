@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.3 Capítulo 7: Ajustes y solución de problemas del protocolo EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 7: Ajustes y solución de problemas del protocolo EIGRP</h1>
+        <div>
+          <p>EIGRP es uno de los protocolos de routing comúnmente utilizados en redes empresariales grandes. La modificación de características de EIGRP y la resolución de problemas son algunas de las habilidades más indispensables para un ingeniero de red dedicado a la implementación y el mantenimiento de grandes redes empresariales enrutadas que usan EIGRP.</p>
+          <p></p>
+          <p>El resumen disminuye la cantidad de entradas en las actualizaciones de routing y reduce la cantidad de entradas en las tablas de routing locales. Reduce, además, el uso del ancho de banda para las actualizaciones de routing y acelera las búsquedas en las tablas de routing. A partir de Cisco IOS versión 15.0(1)M y versión 12.2(33), el resumen automático de EIGRP para IPv4 se encuentra deshabilitado de manera predeterminada. Antes, el resumen automático se encontraba habilitado de manera predeterminada. Para habilitar el resumen automático de EIGRP, use el comando <b>auto-summary</b> en el modo de configuración del router. Utilice el comando<b> show ip protocols</b> para comprobar el estado del ⁪resumen automático. Analice la tabla de routing para comprobar que el ⁪resumen automático funcione.</p>
+          <p></p>
+          <p>EIGRP incluye automáticamente rutas resumidas a Null0 para evitar bucles de routing a destinos que se incluyen en el resumen, pero que no existen realmente en la tabla de routing. La interfaz Null0 es una interfaz virtual del IOS que constituye una ruta hacia ninguna parte, comúnmente conocida como “el limbo electrónico”. Los paquetes que vinculan una ruta con una interfaz de salida Null0 se descartan. </p>
+          <p></p>
+          <p>Un método para propagar una ruta predeterminada dentro del dominio de routing EIGRP es mediante el comando <b>redistribute static</b>. Este comando le indica a EIGRP que incluya esta ruta estática en las actualizaciones de EIGRP a otros routers. El comando <b>show ip protocols</b> verifica que se redistribuyan las rutas estáticas dentro del dominio de routing EIGRP.</p>
+          <p></p>
+          <p>Utilice el comando <b>ip bandwidth-percent eigrp </b><i>número-as porcentaje </i>del modo de configuración de interfaz para configurar el porcentaje del ancho de banda que EIGRP puede utilizar en una interfaz.</p>
+          <p></p>
+          <p>Para configurar el porcentaje del ancho de banda que puede utilizar EIGRP para IPv6 en una interfaz, utilice el comando<b> ipv6 bandwidth-percent eigrp </b>en el modo de configuración de interfaz. Para restaurar el valor predeterminado, utilice la versión<b> no </b>de este comando.</p>
+          <p></p>
+          <p>En EIGRP, los intervalos de saludo y los tiempos de retención se pueden configurar por interfaz y no tienen que coincidir con otros routers EIGRP para establecer o mantener adyacencias.</p>
+          <p></p>
+          <p>En el caso de IP en EIGRP, el software IOS de Cisco aplica de manera predeterminada el balanceo de carga con hasta cuatro rutas de igual costo. Con el comando <b>maximum-paths</b> del modo de configuración del router, pueden mantenerse hasta 32 rutas de igual costo en la tabla de routing. </p>
+          <p></p>
+          <p>El comando <b>show ip route</b> verifica que el router haya descubierto rutas EIGRP. El comando <b>show ip protocols</b> se usa para verificar que EIGRP muestre los valores configurados actualmente.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran dos routers conectados directamente.  El router uno tiene 3 subredes: la uno setenta y dos punto dieciséis punto uno punto cero barra oblicua veinticuatro, la uno setenta y dos punto dieciséis punto dos punto cero barra oblicua veinticuatro, y la uno setenta y dos punto dieciséis punto tres punto cero barra oblicua veinticuatro.  EIGRP resumirá automáticamente estas subredes en los límites con clase de uno setenta y dos punto dieciséis punto cero punto cero barra oblicua dieciséis, ya que son subredes de una red de clase B.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

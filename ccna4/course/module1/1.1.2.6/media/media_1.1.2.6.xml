@@ -1,0 +1,187 @@
+<textcomponents><!--slide 1--><component id='ID_s1_inst'>
+	<text><![CDATA[<b>Actividad: Identificar la terminología de WAN (parte 1)</b>]]></text>
+</component>
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucción]]></text>
+</component>
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Una el término WAN con la definición. Haga clic en el botón 2 para continuar la actividad.]]></text>
+</component>
+
+<component id='ID_header01'>
+	<text><![CDATA[Definición]]></text>
+</component>
+
+<component id='ID_header02'>
+	<text><![CDATA[Término relacionado con WAN]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[El cableado que conecta el CPE a la CO.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[El cableado y los equipos dentro de la red del proveedor de servicios WAN.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Principalmente, proporciona una interfaz para conectar los suscriptores a un enlace de comunicación en la nube WAN.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Un dispositivo de un cliente que se conecta al bucle local a través del DCE.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Los dispositivos que son del cliente o que el cliente arrienda que se conectan a la prestadora de servicios.]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[Separa los equipos del cliente de los equipos del proveedor de servicios.]]></text>
+</component>
+
+<component id='ID_txt07'>
+	<text><![CDATA[El cableado que conecta el CPE a la CO.]]></text>
+</component>
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[<font color="#393536">Red con cargo</font>]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[<font color="#393536">Bucle local</font>]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[<font color="#393536">Equipo de terminal<br>de datos (DTE)</font>]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[<font color="#393536">Equipo de las instalaciones del cliente (CPE)</font>]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[<font color="#393536">Equipos de comunicaciones de datos (DCE)</font>]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[<font color="#393536">Punto de demarcación</font>]]></text>
+</component>
+
+<component id='ID_s1_drag07'>
+	<text><![CDATA[<font color="#393536">Oficina central (CO)</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Unió correctamente cada término relacionado con WAN con su definición. Haga clic en el botón 2 para continuar.]]></text>
+</component>
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[No unió correctamente cada término relacionado con WAN con su definición. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--slide 2--><component id="ID_s2_inst">
+<text><![CDATA[<b>Actividad: Identificar la terminología de WAN (parte 2)</b>]]></text>
+</component>
+
+<component id='ID_s2_instr_title'>
+	<text><![CDATA[Instrucción]]></text>
+</component>
+<component id='ID_s2_instr_body'>
+	<text><![CDATA[Identifique los dispositivos WAN y arrastre los nombres a los espacios proporcionados en el gráfico.]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[10101…]]></text>
+</component>
+
+
+<component id="ID_s2_txt04">
+<text><![CDATA[WAN]]></text>
+</component>    
+
+<component id="ID_s2_txt11">
+<text><![CDATA[Red PSTN]]></text>
+</component>
+
+<component id="ID_s2_txt12">
+<text><![CDATA[10101…]]></text>
+</component> 
+
+<component id="ID_s2_txt14">
+<text><![CDATA[Red por cable]]></text>
+</component>
+
+<component id="ID_s2_txt16">
+<text><![CDATA[… 10101]]></text>
+</component> 
+
+<component id='ID_s2_drag01'>
+<text><![CDATA[<font color="#393536">CSU/DSU</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+<text><![CDATA[<font color="#393536">Router</font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+<text><![CDATA[<font color="#393536">Switch WAN</font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+<text><![CDATA[<font color="#393536">Cable módem</font>]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+<text><![CDATA[<font color="#393536">Módem de banda ancha</font>]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+<text><![CDATA[<font color="#393536">Servidor de acceso</font>]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+<text><![CDATA[<font color="#393536">Router núcleo</font>]]></text>
+</component>
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+<text><![CDATA[Identificó correctamente los dispositivos WAN.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+<text><![CDATA[No identificó correctamente los dispositivos WAN. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+<text><![CDATA[Restablecer]]></text>
+</component>
+
+</textcomponents>

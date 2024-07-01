@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.1 Descripción general de PVST+ rápido</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Descripción general de PVST+ rápido</h1>
+        <div>
+          <p>RSTP (IEEE 802.1w) es una evolución del estándar 802.1D original y se incorpora al estándar IEEE 802.1D-2004. La terminología de STP 802.1w sigue siendo fundamentalmente la misma que la de STP IEEE 802.1D original. La mayoría de los parámetros no se modificaron, de modo que los usuarios que están familiarizados con STP pueden configurar el nuevo protocolo con facilidad. PVST+ rápido es la implementación que hace Cisco de RSTP por VLAN. Se ejecuta una instancia de RSTP independiente para cada VLAN. </p>
+          <p></p>
+          <p>En la ilustración, se muestra una red que ejecuta RSTP. El S1 es el puente raíz con dos puertos designados en estado de reenvío. RSTP admite un nuevo tipo de puerto. El puerto F0/3 de S2 es un puerto alternativo en estado de descarte. Observe que no existen puertos bloqueados. RSTP no posee el estado de puerto de bloqueo. RSTP define los estados de puertos como de descarte, aprender o enviar. </p>
+          <p></p>
+          <p>RSTP aumenta la velocidad de recálculo del árbol de expansión cuando cambia la topología de la red de la Capa 2. RSTP puede lograr una convergencia mucho más rápida en una red configurada en forma adecuada, a veces sólo en unos pocos cientos de milisegundos. RSTP redefine los tipos de puertos y sus estados. Si un puerto está configurado como puerto alternativo o de respaldo, puede cambiar automáticamente al estado de reenvío sin esperar a que converja la red. A continuación se describen brevemente las características de RSTP:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>RSTP es el protocolo preferido para evitar los bucles de Capa 2 en un entorno de red conmutada. La mayoría de las diferencias se establecieron con las mejoras del estándar 802.1D original exclusivas de Cisco. Estas mejoras, como las BPDU que transportan y envían información acerca de las funciones de los puertos sólo a los switches vecinos, no requieren configuración adicional y por lo general poseen un mejor rendimiento que las versiones anteriores propiedad de Cisco. Ahora son transparentes y están integradas al funcionamiento del protocolo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las mejoras al estándar 802.1D original exclusivas de Cisco, como UplinkFast y BackboneFast, no son compatibles con RSTP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RSTP (802.1w) reemplaza al estándar 802.1D original y, al mismo tiempo, mantiene la compatibilidad con versiones anteriores. Se mantiene la mayor parte de la terminología del estándar 802.1D original, y la mayoría de los parámetros no se modificaron. Además, 802.1w se puede revertir al estándar 802.1D antiguo para interoperar con switches antiguos por puerto. Por ejemplo, el algoritmo de árbol de expansión de RSTP elige un puente raíz de la misma forma que lo hace el estándar 802.1D original. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RSTP mantiene el mismo formato de BPDU que el estándar IEEE 802.1D original, excepto que el campo de la versión está establecido en 2 para indicar el protocolo RSTP y el campo de los indicadores utiliza los 8 bits. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RSTP puede confirmar de manera activa que un puerto puede hacer una transición segura al estado de reenvío sin depender de ninguna configuración de temporizadores.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres switches, todos interconectados.  El switch uno está marcado como puente raíz y todos sus puertos son puertos designados y en modo de reenvío.  Los puertos de los switches dos y tres están marcados como raíz, designados y alternativos según corresponda.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

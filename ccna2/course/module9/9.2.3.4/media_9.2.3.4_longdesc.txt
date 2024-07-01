@@ -1,0 +1,1 @@
+En la figura número uno se muestra la salida del comando "show i. p. nat translations". En la figura número dos se muestran las salidas de los comandos "clear i. p. nat statistics" y "show i. p. nat statistics".

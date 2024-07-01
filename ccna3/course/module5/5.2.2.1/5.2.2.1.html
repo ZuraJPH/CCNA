@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.1 Tecnologías vector distancia</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tecnologías vector distancia</h1>
+        <div>
+          <p>Los protocolos de routing vector distancia comparten actualizaciones entre vecinos. Los vecinos son routers que comparten un enlace y que están configurados para usar el mismo protocolo de routing. El router sólo conoce las direcciones de red de sus propias interfaces y las direcciones de red remota que puede alcanzar a través de sus vecinos. Los routers que utilizan el routing vector distancia no tienen información sobre la topología de la red.</p>
+          <p>Algunos protocolos de routing vector distancia envían actualizaciones periódicas. Por ejemplo, RIP envía una actualización periódica a todos sus vecinos cada 30 segundos; RIP lo hace incluso si la topología no ha cambiado. RIPv1 envía estas actualizaciones como difusiones a la dirección IPv4 255.255.255.255 de todos los hosts.</p>
+          <p>La difusión de actualizaciones periódicas es ineficiente debido a que las actualizaciones consumen ancho de banda y recursos de CPU del dispositivo de red. Cada dispositivo de red debe procesar un mensaje de difusión. En lugar de usar difusiones como RIP, RIPv2 y EIGRP puede utilizar direcciones de multidifusión para comunicarse solo con routers vecinos específicos. EIGRP también puede utilizar un mensaje de unidifusión para comunicarse con un router vecino específico. Además, EIGRP envía una actualización solo cuando se la necesita, en lugar de hacerlo de forma periódica. </p>
+          <p>Como se muestra en la ilustración, los dos protocolos de routing vector distancia IPv4 modernos son RIPv2 y EIGRP. RIPv1 e IGRP se incluyen solamente por motivos de precisión histórica. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura resalta los siguientes protocolos de routing de vector distancia, RIP versión 1, RIP versión 2, IGRP y EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

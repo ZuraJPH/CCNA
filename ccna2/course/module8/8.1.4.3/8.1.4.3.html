@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.4.3 Depuración de DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Depuración de DHCPv4</h1>
+        <div>
+          <p>En los routers configurados como servidores de DHCPv4, el proceso DHCPv4 falla si el router no recibe solicitudes del cliente. A modo de tarea de resolución de problemas, verifique que el router reciba la solicitud de DHCPv4 del cliente. Este paso de la resolución de problemas comprende la configuración de una ACL para el resultado de la depuración.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Si bien puede copiar la ACL extendida que se muestra en la figura y utilizarla para filtrar los mensajes DHCP, la configuración de las ACL extendidas excede el alcance de este curso.</p>
+          <p></p>
+          <p>En la ilustración, se muestra una ACL extendida que permite solamente paquetes con puertos de destino UDP de 67 o 68. Estos son los puertos típicos que utilizan los clientes y los servidores de DHCPv4 al enviar mensajes DHCPv4. La ACL extendida se utiliza con el comando <b>debug ip packet</b> para mostrar solamente los mensajes DHCPv4.</p>
+          <p></p>
+          <p>En el resultado que aparece en la ilustración, se muestra que el router recibe solicitudes de DHCP del cliente. La dirección IP de origen es 0.0.0.0, debido a que el cliente aún no tiene una dirección IP. El destino es 255.255.255.255, debido a que el mensaje de detección de DHCP del cliente se envía como difusión. En este resultado, solo se muestra un resumen del paquete, y no el mensaje DHCPv4 en sí. Sin embargo, el router recibió un paquete de difusión con los puertos UDP e IP de origen y destino adecuados para DHCPv4. En el resultado de depuración completo, se muestran todos los paquetes en las comunicaciones DHCPv4 entre el cliente y el servidor de DHCPv4.</p>
+          <p></p>
+          <p>Otro comando útil para llevar a cabo la resolución de problemas del funcionamiento de DHCPv4 es el comando <b>debug ip dhcp server events</b>. Este comando informa eventos del servidor, como asignaciones de direcciones y actualizaciones de bases de datos. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una ACL extendida que permite solamente paquetes con puertos de destino UDP 67 o 68.  El primer comando es access-list 100 permit udp any eq 67.  La segunda línea de la ACL es access-list 100 permit udp any eq 68.  La figura luego ejecuta el comando debug ip packet 100.  Esto se utiliza para ver la actividad que coincide con la ACL 100, que es la ACL configurada para permitir DHCP.  La figura muestra que el router recibe dos paquetes de difusión de la ip de origen 255.255.255.255, que son solicitudes de DHCP.  El último comando de la figura es debug ip dhcp server events.  Este comando informa sobre eventos del servidor. En la figura se muestra la actividad de DHCP en el servidor.  Esta actividad incluye una dirección IP que se devuelve al conjunto y una dirección IP que se asigna.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

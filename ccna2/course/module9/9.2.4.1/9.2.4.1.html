@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.4.1 Reenvío de puertos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Reenvío de puertos</h1>
+        <div>
+          <p>El reenvío a puerto asignado consiste en reenviar tráfico direccionado a un puerto de red específico de un nodo de red a otro. Esta técnica permite que un usuario externo alcance un puerto en una dirección IPv4 privada (dentro de una LAN) desde el exterior a través de un router con NAT habilitada. </p>
+          <p></p>
+          <p>En general, las operaciones y los programas peer-to-peer para compartir archivos, como las aplicaciones de servidores web y los FTP salientes, requieren que los puertos de router se reenvíen o se abran para permitir que estas aplicaciones funcionen, como se muestra en la figura 1. Debido a que NAT oculta las direcciones internas, la comunicación peer-to-peer solo funciona desde adentro hacia fuera donde NAT puede asignar las solicitudes salientes a las respuestas entrantes. </p>
+          <p></p>
+          <p>El problema es que NAT no permite las solicitudes iniciadas desde el exterior. Esta situación se puede resolver de forma manual. El reenvío de puertos se puede configurar para identificar los puertos específicos que se pueden reenviar a los hosts internos.</p>
+          <p></p>
+          <p>Recuerde que las aplicaciones de software de Internet interactúan con los puertos de usuario que necesitan estar abiertos o disponibles para dichas aplicaciones. Las distintas aplicaciones usan puertos diferentes. Esto hace que las aplicaciones y los routers identifiquen los servicios de red de manera predecible. Por ejemplo, HTTP funciona a través del puerto bien conocido 80. Cuando alguien introduce la dirección <b>http://cisco.com</b>, el explorador muestra el sitio web de Cisco Systems, Inc. Tenga en cuenta que no es necesario especificar el número de puerto HTTP para la solicitud de página, ya que la aplicación asume que se trata del puerto 80. </p>
+          <p></p>
+          <p>Si se requiere un número de puerto diferente, se puede agregar al URL separado por dos puntos (:). Por ejemplo, si el servidor web escuchara en el puerto 8080, el usuario escribiría <b>http://www.ejemplo.com:8080</b>.</p>
+          <p></p>
+          <p>El reenvío de puertos permite que los usuarios en Internet accedan a los servidores internos mediante el uso de la dirección de puerto de WAN del router y del número de puerto externo que coincida. En general, los servidores internos se configuran con direcciones IPv4 privadas definidas en RFC 1918. Cuando se envía una solicitud a la dirección IPv4 del puerto de WAN a través de Internet, el router reenvía la solicitud al servidor correspondiente en la LAN. Por motivos de seguridad, los routers de banda ancha no permiten que se reenvíe ninguna solicitud de redes externas a un host interno de manera predeterminada. </p>
+          <p></p>
+          <p>En la figura 2, se muestra al propietario de una pequeña empresa que utiliza un servidor del punto de venta (PoS) para hacer un seguimiento de las ventas y los inventarios en la tienda. Se puede acceder al servidor desde la tienda pero, debido a que tiene una dirección IPv4 privada, no es posible acceder a este de manera pública desde Internet. Habilitar el router local para el reenvío de puertos permitiría que el propietario acceda al servidor del punto de venta en cualquier lugar desde Internet. El reenvío de puertos en el router se configura con el número de puerto de destino y la dirección IPv4 privada del servidor del punto de venta. Para acceder al servidor, el software de cliente utilizaría la dirección IPv4 pública del router y el puerto de destino del servidor.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra una nube con tres servidores a la izquierda y una PC a la derecha.  Pueden verse tres flechas que se dirigen desde la PC hasta cada servidor.  El servidor de arriba es un telnet, el del medio es FTP, y el servidor es web. En la figura número dos se muestra un router SOHO con una red interna a la izquierda y una red externa a la derecha. En la figura se ilustra a un usuario que está enviando datos por la red externa, el router SOHO y la red interna a un servidor POS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

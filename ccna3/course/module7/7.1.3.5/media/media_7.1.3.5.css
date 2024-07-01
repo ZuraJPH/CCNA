@@ -1,0 +1,32 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+#dnd_1_drag_0_0 div,#dnd_1_drag_1_0 div,#dnd_1_drag_2_0 div,#dnd_1_drag_3_0 div,
+#dnd_2_drag_0_0 div,#dnd_2_drag_1_0 div,#dnd_2_drag_2_0 div,#dnd_2_drag_3_0 div,
+#dnd_3_drag_0_0 div,#dnd_3_drag_1_0 div,#dnd_3_drag_2_0 div,#dnd_3_drag_3_0 div
+{text-align:left ! important;padding-left:10px}
+
+#ID_s1_INCORRECT_TITLE,#ID_s1_CORRECT_TITLE,#ID_s2_INCORRECT_TITLE,#ID_s2_CORRECT_TITLE,#ID_s3_INCORRECT_TITLE,#ID_s3_CORRECT_TITLE
+{
+	margin-top: -13px;
+}
+
+
+@media only screen and (device-width: 768px) {
+#ID_s4_INCORRECT_TITLE,#ID_s4_CORRECT_TITLE,#ID_s2_INCORRECT_TITLE,#ID_s2_CORRECT_TITLE,#ID_s3_INCORRECT_TITLE,#ID_s3_CORRECT_TITLE
+{
+	margin-top: -13px;
+}
+}

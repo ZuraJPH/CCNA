@@ -1,0 +1,1 @@
+La figura muestra tres enlaces PPP entre dos routers, cada uno resalta una opción diferente de configuración.  La primera figura muestra opciones de autenticación PAP y CHAP.  La segunda figura muestra la opción de compresión. La tercera figura muestra la opción de configuración multienlace.

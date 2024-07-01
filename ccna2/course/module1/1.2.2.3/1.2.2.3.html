@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.3 Equilibrio de carga</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Equilibrio de carga</h1>
+        <div>
+          <p>¿Qué sucede si una tabla de routing tiene dos o más rutas con métricas idénticas hacia la misma red de destino? </p>
+          <p></p>
+          <p>Cuando un router tiene dos o más rutas hacia un destino con métrica del mismo costo, el router reenvía los paquetes usando ambas rutas por igual. Esto se denomina “balanceo de carga de mismo costo”. La tabla de routing contiene la única red de destino pero tiene varias interfaces de salida, una para cada ruta de mismo costo. El router reenvía los paquetes utilizando las distintas interfaces de salida que se indican en la tabla de routing. </p>
+          <p></p>
+          <p>Si está configurado correctamente, el balanceo de carga puede aumentar la efectividad y el rendimiento de la red. El balanceo de carga de mismo costo puede configurarse para usar tanto protocolos de enrutamiento dinámico como rutas estáticas. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> solo EIGRP admite el balanceo de carga con distinto costo.</p>
+          <p></p>
+          <p>En la animación de la ilustración, se proporciona un ejemplo de balanceo de carga de mismo costo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa una animación de equilibrio de carga de mismo costo a cargo de los routers.  La red que se muestra tiene cuatro routers conectados en un patrón cuadrado con cada router en una esquina y un único enlace en cada uno de los cuatro lados.  Una computadora conectada al router en la esquina superior izquierda envía datos a una computadora conectada en la esquina inferior derecha.  Al ser un cuadrado hay dos rutas para los datos, y con un equilibrio de carga idéntico alrededor de la mitad de los datos se envía a través de cada una de las dos rutas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

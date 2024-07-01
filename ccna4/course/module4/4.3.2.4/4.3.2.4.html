@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.4 Ejemplos de ACL de IPv6 </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de ACL de IPv6 </h1>
+        <div>
+          <p>
+            <b>Denegar FTP</b>
+          </p>
+          <p></p>
+          <p>La topología para los ejemplos se muestra en la figura 1.</p>
+          <p></p>
+          <p>En el primer ejemplo (figura 2), el router R1 está configurado con una lista de acceso IPv6 para denegar el tráfico FTP a 2001:DB8:CAFE:11::/64. Se deben bloquear los puertos para los datos FTP (puerto 20) y el control FTP (puerto 21). Como se aplica un filtro entrante en la interfaz G0/0 de R1, solo se denegará el tráfico de la red 2001:DB8:CAFE:10::/64.</p>
+          <p></p>
+          <p>
+            <b>Acceso restringido</b>
+          </p>
+          <p></p>
+          <p>En el segundo ejemplo (figura 3), se configura una ACL IPv6 para proporcionar a la red LAN en R3 acceso limitado a las redes LAN en R1. Se agregan comentarios en la configuración para documentar la ACL. Se marcaron las siguientes características en la ACL:</p>
+          <p></p>
+          <p>1. Las primeras dos instrucciones permit proporcionan acceso desde cualquier dispositivo al servidor web en 2001:DB8:CAFE:10::10. </p>
+          <p></p>
+          <p>2. El resto de los dispositivos tienen denegado el acceso a la red 2001:DB8:CAFE:10::/64.</p>
+          <p></p>
+          <p>3. A la PC3 en 2001:DB8:CAFE:30::12 se le permite el acceso por Telnet a la PC2, que tiene la dirección IPv6 2001:DB8:CAFE:11::11.</p>
+          <p></p>
+          <p>4. El resto de los dispositivos tiene denegado el acceso por Telnet a la PC2.</p>
+          <p></p>
+          <p>5. El resto del tráfico IPv6 se permite al resto de los destinos.</p>
+          <p></p>
+          <p>6. La lista de acceso de IPv6 se aplica a la interfaz G0/0 en sentido de entrada, por lo que solo la red 2001:DB8:CAFE:30::/64 se ve afectada.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la topología de referencia para las listas ACL IPv6. La figura 2 muestra los comandos utilizados para crear una ACL que deniega FTP.  Los comandos comienzan en el modo de configuración global. El primer comando es: ipv6 access guion list no guion ftp guion to guion 11.  Este comando crea la ACL IPv6 con nombre.  Los dos comandos siguientes deniegan el protocolo FTP y son: deny tcp any 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos barra diagonal 64 eq ftp, y deny tcp any 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos barra diagonal 64 eq ftp guion data.  El siguiente comando permite todo el resto del tráfico de datos y el comando es: permit ipv6 any any.  El primer comando pasa a la interfaz correspondiente con el comando interface gigabit Ethernet cero barra diagonal cero.  El último comando aplica la ACL a la interfaz y es: ipv6 traffic guion filter no guion ftp guion to guion 11 in. La figura 3 muestra un ejemplo detallado de una ACL utilizada para restringir el acceso.  Primero, se crea una ACL con el comando: ipv6 access guion list restricted guion access.  Luego, se ingresa un comentario con el comando: remark permit access only http and https to network.  A continuación, las dos instrucciones de permiso siguientes: permit tcp any host 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 0 dos puntos dos puntos 10 eq 80 y el comando permit tcp any host 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 0 dos puntos dos puntos 10 eq 443.  A estas dos líneas se hace referencia en el comentario 1 en el texto.  El comentario 2 del texto se refiere al comando: deny ipv6 any 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 0 dos puntos dos puntos barra diagonal 64.  Esto bloquea todo el resto del tráfico.  El comentario 3 en el texto es para el comando: permit tcp host 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 3 0 dos puntos dos puntos 12 host 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos 11 eq 23.  Esta línea permite el acceso de una computadora específica a otra computadora específica.  El comentario 4 del texto se refiere al comando: deny tcp any host 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos 11 eq 23.  Esta linea bloquea todo el resto del tráfico de Telnet.  Todo el resto del tráfico ip se permite con el comando: permit ipv6 any any.  El último comentario es el número 5 y es para el comando: ipv6 traffic guion filter restricted guion acess in. Esta línea aplica la ACL IPv6 con nombre a la interfaz gigabit Ethernet cero barra diagonal cero en sentido entrante.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

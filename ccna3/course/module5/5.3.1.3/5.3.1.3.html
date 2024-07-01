@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.3 Ejemplo de SPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplo de SPF</h1>
+        <div>
+          <p>En la tabla de la figura 1, se muestra la ruta más corta y el costo acumulado para llegar a las redes de destino identificadas desde la perspectiva del R1.</p>
+          <p></p>
+          <p>La ruta más corta no es necesariamente la ruta con la menor cantidad de saltos. Por ejemplo, observe la ruta hacia la LAN R5. Podría suponerse que el R1 realizaría el envío directamente al R4 en lugar de al R3. Sin embargo, el costo para llegar a R4 directamente (22) es más alto que el costo para llegar a R4 a través de R3 (17).</p>
+          <p></p>
+          <p>Observe la ruta más corta para que cada router llegue a cada una de las LAN, como se muestra en las figuras 2 a 5.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio y está conectado a dos de los otros routers.  La figura tiene costos de enlace en cada enlace entre routers. Hay un cuadro en la figura que indica cómo hace R1 para comunicarse con las redes locales en cada uno de los otros cuatro routers, y el costo total.  El propósito del cuadro es demostrar que la mejor ruta, cuando se utiliza el algoritmo Primero la ruta más corta de Dijkstra, no siempre tiene la menor cantidad de routers.  Por ejemplo, para que el router R1 envíe datos a la LAN, en el router conectado directamente, R4, hay dos rutas. Una es una ruta directa con un costo de 20 y la otra es una ruta que atraviesa el router R3 con un costo de 5, más el costo de R3 a R4 de 10.  El costo total de atravesar R3 es 15.  Por lo tanto, la mejor opción es atravesar el router R3 primero, debido a su costo total.  La figura dos muestra el gráfico de SPF para el router R2. La figura tres muestra el gráfico de Primero la ruta más corta para el router R3. La figura cuatro muestra el gráfico de Primero la ruta más corta para el router R4. La figura cinco muestra el gráfico de Primero la ruta más corta para el router R5.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

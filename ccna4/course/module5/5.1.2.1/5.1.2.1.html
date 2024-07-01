@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.1 Protección de la LAN</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protección de la LAN</h1>
+        <div>
+          <p>Según lo indicado al comienzo de este capítulo, la seguridad es tan sólida como el eslabón más débil del sistema, y la capa 2 se considera el enlace más débil. Por lo tanto, deben implementarse soluciones de seguridad de capa 2 para proteger la red. </p>
+          <p></p>
+          <p>Muchos protocolos de administración de red como Telnet, syslog, SNMP, TFTP, y FTP no son seguros. Hay varias estrategias para proteger la Capa 2 de la red:</p>
+          <p>
+            <ul>
+              <li>Usar siempre variantes seguras de estos protocolos, como SSH, SCP, SSL, SNMPv3 y SFTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Usar siempre contraseñas sólidas y cambiarlas a menudo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Habilitar CDP solo en ciertos puertos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Proteger el acceso de Telnet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Usar una VLAN de administración dedicada que solo aloje el tráfico de administración.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Usar ACL para filtrar el acceso no deseado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figura resalta cuatro soluciones de seguridad de switches de Cisco para mitigar los ataques de capa 2.</p>
+          <p></p>
+          <p>Este tema cubre varias soluciones de seguridad de Capa 2:</p>
+          <p>
+            <ul>
+              <li>Mitigación de ataques de saturación de tablas de direcciones MAC mediante seguridad de puertos</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mitigación de ataques de VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mitigación de ataques de DHCP mediante detección de DHCP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protección del acceso administrativo con AAA </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protección de acceso a dispositivos con autenticación de puertos 802.1X</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La protección de IP de origen (IPSG) y la inspección dinámica de ARP (DAI) son soluciones de seguridad de switch avanzadas que se analizan en el curso de Seguridad CCNA (CCNA Security). </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una pirámide con botones interactivos que describen las maneras de mitigar los ataques de capa 2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

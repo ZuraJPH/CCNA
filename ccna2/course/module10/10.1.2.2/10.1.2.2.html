@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.2 Configuración y verificación del LLDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración y verificación del LLDP</h1>
+        <div>
+          <p>En algunos dispositivos, el LLDP podría estar activado de manera predeterminada. Para habilitar LLDP a nivel global en un dispositivo de red Cisco, ingrese el comando <b>lldp run</b> en el modo de configuración global. Para deshabilitar el LLDP, ingrese el comando <b>no lldp run</b> en el modo de configuración global.</p>
+          <p></p>
+          <p>Al igual que el CDP, el LLDP se puede configurar en interfaces específicas. Sin embargo, LLDP se debe configurar individualmente para transmitir y recibir paquetes LLDP, tal como se indica en la Figura 1.</p>
+          <p></p>
+          <p>Para verificar que LLDP ya se haya habilitado en el dispositivo, ingrese el comando <b>show lldp</b> en el modo EXEC con privilegios.</p>
+          <p></p>
+          <p>Utilice el Verificador de la sintaxis de la Figura 2 para practicar la configuración y verificación de LLDP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa la línea de comandos que muestra primero que LLDP se habilita a nivel global con el comando 'lldp run'. Luego, en la interfaz g0/1, se ingresan los comandos 'lldp transmit' y 'lldp receive'. Finalmente, se muestra la salida del comando 'show lldp', en la que se indica que LLDP está activo y que envía actualizaciones cada 30 segundos, con un tiempo de retención de 120 segundos y una demora de reinicialización de interfaz de 2 segundos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

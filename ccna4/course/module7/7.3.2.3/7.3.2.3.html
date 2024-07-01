@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.2.3 Componentes principales de ACI</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Componentes principales de ACI</h1>
+        <div>
+          <p>Estos son los tres componentes principales de la arquitectura de ACI:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Perfil de aplicación de red (ANP)</b>: Un ANP es una colección de grupos de terminales (EPG) con sus conexiones y las políticas que definen dichas conexiones. Los EPG que se muestran en la figura, como VLAN, servicios web y aplicaciones, son solo ejemplos. Un ANP es con frecuencia mucho más complejo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Controlador de infraestructura de política de aplicación (APIC)</b>: El APIC se considera el cerebro de la arquitectura de ACI. El APIC es un controlador centralizado de software que administra y opera una estructura agrupada ACI escalable. Está diseñado para la programabilidad y la administración centralizada. Traduce las políticas de las aplicaciones a la programación de la red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Switches de la serie 9000 de Cisco Nexus</b>: Estos switches proporcionan una estructura de switching con reconocimiento de aplicaciones y operan con un APIC para administrar la infraestructura virtual y física de la red.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, el APIC se ubica entre el APN y la infraestructura de red habilitada con ACI. El APIC traduce los requisitos de aplicaciones a una configuración de red para cumplir con esas necesidades.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Esta figura muestra el marco de trabajo de ACI. En la parte inferior de la figura hay un conjunto de switches de multicapa interconectados. Sobre el switch de multicapa está la palabra APIC con los símbolos de un reloj, una alarma, un candado y una persona. Sobre APIC hay una serie de rectángulos que representan el perfil de aplicación de red. Los cuadros están rotulados como contrato de cliente o abonado, VLAN, VMware, servicios web, aplicación y base de datos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

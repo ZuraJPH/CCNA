@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.5 Verificación del resumen automático: tabla de topología</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación del resumen automático: tabla de topología</h1>
+        <div>
+          <p>Las tablas de routing del R1 y el R2 contienen las subredes de la red 172.16.0.0/16. Por lo tanto, como se ilustra en la figura 1, ambos routers publican la ruta resumida 172.16.0.0/16 al R3.</p>
+          <p></p>
+          <p>Use el comando <b>show ip eigrp topology all-links</b> para ver todas las rutas EIGRP entrantes, como se muestra en la figura 2. El resultado comprueba que el R3 recibió la ruta resumida 172.16.0.0/16 tanto del R1 (192.168.10.5) como del R2 (192.168.10.9). Observe que se ha seleccionado solo un sucesor. Este sería el enlace al R1 debido a su ancho de banda de la interfaz más rápido. </p>
+          <p></p>
+          <p>La opción <b>all-links</b> muestra todas las actualizaciones recibidas, incluidas las rutas del sucesor factible (FS). En esta instancia, el R2 se considera un FS debido a que la distancia notificada (RD) de 2816 es menor que la distancia factible (FD) de 2 170 112 a través del R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar.  Tanto el router uno como el router dos resumen la interfaz setenta y dos punto dieciséis punto cero punto cero barra oblicua dieciséis y la anuncia al router tres. En la figura dos, se muestra el resultado generado por el comando "show i. p. e. i. g. r. p. topology all guion links" en el router tres. Esto demuestra que el router tres aprendió una ruta hacia la red setenta y dos punto dieciséis punto cero punto cero a través de dos fuentes.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

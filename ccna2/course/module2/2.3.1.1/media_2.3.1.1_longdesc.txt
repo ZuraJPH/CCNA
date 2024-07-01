@@ -1,0 +1,1 @@
+Esta animación muestra el diagrama estándar del laboratorio.  Cuando haga clic en reproducir, un paquete viajará de PC 1 a PC 3.

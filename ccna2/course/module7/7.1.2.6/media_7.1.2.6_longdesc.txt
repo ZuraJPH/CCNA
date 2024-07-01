@@ -1,0 +1,1 @@
+La ilustración es un elemento interactivo que permite que el estudiante determine la máscara wildcard correcta para una declaración determinada de A.C.L.

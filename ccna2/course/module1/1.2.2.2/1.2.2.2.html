@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.2 El mejor camino</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>El mejor camino</h1>
+        <div>
+          <p>La determinación de la mejor ruta implica la evaluación de varias rutas hacia la misma red de destino y la selección de la ruta óptima o la más corta para llegar a esa red. Cuando existen varias rutas hacia la misma red, cada ruta utiliza una interfaz de salida diferente en el router para llegar a esa red. </p>
+          <p></p>
+          <p>El mejor camino es elegido por un protocolo de enrutamiento en función del valor o la métrica que usa para determinar la distancia para llegar a esa red. Una métrica es un valor cuantitativo que se utiliza para medir la distancia que existe hasta una red determinada. El mejor camino a una red es la ruta con la métrica más baja.</p>
+          <p></p>
+          <p>Los protocolos de enrutamiento dinámico generalmente usan sus propias reglas y métricas para construir y actualizar las tablas de enrutamiento. El algoritmo de enrutamiento genera un valor, o una métrica, para cada ruta a través de la red. Las métricas se pueden calcular sobre la base de una sola característica o de varias características de una ruta. Algunos protocolos de enrutamiento pueden basar la elección de la ruta en varias métricas, combinándolas en un único valor métrico. </p>
+          <p></p>
+          <p>A continuación, se indican algunos protocolos dinámicos y las métricas que utilizan:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de información de routing (RIP):</b> conteo de saltos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo OSPF (Open Shortest Path First):</b> el costo de Cisco según el ancho de banda acumulativo de origen a destino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de routing de gateway interior mejorado (EIGRP):</b> ancho de banda, retraso, carga, confiabilidad.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la animación de la ilustración, se destaca cómo la ruta puede ser diferente según la métrica que se utiliza. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación que muestra la diferencia entre el conteo de saltos y el ancho de banda como métrica de enrutamiento.  La figura muestra una computadora que envía un paquete de datos a una computadora de destino y hay tres routers que están formando una malla completa, que brinda dos rutas posibles para los datos.  Una ruta está utilizando una línea de 56 kbps y usa un router.  La otra ruta tiene dos routers, y cada enlace es un enlace T-1 de 1544 Mbps.  Cuando se utiliza el conteo de saltos como métrica, el paquete viaja por la primera ruta a través de un router.  Al utilizar el ancho de banda como la métrica, el paquete seguirá los dos enlaces T-1 porque los dos enlaces T-1 es una ruta más rápida que el un enlace de 56 k.b.p.s.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

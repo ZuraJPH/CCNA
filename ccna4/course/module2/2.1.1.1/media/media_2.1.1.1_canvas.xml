@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide type="MBAR">
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <slide>
+            <element type="IMAGE" src="media_2.1.1.1.s1.png" x="0" y="0" width="680" height="490" />
+            <element type="TEXT" compId="ID_s1_txt01" x="277.6" y="203.35" width="122.55" expand="up+down" align="center" />
+            <element type="TEXT" compId="ID_s1_txt02" x="81.35" y="233.65" width="45" expand="down" align="center" />
+            <element type="TEXT" compId="ID_s1_txt03" x="265.65" y="256.85" width="150.35" expand="down" align="center" />
+            <element type="TEXT" compId="ID_s1_txt04" x="553.75" y="233.65" width="45" expand="down" align="center" />
+            <element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+        </slide>
+        <slide>
+            <element type="TEXT" subType="TITLE" compId="ID_s2_title" />
+            <element type="ACTIVITY" subType="ANIMATION" movieClipId="anim02" totalFrames="643" />
+             <element type="TEXT" compId="ID_s2_txt01" x="21.3" y="99.5" width="120" expand="up+down" align="right" />
+            <element type="TEXT" compId="ID_s2_txt02"  x="21.3" y="293" width="120"  expand="up+down" align="right" />
+            <element type="TEXT" compId="ID_s2_txt03"  x="558.7" y="68.5" width="75"  expand="down" align="center" />
+            <element type="TEXT" compId="ID_s2_txt04"  x="558.7" y="263.25" width="75"  expand="down" align="center" />
+             <element type="TEXT" compId="ID_s2_txt05"  x="155.3" y="58.2" width="95"  expand="left+right" align="center" />
+            <element type="TEXT" compId="ID_s2_txt06"  x="428.75" y="58.2" width="95"  expand="left+right" align="center" />
+            <element type="TEXT" compId="ID_s2_txt07"  x="155.3" y="189.3" width="95"  expand="left+right" align="center" />
+            <element type="TEXT" compId="ID_s2_txt08"  x="428.75" y="189.3" width="95"  expand="left+right" align="center" />
+        </slide>
+    </slide>
+</data>

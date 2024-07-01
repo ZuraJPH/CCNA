@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.3 DMVPN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>DMVPN</h1>
+        <div>
+          <p>La VPN dinámica multipunto (DMVPN) es una solución de Cisco para crear VPN múltiples de forma fácil, dinámica y escalable. El objetivo es simplificar la configuración y conectar los sitios de la oficina central con facilidad y flexibilidad con las sucursales. Esto se denomina "concentrador a radio", como se muestra en la Figura 1.</p>
+          <p></p>
+          <p>Con los DMVPN, las sucursales también pueden comunicarse directamente con otras sucursales, como se muestra en la Figura 2.</p>
+          <p>El DMVPN se crea utilizando las siguientes tecnologías:</p>
+          <p>
+            <ul>
+              <li>Next Hop Resolution Protocol (NHRP)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Túneles de encapsulación de routing genérico multipunto (mGRE)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cifrado de protocolo de seguridad IP (IPsec)</li>
+            </ul>
+          </p>
+          <p>NHRP es un protocolo de resolución y de almacenamiento en caché de capa 2 similar al protocolo de resolución de direcciones (ARP). NHRP crea una base de datos de asignación distribuida de direcciones IP públicas para todos los radios del túnel. NHRP es un protocolo cliente-servidor que consta del concentrador de NHRP, conocido como servidor del siguiente salto (NHS), y los radios de NHRP, conocidos como clientes del siguiente salto (NHC).</p>
+          <p></p>
+          <p>Encapsulación de routing genérico (GRE) es un protocolo de túnel desarrollado por Cisco que puede encapsular una amplia variedad de tipos de paquetes de protocolo dentro de túneles IP. Una interfaz de túnel mGRE permite que una única interfaz de GRE admita túneles IPSec múltiples. Con la interfaz mGRE, se crean túneles asignados de manera dinámica a través de un origen de túnel permanente en el hub y de los destinos de túnel asignados de manera dinámica que se crean en los radios según sea necesario. Esto reduce el tamaño y simplifica la complejidad de la configuración.</p>
+          <p></p>
+          <p>Al igual que otros tipos de VPN, la DMVPN depende de IPsec para proporcionar el transporte seguro de información privada en redes públicas, como Internet.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un ejemplo de túneles DMVPN en configuración de estrella (radial). En el extremo superior de una nube se encuentra un router llamado concentrador. En otros tres puntos en el extremo de la misma nube se encuentran routers etiquetados como Radio A, Radio B y Radio C. Una línea que representa un túnel en estrella se conecta desde el router concentrador a cada uno de los 3 routers radiales.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

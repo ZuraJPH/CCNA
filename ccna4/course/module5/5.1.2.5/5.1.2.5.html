@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.5 Protección del acceso administrativo con AAA</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protección del acceso administrativo con AAA</h1>
+        <div>
+          <p>Para evitar que usuarios malintencionados obtengan acceso a equipos de red y servicios sensibles, los administradores deben habilitar el control de acceso. El control de acceso limita a las personas o los dispositivos que pueden utilizar recursos específicos. También limita los servicios o las opciones que están disponibles después de que se concede el acceso.</p>
+          <p></p>
+          <p>Existen diferentes métodos para implementar la autenticación en un dispositivo Cisco, y cada método ofrece varios niveles de seguridad. El marco de trabajo de autenticación, autorización y auditoría (AAA) se usa para proteger el acceso de los dispositivos. La autenticación de AAA puede usarse para autenticar a los usuarios para el acceso administrativo o puede usarse para autenticar a los usuarios para el acceso remoto a la red. </p>
+          <p></p>
+          <p>Cisco ofrece dos métodos comunes de implementar servicios de AAA:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Autenticación de AAA local</b>: AAA local usa una base de datos local para la autenticación. Este método se conoce a veces como autenticación autónoma. Este método almacena los nombres de usuario y las contraseñas a nivel local en el router de Cisco, y los usuarios se autentican con la base de datos local. AAA local es ideal para las redes pequeñas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Autenticación de AAA basada en servidor</b>: la autenticación de AAA basada en servidor es una solución mucho más escalable. Con el método basado en servidor, el router accede a un servidor central de AAA. El servidor de AAA tiene los nombres de usuario y las contraseñas para todos los usuarios y actúa como sistema de autenticación centralizado para todos los dispositivos de la infraestructura.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1 se muestra cómo funciona la autenticación de AAA local:</p>
+          <p>
+            <ul>
+              <li>El cliente establece una conexión con el router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El router AAA pide al usuario un nombre de usuario y una contraseña.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El router autentica el nombre de usuario y la contraseña con la base de datos local, y el usuario obtiene acceso a la red en función de la información de la base de datos local.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2 se muestra el funcionamiento de la autenticación de AAA basada en servidor:</p>
+          <p>
+            <ul>
+              <li>El cliente establece una conexión con el router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El router AAA pide al usuario un nombre de usuario y una contraseña.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El router autentica el nombre de usuario y la contraseña mediante un servidor de AAA remoto.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en la figura 3, el router habilitado por AAA usa el protocolo de sistema de control de acceso del controlador de acceso a terminales (TACACS+) o el protocolo de servicio de autenticación remota para usuarios de entrada telefónica (RADIUS) para comunicarse con el servidor de AAA. Mientras ambos protocolos pueden usarse para la comunicación entre un router y los servidores AAA, TACACS+ se considera el protocolo más seguro. Esto se debe a que se cifran todos los intercambios de protocolos TACACS+, mientras que RADIUS solo cifra la contraseña del usuario. RADIUS no cifra nombres de usuario, información de la cuenta, o cualquier otra información que contenga el mensaje de RADIUS.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Para obtener más información sobre AAA, consulte el curso de Seguridad CCNA (CCNA Security). </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una PC de cliente remoto, un router AAA con un servidor ACS de Cisco conectado. La figura 1 muestra los pasos necesarios para la autenticación de AAA local. La figura 2 muestra los pasos necesarios para la autenticación de AAA basada en servidor. La figura 3 muestra que las autenticaciones de AAA pueden usar protocolos TACACS+ o RADIUS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.5.1 Verificación de licencias</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.5.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de licencias</h1>
+        <div>
+          <p>Después de que se instala una nueva licencia, se debe reiniciar el router mediante el comando <b>reload</b>. Como se muestra en la figura 1, el comando <b>show version</b> se utiliza una vez que se vuelve a cargar el router para verificar que se instaló la licencia.</p>
+          <p></p>
+          <p>El comando <b>show license</b> de la figura 2 se utiliza para mostrar información adicional sobre las licencias del software IOS de Cisco. Este comando muestra información de licencia que se utiliza para ayudar con cuestiones de resolución de problemas relacionados con licencias del software IOS de Cisco. Este comando muestra todas las licencias instaladas en el sistema. En este ejemplo, se activaron las licencias de Seguridad y de IP Base. Este comando también muestra las características que se encuentran disponibles, pero que no tienen licencia para ejecutarse, como el conjunto de características de Datos. El resultado se agrupa según la forma en que se guardan las características en el almacenamiento de licencias.</p>
+          <p></p>
+          <p>La siguiente es una breve descripción del resultado:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Feature:</b> nombre de la característica.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>License Type:</b> tipo de licencia, como Permanent (Permanente) o Evaluation (Evaluación).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>License State:</b> estado de la licencia, como Active (Activa) o In Use (En uso). </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>License Count:</b> cantidad de licencias disponibles y en uso, si se cuentan.  Si se indica que no se cuentan, la licencia es sin restricciones. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>License Priority:</b> prioridad de la licencia, como High (Alta) o Low (Baja). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> consulte la guía de referencia de comandos del IOS de Cisco 15 para obtener detalles completos sobre la información que se muestra en el comando <b>show license</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la salida del comando "show version" en el router uno.  La característica de Seguridad está resaltada. En la figura número dos se muestra la salida del comando "show license" en el router uno.  Las diferentes características y sus respectivos tipos están resaltados.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

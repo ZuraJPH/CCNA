@@ -1,0 +1,1 @@
+La figura muestra el resultado del comando debug ipv6 dhcp detail.  La figura resalta la línea del resultado que indica que IPv6 DHCP recibió un mensaje de solicitud de un host y que IPv6 DHCP usa interface pool ipv6 guión stateful.  La figura también resalta el resultado que indica que se crea una vinculación para una dirección específica en el conjunto.

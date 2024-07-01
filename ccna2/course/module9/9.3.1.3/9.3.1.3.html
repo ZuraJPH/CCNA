@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.3.1.3 Situación de resolución de problemas en NAT</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Situación de resolución de problemas en NAT</h1>
+        <div>
+          <p>
+            <b>Caso de estudio</b>
+          </p>
+          <p>En la figura 1, se muestra que los hosts de las LAN 192.168.0.0/16, la PC1 y la PC2, no pueden hacer ping a los servidores en la red externa, el Svr1 y el Svr2.</p>
+          <p></p>
+          <p>Para iniciar la resolución de problemas, utilice el comando <b>show ip nat translations</b> a fin de verificar si actualmente hay alguna traducción en la tabla de NAT. El resultado de la figura 1 muestra que no hay traducciones en la tabla.</p>
+          <p></p>
+          <p>El comando <b>show ip nat statistics</b> se utiliza para determinar si se realizaron traducciones. También identifica las interfaces entre las que debe ocurrir la traducción. Como se muestra en el resultado de la figura 2, los contadores de NAT están en 0, lo que verifica que no se realizó ninguna traducción. Al comparar el resultado con la topología de la figura 1, observe que las interfaces del router están definidas de forma incorrecta como NAT interna o NAT externa. También es posible verificar una configuración incorrecta con el comando <b>show running-config</b>.</p>
+          <p></p>
+          <p>Se debe eliminar la configuración NAT actual de las interfaces antes de aplicar la configuración correcta.</p>
+          <p></p>
+          <p>Luego de definir correctamente las interfaces NAT interna y externa, otro ping de la PC1 al Svr1 falla. El uso de los comandos <b>show ip nat translations</b> y <b>show ip nat statistics</b> nuevamente verifica que no hay traducciones en curso.</p>
+          <p></p>
+          <p>Como se muestra en la figura 3, el comando <b>show access-lists</b> se utiliza para determinar si la ACL a la que hace referencia el comando NAT permite todas las redes necesarias. Al examinar el resultado, se comprueba que se utilizó una máscara de bits wildcard incorrecta en la ACL que define las direcciones que se deben traducir. La máscara wildcard solo permite la subred 192.168.0.0/24. Primero se elimina la lista de acceso y después se reconfigura con la máscara wildcard correcta.</p>
+          <p></p>
+          <p>Una vez corregidas las configuraciones, se genera otro ping de la PC1 al Svr1, y esta vez el ping es correcto. Como se muestra en la figura 4, los comandos <b>show ip nat translations</b> y <b>show ip nat statistics</b> se utilizan para verificar que se produzca la traducción NAT.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra el router 2 con una red interna a la izquierda y una red externa a la derecha. La red interna contiene 2 computadoras y el router uno. La red externa contiene dos servidores.  En el router dos se utiliza PAT.  Falla un ping enviado de la PC 1 al servidor. En la salida del comando "show i. p. nat translations"se indica que no hay ninguna traducción. En la figura número dos se muestra la salida del comando "show i. p. nat statistics". En la salida se revela que las interfaces internas y externas están al revés.  A continuación se indica la sintaxis para corregir este problema. En la figura número tres se muestra la salida del comando "show access dash lists".  También se indica la sintaxis para eliminar la lista y volver a crearla. En la figura número cuatro se muestran las salidas de los comandos "show i. p. nat statistics" y "show i. p. nat translations".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

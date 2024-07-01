@@ -1,0 +1,1 @@
+La figura muestra la asignación de capas del modelo de OSI y del modelo de TCPIP con protocolos en cada una de las capas correspondientes.

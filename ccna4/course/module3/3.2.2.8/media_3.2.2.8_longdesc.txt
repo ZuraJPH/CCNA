@@ -1,0 +1,1 @@
+Esta actividad de laboratorio muestra la siguiente topología: Cust1 del router se conecta al switch S1 mediante la interfaz G0/1 de Cust1 y la interfaz de switch F0/5. S1 se conecta al switch S3 mediante los puertos F0/3 en ambos switches. S3 se conecta al router del ISP mediante el puerto F0/5 del switch y el puerto G0/1 del router.

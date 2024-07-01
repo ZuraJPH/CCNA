@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.2 Modos del protocolo VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modos del protocolo VTP</h1>
+        <div>
+          <p>Un switch se puede configurar en uno de los tres modos VTP, como se describe en la figura 1.</p>
+          <p>Servidor VTP </p>
+          <p>
+            <ul>
+              <li>Un switch en este modo anuncia la información de VLAN del dominio de VTP a otros switches habilitados para VTP en el mismo dominio VTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la información de VLAN para todo el dominio en la NVRAM.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Crea, elimina o cambia los nombres de las VLAN para el dominio.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Modo predeterminado del protocolo VTP</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cliente VTP</p>
+          <p>
+            <ul>
+              <li>Un switch en este modo no puede crear, cambiar o eliminar las VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la información de VLAN para todo el dominio en la RAM.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Debe configurarse como cliente VTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>VTP transparente</p>
+          <p>
+            <ul>
+              <li>Un switch en este modo no participa en VTP, excepto para enviar publicaciones del VTP a los clientes VTP y al servidor VTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las VLAN que se crean, se eliminan o que reciben otro nombre en los switches transparentes son locales a ese switch solamente.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Debe configurarse como VTP transparente.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la tabla 2, se resume el funcionamiento de los tres modos.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Un switch que está en modo servidor o modo cliente con un número de revisión de configuración más alto que el servidor VTP existente actualiza toda la información de la VLAN en el dominio VTP. Los números de revisión de configuración se analizan más adelante en este capítulo. Cisco recomienda, como mejor práctica, implementar VTP en modo transparente para tener más control de VLAN, seguridad y capacidad de administración.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura 1, se muestran los modos del protocolo VTP. En la figura 2, se resume el funcionamiento de los tres modos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

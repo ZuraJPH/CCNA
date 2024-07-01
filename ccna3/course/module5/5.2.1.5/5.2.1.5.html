@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.5 Cómo se logra la convergencia</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cómo se logra la convergencia</h1>
+        <div>
+          <p>La convergencia de la red se produce cuando todos los routers tienen información completa y precisa acerca de toda la red, como se muestra en la figura. El tiempo de convergencia es el tiempo que los routers tardan en compartir información, calcular las mejores rutas y actualizar sus tablas de routing. Una red no es completamente operativa hasta que la red logrado la convergencia; por lo tanto, la mayoría de las redes requieren tiempos de convergencia breves. </p>
+          <p></p>
+          <p>La convergencia es cooperativa e independiente al mismo tiempo. Los routers comparten información entre sí, pero deben calcular en forma independiente los impactos del cambio de topología en sus propias rutas. Dado que establecen un acuerdo con la nueva topología en forma independiente, se dice que convergen sobre este consenso. </p>
+          <p></p>
+          <p>Las propiedades de convergencia incluyen la velocidad de propagación de la información de routing y el cálculo de los caminos óptimos. La velocidad de propagación se refiere al tiempo que tardan los routers dentro de la red en reenviar la información de routing.  </p>
+          <p></p>
+          <p>Los protocolos de routing pueden clasificarse en base a la velocidad de convergencia; cuanto más rápida sea la convergencia, mejor será el protocolo de routing. Generalmente, los protocolos más antiguos, como RIP, tienen una convergencia lenta, mientras que los protocolos modernos, como EIGRP y OSPF, la realizan más rápidamente.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la información básica en la tabla de routing para cada router.  Cada router tiene las cuatro redes en su tabla. La única diferencia entre ellos es el conteo de saltos para cada red.  R1 ve sus dos redes con un conteo de saltos de cero, el enlace WAN entre R2 y R3 se encuentra a un salto de distancia y la LAN de la interfaz Ethernet de R3 está a dos saltos de distancia.  R2 ve sus dos redes con un conteo de saltos de cero, y cada una de las redes LAN de las interfaces Ethernet de R1 y R3 a un salto de distancia.  R3 ve sus dos redes con un conteo de saltos de cero, el enlace WAN entre R2 y R1 se encuentra a un salto de distancia y la LAN de la interfaz Ethernet de R1 está a dos saltos de distancia. En la figura dos, se muestran tres routers conectados en triángulo a través de enlaces WAN seriales. Cada router está conectado a los otros dos routers.  Cada router tiene dos enlaces seriales activos más una interfaz Ethernet, y hay seis direcciones de red en total en la figura.  La convergencia es el tiempo necesario para que todos los routers tengan una imagen completa y precisa de la red en sus tablas de routing.  Si se está usando RIP en esta red y una red falla, el tiempo de convergencia sería más prolongado que para EIGRP u OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

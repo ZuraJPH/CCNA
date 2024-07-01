@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <slide
+ type="MBAR">
+        <element type="IMAGE" x="0" y="0" width="1000" height="490" src="../../../common/images/page_backgrounds/bg_activity.jpg" />
+  <slide>
+    <element type="TEXTBOX" titleId="ID_s1_instr_title" bodyId="ID_s1_instr_body" x="20" y="60" width="247" height="200" animated="0" subType="ROLLOVER" />
+    <element type="IMAGE" x="0" y="0" width="1000" height="490" src="media_4.2.2.8.png" />
+    <element type="TEXT" compId="ID_txt01" x="363" y="216" width="103.35" expand="down" align="left" class="orangeCallOut" />
+    <element type="TEXT" id="ID_static_1" text="192.168.1.66" x="287.15" y="111.15" align="center" width="67.5" />
+    <element type="TEXT" id="ID_static_2" text="192.168.1.0/24" x="287.15" y="177.6" align="center" width="78.45" />
+    <element type="TEXT" id="ID_static_3" text="LAN1" x="302.25" y="192.45" align="center" width="25.8" />
+    <element type="TEXT" id="ID_static_4" text="Fa0/0" x="442.6" y="137.7" align="center" width="28.75" />
+    <element type="TEXT" id="ID_static_5" text="S0/0/0" x="532.45" y="135.85" align="center" width="35.45" />
+    <element type="TEXT" id="ID_static_6" text="Fa0/1" x="505.5" y="180.45" align="center" width="27" />
+    <element type="TEXT" id="ID_static_7" text="192.168.2.0/24" x="467.6" y="206.25" align="center" width="78.45" />
+    <element type="TEXT" id="ID_static_8" text="LAN2" x="487.25" y="219.8" align="center" width="27.45" />
+    <element type="TEXT" id="ID_static_9" text="172.16.1.0/30" x="609.45" y="169.1" align="center" width="71.85" />
+    <element type="TEXT" id="ID_static_10" text="192.168.4.12" x="739.8" y="288.1" align="center" width="67.35" />
+    <element type="TEXT" id="ID_static_11" text="192.168.4.0/24" x="691.7" y="205" align="center" width="78.45" />
+    <element type="TEXT" id="ID_static_12" text="LAN4" x="715.65" y="218.55" align="center" width="27.65" />
+    <element type="TEXT" id="ID_static_13" text="Fa0/1" x="730.5" y="175.75" align="center" width="27" />
+    <element type="TEXT" id="ID_static_14" text="S0/0/0" x="695.45" y="147.95" align="center" width="35.45" />
+    <element type="TEXT" id="ID_static_15" text="Fa0/0" x="792.75" y="141.1" align="center" width="28.75" />
+    <element type="TEXT" id="ID_static_16" text="192.168.3.200" x="899.55" y="111.15" align="center" width="74.05" />
+    <element type="TEXT" id="ID_static_17" text="172.16.3.0/24" x="903.1" y="183.1" align="center" width="71.9" />
+    <element type="TEXT" id="ID_static_18" text="LAN3" x="918.25" y="199.15" align="center" width="27.6" />
+    <element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#ffffff" />
+</slide>
+<slide>
+    <element type="IMAGE" src="media_4.2.2.8A.png" width="1000" height="490" x="0" y="0" />
+    <element type="TEXT" compId="ID_s1_txt01" x="404" y="69" width="107.85" expand="down" align="center" size="14" />
+    <element type="TEXT" compId="ID_s1_txt02" x="596" y="69" width="104.5" expand="down" align="center" size="14" />
+    <element type="TEXT" compId="ID_s1_txt03" x="762" y="69" width="156.7" expand="down" align="center" size="14" />
+    <element type="TEXT" id="ID_static_19" text="192.168.1.66" x="426.9" y="103.6" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_20" text="192.168.1.66" x="426.9" y="139.5" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_21" text="192.168.1.88" x="426.9" y="175.4" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_22" text="192.168.1.88" x="426.9" y="211.3" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_23" text="192.168.1.77" x="426.9" y="248.95" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_24" text="192.168.3.51" x="618.45" y="103.6" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_25" text="192.168.3.75" x="618.45" y="139.5" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_26" text="192.168.3.51" x="618.45" y="175.4" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_27" text="192.168.3.75" x="618.45" y="211.3" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_28" text="192.168.3.75" x="618.45" y="248.95" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_29" text="192.168.1.33" x="426.9" y="283.3" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_30" text="192.168.2.34" x="618.45" y="283.3" align="center" width="70.75" />
+    <element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" replicate="true" compWidth="95" compHeight="24" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="1">
+        <subelement type="DROP" x="795" y="95" match="1" />
+        <subelement type="DROP" x="795" y="131" match="0" />
+        <subelement type="DROP" x="795" y="167" match="1" />
+        <subelement type="DROP" x="795" y="202" match="1" />
+        <subelement type="DROP" x="795" y="240" match="0" />
+        <subelement type="DROP" x="795" y="274" match="0" />
+        <subelement type="DRAG" compId="ID_s1_drag01" x="117" y="312" />
+        <subelement type="DRAG" compId="ID_s1_drag02" x="117" y="365" />
+        <element type="ROUTER" textId="ID_router_txt1" x="361.7" y="337.75" width="585" height="118" />
+        <element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#ffffff" />
+        <element type="TEXTBOX" titleId="ID_s2_instr_title" bodyId="ID_s2_instr_body" x="25" y="54" width="285" height="209" animated="0" subType="ROLLOVER" />
+        <subelement type="CHECK" x="25" y="450" width="132" height="23" compId="ID_s1_CHECK" />
+        <subelement type="RESET" x="178" y="450" width="132" height="23" compId="ID_s1_RESET" />
+        <subelement type="FEEDBACK" x="407.3" y="149.5" width="237.95" height="167" correctTitleId="ID_s1_CORRECT_TITLE" correctBodyId="ID_s1_CORRECT_BODY" wrongTitleId="ID_s1_INCORRECT_TITLE" wrongBodyId="ID_s1_INCORRECT_BODY" />
+    </element>
+</slide>
+<slide>
+    <element type="TEXT" compId="ID_s2_txt01" x="404" y="69" width="107.85" expand="down" align="center" size="14" />
+    <element type="TEXT" compId="ID_s2_txt02" x="530" y="69" width="107.85" expand="down" align="center" size="14" />
+    <element type="TEXT" compId="ID_s2_txt04" x="760" y="69" width="161.85" expand="down" align="center" size="14" />
+    <element type="TEXT" compId="ID_s2_txt03" x="647" y="69" width="107.85" expand="down" align="center" size="14" />
+    <element type="TEXT" id="ID_static_31" text="192.168.1.66" x="426.9" y="103.6" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_32" text="192.168.1.66" x="426.9" y="139.45" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_33" text="192.168.1.77" x="426.9" y="175.4" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_34" text="192.168.1.88" x="426.9" y="211.3" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_35" text="192.168.1.77" x="426.9" y="248.95" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_36" text="192.168.3.20" x="553.75" y="103.6" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_37" text="192.168.4.75" x="553.75" y="139.45" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_38" text="192.168.3.75" x="553.75" y="175.4" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_39" text="192.168.2.75" x="553.75" y="211.3" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_40" text="192.168.3.75" x="553.75" y="248.95" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_41" text="http" x="689.7" y="103.6" align="center" width="25.45" />
+    <element type="TEXT" id="ID_static_42" text="ssh" x="689.7" y="139.45" align="center" width="24.65" />
+    <element type="TEXT" id="ID_static_43" text="http" x="689.7" y="175.4" align="center" width="25.45" />
+    <element type="TEXT" id="ID_static_44" text="http" x="689.7" y="211.3" align="center" width="25.45" />
+    <element type="TEXT" id="ID_static_45" text="ssh" x="689.7" y="248.95" align="center" width="24.65" />
+    <element type="TEXT" id="ID_static_46" text="192.168.1.66" x="426.9" y="283.3" align="center" width="70.75" />
+    <element type="TEXT" id="ID_static_47" text="192.168.3.200" x="553.6" y="283.3" align="center" width="76.85" />
+    <element type="TEXT" id="ID_static_48" text="http" x="689.7" y="283.3" align="center" width="25.45" />
+    <element type="IMAGE" src="media_4.2.2.8A.png" width="1000" height="490" x="0" y="0" />
+    <element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" replicate="true" compWidth="95" compHeight="24" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="1">
+        <subelement type="DROP" x="795" y="95" match="1" />
+        <subelement type="DROP" x="795" y="131" match="0" />
+        <subelement type="DROP" x="795" y="167" match="1" />
+        <subelement type="DROP" x="795" y="202" match="1" />
+        <subelement type="DROP" x="795" y="240" match="0" />
+        <subelement type="DROP" x="795" y="274" match="1" />
+        <subelement type="DRAG" compId="ID_s3_drag01" x="117" y="312" />
+        <subelement type="DRAG" compId="ID_s3_drag02" x="117" y="365" />
+        <element type="ROUTER" textId="ID_router_txt2" x="361.7" y="337.75" width="585" height="118" />
+        <element type="TEXTBOX" titleId="ID_s3_instr_title" bodyId="ID_s3_instr_body" x="25" y="54" width="285" height="209" animated="0" subType="ROLLOVER" />
+        <subelement type="CHECK" x="25" y="450" width="132" height="23" compId="ID_s2_CHECK" />
+        <subelement type="RESET" x="178" y="450" width="132" height="23" compId="ID_s2_RESET" />
+        <subelement type="FEEDBACK" x="407.3" y="149.5" width="237.95" height="167" correctTitleId="ID_s2_CORRECT_TITLE" correctBodyId="ID_s2_CORRECT_BODY" wrongTitleId="ID_s2_INCORRECT_TITLE" wrongBodyId="ID_s2_INCORRECT_BODY" />
+        <element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#ffffff" />
+    </element>
+</slide>
+
+        <slide>
+        	<element type="TEXT" subType="TITLE" compId="ID_s4_title" color="#ffffff" />
+            <element type="TEXT" compId="ID_s3_txt01" x="404" y="69" width="107.85" expand="down" align="center" size="14" />
+            <element type="TEXT" compId="ID_s3_txt02" x="530" y="69" width="107.85" expand="down" align="center" size="14" />
+            <element type="TEXT" compId="ID_s3_txt04" x="760" y="69" width="161.85" expand="down" align="center" size="14" />
+            <element type="TEXT" compId="ID_s3_txt03" x="647" y="69" width="107.85" expand="down" align="center" size="14" />
+            <element type="TEXT" id="ID_static_49" text="192.168.1.67" x="426.9" y="103.6" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_50" text="192.168.1.66" x="426.9" y="139.55" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_51" text="192.168.1.77" x="426.9" y="175.45" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_52" text="192.168.1.66" x="426.9" y="211.35" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_53" text="192.168.1.77" x="426.9" y="249" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_54" text="192.168.2.88" x="553.9" y="103.6" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_55" text="192.168.4.12" x="553.9" y="139.5" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_56" text="192.168.3.75" x="553.9" y="175.4" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_57" text="192.168.2.75" x="553.9" y="211.3" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_58" text="192.168.2.75" x="553.9" y="248.95" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_59" text="http" x="690.3" y="103.6" align="center" width="25.45" />
+            <element type="TEXT" id="ID_static_60" text="ssh" x="690.35" y="139.5" align="center" width="24.65" />
+            <element type="TEXT" id="ID_static_61" text="http" x="690.3" y="175.4" align="center" width="25.45" />
+            <element type="TEXT" id="ID_static_62" text="Telnet" x="689.7" y="211.3" align="center" width="38.15" />
+            <element type="TEXT" id="ID_static_63" text="Telnet" x="689.7" y="248.95" align="center" width="38.15" />
+            <element type="TEXT" id="ID_static_64" text="192.168.1.66" x="426.9" y="283.35" align="center" width="70.75" />
+            <element type="TEXT" id="ID_static_65" text="192.168.3.200" x="553.6" y="283.3" align="center" width="76.85" />
+            <element type="TEXT" id="ID_static_66" text="Telnet" x="689.7" y="283.3" align="center" width="38.15" />
+            <element type="IMAGE" src="media_4.2.2.8A.png" width="1000" height="490" x="0" y="0" />
+            <element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" replicate="true" compWidth="95" compHeight="24" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="1">
+                <subelement type="DROP" x="795" y="95" match="1" />
+                <subelement type="DROP" x="795" y="131" match="0" />
+                <subelement type="DROP" x="795" y="167" match="1" />
+                <subelement type="DROP" x="795" y="202" match="0" />
+                <subelement type="DROP" x="795" y="240" match="1" />
+                <subelement type="DROP" x="795" y="274" match="0" />
+                <subelement type="DRAG" compId="ID_s3_drag01" x="117" y="312" />
+                <subelement type="DRAG" compId="ID_s3_drag02" x="117" y="365" />
+                <element type="ROUTER" textId="ID_router_txt3" x="361.7" y="337.75" width="585" height="118" />
+                 <element type="TEXTBOX" titleId="ID_s4_instr_title" bodyId="ID_s4_instr_body" x="25" y="54" width="285" height="209" animated="0" subType="ROLLOVER" />
+                <subelement type="CHECK" x="25" y="450" width="132" height="23" compId="ID_s1_CHECK" />
+                <subelement type="RESET" x="178" y="450" width="132" height="23" compId="ID_s1_RESET" />
+                <subelement type="FEEDBACK" x="407.3" y="149.5" width="237.95" height="167" correctTitleId="ID_s3_CORRECT_TITLE" correctBodyId="ID_s3_CORRECT_BODY" wrongTitleId="ID_s3_INCORRECT_TITLE" wrongBodyId="ID_s3_INCORRECT_BODY" />
+               
+            </element>
+        </slide>
+    </slide>
+    <text id="ID_router_txt1">
+        <![CDATA[<pre>access-list 103 permit ip host 192.168.1.66 host 192.168.3.75
+access-list 103 permit ip host 192.168.1.77 host 192.168.3.75
+access-list 103 deny ip 192.168.1.0 0.0.0.255 host 192.168.3.75
+access-list 103 deny ip 192.168.1.0 0.0.0.255 192.168.4.0 0.0.0.255
+access-list 103 permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+</pre>]]></text>
+    <text id="ID_router_txt2">
+        <![CDATA[<pre>access-list 104 deny tcp host 192.168.1.66 host 192.168.3.200 eq 80
+access-list 104 permit tcp host 192.168.1.77 host 192.168.3.75 eq 22
+access-list 104 deny ip 192.168.1.0 0.0.0.255 192.168.3.0 0.0.0.255
+access-list 104 permit ip 192.168.1.0 0.0.0.255 192.168.4.0 0.0.0.255
+</pre>]]></text>
+    <text id="ID_router_txt3">
+        <![CDATA[<pre style="letter-spacing:-0.5px;">access-list 105 permit tcp 192.168.1.0 0.0.0.255 host 192.168.3.200 eq 80
+access-list 105 permit ip host 192.168.1.66 host 192.168.3.200
+access-list 105 permit tcp 192.168.1.0 0.0.0.255 host 192.168.4.12 eq 22
+access-list 105 permit tcp host 192.168.1.66 192.168.2.0 0.0.0.255 eq 23
+</pre>]]></text>
+</data>

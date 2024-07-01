@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.4.3 Verificación de una ruta estática predeterminada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de una ruta estática predeterminada</h1>
+        <div>
+          <p>En la figura 1, el resultado del comando <b>show ipv6 route static</b> muestra el contenido de la tabla de routing. </p>
+          <p></p>
+          <p>A diferencia de IPv4, IPv6 no establece en forma explícita que la ruta estática predeterminada IPv6 es el gateway de último recurso. </p>
+          <p></p>
+          <p>La clave para esta configuración es la máscara ::/0. Recuerde que la longitud de prefijo de IPv6 en una tabla de routing determina cuántos bits deben coincidir entre la dirección IP de destino del paquete y la ruta en la tabla de routing. La máscara ::/0 indica que no se requiere que ninguno de los bits coincida. Mientras no exista una coincidencia más específica, la ruta estática predeterminada IPv6 coincide con todos los paquetes.</p>
+          <p></p>
+          <p>En la figura 2, se muestra un ping correcto a la interfaz LAN del R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar. La figura uno muestra el resultado del comando “show ipv6 route static” en el router uno. La figura dos muestra el resultado de un ping desde el router uno a la interfaz LAN del router tres.  Este ping es exitoso porque ya se configuraron todas las rutas estáticas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

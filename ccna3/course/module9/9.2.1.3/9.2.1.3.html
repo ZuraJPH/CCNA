@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.3 Configuración de OSPFv3 multiárea</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de OSPFv3 multiárea</h1>
+        <div>
+          <p>Al igual que en OSPFv2, la implementación de la topología OSPFv3 multiárea de la figura 1 es sencilla. No se requieren comandos especiales. Un router se convierte en ABR cuando tiene dos interfaces en dos áreas diferentes.</p>
+          <p></p>
+          <p>Por ejemplo, en la figura 2, se asignó la ID de router 1.1.1.1 al R1. El ejemplo también activa OSPF en la interfaz de LAN del área 1 y la interfaz serial del área 0. Dado que R1 tiene interfaces conectadas a dos áreas diferentes, es un ABR.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar OSPFv3 multiárea en el R2 y en el R3.</p>
+          <p></p>
+          <p>Al finalizar la configuración del R2, observe el mensaje que indica que hay una adyacencia con el R1 (1.1.1.1).</p>
+          <p></p>
+          <p>Al finalizar la configuración del R3, observe el mensaje que indica que hay una adyacencia con el R2 (2.2.2.2). </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una topología de tres routers (R1, R2 y R3) y de tres áreas de OSPF (área 1, área 0 y área 2) en una red IPv6. La figura dos muestra cómo configurar el router ABR R1 en las áreas 1 y 0 de OSPFv3. La figura tres muestra la sintaxis necesaria para configurar la OSPFv3 multiárea para dos ABR (R2 y R3).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

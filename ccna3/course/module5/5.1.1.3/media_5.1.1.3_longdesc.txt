@@ -1,0 +1,1 @@
+La figura muestra dos routers conectados por un enlace WAN serial.  La figura muestra que la distancia indica hasta dónde llega la red y el vector indica en qué dirección se dirige la red.

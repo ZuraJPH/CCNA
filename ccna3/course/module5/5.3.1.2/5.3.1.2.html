@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.2 Algoritmo de Dijkstra</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algoritmo de Dijkstra</h1>
+        <div>
+          <p>Todos los protocolos de routing de estado de enlace aplican el algoritmo de Dijkstra para calcular la mejor ruta. A este algoritmo se le llama comúnmente “algoritmo SPF” (Primero la ruta más corta). Para determinar el costo total de una ruta, este algoritmo utiliza costos acumulados a lo largo de cada ruta, de origen a destino. </p>
+          <p></p>
+          <p>En la figura, cada ruta se rotula con un valor arbitrario para el costo. El costo de la ruta más corta para que el R2 envíe paquetes a la LAN conectada al R3 es 27. Cada router determina su propio costo hacia cada destino en la topología. En otros términos, cada router calcula el algoritmo SPF y determina el costo desde su propia perspectiva.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> el objetivo central de esta sección es analizar el costo, el cual está determinado por el árbol SPF. Por este motivo, en los gráficos de esta sección se muestran las conexiones del árbol SPF y no la topología. Todos los enlaces se representan mediante una línea negra continua. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio y está conectado a dos de los otros routers.  La figura tiene costos de enlace en cada enlace entre routers, lo que es la base del algoritmo SPF (Primero la ruta más corta) de Dijkstra.  Se muestra un ejemplo de dos rutas para que los datos se desplacen entre el router R2 y el router R4.  Una ruta tiene un costo de 20 por el enlace 1, más un costo de 20 por el enlace 2, con un costo total de 40.  La segunda ruta tiene un costo de 20 por el enlace 1, más un costo de 5 por el enlace 2, más un costo de 10 por el enlace 3, lo que da un costo total de 35.  Se seleccionará la última ruta porque tiene un costo de ruta menor, aun cuando utilice un router más.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

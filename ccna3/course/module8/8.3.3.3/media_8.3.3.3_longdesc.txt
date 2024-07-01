@@ -1,0 +1,1 @@
+En la figura uno, se muestra la salida del siguiente comando ejecutado en el router R1: show ipv6 ospf interface brief.  El resultado es una lista detallada de cada interfaz con OSPF habilitado. La figura dos es un elemento de medios interactivos que permite que el estudiante verifique las interfaces OSPFv3 en el router R2.

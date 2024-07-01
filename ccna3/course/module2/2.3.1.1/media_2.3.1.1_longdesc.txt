@@ -1,0 +1,1 @@
+La figura muestra una topología ordenada con los hosts que se conectan a un clúster de switches redundantes que genera un router de gateway. El router de gateway se conecta a una granja de servidores, a Internet y a los segmentos de intranet de la red.

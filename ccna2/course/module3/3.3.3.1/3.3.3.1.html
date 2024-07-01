@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.1 Proceso de búsqueda de rutas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Proceso de búsqueda de rutas</h1>
+        <div>
+          <p>Cuando un paquete llega a una interfaz del router, el router analiza el encabezado de IPv4, identifica la dirección IPv4 de destino y continúa a través del proceso de búsqueda del router.</p>
+          <p></p>
+          <p>En la figura 1, el router examina las rutas de red de nivel 1 en busca de la mejor coincidencia con la dirección de destino del paquete IPv4:</p>
+          <p>1. Si la mejor coincidencia es una ruta final de nivel 1, se utiliza esa ruta para reenviar el paquete.</p>
+          <p>2. Si la mejor coincidencia es una ruta principal de nivel 1, se continúa con el siguiente paso.</p>
+          <p></p>
+          <p>En la figura 2, el router examina las rutas secundarias (las rutas de subred) de la ruta principal en busca de la mejor coincidencia:</p>
+          <p>3. Si hay una coincidencia con una ruta secundaria de nivel 2, se utiliza esa subred para reenviar el paquete.</p>
+          <p>4. Si no hay una coincidencia con ninguna de las rutas secundarias de nivel 2, se continúa con el paso siguiente.</p>
+          <p></p>
+          <p>En la figura 3, el router continúa buscando rutas de superred de nivel 1 en la tabla de routing para detectar una coincidencia, incluida la ruta predeterminada, si la hubiera:</p>
+          <p>5. Si ahora hay una coincidencia menor con las rutas predeterminadas o de superred de nivel 1, el router usa esa ruta para reenviar el paquete.</p>
+          <p>6. Si no hay coincidencia con ninguna ruta de la tabla de enrutamiento, el router descarta el paquete.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Una ruta que solo hace referencia a una dirección IP de siguiente salto y no a una interfaz de salida se debe resolver a una ruta con una interfaz de salida, si no se está utilizando Cisco Express Forwarding (CEF). Sin CEF, se realiza una búsqueda recurrente en la dirección IP de siguiente salto hasta que la ruta se resuelva con una interfaz de salida. CEF está habilitado de forma predeterminada.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un gráfico de flujo para las rutas coincidentes. En la figura, si la ruta final de nivel uno es la mejor coincidencia, el paquete se enruta siguiendo la dirección IP del siguiente salto o la interfaz de salida. La figura dos muestra el proceso si la mejor coincidencia para un paquete es una ruta principal de nivel uno.  Si se encuentra una coincidencia con una ruta secundaria de nivel 2, el paquete se enruta siguiendo la dirección IP del siguiente salto o la interfaz de salida.  La figura tres muestra el proceso si no se encuentra una coincidencia con una ruta secundaria de nivel 2, que es buscar las rutas de superred, incluida la ruta predeterminada, en la tabla de routing.  Si no se encuentra una coincidencia, el paquete se descarta.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

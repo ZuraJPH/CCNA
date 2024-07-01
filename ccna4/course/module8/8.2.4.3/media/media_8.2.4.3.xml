@@ -1,0 +1,8 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Análisis de las estadísticas de entrada y de salida</b>]]></text>
+	</component>
+	<component id="ID_text01">
+		<text><![CDATA[&lt;se omitió el resultado&gt;]]></text>
+	</component>
+</textcomponents>

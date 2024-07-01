@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.2 Configuración de NAT dinámica</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de NAT dinámica</h1>
+        <div>
+          <p>En la figura 1, se muestran los pasos y los comandos utilizados para configurar la NAT dinámica.  </p>
+          <p></p>
+          <p>
+            <b>Paso 1: </b>Defina el conjunto de direcciones que se utilizará para la traducción con el comando <b>ip nat pool</b>. Por lo general, este conjunto es un grupo de direcciones públicas. Las direcciones se definen indicando la primera y la última dirección IPv4 del conjunto. Las palabras clave <b>netmask</b> o <b>prefix-length</b> indican qué bits de la dirección pertenecen a la red y cuáles al host en el rango de direcciones. </p>
+          <p></p>
+          <p>
+            <b>Paso 2: </b>Configure una ACL estándar para identificar (permitir) solo aquellas direcciones que se deben traducir. Una ACL demasiado permisiva puede generar resultados impredecibles. Recuerde que al final de cada ACL hay una instrucción implícita para <b>denegar todo</b>.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: </b>Conecte la ACL al conjunto. Se utiliza el comando <b>ip nat inside source list </b><i>acceso-lista-número </i><b>pool </b><i>nombre del conjunto </i>para vincular la ACL al conjunto. El router utiliza esta configuración para determinar qué dirección (<b>pool</b>) recibe cada dispositivo (<b>list</b>).</p>
+          <p></p>
+          <p>
+            <b>Paso 4: </b>Identifique qué interfaces son internas con respecto a NAT; es decir, cualquier interfaz que se conecte a la red interna.</p>
+          <p></p>
+          <p>
+            <b>Paso 5:</b> Identifique qué interfaces son externas con respecto a NAT; es decir, cualquier interfaz que se conecte a la red externa.</p>
+          <p></p>
+          <p>En la figura 2, se muestra una topología y una configuración de ejemplo. Esta configuración permite la traducción para todos los hosts en la red 192.168.0.0/16, que incluye las LAN 192.168.10.0 y 192.168.11.0, cuando generan tráfico que ingresa por S0/0/0 y sale por S0/1/0. Estos hosts se traducen a una dirección disponible del conjunto en el rango de 209.165.200.226 a 209.165.200.240.</p>
+          <p></p>
+          <p>En la figura 3, se muestra la topología utilizada para la configuración del verificador de sintaxis. Utilice el verificador de sintaxis de la figura 4 para configurar la NAT dinámica en el R2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra una tabla en la que se indican los pasos para configurar NAT dinámica. En la figura número dos se muestra la topología de NAT. Debajo de la topología, puede verse la sintaxis para configurar un conjunto NAT y la sintaxis para crear una lista de control de acceso para definir qué direcciones internas se pueden traducir. En la figura número tres se muestra la topología que se utilizará en la siguiente actividad interactiva. En la figura número cuatro se muestra una actividad interactiva que permite que los alumnos practiquen la configuración de NAT dinámica.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

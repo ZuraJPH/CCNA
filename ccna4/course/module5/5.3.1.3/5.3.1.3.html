@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.3 SPAN local</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>SPAN local</h1>
+        <div>
+          <p>SPAN local implica la replicación del tráfico de un switch a otro puerto del switch. Se usan varios términos para identificar los puertos entrantes y salientes. La tabla de la figura 1 describe los términos de SPAN de uso general. La figura 2 identifica los puertos de SPAN.</p>
+          <p></p>
+          <p>Una sesión SPAN es la asociación entre los puertos de origen (o VLAN) y un puerto de destino.</p>
+          <p></p>
+          <p>El tráfico que entra o que sale del puerto de origen (o VLAN) es replicado por el switch en el puerto de destino. SPAN puede admitir varios puertos de origen en la misma sesión o una VLAN completa como origen del tráfico, una sesión de SPAN no admite ambas opciones. Los puertos de capa 2 y de capa 3 se pueden configurar como puertos de origen.</p>
+          <p></p>
+          <p>Existen tres cosas más importantes para tener en cuenta cuando configuramos SPAN:</p>
+          <p>
+            <ul>
+              <li>El puerto de destino no puede ser un puerto de origen, y el puerto de origen no puede ser un puerto de destino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El número de puerto de destino depende de la plataforma. Algunas plataformas permiten más de un puerto de destino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El puerto de destino ya no es un puerto de switch normal. A través de ese puerto solo pasa tráfico supervisado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Se dice que la función SPAN es local cuando todos los puertos supervisados se encuentran en el mismo switch que el puerto de destino. Esta función contrasta con del SPAN remoto (RSPAN).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla de terminología de SPAN local. La figura 2 muestra el tipo de puertos SPAN que se usan en una red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

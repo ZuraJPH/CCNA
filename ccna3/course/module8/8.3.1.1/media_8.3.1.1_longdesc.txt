@@ -1,0 +1,1 @@
+En la figura, se muestra un breve resumen de las estructuras de datos de OSPFv2 y OSPFv3.  Además, se indica que cada versión tiene una tabla de vecinos, una tabla de topología y una tabla de routing.  OSPFv2 se ejecuta en las redes IPv4, y OSPFv3 se ejecuta en las redes IPv6.

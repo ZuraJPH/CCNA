@@ -1,0 +1,1 @@
+La figura uno demuestra los comandos necesarios para configurar dos interfaces físicas en un router para el routing entre VLAN antiguo. La figura dos muestra la tabla de routing IP de un router que tiene dos interfaces físicas que participan en una configuración de routing entre VLAN antiguo.

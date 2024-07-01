@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>   
+<slide type="MBAR">
+	
+	<slide>
+		<element type="IMAGE" src="../../../common/images/page_backgrounds/bg_activity.jpg" x="0" y="0" width="1000" height="490" />
+		<element type="IMAGE" x="0" y="0" width="1000" height="490" src="media_7.2.3.4_A.png" />
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#ffffff"/>
+		<element type="TEXTBOX" titleId="ID_s1_instr_title" bodyId="ID_s1_instr_body" x="16" y="55" width="283" height="160" />
+		<element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" dragAlign="center" replicate="false" compWidth="140" compHeight="45" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="0.3" size="11" matchType="group">
+
+		<subelement type="DROP" x="361.5" y="79" group="1"/>
+		<subelement type="DROP" x="575.5" y="79" group="2"/>
+		<subelement type="DROP" x="788.5" y="79" group="3"/>
+
+
+		<subelement type="DROP" x="575" y="152" group="4"/>
+		<subelement type="DROP" x="575" y="227" group="5"/>
+		<subelement type="DROP" x="361.5" y="385" group="6"/>
+
+		<subelement type="DRAG" compId="ID_s1_drag01b" x="11" y="237" group="1,2,3"/>
+		<subelement type="DRAG" compId="ID_s1_drag01a" x="157" y="237" group="1,2,3" />
+		<subelement type="DRAG" compId="ID_s1_drag01c" x="11" y="342" group="1,2,3" />
+
+
+		<subelement type="DRAG" compId="ID_s1_drag04" x="11" y="289" group="6" />
+		<subelement type="DRAG" compId="ID_s1_drag03" x="157" y="289" group="5"/>
+		<subelement type="DRAG" compId="ID_s1_drag02" x="157" y="342" group="4"/>
+
+		<subelement type="CHECK" x="19" y="457" width="134" height="21" compId="ID_s1_CHECK"/>
+		<subelement type="RESET" x="168" y="457" width="134" height="21" compId="ID_s1_RESET"/>
+				
+		<subelement type="FEEDBACK" x="350" y="150" width="300" height="200" correctTitleId="ID_s1_CORRECT_TITLE" correctBodyId="ID_s1_CORRECT_BODY" wrongTitleId="ID_s1_INCORRECT_TITLE" wrongBodyId="ID_s1_INCORRECT_BODY"/>
+				</element> 			
+
+
+
+</slide>
+<slide>
+	    <element type="IMAGE" src="../../../common/images/page_backgrounds/bg_activity.jpg" x="0" y="0" width="1000" height="490" />
+	    <element type="IMAGE" x="0" y="0" width="1000" height="490" src="media_7.2.3.4_B.png" />
+	    <element type="TEXT" subType="TITLE" compId="ID_s2_title"  color="#ffffff"/>
+		<element type="TEXTBOX" titleId="ID_s2_instr_title" bodyId="ID_s1_instr_body" x="16" y="55" width="283" height="160" />
+		<element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" dragAlign="center" replicate="false" compWidth="140" compHeight="45" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="0.3" size="11" matchType="group">
+
+		<subelement type="DROP" x="361.5" y="77.5" group="1"/>
+		<subelement type="DROP" x="575.5" y="77.5" group="2"/>
+		<subelement type="DROP" x="788.5" y="77.5" group="3"/>
+		
+		<subelement type="DROP" x="575.5" y="152.5" group="4"/>
+		<subelement type="DROP" x="575.5" y="227.5" group="5"/>
+		<subelement type="DROP" x="575.5" y="302.5" group="6"/>
+
+		<subelement type="DROP" x="361.5" y="385" group="7"/>
+
+		<subelement type="DRAG" compId="ID_s2_drag01b" x="11" y="236" group="1,2,3"/> 
+		<subelement type="DRAG" compId="ID_s2_drag01c" x="11" y="342.5" group="1,2,3" />
+		<subelement type="DRAG" compId="ID_s2_drag03" x="157" y="289.5" group="5" />
+		<subelement type="DRAG" compId="ID_s2_drag02" x="157" y="236" group="4"/>
+		<subelement type="DRAG" compId="ID_s2_drag01a" x="11" y="289.5" group="1,2,3" /> 
+		<subelement type="DRAG" compId="ID_s2_drag04" x="157" y="342.5" group="6"/>
+		<subelement type="DRAG" compId="ID_s2_drag05" x="83" y="395.6" group="7"/>
+
+
+
+		<subelement type="CHECK" x="19" y="457" width="134" height="21" compId="ID_s1_CHECK"/>
+		<subelement type="RESET" x="168" y="457" width="134" height="21" compId="ID_s1_RESET"/>
+				
+		<subelement type="FEEDBACK" x="362.4" y="154.4" width="330" height="200" correctTitleId="ID_s2_CORRECT_TITLE" correctBodyId="ID_s2_CORRECT_BODY" wrongTitleId="ID_s1_INCORRECT_TITLE" wrongBodyId="ID_s2_INCORRECT_BODY"/>
+				</element> 			
+
+</slide>
+	</slide> 
+</data>

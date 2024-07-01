@@ -1,0 +1,13 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+pre{
+	letter-spacing: -0.3px;
+	line-height: 14px;
+}
+.outPut{
+	margin:0;padding:0;
+	
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.5 Decisiones de roles de puertos para RSTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Decisiones de roles de puertos para RSTP</h1>
+        <div>
+          <p>En el ejemplo, el switch S1 es el puente raíz. Los switches S2 y S3 cuentan con puertos raíz configurados para los puertos que se conectan con S1.</p>
+          <p></p>
+          <p>Después de que STP haya determinado qué puerto de switch toma el rol del puerto raíz en cada switch, STP debe decidir qué puertos tienen los roles de designados y cuáles de alternativos.</p>
+          <p></p>
+          <p>El puente raíz configura en forma automática todos sus puertos de switch en la función de designado. Otros switches de la topología configuran sus puertos que no son raíz como designados o alternativos.</p>
+          <p></p>
+          <p>Los puertos designados se configuran para todos los segmentos de LAN. Cuando dos switches están conectados al mismo segmento de LAN y los puertos raíz ya se han definido, los dos switches deben decidir qué puerto debe configurarse como designado y cuál debe permanecer como alternativo.</p>
+          <p></p>
+          <p>Los switches del segmento de LAN intercambian tramas de BPDU, que contienen el BID del switch. En general, el switch con el menor BID posee su puerto configurado como designado, mientras que el switch con el mayor BID posee su puerto configurado como alternativo. Sin embargo, tenga en cuenta que la primera prioridad es el menor costo de ruta al puente raíz y que el BID del emisor se utiliza solamente si los costos de puerto son iguales.</p>
+          <p></p>
+          <p>Cada switch determina qué roles de puertos se asignan a cada uno de sus puertos para crear el árbol de expansión sin bucles.</p>
+          <p></p>
+          <p>Las figuras 1 a 7 muestran cómo se determinan los roles de los puertos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra un ejemplo de configuración de Cisco SPAN. Un PCA cliente está conectado al puerto F01/ en el switch S1. El puerto F0/2 del switch es un puerto SPAN que puede conectarse a un sensor IPS o a una computadora con analizador de paquetes instalado.

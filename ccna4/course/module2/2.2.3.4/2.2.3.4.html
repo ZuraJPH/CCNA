@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.4 Explicación de NCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Explicación de NCP</h1>
+        <div>
+          <p>Una vez que LCP configuró y autenticó el enlace básico, se invoca el protocolo NCP correspondiente para completar la configuración específica del protocolo de capa de red que se usa. Cuando NCP configuró correctamente el protocolo de capa de red, este se encuentra en estado abierto en el enlace LCP establecido. En este momento, PPP puede transportar los paquetes correspondientes del protocolo de capa de red. </p>
+          <p></p>
+          <p>
+            <b>Ejemplo de IPCP</b>
+          </p>
+          <p></p>
+          <p>Como ejemplo de cómo funciona la capa NCP, se muestra la configuración NCP de IPv4 en la figura. Una vez que LCP estableció el enlace, los routers intercambian mensajes IPCP para negociar las opciones específicas a IPv4. IPCP es responsable de la configuración, la habilitación y la deshabilitación de los módulos IPv4 en ambos extremos del enlace.</p>
+          <p></p>
+          <p>IPCP negocia dos opciones:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Compresión:</b> permite que los dispositivos negocien un algoritmo para comprimir encabezados TCP e IP, y ahorrar ancho de banda. La compresión de encabezados TCP/IP de Van Jacobson reduce los encabezados TCP/IP a un tamaño de hasta 3 bytes. Esto puede ser una mejora considerable en las líneas seriales lentas, en particular para el tráfico interactivo. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dirección IPv4:</b> permite que el dispositivo de inicio especifique una dirección IPv4 para utilizar en el routing IP a través del enlace PPP, o para solicitar una dirección IPv4 para el respondedor. Antes de la llegada de las tecnologías de banda ancha como los servicios de DSL y de cable módem, los dispositivo de red de Internet por acceso telefónico normalmente usaban la opción de direcciones IPv4.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Una vez que se completa el proceso NCP, el enlace pasa al estado abierto, y LCP vuelve a tomar el control en la fase de mantenimiento del enlace. El tráfico del enlace consta de cualquier combinación posible de paquetes LCP, NCP y de protocolo de capa de red. Cuando se completa la transferencia de datos, NCP termina el enlace del protocolo y LCP finaliza la conexión PPP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el proceso de operación de NCP de PPP.  En la figura, dos routers han iniciado una conexión PPP y comienza el intercambio de datos de IP versión 4.  Cuando finaliza la transferencia de datos, NCP termina el enlace del protocolo y LCP finaliza la conexión PPP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

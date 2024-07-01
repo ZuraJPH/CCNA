@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.5 Configuración de PPP con autenticación</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de PPP con autenticación</h1>
+        <div>
+          <p>El procedimiento descrito en la tabla explica cómo configurar la encapsulación PPP y los protocolos de autenticación PAP y CHAP. La configuración correcta es fundamental, ya que CHAP y PAP utilizan estos parámetros para autenticar. </p>
+          <p></p>
+          <p>
+            <b>Configuración de </b>
+<b>la autenticación PAP</b>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra un ejemplo de configuración de autenticación PAP bidireccional. Ambos routers se autentican entre sí, por lo que los comandos de autenticación PAP se reflejan. El nombre de usuario y la contraseña PAP que cada router envía deben coincidir con los que se especificaron con el comando <b>username </b><i>nombre</i><b> password </b><i>contraseña </i>del otro router.</p>
+          <p></p>
+          <p>PAP proporciona un método simple para que un nodo remoto establezca su identidad mediante un protocolo de enlace bidireccional. Esto se realiza solo en el establecimiento del enlace inicial. El nombre de host en un router debe coincidir con el nombre de usuario que el otro router configuró para PPP. Las contraseñas también deben coincidir. Para especificar los parámetros de nombre de usuario y contraseña, utilice el siguiente comando: <b>ppp pap sent-username </b><i>nombre </i><b>password </b><i>contraseña</i>.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para configurar la autenticación PPP en la interfaz serial 0/0/1 del router R1.</p>
+          <p></p>
+          <p>
+            <b>Configuración de la autenticación CHAP</b>
+          </p>
+          <p></p>
+          <p>CHAP verifica periódicamente la identidad del nodo remoto mediante un protocolo de enlace de tres vías. El nombre de host en un router debe coincidir con el nombre de usuario que configuró el otro router. Las contraseñas también deben coincidir. Esto ocurre en el establecimiento del enlace inicial y se puede repetir en cualquier momento después de que se estableció el enlace. En la figura 3, se muestra un ejemplo de una configuración CHAP.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para configurar la autenticación CHAP en la interfaz serial 0/0/1 del router R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra el archivo de configuración para dos routers mediante la autenticación PAP entre ellos.  Se resalta la contraseña configurada en cada router, el uso del nombre de host del router que se conecta como los nombres de usuario y el uso de la misma contraseña en todos los routers.  La figura también resalta el comando ppp pap sent guion username R 1 password same one.  En esta línea la contraseña es same one. La figura seis es una actividad interactiva que permite que el estudiante configure la autenticación PAP en una interfaz serial en un router. La figura 3 muestra el archivo de configuración de dos routers que usan autenticación PAP entre ellos.  Se resalta la contraseña configurada en cada router, el uso del nombre de host del router que se conecta como los nombres de usuario y el uso de la misma contraseña en todos los routers.  La figura también resalta el comando PPP authentication CHAP. La figura 4 es una actividad interactiva que permite que el estudiante configure la autenticación CHAP en una interfaz serial en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

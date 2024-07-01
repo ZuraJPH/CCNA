@@ -1,0 +1,1 @@
+La figura muestra el router R1 con una interfaz Fast Ethernet activa y conectado a otros tres routers a través de cada uno de los tres enlaces WAN.  La figura es una animación que muestra cuando el router envía paquetes de saludo a las cuatro interfaces activas.  Los tres routers conectados devuelven paquetes de saludo al router R1.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.3.2 Cálculo de router de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cálculo de router de OSPF</h1>
+        <div>
+          <p>Cada router utiliza el algoritmo SPF en virtud de la LSDB para crear un árbol SPF. Se utiliza el árbol de SPF para determinar las mejores rutas. </p>
+          <p></p>
+          <p>Como se muestra en la figura, el orden en el que se calculan las mejores rutas es el siguiente:</p>
+          <p>1. Todos los routers calculan las mejores rutas a los destinos que se encuentran dentro de su área (intraárea) y agregan estas entradas a la tabla de routing. Se trata de LSA de tipo 1 y tipo 2, que se indican en la tabla de routing con el designador de routing "O". (1)</p>
+          <p>2. Todos los routers calculan las mejores rutas hacia otras áreas en la interred. Las mejores rutas son las entradas de rutas interárea, o LSA de tipo 3, y se indican con el designador de routing "O IA". (2)</p>
+          <p>3. Todos los routers (excepto los que están en forma de área aislada [stub]) calculan las mejores rutas hacia los destinos del sistema autónomo externo (tipo 5). Estas se indican con el designador de ruta O E1 u O E2, según la configuración. (3)</p>
+          <p></p>
+          <p>Al lograr convergencia, un router se comunica con cualquier red dentro o fuera del dominio de routing OSPF.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra un pantalla de salida del comando show ip route en Cisco IOS y resalta el orden en que el algoritmo SPF calcula las mejores rutas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+En la figura, se muestran los estados por los que pasará OSPF hasta alcanzar el estado Full.

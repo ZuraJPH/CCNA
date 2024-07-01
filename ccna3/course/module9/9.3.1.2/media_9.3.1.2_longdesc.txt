@@ -1,0 +1,1 @@
+Las figuras uno y dos muestran una topología OSPF multiárea con referencias que enfatizan las ventajas, las que incluyen tablas de routing más pequeñas, mensajes de LSA organizados y el uso reducido del algoritmo SPF, lo que produce un routing más eficiente.

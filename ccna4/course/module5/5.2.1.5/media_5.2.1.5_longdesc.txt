@@ -1,0 +1,1 @@
+La figura es una animación.  La animación muestra a un trabajador en una PC como estación de administración de SNMP, un servidor web con agente de SNMP y una base de datos central de MIB.  El administrador solicita estadísticas al servidor web y descubre que hay diez mil usuarios.

@@ -1,0 +1,1 @@
+La ilustración es un diagrama de flujo que describe el A.C.L y el proceso de enrutamiento en un router.

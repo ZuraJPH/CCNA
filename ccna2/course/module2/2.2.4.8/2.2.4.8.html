@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.4.8 Network Time Protocol (NTP) </title>
+    <!-- Activity -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.4.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Network Time Protocol (NTP) </h1>
+        <div>
+          <p>Having the correct time within networks is important. Correct time stamps are required to accurately track network events such as security violations. Additionally, clock synchronization is critical for the correct interpretation of events within syslog data files as well as for digital certificates.</p>
+          <p></p>
+          <p>Network Time Protocol (NTP) is a protocol that is used to synchronize the clocks of computer systems over packet-switched, variable-latency data networks. NTP allows network devices to synchronize their time settings with an NTP server. A group of NTP clients that obtain time and date information from a single source will have more consistent time settings.</p>
+          <p></p>
+          <p>A secure method of providing clocking for the network is for network administrators to implement their own private network master clocks, synchronized to UTC, using satellite or radio. However, if network administrators do not wish to implement their own master clocks because of cost or other reasons, other clock sources are available on the Internet. NTP can get the correct time from an internal or external time source including the following:</p>
+          <p>
+            <ul>
+              <li>Local master clock</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Master clock on the Internet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>GPS or atomic clock</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>A network device can be configured as either an NTP server or an NTP client. To allow the software clock to be synchronized by an NTP time server, use the<span class="cmd"><b> ntp server </b></span><span class="cmd"><i>ip-address </i></span>command in global configuration mode. A sample configuration is shown in the Figure 1. Router R2 is configured as an NTP client, while router R1 serves as an authoritative NTP server. </p>
+          <p></p>
+          <p>To configure a device as having an NTP master clock to which peers can synchronize themselves, use the<span class="cmd"><b> ntp master [</b></span><span class="cmd"><i>stratum</i></span><span class="cmd"><b>] </b></span>command in global configuration mode. The stratum value is a number from 1 to 15 and indicates the NTP stratum number that the system will claim. If the system is configured as an NTP master and no stratum number is specified, it will default to stratum 8.  If the NTP master cannot reach any clock with a lower stratum number, the system will claim to be synchronized at the configured stratum number, and other systems will be willing to synchronize to it using NTP. </p>
+          <p></p>
+          <p>Figure 2 displays the verification of NTP. To display the status of NTP associations, use the<span class="cmd"><b> show ntp associations </b></span>command in privileged EXEC mode. This command will indicate the IP address of any peer devices that are synchronized to this peer, statically configured peers, and stratum number. The<span class="cmd"><b> show ntp status </b></span>user EXEC command can be used to display such information as the NTP synchronization status, the peer that the device is synchronized to, and in which NTP strata the device is functioning.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Resize" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic"></iframe>
+    </div>
+    <div id="login">Please log into <a href="http://netacad.com">netacad.com</a> before accessing this course.</div>
+  </body>
+</html>

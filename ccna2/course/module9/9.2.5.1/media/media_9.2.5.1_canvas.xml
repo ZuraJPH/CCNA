@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+ 
+		 <slide>
+	    <element type="TEXT" subType="TITLE" compId="ID_title"/> 
+		<element type="IMAGE"  src="9_2_5_1.jpg" x="0" y="6" width="470" height="400" />   
+		<element type="TEXT" compId="ID_text01" x="128" y="136" width="51.25" expand="right" align="left" color="#f26200" bold="1"/>
+		<element type="TEXT" compId="ID_text02" x="240" y="128" width="42.2" expand="left" align="right" color="#f26200" bold="1" />
+		<element type="TEXT" compId="ID_text03" x="185" y="44" width="100" expand="left+right" align="center" size="11" />
+		<element type="TEXT" compId="ID_text04" x="151" y="63" width="70" expand="up+down" align="left" />
+		<element type="TEXT" compId="ID_text05" x="218" y="78" width="30.1" expand="left+right" align="center" />
+		<element type="TEXT" compId="ID_text06" x="248" y="63" width="74" expand="up+down" align="right" />
+		<element type="TEXT" compId="ID_text07" x="187" y="221" width="45.2" expand="left" align="right" color="#f26200" bold="1"/>
+		<element type="TEXT" compId="ID_text08" x="12" y="100" width="90.9" expand="up" align="center" />
+		<element type="TEXT" compId="ID_text09" x="341" y="86" width="90.9" expand="up" align="center" />
+		<element type="TEXT" compId="ID_text10" x="2" y="125" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text11" x="38" y="219" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text12" x="126" y="200" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text13" x="365" y="110" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text14" x="395" y="133" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text15" x="416" y="159" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text16" x="419" y="191" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text17" x="394" y="218" width="52.2" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text18" x="330" y="240" width="52.2" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text19" x="254" y="208" width="52.3" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text24" x="315" y="257" width="51.5" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text25" x="336" y="279" width="50.25" expand="right" align="center" />
+		<element type="TEXT" compId="ID_text26" x="337" y="305" width="52.4" expand="down" align="center" />
+		<element type="TEXT" compId="ID_text27" x="98" y="340" width="48.75" expand="down" align="center" />
+		<element type="TEXT" compId="ID_text28" x="83" y="300" width="48.25" expand="down" align="center" />
+		<element type="TEXT" compId="ID_text29" x="108" y="265" width="49.25" expand="up" align="center" />
+		<element type="TEXT" compId="ID_text30" x="385" y="357" width="90.9" expand="up" align="center" />
+		<element type="TEXT" compId="ID_text26a" x="322" y="354" width="52.4" expand="down" align="center" />
+		<element type="TEXT" compId="ID_text26b" x="133" y="370" width="52.4" expand="down" align="center" />
+		<element type="TEXT" compId="ID_text26c" x="213" y="385" width="52.4" expand="down" align="center" />
+		<element type="TEXT" compId="ID_text26d" x="278" y="378" width="52.4" expand="down" align="center" />
+		 
+	</slide> 
+	 
+	 
+</data>

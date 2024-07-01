@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.3 Ejemplos de ACL estándar numeradas IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de ACL estándar numeradas IPv4</h1>
+        <div>
+          <p>En la figura 1, se muestra un ejemplo de una ACL que permite una subred específica, con excepción de un host específico en esa subred.</p>
+          <p></p>
+          <p>El primer comando elimina la versión anterior de la ACL 1. La siguiente instrucción de ACL deniega el host de la PC1 ubicado en 192.168.10.10. Todos los demás hosts en la red 192.168.10.0/24 se permiten entonces. En este caso, la instrucción deny implícita también coincide con todas las demás redes.</p>
+          <p></p>
+          <p>La ACL se vuelva a aplicar a la interfaz S0/0/0 en sentido de salida.</p>
+          <p></p>
+          <p>En la figura 2, se muestra un ejemplo de una ACL que deniega un host específico. Esta ACL reemplaza el ejemplo anterior. En este ejemplo, se sigue bloqueando el tráfico del host PC1, pero se permite el resto del tráfico.</p>
+          <p></p>
+          <p>Los primeros dos comandos son los mismos que en el ejemplo anterior. El primer comando elimina la versión anterior de la ACL 1, y la siguiente instrucción de ACL deniega el host PC1 que está ubicado en 192.168.10.10.</p>
+          <p></p>
+          <p>La tercera línea es nueva y permite el resto de los hosts. Esto significa que se permiten todos los hosts de la red 192.168.10.0/24, excepto PC1, que se denegó en la instrucción anterior.</p>
+          <p></p>
+          <p>Esta ACL se aplica a la interfaz G0/0 en sentido de entrada. Debido a que el filtro afecta únicamente a la LAN 192.168.10.0/24 en G0/0, es más eficaz aplicar la ACL a la interfaz de entrada. Se puede aplicar la ACL a S0/0/0 en sentido de salida, pero entonces el R1 tendría que examinar los paquetes de todas las redes, incluida 192.168.11.0/24.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> La figura muestra los comandos necesarios para configurar un A.C.L para denegar un host específico y permitir una subred específica. Los comandos comienzan en el modo de configuración global. El primer comando elimina el A.C.L anterior. El comando es no access guión list 1. El siguiente comando es access guión list 1 deny host 192 punto 168 punto 10 punto 10. El A.C.L está configurado para permitir la red con el comando access guión list 1 permit 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255. El comando se traslada a la interfaz WAN mediante el comando interface serial cero barra cero barra cero. Finalmente se aplica la A.C.L a la interfaz en la dirección saliente mediante el comando i.p. access guión group 1 out.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.3 Verificación de SSH</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de SSH</h1>
+        <div>
+          <p>En las computadoras se usa un cliente SSH, como PuTTY, para conectarse a un servidor SSH. Para los ejemplos de las figuras 1 a 3, se configuró lo siguiente:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Se habilitó SSH en el switch S1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Interfaz VLAN 99 (SVI) con la dirección IP 172.17.99.11 en el switch S1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>PC1 con la dirección IPv4 172.17.99.21.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, la computadora inicia una conexión SSH a la dirección IPv4 de la VLAN SVI de S1.</p>
+          <p></p>
+          <p>En la figura 2, se solicita al usuario que introduzca un nombre de usuario y una contraseña. Con la configuración del ejemplo anterior, se introduce el nombre de usuario <b>admin</b> y la contraseña <b>ccna</b>. Después de introducir la combinación correcta, el usuario se conecta a la CLI del switch Catalyst 2960 mediante SSH.</p>
+          <p></p>
+          <p>Para mostrar los datos de la versión y de configuración de SSH en el dispositivo que configuró como servidor SSH, use el comando <b>show ip ssh</b>. En el ejemplo, se habilitó la versión 2 de SSH. Para revisar las conexiones SSH al dispositivo, use el comando <b>show ssh</b> (consulte la figura 3).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la ventana de configuración del PuTTY. En este ejemplo, se establece el tipo de conexión como SSH, un puerto se configura como 22 y se establece la dirección IP del host al que se debe conectar. La figura dos muestra la ventana de la conexión real para el PuTTY. En este ejemplo, el switch solicita el nombre de usuario y la contraseña. La figura tres muestra el resultado del comando show ip ssh.  El resultado enumera la versión de SSH que se ejecuta en el switch y demás información de configuración.  La figura tres también muestra el resultado del comando show ssh.  Este resultado muestra las conexiones actuales de SSH que se ejecutan en el switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

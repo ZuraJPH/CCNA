@@ -1,0 +1,31 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+font[face="_typewriter"]{ font-family:courier new !important;} 
+input[type=radio] {
+    display:none;
+    margin:10px;
+}
+ 
+
+input[type=radio] + label {
+	background-image: url('before_select_btn.png');
+	background-repeat: no-repeat;
+	padding: 12px;
+	cursor:pointer;
+}
+
+input[type=radio]:checked + label {
+   background-image: url('select_btn.png');
+   background-repeat: no-repeat;
+}
+
+label:after {
+ background: none;
+	}
+/*#ID_correctTitle,#ID_incorrectTitle{
+	margin-top:-10px !important;
+}*/
+/*.core_style {background-color:#67BDBC; border-radius:5px; padding:5px; width:740px; height:240px; position:relative;}*/

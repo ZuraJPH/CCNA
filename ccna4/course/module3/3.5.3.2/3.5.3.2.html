@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.3.2 Ejemplo de configuración de BGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplo de configuración de BGP</h1>
+        <div>
+          <p>En esta topología de BGP de localización simple, AS 65000 Empresa A usa eBGP para anunciar su red 198.133.219.0/24 a ISP-1 en AS 65001. El ISP-1 anuncia una ruta predeterminada en las actualizaciones de eBGP a la empresa A.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> El protocolo BGP normalmente no es necesario en AS de localización simple. Se utiliza aquí para proporcionar un ejemplo de configuración sencilla.</p>
+          <p></p>
+          <p>La figura 1 muestra la configuración de BGP para la empresa A. Los clientes utilizarán generalmente el espacio privado de direcciones IPv4 para los dispositivos internos dentro de su propia red. Luego, el router de la empresa A utiliza NAT para traducir estas direcciones IPv4 privadas a una de sus direcciones IPv4 públicas, anunciadas por BGP al ISP.</p>
+          <p></p>
+          <p>El comando <b>router bgp</b> habilita el BGP e identifica el número de AS para la empresa A. Un router sólo puede pertenecer a una sola AS, de modo que solo puede ejecutase un único proceso de BGP en un router.</p>
+          <p></p>
+          <p>El comando <b>neighbor</b> identifica el par de BGP y su número de AS. Observe que el AS del ISP es diferente que el número de AS de la empresa A. Esto le informa al proceso de BGP que el vecino está en un AS diferente y que, por lo tanto, se trata de un vecino de BGP externo.</p>
+          <p></p>
+          <p>La opción <b>mask</b> debe utilizarse cuando la red que se anuncie es diferente a su equivalente con clase. En este ejemplo, 198.133.219.0/24 es equivalente a una red Clase C. Las redes Clase C tienen una máscara de subred /24, así que, en este caso, la opción <b>mask</b> no se requiere. Si el cliente A estuviera anunciando la red 198.133.0.0/16, sería necesaria la opción <b>mask</b>. De lo contrario, el protocolo BGP publicaría de red con una máscara /24 con clase.</p>
+          <p></p>
+          <p>El comando <b>network </b> introduce la <i>dirección de red</i> en la tabla de BGP local. La tabla de BGP contiene todas las rutas aprendidas a través de BGP o anunciadas mediante BGP. eBGP luego anunciará la <i>dirección de red</i> a sus vecinos eBGP. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> A diferencia de un protocolo IGP, la <i>dirección de red</i> usada en el comando <b>network</b> no tiene que ser una red conectada directamente. El router sólo necesita tener una ruta hacia esta red en su tabla de routing.</p>
+          <p></p>
+          <p>La figura 2 muestra la configuración de BGP para ISP-1.</p>
+          <p></p>
+          <p>Los comandos de eBGP en el router ISP-1 son similares a la configuración en la empresa A. Observe cómo el comando <b>network 0.0.0.0</b> de la red para anunciar una red predeterminada a la empresa A.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Si bien el comando <b>network 0.0.0.0</b> es una opción de configuración de BGP válida, hay mejores maneras para anunciar una ruta predeterminada en eBGP. Sin embargo, estos métodos están más allá del alcance de este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra AS 65000 Empresa A conectado a la nube AS 65001 ISP-1 a través de una conexión eBGP formada a través de los puertos G0/1 en cada router perimetral en la red 209.165.201.0/27. El router de la empresa A utiliza la dirección IP .2 y el router perimetral ISP-1 utiliza la dirección IP .1 en la red. AS 65000 Empresa A tiene la red 198.133.219.0/24. Los comandos para configurar en el router de la empresa A son los siguientes: router bgp 65000, neighbor 209.165.201.1 remote-as 65001, network 198.133.219.0 mask 255.255.255.0. La figura 2 muestra la configuración que se debe hacer en el router ISP-1 que se conecta a la empresa A: router bgp 65001, neighbor 209.165.201.2 remote-as 65000, and network 0.0.0.0.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

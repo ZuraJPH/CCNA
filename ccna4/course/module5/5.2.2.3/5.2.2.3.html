@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.3 Prácticas recomendadas de SNMP</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Prácticas recomendadas de SNMP</h1>
+        <div>
+          <p>SNMP es muy útil para monitorear y solucionar problemas, como se muestra en la figura, pero también puede crear vulnerabilidades de seguridad. Por este motivo, antes de implementar SNMP, tenga en cuenta las prácticas recomendadas de seguridad. </p>
+          <p></p>
+          <p>SNMPv1 y SNMPv2c dependen de las cadenas de comunidad SNMP en texto no cifrado para autenticar el acceso a los objetos de la MIB. Estas cadenas de comunidad, al igual que todas las contraseñas, se deben elegir cuidadosamente para asegurar que no sean demasiado fáciles de descifrar. Además, las cadenas de comunidad se deben cambiar a intervalos regulares y de acuerdo con las políticas de seguridad de la red. Por ejemplo, se deben cambiar las cadenas cuando un administrador de red cambia de función o deja la empresa. Si SNMP se utiliza solo para monitorear los dispositivos, use comunidades de solo lectura. </p>
+          <p></p>
+          <p>Asegúrese de que los mensajes de SNMP no se propaguen más allá de las consolas de administración. Se deben usar ACL para evitar que los mensajes de SNMP se envíen más allá de los dispositivos requeridos. También deben usarse ACL en los dispositivos monitoreados para limitar el acceso solo a sistemas de administración. </p>
+          <p></p>
+          <p>Se recomienda SNMPv3 porque proporciona autenticación y cifrado de seguridad. Existen otros comandos del modo de configuración global que puede implementar un administrador de red para aprovechar la autenticación y el cifrado en SNMPv3:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El comando<span class="cmd"><b></b></span><b>snmp-server group </b><i>groupname </i>{<b>v1 </b>|<b> v2c </b>|<b> v3 </b>{<b>auth </b>|<b> noauth </b>|<b> priv</b>}} crea un nuevo grupo de SNMP en el dispositivo. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El comando<span class="cmd"><b></b></span><b>snmp-server user </b><i>username groupname </i><b>v3 </b>[<b>encrypted</b>] [<b>auth</b> {<b>md5</b> | <b>sha</b>} auth-password] [<b><i>priv</i></b> {<b>des</b> | <b>3des</b> | <b>aes</b> {<b>128</b> | <b>192</b> | <b>256</b>}} priv-password] sirve para agregar un usuario nuevo al grupo de SNMP especificado en el comando<span class="cmd"><b></b></span><b>snmp-server group </b><i>groupname</i><span class="cmd"><i></i></span>.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una red con dos segmentos conectados a un switch de capa 3; cada segmento se conecta a través de un switch de capa 2. El switch de capa 3 también está conectado a dos routers.  Cada router está conectado a Internet.  También hay un trabajador en una estación de administración de SNMP conectado al switch de capa 3.  Los tres switches se administran con agentes de SNMP y Syslog.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

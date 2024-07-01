@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.2 Mejor ruta = coincidencia más larga</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mejor ruta = coincidencia más larga</h1>
+        <div>
+          <p>¿Qué significa que el router deba encontrar la mejor coincidencia en la tabla de routing? La mejor coincidencia es la coincidencia más larga. </p>
+          <p></p>
+          <p>Para que haya una coincidencia entre la dirección IPv4 de destino de un paquete y una ruta en la tabla de routing, una cantidad mínima de los bits del extremo izquierdo deben coincidir entre la dirección IPv4 del paquete y la ruta en la tabla de routing. La máscara de subred de la ruta en la tabla de routing se utiliza para determinar la cantidad mínima de bits del extremo izquierdo que deben coincidir. Recuerde que un paquete IPv4 solo contiene la dirección IPv4 y no la máscara de subred. </p>
+          <p></p>
+          <p>La mejor coincidencia es la ruta de la tabla de routing que contiene la mayor cantidad de bits del extremo izquierdo coincidentes con la dirección IPv4 de destino del paquete. La ruta con la mayor cantidad de bits del extremo izquierdo equivalentes, o la coincidencia más larga, es siempre la ruta preferida.</p>
+          <p></p>
+          <p>En la ilustración, el destino de un paquete es 172.16.0.10. El router tiene tres rutas posibles que coinciden con este paquete: 172.16.0.0/12, 172.16.0.0/18 y 172.16.0.0/26. De las tres rutas, 172.16.0.0/26 tiene la coincidencia más larga y se elige para reenviar el paquete. Recuerde que para que cualquiera de estas rutas se considere una coincidencia debe tener al menos la cantidad de bits coincidentes que se indica en la máscara de subred de la ruta.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el proceso para verificar la coincidencia más larga en la tabla de routing.   La dirección de destino del paquete es 172 punto 16 punto 0 punto 10 y el primer paso es enumerar la dirección en sistema binario, que es uno cero uno cero uno uno cero cero punto cero cero cero uno cero cero cero cero punto cero cero cero cero cero cero cero cero punto cero cero cero cero uno cero uno cero.  Hay tres rutas que potencialmente se pueden utilizar para llegar al destino, así que el router tiene que mirar cada ruta y comparar los valores binarios de izquierda a derecha. La que coincida con la mayoría de los bits de la máscara de subred será la ruta elegida.  Las tres opciones son barra 12, barra 18 y barra 26.  El paquete de destino coincide con la mayor cantidad de bits con la barra 26, por lo que esta será la ruta seleccionada.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

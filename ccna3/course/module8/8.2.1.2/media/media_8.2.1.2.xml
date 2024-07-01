@@ -1,0 +1,43 @@
+<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Topología OSPF de referencia</b>]]></text>
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Ingreso al modo de configuración del router OSPF en el R1</b>]]></text>
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Ingreso al modo de configuración del router OSPF en el R2</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Área 0</b>]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[<b>Internet</b>]]></text>
+	</component>
+	<component id="ID_s2_txt01">
+		<text><![CDATA[<b>Nota:</b> se modificó el resultado a fin de mostrar solo los comandos que se utilizarán en este capítulo.]]></text>
+	</component>
+	<component id="ID_sc_reset">
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Mostrar]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Mostrar todo]]></text>
+	</component>
+	<component id="ID_SC3" fontSize="12" fontFace="_typewriter" fontColor="#ffffff">
+		<feedback id="fb"><![CDATA[<b>***</b><font face="_sans" color="#FFFFFF">Debe introducir el comando exacto y completo.</font><b>***</b> ]]></feedback>
+		<existingcommands><![CDATA[<font face="_sans"><b>Ingrese al modo de configuración de router OSPF con la ID de proceso 10.</b></font>]]></existingcommands>
+		<command prompt="R2(config)#">
+			<correctresponse><![CDATA[router ospf 10]]></correctresponse>
+			<instruction><![CDATA[<font face="_sans"><b>Utilice el acceso directo de ayuda para obtener una lista de las opciones disponibles dentro del modo de configuración del router OSPF.</b>]]></instruction>
+		</command>
+		<command prompt="R2(config-router)#">
+			<correctresponse><![CDATA[?]]></correctresponse>
+			<deviceresponse><![CDATA[<font size="10">Comandos de configuración del router: <br>  address-family Ingresar al modo del comando de familias de direcciones <br>  area Parámetros de área del protocolo OSPF <br>  auto-cost Calcular el costo de la interfaz del protocolo OSPF de acuerdo con el ancho de banda <br>  bfd Comandos de configuración de BFD <br>  capability Habilitar la característica OSPF específica <br>  compatible Lista de compatibilidad de OSPF <br>  default Establecer un comando en sus valores predeterminados <br>  default-information Controlar la distribución de información predeterminada <br>  default-metric Establecer la métrica de las rutas redistribuidas <br>  discard-route Habilitar o deshabilitar la instalación de rutas por rechazar <br>  distance Definir una distancia administrativa <br>  distribute-list Filtrar redes en las actualizaciones de routing <br>  domain-id ID de dominio OSPF <br>  domain-tag Etiqueta de dominio OSPF <br>  event-log Registro de eventos OSPF <br>  exit Salir del modo de configuración del protocolo de routing <br>  help Descripción del sistema de ayuda interactiva <br>  ignore No reclamar por un evento en particular <br>  interface-id Fuente de la ID de interfaz <br>  ispf Habilitar el cómputo SPF incremental <br>  limit Limitar una característica OSPF específica <br>  local-rib-criteria Habilitar o deshabilitar el uso de RIB local como criterio de ruta <br>  log-adjacency-changes Registrar cambios en el estado de adyacencia <br>  max-lsa Cantidad máxima de LSA que el proceso OSPF recibirá <br>  max-metric Establecer la métrica máxima <br>  maximum-paths Reenviar paquetes por medio de múltiples rutas <br>  neighbor Especificar un router vecino <br>  network Habilitar routing en una red IP <br>  no Negar un comando o establecerlo en sus valores predeterminados <br>  nsf Reenvío permanente <br>  passive-interface Suprimir actualizaciones de routing en una interfaz <br>  prefix-suppression Supresión de prefijo OSPF <br>  priority Prioridad de la topología OSPF <br>  queue-depth Profundidad de cola del proceso del router/de saludo OSPF <br>  redistribute Redistribuir información de otro protocolo de routing <br>  router-id ID de router para este proceso OSPF <br>  shutdown Desactivar el protocolo OSPF de la instancia actual <br>  snmp Modificar parámetros del protocolo SNMP <br>  summary-address Configurar resúmenes de direcciones IP <br>  timers Ajustar temporizadores de routing <br>  traffic-share Cómo computar la distribución de tráfico por medio de rutas alternativas <br>  ttl-security Comprobación de seguridad TTL <br> <br>R2(config-router)#]]></deviceresponse>
+			<instruction><![CDATA[<font face="_sans" class="syntaxBottomLine"><b>Ingresó correctamente al modo de configuración del router y obtuvo una lista de las opciones disponibles.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+</textcomponents>

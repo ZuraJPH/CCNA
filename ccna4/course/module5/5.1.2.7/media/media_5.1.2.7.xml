@@ -1,0 +1,100 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar las mejores prácticas de seguridad</b>]]></text>
+</component>
+
+<component id="MCTable_title">
+	<text><![CDATA[Mejores prácticas de seguridad]]></text>
+</component>
+
+<component id='ID_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_instr_body'>
+	<text><![CDATA[Marque Verdadero o Falso junto a cada declaración de la práctica de seguridad recomendada.]]></text>
+</component><!-- buttons --><component id="ID_s1_CHECK">
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id="ID_s1_RESET">
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Number of rows in the table--><component id="txt_numrows">
+	<text><![CDATA[7]]></text>
+</component><!--Number of columns for the answers in the table. Do not count the question column--><component id="txt_numcols">
+	<text><![CDATA[2]]></text>
+</component><!--Answer column headers--><component id="txt_col1">
+	<text><![CDATA[<b>Verdadero</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Falso</b>]]></text>
+</component><!--Question text - blockindent code moves the text away from the left edge a bit--><!--Question text - If questions are numbered, use blockindent for hanging indents--><component id="txt_q1">
+	<text><![CDATA[Hacer que todos los dispositivos se refieran a la misma base de datos de nombres de usuario y contraseñas alojados en un servidor central.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[RADIUS es considerado el protocolo de autenticación más seguro.]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Siempre usar Telnet en lugar de SSH para el acceso remoto.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Solo se debe confiar en los puertos que se conectan a los servidores DHCP corriente arriba.]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[Siempre usar TACACS+ para la comunicación entre un router y los servidores AAA porque todos los intercambios de protocolos TACACS+ son cifrados.]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[La autenticación basada en puertos 802.1x incorpora seguridad a la capa de acceso.]]></text>
+</component>
+
+<component id="txt_q7">
+	<text><![CDATA[Cuando un puerto 802.1x está en estado no autorizado, el puerto permite todo el tráfico a excepción de los paquetes del protocolo 802.1x.]]></text>
+</component><!--Answers - Give the column number(s), column numbering start with 1 not 0--><!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a7">
+	<text><![CDATA[2]]></text>
+</component><!-- Correct Feedback --><component id="ID_titleCorrect">
+	<text><![CDATA[<font size="17">Correcto</font>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Ha determinado satisfactoriamente qué instrucciones de la práctica de seguridad son verdaderas y falsas.]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_titleIncorrect">
+	<text><![CDATA[<font size="17">Incorrecto</font>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[No ha identificado correctamente las mejores prácticas de seguridad. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+</textcomponents>

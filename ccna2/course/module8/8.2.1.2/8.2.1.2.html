@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.2 Funcionamiento de SLAAC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de SLAAC</h1>
+        <div>
+          <p>Un router debe tener el routing IPv6 habilitado antes de poder enviar mensajes RA:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>ipv6 unicast-routing</b>
+            </span>
+          </p>
+          <p></p>
+          <p>1. En la topología de ejemplo que se muestra en la figura 1, la PC1 está configurada para obtener la información de dirección IPv6 de manera automática. Desde el arranque, la PC1 no recibió un mensaje RA, de modo que envía un mensaje RS a la dirección de multidifusión de todos los routers para informarle al router IPv6 local que necesita un RA.</p>
+          <p></p>
+          <p>2. Como se muestra en la figura 2, el R1 recibe el mensaje RS y responde con un mensaje RA. En el mensaje RA, se incluyen el prefijo y la longitud de prefijo de la red. El mensaje RA se envía a la dirección IPv6 de multidifusión de todos los nodos, FF02::1, con la dirección link-local del router como la dirección IPv6 de origen. </p>
+          <p></p>
+          <p>3. La PC1 recibe el mensaje RA que contiene el prefijo y la longitud de prefijo para la red local. La PC1 utiliza esta información para crear su propia dirección IPv6 de unidifusión global. La PC1 ahora tiene un prefijo de red de 64 bits, pero necesita una ID de interfaz (IID) de 64 bits para crear una dirección de unidifusión global. </p>
+          <p></p>
+          <p>Hay dos maneras en las que la PC1 puede crear su propia IID única:</p>
+          <p>
+            <ul>
+              <li>
+                <b>EUI-64:</b> mediante el proceso EUI-64, la PC1 crea una IID utilizando su dirección MAC de 48 bits.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>De generación aleatoria:</b> la IID de 64 bits puede ser un número aleatorio generado por el sistema operativo cliente. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en la figura 3, la PC1 puede crear una dirección IPv6 de unidifusión global de 128 bits combinando el prefijo de 64 bits con la IID de 64 bits. La PC1 utiliza la dirección link-local del router como su dirección IPv6 de gateway predeterminado.</p>
+          <p></p>
+          <p>4. Dado que SLAAC es un proceso sin estado, PC1 debe verificar que esta dirección IPv6 creada recientemente sea exclusiva antes de poder utilizarla. Como se muestra en la figura 4, la PC1 envía un mensaje de solicitud de vecino ICMPv6 con una dirección multicast especialmente creada, denominada dirección multicast de nodo solicitado, que duplica los últimos 24 bits de la dirección IPv6 de la PC1. Si ningún otro dispositivo responde con un mensaje de anuncio de vecino, prácticamente se garantiza que la dirección es única y puede ser utilizada por la PC1. Si la PC1 recibe un anuncio de vecino, la dirección no es única, y el sistema operativo debe determinar una nueva ID de interfaz para utilizar. </p>
+          <p></p>
+          <p>Este proceso forma parte de la detección de vecinos ICMPv6 y se conoce como “detección de direcciones duplicadas (DAD)”.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la misma topología que la página anterior. La computadora emite el mensaje de solicitud de router IPv6, que es un mensaje de multidifusión para todos los routers. La figura dos muestra que el router recibe este mensaje y que responde con un mensaje de anuncio de router. Este mensaje es un mensaje de multidifusión de todos los nodos IPv6 y contiene el prefijo, la duración de prefijo y demás información para el cliente. La figura tres muestra al cliente que crea una dirección de unidifusión global IPv6 mediante la generación de una ID de interfaz y usando el prefijo y la longitud de prefijo enviada por el router. La figura cuatro muestra cómo la computadora envía un mensaje de detección de dirección duplicada después de configurar su dirección IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

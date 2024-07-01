@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_title"/>
+		<element type="IMAGE" x="22.5" y="52.4" width="425" height="262" subType="STD" src="10_3_1_3.jpg" />
+		<element type="TEXTBOX" titleId="" bodyId="ID_bodyTxt" x="35" y="326" width="391" height="80" />
+	</slide>
+</data>

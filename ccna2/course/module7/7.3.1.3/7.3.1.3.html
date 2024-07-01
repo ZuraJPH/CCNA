@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.3 El IOS reordena las ACL estándar </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>El IOS reordena las ACL estándar </h1>
+        <div>
+          <p>Es posible que el orden en que se introducen las ACE estándar no sea el orden en que se almacenen, se muestren o se procesen en el router.</p>
+          <p>En la figura 1, se muestra la configuración de una lista de acceso estándar. Las instrucciones de rango que deniegan tres redes se configuran primero, y después se configuran cinco instrucciones de host. Las instrucciones de host son todas instrucciones válidas, porque sus direcciones IPv4 host no forman parte de las instrucciones de rango introducidas previamente.</p>
+          <p></p>
+          <p>El comando <b>show running-config</b> se utiliza para verificar la configuración de la ACL. Observe que las instrucciones se enumeran en un orden distinto al orden en que se introdujeron. Utilizaremos el comando <b>show access-lists</b> para comprender la lógica detrás de esto.</p>
+          <p></p>
+          <p>Como se muestra en la figura 2, el comando <b>show access-lists</b> muestra las ACE junto con sus números de secuencia. Sería de esperar que el orden de las instrucciones en el resultado reflejara el orden en que se introdujeron. Sin embargo, el resultado de <b>show access-lists</b> muestra que este no es el caso.</p>
+          <p></p>
+          <p>El orden en que se enumeran las ACE estándar es la secuencia utilizada por el IOS para procesar la lista. Observe que las instrucciones se agrupan en dos secciones: las instrucciones de host seguidas por las instrucciones de rango. El número de secuencia indica el orden en que se introdujo la instrucción, no el orden en que se procesará.</p>
+          <p></p>
+          <p>Las instrucciones de host se enumeran primero, pero no necesariamente en el orden en que se introdujeron. El IOS ordena las instrucciones de host mediante una función de hash especial. El orden resultante optimiza la búsqueda de una entrada de ACL de host. Las instrucciones de rango se muestran después de las instrucciones de host. Estas instrucciones se enumeran en el orden en que se introdujeron.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la función de hash se aplica solamente a las instrucciones de host en listas de acceso de IPv4 estándar. Los detalles de la función de hash exceden el ámbito de este curso.</p>
+          <p></p>
+          <p>Recuerde que las ACL estándar y numeradas se pueden editar con números de secuencia. Cuando se introduce una nueva instrucción de ACL, el número de secuencia solo afecta a la ubicación de una instrucción de rango en la lista. Las instrucciones de host siempre se ordenan con la función de hash.</p>
+          <p></p>
+          <p>Siguiendo con el ejemplo, una vez que se guarda la configuración en ejecución, el router se vuelve a cargar. Como se muestra en la figura 2, el comando <b>show access-lists</b> muestra la ACL en el mismo orden, sin embargo, las instrucciones se volvieron a numerar. Los números de secuencia ahora están en orden numérico.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La ilustración número uno muestra el contenido de uns A.C.L que primero deniega tres direcciones de rango de red, y luego permite específicamente cinco direcciones de host i.p.  Cuando se ejecuta el comando show running guión config,  las instrucciones de A.C.L se colocan en el siguiente orden: primero las cinco entradas de host permit, seguido de las tres instrucciones deny range.  La figura dos muestra el resultado del comando show access guión list 1.  Este resultado muestra las cinco entradas host permit primero, y luego las tres instrucciones deny range.  Cada sentencia retiene su número de secuencia original según lo especificado.  La figura continúa con guardar el archivo de configuración, reiniciar el router, y luego mostrar el archivo de configuración.  El A.C.L aún está ordenado con las entradas host primero seguidos de los rangos de red, pero ahora los números de secuencia se han reescrito para que el orden coincidan.  Esto muestra que el router cambia el orden y el número de secuencia para maximizar la eficacia.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

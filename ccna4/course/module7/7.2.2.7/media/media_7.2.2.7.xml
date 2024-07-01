@@ -1,0 +1,112 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar la terminología de virtualización</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Una cada término con su descripción.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Unió correctamente cada término con su descripción.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No unió correctamente cada término con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font size="15">Términos</font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Redundancia]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Servidor dedicado]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Máquina host]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[Computación en la nube]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Hipervisor]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[Virtualización de servidores]]></text>
+</component>
+
+<component id='ID_s1_drag07'>
+	<text><![CDATA[Virtualización]]></text>
+</component>
+
+<component id='ID_s1_drag08'>
+	<text><![CDATA[Capas de abstracción]]></text>
+</component><!--Questions--><component id='ID_s1_target_header'>
+	<text><![CDATA[<font size="15">Término</font>]]></text>
+</component>
+<component id='ID_s1_text_header'>
+	<text><![CDATA[<font size="15">Descripción</font>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Protección contra un único punto de falla.]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[Cuando toda la RAM de un servidor, la potencia de procesamiento y espacio del disco duro están dedicados al servicio provisto.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[La computadora en la que un hipervisor admite una o más VM.]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[Separa la aplicación del hardware.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[Un programa, un firmware o un hardware que suma una capa de abstracción a la parte superior del hardware físico real.]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[Aprovecha las ventajas de recursos en reposo y consolida la cantidad de servidores necesarios.]]></text> 
+</component>
+
+<component id="ID_s1_txt07">
+  <text><![CDATA[Separa el SO del hardware.]]></text> 
+</component>
+
+<component id="ID_s1_txt08">
+  <text><![CDATA[Servicios, SO, firmware y hardware.]]></text> 
+</component>
+
+</textcomponents>

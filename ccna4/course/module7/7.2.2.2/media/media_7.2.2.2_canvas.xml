@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+	<element type="IMAGE" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" x="0" y="0" width="680" height="490" />
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_7.2.2.2.png" />
+	<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	<element type="TEXT" compId="ID_s1_txt01" x="20.80" y="84.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt03" x="20.80" y="217.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt13" x="20.80" y="300.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt15" x="20.80" y="435.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt04" x="187.30" y="84.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt06" x="187.30" y="217.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt16" x="187.30" y="300.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt18" x="187.30" y="435.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt07" x="353.30" y="84.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt09" x="353.30" y="217.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt19" x="353.30" y="300.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt21" x="353.30" y="435.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt10" x="516.55" y="84.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt12" x="516.55" y="217.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt22" x="516.55" y="300.15" width="140" expand="up" align="center" />
+	<element type="TEXT" compId="ID_s1_txt24" x="516.55" y="435.15" width="140" expand="up" align="center" />
+	</slide>
+</data>

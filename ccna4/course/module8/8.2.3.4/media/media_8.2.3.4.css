@@ -1,0 +1,17 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+.orangeCallOut
+{
+padding:5px !important;	
+}
+
+#ID_s1_txt02
+{
+letter-spacing:-.4px !important;	
+}
+
+  #ID_s1_txt01,#ID_s2_txt01{margin-left:5px;}
+}

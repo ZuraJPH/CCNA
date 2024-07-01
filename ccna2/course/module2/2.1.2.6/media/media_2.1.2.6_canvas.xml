@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	
+		<slide> 
+
+		<element type="IMAGE"  src="bg.jpg" x="0" y="0" width="1000" height="490" />
+		<element type="TEXTBOX"  x="25" y="60" width="225" height="200"  titleId="ID_instr_title"  bodyId="ID_instr_body"/>
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#ffffff" />
+		<element type="ACTIVITY" subType="MCTABLE"  x="275" y="60" width="680" height="280">
+			<subelement type="CHECK" x="-210" y="320" width="150" height="22" compId="ID_Button01"/>
+			<subelement type="RESET" x="-210" y="360" width="150" height="22" compId="ID_Button02"/>
+			<subelement type="FEEDBACK" x="90" y="80" width="300" height="205" correctTitleId="ID_titleCorrect" correctBodyId="ID_correctText" wrongTitleId="ID_titleIncorrect" wrongBodyId="ID_IncorrectText"/>
+		</element>
+
+</slide>
+</data>

@@ -1,0 +1,51 @@
+﻿<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Soluciones de Cisco para mitigar ataques de capa 2</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+		<text><![CDATA[IPSG]]></text>
+	</component>
+	
+	<component id="ID_txt02">
+		<text><![CDATA[DAI]]></text>
+	</component>
+	
+	<component id="ID_txt03">
+		<text><![CDATA[Detección DHCP]]></text>
+	</component>
+	
+	<component id="ID_txt04">
+		<text><![CDATA[Seguridad de puertos]]></text>
+	</component>
+	
+	<component id="ID_titleTxt01">
+		<text><![CDATA[Protección de IP de origen (IPSG)]]></text>
+	</component>
+	<component id="ID_bodyTxt01">
+		<text><![CDATA[La protección de IP de origen impide los ataques de suplantación de direcciones MAC e IP.]]></text>
+	</component>
+	
+	<component id="ID_titleTxt02">
+		<text><![CDATA[Inspección ARP dinámica (DAI)]]></text>
+	</component>
+	<component id="ID_bodyTxt02">
+		<text><![CDATA[La inspección dinámica de ARP evita la suplantación de ARP y los ataques de envenenamiento de ARP.]]></text>
+	</component>
+
+	<component id="ID_titleTxt03">
+		<text><![CDATA[Detección DHCP]]></text>
+	</component>
+	<component id="ID_bodyTxt03">
+		<text><![CDATA[La detección DHCP impide el agotamiento de direcciones DHCP y los ataques de suplantación de DHCP.]]></text>
+	</component>
+	
+	<component id="ID_titleTxt04">
+		<text><![CDATA[Seguridad de puertos]]></text>
+	</component>
+	<component id="ID_bodyTxt04">
+		<text><![CDATA[La seguridad de puertos evita muchos tipos de ataques, incluidos los ataques de sobrecarga de la tabla CAM y agotamiento de direcciones DHCP.]]></text>
+	</component>
+
+</textcomponents>

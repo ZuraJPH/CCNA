@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.1 Dominios de colisiones</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dominios de colisiones</h1>
+        <div>
+          <p>En los segmentos Ethernet basados en hubs, los dispositivos de red compiten por el medio, porque los dispositivos deben turnarse durante la transmisión. Los segmentos de red que comparten el mismo ancho de banda entre dispositivos se conocen como dominios de colisión. Cuando dos o más dispositivos del mismo dominio de colisión tratan de comunicarse al mismo tiempo, se produce una colisión.</p>
+          <p></p>
+          <p>Si un puerto de switch Ethernet está funcionando en modo semidúplex, cada segmento se encuentra en su propio dominio de colisión. Sin embargo, los puertos de switch Ethernet que funcionan en modo dúplex completo eliminan las colisiones; por lo tanto, no hay dominio de colisión.  De forma predeterminada, los puertos de switch Ethernet autonegocian el dúplex completo cuando el dispositivo adyacente también puede funcionar en modo dúplex completo. Si el puerto del switch está conectado a un dispositivo que funciona en semidúplex, como por ejemplo un hub antiguo, el puerto de switch funcionará en modo semidúplex. En el caso de semidúplex, el puerto de switch formará parte de un dominio de colisión.</p>
+          <p></p>
+          <p>Como se muestra en la figura, se elige dúplex completo si ambos dispositivos cuentan con la funcionalidad, junto con su ancho de banda común más elevado.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cómo tres dispositivos conectados a tres puertos de switch independientes pertenecen cada uno a su propio dominio de colisión, pero siguen dentro del mismo dominio de difusión.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

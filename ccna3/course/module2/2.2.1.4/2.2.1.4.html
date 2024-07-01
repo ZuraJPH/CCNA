@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.4 Problemas de interfaz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas de interfaz</h1>
+        <div>
+          <p>Al habilitar el routing entre VLAN en un router, uno de los errores de configuración más comunes es conectar la interfaz física del router al puerto de switch incorrecto. Esto ubica la interfaz del router en la VLAN incorrecta y evita que alcance otros dispositivos dentro de la misma subred. </p>
+          <p></p>
+          <p>Como se muestra en la figura, la interfaz G0/0 del router R1 está conectada al puerto F0/9 del switch S1. El puerto de switch F0/9 está configurado para la VLAN predeterminada, no para la VLAN 10. Esto evita que la PC1 pueda comunicarse con su gateway predeterminado, la interfaz del router. Por lo tanto, la PC no puede comunicarse con ninguna otra VLAN, como la VLAN 30.</p>
+          <p></p>
+          <p>Para corregir este problema, conecte físicamente la interfaz G0/0 del router R1 al puerto F0/4 del switch S1. Esto ubica la interfaz del router en la VLAN correcta y permite el routing entre VLAN. Alternativamente, cambie la asignación de VLAN del puerto de switch F0/9 a la VLAN 10. Esto también permite que la PC1 se comunique con la interfaz G0/0 del router R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura ilustra un problema de configuración de un puerto de switch configurado incorrectamente como VLAN predeterminada en una topología de routing entre VLAN antigua.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.4 Interfaz pasiva</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interfaz pasiva</h1>
+        <div>
+          <p>De manera predeterminada, los mensajes OSPF se reenvían por todas las interfaces con OSPF habilitado. Sin embargo, estos mensajes solo necesitan enviarse por las interfaces que se conectan a otros routers con OSPF habilitado. </p>
+          <p></p>
+          <p>Consulte la topología de la ilustración. Los mensajes OSPFv2 se reenvían por la interfaz G0/0 de los tres routers, aun cuando no exista ningún vecino OSPFv2 en esa LAN. El envío de mensajes innecesarios en una LAN afecta la red de tres maneras:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Uso ineficaz del ancho de banda:</b> se consume el ancho de banda disponible con el transporte de mensajes innecesarios. Los mensajes se transmiten por multidifusión; por lo tanto, los switches también reenvían los mensajes por todos los puertos. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Uso ineficaz de los recursos:</b> todos los dispositivos en la LAN deben procesar el mensaje y, finalmente, descartarlo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mayor riesgo de seguridad:</b> anunciar actualizaciones en una red de difusión constituye un riesgo de seguridad. Los mensajes OSPF se pueden interceptar con software de detección de paquetes. Las actualizaciones de routing se pueden modificar y enviar de regreso al router, lo que daña la tabla de routing con métricas falsas que direccionan erróneamente el tráfico.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra la topología de referencia de OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

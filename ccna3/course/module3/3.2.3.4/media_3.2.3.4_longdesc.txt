@@ -1,0 +1,1 @@
+La figura muestra tres switches, todos interconectados.  El switch uno está marcado como puente raíz y todos sus puertos son puertos designados y en modo de reenvío.  Los puertos de los switches dos y tres están marcados como raíz, designados, alternativos y de extremo según corresponda.

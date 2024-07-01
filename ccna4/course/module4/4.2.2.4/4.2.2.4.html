@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.4 Creación de ACL extendidas denominada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Creación de ACL extendidas denominada</h1>
+        <div>
+          <p>Las ACL extendidas denominada se crean esencialmente de la misma forma que las ACL estándar denominada. Para crear una ACL extendida denominada, realice los siguientes pasos:</p>
+          <p></p>
+          <p>
+            <b>Paso 1. </b>Desde el modo de configuración global, utilice el comando <b>ip access-list extended </b><i>se </i>para definir un nombre para la ACL extendida. </p>
+          <p></p>
+          <p>
+            <b>Paso 2. </b>En el modo de configuración de ACL denominada, especifique las condiciones para <b>permit</b> o <b>deny</b>.</p>
+          <p></p>
+          <p>
+            <b>Paso 3.</b> Desde el modo de configuración de interfaces, aplique la ACL denominada con el comando <b>ip access-group</b> [ <b>in</b> | <b>ou</b>t ] <i>nombre</i> .</p>
+          <p></p>
+          <p>
+            <b>Paso 4. </b>Vuelva al modo EXEC con privilegios y verifique la ACL con el comando <b>show access-lists </b><i>nombre </i>.</p>
+          <p></p>
+          <p>
+            <b>Paso 5: </b>Guarde las entradas en el archivo de configuración mediante el comando <b>copy running-config startup-config</b>.</p>
+          <p></p>
+          <p>Para eliminar una ACL extendida denominada, utilice el comando de configuración global <b>no ip access-list extended </b><i>se </i>.</p>
+          <p></p>
+          <p>En la ilustración, se muestran las versiones denominada de las ACL creadas en los ejemplos anteriores. La ACL denominada SURFING permite que los usuarios en la LAN 192.168.10.0/24 accedan a sitios web. La ACL denominada BROWSING permite el tráfico de retorno de las conexiones establecidas. Cuando se utilizan las ACL denominada, las reglas se aplican en sentido de entrada y de salida en la interfaz G0/0.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la misma topología que la página anterior y los comandos utilizados para crear una ACL denominada extendida.  El primer comando es ip access guion list extended surfing.  A continuación, dos instrucciones de permiso, que son: permit 192 punto 168 punto 10 punto cero cero punto cero punto cero punto cero any eq 80, y permit 192 punto 168 punto 10 punto cero cero punto cero punto cero punto cero any eq 443.  Se crea otra ACL extendida que permite el tráfico de retorno de las conexiones establecidas.  El primer comando crea la ACL y es: ip access guion list extended browsing.  Luego sigue la instrucción de permiso, que es: tcp any 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 established. La ACL surfing para permitir el tráfico se coloca en la interfaz gigabit Ethernet cero barra diagonal cero en el sentido entrante con el comando ip access guion group surfing in. La segunda ACL se coloca en la misma interfaz, pero en el sentido saliente con el comando ip access guion group browsing out.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+En la figura se muestra un switch de la serie Cisco Catalyst veintinueve sesenta.  Los puertos 1 a 6 en el switch aparecen resaltados y rotulados como una interfaz de canal de puertos lógicos.  Lo mismo se aplica a los puertos nueve a doce.

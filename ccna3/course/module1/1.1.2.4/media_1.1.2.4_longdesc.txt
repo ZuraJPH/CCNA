@@ -1,0 +1,1 @@
+En la figura, se muestran dos switches multicapa conectados a un switch único.  Cada conexión utiliza un EtherChannel.

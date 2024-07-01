@@ -1,0 +1,62 @@
+﻿<textcomponents>
+    <component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Verifique que todas las interfaces necesarias estén activas</b>]]></text>
+    </component>
+    <component id="ID_s2_title">
+        <text>
+            <![CDATA[<b>Verifique que se estén routing en las redes</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text>
+            <![CDATA[<b>Tunnel0</b>]]></text>
+    </component>
+    <component id='ID_txt02'>
+        <text>
+            <![CDATA[<b>Tunnel0</b>]]></text>
+    </component>
+    <component id='ID_txt03'>
+        <text>
+            <![CDATA[<b>Internet</b>]]></text>
+    </component>
+    <component id='ID_txt04'>
+        <text>
+            <![CDATA[Túnel GRE]]>
+        </text>
+    </component>
+    <component id='ID_s3_txt05'>
+        <text>
+            <![CDATA[Videocámara]]>
+        </text>
+    </component>
+    <component id='ID_s3_txt06'>
+        <text>
+            <![CDATA[Teléfono celular]]>
+        </text>
+    </component>
+    <component id='ID_s3_txt07'>
+        <text>
+            <![CDATA[Teléfono IP]]>
+        </text>
+    </component>
+    <component id='ID_s3_txt08'>
+        <text>
+            <![CDATA[Tablero inteligente]]>
+        </text>
+    </component>
+    <component id='ID_s3_txt09'>
+        <text>
+            <![CDATA[Servidor]]>
+        </text>
+    </component>
+    <component id='ID_output'>
+        <text>
+            <![CDATA[&lt;se omitió el resultado&gt;]]>
+        </text>
+    </component>
+     <component id='ID_output1'>
+        <text>
+            <![CDATA[&lt;resultado omitido&gt;]]>
+        </text>
+    </component>
+</textcomponents>

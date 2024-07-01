@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.2 Verificación de DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de DHCPv4</h1>
+        <div>
+          <p>En el resultado de ejemplo, se utiliza la topología que se muestra en la figura 1. En este ejemplo, se configuró el R1 para que proporcione servicios DHCPv4. Dado que la PC1 no se encendió, no tiene una dirección IP. </p>
+          <p></p>
+          <p>Como se muestra en la figura 2, en el resultado del comando <b>show running-config | section dhcp</b>, se muestran los comandos de DHCPv4 configurados en el R1. El parámetro <b>| section</b> muestra solamente los comandos asociados a la configuración de DHCPv4.</p>
+          <p></p>
+          <p>Como se muestra en la figura 3, se puede verificar el funcionamiento de DHCPv4 mediante el comando <b>show ip dhcp binding</b>. Este comando muestra una lista de todas las vinculaciones de la dirección IPv4 con la dirección MAC que fueron proporcionadas por el servicio DHCPv4. El segundo comando en la figura 3, <b>show ip dhcp server statistics</b>, se utiliza para verificar si el router recibe o envía los mensajes. Este comando muestra información de conteo con respecto a la cantidad de mensajes DHCPv4 que se enviaron y recibieron.</p>
+          <p></p>
+          <p>Como se observa en el resultado de estos comandos, actualmente no hay vinculaciones, y las estadísticas indican que no hay mensajes enviados o recibidos. En este momento, ningún dispositivo solicitó servicios DHCPv4 del router R1.</p>
+          <p></p>
+          <p>En la figura 4, los comandos se emiten después de que la PC1 y la PC2 se encendieron y finalizaron el proceso de arranque.</p>
+          <p></p>
+          <p>Observe que en la información acerca de las vinculaciones ahora se muestra que las direcciones IPv4 192.168.10.10 a 192.168.11.10 se unieron a las direcciones MAC. Las estadísticas también muestran actividad DHCPDISCOVER, DHCPREQUEST, DHCPOFFER y DHCPACK.</p>
+          <p></p>
+          <p>Como se muestra en la figura 5, el comando <b>ipconfig /all</b>, cuando se emite en la PC1, muestra los parámetros TCP/IP. Dado que la PC1 se conectó al segmento de red 192.168.10.0/24, recibió automáticamente un sufijo DNS, una dirección IPv4, una máscara de subred, un gateway predeterminado y una dirección del servidor DNS de ese pool. No se requiere ninguna configuración de interfaz del router específica de DHCP. Si una computadora está conectada a un segmento de red que tiene un pool de DHCPv4 disponible, la computadora puede obtener una dirección IPv4 del pool adecuado de manera automática.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la misma topología que la figura uno de la página anterior. La figura dos muestra el resultado del comando show running-config barra vertical section dhcp.  La salida es la configuración de DHCP del router. La figura tres muestra el resultado del comando show ip dhcp binding.  El resultado enumera toda la vinculación de direcciones MAC e IP, y el ejemplo de la figura es una lista vacía.  La figura también muestra el resultado del comando show ip dhcp server statistics.  Este comando mostrará información de conteo con respecto a la cantidad de mensajes DHCPv4 que se enviaron y recibieron. El ejemplo muestra que se ha configurado un conjunto de DHCP, pero no se envió ni se recibió ningún mensaje. La figura cuatro muestra el resultado de los comandos de las páginas anteriores después de que se encendieron dos computadoras.  Las dos computadoras ahora se indican en la tabla de vinculación con la dirección IP asignada junto con la dirección MAC de cada computadora.  El resultado de estadísticas enumera ocho mensajes de detección de DHCP y tres mensajes de solicitud de DHCP recibidos por el router. El router envió tres mensajes de oferta de DHCP y tres mensajes de confirmación de DHCP. La figura cinco muestra el resultado del comando ip config que se ejecuta en una computadora.  La figura resalta el nombre de dominio, la dirección IP, el servidor DNS y los valores de gateway predeterminado. Todos estos fueron proporcionados el servidor DHCP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

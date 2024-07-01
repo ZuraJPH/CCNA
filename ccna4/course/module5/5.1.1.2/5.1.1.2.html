@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.2 Ataque de reconocimiento de CDP</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ataque de reconocimiento de CDP</h1>
+        <div>
+          <p>Cisco Discovery Protocol (CDP) es un protocolo de detección de enlaces de capa 2 patentado. Está habilitado en todos los dispositivos de Cisco de manera predeterminada. CDP puede detectar automáticamente otros dispositivos con CDN habilitado y ayudar a configurar automáticamente la conexión. Los administradores de red también usan CDP para configurar dispositivos de red y solucionar problemas.</p>
+          <p></p>
+          <p>La información de CDP se envía por los puertos con CDP habilitado en transmisiones periódicas sin encriptar. La información de CDP incluye la dirección IP del dispositivo, la versión de software de IOS, la plataforma, las funcionalidades y la VLAN nativa. El dispositivo que recibe el mensaje de CDP actualiza la base de datos de CDP. </p>
+          <p></p>
+          <p>La información de CDP es muy útil para la solución de problemas de red. Por ejemplo, CDP puede usarse para verificar la conectividad de capa 1 y 2. Si un administrador no puede hacer ping a una interfaz con conexión directa, pero aún recibe información de CDP, es probable que el problema esté en la configuración de capa 3. </p>
+          <p></p>
+          <p>Sin embargo, un atacante puede usar la información proporcionada por CDP para detectar vulnerabilidades en la infraestructura de red.</p>
+          <p></p>
+          <p>En la figura, una captura de Wireshark de ejemplo muestra el contenido de un paquete de CDP. El atacante puede identificar la versión del software Cisco IOS del dispositivo. Esto permite que el atacante determine si hay vulnerabilidades de seguridad específicas de esa versión determinada de IOS. </p>
+          <p></p>
+          <p>Las transmisiones de CDP se envían sin encriptación ni autenticación. Por lo tanto, un atacante puede interferir con la infraestructura de la red enviando tramas de CDP fabricadas con información falsa sobre dispositivos a los dispositivos de Cisco con conexión directa. </p>
+          <p></p>
+          <p>Para mitigar la explotación de CDP, se debe limitar el uso de CDP en los dispositivos o puertos. Por ejemplo, se debe deshabilitar CDP en los puertos de extremo que se conectan a dispositivos no confiables. </p>
+          <p></p>
+          <p>Para deshabilitar CDP globalmente en un dispositivo, use el comando del modo de configuración global <b>no cdp run</b>. Para habilitar CDP globalmente, use el comando de configuración global <b>cdp run</b>. </p>
+          <p></p>
+          <p>Para deshabilitar CDP en un puerto, use el comando de configuración de interfaz <b>no cdp enable</b>. Para habilitar CDP en un puerto, use el comando de configuración de interfaz <b>cdp enable</b>.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El Protocolo de detección de capa de enlace (LLDP) también es vulnerable a los ataques de reconocimiento. Configure <b>no lldp run</b> para deshabilitar LLDP a nivel global. Para deshabilitar LLDP en la interfaz, configure <b>no lldp transmit</b> y <b>no lldp receive</b>. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un archivo de captura de paquetes de una sesión de CDP con Wireshark.  Se resalta la línea con la versión de software del dispositivo de Cisco. Un cuadro explicativo que apunta a los datos resaltados dice: “Wireshark capturó la versión de software de la trama de CDP. Software Cisco IOS, software C2960 (C2960-LANBASEK9-M), versión 12.2(44)SE, SOFTWARE DE LANZAMIENTO (fc1) …”  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.4 Servicios integrados</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Servicios integrados</h1>
+        <div>
+          <p>Las necesidades de aplicaciones en tiempo real, como video remoto, conferencias multimedia, visualización y realidad virtual, motivaron el desarrollo del modelo de arquitectura IntServ en 1994 (RFC 1633, 2211 y 2212). IntServ es un modelo de servicio múltiple que puede acomodar múltiples requisitos de Calidad de Servicio (QoS).</p>
+          <p></p>
+          <p>IntServ proporciona una manera de entregar la QoS completa que las aplicaciones en tiempo real requieren al administrar explícitamente los recursos de red para proporcionar QoS a las transmisiones de paquetes específicas de usuario, a veces denominados microflujos.  Utiliza reserva de recursos y mecanismos de control de admisión como módulos de construcción para establecer y mantener QoS. Esta práctica es similar a un concepto conocido como “hard QoS”. Hard QoS garantiza las características de tráfico, como el ancho de banda, la demora y las velocidades de pérdida de paquetes, de extremo a extremo. Hard QoS asegura niveles de servicios predecibles y garantizados para las aplicaciones críticas.</p>
+          <p></p>
+          <p>La Figura 1 es una simple ilustración del modelo de IntServ.</p>
+          <p></p>
+          <p>IntServ utiliza un enfoque orientado a la conexión heredado del diseño de una red de telefonía. Cada comunicación individual debe especificar explícitamente su descriptor de tráfico y los recursos solicitados a la red. El router perimetral realiza el control de admisión para garantizar que los recursos disponibles son suficientes en la red. El estándar de IntServ asume que los routers a lo largo de una ruta configuran y mantienen el estado de cada comunicación individual.</p>
+          <p></p>
+          <p>En el modelo de IntServ, la aplicación solicita a un tipo específico de servicio a la red antes de enviar datos. La aplicación informa a la red su perfil de tráfico y solicita a un tipo particular de servicio que puede abarcar requisitos de ancho de banda y retraso.  IntServ utiliza el Protocolo de reserva de recursos (RSVP) para señalar las necesidades de QoS del tráfico de una aplicación junto con los dispositivos en la ruta de extremo a extremo a través de la red. Si los dispositivos de red a lo largo de la ruta pueden reservar el ancho de banda necesario, la aplicación de origen puede comenzar a transmitir. Si reserva solicitada falla a lo largo de la ruta, la aplicación de origen no envía ningún dato.</p>
+          <p></p>
+          <p>El router perimetral realiza un control de admisión basado en información de la aplicación y en los recursos de red disponibles. La red cumple con los requisitos de QoS de la aplicación siempre que el tráfico esté dentro de las especificaciones del perfil. La red cumple su compromiso al mantener el estado por flujo y llevar a cabo luego la clasificación de paquetes, de políticas, y espera inteligente basada en ese estado.</p>
+          <p></p>
+          <p>La tabla de la figura 2 incluye las ventajas y desventajas del modelo IntServ.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un ejemplo de modelo simple de QoS IntServ. La figura 2 muestra una tabla de ventajas y desventajas del modelo de QoS IntServ.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra la instalación operativa histórica con ocho servidores: servidor web, servidor de correo electrónico, servidor de SQL, servidor de LAN, servidor de DHCP, servidor de Active Directory, servidor de AAA RADIUS y servidor de administración de redes. Los primeros seis servidores son servidores con Windows y los últimos dos son servidores con Linux.

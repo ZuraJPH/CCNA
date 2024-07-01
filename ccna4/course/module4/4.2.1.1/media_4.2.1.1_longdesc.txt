@@ -1,0 +1,1 @@
+La figura muestra un router y cuatro factores que puede usar una ACL extendida para filtrar los datos: dirección de origen, dirección de destino, protocolo y número de puerto.

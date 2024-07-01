@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.2 Funcionamiento de syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de syslog</h1>
+        <div>
+          <p>En los dispositivos de red Cisco, el protocolo syslog comienza enviando los mensajes del sistema y el resultado del comando <b>debug</b> a un proceso de registro local interno del dispositivo. La forma en que el proceso de registro administra estos mensajes y resultados se basa en las configuraciones del dispositivo. Por ejemplo, los mensajes de syslog se pueden enviar a través de la red a un servidor de syslog externo. Estos mensajes se pueden recuperar sin necesidad de acceder al dispositivo propiamente dicho. Los resultados y los mensajes de registro almacenados en el servidor externo se pueden incluir en varios informes para facilitar la lectura. </p>
+          <p></p>
+          <p>Por otra parte, los mensajes de syslog se pueden enviar a un búfer interno. Los mensajes enviados al búfer interno solo se pueden ver mediante la CLI del dispositivo. </p>
+          <p></p>
+          <p>Por último, el administrador de red puede especificar que solo se envíen determinados tipos de mensajes del sistema a varios destinos. Por ejemplo, se puede configurar el dispositivo para que reenvíe todos los mensajes del sistema a un servidor de syslog externo. Sin embargo, los mensajes del nivel de depuración se reenvían al búfer interno, y solo el administrador puede acceder a ellos desde la CLI.  </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, los destinos comunes para los mensajes de syslog incluyen lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Búfer de registro (RAM dentro de un router o switch)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Línea de consola </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Línea de terminal</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Servidor de syslog</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Es posible controlar los mensajes del sistema de manera remota viendo los registros en un servidor de syslog o accediendo al dispositivo mediante Telnet, SSH o a través del puerto de consola.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un switch y cuatro destinos para los mensajes de syslog: búfer de registro, línea de la consola, línea del terminal y servidor syslog.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

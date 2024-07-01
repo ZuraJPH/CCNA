@@ -1,0 +1,1 @@
+La figura muestra los comandos utilizados para configurar un router como cliente DHCPv6 con estado.  El ejemplo comienza en el modo de configuración global y comienza al pasar a la interfaz deseada.  El primer comando es interface g 0 barra 1.  El siguiente comando es ipv6 enable.  El último comando es ipv6 address dhcp.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.3.1 Encapsulación de mensajes EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Encapsulación de mensajes EIGRP</h1>
+        <div>
+          <p>La porción de datos de un mensaje EIGRP se encapsula en un paquete. Este campo de datos se llama “tipo, longitud, valor” (TLV). Los tipos de TLV pertinentes a este curso son los parámetros de EIGRP, las rutas IP internas y las rutas IP externas. </p>
+          <p></p>
+          <p>El encabezado del paquete EIGRP se incluye con cada paquete EIGRP, independientemente de su tipo. Luego, el encabezado del paquete EIGRP y el TLV se encapsulan en un paquete IPv4. En el encabezado del paquete IPv4, el campo de protocolo se establece en 88 para indicar EIGRP, y la dirección IPv4 de destino se establece en multidifusión 224.0.0.10. Si el paquete EIGRP se encapsula en una trama de Ethernet, la dirección MAC de destino también es una dirección de multidifusión, 01-00-5E-00-00-0A.</p>
+          <p></p>
+          <p>En las figuras 1 a 4, se muestra la trama de Ethernet de enlace de datos.  EIGRP para IPv4 se encapsula en un paquete IPv4. EIGRP para IPv6 usa un tipo de encapsulación similar. EIGRP para IPv6 se encapsula con un encabezado de IPv6. La dirección IPv6 de destino es la dirección de multidifusión FF02::A, y el campo de encabezado siguiente se establece en 88.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra un encabezado de trama de Ethernet de capa de enlace de datos. La dirección MAC de origen es la dirección de la interfaz de envío. La dirección MAC de destino es la dirección de multidifusión MAC de EIGRP. En la figura dos, se muestran las tramas de enlace de datos de EIGRP encapsuladas en un paquete de IP.  La dirección IP de origen es la dirección de la interfaz de envío. La dirección IP de destino es la dirección de multidifusión IP de EIGRP. En la figura tres, se muestra que el encabezado de paquete EIGRP contiene el código de operación para el número de sistema autónomo de tipo de paquete EIGRP. En la figura cuatro, se muestran algunos tipos para el tipo, la longitud y el campo de valor para EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

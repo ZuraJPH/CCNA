@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.4 Intervalos de los paquetes de saludo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Intervalos de los paquetes de saludo</h1>
+        <div>
+          <p>Como se muestra en la ilustración, los paquetes de saludo OSPF se transmiten a la dirección de multidifusión 224.0.0.5 en IPv4 y FF02::5 en IPv6 (todos los routers OSPF) cada: </p>
+          <p>
+            <ul>
+              <li>10 segundos (intervalo predeterminado en redes multiacceso y punto a punto)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>30 segundos (intervalo predeterminado en redes de accesos múltiples sin difusión [NBMA], por ejemplo, Frame Relay)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El intervalo muerto es el período que el router espera para recibir un paquete de saludo antes de declarar al vecino como inactivo. Si el intervalo muerto caduca antes de que los routers reciban un paquete de saludo, OSPF elimina ese vecino de su LSDB. El router satura la LSDB con información acerca del vecino inactivo por todas las interfaces con OSPF habilitado. </p>
+          <p></p>
+          <p>Cisco utiliza un intervalo predeterminado de cuatro veces el intervalo de saludo:</p>
+          <p>
+            <ul>
+              <li>40 segundos (intervalo predeterminado en redes multiacceso y punto a punto)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>120 segundos (intervalo predeterminado en redes NBMA, por ejemplo, Frame Relay)</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio de la distribución en forma de diamante y está conectado a dos de los cuatro routers.  En la figura se muestran paquetes de saludo enviados y recibidos por todos los routers vecinos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

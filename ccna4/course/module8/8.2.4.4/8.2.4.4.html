@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.4 Paso 2: Revisar las incompatibilidades de dúplex</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 2: Revisar las incompatibilidades de dúplex</h1>
+        <div>
+          <p>Otra causa común de los errores de interfaz es un modo de dúplex incompatible entre los dos extremos de un enlace Ethernet. Actualmente, en numerosas redes basadas en Ethernet, las conexiones punto a punto son la norma, y el uso de hubs y la operación half-duplex asociadas se están volviendo menos frecuentes. Esto significa que, en la actualidad, la mayoría de los enlaces Ethernet operan en modo full-duplex y que, si bien se consideraba que las colisiones eran normales en un enlace Ethernet, hoy en día las colisiones suelen indicar que la negociación de dúplex falló y que el enlace no opera en el modo de dúplex correcto.</p>
+          <p></p>
+          <p>El estándar Gigabit Ethernet IEEE 802.3ab exige el uso de la autonegociación para velocidad y dúplex. Además, si bien no es estrictamente obligatorio, casi todas las NIC Fast Ethernet también usan la autonegociación de manera predeterminada. En la actualidad, la práctica recomendada es la autonegociación para velocidad y dúplex. </p>
+          <p></p>
+          <p>Sin embargo, si la negociación de dúplex falla por algún motivo, podría ser necesario establecer la velocidad y el dúplex manualmente en ambos extremos. Por lo general, esto conllevaría configurar el modo dúplex en full-duplex en ambos extremos de la conexión. Si esto no funciona, es preferible ejecutar semidúplex en ambos extremos para evitar una diiferencia entre dúplex.</p>
+          <p></p>
+          <p>Las pautas de configuración de dúplex incluyen:</p>
+          <p>
+            <ul>
+              <li>Se recomienda la autonegociación de velocidad y dúplex.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si la autonegociación falla, configure manualmente la velocidad y el dúplex en los extremos interconectados.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los enlaces Ethernet de punto a punto siempre se deben ejecutar en modo full-duplex.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El semidúplex es inusual y solo suele encontrarse cuando se usan concentradores heredados.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Ejemplo de resolución de problemas</b>
+          </p>
+          <p></p>
+          <p>El administrador de red tuvo que agregar usuarios adicionales a la red de la situación anterior. Para incorporar a estos nuevos usuarios, el administrador de red instaló un segundo switch y lo conectó al primero. Poco después de que se agregó el S2 a la red, los usuarios en ambos switches comenzaron a experimentar importantes problemas de rendimiento al conectarse con los dispositivos en el otro switch, como se muestra en la figura 1.  </p>
+          <p></p>
+          <p>El administrador de red observa un mensaje de la consola en el switch S2:</p>
+          <p></p>
+          <p>
+            <span class="cmd">*Mar  1 00:45:08.756: %CDP-4-DUPLEX_MISMATCH: duplex mismatch discovered on FastEthernet0/20 (not half duplex), with Switch FastEthernet0/20 (half duplex).</span>
+          </p>
+          <p></p>
+          <p>Mediante el comando <b>show interfaces fa 0/20</b>, el administrador de red examina la interfaz en el S1 usada para conectarse al S2 y observa que está establecida en full-duplex, como se muestra en la figura 2. Ahora, el administrador de red examina el otro lado de la conexión: el puerto en el S2. En la figura 3, se muestra que este lado de la conexión se configuró como half-duplex. El administrador de red corrige la configuración y la establece en <b>duplex auto</b>, para que el dúplex se negocie automáticamente. Debido a que el puerto en el S1 se establece en full-duplex, el S2 también usa full-duplex.</p>
+          <p></p>
+          <p>Los usuarios informan que ya no existe ningún problema de rendimiento.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la PC 1 conectada al switch 1. El switch 1 está conectado al switch 2. El switch 2 está conectado al servidor 2. La leyenda sobre la PC dice: "Tengo serios problemas de rendimiento al comunicarme con el servidor. La figura 2 muestra la salida del comando show interface f.a. zero slash zero en el switch 1.  La configuración de duplex está completa. La figura 3 muestra la salida del comando show interface f.a. zero slash twenty en el switch 2.  La configuración de dúplex está en semidúplex.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

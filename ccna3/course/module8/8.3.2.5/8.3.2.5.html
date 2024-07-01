@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.2.5 Modificación de una ID de router OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modificación de una ID de router OSPFv3</h1>
+        <div>
+          <p>En ocasiones, se deben cambiar las ID de router, por ejemplo, si el administrador de red estableció un nuevo esquema de identificación de ID de router. Sin embargo, después de que un router OSPFv3 establece una ID de router, esta no se puede cambiar hasta que se vuelva a cargar el router o se borre el proceso OSPFv3.</p>
+          <p></p>
+          <p>En la figura 1, observe que la ID del router actual es 10.1.1.1. La ID del router OSPFv3 debería ser 1.1.1.1. </p>
+          <p></p>
+          <p>En la figura 2, se asigna la ID de router 1.1.1.1 al R1. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> el método preferido para restablecer la ID del router es borrar el proceso OSPF. </p>
+          <p></p>
+          <p>En la figura 3, se borra el proceso de routing de OSPFv3 con el comando <b>clear ipv6 ospf process</b> del modo EXEC con privilegios. Hacer esto obliga al protocolo OSPF en el R1 a volver a negociar las adyacencias de vecinos con la nueva ID del router.</p>
+          <p></p>
+          <p>El comando <b>show ipv6 protocols</b> verifica que se haya cambiado la ID del router.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para modificar la ID del router para el R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la salida del comando show ipv6 protocols. La ID del router es 10 punto 1 punto 1 punto 1. En la figura dos, se muestran los comandos utilizados al cambiar la ID del router. El primer comando es ipv6 router ospf 10.  La ID se configura con el comando router guion id 1 punto 1 punto 1 punto 1. En la figura tres, se muestra el comando que se utiliza para borrar el proceso de OSPF para que la ID recién configurada pueda tener efecto. El comando es clear ipv6 ospf process.  El router responde con la siguiente pregunta: ¿Desea restablecer los procesos de OSPFv3 seleccionados?  La respuesta del usuario puede ser afirmativa (y) o negativa (n). En la figura se muestra que la respuesta es afirmativa (y).  Se muestra la salida del comando show ipv6 protocols y la ID del router ahora aparece como 1 punto 1 punto 1 punto 1. La figura cuatro es un elemento de medios interactivos que permite que el estudiante modifique la ID del router en el router R1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

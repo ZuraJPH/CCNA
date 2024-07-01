@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.4 Componentes de la resolución de problemas de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Componentes de la resolución de problemas de OSPF</h1>
+        <div>
+          <p>Como se muestra en la ilustración, en general, los problemas de OSPF se relacionan con uno de los siguientes aspectos:</p>
+          <p>
+            <ul>
+              <li>Adyacencias de vecinos</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Rutas faltantes</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Selección de rutas</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Al solucionar problemas de vecinos, verifique si el router estableció adyacencias con routers vecinos mediante el comando <b>show ip ospf neighbor</b> de OSPFv2. Si no hay adyacencias, los routers no pueden intercambiar rutas. Verifique si las interfaces funcionan y están habilitadas para OSPFv2 mediante los comandos <b>show ip interface brief</b> y <b>show ip ospf interface</b>. Si las interfaces funcionan y están habilitadas para OSPFv2, asegúrese de que las interfaces en ambos routers estén configuradas para la misma área OSPFv2 y que no estén configuradas como interfaces pasivas.</p>
+          <p></p>
+          <p>Si la adyacencia entre los dos routers está establecida, verifique que haya rutas OSPFv2 en la tabla de routing IPv4 mediante el comando <b>show ip route ospf</b>. Si no hay rutas OSPFv2, verifique que no haya otros protocolos de routing con distancias administrativas más bajas en ejecución en la red. Verifique si todas las redes requeridas se anuncian en OSPFv2. También verifique si hay una lista de acceso configurada en un router que podría filtrar las actualizaciones de routing entrantes o salientes. </p>
+          <p></p>
+          <p>Si todas las rutas requeridas están en la tabla de routing pero la ruta que el tráfico toma es incorrecta, verifique el costo de OSPFv2 de las interfaces en la ruta. Además, preste especial atención en los casos en que las interfaces tienen una velocidad superior a 100 Mb/s, ya que todas las interfaces por encima de este ancho de banda tienen el mismo costo de OSPFv2 de manera predeterminada.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Los comandos y procesos son similares para OSPFv3. Para obtener el comando equivalente para OSPFv3, simplemente reemplace<b> ip </b>con<b> ipv6</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra un diagrama de flujo que describe los pasos para solucionar problemas de OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

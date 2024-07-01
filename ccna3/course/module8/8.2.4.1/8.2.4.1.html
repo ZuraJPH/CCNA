@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.1 Verificación de vecinos OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de vecinos OSPF</h1>
+        <div>
+          <p>En la figura 1, se muestra la topología de referencia.</p>
+          <p></p>
+          <p>Utilice el comando <b>show ip ospf neighbor</b> para verificar que el router haya formado una adyacencia con los routers vecinos. Si no se muestra la ID del router vecino o si este no se muestra en el estado FULL, los dos routers no formaron una adyacencia OSPFv2. </p>
+          <p></p>
+          <p>Si dos routers no establecen una adyacencia, no se intercambia la información de estado de enlace. Las LSDB incompletas pueden producir imprecisiones en los árboles SPF y en las tablas de routing. Es posible que no existan rutas hacia las redes de destino o que estas no representen la ruta más óptima.</p>
+          <p></p>
+          <p>En la figura 2, se muestra la adyacencia de vecino del R1. Este comando muestra la siguiente salida para cada vecino:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Neighbor ID:</b> la ID del router vecino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Pri</b>: la prioridad OSPFv2 de la interfaz. Este valor se utiliza en la elección del DR y del BDR.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>State</b>: el estado de OSPFv2 de la interfaz. El estado FULL significa que el router y su vecino poseen LSDB de OSPFv2 idénticas. En las redes multiacceso, como Ethernet, dos routers adyacentes pueden mostrar sus estados como 2WAY. El guion indica que no se requiere ningún DR o BDR debido al tipo de red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dead Time</b>: el tiempo restante que el router espera para recibir un paquete de saludo OSPFv2 del vecino antes de declararlo inactivo. Este valor se restablece cuando la interfaz recibe un paquete de saludo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Address:</b> la dirección IPv4 de la interfaz del vecino a la que el router está conectado directamente.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface:</b> la interfaz en la que este router formó adyacencia con el vecino.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para verificar los vecinos del R2 y del R3 con el comando <b>show ip ospf neighbor</b>.</p>
+          <p>Dos routers pueden no formar una adyacencia OSPFv2 si:</p>
+          <p>
+            <ul>
+              <li>Las máscaras de subred no coinciden, esto hace que los routers se encuentren en redes separadas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los temporizadores de tiempo muerto y de saludo del protocolo OSPFv2 no coinciden.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los tipos de redes OSPFv2 no coinciden.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Hay un comando <b>network</b> de OSPFv2 faltante o incorrecto.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la topología de referencia de OSPF. En la figura dos, se muestra la salida del siguiente comando ejecutado en el router R1: show ip ospf. En la figura aparecen dos routers vecinos: R2 y R3. La figura tres representa un elemento de medios interactivos que permite que el estudiante verifique los vecinos OSPF del router R1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

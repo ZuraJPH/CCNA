@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.1.1 Función de switching del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Función de switching del router</h1>
+        <div>
+          <p>Una de las funciones principales de un router es reenviar paquetes hacia su destino. Esto se logra mediante una función de switching, que es el proceso que utiliza un router para aceptar un paquete en una interfaz y reenviarlo por otra interfaz. Una responsabilidad clave de la función de conmutación es la de encapsular los paquetes en el tipo de trama de enlace de datos correcto para el enlace de datos de salida. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> en este contexto, el término “switching” significa literalmente mover paquetes de origen a destino y no se lo debe confundir con la función de un switch de capa 2.</p>
+          <p></p>
+          <p>Una vez que el router determinó la interfaz de salida mediante la función de determinación de rutas, el router debe encapsular el paquete en la trama de enlace de datos de la interfaz de salida.</p>
+          <p></p>
+          <p>¿Qué hace un router cuando recibe un paquete desde una red que está destinado a otra red? El router ejecuta los siguientes tres pasos principales:</p>
+          <p></p>
+          <p>
+            <b>Paso 1:</b> Desencapsula el encabezado de trama y el trailer de la capa 2 para exponer el paquete de la capa 3.</p>
+          <p>
+            <b>Paso 2:</b> Examina la dirección IP de destino del paquete IP para encontrar el mejor camino en la tabla de enrutamiento.</p>
+          <p>
+            <b>Paso 3:</b> Si el router encuentra una ruta hacia el destino, encapsula el paquete de capa 3 en una nueva trama de capa 2 y reenvía la trama por la interfaz de salida.</p>
+          <p></p>
+          <p>Como se muestra en la ilustración, los dispositivos tienen direcciones IPv4 de capa 3, y las interfaces Ethernet tienen direcciones de enlace de datos de capa 2. Por ejemplo, la PC1 se configuró con la dirección IPv4 192.168.1.10 y una dirección MAC de ejemplo 0A-10. A medida que un paquete se desplaza desde el dispositivo de origen hacia el dispositivo de destino final, las direcciones IP de capa 3 no se modifican. Esto se debe a que la PDU de la capa 3 no cambia. Sin embargo, las direcciones de enlace de datos de capa 2 cambian en cada salto cuando cada router desencapsula y vuelve a encapsular el paquete en una nueva trama de la capa 2. </p>
+          <p></p>
+          <p>Es común que los paquetes requieran la encapsulación en un tipo diferente de trama de la capa 2 que la que se recibió. Por ejemplo, un router puede recibir una trama encapsulada de Ethernet en una interfaz FastEthernet, y luego procesar esa trama para que se reenvíe a través de una interfaz serial. </p>
+          <p></p>
+          <p>Observe en la figura que los puertos entre R2 y R3 no tienen direcciones MAC asociadas. Esto se debe a que este es un enlace serial. Las direcciones MAC se requieren solo en las redes de acceso múltiple, como Ethernet. Un enlace serial es una conexión punto a punto y utiliza una trama de la capa 2 que no requiere el uso de una dirección MAC. En este ejemplo, cuando las tramas de Ethernet se reciben en R2 desde la interfaz Fa0/0, destinadas a PC2, se desencapsulan y luego vuelven a encapsular para la interfaz serial, como por ejemplo una trama encapsulada del protocolo punto a punto (PPP). Cuando R3 recibe la trama PPP, se desencapsula nuevamente y se vuelve a encapsular en una trama de Ethernet con una dirección MAC de destino 0B-20, antes de ser reenviada a través de la interfaz Fa0/0.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una computadora que envía un paquete de datos a través de tres routers a otra computadora.  La figura hace énfasis en que el nodo emisor utiliza las siete capas del modelo de OSI para enviar datos, y cada uno de los tres routers solo leerá hasta la capa tres del modelo.  La computadora receptora procesará las siete capas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

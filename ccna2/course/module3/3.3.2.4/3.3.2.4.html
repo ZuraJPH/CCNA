@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.4 Ruta primaria de nivel 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta primaria de nivel 1</h1>
+        <div>
+          <p>Como se muestra en la figura 1, las rutas 172.16.0.0 y 209.165.200.0 son rutas principales de nivel 1. Las rutas principales son rutas de red de nivel 1 que se dividen en subredes. Una ruta principal nunca puede ser una ruta final. </p>
+          <p></p>
+          <p>En la figura 2, se destacan las rutas principales de nivel 1 en la tabla de routing del R1. En la tabla de routing, básicamente se proporciona un encabezado para las subredes específicas que contiene. Cada entrada muestra la dirección de red con clase, la cantidad de subredes y la cantidad de máscaras de subred diferentes en las que se subdividió la dirección con clase. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la relación entre una ruta de nivel uno y una ruta principal.  La figura es un gráfico que enumera una ruta de red como ruta de nivel uno y por debajo de ésta se encuentra la ruta principal de título si la red de nivel uno es una red dividida en subredes. La figura 2 muestra el resultado del comando show ip route pipe begin Gateway. Se resaltan dos rutas principales.  La primera ruta dice 172 punto 16 punto cero punto cero barra 16 está dividida en subredes de forma variable, 5 subredes, y 3 máscaras.  Debajo de esto las cinco subredes se muestran junto con la dirección IP del siguiente salto.  Por ejemplo, una de las líneas de subred dice R por RIP, 172 punto 16 punto 2 punto 0 barra 24 120 barra 2 a través de 209 punto 165 punto 200 punto 226.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

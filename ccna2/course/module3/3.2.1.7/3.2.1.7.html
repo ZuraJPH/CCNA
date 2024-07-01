@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.7 Propagar una ruta predeterminada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propagar una ruta predeterminada</h1>
+        <div>
+          <p>Consulte la Figura 1. En esta situación, el R1 es el router perimetral con una conexión simple a un proveedor de servicios. Por lo tanto, para que el R1 llegue a Internet, solo se requiere una ruta estática predeterminada desde la interfaz Serial 0/0/1. </p>
+          <p></p>
+          <p>Se podrían configurar rutas estáticas predeterminadas similares en el R2 y en el R3, pero es mucho más escalable introducirla una vez en el router perimetral R1 y, a continuación, hacer que el R1 la propague al resto de los routers mediante RIP. Para proporcionarle conectividad a Internet a todas las demás redes del dominio de enrutamiento RIP, la ruta estática predeterminada debe publicarse a todos los demás routers que usan el protocolo de enrutamiento dinámico. </p>
+          <p></p>
+          <p>Para propagar una ruta predeterminada en RIP, el router perimetral debe estar configurado con lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Una ruta estática predeterminada, mediante el comando <b>ip route 0.0.0.0 0.0.0.0</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El comando de configuración del router <b>default-information originate</b>. Esto le ordena al R1 que produzca información predeterminada mediante la propagación de la ruta estática predeterminada en actualizaciones RIP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En el ejemplo de la figura 2, se configura una ruta estática predeterminada completamente especificada al proveedor de servicios y, a continuación, se propaga la ruta mediante RIP. Observe que ahora el R1 tiene un gateway de último recurso y una ruta predeterminada instalados en su tabla de routing.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para verificar que la ruta predeterminada se haya propagado al R2 y al R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres routers conectados linealmente a través de enlaces WAN.  R1 está conectado a R2 a través de un enlace WAN serie y tiene una LAN en su interfaz Gigabit-Ethernet.  R2 está conectado tanto a R1 como a R3 a través de enlaces WAN serie y tiene una LAN en su interfaz gigabit-Ethernet.  R3 solo está conectado a R2 a través de un enlace WAN serie y tiene una LAN en su interfaz gigabit-Ethernet.  El router R-1 tiene configurado un enlace WAN a la nube de Internet.  La figura dos configura una ruta estática en un router con el comando ip route cero punto cero punto cero punto cero punto cero punto cero punto cero punto cero punto serial cero barra cero barra uno 209 punto 165 punto 200 punto 226.  Luego el router se configura para ejecutar rip con el comando router rip.  La ruta predeterminada se configura para propagar su ruta predeterminada con el comando default guión information originate.  Esto se verifica con el comando show ip route barra vertical begin Gateway y muestra un gateway de último recurso que se enumera junto con la ruta predeterminada.  La ruta predeterminada se etiqueta con una S mayúscula con un asterisco junto a ella para indicar que es una ruta predeterminada candidata. La figura tres es un elemento de recursos interactivos que permite que el estudiante verifique que la ruta predeterminada se haya propagado a los routers R-2 y R-3.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

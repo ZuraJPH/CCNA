@@ -1,0 +1,1 @@
+La figura muestra cómo los sitios remotos pueden conectarse mediante un proveedor utilizando la tecnología WAN Ethernet.

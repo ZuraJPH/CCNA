@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.8 Métricas de los protocolos de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métricas de los protocolos de routing</h1>
+        <div>
+          <p>En algunos casos, un protocolo de routing obtiene información sobre más de una ruta hacia el mismo destino. Para seleccionar la mejor ruta, el protocolo de routing debe poder evaluar y diferenciar entre las rutas disponibles. Esto se logra mediante el uso de métricas de routing.  </p>
+          <p></p>
+          <p>Una métrica es un valor mensurable que el protocolo de routing asigna a distintas rutas según la utilidad que tengan. En situaciones donde hay varias rutas hacia la misma red remota, las métricas de routing se utilizan para determinar el “costo” total de una ruta de origen a destino. Los protocolos de routing determinan la mejor ruta sobre la base del costo más bajo.  </p>
+          <p></p>
+          <p>Los diferentes protocolos de routing pueden usar diferentes métricas. La métrica utilizada por un protocolo de routing no es comparable con la métrica utilizada por otro. Como resultado, dos protocolos de routing distintos pueden elegir diferentes rutas hacia el mismo destino.</p>
+          <p></p>
+          <p>A continuación, se indican algunos protocolos dinámicos y las métricas que utilizan:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de información de routing (RIP):</b> conteo de saltos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo OSPF (Abrir primero la ruta más corta):</b> el costo de Cisco según el ancho de banda acumulativo de origen a destino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo mejorado de routing de gateway interior (EIGRP):</b> ancho de banda mínimo, demora, carga, confiabilidad y unidad máxima de transmisión (MTU).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la animación de la ilustración, se muestra que el protocolo RIP elegiría la ruta con la menor cantidad de saltos, mientras que el protocolo OSPF elegiría la ruta con el mayor ancho de banda. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres routers conectados en una configuración triangular. Cada router está conectado a los otros dos routers.  Una computadora conectada al router R1 envía un paquete de datos a una computadora conectada al router R2.  Hay dos rutas posibles para los datos.  Una ruta usa una línea de 56 kbps y consta de un salto de router.  La otra ruta tiene dos saltos de router y cada enlace es un enlace T1 de 1544 Mbps.  La figura es una animación que muestra la ruta que seguiría RIP y la que seguiría OSPF.  Cuando se utiliza el conteo de saltos como métrica, como en RIP, el paquete viaja por la primera ruta a través de un router.  Al utilizar el ancho de banda como métrica, como en OSPF, el paquete seguirá los dos enlaces T1 porque configuran una ruta más rápida que el enlace de 56 kbps.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

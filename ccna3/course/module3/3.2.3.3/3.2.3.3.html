@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.3 Puertos de extremo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Puertos de extremo</h1>
+        <div>
+          <p>Un puerto de extremo en RSTP es un puerto de switch que nunca se conecta con otro switch. Sufre la transición al estado de enviar de manera inmediata cuando se encuentra habilitado. </p>
+          <p></p>
+          <p>El concepto de puerto de extremo en RSTP corresponde a la función PortFast de PVST+. Un puerto de extremo se conecta directamente a una estación terminal y asume que no ningún dispositivo de switch está conectado a él. Los puertos de extremo en RSTP deben pasar de inmediato al estado de reenvío, por lo que se omiten los prolongados estados de puerto de escucha y aprendizaje del estándar 802.1D original. </p>
+          <p></p>
+          <p>La implementación de Cisco de RSTP (PVST+ rápido) conserva la palabra clave PortFast mediante el comando spanning-tree portfast para la configuración de puertos de extremo. Esto hace que la transición de STP a RSTP se dé sin inconvenientes. </p>
+          <p></p>
+          <p>En la figura 1, se muestran ejemplos de puertos que se pueden configurar como puertos de perímetro. En la figura 2, se muestran ejemplos de puertos que no son de perímetro.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> no se recomienda configurar un puerto de perímetro para conectarlo a otro switch. Esto puede tener consecuencias negativas para RSTP, ya que puede ocurrir un bucle temporal, lo que posiblemente retrase la convergencia de RSTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches interconectados con un cuarto switch conectado al switch 1.  Hay tres PC conectadas al switch 2 y están resaltados los puertos a los que se conectan en el switch 2.  Hay un router conectado al switch 4 y está resaltado el puerto al que se conecta.  Estos puertos resaltados se conocen como puertos de extremo. La figura 2 muestra tres switches interconectados con un cuarto switch conectado al switch 1.  Los puertos en los enlaces entre los switches están resaltados.  Estos puertos no son de extremo.  Son generalmente enlaces troncales y las BPDU se desplazan sobre estos enlaces entre los switches.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

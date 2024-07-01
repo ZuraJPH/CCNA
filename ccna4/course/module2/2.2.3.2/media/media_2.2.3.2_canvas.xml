@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR">
+
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+<slide>
+<element type="IMAGE" src="media_2.2.3.2A.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" compId="ID_s1_txt01" x="69" y="90" width="123" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt07" x="199" y="119" width="266" expand="up" align="left" />
+<element type="TEXT" compId="ID_s1_txt08" x="214" y="146" width="267" expand="up" align="right" />
+<element type="TEXT" compId="ID_s1_txt09" x="215" y="182" width="250" expand="up" align="center" />
+<element type="TEXT" compId="ID_s1_txt04" x="69" y="204" width="123" expand="up" align="center" />
+<element type="TEXT" compId="ID_s1_txt02" x="69" y="124" width="123" expand="down" align="right" />
+<element type="TEXT" compId="ID_s1_txt03" x="69" y="154" width="123" expand="down" align="right" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" src="media_2.2.3.2B.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" compId="ID_s2_txt01" x="69" y="90" width="123" expand="down" align="center" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt05" x="69" y="295" width="123" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s2_txt12" x="275" y="300" width="129" expand="up+down" align="center" class="purpleCallOut" />
+<element type="TEXT" compId="ID_s2_txt10" x="199" y="229" width="266" expand="up" align="left" />
+<element type="TEXT" compId="ID_s2_txt11" x="214" y="255" width="267" expand="up" align="right" />
+<element type="TEXT" compId="ID_s2_txt13" x="200" y="344" width="267" expand="up" align="left" />
+<element type="TEXT" compId="ID_s2_txt07" x="199" y="119" width="266" expand="up" align="left" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt08" x="214" y="146" width="267" expand="up" align="right" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt09" x="215" y="182" width="250" expand="up" align="center" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt04" x="69" y="204" width="123" expand="up" align="center" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt02" x="69" y="124" width="123" expand="down" align="right" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt03" x="69" y="154" width="123" expand="down" align="right" color="#666263" />
+<element type="TEXT" compId="ID_s2_txt16" x="214" y="368" width="267" expand="up" align="right" />
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" src="media_2.2.3.2C.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" compId="ID_s3_txt01" x="69" y="90" width="123" expand="down" align="center" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt05" x="69" y="295" width="123" expand="up+down" align="center" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt06" x="69" y="422" width="123" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_s3_txt12" x="275" y="302" width="129" expand="up+down" align="center" color="#7b797a" class="purpleCallOut" />
+<element type="TEXT" compId="ID_s3_txt10" x="199" y="229" width="266" expand="up" align="left" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt11" x="214" y="255" width="267" expand="up" align="right" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt13" x="200" y="344" width="267" expand="up" align="left" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt14" x="199" y="408" width="268" expand="up" align="left" />
+<element type="TEXT" compId="ID_s3_txt15" x="214" y="433" width="267" expand="up" align="right" />
+<element type="TEXT" compId="ID_s3_txt07" x="199" y="119" width="266" expand="up" align="left" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt08" x="214" y="146" width="267" expand="up" align="right" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt09" x="215" y="182" width="250" expand="up" align="center" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt04" x="69" y="204" width="123" expand="up" align="center" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt02" x="69" y="124" width="123" expand="down" align="right" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt03" x="69" y="154" width="123" expand="down" align="right" color="#7b797a" />
+<element type="TEXT" compId="ID_s3_txt16" x="214" y="368" width="267" expand="up" align="right" color="#7b797a" />
+<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+</slide>
+</slide>
+
+</data>

@@ -1,0 +1,1 @@
+La figura muestra dos routers conectados por un enlace WAN que usa PPP.  Dos ventajas de PPP respecto de HDLC son la administración de la calidad y la autenticación de los enlaces.

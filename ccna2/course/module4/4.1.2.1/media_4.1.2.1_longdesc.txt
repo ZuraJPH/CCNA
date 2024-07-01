@@ -1,0 +1,1 @@
+La figura uno muestra la estructura de topología de una red jerárquica de tres niveles estándar. La figura dos muestra la arquitectura Cisco Borderless Networks, que conecta campus grandes a campus medianos y pequeños a través de conexiones WAN y PSTN.

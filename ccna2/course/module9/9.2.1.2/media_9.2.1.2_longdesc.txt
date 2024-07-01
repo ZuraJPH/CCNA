@@ -1,0 +1,1 @@
+En la figura se muestra al router dos con una red interna con un servidor web a la izquierda y una red externa con una PC a la derecha.  Pueden verse paquetes que van y vienen entre la PC y el servidor web.  Pueden verse números junto a los elementos que indican el orden en el proceso de traducción para NAT estática. Debajo de la imagen se incluye una tabla de NAT estática.  

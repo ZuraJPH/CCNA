@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.3 ISDN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ISDN</h1>
+        <div>
+          <p>La red digital de servicios integrados (ISDN) es una tecnología de conmutación de circuitos que habilita al bucle local de una PSTN para transportar señales digitales, lo que da como resultado conexiones de conmutación de mayor capacidad. </p>
+          <p></p>
+          <p>ISDN cambia las conexiones internas de la PSTN para que transporte señales digitales multiplexadas por división de tiempo (TDM) en vez de señales analógicas. TDM permite que se transfieran dos o más señales, o flujos de bits, como subcanales en un canal de comunicación. Las señales parecen transferirse en forma simultánea; sin embargo, físicamente, las señales se turnan en el canal. </p>
+          <p></p>
+          <p>En la figura 1, se muestra un ejemplo de una topología de ISDN. La conexión ISDN puede requerir un adaptador de terminal (TA), que es un dispositivo utilizado para conectar las conexiones de la interfaz de velocidad básica (BRI) de ISDN a un router. </p>
+          <p></p>
+          <p>Existen dos tipos de interfaces de ISDN:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz de velocidad básica (BRI):</b> la ISDN BRI está pensada para el hogar y para pequeñas empresas, y brinda dos canales portadores de 64 kb/s (B) para transmitir voz y datos y un canal delta de 16 kb/s (D) para señalización, establecimiento de llamadas y otros fines. El canal D de BRI con frecuencia se infrautiliza, debido a que solo tiene que controlar dos canales B (figura 2). </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz de velocidad primaria (PRI):</b> ISDN también está disponible para instalaciones de mayor tamaño. En América del Norte, PRI proporciona 23 canales B con 64 kb/s y un canal D con 64 kb/s para una velocidad de bits total de hasta 1,544 Mb/s. Esto incluye cierta sobrecarga adicional para la sincronización. En Europa, Australia y otras partes del mundo, PRI ISDN proporciona 30 canales B y un canal D para una velocidad de bits total de hasta 2,048 Mb/s, lo que incluye la sobrecarga para la sincronización (figura 3). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>BRI tiene un tiempo de configuración de llamada inferior a un segundo, y el canal B de 64 kb/s proporciona mayor capacidad que un enlace de módem analógico. Si se requiere mayor capacidad, se puede activar un segundo canal B para proporcionar un total de 128 kb/s. Esto permite varias conversaciones de voz simultáneas, una conversación de voz y una transferencia de datos, o una videoconferencia mediante un canal para voz y el otro para video. </p>
+          <p></p>
+          <p>Otra aplicación común de ISDN es proporcionar la capacidad adicional necesaria en una conexión de línea arrendada. La línea arrendada tiene el tamaño para transportar cargas de tráfico promedio, mientras que la ISDN se agrega durante períodos de picos de demanda. Si la línea arrendada falla, la ISDN también se usa como respaldo. Las tarifas de ISDN se determinan sobre la base de los canales B y son similares a las de las conexiones de voz analógicas. </p>
+          <p></p>
+          <p>Con PRI ISDN, se pueden conectar varios canales B entre dos terminales. Esto permite videoconferencias y conexiones de datos con un ancho de banda elevado sin latencia o vibración. Sin embargo, usar varias conexiones a través de distancias largas puede ser muy costoso.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Si bien ISDN sigue siendo una tecnología importante para las redes de los proveedores de servicios de telefonía, su popularidad como opción de conexión a Internet ha disminuido debido a la introducción de DSL de alta velocidad y otros servicios de banda ancha.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra dos oficinas que usan una línea ISDN para conectarse con sus proveedores. La figura 2 muestra cómo una línea ISDN BRI tiene dos líneas de 64 kilobits y una línea de 16 kilobits. La figura 3 muestra cómo una línea ISDN PRI tiene veintitrés líneas de 64 kilobits para un T1 o treinta líneas de 64 kilobits para un E3.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

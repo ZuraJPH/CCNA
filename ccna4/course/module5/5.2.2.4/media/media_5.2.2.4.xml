@@ -1,0 +1,21 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Pasos para proteger SNMPv3</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Paso 1:</b> Configurar una ACL para permitir el acceso a la red de administración protegida.]]></text>
+	</component>
+	
+	<component id="ID_s1_txt02">
+		<text><![CDATA[<b>Paso 2:</b> Configurar una vista de SNMP.]]></text>
+	</component>
+
+	<component id="ID_s1_txt03">
+		<text><![CDATA[<b>Paso 3:</b> Configurar un grupo SNMP.]]></text>
+	</component>
+
+	<component id="ID_s1_txt04">
+		<text><![CDATA[<b>Paso 4:</b> Configurar un usuario como miembro del grupo SNMP.]]></text>
+	</component>
+</textcomponents>

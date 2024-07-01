@@ -1,0 +1,6 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_type">
+		<text><![CDATA[Packet Tracer]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Configuración de las características avanzadas del protocolo OSPFv2]]></text>
+	</component><!-- end slide 1 --></textcomponents>

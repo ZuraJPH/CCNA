@@ -1,0 +1,1 @@
+La figura muestra una tabla de protocolos de enrutamiento comunes y la distancia administrativa para cada uno.  Los tres protocolos de routing principales y las distancias administrativas son: RIP utiliza 120, OSPF utiliza 110 y EIGRP interno utiliza 90.

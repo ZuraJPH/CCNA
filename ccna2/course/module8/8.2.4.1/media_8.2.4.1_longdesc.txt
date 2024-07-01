@@ -1,0 +1,1 @@
+La figura es una tabla que enumera las tareas utilizadas para resolver problemas de DHCPv6.

@@ -1,0 +1,58 @@
+<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Verificación del ID del router</b>]]></text>
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Modificación de la ID del router en el R1</b>]]></text>
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Eliminación del proceso OSPF</b>]]></text>
+	</component>
+	<component id="ID_s4_title">
+		<text><![CDATA[<b>Modificación del ID del router</b>]]></text>
+	</component>
+	<component id="ID_sc_reset">
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Mostrar]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Mostrar todo]]></text>
+	</component>
+	<component id="ID_SC5" fontSize="12" fontFace="_typewriter" fontColor="#ffffff">
+		<feedback id="fb"><![CDATA[<pre><b>***</b><font face="_sans" size="10" color="#FFFFFF">Debe introducir el comando exacto y completo. Los comandos que incluyen un nombre o una contraseña distinguen mayúsculas de minúsculas.</font><b>***</b></pre></font>]]></feedback>
+		<existingcommands><![CDATA[<font face="_sans"><b>Verifique la ID del router en los ajustes del protocolo OSPF en el R1.</b></font>]]></existingcommands>
+		<command prompt="R1#">
+			<correctresponse><![CDATA[show ip protocols]]></correctresponse>
+			<deviceresponse><![CDATA[<font size="10"><pre>*** IP Routing is NSF aware ***<br> <br>Routing Protocol is &quot;ospf 10&quot; <br>  Outgoing update filter list for all interfaces is not set<br>  Incoming update filter list for all interfaces is not set<br>  Router ID 192.168.10.5<br>  Number of areas in this router is 1. 1 normal 0 stub 0 nssa<br>  Maximum path: 4<br>  Routing for Networks:<br>    172.16.1.0 0.0.0.255 area 0<br>    172.16.3.0 0.0.0.3 area 0<br>    192.168.10.4 0.0.0.3 area 0<br>  Routing Information Sources:<br>    Gateway Distance Last Update<br>    209.165.200.225 110 00:07:02<br>    192.168.10.10 110 00:07:02<br>  Distance: (default is 110)<br><br>R1#</pre></font>]]></deviceresponse>
+			<instruction><![CDATA[<font size="10" face="_sans"><b>Realice los siguientes pasos para modificar la ID del router:<ul><li>Ingrese al modo de configuración de router OSPF con la ID de proceso 10.</li><li>Asigne la ID de router 1.1.1.1.</li><li>Vuelva al modo EXEC privilegiado.</li></ul></font>]]></instruction>
+		</command>
+		<command prompt="R1(config)#">
+			<correctresponse><![CDATA[router ospf 10]]></correctresponse>
+		</command>
+		<command prompt="R1(config-router)#">
+			<correctresponse><![CDATA[router-id 1.1.1.1]]></correctresponse>
+			<deviceresponse><![CDATA[<font size="10"><pre>% OSPF: Reload or use &quot;clear ip ospf process&quot; command, for <br/>this to take effect</pre></font>]]></deviceresponse>
+		</command>
+		<command prompt="R1(config-router)#">
+			<correctresponse><![CDATA[end]]></correctresponse>
+			<deviceresponse><![CDATA[<font size="10"><pre>R1#<br>*Mar 25 19:46:09.711: %SYS-5-CONFIG_I: Configured from console by console</pre></font>]]></deviceresponse>
+			<instruction><![CDATA[<font size="10" face="_sans"><b>Borre el proceso de routing de OSPF como se indica. Verifique que los procesos OSPF<br />se borren respondiendo con una &quot;y&quot;.</b></font>]]></instruction>
+		</command>
+		<command prompt="R1#">
+			<correctresponse><![CDATA[clear ip ospf process]]></correctresponse>
+		</command>
+		<command prompt="Reset ALL OSPF processes? [no]: ">
+			<correctresponse><![CDATA[y]]></correctresponse>
+			<deviceresponse><![CDATA[<font size="10"><pre>R1#<br>*Mar 25 19:46:22.423: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on Serial0/0/1<br/> from FULL to DOWN, Neighbor Down: Interface down or detached<br>*Mar 25 19:46:22.423: %OSPF-5-ADJCHG: Process 10, Nbr 2.2.2.2 on Serial0/0/0<br/> from FULL to DOWN, Neighbor Down: Interface down or detached<br>*Mar 25 19:46:22.475: %OSPF-5-ADJCHG: Process 10, Nbr 3.3.3.3 on Serial0/0/1<br/> from LOADING to FULL, Loading Done<br>*Mar 25 19:46:22.475: %OSPF-5-ADJCHG: Process 10, Nbr 2.2.2.2 on Serial0/0/0<br/> from LOADING to FULL, Loading Done<br>R1#</pre></font>]]></deviceresponse>
+			<instruction><![CDATA[<font size="10" face="_sans"><b>Verifique el cambio que filtra el resultado para mostrar únicamente la sección de ID del router.</b></font>]]></instruction>
+		</command>
+		<command prompt="R1#">
+			<correctresponse><![CDATA[show ip protocols | section Router ID]]></correctresponse>
+			<deviceresponse><![CDATA[<font size="10"><pre>R1#<br>  ID del router 1.1.1.1<br>R1#</pre></font>]]></deviceresponse>
+			<instruction><![CDATA[<font size="10" face="_sans" class="syntaxBottomLine"><b>Modificó correctamente la ID del router.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+</textcomponents>

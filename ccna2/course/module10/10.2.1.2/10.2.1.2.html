@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.2 Funcionamiento de NTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de NTP</h1>
+        <div>
+          <p>Las redes NTP utilizan un sistema jerárquico de fuentes horarias. Cada nivel en este sistema jerárquico se denomina estrato. El nivel de estrato se define como la cantidad de saltos desde fuente autorizada. La hora sincronización se distribuye en la red mediante el protocolo NTP. En la figura muestra una red NTP modelo.</p>
+          <p></p>
+          <p>Servidores NTP dispuestos en tres niveles que muestran los tres estratos. El estrato 1 está conectado a relojes del estrato 0.</p>
+          <p></p>
+          <p>
+            <b>Estrato 0</b>
+          </p>
+          <p></p>
+          <p>Una red NTP obtiene la hora de fuentes horarias autorizadas. Estas fuentes autorizadas, conocidas como dispositivos de estrato 0, son dispositivos de cronometraje de alta precisión que son presuntamente precisos y con poco o ningún retraso asociado con los mismos. Los dispositivos del estrato 0 están representados por el reloj en la figura.</p>
+          <p></p>
+          <p>
+            <b>Estrato 1</b>
+          </p>
+          <p></p>
+          <p>Los dispositivos del estrato 1 están conectados directamente a las fuentes horarias válidas. Actúan como el estándar horario de la red principal.</p>
+          <p></p>
+          <p>
+            <b>Estrato 2 y más bajos</b>
+          </p>
+          <p></p>
+          <p>Los servidores del estrato 2 están conectados a dispositivos del estrato 1 a través de conexiones de red. Los dispositivos del estrato 2, como clientes de NTP, sincronizan su horario con los paquetes NTP desde servidores del estrato 1. Podrían también actuar como servidores para dispositivos del estrato 3.</p>
+          <p></p>
+          <p>Los números más bajos de estratos indican que el servidor está más cerca de la fuente horaria autorizada que los números de estrato más altos. Cuanto mayor sea el número de estrato, menor es el nivel del estrato. El recuento de saltos máximo es 15. El estrato 16, el nivel de estrato inferior, indica que un dispositivo no está sincronizado. Los servidores horarios en el mismo nivel de estrato pueden configurarse para actuar como un par con otros servidores horarios en el mismo nivel de estratos para la verificación o la copia de respaldo del horario.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

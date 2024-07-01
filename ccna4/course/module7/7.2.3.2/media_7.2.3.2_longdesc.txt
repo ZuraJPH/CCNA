@@ -1,0 +1,1 @@
+La figura 1 muestra la migración de una instancia del sistema operativo entre dos hipervisores del servidor 1 al servidor 2. Ambos servidores tienen una capa de hardware y, sobre ésta, la capa de hipervisor. El servidor 1 muestra tres sistemas operativos: Windows, Linux y UNIX. Una flecha representa la migración del OS Windows del servidor 1 al servidor 2.

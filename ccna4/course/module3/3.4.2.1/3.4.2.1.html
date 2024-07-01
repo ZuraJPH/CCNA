@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.2.1 Configurar GRE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configurar GRE</h1>
+        <div>
+          <p>GRE se utiliza para crear un túnel VPN entre dos sitios, como se muestra en la figura 1. Para implementar un túnel GRE, el administrador de red primero debe descubrir las direcciones IP de las terminales. Después, se deben seguir cinco pasos para configurar un túnel GRE:</p>
+          <p>
+            <b>Paso 1.</b> Cree una interfaz de túnel con el comando <b>interface tunnel number</b>.</p>
+          <p>
+            <b>Paso 2.</b> Configure una dirección IP para la interfaz de túnel. Por lo general es una dirección IP privada.</p>
+          <p>
+            <b>Paso 3.</b> Especifique la dirección IP de origen del túnel.</p>
+          <p>
+            <b>Paso 4.</b> Especifique la dirección IP de destino del túnel.</p>
+          <p>
+            <b>Paso 5:</b> (Optativo) Especifique el modo de túnel GRE como modo de interfaz de túnel. El modo de túnel GRE es el modo predeterminado de interfaz de túnel para el software IOS de Cisco.</p>
+          <p></p>
+          <p>En el ejemplo de configuración que se muestra en la figura 2, se detalla una configuración básica de túnel GRE para el router R1.</p>
+          <p></p>
+          <p>La configuración del R2 en la figura 3 refleja la configuración del R1.</p>
+          <p></p>
+          <p>La configuración mínima requiere la especificación de las direcciones de origen y destino del túnel. También se debe configurar la subred IP para proporcionar conectividad IP a través del enlace de túnel. Ambas interfaces de túnel tienen el origen del túnel establecido en la interfaz serial local S0/0/0 y el destino del túnel establecido en la interfaz serial S0/0/0 del router peer. Generalmente, una dirección IP privada se asigna a la interfaz del túnel en ambos routers. También se configuró OSPF para intercambiar rutas a través del túnel GRE.</p>
+          <p></p>
+          <p>Las descripciones de los comandos individuales de túnel GRE se muestran en la figura 4.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> cuando se configuran los túneles GRE, puede ser difícil recordar cuáles son las redes IP asociadas a las interfaces físicas y cuáles son las redes IP asociadas a las interfaces de túnel. Recuerde que antes de que se cree un túnel GRE, ya se configuraron las interfaces físicas. Los comandos <b>tunnel source</b> y <b>tunnel destination</b> hacen referencia a las direcciones IP de las interfaces físicas configuradas previamente. El comando <b>ip address</b> en las interfaces de túnel se refiere a una red IP (en general, una red IP privada) específicamente diseñada para los propósitos del túnel GRE.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la topología de configuración de túneles GRE con el router R1 a la izquierda conectándose a través de S0/0/0 a la nube de Internet. En el extremo derecho de la nube de Internet hay una conexión al router R2 mediante S0/0/0. Hay un cilindro de túnel GRE sobre la nube de Internet. Los extremos izquierdo y derecho del túnel están etiquetados con "Tunnel0". La figura 2 agrega información de asignación de direcciones IP a la topología. Tunnel0 a la izquierda es 192.168.2.1. Tunnel0 a la derecha es 192.168.2.2. R1 S0/0/0 es 209.165.201.1 y R2 S0/0/0 es 198.133.219.87. La figura muestra el túnel y los comandos de configuración de OSPF para R1. La figura 3 muestra la misma topología e información de asignación de direcciones IP junto con el túnel y la configuración de OSPF para R2. La figura 4 tiene los comandos utilizados para crear un túnel GRE y una descripción de cada comando en una tabla. La tabla tiene dos columnas: comando y descripción. El primer comando es tunnel mode gre ip, que especifica que el modo de interfaz del túnel es GRE sobre IP. El segundo comando es tunnel source seguido de una dirección IP.  Este comando especifica la dirección de origen del túnel. El tercer comando es tunnel destination seguido de una dirección IP, que se utiliza para especificar la dirección de destino del túnel. El último comando es ip address seguido de una dirección y una máscara de subred.  Éste se usa para especificar la dirección IP de la interfaz de túnel.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

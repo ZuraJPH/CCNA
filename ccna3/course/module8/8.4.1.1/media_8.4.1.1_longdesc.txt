@@ -1,0 +1,1 @@
+La figura muestra el gráfico de las actividades en clase estándar; indica que hay una actividad en clase para esta sección del currículo. La figura también indica los cuatro pasos de OSPF: adyacencia de vecinos, anuncios de estado de enlace, tabla de topología y tabla de routing.

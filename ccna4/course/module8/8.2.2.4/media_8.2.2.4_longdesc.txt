@@ -1,0 +1,1 @@
+La figura 1 muestra una tabla con los mensajes de Cisco IOS y su nivel de gravedad, palabra clave, descripción y definición. La figura 2 muestra los comandos que limitan los mensajes enviados a un servidor syslog.

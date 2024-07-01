@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.4.7 Ports in Error Disabled State</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.4.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ports in Error Disabled State</h1>
+        <div>
+          <p>When a port is configured with port security, a violation can cause the port to become error disabled. When a port is error disabled, it is effectively shut down and no traffic is sent or received on that port. A series of port security related messages display on the console (Figure 1). </p>
+          <p></p>
+          <p>
+            <b>Note</b>: The port protocol and link status is changed to down.</p>
+          <p></p>
+          <p>The port LED will turn off. The<span class="cmd"><b> show interfaces </b></span>command identifies the port status as<span class="cmd"><b> err-disabled </b></span>(Figure 2). The output of the<span class="cmd"><b> show port-security interface </b></span>command now shows the port status as<span class="cmd"><b> secure-shutdown</b></span>. Because the port security violation mode is set to shutdown, the port with the security violation goes to the error disabled state. </p>
+          <p></p>
+          <p>The administrator should determine what caused the security violation before re-enabling the port. If an unauthorized device is connected to a secure port, the port should not be re-enabled until the security threat is eliminated. To re-enable the port, use the<span class="cmd"><b> shutdown </b></span>interface configuration mode command (Figure 3). Then, use the<span class="cmd"><b> no shutdown </b></span>interface configuration command to make the port operational.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Resize" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic"></iframe>
+    </div>
+    <div id="login">Please log into <a href="http://netacad.com">netacad.com</a> before accessing this course.</div>
+  </body>
+</html>

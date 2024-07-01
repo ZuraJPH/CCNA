@@ -1,0 +1,98 @@
+<textcomponents>
+
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Ejemplo de configuración de PPPoE</b>]]></text> 
+	</component>
+	
+	<component id="ID_s1_Header01">
+		<text><![CDATA[<b>Router del cliente</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[PPP e IP en<br/>el marcador]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Autenticar solo la entrada.]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt03">
+		<text><![CDATA[ <b>Usuario</b><br> del router ISP: Contraseña<br> de Fred: Estado<br> de Barney: Pagado por completo]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt04">
+		<text><![CDATA[El conjunto de marcador</br> debe coincidir]]></text> 
+	</component>
+
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Configuración de PPPoE</b>]]></text>
+	</component>
+	<component id="ID_sc1_reset">
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+	<component id="ID_sc1_showme">
+		<text><![CDATA[Mostrar]]></text>
+	</component>
+	<component id="ID_sc1_showall">
+		<text><![CDATA[Mostrar todo]]></text>
+	</component>
+	<component id="ID_SC2" fontFace="_typewriter" fontSize="12" fontColor="#ffffff">
+		<feedback id="fb"><![CDATA[<b><font face="_sans" color="#FFFFFF">***Debe introducir el comando exacto y completo. Los comandos que incluyen un nombre o una contraseña distinguen mayúsculas de minúsculas.***</font></b>]]></feedback>
+		<existingcommands><![CDATA[<font face="_sans"><b>El router ISP se configuró con los siguientes parámetros:<ul><li>Nombre de usuario: customer2222</li><li>Contraseña: ConnectMe</li></ul><br>Configure la interfaz virtual del marcador 5 en el siguiente orden:<ul><li>Cree la interfaz virtual del marcador 5.<li>Establezca la encapsulación en PPP.<li>Negocie la dirección IP del ISP.<li>Reduzca la MTU a 1492 para admitir los encabezados PPP.<li>Cree el conjunto del marcador 5.<li>Implemente la autenticación CHAP; utilice el nombre de usuario que le proporcionó el ISP.<li>Asigne la contraseña de CHAP que le proporcionó el ISP.<li>Active la interfaz.</b></b></font>]]></existingcommands>
+		<command prompt="R1(config)#">
+			<correctresponse><![CDATA[interface dialer 5]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[encapsulation ppp]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[ip address negotiated]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[ip mtu 1492]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[dialer pool 5]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[ppp chap hostname customer2222]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[ppp chap password ConnectMe]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<deviceresponse><![CDATA[* Apr de julio de 15:20: 02:54.207: %LINEPROTO-5-UPDOWN: Line protocol on Interface Virtual-Access1, changed state to<br> up * 01:00 GMT hasta el 15:20: 02:54.207: %LINK-3-UPDOWN: Virtual-Access1 Interfaz, changed state to up<br> ]]></deviceresponse>
+			<instruction><![CDATA[<font face="_sans"><b>Configure la conexión DSL al ISP en GigabitEthernet 0/0 en el siguiente orden:<ul><li>Elimine cualquier dirección IP asignada.<li>Habilite PPPoE.<li>Configure la interfaz para que sea un cliente PPPoE con el número de conjunto del marcador creado en la interfaz del marcador.<li>Active la interfaz.<li>Vuelva al modo EXEC privilegiado.</b></b></font>]]></instruction>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[interface GigabitEthernet 0/0]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[no ip address]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[pppoe enable]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[pppoe-client dial-pool-number 5]]></correctresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<deviceresponse><![CDATA[*Jul 5 15:03:01.359: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up<br>]]></deviceresponse>
+		</command>
+		<command prompt="R1(config-if)#">
+			<correctresponse><![CDATA[end]]></correctresponse>
+			<instruction><![CDATA[<font face="_sans"><b>Muestre el estado resumido de la interfaz.</b></font>]]></instruction>
+		</command>
+		<command prompt="R1#">
+			<correctresponse><![CDATA[show ip interface brief]]></correctresponse>
+			<deviceresponse><![CDATA[Interface IP-Address &nbsp;OK? Method Status Protocol<br><span class="space">GigabitEthernet0/0 unassigned &nbsp;YES NVRAM up up </span><br><span class="space">GigabitEthernet0/1 172.16.1.1 &nbsp;YES manual up up </span><br>Dialer5 64.100.10.1 &nbsp;YES manual up up <br>Virtual-Access1 unassigned &nbsp;YES unset up up <br>]]></deviceresponse>
+			<instruction><![CDATA[<font face="_sans"><b>Configuró correctamente PPPoE en el router R1 del cliente.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+	
+</textcomponents>

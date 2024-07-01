@@ -1,0 +1,1 @@
+En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos y el ISP. Hay una leyenda para cada router que incluye la ID de router.  La ID de router será más importante con la implementación de IPv6 de EIGRP.

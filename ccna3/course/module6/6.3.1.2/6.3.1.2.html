@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.2 Tabla de topología de EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tabla de topología de EIGRP</h1>
+        <div>
+          <p>Las actualizaciones de EIGRP contienen redes a las que se puede llegar desde el router que envía la actualización. A medida que se intercambian actualizaciones EIGRP entre vecinos, el router receptor agrega esas entradas a su tabla de topología de EIGRP. </p>
+          <p></p>
+          <p>Cada router EIGRP mantiene una tabla de topología para cada protocolo de routing configurado, como IPv4 e IPv6. La tabla de topología incluye las entradas de ruta para cada destino que el router detecta de sus vecinos EIGRP conectados directamente. </p>
+          <p></p>
+          <p>La figura muestra la continuación del proceso inicial de detección de rutas de la página anterior. Ahora, se muestra la actualización de la tabla de topología. </p>
+          <p></p>
+          <p>Cuando un router recibe una actualización de routing EIGRP, agrega la información de routing a su tabla de topología de EIGRP y responde con un acuse de recibo EIGRP. </p>
+          <p></p>
+          <p>1. El R1 recibe la actualización de EIGRP del vecino R2, que incluye información acerca de las rutas que anuncia el vecino, incluida la métrica a cada destino. El R1 agrega todas las entradas de actualización a su tabla de topología. La tabla de topología incluye todos los destinos anunciados por los routers vecinos (adyacentes) y el costo (métrica) para llegar a cada red.</p>
+          <p></p>
+          <p>2. Los paquetes de actualización EIGRP utilizan entrega confiable; por lo tanto, el R1 responde con un paquete de acuse de recibo EIGRP que informa al R2 que recibió la actualización.</p>
+          <p></p>
+          <p>3. El R1 envía una actualización de EIGRP al R2 en la que anuncia las redes que conoce, excepto aquellas detectadas del R2 (horizonte dividido).</p>
+          <p></p>
+          <p>4. El R2 recibe la actualización de EIGRP del vecino R1 y agrega esta información a su propia tabla de topología.</p>
+          <p></p>
+          <p>5. El R2 responde al paquete de actualización EIGRP del R1 con un acuse de recibo de EIGRP. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran dos routers. Cada router ejecuta EIGRP. El router uno le envía un paquete de saludo al router dos.  El router dos le envía un paquete de actualización y de saludo al router uno.  El router uno le envía un paquete de acuse de recibo y un paquete de saludo al router dos.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

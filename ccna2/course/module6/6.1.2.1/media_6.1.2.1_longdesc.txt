@@ -1,0 +1,1 @@
+La figura muestra tres switches, el switch uno está conectado a los switches dos y tres.  Los switches 2 y 3 cada uno tienen tres VLAN.  Hay llamadas que indican qué puertos se asignan a qué VLAN.  También hay una llamada que indica que el switch uno está conectado a los switches dos y tres con un enlace troncal que permite contar con las VLAN necesarias en el enlace.

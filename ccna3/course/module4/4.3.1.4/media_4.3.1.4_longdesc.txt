@@ -1,0 +1,1 @@
+En la figura se muestra una actividad interactiva para que el estudiante practique relacionar los términos del protocolo FHRP con su definición. En la figura se muestra una actividad interactiva para que el estudiante practique identificar el router virtual, el router de reenvío y el router de reserva en una topología.

@@ -1,0 +1,53 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+	<text><![CDATA[<b>ACL de entrada y salida</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[ACL de entrada]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[ACL de salida]]></text> 
+</component>
+  
+<component id="ID_s1_txt03">
+  <text><![CDATA[Las ACL de entrada filtran los paquetes que ingresan a una interfaz específica y lo hacen antes de que se enruten a la interfaz de salida.]]></text> 
+</component>
+  
+<component id="ID_s1_txt04">
+  <text><![CDATA[Las ACL de salida filtran los paquetes después de que se enrutan, independientemente de la interfaz de entrada.]]></text> 
+</component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+		<text><![CDATA[<b>Filtrado de tráfico en un router mediante ACL</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt01">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt02">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt01_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt02_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Una lista por interfaz, por dirección y por protocolo]]></text>
+	</component>
+
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Con dos interfaces y dos protocolos en ejecución, este router podría tener un total de ocho ACL distintas aplicadas.]]></text>
+	</component>
+
+	<component id="ID_s2_txt05">
+		<text><![CDATA[Reglas para aplicar las ACL]]></text>
+	</component>
+
+	<component id="ID_s2_txt06">
+		<text><![CDATA[Solo se puede tener una ACL por protocolo, por interfaz y por sentido:<textformat blockindent="-14"><ul><li>Una ACL por protocolo (p. ej., IPv4 o IPv6)</li><li>Una ACL por sentido (es decir, de entrada o de salida)</li><li>Una ACL por interfaz (p. ej., GigabitEthernet0/0)</li></ul></textformat>]]></text>
+	</component><!-- end slide 2 --></textcomponents>

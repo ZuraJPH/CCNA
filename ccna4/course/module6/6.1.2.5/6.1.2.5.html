@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.5 Datos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Datos</h1>
+        <div>
+          <p>La mayoría de las aplicaciones utilizan TCP o UDP. A diferencia de UDP, TCP realiza la recuperación de errores. Aplicaciones de datos que no tienen tolerancia a la pérdida de datos, como el correo electrónico y las páginas web, el uso de TCP para asegurarse de que, si los paquetes se pierden en tránsito, se envíen nuevamente. El tráfico de datos puede ser fluido o puede tener estallidos. El tráfico de control de red generalmente es elegante y predecible. Cuando hay un cambio de topología, el tráfico de control de red puede tener estallidos durante unos segundos. Pero la capacidad de las redes actuales permite administrar fácilmente el aumento del tráfico de control de red mientras la red converge.</p>
+          <p></p>
+          <p>Sin embargo, algunas aplicaciones TCP pueden ser muy expansivas y consumir una gran porción de la capacidad de la red. El FTP ocupará tanto ancho de banda como pueda obtener cuando usted descargue un archivo grande, como una película o un juego. En la Tabla 1, se resumen las características del tráfico de datos.</p>
+          <p></p>
+          <p>Aunque el tráfico de datos es relativamente insensible a las caídas y demoras en comparación con la voz y el video, un administrador de red igualmente debe tener en cuenta la calidad de la experiencia del usuario, a veces denominada "calidad de la experiencia" o QoE. Los dos factores principales acerca del flujo del tráfico de datos por los que un administrador de red debe preguntar son los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>¿Los datos provienen de una aplicación interactiva?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>¿Los datos son críticos?</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figura 2 compara estos dos factores.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra las características del tráfico de datos. La figura 2 muestra y compara dos factores que se deben considerar para la demora de los datos, interactivos o no interactivos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

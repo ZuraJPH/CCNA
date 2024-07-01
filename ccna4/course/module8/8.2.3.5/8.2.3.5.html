@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.5 Resolución de problemas de la capa de transporte: NAT para IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de la capa de transporte: NAT para IPv4</h1>
+        <div>
+          <p>Existen varios problemas con la NAT, como la falta de interacción con servicios como DHCP y tunneling. Estos pueden incluir la configuración incorrecta de la NAT interna, la NAT externa o la ACL. Otros problemas incluyen interoperabilidad con otras tecnologías de red, especialmente con aquellas que contienen o derivan información de direccionamiento de red del host en el paquete. Algunas de estas tecnologías incluyen las siguientes: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>BOOTP y DHCP:</b> ambos protocolos administran la asignación automática de direcciones IPv4 a los clientes. Recuerde que el primer paquete que un nuevo cliente envía es un paquete IPv4 de difusión de solicitud de DHCP. El paquete de solicitud de DHCP tiene la dirección IPv4 de origen 0.0.0.0. Debido a que la NAT requiere direcciones IPv4 de origen y de destino válidas, BOOTP y DHCP pueden tener dificultades para operar a través de un router que ejecuta una NAT estática o dinámica. La configuración de la característica de aplicación auxiliar IPv4 puede contribuir a la resolución de este problema.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>DNS</b>: como un router que ejecuta NAT dinámica cambia regularmente la relación entre las direcciones internas y externas a medida que las entradas de la tabla caducan y se recrean, un servidor DNS fuera del router NAT no tiene una representación precisa de la red dentro del router. La configuración de la característica de aplicación auxiliar IPv4 puede contribuir a la resolución de este problema.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SNMP:</b> de manera similar a los paquetes DNS, la NAT no puede alterar la información de direccionamiento almacenada en el contenido de datos del paquete. Debido a esto, es posible que una estación de administración SNMP en un lado de un router NAT no pueda comunicarse con los agentes SNMP del otro lado del router NAT. La configuración de la característica de aplicación auxiliar IPv4 puede contribuir a la resolución de este problema.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolos de cifrado y tunneling:</b> los protocolos de cifrado y tunneling suelen requerir que el tráfico se origine en un puerto UDP o TCP específico o usan un protocolo en la capa de transporte que la NAT no puede procesar. Por ejemplo, la NAT no puede procesar los protocolos de tunneling IPsec y los protocolos de encapsulación de routing genérico usados por las implementaciones de VPN.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra las áreas comunes de interoperabilidad de tecnología de red de la capa de transporte.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

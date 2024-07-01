@@ -1,0 +1,1 @@
+La figura representa un elemento de medios interactivos que permite que el estudiante calcule una máscara de subred y una máscara de comodín cuando se le indica una dirección IP y un valor de barra diagonal.

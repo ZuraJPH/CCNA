@@ -1,0 +1,1 @@
+En la figura, se muestran tres routers conectados a un switch.  El router dos es la DR y el router tres es el BDR.

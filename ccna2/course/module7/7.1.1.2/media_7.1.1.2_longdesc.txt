@@ -1,0 +1,1 @@
+En la Figura se muestran las siete capas del modelo O.S.I.  Hay un texto que indica, “el filtrado de paquetes funciona en la capa 3 y la capa 4 ".

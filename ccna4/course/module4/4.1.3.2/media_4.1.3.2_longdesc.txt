@@ -1,0 +1,1 @@
+La figura muestra una topología y los comandos para configurar y aplicar una ACL.

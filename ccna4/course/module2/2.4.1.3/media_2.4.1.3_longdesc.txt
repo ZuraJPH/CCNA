@@ -1,0 +1,1 @@
+La figura muestra la salida del comando debug ppp authentication, y la salida que aparece aquí está resumida en el texto.

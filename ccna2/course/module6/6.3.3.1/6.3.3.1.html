@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.1 Configuración de router-on-a-stick: preparación</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de router-on-a-stick: preparación</h1>
+        <div>
+          <p>El routing entre VLAN antiguo con interfaces físicas tiene una limitación importante. Los routers tienen una cantidad limitada de interfaces físicas para conectarse a diferentes VLAN. A medida que aumenta la cantidad de VLAN en una red, el hecho de tener una interfaz física del router por VLAN agota rápidamente la capacidad de interfaces físicas de un router.  Una alternativa en redes más grandes es utilizar subinterfaces y enlaces troncales de VLAN. Los enlaces troncales de VLAN permiten que una única interfaz física del router enrute el tráfico de varias VLAN. Esta técnica se denomina “router-on-a-stick” y utiliza subinterfaces virtuales en el router para superar las limitaciones de interfaces físicas del hardware. </p>
+          <p></p>
+          <p>Las subinterfaces son interfaces virtuales basadas en software asignadas a interfaces físicas. Cada subinterfaz se configura de forma independiente con su propia dirección IP y longitud de prefijo. Esto permite que una única interfaz física forme parte de varias redes lógicas de manera simultánea. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El término "longitud de prefijo" se puede usar para hacer referencia a la máscara de subred IPv4 cuando se asocia con una dirección IPv4 y la longitud de prefijo IPv6 cuando se asocia a una dirección IPv6.</p>
+          <p></p>
+          <p>Al configurar el enrutamiento inter VLAN mediante el modelo router-on-a-stick, la interfaz física del router debe estar conectada al enlace troncal en el switch adyacente. En el router, se crean subinterfaces para cada VLAN única en la red. A cada subinterfaz se le asigna una dirección IP específica para su subred/VLAN y también se configura para etiquetar las tramas para esa VLAN. De esa manera, el router puede mantener separado el tráfico de cada subinterfaz a medida que atraviesa el enlace troncal hacia el switch.</p>
+          <p></p>
+          <p>En términos de funcionamiento, utilizar el modelo router-on-a-stick es lo mismo que utilizar el modelo de routing entre VLAN antiguo, pero en lugar de utilizar las interfaces físicas para realizar el routing, se utilizan las subinterfaces de una única interfaz física.</p>
+          <p></p>
+          <p>En la figura, PC1 desea comunicarse con PC3. La PC1 se encuentra en la VLAN 10, y la PC3, en la VLAN 30. Para que la PC1 se comunique con la PC3, la PC1 necesita enrutar sus datos a través del router R1, por medio de subinterfaces. </p>
+          <p></p>
+          <p>Haga clic en Reproducir en la figura para ver cómo se utilizan las subinterfaces para enrutar entre las VLAN. Cuando se detenga la animación, lea el texto a la izquierda de la topología. Haga clic en Reproducir nuevamente para seguir viendo la animación.</p>
+          <p></p>
+          <p>El uso de los enlaces troncales y las subinterfaces disminuye la cantidad de puertos de switch y de router que se utilizan. Esto no sólo permite un ahorro de dinero sino también reduce la complejidad de la configuración. Como consecuencia, el enfoque de la subinterfaz del router puede ampliarse hasta un número mucho más alto de VLAN que una configuración con una interfaz física por diseño de VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación sobre el proceso de routing entre VLAN cuando utiliza el comportamiento de routing con router-on-a-stick. El proceso incluye la detección ARP para detectar los dispositivos conectados y la propagación de una trama de unidifusión a través de la infraestructura.  Una declaración indica que las tramas que viajan desde el switch al router están etiquetadas, gracias a la configuración de un enlace troncal desde las subinterfaces del switch a las del router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

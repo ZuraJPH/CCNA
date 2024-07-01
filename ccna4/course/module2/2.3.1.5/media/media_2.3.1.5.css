@@ -1,0 +1,13 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_r1_txt01 {font-size:11px !important;font-family:"Courier New";letter-spacing: -1.6px;}
+
+#ID_r1_txt02 {font-size:11px !important;font-family:"Courier New";letter-spacing: -1.7px;}
+
+.align
+{
+	color:#F68026 !important;
+}

@@ -1,0 +1,1 @@
+La figura uno es un elemento de recursos interactivos que permite que el estudiante determine las rutas con la coincidencia más larga para direcciones IP versión 4. La figura dos es un elemento de recursos interactivos que permite que el estudiante determine las rutas con la coincidencia más larga para direcciones IP versión 6.

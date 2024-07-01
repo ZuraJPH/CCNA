@@ -1,0 +1,27 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_title">
+		<text><![CDATA[<b>Características del tráfico de voz</b>]]></text>
+	</component>
+	
+	<component id='ID_txt01_title'>
+		<text><![CDATA[Voz]]></text>
+	</component>
+
+	<component id='ID_txt01_body'>
+		<text><![CDATA[<textformat blockindent="-16"><ul><li>Fluida</li><li>Favorable</li><li>Sensible a las caídas</li><li>Sensible al retardo</li><li>Prioridad UDP</li></ul></textformat>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[Voz]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[<textformat blockindent="-16"><ul><li>Fluida</li><li>Favorable</li><li>Sensible a las caídas</li><li>Sensible al retardo</li><li>Prioridad UDP</li></ul></textformat>]]></text>
+	</component><!-- <component id='ID_txt02'>
+		<text><![CDATA[Voice]]></text>
+	</component> --><component id="ID_txtbox_title">
+  <text><![CDATA[Requerimientos de sentido único]]></text> 
+  </component> 
+
+	<component id="ID_txtbox_body">
+		<text><![CDATA[<textformat blockindent="-16"><ul><li>Latencia ≤ 150 ms</li><li>Fluctuación: ≤ 30</li><li>Pérdida: ≤1%</li><li>Ancho de banda (30 a 128 Kb/s)</li></ul></textformat>]]></text> 
+  </component><!-- end slide 1 --></textcomponents>

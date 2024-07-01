@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.6 ID de objeto de base de información de administración</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ID de objeto de base de información de administración</h1>
+        <div>
+          <p>La MIB organiza variables de manera jerárquica. Las variables de MIB permiten que el software de administración controle el dispositivo de red. Formalmente, la MIB define cada variable como una ID de objeto (OID). Las OID identifican de forma exclusiva los objetos administrados en la jerarquía de la MIB. La MIB organiza las OID según estándares RFC en una jerarquía de OID, que se suele mostrar como un árbol.</p>
+          <p></p>
+          <p>El árbol de la MIB para un dispositivo determinado incluye algunas ramas con variables comunes a varios dispositivos de red y algunas ramas con variables específicas de ese dispositivo o proveedor. </p>
+          <p></p>
+          <p>Las RFC definen algunas variables públicas comunes. La mayoría de los dispositivos implementan estas variables de MIB. Además, los proveedores de equipos de redes, como Cisco, pueden definir sus propias ramas privadas del árbol para admitir las nuevas variables específicas de sus dispositivos. En la ilustración 1, se muestran partes de la estructura de MIB definida por Cisco Systems, Inc. Observe que la OID se puede describir en palabras o números para buscar una variable específica en el árbol. Los OID de Cisco se numeran de la siguiente manera: .iso (1).org (3).dod (6).internet (1).private (4).enterprises (1).cisco (9).  Por lo tanto, el OID es 1.3.6.1.4.1.9.</p>
+          <p></p>
+          <p>Dado que la CPU es uno de los recursos clave, se debe medir de manera continua. Las estadísticas de CPU deben recopilarse en NMS y se deben representar gráficamente. La observación del uso de la CPU durante un período extendido permite que el administrador establezca una línea de base aproximada para el uso de la CPU. Los valores de umbral se pueden establecer en relación con esta línea de base. Cuando el uso de la CPU supera este umbral, se envían notificaciones. Una herramienta de representación gráfica de SNMP puede sondear de forma periódica a los agentes SNMP, como un router, y representar gráficamente los valores recopilados. En la figura 2, se muestran ejemplos de 5 minutos de uso de la CPU por parte de un router durante un período de unas semanas. </p>
+          <p></p>
+          <p>Los datos se recuperan mediante la utilidad snmpget, que se emite en NMS. Con la utilidad de snmpget, se pueden extraer manualmente datos en tiempo real o hacer que NMS ejecute un informe para obtener un período de tiempo en el que usar los datos para obtener el promedio. La utilidad snmpget requiere que se establezca la versión de SNMP, la comunidad correcta, la dirección IP del dispositivo de red que se debe consultar y el número de OID. En la figura 3, se demuestra el uso de la utilidad de freeware snmpget, que permite la recuperación rápida de información de la MIB. </p>
+          <p></p>
+          <p>La figura 3 incluye un comando de utilidad snmpget de muestra con varios parámetros, como: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">-v2c</span>
+                <b></b>- versión de SNMP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">-c</span>
+                <span class="cmd">comunidad</span>
+                <b></b>- contraseña de SNMP, llamada cadena de comunidad</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">10.250.250.14</span>
+                <b></b>- Dirección IP del dispositivo monitoreado</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">1.3.6.1.4.1.9.2.1.58.0</span>
+                <b></b>- OID de variable de MIB</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la última línea, se muestra la respuesta. El resultado muestra una versión abreviada de la variable de MIB. A continuación, indica el valor real en la ubicación de la MIB. En este caso, el promedio cambiante exponencial de 5 minutos del porcentaje de ocupación de la CPU es del 11%. La utilidad proporciona cierta información sobre los mecanismos básicos de funcionamiento de SNMP. Sin embargo, trabajar con nombres de variables de MIB largos como 1.3.6.1.4.1.9.2.1.58.0 puede ser problemático para el usuario promedio. Generalmente, el personal de operaciones de red utiliza un producto de administración de red con una GUI fácil de usar, con el nombre completo de la variable de datos de MIB transparente para el usuario.</p>
+          <p></p>
+          <p>El navegador de SNMP de Cisco del sitio web <a href="http://cisco.com/" target="_blank">http://cisco.com</a> permite que un administrador de redes consulte detalles sobre un OID en particular. En la figura 4, se muestra un ejemplo asociado a un cambio de configuración en un switch Cisco 2960.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra partes de la estructura de MIB. La figura 2 muestra un gráfico de uso de CPU de la herramienta de representación gráfica de SNMP. La figura 3 muestra un comando de CLI que sirve para extraer información de la base de datos de MIB. La figura 4 muestra una captura de pantalla del software de navegación de SNMP de Cisco.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

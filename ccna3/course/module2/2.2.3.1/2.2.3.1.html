@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.1 Solución de problemas del VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas del VTP</h1>
+        <div>
+          <p>Problemas frecuentes con el protocolo VTP:</p>
+          <p></p>
+          <p>Versiones incompatibles del VTP </p>
+          <p>
+            <ul>
+              <li>Las versiones del VTP son incompatibles entre sí. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Asegúrese de que todos los switches sean capaces de utilizar la versión del VTP requerida.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Problemas con contraseñas del VTP </p>
+          <p>
+            <ul>
+              <li>Si se habilita la autenticación del VTP, los switches deben tener la misma contraseña configurada para participar en el VTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Asegúrese de que la contraseña sea configurada manualmente en todos los switches en el dominio VTP. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Nombre incorrecto de dominio del VTP </p>
+          <p>
+            <ul>
+              <li>Un dominio del VTP configurado incorrectamente afecta la sincronización de VLAN entre switches y si un switch recibe una publicación del VTP incorrecta, el switch descarta el mensaje. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Para evitar la configuración incorrecta de un nombre de dominio del VTP, configure el nombre de dominio del VTP solo en un switch del servidor VTP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Todos los otros switches en el mismo dominio del VTP aceptarán y automáticamente configurarán su nombre de dominio del VTP cuando reciban la primera publicación de resumen del VTP. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Switches configurados en modo cliente VTP</p>
+          <p>
+            <ul>
+              <li>Si todos los switches en el dominio del VTP se configuran en modo cliente, las VLAN no se pueden crear, eliminar ni administrar.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Para evitar perder todas las configuraciones de VLAN en un dominio del VTP, configure dos switches como servidores VTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Número de revisión incorrecto de la configuración </p>
+          <p>
+            <ul>
+              <li>Si un switch con el mismo nombre de dominio del VTP pero un número más alto de configuración se agrega al dominio, las VLAN no válidas se pueden propagar o se pueden eliminar las VLAN válidas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La solución es restablecer cada switch a su configuración anterior y luego reconfigurar las VLAN correctas. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Antes de agregar un switch a una red habilitada por el VTP, restablezca el número de revisión en el switch en 0 asignándolo a otro dominio VTP falso y después reasígnelo a un nombre de dominio del VTP correcto.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los problemas frecuentes asociados con el protocolo VTP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

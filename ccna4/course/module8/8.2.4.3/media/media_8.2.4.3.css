@@ -1,0 +1,9 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_router_txt2{padding-left:4px !important;letter-spacing:-.5px;line-height:14px;}
+.orangeColor{
+	color:#F68026 !important;
+}

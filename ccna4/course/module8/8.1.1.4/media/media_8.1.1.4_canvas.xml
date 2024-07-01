@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR">
+	
+	
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_8.1.1.4A.png" />
+
+<!-- <element type="TEXT" id="ID_static_1" text="SRV1" x="56" y="102" align="center" width="37" />
+<element type="TEXT" id="ID_static_2" text="SRV2" x="470" y="160" align="center" width="37" /> -->
+<element type="TEXT" id="ID_static_3" text="S0/0/0" x="160" y="206" align="center" width="36" color="#F26200" />
+<element type="TEXT" id="ID_static_4" text="G0/0" x="93" y="247" align="center" width="26" />
+<element type="TEXT" id="ID_static_5" text="192.168.30.1/24" x="330" y="265" align="center" width="88" />
+<element type="TEXT" id="ID_static_6" text="S0/0/1" x="285" y="206" align="center" width="34" color="#F26200" />
+<element type="TEXT" id="ID_static_7" text="G0/0" x="170" y="80" align="center" width="26" color="#F26200"/>
+<element type="TEXT" id="ID_static_8" text="S0/1/0" x="250" y="75" align="center" width="36" color="#F26200" />
+<element type="TEXT" id="ID_static_9" text="S0/0/0" x="165" y="107" align="center" width="36" color="#F26200" />
+<element type="TEXT" id="ID_static_10" text="S0/0/1" x="250" y="110" align="center" width="34" color="#F26200" />
+<element type="TEXT" id="ID_static_11" text="10.1.1.2/30" x="140" y="120" align="center" width="61" />
+<element type="TEXT" id="ID_static_12" text="10.2.2.1/30" x="254" y="124" align="center" width="61" />
+<element type="TEXT" id="ID_static_13" text="10.1.1.1/30" x="158" y="193" align="center" width="61" />
+<element type="TEXT" id="ID_static_14" text="10.2.2.2/30" x="260" y="192" align="center" width="61" />
+<element type="TEXT" id="ID_static_15" text="G0/1" x="168" y="247" align="center" width="24" color="#F26200" />
+<element type="TEXT" id="ID_static_16" text="192.168.11.1/24" x="160" y="260" align="center" width="88" />
+<element type="TEXT" id="ID_static_17" text="192.168.10.1/24" x="37" y="260" align="center" width="88" />
+<element type="TEXT" id="ID_static_18" text="Fa0/1" x="78" y="285" align="center" width="28" />
+<element type="TEXT" id="ID_static_19" text="Fa0/1" x="167" y="285" align="center" width="28" />
+<element type="TEXT" id="ID_static_20" text="192.168.10.2/24" x="17" y="349" align="center" width="85" />
+<element type="TEXT" id="ID_static_21" text="192.168.11.2/24" x="158" y="349" align="center" width="87" color="#077A77" />
+<element type="TEXT" id="ID_static_22" text="Fa0/2" x="60" y="336" align="center" width="30" />
+<element type="TEXT" id="ID_static_23" text="Fa0/2" x="164" y="336" align="center" width="30" />
+<element type="TEXT" id="ID_static_24" text="192.168.10.10/24" x="20" y="431" align="center" width="95" />
+<element type="TEXT" id="ID_static_25" text="192.168.11.10/24" x="127" y="428" align="center" width="95" />
+<element type="TEXT" id="ID_static_26" text="Fa0/1" x="300" y="286" align="center" width="28" />
+<element type="TEXT" id="ID_static_27" text="Fa0/2" x="340" y="336" align="center" width="30" />
+<element type="TEXT" id="ID_static_28" text="192.168.30.10/24" x="285" y="428" align="center" width="95" />
+<element type="TEXT" id="ID_static_29" text="G0/0" x="348" y="252" align="center" width="26"   color="#F26200" />
+<element type="TEXT" id="ID_static_30" text="192.168.20.1/24" x="110" y="67" align="center" width="88" />
+<element type="TEXT" id="ID_static_31" text="209.165.200.225/27" x="245" y="61" align="center" width="108" />
+<element type="TEXT" id="ID_static_32" text="S0/0/1" x="377" y="86" align="center" width="35" />
+<element type="TEXT" id="ID_static_33" text="209.165.200.226/27" x="310" y="102" align="center" width="99" />
+<element type="TEXT" id="ID_static_34" text="192.168.30.2/24" x="330" y="349" align="center" width="87" color="#077A77"/>
+<element type="TEXT" id="ID_static_35" text="DLCI 102" x="270" y="136" align="center" width="48" />
+<element type="TEXT" id="ID_static_36" text="DLCI 304" x="257" y="179" align="center" width="48" />
+<element type="TEXT" compId="ID_s1_txt05" x="15" y="131" width="119" expand="down" align="center" />
+<element type="TEXT" compId="ID_s1_txt07" x="18" y="178" width="124" expand="down" align="left" />
+<element type="TEXT" compId="ID_s1_txt09" x="22" y="444" width="91" expand="down" align="center" size="10" color="#652c8a" />
+<element type="TEXT" compId="ID_s1_txt08" x="326" y="177" width="95" expand="down" align="right" />
+<element type="TEXT" compId="ID_s1_txt06" x="433" y="190" width="118" expand="down" align="center" />
+<element type="TEXTBOX" titleId="ID_Title_txt01" bodyId="ID_Body_txt01" x="444" y="259" width="223.8" height="200" animated="0" subType="ROLLOVER" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+
+</slide>
+</data>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.1 Evolución del protocolo de routing dinámico</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Evolución del protocolo de routing dinámico</h1>
+        <div>
+          <p>Los protocolos de routing dinámico se utilizan en el ámbito de las redes desde finales de la década de los ochenta. Uno de los primeros protocolos de routing fue el RIP. RIPv1 se lanzó en 1988, pero ya en 1969 se utilizaban algunos de los algoritmos básicos en dicho protocolo en la Advanced Research Projects Agency Network (ARPANET). </p>
+          <p></p>
+          <p>A medida que las redes evolucionaron y se volvieron más complejas, surgieron nuevos protocolos de routing. El protocolo RIP se actualizó a RIPv2 para hacer lugar al crecimiento en el entorno de red.  Sin embargo, RIPv2 aún no se escala a las implementaciones de red de mayor tamaño de la actualidad.  Con el objetivo de satisfacer las necesidades de las redes más grandes, se desarrollaron dos protocolos de routing: el protocolo OSPF (abrir primero la ruta más corta) y sistema intermedio a sistema intermedio (IS-IS). Cisco desarrolló el protocolo de routing de gateway interior (IGRP) e IGRP mejorado (EIGRP), que también tiene buena escalabilidad en implementaciones de redes más grandes. </p>
+          <p></p>
+          <p>Asimismo, surgió la necesidad de conectar distintas internetworks y proporcionar routing entre ellas. En la actualidad, se utiliza el protocolo de gateway fronterizo (BGP) entre proveedores de servicios de Internet (ISP).  El protocolo BGP también se utiliza entre los ISP y sus clientes privados más grandes para intercambiar información de routing. </p>
+          <p></p>
+          <p>En la figura 1, se muestra la línea cronológica de la introducción de los diversos protocolos. </p>
+          <p></p>
+          <p>En la figura 2, se clasifican los protocolos. </p>
+          <p></p>
+          <p>Con la llegada de numerosos dispositivos que usan IP para consumidores, el espacio de direccionamiento IPv4 quedó prácticamente agotado, por lo que surgió IPv6. A fin de admitir la comunicación basada en IPv6, se desarrollaron versiones más nuevas de los protocolos de routing IP, como se muestra en la fila de IPv6 en la Figura 2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno es una línea de tiempo interactiva sobre la evolución de los protocolos de routing, que comienza con el protocolo de gateway exterior en el año 1980 y llega hasta el desarrollo de EIGRP para IPv6 en 2005.  Otros eventos destacados incluyen el lanzamiento de la versión 1 de Protocolo de información de routing en 1988, seguida de la versión 1 de OSPF en 1989 y la versión 2 en 1991.  En 1992 se lanzó EIGRP y en 1993 RIP versión 2.  RIP de última generación para IPv6 apareció en 1997, seguido de la versión 3 de OSPF en 1999. La figura dos es una tabla que organiza los protocolos de routing en exteriores e interiores, y clasifica cada uno para uso con la versión 4 o la versión 6 de IP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

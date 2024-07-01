@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.1 Métrica compuesta del protocolo EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métrica compuesta del protocolo EIGRP</h1>
+        <div>
+          <p>De manera predeterminada, EIGRP utiliza los siguientes valores en su métrica compuesta para calcular la ruta preferida a una red:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Ancho de banda:</b> el ancho de banda más lento entre todas las interfaces de salida, a lo largo de la ruta de origen a destino. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Retraso:</b> la acumulación (suma) de todos los retrasos de las interfaces a lo largo de la ruta (en decenas de microsegundos).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Se pueden utilizar los valores siguientes, pero no se recomienda, porque generalmente dan como resultado recálculos frecuentes de la tabla de topología:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Confiabilidad:</b> representa la peor confiabilidad entre origen y destino, que se basa en keepalives (mantenimiento de la conexión).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Carga:</b> representa la peor carga en un enlace entre origen y destino, que se calcula sobre la base de la velocidad de paquetes y el ancho de banda configurado de la interfaz.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Si bien la MTU se incluye en las actualizaciones de la tabla de routing, no es una métrica de routing utilizada por EIGRP. </p>
+          <p></p>
+          <p>
+            <b>La métrica compuesta</b>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra la fórmula de métrica compuesta que utiliza EIGRP. La fórmula consiste en los valores K1 a K5, conocidos como “ponderaciones de la métrica de EIGRP”. K1 y K3 representan el ancho de banda y el retraso, respectivamente. K2 representa carga, y K4 y K5 representan la confiabilidad. De manera predeterminada, K1 y K3 están establecidos en 1, y K2, K4 y K5 están establecidos en 0. Como resultado, solamente se usan los valores de ancho de banda y de retraso en el cómputo de la métrica compuesta predeterminada. En EIGRP para IPv4 y EIGRP para IPv6 se utiliza la misma fórmula para la métrica compuesta.</p>
+          <p></p>
+          <p>El método de cálculo de la métrica (valores<i>k</i> y el número de sistema autónomo de EIGRP deben coincidir entre los vecinos EIGRP. Si no coinciden, los routers no forman una adyacencia.</p>
+          <p></p>
+          <p>Los valores <i>k</i> predeterminados se pueden cambiar con el comando<b> metric weights </b>del modo de configuración del router:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>metric weights</b>
+            </span>
+            <span class="cmd">
+              <b></b>
+            </span>
+            <span class="cmd">
+              <i>tos</i>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>k1 k2 k3 k4 k5</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La modificación del valor de<b> metric weights </b>generalmente no es recomendable y excede el ámbito de este curso. No obstante, su importancia es pertinente al establecimiento de adyacencias de vecinos. Si un router modificó las ponderaciones de la métrica y otro router no lo hizo, no se forma una adyacencia.</p>
+          <p></p>
+          <p>
+            <b>Verificación de los valores </b>
+            <b>
+              <i>k</i>
+            </b>
+            <b>  </b>
+          </p>
+          <p></p>
+          <p>El comando<b> show ip protocols </b>se utiliza para comprobar los valores <i>k</i> . En la figura 2, se muestra la salida del comando para el R1. Observe que los valores <i>k</i> en el R1 se establecen al valor predeterminado. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el cálculo matemático de la métrica de EIGRP.  La fórmula demuestra que, cuando los valores K están en su valor predeterminado, partes de la ecuación se ignoran y el cálculo predeterminado es simplemente el ancho de banda más el retraso.  Los valores predeterminados de k 1 y k. 3 son uno. Los valores predeterminados de k 2, k. 4, y k. 5 son cero.  A continuación, se muestra la sintaxis para configurar los valores K en la configuración de routing EIGRP. En la figura dos, se muestra la salida que genera el comando “show ip protocols”, con los valores K resaltados.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

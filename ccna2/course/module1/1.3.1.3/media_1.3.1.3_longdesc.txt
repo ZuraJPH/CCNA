@@ -1,0 +1,1 @@
+La figura muestra una línea del resultado del comando show ip route y resalta cada información como se describe en la lectura.

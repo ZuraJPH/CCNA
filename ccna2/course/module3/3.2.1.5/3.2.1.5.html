@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.5 Deshabilite el resumen automático</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Deshabilite el resumen automático</h1>
+        <div>
+          <p>Como se muestra en la figura 1, RIPv2 resume automáticamente las redes en los límites de red principales de manera predeterminada, al igual que RIPv1.  </p>
+          <p></p>
+          <p>Para modificar el comportamiento predeterminado de RIPv2 de sumarización automática, utilice el comando del modo de configuración del router <b>no auto-summary</b>, como se muestra en la figura 2. Este comando no tiene ningún efecto cuando se utiliza RIPv1. Cuando se deshabilita la sumarización automática, RIPv2 ya no resume las redes a su dirección con clase en routers fronterizos. RIPv2 ahora incluye todas las subredes y sus máscaras correspondientes en sus actualizaciones de routing.  El comando <b>show ip protocols</b> ahora indica lo siguiente: automatic network summarization is not in effect (el resumen de red automático no está en vigencia). </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> se debe habilitar RIPv2 antes de deshabilitar la sumarización automática. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para deshabilitar la sumarización automática en el R2 y en el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el resultado del comando show ip protocols y se resalta la línea que indica que el resumen automático de la red está en vigencia. La figura dos muestra cómo desactivar el resumen de ruta en un router que usa RIP. La línea de comandos comienza en el modo de configuración global y el primer comando habilita RIP, que es router rip.  El siguiente comando es no auto guión summary.  Este comando se verifica mediante el comando show ip protocols barra vertical section Automatic, y el resultado indica que el resumen automático de red no está en vigencia. La figura tres es un elemento de recursos interactivos que permite que el estudiante configure el routing RIP y deshabilite el resumen automático en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

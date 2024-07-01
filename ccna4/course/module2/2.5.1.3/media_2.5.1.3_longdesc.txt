@@ -1,0 +1,1 @@
+La figura muestra estos tres protocolos de encapsulamiento WAN: líneas arrendadas (que incluye HDLC, PPP y SLIP), con conmutación de circuito (que incluye HDLC, PPP y SLIP) y con conmutación por paquetes (que incluye X punto 25, retransmisión de tramas y ATM).

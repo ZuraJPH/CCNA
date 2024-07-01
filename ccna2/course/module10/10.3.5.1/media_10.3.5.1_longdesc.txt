@@ -1,0 +1,1 @@
+En la figura número uno se muestra la salida del comando "show version" en el router uno.  La característica de Seguridad está resaltada. En la figura número dos se muestra la salida del comando "show license" en el router uno.  Las diferentes características y sus respectivos tipos están resaltados.

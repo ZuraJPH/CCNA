@@ -1,0 +1,54 @@
+﻿<textcomponents>
+
+    <component id="ID_s1_title">
+        <text><![CDATA[<b>El desafío de administrar la VLAN</b>]]></text>
+    </component>
+ 
+    <component id="ID_s2_title">
+        <text><![CDATA[<b>Componentes del VTP</b>]]></text>
+    </component>
+
+    <component id="ID_table01">
+    <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+
+    	<tr class="mtable_title">
+            <td colspan="2" bgcolor='#98D3D1'><font size="5"></font></td>
+        </tr>
+ 
+        <tr class="mtable_top">
+            <td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+        </tr>
+
+		<tr>
+			<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Componentes del VTP</b></font></td>
+			<td bgcolor='#077A77'><font color='#ffffff'><b>Definición</b></font></td>
+		</tr>
+
+		<tr>
+			<td bgcolor='#eff8f7'>Dominio del VTP</td>
+			<td bgcolor='#eff8f7'><textformat blockindent="-16"><ul><li>Consiste en uno o más switches interconectados.</li><li>Todos los switches en un dominio comparten los detalles de configuración de la VLAN usando las publicaciones del VTP.</li><li>Los switches que están en diferentes dominios de VTP no intercambian las publicaciones del VTP.</li><li>Un router o switch de Capa 3 define el límite de cada dominio.</li></ul></textformat></td>
+		</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Publicaciones del VTP</td>
+<td bgcolor='#ffffff'><textformat blockindent="-16"><ul><li>Cada switch en el dominio VTP envía publicaciones periódicas desde cada puerto de enlace troncal a una dirección de multidifusión reservada.</li><li>Los switches vecinos reciben estas publicaciones y actualizan sus configuraciones de VTP y VLAN según sea necesario.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Modos del VTP</td>
+<td bgcolor='#eff8f7'>Un switch se puede configurar en uno de tres modos del protocolo VTP: servidor, cliente o transparente.</td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Contraseña del VTP</td>
+<td bgcolor='#ffffff'>Los switches en el dominio VTP también pueden configurarse con una contraseña.</td>
+</tr>
+
+</table>]]></text>
+    </component>
+	
+	<component id="ID_s2_txt01">
+        <text><![CDATA[<b>Nota:</b> Los anuncios del VTP no se intercambiarán si el enlace troncal entre los switches está inactivo o si está mal configurado.]]></text>
+    </component>
+
+</textcomponents>

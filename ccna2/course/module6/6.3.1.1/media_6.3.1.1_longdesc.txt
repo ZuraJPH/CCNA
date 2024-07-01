@@ -1,0 +1,1 @@
+La figura muestra una topología con dos hosts conectados a un switch. Luego el switch se conecta a un router con dos cables. Un host se conecta a través de una subred en la VLAN 10 y el segundo host se conecta a través de una segunda subred en la VLAN 30.

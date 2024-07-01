@@ -1,0 +1,26 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Topología de nodo principal-nodo secundario</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Switches Cisco Nexus 9500</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>Nodo principal</b>]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[40GigE]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[<b>Switches Cisco Nexus 9300</b>]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Nodo secundario</b>]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[10GigE]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[Todos los otros dispositivos de red]]></text>
+	</component>
+</textcomponents>

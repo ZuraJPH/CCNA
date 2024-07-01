@@ -1,0 +1,1 @@
+La figura enumera dos situaciones que causan una violación de seguridad en un switch y los tres modos de violación de seguridad.

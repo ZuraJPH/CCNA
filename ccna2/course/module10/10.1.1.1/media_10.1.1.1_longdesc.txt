@@ -1,0 +1,1 @@
+La figura muestra un router y un switch conectados directamente. Cada dispositivo le está enviando anuncios CDP al otro.

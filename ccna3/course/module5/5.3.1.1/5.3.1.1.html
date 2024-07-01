@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.1 Protocolos SPF (Primero la ruta más corta)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos SPF (Primero la ruta más corta)</h1>
+        <div>
+          <p>A los protocolos de routing de estado de enlace también se les conoce como protocolos SPF y se desarrollan en torno al algoritmo SPF (primero la ruta más corta) de Edsger Dijkstra. El algoritmo SPF se analiza más detalladamente en una sección posterior. </p>
+          <p></p>
+          <p>En la ilustración, se muestran los protocolos de routing de estado de enlace IPv4:</p>
+          <p>
+            <ul>
+              <li>Abrir primero la ruta más corta (OSPF)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sistema intermedio a sistema intermedio (IS-IS)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los protocolos de routing de estado de enlace son conocidos por presentar una complejidad bastante mayor que sus vectores distancia equivalentes. Sin embargo, la funcionalidad básica y la configuración de los protocolos de routing de estado de enlace son igualmente sencillas.</p>
+          <p></p>
+          <p>Al igual que RIP y EIGRP, las operaciones básicas de OSPF se pueden configurar mediante los siguientes comandos:</p>
+          <p>
+            <ul>
+              <li>
+                <b>router ospf </b>
+                <i>process-id</i>
+                <span class="cmd">
+                  <b></b>
+                </span>(comando de configuración global)  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>network</b>
+                <span class="cmd">
+                  <b></b>
+                </span>(comando para anunciar redes)</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno es un gráfico descendente que clasifica protocolos de routing dinámico y resalta protocolos de gateway interior.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

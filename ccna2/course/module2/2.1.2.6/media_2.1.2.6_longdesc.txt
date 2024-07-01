@@ -1,0 +1,1 @@
+Esta actividad interactiva permite que los estudiantes relacionen una descripción con el tipo de ruta estática.  Las opciones incluyen ruta estática estándar, predeterminada, de resumen o flotante.

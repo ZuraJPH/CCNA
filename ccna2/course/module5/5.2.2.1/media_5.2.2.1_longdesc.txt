@@ -1,0 +1,1 @@
+La figura muestra el resultado del comando, show run.  Se resalta la sección de la interfaz que muestra muchos de los puertos del switch en estado desactivado para mayor seguridad.

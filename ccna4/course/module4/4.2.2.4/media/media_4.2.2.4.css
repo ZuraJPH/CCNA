@@ -1,0 +1,6 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s6_txt01{line-height:15px;padding-left:2px;}

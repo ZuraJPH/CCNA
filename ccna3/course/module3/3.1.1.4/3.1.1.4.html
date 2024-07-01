@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.4 Problemas con la redundancia de capa 1: tramas de unidifusión duplicadas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas con la redundancia de capa 1: tramas de unidifusión duplicadas</h1>
+        <div>
+          <p>Las tramas de difusión no son el único tipo de tramas que son afectadas por los bucles. Si se envían tramas de unidifusión desconocidas a una red con bucles, se puede producir la llegada de tramas duplicadas al dispositivo de destino. Una trama de unidifusión desconocida se produce cuando el switch no tiene la dirección MAC de destino en la tabla de direcciones MAC y debe reenviar la trama a todos los puertos, excepto el puerto de ingreso. </p>
+          <p></p>
+          <p>Haga clic en el botón <b>Reproducir</b> de la figura para ver una animación de este problema. Cuando se detenga la animación, lea el texto a la derecha de la topología. La animación continuará después de una pausa breve.</p>
+          <p>En la animación:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La PC1 envía una trama de unidifusión con destino a la PC4. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El S2 no posee una entrada para la PC4 en su tabla de MAC. En un intento por encontrar la PC4, envía la trama de unidifusión desconocida a todos los puertos de switch, excepto el puerto que recibió el tráfico. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La trama llega a los switches S1 y S3. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El S1 tiene una entrada de dirección MAC para la PC4, de forma que reenvía la trama a la PC4. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El S3 también tiene una entrada en su tabla de direcciones MAC para la PC4, de manera que reenvía la trama de unidifusión a través del enlace troncal 3 al S1. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>El S1 recibe la trama duplicada y la reenvía a la PC4. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La PC4 ha recibido ahora la misma trama dos veces.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La mayoría de los protocolos de capa superior no están diseñados para reconocer transmisiones duplicadas. En general, los protocolos que utilizan un mecanismo de numeración en secuencia asumen que la transmisión ha fallado y que el número de secuencia se ha reciclado para otra sesión de comunicación. Otros protocolos intentan enviar la transmisión duplicada al protocolo de capa superior correspondiente para que se procese y, posiblemente, descarte. </p>
+          <p></p>
+          <p>Los protocolos LAN de capa 2, como Ethernet, carecen de mecanismos para reconocer y eliminar las tramas que forman bucles infinitos. Algunos protocolos de capa 3 implementan un mecanismo de TTL que limita la cantidad de veces que un dispositivo de red de capa 3 puede volver a transmitir un paquete. Los dispositivos de capa 2 no tienen este mecanismo, así que siguen retransmitiendo el tráfico en bucle indefinidamente. STP, un mecanismo que sirve para evitar los bucles de capa 2, se desarrolló como solución a estos problemas.</p>
+          <p></p>
+          <p>Para evitar que ocurran estos problemas en una red redundante, se debe habilitar algún tipo de árbol de expansión en los switches. De manera predeterminada, el árbol de expansión está habilitado en los switches Cisco para prevenir que ocurran bucles en la capa 2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Esta animación muestra tres switches: S1, S2 y S3.  Cada uno está conectado a los otros dos con un enlace troncal.  El S2 tiene conectadas la PC1, PC2 y PC3.  El S1 tiene conectada la PC4.  La animación muestra cómo la P.C.4 puede recibir tramas de unidifusión duplicadas cuando existe un bucle de capa dos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.3.6 Mecanismo de cola de baja latencia (LLQ)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.3.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mecanismo de cola de baja latencia (LLQ)</h1>
+        <div>
+          <p>La función de LLQ proporciona la cola de prioridad estricta (PQ) a CBWFQ. La asignación de cola de prioridad estricta permite que los datos susceptibles a la demora, como la voz, se envíen antes que los paquetes de otras colas. LLQ proporciona una puesta en cola de prioridad estricta para CBWFQ, lo que reduce las fluctuaciones en las conversaciones de voz, como se muestra en la figura.</p>
+          <p></p>
+          <p>Sin la LLQ, CBWFQ proporciona el WFQ según las clases definidas sin una cola de prioridad estricta disponible para el tráfico en tiempo real. El peso para un paquete que pertenece a una clase específica se deriva del ancho de banda que le asignó a la clase al configurarla. Por lo tanto, el ancho de banda asignado a los paquetes de una clase determina el orden en que se envían los paquetes. Se realiza el servicio de todos los paquetes en base suficiente al peso; ninguna clase de paquetes puede otorgar la prioridad estricta. Este esquema presenta problemas para el tráfico de voz, que en gran medida no admite retrasos, especialmente variaciones en el retraso. Para el tráfico de voz, las variaciones en la demora introducen irregularidades en la transmisión que se manifiestan como fluctuaciones en la conversación escuchada.</p>
+          <p></p>
+          <p>Con la LLQ, los datos susceptibles a la demora se envían primero, antes de que se procesen los paquetes de otras colas. La LLQ permite que los datos susceptibles a la demora, como la voz, se envíen primero (antes que los paquetes de otras colas), con lo que se otorga un tratamiento preferencial a los datos susceptibles a la demora con respecto a otros tipos de tráfico. Aunque es posible poner varios tipos de tráfico en tiempo real en cola de prioridad estricta, Cisco recomienda redirigir solo el tráfico de voz a la cola de prioridad.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un ejemplo de puesta en cola de baja latencia (LLQ).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

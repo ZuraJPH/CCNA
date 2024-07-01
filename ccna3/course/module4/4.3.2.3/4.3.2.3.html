@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.3 Prioridad e intento de prioridad del HSRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Prioridad e intento de prioridad del HSRP</h1>
+        <div>
+          <p>El rol de los routers activos y de reserva se determina durante el proceso de elección del HSRP. De manera predeterminada, el router con la dirección IPv4 numéricamente más alta se elige como router activo. Sin embargo, siempre es mejor controlar cómo funcionará su red en condiciones normales en lugar de dejarlo librado al azar.</p>
+          <p></p>
+          <p>
+            <b>Prioridad de HSRP</b>
+          </p>
+          <p></p>
+          <p>La prioridad HSRP se puede utilizar para determinar el router activo. El router con la prioridad HSRP más alta será el router activo. De manera predeterminada, la prioridad HSRP es 100. Si las prioridades son iguales, el router con la dirección IPv4 numéricamente más alta es elegido como router activo.</p>
+          <p>Para configurar un router para que sea el router activo, utilice el comando de interfaz <b>standby priority</b>. El rango de prioridad HSRP es de 0 a 255.</p>
+          <p></p>
+          <p>
+            <b>Intento de prioridad de HSRP</b>
+          </p>
+          <p></p>
+          <p>De forma predeterminada, después de que un router se convierte en el router activo, seguirá siendo el router activo incluso si otro router está disponible en línea con una prioridad HSRP más alta.</p>
+          <p></p>
+          <p>Para forzar un nuevo proceso de elección del HSRP, el intento de prioridad se debe activar mediante el comando de interfaz <b>standby preempt</b>. El intento de prioridad es la capacidad de un router HSRP de activar el proceso de la nueva elección. Con este intento de prioridad activado, un router disponible en línea con una prioridad HSRP más alta asume el rol de router activo.</p>
+          <p></p>
+          <p>El intento de prioridad solo permite que un router se convierta en router activo si tiene una prioridad más alta. Un router habilitado para intento de propiedad, con una prioridad equivalente pero una dirección IPv4 más alta, no desplazará la prioridad de un router activo. Consulte la topología de la figura.</p>
+          <p></p>
+          <p>El R1 se configuró con la prioridad de HSRP de 150 mientras que el R2 tiene la prioridad de HSRP predeterminada de 100. El intento de prioridad está habilitado en el R1. Con una prioridad más alta, el R1 es el router activo y el R2 es el router de reserva. Debido a un corte de energía que solo afecta al R1, el router activo ya no está disponible y el router de reserva R2 asume el rol de router activo. Después de que se restaura la energía, el R1 vuelve a estar en línea. Dado que R1 tiene una prioridad más alta y el intento de prioridad se encuentra habilitado, forzará un nuevo proceso de elección. R1 reanudará su rol de router activo y el R2 volverá al rol de router de reserva.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Si el intento de prioridad está desactivado, el router que arranque primero será el router activo si no hay otros routers en línea durante el proceso de elección.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

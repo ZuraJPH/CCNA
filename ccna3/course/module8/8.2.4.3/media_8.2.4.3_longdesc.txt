@@ -1,0 +1,1 @@
+En la figura uno, se muestra la salida del comando show ip ospf. Este comando también muestra la ID del proceso de OSPF y la ID del router. La figura dos es un elemento de medios interactivos que permite que el estudiante verifique la información del proceso OSPF.

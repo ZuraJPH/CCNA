@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.2 Versiones del HSRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Versiones del HSRP</h1>
+        <div>
+          <p>La versión 1 de HSRP es la predeterminada para Cisco IOS 15. La versión 2 del HSRP proporciona las siguientes mejoras:</p>
+          <p>
+            <ul>
+              <li>HSRPv2 aumenta la cantidad de grupos admitidos. La versión 1 de HSRP admite los números de grupo de 0 a 255. La versión 2 de HSRP admite los números de grupo de 0 a 4095.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>HSRPv1 usa la dirección de multidifusión 224.0.0.2. El HSRP versión 2 utiliza la dirección de multidifusión IPv4 224.0.0.102 o a la dirección IPv6 de multidifusión FF02:: 66 para enviar paquetes de saludo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>HSRPv1 usa el rango de direcciones MAC virtual 0000.0C07.AC00 a 0000.0C07.ACFF, donde los últimos dos dígitos hexadecimales indican el número de grupo del HSRP. HSRP v2 usa el rango de direcciones MAC de 0000.0C9F.F000 a 0000.0C9F.FFFF para IPv4 y de 0005.73A0.0000 a 0005.73A0.0FFF para direcciones IPv6. Para IPv4 e IPv6, los últimos tres dígitos hexadecimales de la dirección MAC indican el número de grupo del HSRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>HSRPv2 incorpora la compatibilidad para autenticación MD5, tema que no se encuentra dentro del ámbito de este curso.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Los números de grupo se utilizan para configuraciones HSRP más avanzadas que están fuera del ámbito de este curso. Para nuestros fines, utilizaremos el número de grupo 1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.5 Verificación de ACL extendidas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de ACL extendidas</h1>
+        <div>
+          <p>Después de configurar una ACL y aplicarla a una interfaz, utilice los comandos <b>show</b> del IOS de Cisco para verificar la configuración. En la ilustración, en el ejemplo de arriba se muestra el comando del IOS de Cisco que se utiliza para mostrar el contenido de todas las ACL. En el ejemplo de abajo, se muestra el resultado de emitir el comando <b>show ip interface g0/0</b> en el router R1. </p>
+          <p></p>
+          <p>A diferencia de las ACL estándar, las ACL extendidas no implementan la misma lógica interna ni la misma función de hash. El resultado y los números de secuencia que se muestran en el resultado del comando <b>show access-lists</b> están en el orden en que se introdujeron las instrucciones. Las entradas de host no se enumeran automáticamente antes de las entradas de rango.</p>
+          <p></p>
+          <p>El comando <b>show ip interface</b> se utiliza para verificar la ACL en la interfaz y el sentido en el que se aplicó. El resultado de este comando incluye el número o el nombre de la lista de acceso y el sentido en el que se aplicó la ACL. Los nombres de las ACL BROWSING y SURFING en mayúscula se destacan en el resultado que se ve en la pantalla.</p>
+          <p></p>
+          <p>Después de verificar la configuración de una ACL, el siguiente paso es confirmar que la ACL funcione según lo esperado, es decir, que bloquee y permita el tráfico según se espera. </p>
+          <p></p>
+          <p>Las pautas analizadas anteriormente en esta sección sugieren que las ACL se configuren en una red de prueba y después se implementen en la red de producción.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cómo verificar una ACL.  El primer comando se ejecuta en modo exec con privilegios y es: show access guion lists.  Esto muestra las listas de acceso en el router junto con las líneas en cada uno.  Se muestran las dos listas de acceso creadas en la página anterior.  El segundo comando es show ip interface gig cero barra diagonal cero.  Esto muestra las listas de acceso que están configuradas en la interfaz junto con la dirección.  La figura muestra que la lista de salida es browsing y la lista de entrada es surfing.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

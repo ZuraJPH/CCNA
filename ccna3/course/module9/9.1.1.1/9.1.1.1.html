@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.1 OSPF de área única</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>OSPF de área única</h1>
+        <div>
+          <p>OSPF de área única es útil en redes más pequeñas, donde la red de enlaces entre routers es simple y las rutas a los destinos individuales se deducen con facilidad.</p>
+          <p></p>
+          <p>No obstante, si un área crece demasiado, se deben resolver los siguientes problemas de inmediato (consulte la ilustración para obtener un ejemplo):</p>
+          <p>
+            <ul>
+              <li>
+                <b>Tablas de routing extensas:</b> OSPF no realiza la sumarización de rutas de manera predeterminada. Si las rutas no se resumen, la tabla de routing se vuelve muy extensa, según el tamaño de la red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Gran base de datos de estado de enlace (LSDB):</b> en OSPF de área única, la LSDB cubre la topología de todo el dominio de routing. Cada router debe mantener información detallada sobre cada red en el dominio de routing. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Cálculos frecuentes del algoritmo SPF:</b> en las redes grandes, las modificaciones son inevitables, por lo que los routers pasan muchos ciclos de CPU volviendo a calcular el algoritmo SPF y actualizando la tabla de routing.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para que OSPF sea más eficaz y escalable, este protocolo admite el routing jerárquico mediante áreas. Un área de OSPF es un grupo de routers que comparten la misma información de estado de enlace en las bases de datos de estado de enlace. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El estudio del resumen de rutas de OSPF no está contemplado en este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra diez routers, todos conectados en un área única. Estos routers se están quedando sin memoria pues están recibiendo demasiadas notificaciones de estado de enlace (LSA), e indican que el algoritmo SPF (Primero la ruta más corta) se ejecuta con demasiada frecuencia. Esta situación disminuye la eficiencia del routing.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

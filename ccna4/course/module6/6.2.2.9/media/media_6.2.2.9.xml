@@ -1,0 +1,65 @@
+<textcomponents>
+<component id="ID_s1_title">
+		<text><![CDATA[<b>Ejemplo de modelado (shaping) del tráfico</b>]]>
+	</text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Tráfico]]>
+	</text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Tiempo]]>
+	</text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Tráfico]]>
+	</text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Tiempo]]>
+	</text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[Modelado]]>
+	</text>
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[Velocidad de<br>tráfico]]>
+	</text>
+	</component>
+	<component id="ID_s1_text07">
+		<text><![CDATA[Velocidad de tráfico]]>
+	</text>
+	</component><!-- slide 2 --><component id="ID_s2_title">
+		<text><![CDATA[<b>Ejemplo de regulación (policing) del tráfico</b>]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Tráfico]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Tiempo]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Tráfico]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Tiempo]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt05">
+		<text><![CDATA[Regulación]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt06">
+		<text><![CDATA[Velocidad de tráfico]]>
+	</text>
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[Velocidad de tráfico]]>
+	</text>
+	</component>
+</textcomponents>

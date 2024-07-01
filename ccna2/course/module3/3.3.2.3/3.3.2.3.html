@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.3 Ruta de nivel 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta de nivel 1</h1>
+        <div>
+          <p>Una ruta de nivel 1 es una ruta con una máscara de subred igual o inferior a la máscara con clase de la dirección de red. Por lo tanto, una ruta de nivel 1 puede ser cualquiera de las siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta de red</b>: una ruta de red que tiene una máscara de subred igual a la de la máscara con clase. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta de superred</b>: una dirección de red con una máscara menor que la máscara con clase, por ejemplo, una dirección de resumen. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta predeterminada</b>: una ruta estática con la dirección 0.0.0.0/0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El origen de la ruta de nivel 1 puede ser una red conectada directamente, una ruta estática o un protocolo de enrutamiento dinámico.</p>
+          <p></p>
+          <p>En la figura 1, se destaca la forma en que las rutas de nivel 1 también son rutas finales. </p>
+          <p></p>
+          <p>En la figura 2, se destacan las rutas de nivel 1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno enumera tres tipos de rutas de nivel uno y un ejemplo de cada uno.  Lo primero que se muestra es 192 punto 168 punto 1 punto 0 barra 24, lo segundo es 192 punto 168 punto 0 punto 0 barra 16, y el tercer ejemplo es la ruta predeterminada de 0 punto 0 punto 0 punto 0 barra 0.  Estas son todas las rutas finales en una tabla de routing cuando la dirección IP del siguiente salto o la interfaz de salida se enumera en la tabla de routing. La figura 2 muestra el resultado del comando show ip route pipe begin Gateway.  Esto muestra la tabla de routing para el router R-1 y resalta dos rutas de nivel uno. Una ruta es la ruta estática predeterminada y la otra es 192 punto 168 punto 0 punto 0 barra 16 accesible a través de 209 punto 165 punto 200 punto 226.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

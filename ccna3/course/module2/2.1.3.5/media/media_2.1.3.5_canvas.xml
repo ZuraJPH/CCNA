@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR"> 
+	
+<slide>
+<element type="ROUTER" textId="ID_router_txt1" x="62" y="87" width="520" height="245" />
+<text id="ID_router_txt1"><![CDATA[<pre>S1<b># conf t</b>
+Enter configuration commands, one per line. End with CNTL/Z.
+S1(config)<b># vlan 2000</b>
+S1(config-vlan)<b># exit</b>
+<span class="orange">% Failed to create VLANs 2000 
+Extended VLAN(s) not allowed in current VTP mode. 
+%Failed to commit extended VLAN(s) changes.</span> 
+
+S1(config)# 
+*Mar 1 00:51:48.893: %SW_VLAN-4-VLAN_CREATE_FAIL: Failed to create 
+VLANs 2000: extended VLAN(s) not allowed in current VTP mode</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt2" x="62" y="87" width="520" height="245" />
+<text id="ID_router_txt2"><![CDATA[<pre>S1(config)<b># vtp mode transparent</b>
+Setting device to VTP Transparent mode for VLANS. 
+S1(config)<b># vlan 2000</b> 
+S1(config-vlan)<b># end</b> 
+S1#</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt3" x="62" y="87" width="520" height="245" />
+<text id="ID_router_txt3"><![CDATA[<pre>S1<b># show vlan brief</b> 
+
+VLAN  Name                   Status   Ports 
+----  ---------------------- -------- ------------------------------- 
+1     default                active   Fa0/3, Fa0/4, Fa0/5, Fa0/6 
+                                      Fa0/7, Fa0/8, Fa0/9, Fa0/10 
+                                      Fa0/11, Fa0/12, Fa0/13, Fa0/14 
+                                      Fa0/15, Fa0/16, Fa0/17, Fa0/18 
+                                      Fa0/19, Fa0/20, Fa0/21, Fa0/22 
+                                      Fa0/23, Fa0/24, Gi0/1, Gi0/2 
+1002 fddi-default            act/unsup 
+1003 token-ring-default      act/unsup 
+1004 fddinet-default         act/unsup 
+1005 trnet-default           act/unsup 
+<span class="orange">2000 VLAN2000                active</span> 
+S1#</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+</slide>
+
+
+<slide>
+<element type="TEXT" subType="TITLE" compId="ID_s4_title" />
+<element type="ACTIVITY" subType="SYNTAX" compId="ID_s1_SC" x="50" y="45" width="580" height="370" resetId="ID_s1_reset" showMeId="ID_s1_showme" showAllId="ID_s1_showall"/>
+</slide>
+</slide>
+</data>

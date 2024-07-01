@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.2.8 Solución de problemas de ACL IPv6. Ejemplo 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.2.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de ACL IPv6. Ejemplo 3</h1>
+        <div>
+          <p>En la figura 1, R1 está configurado con una ACL IPv6 llamada DENY-ACCESS que debe aplicar la siguiente política para la LAN de R3:</p>
+          <p>
+            <ul>
+              <li>Permitir acceso a la red :11 desde la red :30</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Denegar acceso a la red :10</li>
+            </ul>
+          </p>
+          <p>La figura 2 muestra la configuración y la aplicación de la ACL IPv6.</p>
+          <p></p>
+          <p>La ACL DENY-ACCESS debe permitir el acceso a la red :11 desde la red :30 y denegar el acceso a la red :10. Sin embargo, después de aplicar la ACL a la interfaz: la red 10 aún es accesible desde la red :30.</p>
+          <p></p>
+          <p>
+            <b>Solución</b>: En esta situación, el problema no tiene que ver con la manera en la que se escribieron las instrucciones de las ACL, sino con la ubicación de la ACL. Dado que las ACL de IPv6 deben configurarse con un origen y un destino, debe aplicarse lo más cerca posible del origen del tráfico. La ACL DENY-ACCESS se aplicó en el sentido saliente en la interfaz G0/1 de R1 que es la que más cerca está del destino. Como resultado, el tráfico a la red :10 no se ve no se ve afectado porque alcanza la red :10 a través de la otra interfaz de la red LAN, G0/0. Puede aplicar la ACL entrante en la interfaz S0/0/0 del R1. Sin embargo, porque tenemos control sobre el R3, la mejor ubicación sería configurar y aplicar la ACL lo más cerca posible del origen del tráfico. La figura 3 muestra la eliminación de la ACL en R1 y la configuración y la aplicación correctas de la ACL en R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la red de referencia de ACL de tres routers.  R2 se encuentra en la parte superior de un triángulo y tiene una conexión WAN serie tanto con R1 como con R3.  No hay conexión directa entre R1 y R3.  R1 tiene dos interfaces gigabit activas para los segmentos de red locales y cada segmento tiene un switch con una computadora conectada a él.  R-1 tiene la red ipv6 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 0 dos puntos dos puntos barra diagonal 64 en la interfaz gigabit cero barra diagonal cero, y la red ipv6 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 1 1 dos puntos dos puntos barra diagonal 64 en la interfaz gigabit cero barra diagonal uno.  R-3 tiene una sola interfaz activa con la red ipv6 2 0 0 1 dos puntos D B 8 dos puntos C A F E dos puntos 3 0 dos puntos dos puntos barra diagonal 64 en la interfaz gigabit cero barra diagonal uno.  La WAN serial entre R-1 y R-2 es 2 0 0 1 dos puntos D B 8 dos puntos F E E D dos puntos 1 dos puntos dos puntos barra diagonal 64. La WAN serial entre R-2 y R-3 es 2 0 0 1 dos puntos D B 8 dos puntos F E E D dos puntos 2 dos puntos dos puntos barra diagonal 64. La figura 2 muestra la salida de los comandos show access-list y show running-config. La figura 3 muestra los comandos que se usan para eliminar la lista de acceso IPv6 y el comando de filtro de tráfico IPv6 de R1. Se agrega a R3 la lista de acceso y el comando de filtro de tráfico.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

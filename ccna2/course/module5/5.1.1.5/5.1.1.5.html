@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.5 Configuración del acceso a la administración básica de un switch con IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración del acceso a la administración básica de un switch con IPv4</h1>
+        <div>
+          <p>
+            <b>Paso 1: Configuración de la interfaz de administración</b>
+          </p>
+          <p></p>
+          <p>Se configura una dirección IPv4 y una máscara de subred en la SVI de administración del switch desde el modo de configuración de interfaz VLAN. Como se muestra en la figura 1, el comando <b>interface vlan 99 </b>se usa para ingresar al modo de configuración de interfaz. Para configurar la dirección IPv4, se usa el comando <b>ip address</b>. El comando <b>no shutdown</b> habilita la interfaz. En este ejemplo, la VLAN 99 se configuró con la dirección IPv4 172.17.99.11. </p>
+          <p></p>
+          <p>La SVI para la VLAN 99 no se muestra como “up/up” hasta que se cree la VLAN 99 y haya un dispositivo conectado a un puerto del switch asociado a la VLAN 99. Para crear una VLAN con la id_de_vlan 99 y asociarla a una interfaz, use los siguientes comandos: </p>
+          <p></p>
+          <p>
+            <span class="cmd">S1(config)#</span>
+            <span class="cmd">
+              <b> vlan </b>
+            </span>
+            <span class="cmd">
+              <i>id_de_vlan</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">S1(config-vlan)#</span>
+            <span class="cmd">
+              <b> name </b>
+            </span>
+            <span class="cmd">
+              <i>nombre_de_vlan</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">S1(config-vlan)#</span>
+            <span class="cmd">
+              <b> exit</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">S1(config)#</span>
+            <span class="cmd">
+              <b> interfaz </b>
+            </span>
+            <span class="cmd">
+              <i>id_de_interfaz </i>
+            </span>
+            <span class="cmd">
+              <b></b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">S1(config-if)#</span>
+            <span class="cmd">
+              <b></b>
+            </span>
+            <span class="cmd">
+              <b>switchport access vlan </b>
+            </span>
+            <span class="cmd">
+              <i>id_de_vlan</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <b>Paso 2: Configuración del gateway predeterminado </b>
+          </p>
+          <p></p>
+          <p>Si el switch se va a administrar de forma remota desde redes que no están conectadas directamente, se debe configurar con un gateway predeterminado. El gateway predeterminado es el router al que está conectado el switch. El switch reenvía los paquetes IP con direcciones IP de destino fuera de la red local al gateway predeterminado. Como se muestra en la figura 2, R1 es el gateway predeterminado para S1. La interfaz en R1 conectada al switch tiene la dirección IPv4 172.17.99.1. Esta es la dirección de gateway predeterminado para S1.</p>
+          <p></p>
+          <p>Para configurar el gateway predeterminado del switch, use el comando <b>ip default-gateway</b>. Introduzca la dirección IPv4 del gateway predeterminado. El gateway predeterminado es la dirección IPv4 de la interfaz del router a la que está conectado el switch. Use el comando <b>copy running-config startup-config</b> para realizar una copia de seguridad de la configuración.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: Verificar la configuración</b>
+          </p>
+          <p></p>
+          <p>Como se muestra en la figura 3, el comando <b>show ip interface brief</b> es útil para determinar el estado de las interfaces virtuales y físicas. El resultado que se muestra confirma que la interfaz VLAN 99 se ha configurado con una dirección IPv4 y una máscara de subred.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una tabla que enumera los comandos de configuración básica de switch. La figura dos muestra una tabla que enumera los comandos utilizados para configurar un switch con un gateway predeterminado. La figura tres muestra el resultado del comando show running guión config.  El resultado se trunca y solo muestra la configuración para la interfaz de Fast Ethernet cero barra 18, que está configurada para acceder a VLAN 99 como un puerto de acceso.  La figura también muestra el resultado del comando show ip interface brief.  Este comando muestra la configuración para la interfaz VLAN 99, incluida la dirección IP y su estado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

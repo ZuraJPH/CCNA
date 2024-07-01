@@ -1,0 +1,1 @@
+En la figura se muestra una nube etiquetada Internet.  La nube está conectada a tres redes privadas diferentes mediante diferentes clases de direccionamiento privado.  En uno de ellos se utiliza una red privada Clase A, en otro la red privada Clase B, en el tercero se utiliza la red privada Clase C.  En todas las redes privadas se está usando NAT en los routers de frontera.

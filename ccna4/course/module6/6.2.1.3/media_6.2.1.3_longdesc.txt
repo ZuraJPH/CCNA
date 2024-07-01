@@ -1,0 +1,1 @@
+La figura muestra una tabla de ventajas y desventajas del modelo de mejor esfuerzo de QoS.

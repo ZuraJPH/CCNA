@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR"> 
+	
+<slide>
+	<element type="IMAGE" src="media_4.3.3.3.png" x="0" y="0" width="680" height="490" />
+	<element type="TEXT" id="ID_static_1" text="172.16.10.2" x="117" y="254" align="center" width="61.55" />
+	<element type="TEXT" id="ID_static_2" text="172.16.10.3" x="497" y="254" align="center" width="61.7" />
+	<element type="TEXT" compId="ID_s1_txt02" x="253" y="255" width="170.8" expand="down" align="center" />
+	<element type="TEXT" id="ID_static_3" text="G0/1" x="212" y="248" align="center" width="23.85" />
+	<element type="TEXT" id="ID_static_4" text="G0/1" x="437" y="248" align="center" width="23.85" />
+	<element type="TEXT" compId="ID_s1_txt01" x="268" y="193" width="140.7" expand="up" align="center" />
+	<element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt1" x="90" y="90" width="500" height="318" />
+<text id="ID_router_txt1"><![CDATA[<pre>R1# <b>show standby</b>
+GigabitEthernet0/1 - Group 1 (version 2)
+  <span class="orange">State is Active</span>
+    5 state changes, last state change 01:02:18
+  <span class="orange">Virtual IP address is 172.16.10.1</span>
+  <span class="orange">Active virtual MAC address is 0000.0c9f.f001</span>
+    Local virtual MAC address is 0000.0c9f.f001 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.120 secs
+  <span class="orange">Preemption enabled</span>
+  Active router is local
+  <span class="orange">Standby router is 172.16.10.3,</span> priority 100 (expires in 9.392 sec)
+  Priority 150 (configured 150)
+  Group name is "hsrp-Gi0/1-1" (default)
+R1#
+</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+<slide>
+<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+<element type="ROUTER" textId="ID_router_txt2" x="90" y="90" width="500" height="318" />
+<text id="ID_router_txt2"><![CDATA[<pre>R2# <b>show standby</b>
+GigabitEthernet0/1 - Group 1 (version 2)
+  <span class="orange">State is Standby</span>
+    5 state changes, last state change 01:03:59
+  <span class="orange">Virtual IP address is 172.16.10.1</span>
+  <span class="orange">Active virtual MAC address is 0000.0c9f.f001</span>
+    Local virtual MAC address is 0000.0c9f.f001 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.944 secs
+  <span class="orange">Preemption disabled</span>
+  Active router is 172.16.10.2, priority 150 (expires in 8.160 sec)
+    MAC address is fc99.4775.c3e1
+  <span class="orange">Standby router is local</span>
+  Priority 100 (default 100)
+  Group name is "hsrp-Gi0/1-1" (default)
+R2#
+</pre>]]></text>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt3" x="90" y="90" width="500" height="145" />
+<text id="ID_router_txt3"><![CDATA[<pre>R1# show standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active       Standby         Virtual IP
+Gi0/1       1    150 P <span class="orange">Active</span>  local        172.16.10.3     172.16.10.1
+R1#
+</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s4_title"/>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt4" x="90" y="90" width="500" height="145" />
+<text id="ID_router_txt4"><![CDATA[<pre>R2# <b>show standby brief</b>
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby       Virtual IP
+Gi0/1       1    100   <span class="orange">Standby</span> 172.16.10.2     local         172.16.10.1
+R2#
+</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s5_title"/>
+</slide>
+
+
+<slide>
+
+      <element type="ACTIVITY" subType="SYNTAX" compId="ID_SC6" x="25" y="40" width="630" height="410" resetId="ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>
+	
+<element type="TEXT" subType="TITLE" compId="ID_s6_title"/>
+</slide>
+
+
+</slide>
+</data>

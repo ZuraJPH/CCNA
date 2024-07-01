@@ -1,0 +1,1 @@
+La figura 1 muestra las características del tráfico de datos. La figura 2 muestra y compara dos factores que se deben considerar para la demora de los datos, interactivos o no interactivos.

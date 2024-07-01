@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.3.1 Tabla de vecinos de IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tabla de vecinos de IPv6</h1>
+        <div>
+          <p>De manera similar a lo que sucede en EIGRP para IPv4, antes de que se puedan enviar actualizaciones de EIGRP para IPv6, los routers deben establecer adyacencias con sus vecinos, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>Utilice el comando <b>show ipv6 eigrp neighbors</b> para ver la tabla de vecinos y verificar que EIGRP para IPv6 haya establecido una adyacencia con sus vecinos. La salida que se ve en la figura 2 muestra la dirección link-local IPv6 del vecino adyacente y la interfaz que utiliza el router para llegar a ese vecino EIGRP. Al utilizar direcciones link-local detalladas, resulta más fácil reconocer a los vecinos R2 en FE80::2 y R3 en FE80::3.</p>
+          <p></p>
+          <p>Los encabezados de columna que figuran en la salida que genera el comando<b> show ipv6 eigrp neighbors</b> identifican lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Columna H</b>: indica los vecinos en el orden en el que se detectaron.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Address</b>: dirección link-local IPv6 del vecino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface</b> (Interfaz): la interfaz local en la cual se recibió este paquete de saludo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hold</b> (Retención): el tiempo de retención actual. Cuando se recibe un paquete de saludo, este valor se restablece al tiempo de espera máximo para esa interfaz y, luego, se realiza una cuenta regresiva hasta cero. Si se llega a cero, el vecino se considera inactivo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Uptime</b> (Tiempo de actividad): la cantidad de tiempo desde que se agregó este vecino a la tabla de vecinos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SRTT</b> y <b>RTO:</b> utilizados por RTP para administrar paquetes EIGRP confiables. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Q Cnt (conteo de cola):</b> siempre debe ser cero. Si es más que cero, hay paquetes EIGRP que esperan ser enviados. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Seq Num (número de secuencia):</b> se utiliza para rastrear paquetes de actualización, de consulta y de respuesta. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El comando <b>show ipv6 eigrp neighbors</b> es útil para verificar y resolver problemas de EIGRP para IPv6. Si un vecino esperado no se encuentra en la lista, asegúrese de que ambos extremos del enlace tengan estado up/up mediante el comando <b>show ipv6 interface brief</b>. En EIGRP para IPv6, existen los mismos requisitos para establecer adyacencias de vecinos que en EIGRP para IPv4. Si ambos lados del enlace tienen interfaces activas, verifique lo siguiente:</p>
+          <p>
+            <ul>
+              <li>¿Ambos routers están configurados con el mismo número de sistema autónomo de EIGRP?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>¿La interfaz está habilitada para EIGRP para IPv6 con el número de sistema autónomo correcto?</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. La red interna aparece resaltada, menos el enlace entre el router dos y el ISP. Se utilizan direcciones LAN IPv6. En la figura cinco, se muestra la salida que genera el comando “show ipv6 eigrp neighbors”. La dirección de interfaz link-local, las interfaces locales, el tiempo de espera y el tiempo de actividad aparecen resaltados.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

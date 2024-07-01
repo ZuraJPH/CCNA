@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.3 Propagación de una ruta estática predeterminada en OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propagación de una ruta estática predeterminada en OSPFv3</h1>
+        <div>
+          <p>El proceso de propagación de una ruta estática predeterminada en OSPFv3 es casi idéntico al de OSPFv2. </p>
+          <p></p>
+          <p>En la figura 1, el R2 tiene conexión simple a un proveedor de servicios (ISP). Por lo tanto, todo lo que se requiere para que el R2 llegue a Internet es una ruta estática predeterminada al proveedor de servicios. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: En este ejemplo, para simular la conexión al proveedor de servicios, se usa una interfaz de loopback con la dirección IPv6 2001:DB8:FEED:1::1/64. </p>
+          <p></p>
+          <p>En la figura 2, se muestra la tabla de routing IPv6 actual del R1. Observe que en dicha tabla no hay registro de que se conozca la ruta a Internet.</p>
+          <p></p>
+          <p>Para propagar una ruta predeterminada, el router perimetral (R2) debe configurarse con lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Una ruta estática predeterminada mediante el comando <b>ipv6 route ::/0 </b>{<i>ipv6-address</i> | <i>exit-intf</i>}.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El comando<b> default-information originate </b>del modo de configuración del router. Esto ordena al R2 que sea el origen de la información de la ruta predeterminada y que propague la ruta estática predeterminada en las actualizaciones OSPF.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En el ejemplo de la figura 3, se muestra cómo configurar una ruta estática predeterminada IPv6 al proveedor de servicios y propagar esa ruta en todo un dominio OSPFv3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. Se resalta la red interna, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la salida del comando "show ipv6 route ospf" en el router uno. En la figura tres, se muestra la sintaxis para configurar una ruta estática predeterminada con IPv6 al proveedor de servicios.  Debajo, se muestra la sintaxis para propagar esa ruta estática predeterminada a través del proceso de routing OSPF.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

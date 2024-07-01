@@ -1,0 +1,1 @@
+La figura representa un diagrama de flujo que demuestra el proceso de la máquina de estados finitos DUAL.

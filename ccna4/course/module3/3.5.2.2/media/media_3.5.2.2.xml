@@ -1,0 +1,254 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Alojamiento simple</b>]]></text>
+    </component>
+    <component id="ID_s1_txt01">
+        <text>
+            <![CDATA[Empresa A]]>
+        </text>
+    </component>
+    <component id="ID_s1_txt02">
+        <text>
+            <![CDATA[ <b>AS 65001</b><br> ISP-1</b>]]></text>
+    </component>
+    <component id="ID_s1_txt03">
+        <text>
+            <![CDATA[Internet]]></text>
+    </component>
+    <component id="ID_s1_txt04">
+        <text>
+            <![CDATA[<b>Ruta estática por defecto</b>]]></text>
+    </component>
+    <component id="ID_s1_txt05">
+        <text>
+            <![CDATA[<b>Ruta estática</b>]]></text>
+    </component>
+    <component id="ID_s1_txt06">
+        <text>
+            <![CDATA[Segmento 3]]>
+        </text>
+    </component>
+    <component id="ID_s1_txt07">
+        <text>
+            <![CDATA[Segmento 4]]>
+        </text>
+    </component>
+    <component id="ID_s1_txt08">
+        <text>
+            <![CDATA[Segmento 5]]>
+        </text>
+    </component>
+    <component id="ID_s1_txt09">
+        <text>
+            <![CDATA[Segmento 6]]>
+        </text>
+    </component>
+    <component id="ID_s1_txt10">
+        <text>
+            <![CDATA[Al tomar diferentes rutas al destino, los segmentos llegan desordenados.]]>
+        </text>
+    </component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+        <text>
+            <![CDATA[<b>Los segmentos TCP se vuelven a ordenar en el destino</b>]]></text>
+    </component>
+    <component id="ID_s2_txt01">
+        <text>
+            <![CDATA[Los diferentes segmentos pueden tomar diferentes rutas.]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt03">
+        <text>
+            <![CDATA[<b>Datos</b>]]></text>
+    </component>
+    <component id="ID_s2_txt03b">
+        <text>
+            <![CDATA[Los datos se dividen en segmentos.]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt04">
+        <text>
+            <![CDATA[Segmento 1]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt05">
+        <text>
+            <![CDATA[Segmento 2]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt06">
+        <text>
+            <![CDATA[Segmento 3]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt07">
+        <text>
+            <![CDATA[Segmento 4]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt08">
+        <text>
+            <![CDATA[Segmento 5]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt09">
+        <text>
+            <![CDATA[Segmento 6]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt10">
+        <text>
+            <![CDATA[Al tomar diferentes rutas al destino, los segmentos llegan desordenados.]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt11">
+        <text>
+            <![CDATA[Segmento 1]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt12">
+        <text>
+            <![CDATA[Segmento 2]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt13">
+        <text>
+            <![CDATA[Segmento 6]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt14">
+        <text>
+            <![CDATA[Segmento 5]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt15">
+        <text>
+            <![CDATA[Segmento 4]]>
+        </text>
+    </component>
+    <component id="ID_s2_txt18">
+        <text>
+            <![CDATA[Segmento 3]]>
+        </text>
+    </component><!-- end slide 2 --><!-- slide 3 --><component id="ID_s3_title">
+        <text>
+            <![CDATA[<b>Los segmentos TCP se vuelven a ordenar en el destino</b>]]></text>
+    </component>
+    <component id="ID_s3_txt01">
+        <text>
+            <![CDATA[Los diferentes segmentos pueden tomar diferentes rutas.]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt03">
+        <text>
+            <![CDATA[<b>Datos</b>]]></text>
+    </component>
+    <component id="ID_s3_txt03b">
+        <text>
+            <![CDATA[Los datos se dividen en segmentos.]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt04">
+        <text>
+            <![CDATA[Segmento 1]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt05">
+        <text>
+            <![CDATA[Segmento 2]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt06">
+        <text>
+            <![CDATA[Segmento 3]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt07">
+        <text>
+            <![CDATA[Segmento 4]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt08">
+        <text>
+            <![CDATA[Segmento 5]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt09">
+        <text>
+            <![CDATA[Segmento 6]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt10">
+        <text>
+            <![CDATA[Al tomar diferentes rutas al destino, los segmentos llegan desordenados.]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt11">
+        <text>
+            <![CDATA[Segmento 1]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt12">
+        <text>
+            <![CDATA[Segmento 2]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt13">
+        <text>
+            <![CDATA[Segmento 6]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt14">
+        <text>
+            <![CDATA[Segmento 5]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt15">
+        <text>
+            <![CDATA[Segmento 4]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt18">
+        <text>
+            <![CDATA[Segmento 3]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt19">
+        <text>
+            <![CDATA[Segmento 1]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt20">
+        <text>
+            <![CDATA[Segmento 2]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt21">
+        <text>
+            <![CDATA[Segmento 6]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt22">
+        <text>
+            <![CDATA[Segmento 5]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt23">
+        <text>
+            <![CDATA[Segmento 4]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt24">
+        <text>
+            <![CDATA[Segmento 3]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt16">
+        <text>
+            <![CDATA[TCP reordena los segmentos en el orden original.]]>
+        </text>
+    </component>
+    <component id="ID_s3_txt17">
+        <text>
+            <![CDATA[<div><img src="arrow.png" width="30.6" height="100.3" /></div>]]>
+        </text>
+    </component><!-- end slide 3 --></textcomponents>

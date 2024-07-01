@@ -1,0 +1,177 @@
+﻿<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Registro del router</b>]]></text>
+	</component>
+
+	<component id="ID_s1_table01">
+		<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+			<tr class="mtable_title">
+				<td colspan="6" bgcolor='#FFFFFF'><font size="5"></font></td>
+			</tr>
+
+			<tr class="mtable_top">
+				<td colspan='6' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+			</tr>
+			<tr>
+				<td bgcolor='#666263' width='100' class="width20"><font color="#FFFFFF"><b>Nombre y modelo del dispositivo</b></font></td>
+				<td bgcolor='#666263' width='70' class="width10"><font color="#FFFFFF"><b>Interface Name (Nombre de la interfaz)</b></font></td>
+				<td bgcolor='#666263' width='100' class="width10"><font color="#FFFFFF"><b>Dirección MAC</b></font></td>
+				<td bgcolor='#666263' width='100' class="width20"><font color="#FFFFFF"><b>Dirección IPv4</b></font></td>
+				<td bgcolor='#666263' width='145' class="width20"><font color="#FFFFFF"><b>Direcciones IPv6</b></font></td>
+				<td bgcolor='#666263' width='80' class="width20"><font color="#FFFFFF"><b>Protocolos de routing IP</b></font></td>
+			</tr>
+			<tr>
+				<td bgcolor='#E9E7E8' rowspan='3'>R1, Cisco 1941,<br/>c1900-universalk9-mz.SPA.154-3.M2.bin</td>
+				<td bgcolor='#E9E7E8'>G0/0</td>
+				<td bgcolor='#E9E7E8'>0007.8580.a159</td>
+				<td bgcolor='#E9E7E8'>192.168.10.1 /24</td>
+				<td bgcolor='#E9E7E8'>2001:db8:cafe:10::1/64 fe80::1</td>
+				<td bgcolor='#E9E7E8'>EIGRPv4 10<br/>EIGRPv6 20</td>
+			</tr>
+			<tr>
+				<td bgcolor='#F2F2F2'>G0/1</td>
+				<td bgcolor='#F2F2F2'>0007.8580.a160</td>
+				<td bgcolor='#F2F2F2'>192.168.11.1 /24</td>
+				<td bgcolor='#F2F2F2'>2001:db8:cafe:11::1/64 fe80::1</td>
+				<td bgcolor='#F2F2F2'>EIGRPv4 10<br/>EIGRPv6 20</td>
+			</tr>
+			<tr>
+				<td bgcolor='#E9E7E8'>S0/0/0</td>
+				<td bgcolor='#E9E7E8'>N/D</td>
+				<td bgcolor='#E9E7E8'>10.1.1.1/30</td>
+				<td bgcolor='#E9E7E8'>2001:db8:acad:20::1/64<br/>fe80::</td>
+				<td bgcolor='#E9E7E8'>EIGRPv4 10<br/>EIGRPv6 20</td>
+			</tr>
+			<tr>
+				<td bgcolor='#F2F2F2'>R2, Cisco 1941,<br/>c1900-universalk9-mz.SPA.152-4.M1</td>
+				<td bgcolor='#F2F2F2'>S0/0/0</td>
+				<td bgcolor='#F2F2F2'>N/D</td>
+				<td bgcolor='#F2F2F2'>10.1.1.2/30</td>
+				<td bgcolor='#F2F2F2'>2001:db8:acad:20::2/64 fe80::2</td>
+				<td bgcolor='#F2F2F2'>EIGRPv4 10<br/>EIGRPv6 20</td>
+			</tr>
+		</table>]]></text> 
+</component>
+
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Registro del switch</b>]]></text>
+</component>
+	
+	
+	
+<component id="ID_s2_table01">
+	<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+			<tr class="mtable_title">
+				<td colspan="10" bgcolor='#FFFFFF'><font size="5"></font></td>
+			</tr>
+
+			<tr class="mtable_top">
+				<td colspan='10' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+			</tr>
+			<tr>
+				<td bgcolor='#666263' width='138'><font  color="#FFFFFF"><b>Información del switch</b></font></td>
+				<td bgcolor='#666263' width="40"><font  color="#FFFFFF"><b>Puerto</b></font></td>
+				<td bgcolor='#666263' width="50"><font  color="#FFFFFF"><b>Velocidad</b></font></td>
+				<td bgcolor='#666263' width="50"><font  color="#FFFFFF"><b>Dúplex</b></font></td>
+				<td bgcolor='#666263' width="40"><font  color="#FFFFFF"><b>STP</b></font></td>
+				<td bgcolor='#666263' width="45"><font  color="#FFFFFF"><b>Puerto Fast</b></font></td>
+				<td bgcolor='#666263' width="52"><font  color="#FFFFFF"><b>Estado troncal</b></font></td>
+				<td bgcolor='#666263' width="60"><font  color="#FFFFFF"><b>EtherChannel L2 o L3</b></font></td>
+				<td bgcolor='#666263' width="50"><font  color="#FFFFFF"><b>VLAN</b></font></td>
+				<td bgcolor='#666263' width="70"><font  color="#FFFFFF"><b>Clave</b></font></td>
+			</tr>
+
+			<tr>
+				<td bgcolor='#E9E7E8' rowspan='2'>S1, Cisco WS-2960-24TT,<br/>192.168.10.2/24,<br/>2001:db6:acad:99::2,<br/>c2960-lanbasek9-mz.150-2.SE7.bin</td>
+				<td bgcolor='#E9E7E8'>G0/1</td>
+				<td bgcolor='#E9E7E8'>100 Gb/s</td>
+				<td bgcolor='#E9E7E8'>Auto</td>
+				<td bgcolor='#E9E7E8'>Reenviar</td>
+				<td bgcolor='#E9E7E8'>No</td>
+				<td bgcolor='#E9E7E8'>Activado</td>
+				<td bgcolor='#E9E7E8'>Ninguna</td>
+				<td bgcolor='#E9E7E8'>1</td>
+				<td bgcolor='#E9E7E8'>Conecta con R1</td>
+			</tr>
+
+			<tr>
+				<td bgcolor='#F2F2F2'>F0/2</td>
+				<td bgcolor='#F2F2F2'>100 Mb/s</td>
+				<td bgcolor='#F2F2F2'>Auto</td>
+				<td bgcolor='#F2F2F2'>Reenviar</td>
+				<td bgcolor='#F2F2F2'>Sí</td>
+				<td bgcolor='#F2F2F2'>No</td>
+				<td bgcolor='#F2F2F2'>Ninguna</td>
+				<td bgcolor='#F2F2F2'>1</td>
+				<td bgcolor='#F2F2F2'>Conecta con PC1</td>
+			</tr>
+		</table>]]></text> 
+</component>
+
+
+
+<component id="ID_s3_title">
+		<text><![CDATA[<b>Registro del sistema final</b>]]></text>
+	</component>
+
+
+	
+	<component id="ID_s3_table01">
+		<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+			<tr class="mtable_title">
+				<td colspan="8" bgcolor='#FFFFFF'><font size="5"></font></td>
+			</tr>
+
+			<tr class="mtable_top">
+				<td colspan='8' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+			</tr>
+			<tr>
+				<td bgcolor='#666263' width='55' class="width25"><font color="#FFFFFF"><b>Nombre del dispositivo, propósito</b></font></td>
+				<td bgcolor='#666263' width='63'><font color="#FFFFFF"><b>Sistema operativo</b></font></td>
+				<td bgcolor='#666263' width='95'><font color="#FFFFFF"><b>Dirección MAC</b></font></td>
+				<td bgcolor='#666263' width='140'><font color="#FFFFFF"><b>Dirección IP</b></font></td>
+				<td bgcolor='#666263' width='120'><font color="#FFFFFF"><b>Gateway predeterminado</b></font></td>
+				<td bgcolor='#666263' width='130'><font color="#FFFFFF"><b>Servidor DNS</b></font></td>
+				<td bgcolor='#666263' width='75'><font color="#FFFFFF"><b>Aplicaciones de red</b></font></td>
+				<td bgcolor='#666263' width='75'><font color="#FFFFFF"><b>Aplicaciones de ancho de banda elevado</b></font></td>
+			</tr>
+			<tr>
+				<td bgcolor='#E9E7E8' rowspan='2'>PC2</td>
+				<td bgcolor='#E9E7E8' rowspan='2'>Windows 10</td>
+				<td bgcolor='#E9E7E8' rowspan='2'>5475.D08E.9AD8</td>
+				<td bgcolor='#E9E7E8'>192.168.11.10 /24</td>
+				<td bgcolor='#E9E7E8'>192.168.11.1 /24</td>
+				<td bgcolor='#E9E7E8'>192.168.11.11 /24</td>
+				<td bgcolor='#E9E7E8' rowspan='2'>HTTP, FTP</td>
+				<td bgcolor='#E9E7E8' rowspan='2'>Video</td>
+			</tr>
+			<tr>
+				<td bgcolor='#E9E7E8'>2001:DB8:ACAD:11::10/64</td>
+				<td bgcolor='#E9E7E8'>2001:DB8:ACAD:11::1</td> 
+				<td bgcolor='#E9E7E8'>2001:DB8:ACAD:11::99</td>
+			</tr>
+
+			<tr>
+				<td bgcolor='#F2F2F2' rowspan='2'>SRV1</td>
+				<td bgcolor='#F2F2F2' rowspan='2'>Linux</td>
+				<td bgcolor='#F2F2F2' rowspan='2'>000C.D991.A138</td>
+				<td bgcolor='#F2F2F2'>192.168.20.254 /24</td>
+				<td bgcolor='#F2F2F2'>192.168.20.1 /24</td>
+				<td bgcolor='#F2F2F2'>192.168.20.1 /24</td>
+				<td bgcolor='#F2F2F2' rowspan='2'>FTP, HTTP</td>
+				<td bgcolor='#F2F2F2' rowspan='2'></td>
+			</tr>
+
+			<tr>
+				<td bgcolor='#F2F2F2'>2001:DB8:ACAD:4::100/64</td>
+				<td bgcolor='#F2F2F2'>2001:DB8:ACAD:4::1</td> 
+				<td bgcolor='#F2F2F2'>2001:DB8:ACAD:11::99</td>
+			</tr>
+		</table>]]></text> 
+</component>
+
+
+</textcomponents>

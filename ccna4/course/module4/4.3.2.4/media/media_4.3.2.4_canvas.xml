@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+<element type="IMAGE" src="media_4.3.2.4.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" id="ID_static_1" text="S0/0/0" x="240" y="144" align="center" width="36" />
+<element type="TEXT" id="ID_static_2" text="G0/0" x="300" y="203" align="center" width="26" />
+<element type="TEXT" id="ID_static_3" text="S0/0/1" x="361" y="144" align="center" width="34" />
+<element type="TEXT" id="ID_static_4" text="G0/1" x="220" y="203" align="center" width="24" />
+<element type="TEXT" id="ID_static_5" text="2001:DB8:CAFE:10::/64" x="92" y="242" bold="1" align="center" width="123"  size="10" />
+<element type="TEXT" id="ID_static_6" text="G0/0" x="440" y="211" align="center" width="26" />
+<element type="TEXT" id="ID_static_7" text="S0/0/0" x="270" y="99" align="center" width="36" />
+<element type="TEXT" id="ID_static_8" text="S0/0/1" x="370" y="99" align="center" width="34" />
+<element type="TEXT" id="ID_static_9" text=":2" x="289" y="113" align="center" width="8" />
+<element type="TEXT" id="ID_static_10" text=":2" x="374" y="113" align="center" width="8" />
+<element type="TEXT" id="ID_static_11" text=":1" x="240" y="157" align="center" width="8" />
+<element type="TEXT" id="ID_static_12" text=":1" x="360" y="157" align="center" width="8" />
+<element type="TEXT" id="ID_static_13" text="2001:DB8:CAFE:11::/64" x="299" bold="1" y="241" align="center" width="123" size="10" />
+<element type="TEXT" id="ID_static_14" text="2001:DB8:CAFE:30::/64" x="434" bold="1" y="242" align="center" width="123" size="10"  />
+<element type="TEXT" id="ID_static_15" text=":1" x="300" y="217" align="center" width="8" />
+<element type="TEXT" id="ID_static_16" text=":1" x="233" y="217" align="center" width="8" />
+<element type="TEXT" id="ID_static_17" text=":1" x="440" y="221" align="center" width="8" />
+<element type="TEXT" id="ID_static_18" text="2001:DB8:CAFE:10::10/64" x="92" y="403" bold="1" align="center" width="80" size="10"  />
+<element type="TEXT" id="ID_static_19" text="2001:DB8:CAFE:11::11/64" x="240" y="403" bold="1" align="center" width="80" size="10"  />
+<element type="TEXT" id="ID_static_20" text="2001:DB8:CAFE:30::12/64" x="391" y="403" bold="1" align="center" width="136" size="10"  />
+<element type="TEXT" id="ID_static_21" text="2001:DB8:FEED:1::/64" x="146" y="115" bold="1" align="center" width="115" size="10"  />
+<element type="TEXT" id="ID_static_22" text="2001:DB8:FEED:2::/64" x="398" y="115" bold="1" align="center" width="115" size="10"  />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="ROUTER" textId="ID_s2_01" x="90" y="88.2" width="500" height="150" />
+
+<element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#ffffff"/>
+</slide>
+
+
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="ROUTER" textId="ID_s3_01" x="30" y="88.2" width="620" height="340" />
+<element type="IMAGE" src="connector.png" x="-18" y="6" width="680" height="490"/>
+<element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#ffffff"/>
+</slide>	
+			
+</slide>
+	
+	<text id="ID_s2_router_txt1"><![CDATA[<pre>R1(config)# ipv6 access-list NO-FTP-TO-11
+R1(config-ipv6-acl)# deny tcp any 2001:db8:cafe:11::/64 eq ftp
+R1(config-ipv6-acl)# deny tcp any 2001:db8:cafe:11::/64 eq ftp-data
+R1(config-ipv6-acl)# permit ipv6 any any
+R1(config-ipv6-acl)# exit
+R1(config)# interface g0/0
+R1(config-if)# ipv6 traffic-filter NO-FTP-TO-11 in
+R1(config-if)#</pre>]]></text>
+
+<text id="ID_s3_router_txt2"><![CDATA[<pre>R3(config)# ipv6 access-list RESTRICTED-ACCESS
+R3(config-ipv6-acl)# remark Permit access only HTTP and HTTPS to Network 10
+R3(config-ipv6-acl)# permit tcp any host 2001:db8:cafe:10::10 eq 80
+R3(config-ipv6-acl)# permit tcp any host 2001:db8:cafe:10::10 eq 443
+R3(config-ipv6-acl)# remark Deny all other traffic to Network 10
+R3(config-ipv6-acl)# deny ipv6 any 2001:db8:cafe:10::/64
+R3(config-ipv6-acl)# remark Permit PC3 telnet access to PC2
+R3(config-ipv6-acl)# permit tcp host 2001:DB8:CAFE:30::12 host 2001:DB8:CAFE:11::11 eq 23
+R3(config-ipv6-acl)# remark Deny telnet access to PC2 for all other devices
+R3(config-ipv6-acl)# deny tcp any host 2001:db8:cafe:11::11 eq 23
+R3(config-ipv6-acl)# remark Permit access to everything else
+R3(config-ipv6-acl)# permit ipv6 any any R3(config-ipv6-acl)# exit
+R3(config)# interface g0/0
+R3(config-if)# ipv6 traffic-filter RESTRICTED-ACCESS in
+R3(config-if)#</pre>]]></text>
+	
+	<text id="ID_s1_01"><![CDATA[
+	<table width="403" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>R1(config-ipv6-acl)# deny | permit protocol {source-ipv6-prefix/prefix-length | any | host source-ipv6-address} [operator [port-number]] {destination-ipv6-prefix/ prefix-length | any | host destination-ipv6-address} [operator [port-number]] </td>
+  </tr>
+</table>
+]]></text>
+
+<text id="ID_s2_01"><![CDATA[<pre>R1(config)# <b>ipv6 access-list NO-FTP-TO-11</b> 
+R1(config-ipv6-acl)# <b>deny tcp any 2001:db8:cafe:11::/64 eq ftp</b>
+R1(config-ipv6-acl)# <b>deny tcp any 2001:db8:cafe:11::/64 eq ftp-data</b>
+R1(config-ipv6-acl)# <b>permit ipv6 any any</b>
+R1(config-ipv6-acl)# <b>exit</b>
+R1(config)# <b>interface g0/0</b>
+R1(config-if)# <b>ipv6 traffic-filter NO-FTP-TO-11 in</b>
+R1(config-if)#
+</pre>]]></text>
+
+<text id="ID_s3_01"><![CDATA[<code>R3(config)# <b>ipv6 access-list RESTRICTED-ACCESS</b>
+R3(config-ipv6-acl)# <b>remark Permit access only HTTP and HTTPS to Network 10</b>
+R3(config-ipv6-acl)# <b>permit tcp any host 2001:db8:cafe:10::10 eq 80</b>
+R3(config-ipv6-acl)# <b>permit tcp any host 2001:db8:cafe:10::10 eq 443</b>
+R3(config-ipv6-acl)# <b>remark Deny all other traffic to Network 10</b>
+R3(config-ipv6-acl)# <b>deny ipv6 any 2001:db8:cafe:10::/64</b>
+R3(config-ipv6-acl)# <b>remark Permit PC3 telnet access to PC2</b>
+R3(config-ipv6-acl)# <b>permit tcp host 2001:DB8:CAFE:30::12 host 2001:DB8:CAFE:11::11 eq 23</b>
+R3(config-ipv6-acl)# <b>remark Deny telnet access to PC2 for all other devices</b>
+R3(config-ipv6-acl)# <b>deny tcp any host 2001:db8:cafe:11::11 eq 23</b>
+R3(config-ipv6-acl)# <b>remark Permit access to everything else</b>
+R3(config-ipv6-acl)# <b>permit ipv6 any any</b>
+R3(config-ipv6-acl)# <b>exit</b>
+R3(config)# <b>interface g0/0</b>
+R3(config-if)# <b>ipv6 traffic-filter RESTRICTED-ACCESS in</b>
+R3(config-if)#</code>
+]]></text>
+
+
+</data>

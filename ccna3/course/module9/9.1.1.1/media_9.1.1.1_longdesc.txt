@@ -1,0 +1,1 @@
+La figura muestra diez routers, todos conectados en un área única. Estos routers se están quedando sin memoria pues están recibiendo demasiadas notificaciones de estado de enlace (LSA), e indican que el algoritmo SPF (Primero la ruta más corta) se ejecuta con demasiada frecuencia. Esta situación disminuye la eficiencia del routing.

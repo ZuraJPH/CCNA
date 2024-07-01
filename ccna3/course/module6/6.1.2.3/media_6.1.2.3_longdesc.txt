@@ -1,0 +1,1 @@
+En la figura se muestran tres routers interconectados.  La LAN del router dos se encuentra inactiva.  Hay un paquete de actualización que se transmite del router dos al router uno y al router tres.  Los routers uno y tres están reenviando un paquete de acuse de recibo al router dos.

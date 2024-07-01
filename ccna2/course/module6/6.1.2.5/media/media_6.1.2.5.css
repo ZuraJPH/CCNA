@@ -1,0 +1,14 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+
+
+#ID_s1_txt08{
+	letter-spacing: -0.2px ;
+}
+.orangecol{
+	color:#F68026;
+}

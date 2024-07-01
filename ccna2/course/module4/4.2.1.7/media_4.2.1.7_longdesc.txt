@@ -1,0 +1,1 @@
+Este es un elemento de recursos interactivos que prueba la capacidad del estudiante de identificar cómo el switch reenvía una trama según la MAC de origen y la MAC de destino cuando se le proporciona la tabla de MAC del switch.

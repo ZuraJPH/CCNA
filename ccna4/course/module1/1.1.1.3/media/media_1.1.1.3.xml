@@ -1,0 +1,62 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+		<text><![CDATA[<b>Topología punto a punto</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Sitio A]]></text> 
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Sitio B]]></text> 
+	</component><!--Slide 2--><component id="ID_s2_title">
+		<text><![CDATA[<b>Topología de estrella (hub and spoke)</b>]]></text>
+	</component>
+	
+<component id="ID_s2_txt01">
+		<text><![CDATA[Concentrador]]></text> 
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Dispositivo radial A]]></text> 
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Spoke B]]></text> 
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Spoke C]]></text> 
+	</component><!--Slide 3--><component id="ID_s3_title">
+		<text><![CDATA[<b>Topología de malla completa</b>]]></text>
+	</component>
+	
+<component id="ID_s3_txt01">
+		<text><![CDATA[Sitio A]]></text> 
+	</component>
+	<component id="ID_s3_txt02">
+		<text><![CDATA[Sitio B]]></text> 
+	</component>
+	<component id="ID_s3_txt03">
+		<text><![CDATA[Sitio C]]></text> 
+	</component>
+	<component id="ID_s3_txt04">
+		<text><![CDATA[Sitio D]]></text> 
+	</component><!--Slide 4--><component id="ID_s4_title">
+		<text><![CDATA[<b>Topología de seguridad preventiva doble</b>]]></text>
+	</component>
+	
+<component id="ID_s4_txt01">
+		<text><![CDATA[Concentradores]]></text> 
+	</component>
+	<component id="ID_s4_txt02">
+		<text><![CDATA[Dispositivo radial A]]></text> 
+	</component>
+	<component id="ID_s4_txt03">
+		<text><![CDATA[Spoke B]]></text> 
+	</component>
+	<component id="ID_s4_txt04">
+		<text><![CDATA[Spoke C]]></text> 
+	</component>
+
+
+
+
+
+</textcomponents>

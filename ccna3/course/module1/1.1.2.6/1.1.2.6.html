@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.6 ajuste de protocolos de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ajuste de protocolos de routing</h1>
+        <div>
+          <p>
+            <b>Administración de la red enrutada</b>
+          </p>
+          <p>Los protocolos de routing avanzados, como OSPF y EIGRP, se utilizan en redes grandes.</p>
+          <p></p>
+          <p>Los protocolos de routing de estado de enlace, como el protocolo OSPF (Open Shortest Path First), que se muestra en la figura 1, funcionan bien en redes jerárquicas más grandes, donde es importante contar con una convergencia rápida. Los router OSPF establecen y mantienen las adyacencias de vecinos con otros routers OSPF conectados. Cuando los routers inician una adyacencia con los vecinos, comienza un intercambio de actualizaciones de Link-State. Los routers alcanzan un estado de adyacencia PLENA al sincronizar las vistas de sus bases de datos de Link-State. <Z1>Con OSPF se envían actualizaciones de Link-State cada vez que hay cambios en la red. En el capítulo 8, se abordarán la configuración y los conceptos de OSPF de área única.</p>
+          <p></p>
+          <p>Además, OSPF admite un diseño jerárquico de dos capas, conocido como OSPF multiárea, que se muestra en la figura 2. Todas las redes OSPF multiárea deben tener un área 0, también denominada área troncal. Las áreas que no son troncales deben conectarse directamente al área 0. En el capítulo 9 "OSPF multiárea", se presentan los beneficios, el funcionamiento y la configuración de OSPF multiárea. En el capítulo 10 "Ajustes y solución de problemas del protocolo OSPF", se abordarán las características más avanzadas de OSPF.</p>
+          <p></p>
+          <p>Otro protocolo de routing popular en redes más grandes es el protocolo de routing de gateway interior mejorado (EIGRP).  Cisco desarrolló EIGRP como un protocolo de routing vector distancia exclusivo con capacidades mejoradas. Aunque la configuración de EIGRP es relativamente simple, este protocolo tiene amplias y sólidas características y opciones subyacentes. Por ejemplo, EIGRP utiliza varias tablas, que se muestran en la figura 3, para administrar el proceso de routing. EIGRP contiene muchas funciones que no posee ninguno de los otros protocolos de enrutamiento. Es una excelente opción para redes grandes de protocolos múltiples en las que se utilizan principalmente dispositivos de Cisco.</p>
+          <p></p>
+          <p>En el capítulo 6 "EIGRP", se presentan el funcionamiento y la configuración del protocolo de routing EIGRP; en el capítulo 7 "Ajustes y solución de problemas del protocolo EIGRP", se abordan algunas de las opciones de configuración de EIGRP más avanzadas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran varios routers conectados a un switch.  Algunos están conectados con enlaces WAN y otros con enlaces LAN.   Todos forman parte del área cero de OSPF. En la figura dos, se muestran varios routers conectados entre sí.  Algunos están conectados con enlaces WAN y otros con enlaces LAN. Los routers a la izquierda se encuentran conectados a una LAN y en el área uno de OSPF; los dos routers en el medio se encuentran en el área cero de OSPF; y los routers a la derecha se encuentran conectados con enlaces WAN y están en el área cincuenta y uno de OSPF. En la figura tres, se muestra cómo EIGRP utiliza módulos independientes de protocolos.  Hay tres tablas para IPv4 y tres para IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

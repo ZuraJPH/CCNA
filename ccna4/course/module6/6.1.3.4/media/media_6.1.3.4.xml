@@ -1,0 +1,58 @@
+<textcomponents>
+
+<component id="ID_title">
+		<text><![CDATA[<b>Ejemplo de cola de espera equitativa y ponderada</b>]]>
+	</text>
+	</component>
+	<component id="ID_text01">
+		<text><![CDATA[Clasificación de prioridad]]>
+	</text>
+	</component>
+	<component id="ID_text02">
+		<text><![CDATA[Alta]]>
+	</text>
+	</component>
+	<component id="ID_text2">
+		<text><![CDATA[Alta]]>
+	</text>
+	</component>
+	<component id="ID_text03">
+		<text><![CDATA[Medio]]>
+	</text>
+	</component>
+	<component id="ID_text3">
+		<text><![CDATA[Medio]]>
+	</text>
+	</component>
+	<component id="ID_text04">
+		<text><![CDATA[Normal]]></text></component>
+<component id="ID_text4">
+		<text><![CDATA[Normal]]>
+	</text>
+	</component>
+	
+	<component id="ID_text05">
+		<text><![CDATA[Baja]]>
+	</text>
+	</component>
+	<component id="ID_text5">
+		<text><![CDATA[Baja]]>
+	</text>
+	</component>
+	<component id="ID_text06">
+		<text><![CDATA[Clasificar]]>
+	</text>
+	</component>
+	<component id="ID_text07">
+		<text><![CDATA[Interfaz de ingreso]]>
+	</text>
+	</component>
+	<component id="ID_text08">
+		<text><![CDATA[Búfer de espera]]>
+	</text>
+	</component>
+	<component id="ID_text09">
+		<text><![CDATA[Interfaz de egreso]]>
+	</text>
+</component>
+</textcomponents>

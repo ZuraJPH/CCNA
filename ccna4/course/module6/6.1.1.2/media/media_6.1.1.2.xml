@@ -1,0 +1,45 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Uso de colas para priorizar la comunicación</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text>
+            <![CDATA[Voz sobre IP]]>
+        </text>
+    </component>
+    <component id='ID_txt02'>
+        <text>
+            <![CDATA[Transacción financiera]]>
+        </text>
+    </component>
+    <component id='ID_txt03'>
+        <text>
+            <![CDATA[Página web]]>
+        </text>
+    </component>
+    <component id='ID_txt04'>
+        <text>
+            <![CDATA[Cola de prioridad alta]]>
+        </text>
+    </component>
+    <component id='ID_txt05'>
+        <text>
+            <![CDATA[Cola de prioridad media]]>
+        </text>
+    </component>
+    <component id='ID_txt06'>
+        <text>
+            <![CDATA[Cola de prioridad baja]]>
+        </text>
+    </component>
+
+    <component id='ID_txt07'>
+        <text>
+            <![CDATA[Todos los tipos de comunicación tienen acceso a los medios. Un tipo particular de tráfico no puede usar todo el ancho de banda.]]>
+        </text>
+    </component>
+    <component id='ID_txt08'>
+        <text>
+            <![CDATA[Enlace a la red]]>
+        </text>
+    </component><!-- end slide 1 --></textcomponents>

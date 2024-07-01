@@ -1,0 +1,1 @@
+La figura uno muestra la arquitectura Cisco Borderless Networks, que conecta campus grandes a campus medianos y pequeños a través de conexiones WAN y PSTN. La figura dos es un video que muestra la evolución de las redes Borderless desde sus comienzos hasta la actualidad.

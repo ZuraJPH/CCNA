@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.2 Costos acumulados de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Costos acumulados de OSPF</h1>
+        <div>
+          <p>El costo de una ruta OSPF es el valor acumulado desde un router hasta la red de destino. </p>
+          <p></p>
+          <p>Por ejemplo, en la figura 1, el costo para llegar desde el R1 hasta la LAN 172.16.2.0/24 del R2 debe ser el siguiente:</p>
+          <p>
+            <ul>
+              <li>Costo del enlace serial del R1 al R2 = 64</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Costo del enlace Gigabit Ethernet en el R2 = 1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Costo total para llegar a 172.16.2.0/24= <b>65</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la tabla de routing del R1 de la figura 2, se confirma que la métrica para llegar a la LAN del R2 equivale a un costo de 65.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la topología de referencia de OSPF. Los tres routers están configurados en un diseño triangular. Cada router está conectado con los otros dos routers mediante enlaces WAN seriales.  El enlace entre el router R1 y el router R2 tiene una velocidad de 1544 kilo bps; el enlace entre el R2 y el R3 funciona a una velocidad de 1024 kilo bps; y el enlace entre el R1 y el R3 funciona a una velocidad de 64 kilo bps.  Cada router tiene una LAN local configurada en cada interfaz gigabit Ethernet cero barra diagonal cero.  Uno de los tres routers tiene una interfaz de loopback configurada que simula una conexión a Internet.  Los tres routers están en el área 0 de OSPF. En la figura dos, se muestra la salida del comando show ip route barra vertical include 172 punto 16 punto 2 punto cero.  En la figura se destaca la métrica para llegar a la red y el valor es 65.  En la figura, luego se muestra la salida del comando show ip route 172 punto 16 punto 2 punto cero. En la salida, se resalta la sección que indica “route metric is 65” (la métrica de ruta es 65).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text><![CDATA[<b>Modos del VTP</b>]]></text>
+    </component><!--s1 table--><component id="ID_s1_table01">
+        <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+    <tr class="mtable_title">
+            <td colspan="2" bgcolor='#98D3D1'></td>
+        </tr>
+ 
+             <tr class="mtable_top">
+                <td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+            </tr>
+
+<tr>
+<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Modo VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>Definición</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Servidor VTP</td>
+<td bgcolor='#eff8f7'><ul><textformat blockindent="-14"><li>Los servidores VTP anuncian la información de VLAN del dominio VTP a otros switches habilitados para VTP en el mismo dominio VTP.</li><li>Los servidores del VTP guardan la información de la VLAN para el dominio completo en la NVRAM.</li><li>Los switches configurados en modo de servidor VTP pueden crear, eliminar o cambiar el nombre de las VLAN para el dominio.</li></textformat></ul></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Cliente VTP</td>
+<td bgcolor='#ffffff'><ul><textformat blockindent="-14"><li>Los clientes VTP funcionan de la misma manera que los servidores VTP, pero no se puede crear, cambiar ni eliminar redes VLAN en un cliente VTP.</li><li>Un cliente del VTP sólo guarda la información de la VLAN para el dominio completo mientras el switch está activado.</li><li>Un reinicio del switch borra la información de la VLAN.</li><li>Debe configurar el modo de cliente VTP en un switch.</li></textformat></ul></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>VTP transparente</td>
+<td bgcolor='#eff8f7'><ul><textformat blockindent="-14"><li>Los switches transparentes no participan en el VTP excepto para enviar los anuncios VTP a los clientes VTP y servidores VTP.</li><li>Las VLAN que se crean, redenominan o se eliminan en los switches transparentes son locales a ese switch solamente.</li><li> Para crear una VLAN extendida, un switch se debe configurar como un switch VTP transparente al utilizar las versiones de VTP 1 o 2.</li></textformat></ul></td>
+</tr>
+
+</table>]]>
+        </text>
+    </component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+        <text><![CDATA[<b>Comparar modos de VTP</b>]]></text>
+    </component><!-- table 2 --><component id="ID_s2_table01">
+        <text>
+           <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+    <tr class="mtable_title">
+            <td colspan="4" bgcolor='#98D3D1'></td>
+        </tr>
+ 
+             <tr class="mtable_top">
+                <td colspan='4' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+            </tr>
+
+<tr>
+<td width="100px" bgcolor='#077A77'><font color='#ffffff'><b>Pregunta de VTP</b></font></td>
+<td width="110px" bgcolor='#077A77'><font color='#ffffff'><b>Servidor VTP</b></font></td>
+<td width="110px" bgcolor='#077A77'><font color='#ffffff'><b>Cliente VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>VTP transparente</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>¿Cuáles son las diferencias?</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Administra la configuración del dominio y las VLAN.</li><li>Pueden configurarse varios servidores VTP.</li></ul></textformat></td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Actualiza las configuraciones VTP locales.</li><li>Los switches en modo cliente VTP no pueden cambiar las configuraciones de VLAN.</li></ul></textformat></td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Administra las configuraciones de VLAN locales.</li><li>Las configuraciones de VLAN no se comparten con la red VTP.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>¿Responde a los anuncios de VTP?</td>
+<td bgcolor='#ffffff'>Participa por completo.</td>
+<td bgcolor='#ffffff'>Participa por completo.</td>
+<td bgcolor='#ffffff'>Solo reenvía los anuncios VTP.</td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>¿Se conserva la configuración de VLAN global al reiniciar?</td>
+<td bgcolor='#eff8f7'>Sí, la configuración global se almacena en NVRAM.</td>
+<td bgcolor='#eff8f7'>No, la configuración global se almacena solo en RAM.</td>
+<td bgcolor='#eff8f7'>No, la configuración de VLAN local solo se almacena en NVRAM.</td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>¿Actualiza otros switches habilitados por el VTP?</td>
+<td bgcolor='#ffffff'>Sí</td>
+<td bgcolor='#ffffff'>Sí</td>
+<td bgcolor='#ffffff'>No</td>
+</tr>
+
+</table>]]>
+        </text>
+    </component><!-- end table 2 --><!-- end slide 2 --></textcomponents>

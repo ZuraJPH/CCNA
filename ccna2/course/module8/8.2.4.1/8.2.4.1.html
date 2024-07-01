@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.1 Tareas de resolución de problemas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tareas de resolución de problemas</h1>
+        <div>
+          <p>El proceso de resolución de problemas de DHCPv6 es similar al de DHCPv4. </p>
+          <p></p>
+          <p>
+            <b>Tarea 1 de la resolución de problemas: resolver conflictos</b>
+          </p>
+          <p></p>
+          <p>De manera similar a lo que sucede con las direcciones IPv4, el arrendamiento de una dirección IPv6 puede caducar en un cliente que aún necesita conectarse a la red. El comando <b>show ipv6 dhcp conflict</b> muestra todos los conflictos de direcciones que registra el servidor de DHCPv6 con estado. Si se detecta un conflicto de dirección IPv6, el cliente, por lo general, elimina la dirección y genera una nueva mediante SLAAC o mediante DHCPv6 con estado. </p>
+          <p></p>
+          <p>
+            <b>Tarea 2 de la resolución de problemas: verificar el método de asignación</b>
+          </p>
+          <p></p>
+          <p>El comando <b>show ipv6 interface </b><i>interfaz </i>se puede utilizar para verificar el método de asignación de direcciones que aparece en el mensaje RA, según lo indica la configuración de los indicadores M y O. Esta información se muestra en las últimas líneas del resultado. Si un cliente no recibe la información de la dirección IPv6 de un servidor de DHCPv6 con estado, esto podría deberse a indicadores M y O incorrectos en el mensaje RA.</p>
+          <p></p>
+          <p>
+            <b>Tarea 3 de la resolución de problemas: probar con una dirección IPv6 estática</b>
+          </p>
+          <p></p>
+          <p>Al llevar a cabo la resolución de cualquier problema de DHCP, ya sea DHCPv4 o DHCPv6, se puede verificar la conectividad de red mediante la configuración de una dirección IP estática en una estación de trabajo cliente. En el caso de IPv6, si la estación de trabajo no puede llegar a los recursos de red con una dirección IPv6 configurada estáticamente, la causa raíz del problema no es SLAAC o DHCPv6. En este punto, es necesario resolver los problemas de conectividad de la red.</p>
+          <p></p>
+          <p>
+            <b>Tarea 4 de la resolución de problemas: verificar la configuración de puertos del switch</b>
+          </p>
+          <p></p>
+          <p>Si el cliente DHCPv6 no puede obtener información de un servidor de DHCPv6, verifique que el puerto de switch esté habilitado y funcione correctamente. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> si hay un switch entre el cliente y el servidor de DHCPv6, y el cliente no puede obtener la configuración de DHCP, la causa pueden ser problemas con la configuración de puertos del switch. Estas causas pueden incluir problemas relacionados con los enlaces troncales, la canalización o el árbol de expansión.  Mediante la configuración de PortFast y las configuraciones de los puertos perimetrales se resuelven los problemas de cliente DHCPv6 más comunes que se presentan con la instalación inicial de un switch Cisco. </p>
+          <p></p>
+          <p>
+            <b>Tarea 5 de la resolución de problemas: probar el funcionamiento de DHCPv6 en la misma subred o VLAN</b>
+          </p>
+          <p></p>
+          <p>Si el servidor de DHCPv6 con estado o sin estado funciona correctamente pero se encuentra en una VLAN o red IPv6 distinta de la del cliente, es posible que el problema sea el agente de retransmisión DHCPv6. El cliente que interactúa con la interfaz en el router debe configurarse con el comando <b>ipv6 dhcp relay destination</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una tabla que enumera las tareas utilizadas para resolver problemas de DHCPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

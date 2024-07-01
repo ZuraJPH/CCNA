@@ -1,0 +1,1 @@
+En esta animación se muestran dos computadoras conectadas a un router NAT. Las computadoras necesitan acceso a Internet.  Cuando ambas intentan salir, el router NAT les asigna a ambas la dirección IP de la interfaz externa junto con un número de puerto.  Esto demuestra el proceso PAT.

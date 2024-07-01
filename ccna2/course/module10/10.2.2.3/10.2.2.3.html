@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.3 Formato de mensaje de Syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Formato de mensaje de Syslog</h1>
+        <div>
+          <p>Los dispositivos de Cisco generan mensajes de syslog como resultado de los eventos de red. Cada mensaje de syslog contiene un nivel de gravedad y una instalación. </p>
+          <p></p>
+          <p>Cuanto más bajos son los números de nivel, más fundamentales son las alarmas de syslog. El nivel de gravedad de los mensajes se puede establecer para controlar dónde se muestra cada tipo de mensaje (es decir, en la consola o los otros destinos).  En la figura 1, se muestra la lista completa de los niveles de syslog.</p>
+          <p>Cada nivel de syslog tiene su propio significado:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Nivel de advertencia 4 - Nivel de emergencia 0</b>: Estos mensajes son mensajes de error sobre desperfectos de software o hardware; indican que la funcionalidad del dispositivo está afectada. La gravedad del problema determina el nivel real de syslog que se aplica. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Nivel de notificación 5</b>: El nivel de notificaciones es para eventos normales, pero significativos. Por ejemplo: las transiciones para activar o desactivar interfaces y los mensajes para reiniciar el sistema se muestran en el nivel de notificaciones. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Nivel informativo 6</b>: Un mensaje informativo normal que no afecta la funcionalidad del dispositivo. Por ejemplo: cuando un dispositivo Cisco está arrancando, se podría ver el siguiente mensaje informativo: <span class="cmd">%LICENSE-6-EULA_ACCEPT_ALL: The Right to Use End User License Agreement is accepted</span>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Nivel de depuración 7</b>: Este nivel indica que los mensajes son generados como salida a partir de la ejecución de diversos comandos <b>debug</b> (de depuración).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Además de especificar la gravedad, los mensajes de syslog también contienen información sobre la instalación. Las instalaciones de syslog son identificadores de servicios que identifican y categorizan los datos de estado del sistema para informar los mensajes de error y de eventos. Las opciones de instalación de registro disponibles son específicas del dispositivo de red. Por ejemplo, los switches Cisco de la serie 2960 que ejecutan el IOS de Cisco versión 15.0(2) y los routers Cisco 1941 que ejecutan el IOS de Cisco versión 15.2(4) admiten 24 opciones de instalación que se categorizan en 12 tipos de instalación. </p>
+          <p></p>
+          <p>Algunas instalaciones comunes de mensajes de syslog que se informan en los routers con IOS de Cisco incluyen lo siguiente:</p>
+          <p>
+            <ul>
+              <li>IP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protocolo OSPF</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sistema operativo SYS</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Seguridad IP (IPsec)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IP de interfaz (IF)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>De manera predeterminada, el formato de los mensajes de syslog en el software IOS de Cisco es el siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">seq no: timestamp: %facility-severity-MNEMONIC: description</span>
+          </p>
+          <p></p>
+          <p>Los campos incluidos en el mensaje de syslog del software IOS de Cisco se explican en la figura 2. </p>
+          <p></p>
+          <p>Por ejemplo, el resultado de ejemplo de un switch Cisco para un enlace EtherChannel que cambia al estado activo es el siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">00:00:46: %LINK-3-UPDOWN: Interface Port-channel1, changed state to up</span>
+          </p>
+          <p></p>
+          <p>Aquí la instalación es LINK, y el nivel de gravedad es 3, con con MNEMONIC UPDOWN. </p>
+          <p></p>
+          <p>Los mensajes más comunes son los de enlace activo y enlace inactivo, y los mensajes que produce un dispositivo cuando sale del modo de configuración. Si se configura el registro de ACL, el dispositivo genera mensajes de syslog cuando los paquetes coinciden con una condición de parámetros. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra una tabla con los nombres, los niveles, y las descripciones de gravedad de syslog. En la figura número dos se muestra una tabla con los campos y las explicaciones de los mensajes de syslog.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

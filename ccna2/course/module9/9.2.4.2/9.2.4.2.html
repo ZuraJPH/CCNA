@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.4.2 Ejemplo de router inalámbrico </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplo de router inalámbrico </h1>
+        <div>
+          <p>En la figura se muestra la ventana de configuración del reenvío a puerto asignado simple correspondiente a un router inalámbrico de Packet Tracer. De manera predeterminada, el reenvío de puertos no está habilitado en el router.</p>
+          <p></p>
+          <p>Si se especifica la dirección local interna a la cual se deben reenviar las solicitudes, es posible habilitar el reenvío de puertos para las aplicaciones. En la figura, las solicitudes de servicios HTTP que provienen del router inalámbrico se reenvían al servidor web con la siguiente dirección local interna: 192.168.1.254. Si la dirección IPv4 de la WAN externa del router inalámbrico es 209.165.200.225, el usuario puede ingresar <b>http://www.ejemplo.com</b> y el router inalámbrico redireccionará la solicitud HTTP al servidor web interno de la dirección IPv4 192.168.1.254, por medio del número de puerto predeterminado: 80.</p>
+          <p></p>
+          <p>Se puede especificar un puerto distinto al puerto predeterminado 80. Sin embargo, el usuario externo tendría que saber el número de puerto específico que debe utilizar. Para especificar un puerto diferente, se modifica el valor del campo External Port (Puerto externo) en la ventana Single Port Forwarding (Reenvío de puerto único).</p>
+          <p></p>
+          <p>El enfoque adoptado para configurar el reenvío de puertos depende de la marca y el modelo del router de banda ancha en la red. No obstante, hay algunos pasos genéricos que se deben seguir. Si las instrucciones provistas por el ISP, o las que acompañan al router, no incluyen ninguna pauta al respecto, el sitio web <a href="http://www.portforward.com/" target="_blank">http://www.portforward.com</a> ofrece guías para varios routers de banda ancha. Puede seguir las instrucciones para agregar o eliminar puertos según sea necesario para satisfacer las necesidades de todas las aplicaciones que desee permitir o denegar.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un router inalámbrico con una red interna a la izquierda y una red externa a la derecha.  Puede verse una captura de pantalla la GUI del Packet Tracer configurando el reenvío a puerto asignado.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

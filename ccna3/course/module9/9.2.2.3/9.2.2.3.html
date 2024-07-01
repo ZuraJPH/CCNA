@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.3 Verificar las rutas OSPFv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificar las rutas OSPFv2</h1>
+        <div>
+          <p>El comando que más se utiliza para verificar una configuración OSPFv2 multiárea es <b>show ip route</b>. Agregue el parámetro <b>ospf</b> para mostrar solo la información relacionada con OSPFv2.</p>
+          <p></p>
+          <p>En la figura 1, se muestra la tabla de routing del R1. Observe que las entradas <b>IA O</b> en la tabla de routing identifican redes descubiertas a partir de otras áreas. Específicamente, la <b>O</b> representa las rutas OSPFv2 e <b>IA</b> significa “interárea”, lo que quiere decir que la ruta se originó en otra área. Recuerde que el R1 está en el área 0 y que las subredes 192.168.1.0 y 192.168.2.0 se conectan al R3 en el área 2. La entrada [110/1295] de la tabla de routing representa la distancia administrativa asignada a OSPF (110) y el costo total de las rutas (costo de 1295).</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para verificar la tabla de routing IPv4 de R2 y R3 mediante el comando <b>show ip route ospf</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la salida recibida al usar el comando show ip route ospf y resalta las rutas interárea aprendidas en OSPF multiárea. La figura dos es una actividad interactiva que permite que el estudiante practique cómo utilizar el comando show ip route ospf en dos routers OSPF multiárea conectados.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.6.1.3 Práctica de laboratorio: Configuración de una conexión de sucursal</title>
+    <!-- Activity / Lab / Hands-On -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.6.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Práctica de laboratorio: Configuración de una conexión de sucursal</h1>
+        <div>
+          <p>En esta práctica de laboratorio, configurará dos conexiones WAN separadas, una ruta BGP en una conexión de PPPoE, y una ruta BGP en un túnel GRE. Esta práctica de laboratorio es un escenario de caso de prueba y no representa una implementación real de BGP.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Parte 1: Armar la red y cargar las configuraciones de los dispositivos</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Parte 2: Configurar una conexión de cliente PPPoE</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Parte 3: Configurar el túnel GRE</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Parte 4: Configurar BGP en PPPoE y BGP en un túnel GRE</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <a href="../../files/3.6.1.3%20Lab%20-%20Configure%20a%20Branch%20Connection.pdf" target="_blank">Práctica de laboratorio: Configuración de una conexión de sucursal</a>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" src="media/index.html" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La topología de laboratorio muestra una nube de Internet que se conecta al router R2 mediante la interfaz Lo1 dentro de la nube AS 65001 del ISP. La interfaz S0/0/1 en el router R2 dentro de AS 65001 se conecta a la interfaz S0/0/1 de R3 ubicada en la nube AS 65010 de Branch1. R3 también tiene una LAN G0/1 conectada a través del puerto F0/5 en el switch S3. La interfaz G0/0 en R2 en la nube AS 65001 del ISP se conecta al puerto F0/18 en S2. S2 se conecta a S1 mediante el puerto F0/1 en ambos switches. La interfaz S0/0/0 del router R2 en la nube AS 65001 del ISP se conecta a la interfaz S0/0/0 del router R1 ubicado en la nube AS 65000 de Cust1. R1 tiene conectada la interfaz loopback 1. La interfaz G0/0 de R1 se conecta al switch S1 mediante el puerto F0/6. La interfaz G0/1 de R1 se conecta al puerto F0/5 en el switch S1. Hay un túnel dibujado entre R1 y R3 con el texto "BGP por túnel GRE". La conexión entre S1 y S2 está etiquetada como "BGP por PPPoE".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra una oficina central, una sucursal, una oficina regional y una oficina remota.  Todas las ubicaciones están conectadas a la región WAN de Internet.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.1.3 Capítulo 4: Redes conmutadas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 4: Redes conmutadas</h1>
+        <div>
+          <p>Vimos que la tendencia en redes es la convergencia mediante un único conjunto de cables y de dispositivos para administrar la transmisión de voz, de video y de datos. Además, hubo un cambio notable en el modo en el que las empresas realizan sus actividades. Los empleados ya no están limitados por oficinas físicas o límites geográficos. Los recursos ahora deben estar disponibles sin inconvenientes en cualquier momento y lugar. La arquitectura Cisco Borderless Network permite que distintos elementos, desde switches de acceso hasta puntos de acceso inalámbrico, funcionen conjuntamente y permitan a los usuarios acceder a los recursos en cualquier momento y desde cualquier lugar.</p>
+          <p></p>
+          <p>El modelo tradicional de diseño jerárquico de tres capas divide a la red en las capas de núcleo, de distribución y de acceso, y permite que cada parte de la red esté optimizada para una funcionalidad específica. Proporciona modularidad, resistencia y flexibilidad, lo cual sienta una base que permite que los diseñadores de red superpongan funciones de seguridad, movilidad y comunicación unificada. En algunas redes, no se requiere mantener las capas de distribución y de núcleo separadas. En estas redes, la funcionalidad de la capa de núcleo y de la capa de distribución a menudo se contrae en una sola.</p>
+          <p></p>
+          <p>Los switches LAN Cisco usan ASIC para reenviar tramas según la dirección MAC de destino. Antes de poder lograr esto, primero deben usar la dirección MAC de origen de las tramas entrantes para crear una tabla de direcciones MAC en la memoria de contenido direccionable (CAM). Si la dirección MAC de destino está en esta tabla, la trama se reenvía solamente al puerto de destino específico. En los casos en que la dirección MAC de destino no se encuentre en la tabla de direcciones MAC, se saturan todos los puertos con las tramas, excepto aquel en el que se recibió la trama.</p>
+          <p></p>
+          <p>Los switches usan switching por almacenamiento y envío o por método de corte. El switching por almacenamiento y envío lee la trama completa en un buffer y verifica la CRC antes de reenviar la trama. El switching por método de corte lee solo la primera parte de la trama e inicia el reenvío tan pronto como lee la dirección de destino. Si bien este proceso es sumamente rápido, no se realiza ninguna verificación de errores en la trama antes de reenviarla.</p>
+          <p></p>
+          <p>Los switches intentan autonegociar la comunicación en dúplex completo de manera predeterminada. Los puertos del switch no bloquean las difusiones, y la conexión de switches entre sí puede ampliar el tamaño del dominio de difusión, lo que generalmente provoca un deterioro del rendimiento de la red.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la arquitectura Cisco Borderless Networks, que conecta campus grandes a campus medianos y pequeños a través de conexiones WAN y PSTN.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

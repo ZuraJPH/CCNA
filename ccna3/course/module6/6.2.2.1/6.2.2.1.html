@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.1 Verificación de EIGRP: análisis de vecinos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de EIGRP: análisis de vecinos</h1>
+        <div>
+          <p>Antes de que EIGRP pueda enviar o recibir actualizaciones, los routers deben establecer adyacencias con sus vecinos. Los routers EIGRP establecen adyacencias con los routers vecinos mediante el intercambio de paquetes de saludo EIGRP. </p>
+          <p></p>
+          <p>Utilice el comando <b>show ip eigrp neighbors</b> para ver la tabla de vecinos y verificar que EIGRP haya establecido una adyacencia con sus vecinos. Para cada router, debe poder ver la dirección IPv4 del router adyacente y la interfaz que ese router utiliza para llegar a ese vecino EIGRP. Con esta topología, cada router tiene dos vecinos incluidos en la tabla de vecinos.</p>
+          <p></p>
+          <p>Los encabezados de columna que figuran en la salida que genera el comando<b> show ip eigrp neighbors</b> identifican lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Columna H</b>: indica a los vecinos en el orden en el que se detectaron.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Address:</b> dirección IPv4 del vecino.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface</b> (Interfaz): la interfaz local en la cual se recibió este paquete de saludo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hold</b> (Retención): el tiempo de retención actual. Cuando se recibe un paquete de saludo, este valor se restablece al tiempo de espera máximo para esa interfaz y, luego, se realiza una cuenta regresiva hasta cero. Si se llega a cero, el vecino se considera inactivo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Uptime</b> (Tiempo de actividad): la cantidad de tiempo desde que se agregó este vecino a la tabla de vecinos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SRTT</b> y <b>RTO</b><b> (tiempo de ida y vuelta promedio y tiempo de espera de retransmisión):</b> utilizados por RTP para administrar paquetes EIGRP confiables. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Q Cnt (conteo de cola):</b> siempre debe ser cero. Si es más que cero, hay paquetes EIGRP que esperan ser enviados. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Seq Num (número de secuencia):</b> se utiliza para rastrear paquetes de actualización, de consulta y de respuesta. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El comando <b>show ip eigrp neighbors</b> es muy útil para verificar y resolver problemas de EIGRP. </p>
+          <p></p>
+          <p>Si un vecino no está incluido después de establecer adyacencias con los vecinos de un router, revise la interfaz local para asegurarse de que esté activa con el comando <b>show ip interface brief</b>. Si la interfaz está activa, intente hacer <b>ping</b> a la dirección IPv4 del vecino. Si el <b>ping</b> falla, significa que la interfaz de vecino está inactiva y debe activarse. Si el <b>ping</b> se realiza correctamente y EIGRP aún no ve al router como vecino, examine las siguientes configuraciones:</p>
+          <p>
+            <ul>
+              <li>¿Ambos routers están configurados con el mismo número de sistema autónomo de EIGRP?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>¿La red conectada directamente está incluida en las instrucciones <b>network</b> de EIGRP?</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra la salida que genera el comando “show ip eigrp neighbors”.  La dirección IP de vecinos, la interfaz local, los segundos antes de declarar que el vecino está desactivado y el tiempo de actividad aparecen resaltados en color naranja.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

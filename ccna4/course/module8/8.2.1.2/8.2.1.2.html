@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.2 Configuración de IP SLA</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de IP SLA</h1>
+        <div>
+          <p>En vez de usar el comando <b>ping</b> manualmente, los ingenieros de red pueden usar la operación de eco de ICMP de IP SLA para probar la disponibilidad de los dispositivos de red. Un dispositivo de red puede ser cualquier dispositivo con las funcionalidades de IP (router, switch, PC, servidor, etc.). La operación de eco ICMP de IP SLA proporciona las siguientes mediciones:</p>
+          <p>
+            <ul>
+              <li>Supervisión de disponibilidad (estadísticas de pérdida de paquetes)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Supervisión de rendimiento (latencia y tiempo de respuesta)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Operación de red (conectividad completa)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para verificar que la operación deseada de IP SLA sea compatible con el dispositivo de origen, use el comando del modo EXEC con privilegios <b>show ip sla application</b>.  El resultado generado en la figura confirma que R1 es capaz de admitir SLA IP. Sin embargo, en este momento no hay sesiones configuradas.</p>
+          <p></p>
+          <p>Para crear una operación de IP SLA e ingresar al modo de configuración de IP SLA, use el comando de configuración global <b>ip sla </b><i>operation-number</i> . El número de operación es un número exclusivo que se usa para identificar la operación que se está configurando. </p>
+          <p></p>
+          <p>En el modo de configuración de IP SLA, se puede configurar la operación de IP SLA como operación de eco de ICMP e ingresar al modo de configuración de eco de ICMP con el siguiente comando:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-ip-sla)# </span>
+            <span class="cmd">
+              <b>icmp-echo</b>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <i>dest-ip-address</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>dest-hostname</i>
+            </span>
+            <span class="cmd">} [</span>
+            <span class="cmd">
+              <b>source-ip</b>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <i>ip-address</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>Nombre de host</i>
+            </span>
+            <span class="cmd">} | </span>
+            <span class="cmd">
+              <b>source-interface</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>interface-id</i>
+            </span>
+            <span class="cmd">]</span>
+          </p>
+          <p></p>
+          <p>A continuación, configure la frecuencia con la que se repetirá la operación especificada de IP SLA con el comando <b>frequency </b><i>seconds </i>. El intervalo es de 1 a 604800 segundos; el valor predeterminado es 60 segundos.</p>
+          <p></p>
+          <p>Para programar la operación de IP SLA, use el siguiente comando de configuración global:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>ip sla schedule </b>
+            </span>
+            <span class="cmd">
+              <i>operation-number </i>
+            </span>
+            <span class="cmd">[</span>
+            <span class="cmd">
+              <b>life </b>
+            </span>
+            <span class="cmd">{</span>
+            <span class="cmd">
+              <b>forever </b>
+            </span>
+            <span class="cmd">| </span>
+            <span class="cmd">
+              <i>seconds</i>
+            </span>
+            <span class="cmd">}] [</span>
+            <span class="cmd">
+              <b>start-time </b>
+            </span>
+            <span class="cmd">{</span>
+            <span class="cmd">
+              <i>h</i>
+            </span>
+            <span class="cmd">:</span>
+            <span class="cmd">
+              <i>m </i>
+            </span>
+            <span class="cmd">[:</span>
+            <span class="cmd">
+              <i>seg</i>
+            </span>
+            <span class="cmd">] [</span>
+            <span class="cmd">
+              <i>month day </i>
+            </span>
+            <span class="cmd">| </span>
+            <span class="cmd">
+              <i>day month</i>
+            </span>
+            <span class="cmd">] | </span>
+            <span class="cmd">
+              <b>pendiente </b>
+            </span>
+            <span class="cmd">| </span>
+            <span class="cmd">
+              <b>ahora </b>
+            </span>
+            <span class="cmd">| </span>
+            <span class="cmd">
+              <b>después </b>
+            </span>
+            <span class="cmd">
+              <i>hh:mm:ss</i>
+            </span>
+            <span class="cmd">] [</span>
+            <span class="cmd">
+              <b>ageout </b>
+            </span>
+            <span class="cmd">
+              <i>seconds</i>
+            </span>
+            <span class="cmd">] [</span>
+            <span class="cmd">
+              <b>recurring</b>
+            </span>
+            <span class="cmd">]</span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

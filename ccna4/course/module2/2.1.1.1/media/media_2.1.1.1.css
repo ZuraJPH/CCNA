@@ -1,0 +1,31 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#ID_s2_txt09,
+#ID_s2_txt10,
+#ID_s2_txt11,
+#ID_s2_txt12,
+#ID_s2_txt13,
+#ID_s2_txt14,
+#ID_s2_txt15,
+#ID_s2_txt16,
+#ID_s2_txt17,
+#ID_s2_txt18,
+#ID_s2_txt19,
+#ID_s2_txt20,
+#ID_s2_txt21,
+#ID_s2_txt22,
+#ID_s2_txt23,
+#ID_s2_txt24,
+#ID_s2_txt25,
+#ID_s2_txt26,
+#ID_s2_txt27,
+#ID_s2_txt28,
+#ID_s2_txt29,
+#ID_s2_txt30,
+#ID_s2_txt31,
+#ID_s2_txt32 {
+    letter-spacing: -1.5px !important;
+}

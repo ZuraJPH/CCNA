@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.3.2 Resolución de problemas de OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de OSPFv3</h1>
+        <div>
+          <p>En la topología de la figura 1, todos los routers se configuraron para admitir el routing OSPFv3. </p>
+          <p></p>
+          <p>Un vistazo a la tabla de routing IPv6 del R1 (figura 2) nos permite saber que recibe la ruta predeterminada, la LAN del R2 (2001:DB8:CAFE:2::/64) y el enlace entre el R2 y el R3 (2001:DB8:CAFE:A002::/64). Sin embargo, no recibe la ruta OSPFv3 LAN del R3 (2001:DB8:CAFE:3::/64). </p>
+          <p></p>
+          <p>La salida de la figura 3 verifica la configuración de OSPFv3 en el R3. Observe que OSPF solo está habilitado en la interfaz Serial 0/0/1. Al parecer, no está habilitado en la interfaz G0/0 del R3.</p>
+          <p></p>
+          <p>A diferencia de OSPFv2, en OSPFv3 no se usa el comando <b>network</b>. En cambio, OSPFv3 se habilita directamente en la interfaz. La salida de la figura 4 confirma que la interfaz del R3 no está habilitada para OSPFv3. </p>
+          <p></p>
+          <p>En el ejemplo de la figura 5, se habilita OSPFv3 en la interfaz Gigabit Ethernet 0/0 del R3. Ahora el R3 debería anunciar la LAN del R3 a sus vecinos OSPFv3.</p>
+          <p></p>
+          <p>El resultado de la figura 6 corrobora que la LAN del R3 ahora esté en la tabla de routing del R1. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. Se resalta la red interna, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la salida del comando "show ipv6 ospf" en el router uno. En la figura tres, se muestra la salida del comando "show ipv6 protocols" en el router tres. En la figura cuatro, se muestra la salida del comando "show running barra diagonal config" en el router tres. En la figura cinco, se muestra la sintaxis para configurar una interfaz en el router tres para participar en la versión tres de OSPF. En la figura seis, se muestra la salida del comando "show ipv6 route ospf" en el router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

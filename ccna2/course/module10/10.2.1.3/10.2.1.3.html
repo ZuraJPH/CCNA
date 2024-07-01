@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.3 Configuración y verificación del NTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración y verificación del NTP</h1>
+        <div>
+          <p>Antes de configurar NTP en la red, el comando <b>show clock</b> muestra la hora actual en el reloj del software. Con la opción <b>detail</b>, también se muestra la fuente de la hora. Como puede verse en la Figura 1, el reloj del software se ha configurado manualmente. Utilice el comando <b>ntp server</b><i> dirección-ip </i>en el modo de configuración global para configurar 209.165.200.225 como el servidor NTP para R1. Para verificar que la fuente de la hora esté definida en NTP, vuelva a utilizar el comando <b>show clock detail</b>.</p>
+          <p></p>
+          <p>Tal como se indica en la Figura 2, utilice los comandos <b>show ip ntp associations</b> y <b>show ntp status</b> para verificar que R1 esté sincronizado con el servidor NTP en 209.165.200.225. Observe que el R1 está sincronizado con un servidor NTP de estrato 1 en 209.165.200.225, que se sincroniza con un reloj GPS. El comando <b>show ntp status</b> indica que R1 ahora es un dispositivo de estrato 2 sincronizado con el servidor NTP en 209.165.220.225.</p>
+          <p></p>
+          <p>El reloj de S1 está configurado para sincronizarse con R1, tal como se muestra en la Figura 3. La salida del comando <b>show ntp associations</b> verifica que el reloj de S1 ahora esté sincronizado con R1 en 192.168.1.1 por medio de NTP. El R1 es un dispositivo de estrato 2 y un servidor NTP para el S1. Ahora el S1 es un dispositivo de estrato 3 que puede proporcionar el servicio NTP a otros dispositivos en la red, por ejemplo terminales.</p>
+          <p></p>
+          <p>Utilice el Verificador de la sintaxis de la Figura 4 para practicar la configuración y verificación de NTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En las figuras 1, 2 y 3 se ve la misma topología que muestra servidores NTP y clientes NTP. El router R1 es un servidor NTP para el switch S1. En la Figura 1, el R1 se configuró como servidor NTP. En la Figura 2, los comandos 'show ntp associations' y 'show ntp status' verifican que R1 ahora sea un servidor NTP. En la Figura 3, el switch S1 se configura y verifica como servidor NTP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

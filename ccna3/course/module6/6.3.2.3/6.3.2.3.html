@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.3 Métrica de ancho de banda </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métrica de ancho de banda </h1>
+        <div>
+          <p>La métrica de ancho de banda es un valor estático que usan algunos protocolos de routing, como EIGRP y OSPF, para calcular la métrica de routing. El ancho de banda se muestra en kilobits por segundo (kb/s). </p>
+          <p></p>
+          <p>En los routers más antiguos, el valor predeterminado de la métrica del ancho de banda del enlace serial es de 1544 kb/s. Éste es el ancho de banda de una conexión T1. En los routers más nuevos, como Cisco 4321, el valor predeterminado del ancho de banda del enlace serial se establece a la frecuencia de reloj utilizada en el enlace. Los enlaces seriales de la topología que se muestra en la Figura 1 se configuraron con los valores de ancho de banda que se utilizarán en esta sección. </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Los valores de ancho de banda que se usan en esta topología se eligieron para ayudar a explicar el cálculo de las métricas del protocolo de routing y el proceso de selección de la mejor ruta. Estos valores de ancho de banda no reflejan los tipos de conexiones más frecuentes que se encuentran en las redes actuales. </p>
+          <p></p>
+          <p>Verifique siempre el ancho de banda con el comando <b>show interfaces</b>. El valor predeterminado del ancho de banda puede reflejar o no el ancho de banda físico real de la interfaz. Si el ancho de banda real del enlace difiere del valor de ancho de banda predeterminado, se debe modificar el valor de ancho de banda.</p>
+          <p></p>
+          <p>
+            <b>Configuración del parámetro de ancho de banda</b>
+          </p>
+          <p></p>
+          <p>Debido a que EIGRP y OSPF utilizan el ancho de banda en los cálculos métricos predeterminados, un valor correcto para el ancho de banda es muy importante para la precisión de la información de routing. </p>
+          <p></p>
+          <p>Utilice el siguiente comando del modo de configuración de interfaz para modificar la métrica de ancho de banda: </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>Ancho de banda </b>
+            </span>
+            <span class="cmd">
+              <i>valor de ancho de banda en kilobits</i>
+            </span>
+          </p>
+          <p></p>
+          <p>Utilice el comando <b>no bandwidth</b> para restaurar el valor predeterminado.</p>
+          <p></p>
+          <p>En la figura 2, el enlace entre el R1 y el R2 tiene un ancho de banda de 64 kb/s, y el enlace entre el R2 y el R3 tiene un ancho de banda de 1024 kb/s. La figura muestra la configuración utilizada en los tres routers para modificar el ancho de banda en las interfaces seriales adecuadas. Modifique la métrica del ancho de banda en ambos lados del enlace para garantizar el routing adecuado en ambas direcciones.</p>
+          <p></p>
+          <p>
+            <b>Verificación del parámetro de ancho de banda</b>
+          </p>
+          <p></p>
+          <p>Utilice el comando <b>show interfaces</b> para verificar los nuevos parámetros de ancho de banda, como se muestra en la figura 3. </p>
+          <p></p>
+          <p>La modificación del valor del ancho de banda no cambia el ancho de banda real del enlace. El comando <b>bandwidth</b> solo modifica la métrica de ancho de banda que utilizan los protocolos de routing, como EIGRP y OSPF. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la sintaxis para configurar el ancho de banda en las interfaces de los routers uno, dos y tres. En la figura tres, se muestra la salida que genera el comando “show interface” en el router uno y dos para visualizar los parámetros del ancho de banda.  El ancho de banda predeterminado para los enlaces seriales es de 1544 kilobits por segundo, a menos que se especifique.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

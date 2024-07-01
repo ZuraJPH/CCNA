@@ -1,0 +1,1 @@
+La figura muestra dos VLAN conectadas a un clúster de switches de capa de distribución con varias conexiones redundantes. Hay una llamada que indica que uno de los enlaces entre un par de switches de distribución se ha configurado como interfaz enrutada.

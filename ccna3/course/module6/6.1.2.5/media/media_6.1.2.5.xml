@@ -1,0 +1,84 @@
+<textcomponents>
+
+
+<component id="ID_inst">
+	<text><![CDATA[<b>Actividad: tipos de paquetes EIGRP</b><br/>Arrastre el tipo de paquete EIGRP a la definición correspondiente.]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>Definición de paquete EIGRP</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+	<text><![CDATA[<b>Tipo de paquete</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+	<text><![CDATA[Utilizado para crear adyacencias con los vecinos.]]></text>
+</component>
+
+<component id="ID_txt04">
+	<text><![CDATA[Confirma la recepción de un paquete EIGRP.]]></text>
+</component>
+
+<component id="ID_txt05">
+	<text><![CDATA[Se envía a vecinos cuando se requiere una ruta alternativa hacia una red.]]></text>
+</component>
+
+<component id="ID_txt06">
+	<text><![CDATA[Proporciona DUAL con la información de red solicitada.]]></text>
+</component>
+
+<component id="ID_txt07">
+	<text><![CDATA[Envía mediante unidifusión información sobre la red a un vecino nuevo.]]></text>
+</component>
+
+
+
+<component id='ID_drag01'>
+	<text><![CDATA[Paquete<br>de acuse de recibo]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[Paquete de saludo]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[Paquete de actualización]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[Paquete de<br>respuesta]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[Paquete de consulta]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correcto</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Unió correctamente cada tipo de paquete EIGRP con su definición.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrecto</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[No unió correctamente cada tipo de paquete EIGRP con su definición. Haga clic en Restablecer y vuelva a intentarlo.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Verificar</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Restablecer</b>]]></text>
+</component>
+
+</textcomponents>

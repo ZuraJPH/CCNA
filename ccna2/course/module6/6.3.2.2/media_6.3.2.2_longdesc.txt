@@ -1,0 +1,1 @@
+La figura muestra los comandos necesarios para configurar un switch para el routing entre VLAN antiguo.

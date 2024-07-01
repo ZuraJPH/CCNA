@@ -1,0 +1,1 @@
+En la figura se muestran tres routers. Cada router está conectado a una PC C. La leyenda indica que RIP y EIGRP se pueden comparar porque ambos son protocolos de routing con vector de distancia.

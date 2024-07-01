@@ -1,0 +1,1 @@
+En la figura se muestra un switch de capa de acceso conectado a dos switches de capa de distribución. Cada conexión se establece mediante dos enlaces entre los switches.  En la figura se muestra que uno de los cuatro enlaces se encuentra actualmente en modo de bloqueo debido al protocolo de árbol de expansión.

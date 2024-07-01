@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.2 Árbol de expansión y pilas de switches </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Árbol de expansión y pilas de switches </h1>
+        <div>
+          <p>Otro beneficio del apilado de switches es la capacidad de agregar más switches a una única instancia del STP sin aumentar el diámetro del STP. El diámetro es la cantidad máxima de switches que debe atravesar para conectar dos switches. El IEEE recomienda un diámetro máximo de siete switches para los temporizadores de STP predeterminados. Por ejemplo, en la Figura 1 el diámetro de S1-4 a S3-4 es de nueve switches. Este diseño infringe la recomendación de IEEE.</p>
+          <p></p>
+          <p>El diámetro recomendado se basa en los valores de los temporizadores de STP predeterminados, que son los siguientes:</p>
+          <p>
+            <ul>
+              <li>Temporizador de saludo (2 segundos): el intervalo entre las actualizaciones de BPDU.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Temporizador de edad máxima (20 segundos): la cantidad máxima de tiempo que un switch guarda información de BPDU.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Temporizador de retraso en el envío (15 segundos): el tiempo que transcurre en los estados de escucha y aprendizaje.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Las fórmulas usadas para calcular el diámetro exceden el ámbito de este curso. Consulte el siguiente documento de Cisco para obtener más información: <a href="http://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/19120-122.html" target="_blank">http://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/19120-122.html</a></p>
+          <p></p>
+          <p>Las pilas de switches ayudan a mantener o reducir el impacto del diámetro en la reconvergencia del STP. En una pila de switches, todos los switches utilizan el mismo ID de puente para una instancia de árbol de expansión determinada. Esto significa que, si los switches de la Figura 1 están apilados, como se muestra en la Figura 2, el diámetro máximo es de 3 en lugar de 9.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

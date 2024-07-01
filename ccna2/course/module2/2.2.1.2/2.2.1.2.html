@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.2 Opciones de siguiente salto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Opciones de siguiente salto</h1>
+        <div>
+          <p>En este ejemplo, las figuras 1 a 3 muestran las tablas de routing de los routers R1, R2 y R3. Observe que cada router tiene entradas solo para redes conectadas directamente y sus direcciones locales asociadas. Ninguno de los routers tiene conocimiento de las redes que están fuera de las interfaces conectadas directamente.</p>
+          <p></p>
+          <p>Por ejemplo, el R1 no tiene conocimiento de las redes:</p>
+          <p>
+            <ul>
+              <li>172.16.1.0/24: LAN en el R2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>192.168.1.0/24: red serial entre el R2 y el R3</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>192.168.2.0/24: LAN en el R3</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 4, se muestra un ping correcto del R1 al R2. En la figura 5, se muestra un ping incorrecto a la LAN del R3. Esto se debe a que el R1 no tiene una entrada en su tabla de routing para la red LAN del R3.</p>
+          <p></p>
+          <p>El siguiente salto se puede identificar mediante una dirección IP, una interfaz de salida, o ambas. El modo en que se especifica el destino genera uno de los siguientes tres tipos de ruta: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta del siguiente salto</b>: solo se especifica la dirección IP del siguiente salto</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta estática conectada directamente</b>: solo se especifica la interfaz de salida del router</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruta estática especificada completamente</b>: se especifican la dirección IP del siguiente salto y la interfaz de salida</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN.  Las figuras uno a tres muestran las tablas de routing de cada router.  Cada router enumera solo las redes conectadas directamente en la tabla de routing. La figura cuatro muestra el router uno haciendo ping al otro extremo del enlace serial, al router dos.  Este ping tiene éxito porque son routers conectados directamente. La figura cinco muestra el router uno intentando hacer ping a la interfaz LAN del router tres.  Este ping no es exitoso ya que los routers solo conocen sus redes conectadas directamente.  El router uno no tiene ninguna ruta a la LAN o el router tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

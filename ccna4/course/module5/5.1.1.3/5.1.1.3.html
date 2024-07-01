@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.3 Ataques de Telnet</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ataques de Telnet</h1>
+        <div>
+          <p>La capacidad de administrar de forma remota una infraestructura de LAN conmutada es un requisito operativo; por lo tanto, debe admitirse. </p>
+          <p></p>
+          <p>Sin embargo, el protocolo de Telnet es intrínsecamente inseguro y un atacante puede usarlo para obtener acceso remoto a un dispositivo de red de Cisco. Hay herramientas que permiten que un atacante inicie ataques contra las líneas de vty del switch. </p>
+          <p></p>
+          <p>Hay dos tipos de ataques de Telnet:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Ataque de contraseña por fuerza bruta</b>: el atacante puede usar una lista de contraseñas comunes, palabras del diccionario y variaciones de palabras para descubrir la contraseña administrativa. Si la contraseña no se descifra en la primera fase, comienza una segunda fase. El atacante usa herramientas especializadas de auditoría de contraseñas como las que se muestra en la figura. El software crea combinaciones secuenciales de caracteres para adivinar la contraseña. Con el tiempo suficiente y dadas las condiciones propicias, un ataque de contraseña por fuerza bruta puede descifrar casi cualquier contraseña.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ataque de DoS por Telnet</b>: el atacante solicita continuamente conexiones de Telnet para inhabilitar el servicio de Telnet y evitar que el administrador tenga acceso remoto al switch. Esto se puede combinar con otros ataques directos a la red como parte de un esfuerzo coordinado para impedir que el administrador de red acceda a dispositivos clave durante la infracción.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Hay varias maneras de mitigar los ataques de Telnet:</p>
+          <p>
+            <ul>
+              <li>Use SSH en vez de Telnet para las conexiones de administración remota.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Use contraseñas sólidas y cámbielas con frecuencia. Una contraseña segura debe tener una combinación de mayúsculas y minúsculas, y debe incluir números y símbolos (caracteres especiales). </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Limite el acceso a las líneas de vty con una lista de control de acceso (ACL) que permita el acceso sólo a los dispositivos de administrador y deniegue el acceso a todos los demás.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Autentique y autorice el acceso administrativo al dispositivo mediante AAA con los protocolos TACACS+ o RADIUS.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una herramienta especializada de auditoría de contraseñas utilizada por un atacante para adivinar la contraseña de los usuarios.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

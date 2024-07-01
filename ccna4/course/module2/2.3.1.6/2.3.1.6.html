@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.6 Verificación de la configuración de PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de PPP</h1>
+        <div>
+          <p>Utilice el comando <b>show interfaces serial</b> para verificar la configuración de la encapsulación PPP o HDLC. El resultado del comando en la figura 1 muestra una configuración PPP. </p>
+          <p></p>
+          <p>Cuando configure HDLC, la salida del comando <b>show interfaces serial</b> debe mostrar encapsulation HDLC. Cuando se configura PPP, también se muestran los estados de LCP y NCP. Observe que los protocolos NCP IPCP e IPV6CP están abiertos para IPv4 e IPv6, ya que el R1 y el R2 se configuraron con direcciones IPv4 e IPv6.</p>
+          <p></p>
+          <p>En la figura 2, se resumen los comandos que se usan para verificar PPP. </p>
+          <p></p>
+          <p>El comando <b>show ppp multilink</b> verifica que el protocolo PPP multienlace esté habilitado en el R3, como se muestra en la figura 3. El resultado indica la interfaz Multilink 1, los nombres de host de las terminales locales y remotas, y las interfaces seriales asignadas al grupo multienlace. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la salida del comando show interfaces serial cero barra diagonal cero barra diagonal cero.  La figura resalta la línea que indica que la interfaz está activa.  Esta sección de la salida dice encapsulation ppp, lcp, open, y las listas abiertas para IP versión 4 e IP versión 6. La figura 2 muestra los tres comandos que se usan para verificar una conexión PPP.  Esta lista incluye el comando show interfaces para ver todas las interfaces en un router, el comando show interfaces serial para dar información sobre una interfaz serial y el comando show ppp multilink para mostrar información sobre una interfaz PPP multienlace. La figura 3 muestra la salida del comando show ppp multilink.  Esta salida muestra información sobre el multienlace. Esta salida también incluye nombres de host de los terminales locales y remotos, y los enlaces seriales que se encuentran activos en el paquete multienlace.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.1 Pasos para configurar SNMP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pasos para configurar SNMP</h1>
+        <div>
+          <p>Un administrador de red puede configurar SNMPv2 para obtener información de red de los dispositivos de red. Como se muestra en la ilustración, todos los pasos básicos para configurar SNMP se realizan en el modo de configuración global.</p>
+          <p></p>
+          <p>
+            <b>Paso 1. </b>(Obligatorio) Configure la cadena de comunidad y el nivel de acceso (solo lectura o de lectura y escritura) con el comando<span class="cmd"><b></b></span><b>snmp-server community </b><i>cadena</i><span class="cmd"><b></b></span><b>ro </b>|<b> rw</b>.</p>
+          <p></p>
+          <p>
+            <b>Paso 2. </b>(Opcional) Registre la ubicación del dispositivo con el comando<span class="cmd"><b></b></span><b>snmp-server location</b><i> texto</i><span class="cmd"><i></i></span>.</p>
+          <p></p>
+          <p>
+            <b>Paso 3. </b>(Opcional) Registre el contacto del sistema con el comando<span class="cmd"><b></b></span><b>snmp-server contact</b><i> texto</i><span class="cmd"><i></i></span>.</p>
+          <p></p>
+          <p>
+            <b>Paso 4. </b>(Opcional) Restrinja el acceso de SNMP a los host de NMS (administradores de SNMP) permitidos por una ACL: defina la ACL y haga referencia a la ACL con el comando<span class="cmd"><b></b></span><b>snmp-server community</b><i> string número-o -nombre-de ACL</i><span class="cmd"><i></i></span>. Este comando se puede utilizar para especificar la cadena de comunidad y para restringir el acceso de SNMP a través de las ACL. Los pasos 1 y 4 pueden combinarse en un paso, si lo desea; el dispositivo de red de Cisco combina los dos comandos en uno si se introducen por separado.</p>
+          <p></p>
+          <p>
+            <b>Paso 5: </b>(Opcional) Especifique el destinatario de las operaciones de notificación de SNMP con el comando<span class="cmd"><b></b></span><b>snmp-server host </b><i>id-de-host </i>[<b>version</b> {<b>1</b>| <b>2c</b> | <b>3</b> [<b>auth</b> | <b>noauth</b> | <b>priv</b>]}]<i> cadena-de-comunidad </i>. De manera predeterminada, no se define ningún administrador de notificaciones.</p>
+          <p></p>
+          <p>
+            <b>Paso 6: </b>(Opcional) Habilite las notificaciones en un agente de SNMP con el comando<span class="cmd"><b></b></span><b>snmp-server enable traps </b><i>tipos-de-notificación</i><span class="cmd"><i></i></span>. Si no se especifica ningún tipo de notificación de traps en este comando, entonces se envían todos los tipos de trap. Es necesario el uso reiterado de este comando si se desea un subconjunto determinado de tipos de trap.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> de manera predeterminada, SNMP no tiene ninguna trap configurada. Sin este comando, los administradores de SNMP deben realizar sondeos para obtener toda la información importante. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra a un trabajador conectado a una red y una lista con varios comandos de configuración de SNMP básicos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

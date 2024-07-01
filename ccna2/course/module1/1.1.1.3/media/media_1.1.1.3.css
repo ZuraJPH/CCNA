@@ -1,0 +1,12 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+/*
+.newR{width:36% !important;}*/
+
+/*@media only screen and (device-width: 768px) {
+#ID_s3_txt05{width:84px;}
+}*/

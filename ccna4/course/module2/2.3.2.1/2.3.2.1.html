@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.1 Protocolos de autenticación PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de autenticación PPP</h1>
+        <div>
+          <p>PPP define un protocolo LCP que permite la negociación de un protocolo de autenticación para autenticar a su par antes de permitir que los protocolos de capa de red transmitan por el enlace. <a href="https://www.ietf.org/rfc/rfc1334.txt" target="_blank">RFC 1334</a>, <i>Protocolos de autenticación PPP</i>, define dos protocolos para la autenticación, PAP y CHAP, como se muestra en la figura. </p>
+          <p></p>
+          <p>PAP es un proceso bidireccional muy básico. No hay cifrado. El nombre de usuario y la contraseña se envían en texto no cifrado. Si se acepta, se permite la conexión. CHAP es más seguro que PAP. Implica un intercambio de tres vías de un secreto compartido. </p>
+          <p></p>
+          <p>La fase de autenticación de una sesión PPP es optativa. Si se utiliza, se autentica el peer después de que LCP establece el enlace y elige el protocolo de autenticación. La autenticación ocurre antes de que comience la etapa de configuración del protocolo de capa de red. </p>
+          <p></p>
+          <p>Las opciones de autenticación requieren que la parte del enlace que llama introduzca la información de autenticación. Esto contribuye a asegurar que el usuario tenga permiso del administrador de red para realizar la llamada. Los routers pares intercambian mensajes de autenticación.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los dos protocolos de autenticación de PPP.  El primer diagrama muestra el intercambio bidireccional de PAP.  En este diagrama un router remoto envía un nombre de usuario y una contraseña en texto sin encriptar a otro router para su autenticación.  El router receptor procesa la información y devuelve un mensaje de aceptación o de rechazo.  El segundo diagrama es el método de intercambio de tres vías de CHAP.  Después de que el router remoto solicita realizar una conexión, el router receptor envía un desafío al emisor.  El emisor responde enviando un nombre de usuario y la contraseña con hash.  El tercer paso es cuando el router receptor envía un mensaje de aceptación o de rechazo al emisor.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

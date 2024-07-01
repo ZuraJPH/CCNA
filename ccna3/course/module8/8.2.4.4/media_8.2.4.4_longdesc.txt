@@ -1,0 +1,1 @@
+En la figura, se muestra la salida del siguiente comando ejecutado en el router R1: show ip ospf interface brief.  La salida muestra tres interfaces que participan en OSPF, las direcciones IP, los costos y el área de OSPF. La figura dos es un elemento de medios interactivos que permite que el estudiante verifique la configuración de interfaz OSPF.

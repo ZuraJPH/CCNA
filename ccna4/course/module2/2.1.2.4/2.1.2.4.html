@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.4 Resolución de problemas de una interfaz serial</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de una interfaz serial</h1>
+        <div>
+          <p>El resultado del comando <b>show interfaces serial</b> muestra información específica de las interfaces seriales. Agregue el número de interfaz específico que desea investigar, por ejemplo <b>show interface serial 0/0/0</b>. Cuando se configura HDLC, debe figurar “encapsulation HDLC” en la salida, como se resalta en la figura 1. “Serial 0/0/0 is up, line protocol is up” indica que la línea está activa y en funcionamiento; “encapsulation HDLC” indica que está habilitado el encapsulamiento serial predeterminado (HDLC).</p>
+          <p></p>
+          <p>El comando <b>show interfaces serial</b> devuelve uno de seis estados posibles: </p>
+          <p>
+            <ul>
+              <li>Serial x is up, line protocol is up </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial x is down, line protocol is down </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial x is up, line protocol is down </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial x is up, line protocol is up (looped) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial x is up, line protocol is down (disabled) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial x is administratively down, line protocol is down</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>De los seis estados posibles, cinco son estados problemáticos. En la figura 2, se muestran los cinco estados problemáticos, los problemas asociados a cada estado y la forma de resolver el problema.</p>
+          <p></p>
+          <p>El comando <b>show controllers</b> es otra herramienta de diagnóstico importante para la resolución de problemas de líneas seriales, como se muestra en la figura 3. El resultado indica el estado de los canales de la interfaz y si hay un cable conectado a la interfaz o no. En la ilustración, la interfaz serial 0/0/0 tiene un cable DCE V.35 conectado. La sintaxis de los comandos varía, según la plataforma. Los routers Cisco serie 7000 utilizan una tarjeta controladora cBus para conectar enlaces seriales. Con estos routers, utilice el comando <b>show controllers cbus</b>. </p>
+          <p></p>
+          <p>Si el resultado de la interfaz eléctrica aparece como “UNKNOWN” en lugar de “V.35”, “EIA/TIA-449” o algún otro tipo de interfaz eléctrica, es probable que el problema sea un cable mal conectado. También es posible que exista un problema con el cableado interno de la tarjeta. Si la interfaz eléctrica es desconocida, el resultado correspondiente del comando <b>show interfaces serial</b> muestra que la interfaz y el protocolo de línea están inactivos.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en la figura 4 para practicar la solución de problemas de una interfaz serial.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la salida del comando show interface serial cero barra diagonal cero barra diagonal cero.  En la figura se resalta el estado de la interfaz, que se muestra aquí como activado con el protocolo de línea activado.  La figura también resalta la configuración de encapsulamiento, que es HDLC. La figura 2 muestra una tabla con las seis combinaciones que se pueden obtener con el comando show interfaces serial.  La tabla contiene las causas posibles y sugiere las acciones correctivas para cada una. La figura 3 muestra la salida del comando show controllers serial cero barra diagonal cero barra diagonal cero.  La figura resalta el estado del cable serial. En este ejemplo, es DCE V punto treinta y cinco.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

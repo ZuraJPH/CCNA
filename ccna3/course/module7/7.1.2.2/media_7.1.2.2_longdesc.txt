@@ -1,0 +1,1 @@
+En la figura, se muestra el resultado del comando "show i. p. route" en los routers uno y tres, que demuestra que dichos routers aprendieron la ruta estática predeterminada a través del EIGRP.

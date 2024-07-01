@@ -1,0 +1,1 @@
+La figura representa una tabla de valores de costo de OSPF predeterminados de Cisco.  Los cálculos de enlace destacados son los siguientes: un enlace serial T-1 tiene un costo de 64; 10 mega bps tiene un costo de 10; 100 mbps tienen un costo de 1; y 1 Gigabit y 10 Gigabit Ethernet también tienen un costo de 1.

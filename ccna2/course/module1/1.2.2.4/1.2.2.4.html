@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.4 Distancia administrativa</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Distancia administrativa</h1>
+        <div>
+          <p>Es posible configurar un router con varios protocolos de routing y varias rutas estáticas. Si esto ocurre, la tabla de routing puede tener más de un origen de ruta para la misma red de destino. Por ejemplo, si se configura RIP y EIGRP en un router, ambos protocolos de routing pueden descubrir la misma red de destino. Sin embargo, cada protocolo de routing puede decidir tomar una ruta diferente para llegar al destino según las métricas de ese protocolo de routing. RIP elige una ruta según el conteo de saltos, mientras que EIGRP elige una ruta según la métrica compuesta. ¿Cómo sabe el router qué ruta debe utilizar?</p>
+          <p></p>
+          <p>El IOS de Cisco utiliza lo que se conoce como “distancia administrativa” (AD) para determinar la ruta que se debe instalar en la tabla de routing de IP. La AD representa la “confiabilidad” de la ruta: cuanto menor sea la AD, más confiable será el origen de la ruta. Por ejemplo, la AD de una ruta estática es 1, mientras que la AD de una ruta descubierta por EIGRP es 90. El router elige la ruta con la AD más baja entre dos rutas diferentes al mismo destino. Cuando un router puede elegir entre una ruta estática y una ruta EIGRP, la ruta estática tiene prioridad. Asimismo, una ruta conectada directamente con una AD de 0 tiene prioridad sobre una ruta estática con una AD de 1.</p>
+          <p></p>
+          <p>En la ilustración, se muestran diferentes protocolos de routing y sus AD asociadas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una tabla de protocolos de enrutamiento comunes y la distancia administrativa para cada uno.  Los tres protocolos de routing principales y las distancias administrativas son: RIP utiliza 120, OSPF utiliza 110 y EIGRP interno utiliza 90.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

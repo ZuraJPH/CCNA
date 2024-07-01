@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.4 Intercambio de información de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Intercambio de información de routing</h1>
+        <div>
+          <p>En este punto, los routers tienen información sobre sus propias redes conectadas directamente y las de sus vecinos más cercanos. Siguiendo el camino hacia la convergencia, los routers intercambian la siguiente ronda de actualizaciones periódicas. Cada router verifica las actualizaciones nuevamente para comprobar si hay información nueva. </p>
+          <p></p>
+          <p>Para ver la configuración de la topología entre tres routers (R1, R2 y R3), consulte la ilustración. Una vez que se completa el proceso de detección inicial, cada router continúa el proceso de convergencia mediante el envío y la recepción de las siguientes actualizaciones.</p>
+          <p></p>
+          <p>R1: </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.1.0.0 desde la interfaz serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de las redes 10.2.0.0 y 10.3.0.0 por la interfaz FastEthernet0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización del R2 acerca de la red 10.4.0.0 e incrementa el conteo de saltos en 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la red 10.4.0.0 en la tabla de routing con una métrica de 2.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La misma actualización del R2 contiene información acerca de la red 10.3.0.0 con el valor de métrica 1. No se produce ningún cambio, por lo que la información de routing permanece igual.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R2: </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de las redes 10.3.0.0 y 10.4.0.0 por la interfaz Serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de las redes 10.1.0.0 y 10.2.0.0 por la interfaz Serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización de R1 acerca de la red 10.1.0.0. No se produce ningún cambio, por lo que la información de routing permanece igual.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización de R3 acerca de la red 10.4.0.0. No se produce ningún cambio, por lo que la información de routing permanece igual.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R3: </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.4.0.0 desde la interfaz serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de las redes 10.2.0.0 y 10.3.0.0 por la interfaz FastEthernet0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización del R2 acerca de la red 10.1.0.0 e incrementa el conteo de saltos en 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la red 10.1.0.0 en la tabla de routing con una métrica de 2.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La misma actualización del R2 contiene información acerca de la red 10.2.0.0 con el valor de métrica 1. No se produce ningún cambio, por lo que la información de routing permanece igual.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Haga clic en <b>Reproducir</b> en la figura para ver una animación sobre cómo R1, R2 y R3 envían la tabla de routing más reciente a sus vecinos. </p>
+          <p></p>
+          <p>Por lo general, los protocolos de routing vector distancia implementan una técnica para evitar los bucles de routing conocida como “horizonte dividido”. El horizonte dividido evita que la información se envíe desde la misma interfaz en la que se recibió dicha información. Por ejemplo, el R2 no envía una actualización que contenga la red 10.1.0.0 por la interfaz Serial 0/0/0, debido a que obtuvo información acerca de la red 10.1.0.0 a través de la interfaz Serial 0/0/0. </p>
+          <p></p>
+          <p>Una vez que los routers dentro de una red realizan la convergencia, el router puede utilizar la información que se encuentra en la tabla de routing para determinar la mejor ruta para llegar a un destino. Los distintos protocolos de routing tienen diferentes maneras de calcular la mejor ruta.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación que es una continuación de la página anterior.  Cada router continuará actualizando su tabla de routing a medida que envía y recibe paquetes de actualización desde y hacia otros routers.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

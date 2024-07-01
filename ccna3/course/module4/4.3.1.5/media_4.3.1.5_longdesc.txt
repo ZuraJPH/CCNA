@@ -1,0 +1,1 @@
+La figura muestra tres routers que forman parte del grupo uno del protocolo HSRP.

@@ -1,0 +1,1 @@
+La figura uno muestra un teléfono de voz por IP, un paquete de datos de envolvente y una cámara web fluyendo en un embudo. Esta figura indica que los tres elementos convergen en una red. La figura dos es un vídeo en el que se demuestra cómo la gente usa voz, vídeo y datos en muchos tipos de hardware y en distintos entornos, sin perder la conexión a una red.

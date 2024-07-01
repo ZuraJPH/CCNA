@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.5 Configuración de una ruta estática IPv6 completamente especificada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una ruta estática IPv6 completamente especificada</h1>
+        <div>
+          <p>Una ruta estática completamente especificada tiene determinadas tanto la interfaz de salida como la dirección IPv6 del siguiente salto. De modo similar a las rutas estáticas completamente especificadas que se utilizan con IPv4, esto se usaría si CEF no estuviera habilitado en el router y la interfaz de salida estuviera en una red multiacceso.  Con CEF, una ruta estática que solo utiliza una dirección IPv6 del siguiente salto sería el método preferido incluso cuando la interfaz de salida sea una red multiacceso.</p>
+          <p></p>
+          <p>A diferencia de IPv4, hay una situación en IPv6 que se da cuando se debe utilizar una ruta estática completamente especificada. Si la ruta estática IPv6 usa una dirección IPv6 link-local como la dirección del siguiente salto, debe utilizarse una ruta estática completamente especificada que incluya la interfaz de salida. En la figura 1, se muestra un ejemplo de una ruta estática IPv6 completamente calificada que utiliza una dirección IPv6 link-local como la dirección del siguiente salto.</p>
+          <p></p>
+          <p>La razón por la cual se debe utilizar una ruta estática completamente especificada es que las direcciones IPv6 link-local no están incluidas en la tabla de routing IPv6. Las direcciones link-local solo son exclusivas en una red o un enlace dados. La dirección link-local del siguiente salto puede ser una dirección válida en varias redes conectadas al router. Por lo tanto, es necesario que la interfaz de salida se incluya.</p>
+          <p></p>
+          <p>En la figura 1, se configura una ruta estática completamente especificada con la dirección link-local del R2 como dirección del siguiente salto. Observe que el IOS requiere que se especifique una interfaz de salida. </p>
+          <p></p>
+          <p>En la figura 2, se muestra la entrada de la tabla de routing IPv6 para esta ruta. Observe que la dirección link-local del siguiente salto y la interfaz de salida están incluidas. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en la figura 3 para configurar las rutas estáticas IPv6 completamente especificadas en el R2, a fin de que alcancen la LAN del R1 mediante una dirección link-local.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras muestran dos routers conectados con un cable serial.  Cada router tiene conectada una LAN. En la figura uno se muestra la sintaxis para configurar una ruta estática totalmente calificada en el router uno a la LAN en el router dos.  Se requiere la instrucción de ruta totalmente calificada porque estamos utilizando la dirección de enlace local como siguiente salto.  Esto requiere el uso de una interfaz de salida. La figura dos muestra el resultado de emitir el comando “show ipv6 route static barra vertical begin followed by an ipv6 address” para el router. La figura tres es una actividad interactiva que permite a los estudiantes practicar la configuración de una ruta estática totalmente calificada en IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

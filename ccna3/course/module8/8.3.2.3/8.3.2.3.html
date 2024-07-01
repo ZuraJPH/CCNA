@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.2.3 Asignación de direcciones link-local</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Asignación de direcciones link-local</h1>
+        <div>
+          <p>Las direcciones link-local creadas con el formato EUI-64 o, en algunos casos, con ID de interfaz aleatorias hacen que resulte difícil reconocer y recordar esas direcciones. Debido a que los protocolos de routing IPv6 utilizan direcciones IPv6 link-local para el direccionamiento de unidifusión y la información de dirección de siguiente salto en la tabla de routing, es habitual hacer que sea una dirección fácil de reconocer. </p>
+          <p></p>
+          <p>Configurar la dirección link-local manualmente permite crear una dirección reconocible y más fácil de recordar. Además, un router con varias interfaces puede asignar la misma dirección link-local a cada interfaz IPv6. Esto se debe a que la dirección link-local solo se requiere para las comunicaciones locales. </p>
+          <p></p>
+          <p>Las direcciones link-local pueden configurarse de forma manual con el mismo comando de interfaz que se usa para crear direcciones IPv6 de unidifusión global, pero agregando la palabra clave <b>link-local</b> al comando <b>ipv6 address</b>. </p>
+          <p></p>
+          <p>Una dirección link-local tiene un prefijo dentro del rango FE80 a FEBF. Cuando una dirección comienza con este hexteto (segmento de 16 bits), la palabra clave <b>link-local</b> debe seguir la dirección. </p>
+          <p></p>
+          <p>En el ejemplo de la figura 1, se configura la misma dirección link-local FE80::1 en las tres interfaces del R1. Se eligió FE80::1 para que las direcciones link-local del R1 sean fáciles de recordar. </p>
+          <p></p>
+          <p>Con una vista rápida de las interfaces como se muestran en la figura 2, se confirma que las direcciones link-local de las interfaces del R1 se cambiaron a FE80::1.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar y verificar la dirección link-local FE80::2 en el R2 y la dirección link-local FE80::3 en el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran los comandos necesarios para configurar una dirección link-local específica en una interfaz.  El primer comando es ipv6 address f e 8 0 dos puntos dos puntos 1 link guion local. Este comando configura la dirección para la interfaz de Gigabit Ethernet.  La figura aplica la misma dirección a ambas interfaces seriales con el mismo comando.  En la figura dos, se muestra la salida del comando show ipv6 interface brief y se resalta la dirección link-local en cada interfaz. La figura tres es un elemento de medios interactivos que permite que el estudiante configure direcciones link-local en el router R2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

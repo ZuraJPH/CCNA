@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.4 Verificación del resumen automático: show ip protocols</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación del resumen automático: show ip protocols</h1>
+        <div>
+          <p>En la figura 1, observe que el dominio de routing EIGRP tiene tres redes con clase:</p>
+          <p>
+            <ul>
+              <li>La red de clase B 172.16.0.0/16, que consta de las subredes 172.16.1.0/24, 172.16.2.0/24 y 172.16.3.0/30.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La red de clase C 192.168.10.0/24, que consta de las subredes 192.168.10.4/30 y 192.168.10.8/30.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La red de clase C 192.168.1.0/24, que no está dividida en subredes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El resultado del comando <b>show ip protocols</b> en el R1, que aparece en la figura 2, muestra que el ⁪resumen automático ahora está habilitado. El resultado también indica cuáles redes están resumidas y en qué interfaces. Observe que el R1 resume dos redes en las actualizaciones de routing EIGRP:</p>
+          <p>
+            <ul>
+              <li>192.168.10.0/24 enviada por las interfaces GigabitEthernet 0/0 y Serial 0/0/0</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>172.16.0.0/16 enviada por la interfaz Serial 0/0/1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El R1 tiene las subredes 192.168.10.4/30 y 192.168.10.8/30 en la tabla de routing IPv4. Como se ilustra en la figura 3, el R1 resume las dos subredes como 192.168.10.0/24. Luego, reenvía la dirección resumida 192.168.10.0/24 a los vecinos en las interfaces Serial 0/0/0 y GigabitEthernet 0/0. Debido a que el R1 no tiene vecinos EIGRP en la interfaz GigabitEthernet 0/0, solo el R2 recibe la actualización de routing resumida. </p>
+          <p></p>
+          <p>El R1 también tiene las subredes 172.16.1.0/24, 172.16.2.0/24 y 172.16.3.0/30 en la tabla de routing IPv4. Como se ilustra en la figura 4, el R1 resume las tres subredes como 172.16.0.0/16. Luego, reenvía la dirección resumida 172.16.0.0/16 por medio de la interfaz serial 0/0/1 al R3. El R2 también tiene configurada la función de ⁪resumen automático y anuncia la misma dirección de resumen 172.16.0.0/16 al R3. En este ejemplo, el R3 seleccionaría R1 como el sucesor hacia 172.16.0.0/16 porque tiene una distancia factible más baja debido al mayor ancho de banda del enlace de la interfaz serial del R3 al R1.</p>
+          <p></p>
+          <p>Observe que la actualización resumida de 172.16.0.0/16 no se envía por las interfaces GigabitEthernet 0/0 ni Serial 0/0/0 del R1. Esto se debe a que estas dos interfaces son miembros de la misma red de clase B 172.16.0.0/16. El R1 envía la actualización de routing no resumida de 172.16.1.0/24 al R2. </p>
+          <p></p>
+          <p>Las actualizaciones resumidas solo se envían por interfaces en diferentes redes principales con clase. En nuestro ejemplo, el R1 anunciaba la red 172.16.0.0/16 al R3 porque el enlace del R1 al R3 está en otra red con clase (es decir, 192.168.10.0/24).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP; la ruta interna aparece resaltada, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra el resultado que genera el comando "show i. p. protocols" en el router uno.  El ⁪resumen automático está habilitado. La figura tres es el diagrama de laboratorio estándar que muestra que la red resumida automáticamente para la interfaz uno noventa y dos punto uno sesenta y ocho punto diez punto cero barra oblicua veinticuatro es anunciada por las interfaces serial cero barra oblicua cero barra oblicua cero y gig cero barra oblicua cero del router uno. La figura cuatro es el diagrama de laboratorio estándar que muestra que la red resumida automáticamente para la interfaz uno setenta y dos punto dieciséis punto cero punto cero barra oblicua dieciséis es anunciada por la interfaz serial cero barra oblicua cero barra oblicua uno del router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

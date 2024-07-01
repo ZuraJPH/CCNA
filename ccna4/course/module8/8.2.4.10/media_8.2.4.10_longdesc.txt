@@ -1,0 +1,1 @@
+La figura 1 muestra los comandos de configuración de entradas de host mediante la asignación de una dirección IP a un nombre de host con asignación de direcciones ipv 4 e ipv 6.  A cada comando le sigue un comando ping para verificar estas entradas. La figura 2 muestra la salida del comando «n.s. lookup Server" en la PC 1.  La búsqueda supera el tiempo de espera.

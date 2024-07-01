@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.6 Verificación de rutas estáticas IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de rutas estáticas IPv6</h1>
+        <div>
+          <p>Además de los comandos<b> ping </b>y<b> traceroute</b>, otros comandos útiles para verificar las rutas estáticas son los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 route </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 route static</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 route red</b>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra un ejemplo del resultado que genera el comando <b>show ipv6 route static</b>. El resultado refleja el uso de rutas estáticas con las direcciones de unidifusión global del siguiente salto.</p>
+          <p></p>
+          <p>En la figura 2, se muestra un ejemplo del resultado que genera el comando <b>show ip route 2001:DB8:ACAD:3::</b>.</p>
+          <p></p>
+          <p>En la figura 3, se verifica la configuración de <b>ipv6 route</b> en la configuración en ejecución.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN. La figura uno muestra que el resultado del comando “show ipv6 route static” en el router 1. La figura dos muestra el resultado de “show ipv6 route” para una red específica. La figura tres muestra el resultado del comando “show running guión config barra vertical section ipv6 route”.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

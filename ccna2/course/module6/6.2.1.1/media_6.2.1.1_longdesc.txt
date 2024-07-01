@@ -1,0 +1,1 @@
+La figura muestra la sintaxis para configurar un puerto de switch como enlace troncal y configurar la VLAN nativa como VLAN 99.  También se muestra el resultado del comando “show interfaces trunk”.

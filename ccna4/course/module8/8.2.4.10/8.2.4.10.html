@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.10 Paso 8: Verificar DNS</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.10_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 8: Verificar DNS</h1>
+        <div>
+          <p>El protocolo DNS controla el DNS, una base de datos distribuida mediante la cual se pueden asignar nombres de host a las direcciones IP. Cuando configura el DNS en el dispositivo, puede reemplazar el nombre de host por la dirección IP con todos los comandos IP, como <b>ping</b> o <b>telnet</b>.</p>
+          <p></p>
+          <p>Para visualizar la información de configuración de DNS en el switch o el router, utilice el comando <b>show running-config</b>. Cuando no hay instalado un servidor DNS, es posible introducir asignaciones de nombres a direcciones IP directamente en la configuración del switch o del router. Use el comando <b>ip host</b> para introducir una asignación de nombre a dirección IPv4 en el switch o el router. El comando <b>ipv6 host</b> se usa para realizar las mismas asignaciones en IPv6. En la figura 1, se demuestran estos comandos. Dado que los números de red IPv6 son largos y difíciles de recordar, el DNS es incluso más importante para IPv6 que para IPv4. </p>
+          <p></p>
+          <p>Para visualizar la información de asignación de nombre a dirección IP en una computadora con Windows, use el comando <b>nslookup</b>.</p>
+          <p></p>
+          <p>
+            <b>Ejemplo de resolución de problemas</b>
+          </p>
+          <p>La salida de la figura 2 indica que el cliente no pudo comunicarse con el servidor DNS o que el servicio de DNS del dispositivo 10.1.1.1 no estaba en ejecución. En este momento, la resolución de problemas se debe centrar en las comunicaciones con el servidor DNS o en verificar que el servidor DNS funcione correctamente.</p>
+          <p></p>
+          <p>Para visualizar la información de configuración de DNS en una computadora con Microsoft Windows, use el comando <b>nslookup</b>. Debe haber un DNS configurado para IPv4, para IPv6 o para ambos. El DNS puede proporcionar direcciones IPv4 e IPv6 al mismo tiempo, independientemente del protocolo que se use para acceder al servidor DNS.</p>
+          <p></p>
+          <p>Debido a que los nombres de dominio y el DNS son un componente fundamental para acceder a los servidores en una red, muchas veces el usuario piensa que “la red está inactiva” cuando, en realidad, el problema se encuentra en el servidor DNS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra los comandos de configuración de entradas de host mediante la asignación de una dirección IP a un nombre de host con asignación de direcciones ipv 4 e ipv 6.  A cada comando le sigue un comando ping para verificar estas entradas. La figura 2 muestra la salida del comando «n.s. lookup Server" en la PC 1.  La búsqueda supera el tiempo de espera.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

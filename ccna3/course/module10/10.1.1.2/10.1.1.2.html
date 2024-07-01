@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.2 Desafíos en redes multiacceso</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Desafíos en redes multiacceso</h1>
+        <div>
+          <p>Las redes multiacceso pueden crear dos retos para OSPF en relación con la saturación de las LSA:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Creación de varias adyacencias:</b> las redes Ethernet podrían interconectar muchos routers OSPF con un enlace común. La creación de adyacencias con cada router es innecesaria y no se recomienda, ya que conduciría al intercambio de una cantidad excesiva de LSA entre routers en la misma red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Saturación intensa con LSA:</b> los routers de estado de enlace saturan con sus paquetes de estado de enlace cuando se inicializa OSPF o cuando se produce un cambio en la topología. Esta saturación puede llegar a ser excesiva.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para calcular la cantidad de adyacencias requeridas, se puede usar la siguiente fórmula. La cantidad de adyacencias requerida para cualquier cantidad de routers (designada como <i>n</i>) en una red multiacceso es la siguiente:</p>
+          <p></p>
+          <p>
+            <i>n</i> (<i>n</i> – 1) / 2 </p>
+          <p></p>
+          <p>En la figura 1, se muestra una topología simple de cuatro routers, los cuales están conectados a la misma red Ethernet multiacceso. Sin algún tipo de mecanismo para reducir el número de adyacencias, colectivamente estos routers formarían seis adyacencias: 4 (4 - 1) / 2 = 6, como se muestra en la figura 2. En la figura 3, se muestra que, a medida que se agregan routers a la red, el número de adyacencias aumenta drásticamente.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers conectados a un switch. En la figura dos, se muestran cuatro routers conectados a un switch con flechas entre cada switch y switch por medio. En la figura tres, se muestra una tabla en la que se establece la correspondencia entre ciertas cantidades de routers y la correspondiente cantidad de adyacencias formadas.  A medida que la cantidad de routers aumenta, la cantidad de adyacencias aumenta exponencialmente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

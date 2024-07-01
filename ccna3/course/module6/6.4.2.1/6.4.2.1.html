@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.2.1 Topología de red EIGRP para IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Topología de red EIGRP para IPv6</h1>
+        <div>
+          <p>En la figura 1, se muestra la topología de la red que se utiliza para configurar EIGRP para IPv6. Si en la red se ejecuta dual-stack y se utilizan IPv4 e IPv6 en todos los dispositivos, se puede configurar tanto EIGRP para IPv4 como para IPv6 en todos los routers. No obstante, esta sección se centra solamente en EIGRP para IPv6.</p>
+          <p></p>
+          <p>Solo las direcciones IPv6 de unidifusión global se configuraron en cada router. </p>
+          <p></p>
+          <p>En las figuras 2, 3 y 4, se muestra la configuración de inicio de interfaz en cada router. Observe los valores de ancho de banda de interfaz de la configuración EIGRP para IPv4 previa. Debido a que EIGRP utiliza las mismas métricas para IPv4 e IPv6, modificar los parámetros de ancho de banda influye en ambos protocolos de routing. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. La red interna aparece resaltada, menos el enlace entre el router dos y el ISP. Se utilizan direcciones LAN IPv6.  En la figura dos, se muestra la salida que genera el comando “show running dash config” en el router uno, y se incluye la configuración de la interfaz. En la figura tres, se muestra la salida que genera el comando “show running dash config” en el router dos, y se incluye la configuración de la interfaz. En la figura cuatro, se muestra la salida que genera el comando “show running dash config” en el router tres, y se incluye la configuración de la interfaz.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

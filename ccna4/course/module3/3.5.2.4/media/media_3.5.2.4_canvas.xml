@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide type="MBAR">
+        <element type="IMAGE" x="0" y="0" width="1000" height="490" src="../../../common/images/page_backgrounds/bg_activity.jpg" />
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="1000" height="490" src="table.png" />
+            <element type="TEXTBOX" titleId="ID_s1_instr_title" bodyId="ID_s1_instr_body" x="5" y="45" width="276.55" height="200" animated="0" subType="ROLLOVER" />
+            <element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#FFFFFF"/>
+            <element type="TEXT" compId="ID_s1_txt02" x="462.05" y="151.2" width="499.15" expand="down" align="left" />
+            <element type="TEXT" compId="ID_s1_target_header" x="335" y="57.75" width="140" expand="up+down" align="left" />
+            <element type="TEXT" compId="ID_s1_text_header" x="462" y="57.75" width="499.2" expand="up+down" align="left" />
+            <element type="TEXT" compId="ID_s1_txt03" x="462.05" y="213.4" width="499.15" expand="down" align="left" />
+            <element type="TEXT" compId="ID_s1_txt01" x="462" y="89" width="499.2" expand="down" align="left" />
+            <element type="TEXT" compId="ID_txt07" x="472" y="64" width="501.6" expand="up" align="left" />
+            <element type="TEXT" compId="ID_s1_txt05" x="462.05" y="337.8" width="499.15" expand="down" align="left" />
+            <element type="TEXT" compId="ID_s1_txt06" x="462.05" y="400" width="499.15" expand="up" align="left" />
+            <element type="TEXT" compId="ID_s1_txt04" x="462.05" y="275.6" width="499.15" expand="down" align="left" />
+            <element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" replicate="false" compWidth="135" compHeight="42" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="1">
+                <subelement type="DRAG" compId="ID_s1_drag06" x="5" clipName="ip4_ds" y="260" />
+                <subelement type="DRAG" compId="ID_s1_drag03" x="147" clipName="ip2_ds" y="260" />
+                <subelement type="DRAG" compId="ID_s1_drag02" x="5" clipName="ip5_ds" y="310" />
+                <subelement type="DRAG" compId="ID_s1_drag01" x="147" clipName="ip1_ds" y="310" />
+                <subelement type="DRAG" compId="ID_s1_drag04" x="5" clipName="ip3_ds" y="360" />
+                <subelement type="DRAG" compId="ID_s1_drag05" x="147" clipName="ip3_ds" y="360" />
+                <subelement type="DROP" x="321" y="88" match="3" />
+                <subelement type="DROP" x="321" y="151" match="2" />
+                <subelement type="DROP" x="321" y="213" match="1" />
+                <subelement type="DROP" x="321" y="275" match="4" />
+                <subelement type="DROP" x="321" y="337" match="5" />
+                <subelement type="DROP" x="321" y="400" match="0" />
+                <subelement type="CHECK" x="70" y="420" width="160" height="21" compId="ID_s1_CHECK" />
+                <subelement type="RESET" x="70" y="454" width="160" height="21" compId="ID_s1_RESET" />
+                <subelement type="FEEDBACK" x="350" y="157" width="300" height="200" correctTitleId="ID_s1_CORRECT_TITLE" correctBodyId="ID_s1_CORRECT_BODY" wrongTitleId="ID_s1_INCORRECT_TITLE" wrongBodyId="ID_s1_INCORRECT_BODY" />
+            </element>
+        </slide>
+        <slide>
+            <element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#FFFFFF" />
+            <element type="TEXTBOX" x="10" y="45" width="245" height="200" titleId="ID_s2_instr_title" bodyId="ID_s2_instr_body" />
+            <element type="ACTIVITY" subType="MCTABLE" x="275" y="45" width="680" height="345">
+                <subelement type="CHECK" x="-205" y="375" width="160" height="22" compId="ID_s1_CHECK" />
+                <subelement type="RESET" x="-205" y="409" width="160" height="22" compId="ID_s1_RESET" />
+                <subelement type="FEEDBACK" x="85" y="80" width="300" height="200" correctTitleId="ID_s2_titleCorrect" correctBodyId="ID_s2_correctText" wrongTitleId="ID_s2_titleIncorrect" wrongBodyId="ID_s2_IncorrectText" />
+            </element>
+        </slide>
+    </slide>
+</data>

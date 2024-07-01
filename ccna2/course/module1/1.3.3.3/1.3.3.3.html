@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.3.3 Ejemplos de rutas estáticas IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de rutas estáticas IPv6</h1>
+        <div>
+          <p>Como en IPv4, IPv6 admite rutas estáticas y estáticas predeterminadas. Estas se usan y se configuran como las rutas estáticas IPv4. </p>
+          <p></p>
+          <p>Para configurar una ruta IPv6 estática predeterminada, utilice el comando de configuración global <b>ipv6 route ::/0 </b>{<i>dirección-ipv6 </i>|<i> tipo-interfaz número-interfaz</i>}.</p>
+          <p></p>
+          <p>En la figura 1, se muestra la configuración de una ruta estática predeterminada en el R1 a la interfaz Serial 0/0/0. </p>
+          <p></p>
+          <p>Observe que, en el resultado que se muestra en la figura 2, la configuración de la ruta estática predeterminada generó una entrada “<b>S</b>” en la tabla de routing. La “<b>S</b>” significa que el origen de la ruta es una ruta estática. A diferencia de la ruta estática IPv4, no figura ningún asterisco (<b>*</b>) ni se identifica ningún gateway de último recurso de forma explícita. </p>
+          <p></p>
+          <p>Como en IPv4, las rutas estáticas son rutas configuradas explícitamente para llegar a una red remota específica. Las rutas estáticas IPv6 se configuran con el comando de configuración global <b>ipv6 route </b><i>ipv6-prefix</i><i>/</i><i>longitud-prefijo</i>  {<i>ipv6-address</i><i></i>|<i></i><i>tipo-interfaz número-interfaz</i>}<i></i> . </p>
+          <p></p>
+          <p>En el ejemplo de la figura 3, se muestra la configuración de dos rutas estáticas del R2 para llegar a las dos LAN en el R1. La ruta a la LAN 2001:0DB8:ACAD:2::/64 se configuró con una interfaz de salida, mientras que la ruta a la LAN 2001:0DB8:ACAD:1::/64 se configuró con la dirección IPv6 de siguiente salto. La dirección IPv6 de siguiente salto puede ser una dirección de unidifusión global o link-local de IPv6.</p>
+          <p></p>
+          <p>En la figura 4, se muestra la tabla de routing con las nuevas rutas estáticas instaladas.</p>
+          <p></p>
+          <p>En la figura 5, se confirma la conectividad de red remota del R1 a la LAN 2001:0DB8:ACAD:4::/64 en el R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la secuencia de comandos para introducir una ruta estática predeterminada para IPv6.  El comando es ipv6 route dos puntos dos puntos barra cero s cero barra cero barra cero.  La figura dos muestra el resultado del comando show ipv6 route.  La ruta estática se muestra como dos puntos dos puntos barra cero. La figura tres muestra la configuración de dos rutas estáticas desde el segundo router para llegar a las dos LAN en el primer router. El primer comando es ipv6 route 2 0 0 1 dos puntos D B 8 dos puntos A C A D dos puntos 2 dos puntos dos puntos barra 64 2 0 0 1 dos puntos D B 8 dos puntos A C A D dos puntos 3 dos puntos dos puntos 1.  Esto está utilizando una dirección IP de interfaz de siguiente salto en el comando.  El otro comando es ipv6 route 2 0 0 1 dos puntos D B 8 dos puntos A C A D dos puntos 2 dos puntos dos puntos barra 64 s cero barra cero barra cero.  Esto está utilizando una interfaz de salida en el comando. La figura cuatro muestra el resultado del comando show ipv6 route y ahora incluye las dos rutas estáticas agregadas. La figura cinco muestra una prueba de conectividad mediante el comando ping.  La sintaxis es ping 2001 dos puntos d b 8 dos puntos a c a d dos puntos 4 dos puntos dos puntos 1.  En la figura se enviaron cinco solicitudes de eco de 100 bytes y 5 se recibieron.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

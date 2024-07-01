@@ -1,0 +1,1 @@
+La figura muestra una topología de red ordenada en una estructura jerárquica con switches de capa 2 existentes en la capa de acceso y switches de capa 3 en las capas de distribución y núcleo. Todos los dispositivos están conectados con redundancia.

@@ -1,0 +1,1 @@
+En la figura se muestra la salida que genera el comando “show ip route” en el router dos.  Aparece una ruta de EIGRP con la dirección de la métrica y del sucesor resaltada en color naranja.

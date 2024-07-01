@@ -1,0 +1,13 @@
+<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Detección del R1 y S2</b>]]></text>
+	</component>
+
+	<component id="ID_s1_txt01">
+		<text><![CDATA[&lt;se omitió el resultado&gt;]]></text>
+	</component>
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Visualización de información detallada sobre el LLDP</b>]]></text>
+	</component>
+</textcomponents>

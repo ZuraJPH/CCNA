@@ -1,0 +1,7 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_txt10{
+	line-height: 9px !important;
+}

@@ -1,0 +1,1 @@
+La figura es una animación que muestra cómo un switch recibe un mensaje de difusión de un origen y luego reenvía la difusión a todos los demás miembros conectados al switch. Los switches reenviarán difusiones, lo que hace que todos los dispositivos conectados al switch formen parte el mismo dominio de difusión.

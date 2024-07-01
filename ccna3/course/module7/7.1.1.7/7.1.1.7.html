@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.7 Ruta resumida</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta resumida</h1>
+        <div>
+          <p>La siguiente situación explica cómo el ⁪resumen automático también podría hacer que se produzca un bucle de routing.</p>
+          <p></p>
+          <p>En la figura: </p>
+          <p>1. El R1 tiene una ruta predeterminada 0.0.0.0/0 mediante el router ISP. </p>
+          <p>2. El R1 envía una actualización de routing al R2 con la ruta predeterminada.</p>
+          <p>3. El R2 instala la ruta predeterminada del R1 en su tabla de routing IPv4.</p>
+          <p>4. La tabla de routing del R2 contiene las subredes 172.16.1.0/24, 172.16.2.0/24 y 172.16.3.0/24 en su tabla de routing. </p>
+          <p>5. El R2 envía una actualización resumida al R1 para la red 172.16.0.0/16.</p>
+          <p>6. El R1 instala la ruta resumida para 172.16.0.0/16 mediante el R2.</p>
+          <p>7. El R1 recibe un paquete para 172.16.4.10. Debido a que el R1 tiene una ruta para 172.16.0.0/16 mediante el R2, reenvía el paquete al R2.</p>
+          <p>8. El R2 recibe el paquete con la dirección de destino 172.16.4.10 del R1. El paquete no coincide con ninguna ruta específica, de manera que, mediante la ruta predeterminada en su tabla de routing, el R2 reenvía el paquete de regreso al R1. </p>
+          <p>9. El paquete para 172.16.4.10 va y viene en un bucle entre el R1 y el R2 hasta que el TTL expira y el paquete se descarta.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra una red en la cual el router uno está conectado al ISP y al router dos.  El router dos resumió la ruta uno setenta y dos punto dieciséis punto cero y la envió al router uno.  El router dos también tiene una ruta estática predeterminada al router uno.  Como resultado de la ruta resumida, el router uno envía paquetes con destino a la red uno setenta y dos punto dieciséis punto cuatro punto diez al router dos.  Como resultado de esta ruta estática predeterminada, el router dos envía estos paquetes de vuelta al router uno.  ¿Qué es un bucle de routing?</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

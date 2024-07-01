@@ -1,0 +1,1 @@
+En la figura, se muestra un switch de veinticuatro puertos y se indica que la velocidad de reenvío es de veinticuatro gigabits de tráfico. En la figura, también se muestra un switch de cuarenta y ocho puertos y se indica que la velocidad de reenvío es de cuarenta y ocho gigabits de tráfico.

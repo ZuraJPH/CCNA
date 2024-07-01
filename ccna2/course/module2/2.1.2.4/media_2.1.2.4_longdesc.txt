@@ -1,0 +1,1 @@
+La figura muestra un router (R1) que se conecta a otro router con 4 redes conectadas a él.  El R1 puede usar una sola ruta resumida para apuntar a las redes conectadas al otro router.  Las rutas resumidas son rutas estáticas.

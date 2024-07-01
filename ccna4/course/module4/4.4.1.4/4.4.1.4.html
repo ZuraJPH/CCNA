@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.1.4 Proceso de decisión de ACL extendida</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Proceso de decisión de ACL extendida</h1>
+        <div>
+          <p>En la ilustración, se muestra la ruta de decisión lógica que utiliza una ACL extendida creada para filtrar direcciones de origen y destino, y números de protocolo y de puerto. En este ejemplo, la ACL primero filtra sobre la dirección de origen y, a continuación, sobre el puerto y el protocolo de origen. Luego, filtra por la dirección de destino y después por el puerto y el protocolo de destino, y toma la decisión final de permiso o denegación. </p>
+          <p></p>
+          <p>Recuerde que las entradas en las ACL se procesan una tras otra, de modo que una decisión negativa (“no”) no es necesariamente una decisión de denegación (“deny”). A medida que avanza a través de la ruta de decisión lógica, tenga en cuenta que un “no” significa que se debe pasar a la siguiente entrada hasta que se encuentre una coincidencia para una condición.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un diagrama de flujo de la prueba que los routers hacen a los paquetes con una ACL extendida.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

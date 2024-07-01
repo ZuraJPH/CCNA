@@ -1,0 +1,52 @@
+﻿<textcomponents>
+   <component id="ID_title">
+        <text>
+            <![CDATA[<b>Estados de HSRP</b>]]></text>
+    </component>
+  <component id="ID_table01">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+		<tr >
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+		</tr>
+
+		<tr>
+		<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Estado</b></font></td>
+		<td bgcolor='#077A77'><font color='#ffffff'><b>Definición</b></font></td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'>Inicial</td>
+		<td bgcolor='#eff8f7'>Este estado se ingresa a través de un cambio de configuración o cuando una interfaz está disponible por primera vez.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'>Aprender</td>
+		<td bgcolor='#ffffff'>El router no ha establecido la dirección IP virtual y todavía no ha visto un mensaje de saludo del router activo. En este estado, el router espera para escuchar al router activo.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'>Escuchar</td>
+		<td bgcolor='#eff8f7'>El router conoce la dirección IP virtual, pero el router no es el router activo ni el router de reserva. Escucha los mensajes de saludo de esos routers.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'>Hablar</td>
+		<td bgcolor='#ffffff'>El router envía mensajes de saludo periódicos y participa activamente en la elección de un router activo y/o de reserva.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'>En espera</td>
+		<td bgcolor='#eff8f7'>El router es candidato a convertirse en el próximo router activo y envía mensajes de saludo periódicos.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'>Activo</td>
+		<td bgcolor='#ffffff'>El router actualmente reenvía paquetes que son enviados a la dirección MAC virtual del grupo.  El router envía mensajes de saludo periódicos.</td>
+		</tr>
+
+		</table>]]>
+		        </text>
+		    </component>
+	
+</textcomponents>

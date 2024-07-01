@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>	
+  
+	<slide>
+		
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+	<element type="IMAGE" src="media_1.2.4.2.png" x="0" y="-4" width="680" height="490"/>
+<element type="TEXTBOX" titleId="" bodyId="ID_bullets" x="90" y="340" width="500" height="129" animated="1" subType="ROLLOVER" />
+<element type="TEXT" subType="TITLE" compId="ID_title"/>
+	</slide>
+	
+</data>
+
+

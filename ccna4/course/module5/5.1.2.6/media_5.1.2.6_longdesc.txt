@@ -1,0 +1,1 @@
+La figura muestra una PC (suplicante) conectada a un switch (autenticador) que a su vez está conectado a un servidor de autenticación RADIUS.

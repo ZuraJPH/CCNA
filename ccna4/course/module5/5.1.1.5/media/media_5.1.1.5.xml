@@ -1,0 +1,40 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Ataque de suplantación de identidad de switch</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+  <text><![CDATA[802.1Q]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Troncal]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[VLAN 10]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[802.1Q]]></text> 
+</component>
+
+<component id="ID_txt05">
+	<text><![CDATA[<b>Enlace troncal<br/>no autorizado</b>]]></text>
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Servidor1]]></text> 
+</component>
+
+<component id="ID_txt07">
+  <text><![CDATA[<b>El atacante obtiene acceso a la VLAN del servidor.</b>]]></text>
+</component>
+
+<component id="ID_txt08">
+  <text><![CDATA[Servidor2]]></text> 
+</component>
+
+</textcomponents>

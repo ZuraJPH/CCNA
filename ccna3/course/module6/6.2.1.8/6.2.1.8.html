@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.8 Interfaz pasiva</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interfaz pasiva</h1>
+        <div>
+          <p>Tan pronto como se habilita una nueva interfaz dentro de la red EIGRP, EIGRP intenta formar una adyacencia de vecino con cualquier router vecino para enviar y recibir actualizaciones de EIGRP.  </p>
+          <p></p>
+          <p>Cada tanto puede ser necesario, o ventajoso, incluir una red conectada directamente en la actualización de routing EIGRP, pero no permitir que se forme ninguna adyacencia de vecino fuera de esa interfaz. El comando <b>passive-interface</b> se puede utilizar para evitar que se formen adyacencias de vecino. Existen dos razones principales para habilitar el comando <b>passive-interface</b>:</p>
+          <p>
+            <ul>
+              <li>Para suprimir tráfico de actualización innecesario, por ejemplo, cuando una interfaz es una interfaz LAN, sin otros routers conectados</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Para aumentar los controles de seguridad, por ejemplo, para evitar que dispositivos desconocidos de routing no autorizados reciban actualizaciones de EIGRP</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra que el R1, el R2 y el R3 no tienen vecinos en sus interfaces GigabitEthernet 0/0.</p>
+          <p></p>
+          <p>El comando <b>passive-interface</b> del modo de configuración del router inhabilita la transmisión y recepción de paquetes de saludo EIGRP en estas interfaces. </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>router eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>passive-interface</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>tipo-interfaz número-interfaz </i>
+            </span>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra el comando <b>passive-interface</b> configurado para suprimir los paquetes de saludo en las LAN para el R1 y el R3. El R2 se configura mediante el verificador de sintaxis.</p>
+          <p></p>
+          <p>Sin una adyacencia de vecino, EIGRP no puede intercambiar rutas con un vecino. Por lo tanto, el comando <b>passive-interface</b> evita el intercambio de rutas en la interfaz. Si bien EIGRP no envía ni recibe actualizaciones de routing mediante una interfaz configurada con el comando <b>passive-interface</b>, sí incluye la dirección de la interfaz en las actualizaciones de routing enviadas por otras interfaces no pasivas.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Para configurar todas las interfaces como pasivas, utilice el comando passive-interface default. Para deshabilitar una interfaz como pasiva, utilice el comando<b> no passive-interface </b><i>interface-type interface-number </i>.</p>
+          <p></p>
+          <p>Un ejemplo del uso de la interfaz pasiva para aumentar los controles de seguridad es cuando una red se debe conectar a una organización externa, sobre la cual el administrador local no tiene ningún control, como cuando se conecta a una red ISP. En este caso, el administrador de red local necesitará anunciar el enlace de la interfaz a través de su propia red, pero no querrá que la organización externa reciba actualizaciones de routing del dispositivo local de routing, ni las envíe a dicho dispositivo, ya que esto es un riesgo de seguridad. </p>
+          <p></p>
+          <p>
+            <b>Verificación de la interfaz pasiva</b>
+          </p>
+          <p></p>
+          <p>Para verificar si cualquier interfaz en un router está configurada como pasiva, utilice el comando <b>show ip protocols</b> del modo EXEC privilegiado, como se muestra en la figura 3. Observe que, si bien la interfaz GigabitEthernet 0/0 del R3 es una interfaz pasiva, EIGRP aún incluye la dirección de red de la interfaz 192.168.1.0 en sus actualizaciones de routing.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 4 para configurar el R2 a fin de que suprima los paquetes de saludo EIGRP en su interfaz GigabitEthernet 0/0.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos y el ISP. Cada router está enviando un paquete de saludo fuera de la interfaz de la red LAN. En la figura dos, se muestra la sintaxis para configurar una interfaz pasiva en el router uno y el router tres. Esto evita que se envíen actualizaciones de routing por las interfaces de la red LAN. En la figura tres, se muestra la salida que genera el comando “show ip protocols” en el router tres. Las interfaces pasivas aparecen resaltadas. La figura cuatro corresponde a una actividad interactiva que permite que el estudiante realice la configuración de EIGRP con el comando de interfaz pasiva.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

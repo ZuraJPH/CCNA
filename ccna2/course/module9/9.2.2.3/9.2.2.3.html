@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.3 Análisis de NAT dinámica</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Análisis de NAT dinámica</h1>
+        <div>
+          <p>Con la configuración anterior, en las ilustraciones se muestra el proceso de traducción de NAT dinámica entre dos clientes y el servidor web:</p>
+          <p></p>
+          <p>En la figura 1, se muestra el flujo de tráfico desde adentro hacia fuera:</p>
+          <p></p>
+          <p>1. Los hosts con las direcciones IPv4 de origen (192.168.10.10 [PC1] y 192.168.11.10 [PC2]) envían paquetes para solicitar la conexión al servidor en la dirección IPv4 pública (209.165.200.254).</p>
+          <p>2. El R2 recibe el primer paquete del host 192.168.10.10. Debido a que este paquete se recibió en una interfaz configurada como interfaz NAT interna, el R2 verifica la configuración NAT para determinar si este paquete debe traducirse. Como la ACL permite este paquete, el R2 lo traduce. El R2 consulta su tabla de NAT. Debido a que no hay entrada de traducción para esta dirección IPv4, R2 determina que la dirección de origen 192.168.10.10 se debe traducir de manera dinámica. El R2 selecciona una dirección global disponible del conjunto de direcciones dinámicas y crea una entrada de traducción, 209.165.200.226. La dirección IPv4 de origen inicial (192.168.10.10) es la dirección local interna, y la dirección traducida es la dirección global interna (209.165.200.226) en la tabla de NAT. </p>
+          <p></p>
+          <p>Para el segundo host, 192.168.11.10, el R2 repite el procedimiento, selecciona la siguiente dirección global disponible del conjunto de direcciones dinámicas y crea una segunda entrada de traducción, 209.165.200.227.</p>
+          <p></p>
+          <p>3. El R2 reemplaza la dirección de origen local interna de la PC1, 192.168.10.10, por la dirección global interna traducida 209.165.200.226 y reenvía el paquete. El mismo proceso se lleva a cabo para el paquete de la PC2 con la dirección traducida para esta computadora (209.165.200.227).</p>
+          <p></p>
+          <p>En la figura 2, se muestra el flujo de tráfico desde adentro hacia fuera:</p>
+          <p></p>
+          <p>4. El servidor recibe el paquete de la PC1 y responde con la dirección IPv4 de destino 209.165.200.226. Cuando el servidor recibe el segundo paquete, responde a la PC2 con la dirección IPv4 de destino 209.165.200.227.</p>
+          <p>5a. Cuando el R2 recibe el paquete con la dirección IPv4 de destino 209.165.200.226, realiza una búsqueda en la tabla de NAT. Con la asignación de la tabla, el R2 vuelve a traducir la dirección a la dirección local interna (192.168.10.10) y reenvía el paquete hacia la PC1. </p>
+          <p>5b. Cuando el R2 recibe el paquete con la dirección IPv4 de destino 209.165.200.227, realiza una búsqueda en la tabla de NAT. Con la asignación de la tabla, el R2 vuelve a traducir la dirección a la dirección local interna (192.168.11.10) y reenvía el paquete hacia la PC2.</p>
+          <p>6. La PC1 en 192.168.10.10 y la PC2 en 192.168.11.10 reciben los paquetes y continúan la conversación. El router lleva a cabo los pasos 2 a 5 para cada paquete. (El paso 6 no aparece en las ilustraciones).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra el router dos con una red interna a la izquierda y una red externa a la derecha. La red interna contiene el router 1 y dos computadoras. La red externa contiene un servidor.  Pueden verse paquetes que viajan desde ambas computadoras hasta el servidor, con sus correspondientes direcciones internas y externas. El conjunto NAT en uso es especifica debajo de la imagen. En la figura número dos se muestra la misma topología con los paquetes que regresan a las computadoras desde el servidor.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

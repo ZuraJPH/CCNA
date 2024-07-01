@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.3.1 Pasos para configurar eBGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pasos para configurar eBGP</h1>
+        <div>
+          <p>Para implementar eBGP para este curso, deberá completar las siguientes tareas:</p>
+          <p>
+            <b>Paso 1</b>: Habilitar el routing BGP.</p>
+          <p>
+            <b>Paso 2</b>: Configurar el vecino BGP (interconexión).</p>
+          <p>
+            <b>Paso 3</b>: Publicar las redes que se originan de este AS.</p>
+          <p>La figura muestra la sintaxis de comandos y una descripción de la configuración básica del protocolo eBGP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Una tabla de dos columnas muestra los comandos de configuración de BGP.  Las dos columnas son Comando y Descripción. La primera fila es el comando router bgp as-number que permite un proceso de routing BGP, y coloca al router en modo de configuración de router. El segundo comando es neighbor ip-address remote-as as-number que se utiliza para especificar un vecino de BGP. El as-number es el número de AS del router vecino. La última fila contiene la dirección de red dirección-de-red y, opcionalmente, el comando mask máscara-de-red que se usa para anunciar una dirección de red a un vecino de eBGP como originada por este AS. La máscara-de-red es la máscara de subred de la red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

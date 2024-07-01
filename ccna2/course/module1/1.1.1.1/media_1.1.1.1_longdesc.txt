@@ -1,0 +1,1 @@
+La figura muestra las siguientes estructuras y características relativas al rendimiento de las redes: topología, velocidad, costo, seguridad, disponibilidad, escalabilidad y confiabilidad.

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.2.5 Solución de problemas de ACL IPv4. Ejemplo 5</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de ACL IPv4. Ejemplo 5</h1>
+        <div>
+          <p>En la ilustración, el host 192.168.30.12 puede utilizar Telnet para conectarse a 192.168.31.12, pero según la política de seguridad, esta conexión no debe permitirse. El resultado del comando <b>show access-lists 150</b> indica que no se encontraron coincidencias para la instrucción deny según se esperaba.</p>
+          <p></p>
+          <p>
+            <b>Solución:</b> el host 192.168.30.12 puede utilizar Telnet para conectarse a 192.168.31.12, debido al sentido en el que se aplica la lista de acceso 150 a la interfaz G0/1. La instrucción 10 deniega la conexión de todas las direcciones de origen al host 192.168.31.12 mediante Telnet. Sin embargo, para un filtrado correcto, este filtro se debe aplicar en sentido de salida en G0/1. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra otro ejemplo de error de ACL. y usa la misma topología de referencia. Esta figura muestra la salida del siguiente comando ejecutado en R-2, show access guion lists 150. Se muestra la lista de acceso número 150.  Esta ACL en particular tiene 2 instrucciones.  La primera es 10 deny tcp any host 192 punto 168 punto 31 punto 12 eq telnet. La última instrucción es 20 permit ip any any.  No hay errores en las instrucciones de ACL, el error está en la ubicación y la dirección de ACL.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

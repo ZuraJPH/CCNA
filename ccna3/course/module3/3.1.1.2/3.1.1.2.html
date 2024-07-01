@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.2 Problemas con la redundancia de capa 1: inestabilidad de la base de datos MAC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas con la redundancia de capa 1: inestabilidad de la base de datos MAC</h1>
+        <div>
+          <p>Las tramas de Ethernet no poseen un atributo de tiempo de duración (TTL). Como resultado, si no hay un mecanismo habilitado para bloquear la propagación continua de estas tramas en una red conmutada, continúan propagándose entre los switches incesantemente, o hasta que un enlace se interrumpa y rompa el bucle. Esta propagación continua entre switches puede provocar la inestabilidad de la base de datos MAC. Esto puede ocurrir a causa del reenvío de tramas de difusión. </p>
+          <p></p>
+          <p>Las tramas de difusión se reenvían por todos los puertos de switch, excepto por el puerto de ingreso original. Esto asegura que todos los dispositivos en un dominio de difusión reciban la trama. Si hay más de una ruta para reenviar la trama, se puede formar un bucle infinito. Cuando se produce un bucle, la tabla de direcciones MAC en un switch puede cambiar constantemente con las actualizaciones de las tramas de difusión, lo que provoca la inestabilidad de la base de datos MAC.</p>
+          <p></p>
+          <p>Haga clic en el botón <b>Reproducir</b> en la figura para ver la animación. Cuando se detenga la animación, lea el texto a la izquierda de la topología. La animación continuará después de una pausa breve.</p>
+          <p></p>
+          <p>En la animación:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La PC1 envía una trama de difusión al S2. El S2 recibe la trama de difusión en F0/11. Cuando el S2 recibe la trama de difusión, actualiza su tabla de direcciones MAC para registrar que la PC1 está disponible en el puerto F0/11. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Debido a que es una trama de difusión, el S2 reenvía la trama por todos los puertos, incluidos el Enlace_troncal1 y el Enlace_troncal2. Cuando la trama de difusión llega al S3 y al S1, estos switches actualizan sus tablas de direcciones MAC para indicar que la PC1 está disponible en el puerto F0/1 del S1 y en el puerto F0/2 del S3.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Dado que es una trama de difusión, el S3 y el S1 reenvían la trama por todos los puertos, excepto el puerto de ingreso. El S3 envía las tramas de difusión desde la PC1 hasta el S1. El S1 envía las tramas de difusión desde la PC1 hasta el S3. Cada switch actualiza su tabla de direcciones MAC con el puerto incorrecto para la PC1. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Cada switch reenvía la trama de difusión por todos sus puertos, excepto el puerto de ingreso, lo que provoca que los dos switches reenvíen la trama al S2.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Cuando el S2 recibe las tramas de difusión del S3 y el S1, la tabla de direcciones MAC se actualiza, esta vez con la última entrada recibida de los otros dos switches. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Este proceso se repite una y otra vez hasta que se rompe el bucle al desconectar físicamente las conexiones que lo causan o al apagar uno de los switches en el bucle. Esto crea una alta carga de CPU en todos los switches atrapados en el bucle. Debido a que se reenvían las mismas tramas constantemente entre todos los switches en el bucle, la CPU del switch debe procesar una gran cantidad de datos. Esto disminuye el rendimiento del switch cuando llega tráfico legítimo.</p>
+          <p></p>
+          <p>Un host atrapado en un bucle de red es inaccesible para otros hosts de la red. Además, debido a los constantes cambios en la tabla de direcciones MAC, el switch no sabe cuál es el puerto por el que debe reenviar las tramas de unidifusión. En el ejemplo anterior, los puertos que se indican para la PC1 en los switches son incorrectos. Cualquier trama de unidifusión con destino a la PC1 se repite en bucle por la red, como lo hacen las tramas de difusión. Cuando se repiten en bucle cada vez más tramas, se termina creando una tormenta de difusión.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Esta animación muestra tres switches: S1, S2 y S3.  Cada uno está conectado a los otros dos con un enlace troncal.  El S2 tiene conectadas la PC1, PC2 y PC3.  El S1 tiene conectada la PC4.  La animación demuestra cómo las bases de datos de direcciones MAC pueden ser inestables cuando existen bucles de capa dos en una red.  Una difusión puede producir una asignación incorrecta de dirección MAC a puerto debido al bucle a medida que la difusión continúa rebotando por la red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

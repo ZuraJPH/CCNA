@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.1 Resolución de problemas de la capa física</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de la capa física</h1>
+        <div>
+          <p>La capa física transmite bits desde una computadora a otra y regula la transmisión de un flujo de bits a través del medio físico. La capa física es la única con propiedades físicamente tangibles, como cables, tarjetas y antenas.</p>
+          <p></p>
+          <p>Los problemas en una red con frecuencia se presentan como problemas de rendimiento. Los problemas de rendimiento indican que existe una diferencia entre el comportamiento esperado y el comportamiento observado y que el sistema no funciona como se podría esperar razonablemente. Las fallas y las condiciones por debajo del nivel óptimo en la capa física no solo presentan inconvenientes para los usuarios sino que pueden afectar la productividad de toda la empresa. Las redes en las que se dan estos tipos de condiciones por lo general se desactivan. Dado que las capas superiores del modelo OSI dependen de la capa física para funcionar, el administrador de red debe tener la capacidad de aislar y corregir los problemas en esta capa de manera eficaz.</p>
+          <p></p>
+          <p>Los síntomas frecuentes de los problemas de red en la capa física incluyen los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Rendimiento inferior a la línea de base:</b> las razones más frecuentes de un rendimiento lento o deficiente incluyen servidores sobrecargados o con alimentación insuficiente, configuraciones de router o switch inadecuadas, congestión del tráfico en un enlace de baja capacidad y pérdida crónica de tramas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Pérdida de la conectividad:</b> si un cable o un dispositivo fallan, el síntoma más evidente es una pérdida de la conectividad entre los dispositivos que se comunican a través de ese enlace o con el dispositivo o la interfaz que presenta la falla. Esto se indica por medio de una simple prueba de ping. La pérdida intermitente de la conectividad puede indicar una conexión floja u oxidada.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Cuellos de botella o congestión de la red:</b> si un router, una interfaz o un cable fallan, es probable que los protocolos de routing redirijan el tráfico hacia otras rutas que no estén diseñadas para transportar la capacidad adicional. Esto puede provocar congestión o cuellos de botella en esas partes de la red. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Tasas de uso de CPU elevadas:</b> las tasas de uso de CPU elevadas son un síntoma de que un dispositivo, como un router, un switch o un servidor, funciona en el límite admitido por su diseño o lo supera. Si no se aborda rápidamente, la sobrecarga de CPU puede ocasionar que un dispositivo falle o se desactive. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mensajes de error de consola</b>: los mensajes de error notificados en la consola de dispositivos podrían indicar un problema en la capa física.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los incidentes que comúnmente causan problemas de red en la capa física incluyen los siguientes:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Problemas relacionados con la alimentación:</b> estos son el motivo principal de una falla de la red. Además, debe revisarse el funcionamiento de los ventiladores y asegurarse de que los orificios de entrada y salida de ventilación del bastidor no estén obstruidos. Si en otras unidades cercanas también se produce una pérdida de potencia, considere la posibilidad de que haya un corte de energía en la fuente de alimentación principal.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Fallas de hardware:</b> las tarjetas de interfaz de red (NIC) defectuosas pueden ser la causa de errores de transmisión de la red debido a colisiones tardías, tramas cortas y jabber. Con frecuencia, “jabber” se define como la condición en la que un dispositivo de red transmite continuamente datos aleatorios, sin sentido, a la red. Otras causas probables de jabber son archivos de controlador de la NIC defectuosos o dañados, cables defectuosos o problemas de conexión a tierra.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Fallas del cableado:</b> se pueden corregir numerosos problemas simplemente por medio de volver a asentar cables que se desconectaron de manera parcial. Al realizar una inspección física, se debe controlar que no haya cables dañados, tipos de cable inadecuados ni conectores RJ-45 mal engarzados. Los cables sospechosos se deben probar o cambiar por un cable que se sepa que funcione.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Atenuación:</b> la atenuación puede ocurrir cuando la longitud de un cable supera el límite de diseño para los medios o cuando hay una conexión deficiente que se debe a un cable flojo o a contactos sucios u oxidados. Si la atenuación es grave, el dispositivo receptor no siempre puede distinguir bien entre uno y otro bit del flujo de datos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ruido:</b> la interferencia electromagnética (EMI) local se conoce comúnmente como “ruido”. El ruido se puede generar a partir de muchas fuentes, como estaciones de radio FM, radio de la policía, seguridad de edificios, aviónica para aterrizaje automático, crosstalk (ruido inducido por otros cables en la misma ruta o por cables adyacentes), cables eléctricos cercanos, dispositivos con motores eléctricos grandes o cualquier elemento que cuente con un transmisor más potente que el de un teléfono celular.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Errores de configuración de la interfaz:</b> muchos elementos se pueden configurar incorrectamente en una interfaz y ocasionar que se desactive, por ejemplo, una frecuencia de reloj incorrecta, un origen de reloj incorrecto y que la interfaz no esté encendida.  Esto provoca la pérdida de la conectividad a los segmentos de red conectados. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Superación de límites de diseño</b>: un componente puede funcionar de manera imperfecta en la capa física porque su uso excedió las especificaciones o la capacidad configurada. Al resolver este tipo de problema, es evidente que los recursos del dispositivo funcionan a la capacidad máxima, o cerca de ella, y hay un aumento en el número de errores de interfaz. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Sobrecarga de CPU</b>: los síntomas incluyen procesos con altos porcentajes de uso de CPU, descartes de cola de entrada, rendimiento lento, tiempos de espera de SNMP, falta de acceso remoto o respuesta lenta o fallida de servicios como DHCP, Telnet y ping. En un switch puede pasar lo siguiente: reconvergencia del árbol de expansión, rebote de enlaces EtherChannel, UDLD intermitente, fallas de IP SLA. En los routers, se puede producir una interrupción de actualizaciones de routing, o intermitencia de routing o HSRP. Una de las causas de la sobrecarga de CPU en un router o switch es el alto nivel de tráfico. Si una o más de las interfaces se sobrecarga regularmente de tráfico, se debe considerar la posibilidad de rediseñar el flujo de tráfico de la red o de actualizar el hardware.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el modelo de OSI con los síntomas y las causas en la capa física.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

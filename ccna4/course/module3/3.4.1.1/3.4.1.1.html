@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.1.1 Introducción a GRE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a GRE</h1>
+        <div>
+          <p>La encapsulación de routing genérico (GRE) es un ejemplo de un protocolo de tunneling de VPN de sitio a sitio básico y no seguro. GRE es un protocolo de tunneling desarrollado por Cisco que puede encapsular una amplia variedad de tipos de paquete de protocolo dentro de túneles IP. GRE crea un enlace virtual punto a punto a los routers Cisco en puntos remotos a través de una internetwork IP.</p>
+          <p></p>
+          <p>GRE está diseñada para administrar el transporte del tráfico multiprotocolo y de multidifusión IP entre dos o más sitios, que probablemente solo tengan conectividad IP. Puede encapsular varios tipos de paquete de protocolo dentro de un túnel IP.</p>
+          <p>Como se muestra en la ilustración, una interfaz de túnel admite un encabezado para cada uno de los siguientes protocolos:</p>
+          <p>
+            <ul>
+              <li>Un protocolo encapsulado (o protocolo de pasajeros), como IPv4, IPv6, AppleTalk, DECnet o IPX</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un protocolo de encapsulación (o portadora), como GRE</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un protocolo de entrega de transporte, como IP, que es el protocolo que transporta al protocolo encapsulado</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología para el encapsulamiento de routing genérico. Se puede ver una nube con un router en cada uno de sus extremos. Una conexión LAN que se encuentra fuera de la nube se conecta a cada router. Se extiende una conexión de conducto desde el router de la izquierda hasta el router de la derecha. Arriba del conducto se puede leer el texto: Túnel GRE (protocolo del proveedor). Debajo del conducto se puede leer el texto: Red IP (protocolo de transporte). Se extienden cinco rectángulos adyacentes unos a otros de izquierda a derecha debajo de la figura de la topología. Los cinco rectángulos están etiquetados de izquierda a derecha como: IP, GRE, IP, TCP y datos. Los dos primeros (IP y GRE) son del mismo color. Los tres rectángulos restantes son todos iguales, pero de un color diferente a los dos primeros. Los últimos tres rectángulos a la derecha (IP, TCP y datos) están agrupados con el paquete IP original del encabezado (protocolo de pasajeros). </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

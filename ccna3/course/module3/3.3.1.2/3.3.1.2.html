@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.2 Configuración y verificación de la ID de puente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración y verificación de la ID de puente</h1>
+        <div>
+          <p>Cuando un administrador desea seleccionar un switch específico como puente raíz, se debe ajustar el valor de prioridad del puente para asegurarse de que sea inferior a los valores de prioridad del puente del resto de los switches en la red. Existen dos métodos diferentes para configurar el valor de prioridad del puente en un switch Cisco Catalyst.</p>
+          <p></p>
+          <p>
+            <b>Método 1</b>
+          </p>
+          <p>Para asegurarse de que el switch tenga el valor de prioridad de puente más bajo, utilice el comando <b>spanning-tree vlan </b><i>id_de_vlan</i><b> root primary</b> en el modo de configuración global. La prioridad para el switch está establecida en el valor predefinido 24576 o en el múltiplo más alto de 4096, menos que la prioridad del puente más baja detectada en la red.</p>
+          <p></p>
+          <p>Si se desea un puente raíz alternativo, utilice el comando <b>spanning-tree vlan </b><i>id_de_vlan</i><b> root secondary</b> en el modo de configuración global. Este comando establece la prioridad para el switch en el valor predeterminado 28672. Esto asegura que el switch alternativo se convierta en el puente raíz si falla el puente raíz principal. Se supone que el resto de los switches en la red tienen definido el valor de prioridad predeterminado 32768.</p>
+          <p></p>
+          <p>En la figura 1, el S1 se asignó como puente raíz principal mediante el comando <b>spanning-tree vlan 1 root primary</b>, y el S2 se configuró como puente raíz secundario mediante el comando <b>spanning-tree vlan 1 root secondary</b>.</p>
+          <p></p>
+          <p>
+            <b>Método 2</b>
+          </p>
+          <p>Otro método para configurar el valor de la prioridad de puente es utilizar el comando <b>spanning-tree vlan </b><i>id_de_vlan</i><b> priority </b><i>value </i>en el modo de configuración global. Este comando da un control más detallado del valor de prioridad del puente. El valor de prioridad se configura en incrementos de 4096 entre 0 y 61440. </p>
+          <p></p>
+          <p>En el ejemplo, se asignó el valor de prioridad de puente 24576 al S3 mediante el comando <b>spanning-tree vlan 1 priority 24576</b>.</p>
+          <p></p>
+          <p>Para verificar la prioridad del puente de un switch, utilice el comando <b>show spanning-tree</b>. En la figura 2, la prioridad del switch se estableció en 24576. Además, observe que el switch está designado como puente raíz para la instancia de árbol de expansión.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar los switches S1, S2 y S3. Mediante el método 2 descrito anteriormente, configure el S3 de forma manual y establezca el valor de prioridad en 24576 para la VLAN 1. Mediante el método 1, configure el S2 como raíz secundaria para la VLAN 1 y el S1 como raíz principal para la VLAN 1. Verifique la configuración con el comando <b>show spanning-tree</b> en el S1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches interconectados mediante enlaces troncales.  El switch uno tiene una referencia que muestra el uso del comando spanning guion tree vlan one root primary.  Esto garantiza que el switch uno se convierta en el puente raíz.  El switch tres tiene una referencia que muestra el uso del comando spanning guion tree vlan one priority.  Esto le permite establecer la prioridad del puente para las elecciones del puente raíz.  El switch dos tiene una referencia que muestra el uso del comando spanning guion tree vlan one root secondary.  Esto permitirá que el switch dos se convierta en el puente raíz en caso de falla del puente raíz actual. La figura 2 muestra el resultado del comando show spanning guion tree. La figura 3 es una actividad interactiva que permite que el estudiante practique la configuración de la prioridad de puente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

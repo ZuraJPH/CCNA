@@ -1,0 +1,21 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+	
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#router_text4{line-height:18px;}
+font[face="_typewriter"]{ font-family:courier new !important;}
+#router_text1 span, #router_text2 span, #router_text3 span{
+padding: 3px 0 0px 2px !important; 
+}
+
+#static1, #static2{letter-spacing: -1px !important;}

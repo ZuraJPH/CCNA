@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.3.2 Establecimiento de adyacencias de vecinos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Establecimiento de adyacencias de vecinos</h1>
+        <div>
+          <p>Cuando se habilita OSPF en una interfaz, el router debe determinar si existe otro vecino OSPF en el enlace. Para hacerlo, el router reenvía un paquete de saludo con la ID del router por todas las interfaces con OSPF habilitado. El proceso OSPF utiliza la ID del router OSPF para identificar cada router en el área OSPF de manera exclusiva. La ID de router es un número de 32 bits con formato similar a una dirección IP que se asigna para identificar un router de forma exclusiva entre pares OSPF.</p>
+          <p></p>
+          <p>Cuando un router vecino con OSPF habilitado recibe un paquete de saludo con una ID de router que no figura en su lista de vecinos, el router receptor intenta establecer una adyacencia con el router que inició la comunicación. </p>
+          <p></p>
+          <p>Consulte el R1 de la figura 1. Cuando se habilita OSPFv2, la interfaz Gigabit Ethernet 0/0 habilitada pasa del estado Down al estado Init. El R1 comienza a enviar paquetes de saludo por todas las interfaces con OSPF habilitado para descubrir vecinos OSPF a fin de desarrollar adyacencias con ellos. </p>
+          <p></p>
+          <p>En la figura 2, el R2 recibe el paquete de saludo del R1 y agrega la ID del router R1 a su lista de vecinos. A continuación, el R2 envía un paquete de saludo al R1. El paquete contiene la ID del router R2 y la ID del router R1 en la lista de vecinos de la misma interfaz.</p>
+          <p></p>
+          <p>En la figura 3, el R1 recibe el saludo y agrega la ID del router R2 a su lista de vecinos OSPF. También advierte su propia ID de router en la lista de vecinos del paquete de saludo. Cuando un router recibe un paquete de saludo en el que se indica su ID de router en la lista de vecinos, el router pasa del estado Init al estado Two-Way. </p>
+          <p></p>
+          <p>La acción realizada en el estado Two-Way depende del tipo de interconexión de los routers adyacentes:</p>
+          <p>
+            <ul>
+              <li>Si los dos vecinos adyacentes se interconectan a través de un enlace punto a punto, pasan de inmediato del estado Two-Way a la fase de sincronización de bases de datos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si los routers se interconectan a través de una red Ethernet común, se debe elegir un router designado DR y un BDR.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Debido a que el R1 y el R2 se interconectan a través de una red Ethernet, se elije un DR y un BDR. Como se muestra en la figura 4, el R2 se convierte en el DR, y el R1 es el BDR. Este proceso tiene lugar solo en las redes de accesos múltiples, como las LAN Ethernet.</p>
+          <p></p>
+          <p>Los paquetes de saludo se intercambian de manera continua para mantener la información del router.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran dos routers conectados por medio de un enlace Gigabit Ethernet.  La interfaz Gigabit Ethernet en el router R1 es 172 punto 16 punto 5 punto 1 barra diagonal 24; la interfaz Gigabit Ethernet en el router R2 es 172 punto 16 punto 5 punto 2. En la figura se muestra que el R1 comienza en el estado Down y luego pasa al estado Init.  En este estado, el router OSPF envía paquetes de saludo a la dirección de multidifusión 224 punto cero punto cero punto 5. En la figura dos, se muestra que el R2 recibe el paquete de saludo y devuelve un paquete de saludo de unidifusión que contiene la ID del router y una lista de routers vecinos. En la figura tres, se muestra que el R1 recibe el paquete de saludo de R2 y pasa al estado Two-Way. En la figura cuatro, se muestra que los dos routers acuerdan que el segundo router se convierta en el router designado y el primer router se convierta en el router designado de respaldo en función de las ID de router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

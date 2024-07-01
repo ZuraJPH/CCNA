@@ -1,0 +1,1 @@
+La figura muestra comando de CLI ipv6 router espacio signo de pregunta.  Este comando mostrará todos los protocolos de routing IPv6 admitidos por el IOS actual.  

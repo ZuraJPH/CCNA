@@ -1,0 +1,1 @@
+La figura representa una tabla que enumera las ventajas y desventajas del routing dinámico.  Los datos de la tabla son un resumen del texto de la página.

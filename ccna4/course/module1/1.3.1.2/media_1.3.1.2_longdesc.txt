@@ -1,0 +1,1 @@
+La figura muestra la WAN y los sitios remotos de un campus empresarial.  Se resaltan la red troncal del edificio, la red troncal del campus y la región de WAN.

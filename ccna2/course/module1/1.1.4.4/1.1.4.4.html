@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.4.4 Característica de historial de comandos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.4.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Característica de historial de comandos</h1>
+        <div>
+          <p>La característica de historial de comandos es útil, ya que almacena temporalmente la lista de comandos ejecutados que se deben recuperar. </p>
+          <p></p>
+          <p>Para recuperar comandos del búfer de historial, presione <b>Ctrl</b>+<b>P</b> o la tecla <b>Flecha arriba</b>. El resultado de los comandos comienza con el comando más reciente. Repita la secuencia de teclas para recuperar sucesivamente los comandos más antiguos. Para volver a los comandos más recientes en el búfer de historial, presione <b>Ctrl</b>+<b>N</b> o la tecla <b>Flecha abajo</b>. Repita la secuencia de teclas para recuperar sucesivamente los comandos más recientes.</p>
+          <p></p>
+          <p>De manera predeterminada, el historial de comandos está habilitado, y el sistema captura las últimas 10 líneas de comandos en el búfer de historial. Utilice el comando <b>show history</b> del modo EXEC privilegiado para mostrar el contenido del búfer.</p>
+          <p></p>
+          <p>También es práctico aumentar la cantidad de líneas de comandos que registra el búfer de historial solamente durante la sesión de terminal actual. Utilice el comando <b>terminal history size</b> del modo EXEC del usuario para aumentar o reducir el tamaño del búfer.</p>
+          <p></p>
+          <p>En la figura 1, se muestra un ejemplo de los comandos <b>terminal history size</b> y <b>show history</b>.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para practicar los dos comandos del modo EXEC.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra el ingreso del comando terminal history size 200 en un router para establecer que el historial recuerde los 200 comandos más recientes.  El comando show history se ejecuta luego en el router y el resultado enumera los comandos más recientes ingresados en el router. La figura dos es un elemento de medios interactivos que permite a los estudiantes practicar los comandos terminal history size y show history.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

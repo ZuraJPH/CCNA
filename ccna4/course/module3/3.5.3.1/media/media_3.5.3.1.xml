@@ -1,0 +1,34 @@
+﻿<textcomponents><!--slide 2--><component id='ID_s1_title'>
+	<text><![CDATA[<b>Comandos de configuración de BGP</b>]]></text>
+</component>
+
+<component id='ID_s1_table'>
+<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">	
+
+	
+		
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>  
+	 
+	<tr>
+		<td bgcolor='#666263' width="150"><font color='#FFFFFF'><b>Comando</b></font></td>
+		<td bgcolor='#666263'><font color='#FFFFFF'><b>Descripción</b></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' width="150"><font face="_typewriter" color="#000000">Router(config)#<b> router bgp </b><i>as-number</i></font></td>
+		<td bgcolor='#E9E7E8'>Habilita un proceso de routing de BGP y coloca al router en el modo de configuración de router.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' width="240"><font face="_typewriter" color="#000000">Router(config-router)#<b> neighbor </b><i>dirección-ip</i><b> remote-as </b><i>número-de-as</i></font></td>
+		<td bgcolor='#F2F2F2'>Especifica un vecino de BGP. El número-de-as es el número de AS del vecino.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8'  width="260"><font face="_typewriter" color="#000000">Router(config-router)#<b> network </b><i>dirección-de-red </i>[<b>mask </b><i>máscara-de-red</i>]</font></td>
+		<td bgcolor='#E9E7E8'>Publica una dirección de red en un vecino de eBGP como originada por este AS. La máscara-de-red es la máscara de subred de la red.</td>
+	</tr>
+	
+</table>]]></text>
+</component>
+
+</textcomponents>

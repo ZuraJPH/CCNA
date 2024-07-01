@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.2.2 Solución de problemas de ACL IPv4. Ejemplo 2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de ACL IPv4. Ejemplo 2</h1>
+        <div>
+          <p>En la ilustración, la red 192.168.10.0/24 no puede utilizar TFTP para conectarse a la red 192.168.30.0/24. </p>
+          <p></p>
+          <p>
+            <b>Solución:</b> la red 192.168.10.0/24 no puede utilizar TFTP para conectarse a la red 192.168.30.0/24, porque TFTP utiliza el protocolo de transporte UDP. La instrucción 30 en la lista de acceso 120 permite todo el resto del tráfico TCP. Sin embargo, debido a que TFTP utiliza UDP en lugar de TCP, se deniega implícitamente. Recuerde que la instrucción deny any implícita no aparece en el resultado del comando <b>show access-lists</b> y, por lo tanto, las coincidencias no se muestran.</p>
+          <p></p>
+          <p>La instrucción 30 debería ser <b>ip any any</b>.</p>
+          <p></p>
+          <p>Esta ACL funciona si se aplica a G0/0 del R1, a S0/0/1 del R3 o a S0/0/0 del R2 en sentido de entrada. Sin embargo, según la regla que indica colocar las ACL extendidas más cerca del origen, la mejor opción es colocarla en sentido de entrada en G0/0 del R1, porque permite que el tráfico no deseado se filtre sin cruzar la infraestructura de la red.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra otro ejemplo de error de ACL. y usa la misma topología de referencia.  Esta figura muestra la salida del siguiente comando ejecutado en R-1, show access guion lists 120. Se muestra la lista de acceso número 120.  Esta ACL en particular tiene 3 instrucciones.  La primera línea es 10 deny tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 any eq telnet.  La segunda línea es 20 deny tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 host 192 punto 168 punto 31 punto 12 eq smtp.  La última instrucción es 30 permit tcp any any.  Como la línea 30 solo permite tráfico de tcp, se bloquea el tráfico de udp.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

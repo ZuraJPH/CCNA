@@ -1,0 +1,1 @@
+La figura muestra dos routers conectados a través de un enlace WAN y ambos están ejecutando el protocolo de routing dinámico EIGRP.  Cada router tiene tres redes conectadas y publica esas redes al otro router.

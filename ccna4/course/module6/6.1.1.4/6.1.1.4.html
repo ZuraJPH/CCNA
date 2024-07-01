@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.4 Pérdida de paquetes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pérdida de paquetes</h1>
+        <div>
+          <p>Sin mecanismos de QoS en el lugar, los paquetes se procesan en el orden en el que se reciben. Cuando hay congestión, los dispositivos de red como routers y switches pueden descartar paquetes. Esto significa que los paquetes sensibles al tiempo, como el video y la voz en tiempo real y voz, se descartarán con la misma frecuencia que los datos que no sean urgentes, como el correo electrónico y la exploración web.</p>
+          <p></p>
+          <p>Por ejemplo, cuando un router recibe un flujo de audio digital del protocolo de transmisión en tiempo real (RTP) del protocolo de tiempo real para voz sobre IP (VoIP), debe compensar las fluctuaciones que se encuentren. El mecanismo que administra esta función es el búfer de demora de reproducción. El búfer de demora de reproducción debe almacenar estos paquetes en búfer y reproducirlos en una transmisión constante, como se muestra en la figura 1. Los paquetes digitales luego se convierten nuevamente en una transmisión de audio analógica. </p>
+          <p></p>
+          <p>Si las fluctuaciones son tan grandes que hacen que los paquetes se reciban fuera del alcance de este búfer, se descartan los paquetes que están fuera del rango, y se escuchan interrupciones en el audio, como se muestra en la Figura 2.</p>
+          <p></p>
+          <p>En el caso de pérdidas pequeñas de un paquete, el procesador de señales digitales (DSP) extrapola la información faltante del audio para que el usuario pueda escucharlo sin problemas. Sin embargo, cuando las fluctuaciones exceden lo que puede hacer el DSP para compensar los paquetes faltantes, se escuchan los problemas de audio.</p>
+          <p></p>
+          <p>La pérdida de paquetes es una causa común de los problemas de calidad de voz en una red IP. En una red diseñada correctamente, la pérdida de paquetes debe estar cerca de cero. Los códecs de voz utilizados por DSP pueden tolerar cierto grado de pérdida de paquetes sin un efecto radical en la calidad de voz. Los ingenieros de redes utilizan mecanismos de QoS para clasificar paquetes de voz para que la pérdida de paquetes sea igual a cero. Se garantiza el ancho de banda para las llamadas de voz dando prioridad al tráfico de voz sobre el tráfico que no es sensible al tiempo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra cómo el búfer de demora de reproducción puede compensar las fluctuaciones. La figura 2 muestra un ejemplo de descarte de paquetes por fluctuación excesiva.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

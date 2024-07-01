@@ -1,0 +1,1 @@
+El la figura uno, se muestra una tabla con los cinco diferentes tipos de paquetes EIGRP y su descripción. El la figura dos, se muestra cómo un paquete EIGRP se encapsula en un paquete estándar IP.

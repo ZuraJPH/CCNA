@@ -1,0 +1,121 @@
+﻿<textcomponents>
+ 
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Actividad: Identificar la terminología de tecnología inalámbrica de banda ancha</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_instr_title'>
+		<text><![CDATA[Instrucciones]]></text>
+	</component>
+
+	<component id='ID_s1_instr_body'>
+		<text><![CDATA[Una cada término relacionado con la tecnología inalámbrica de banda ancha con su descripción.]]></text>
+	</component>
+
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+
+	<component id="ID_s1_CORRECT_TITLE">
+		<text><![CDATA[Correcto]]></text>
+	</component>
+
+	<component id="ID_s1_CORRECT_BODY">
+		<text><![CDATA[Unió correctamente cada término relacionado con la tecnología inalámbrica de banda ancha con su descripción.]]></text>
+	</component>
+
+	<component id="ID_s1_INCORRECT_TITLE">
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+	
+	<component id="ID_s1_INCORRECT_BODY">
+		<text><![CDATA[No unió correctamente cada término relacionado con la tecnología inalámbrica de banda ancha con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+	</component>
+
+	<component id='ID_s1_drag01'>
+		<text><![CDATA[DOCSIS]]></text>
+	</component>
+
+	<component id='ID_s1_drag02'>
+		<text><![CDATA[DSL]]></text>
+	</component>
+
+	<component id='ID_s1_drag03'>
+		<text><![CDATA[Wi-Fi municipal]]></text>
+	</component>
+
+	<component id='ID_s1_drag04'>
+		<text><![CDATA[DSLAM]]></text>
+	</component>
+
+	<component id='ID_s1_drag05'>
+		<text><![CDATA[HFC]]></text>
+	</component>
+
+	<component id='ID_s1_drag06'>
+		<text><![CDATA[CMTS]]></text>
+	</component>
+
+	<component id='ID_s1_drag07'>
+		<text><![CDATA[Redes inalámbricas 2G/3G/4G]]></text>
+	</component>
+
+	<component id='ID_s1_drag08'>
+		<text><![CDATA[Transceptor]]></text>
+	</component>
+
+	<component id='ID_s1_drag09'>
+		<text><![CDATA[LTE]]></text>
+	</component>
+
+
+
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[Define las comunicaciones y la interfaz de soporte de funcionamiento que permite agregar la transferencia de datos de alta velocidad a un sistema tradicional de televisión por cable.]]></text>
+	</component>
+
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Medio para proporcionar conexiones de alta velocidad por la infraestructura de cables de cobre ya instalados.]]></text>
+	</component>
+
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[Una red de malla que cubre un área con señales de radio.]]></text>
+	</component>
+
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[Ubicado en el CO, este dispositivo combina las conexiones de DSL individuales de los suscriptores en un enlace de alta capacidad al ISP.]]></text>
+	</component>
+
+	<component id='ID_s1_txt05'>
+		<text><![CDATA[Combina cableado coaxial y de fibra óptica en una infraestructura de cableado híbrida.]]></text>
+	</component>
+
+	<component id='ID_s1_txt06'>
+		<text><![CDATA[Se ubica en la cabecera. Este dispositivo se comunica con los CM ubicados en los hogares de los suscriptores.]]></text>
+	</component>
+
+	<component id='ID_s1_txt07'>
+		<text><![CDATA[Cada uno de estos representa importantes mejoras en las redes de telefonía móvil para la capacidad de datos de alta velocidad.]]></text>
+	</component>
+
+	<component id='ID_s1_txt08'>
+		<text><![CDATA[En ocasiones, se denomina “módem DSL”, conecta al suscriptor a la red DSL.]]></text>
+	</component>
+
+	<component id='ID_s1_txt09'>
+		<text><![CDATA[Una tecnología más moderna y más rápida para los datos móviles de alta velocidad. Se lo considera parte de 4G.]]></text>
+	</component>
+
+	<component id='ID_s1_target_header'>
+		<text><![CDATA[Términos]]></text>
+	</component>
+
+	<component id='ID_s1_text_header'>
+		<text><![CDATA[Descripciones]]></text>
+	</component>
+
+</textcomponents>

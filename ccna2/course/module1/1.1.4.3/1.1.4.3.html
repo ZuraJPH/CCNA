@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.4.3 Filtrado de los resultados del comando show</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrado de los resultados del comando show</h1>
+        <div>
+          <p>Los comandos que generan varias pantallas de resultados se pausan al cabo de 24 líneas de manera predeterminada. Al final del resultado detenido, se muestra el texto --More--. Si presiona <b>Entrar</b>, se muestra la siguiente línea, y si presiona la barra espaciadora, se muestra el siguiente grupo de líneas. Utilice el comando <b>terminal length</b> para especificar la cantidad de líneas que se muestran. Un valor 0 (cero) evita que el router haga una pausa entre las pantallas de resultados.</p>
+          <p></p>
+          <p>Otra característica muy útil que mejora la experiencia del usuario en la interfaz de línea de comandos (CLI) es el filtrado de los resultados del comando <b>show</b>. Los comandos de filtrado se pueden utilizar para mostrar secciones específicas de los resultados. Para habilitar el comando de filtrado, introduzca una barra vertical (<b>|</b>) después del comando <b>show</b> y, a continuación, introduzca un parámetro de filtrado y una expresión de filtrado.</p>
+          <p></p>
+          <p>Los parámetros de filtrado que se pueden configurar después de la barra vertical incluyen lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>section:</b> muestra la sección completa que comienza con la expresión de filtrado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>include:</b> incluye todas las líneas de resultados que coinciden con la expresión de filtrado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>exclude:</b> excluye todas las líneas de resultados que coinciden con la expresión de filtrado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>begin:</b> muestra todas las líneas de resultados desde determinado punto, comenzando por la línea que coincide con la expresión de filtrado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> los filtros de resultados se pueden utilizar junto con cualquier comando <b>show</b>.</p>
+          <p></p>
+          <p>En las figuras 1 a 4, se proporcionan ejemplos de los diversos filtros de resultados.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para filtrar los resultados.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra un ejemplo con comandos de filtrado con Cisco IOS.  En el ejemplo se ingresa el comando show running guión config barra vertical section line vty y el resultado es la sección de la configuración en ejecución que corresponde a las líneas de VTY. La figura dos muestra un ejemplo de uso de un comando de filtrado, y es show ip interface brief barra vertical include up.  En el resultado figuran tres interfaces como "up", lo que significa que están activas. La figura tres muestra un ejemplo de uso de un comando de filtrado, y es show ip interface brief barra vertical exclude unassigned.  En el resultado figuran tres interfaces como "up", lo que significa que están activas.  Es clara la ausencia de la cuarta interfaz en el router que no tiene asignada actualmente una dirección IP, por lo tanto esta dirección de interfaz no se asigna y se omite del resultado. La figura cuatro muestra un ejemplo de uso de un comando de filtrado, y es show ip route barra vertical begin Gateway.  El resultado muestra el contenido del comando show ip route comenzando por la palabra clave gateway y siguiendo hasta el final del resultado. La figura cinco es un elemento de medios interactivos que permite a los estudiantes practicar los comandos de filtrado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

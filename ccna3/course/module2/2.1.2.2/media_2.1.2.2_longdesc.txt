@@ -1,0 +1,1 @@
+En la figura 1, se muestran los comandos para configurar el protocolo VTP. En la figura 2, se muestra la salida del comando show vtp status.

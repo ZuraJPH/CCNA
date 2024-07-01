@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.2.1 Operaciones y controlador SDN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Operaciones y controlador SDN</h1>
+        <div>
+          <p>El controlador de SDN define los flujos de datos que ocurren en el flujo de datos de las SDN. Un flujo es una secuencia de paquetes que atraviesan una red que comparten un conjunto de valores de campo del encabezado. Por ejemplo, un flujo puede consistir en todos los paquetes con las mismas direcciones IP de origen y de destino, o todos los paquetes con el mismo identificador de VLAN.</p>
+          <p></p>
+          <p>Cada flujo que viaja por la red debe primero obtener permiso del controlador SDN, que verifica que la comunicación esté permitida según la política de red. Si el controlador permite un flujo, calcula una ruta para que tome el flujo y agrega una entrada para ese flujo en cada uno de los switches que están a lo largo de la ruta.</p>
+          <p></p>
+          <p>El controlador realiza todas las funciones complejas. El controlador completa las tablas de flujo. Los switches administran las tablas de flujo. En la figura, un controlador SDN se comunica con los switches compatibles con OpenFlow con el protocolo OpenFlow. Este protocolo utiliza Transport Layer Security (TLS) para enviar de manera segura las comunicaciones del plano de control a través de la red. Cada switch de OpenFlow se conecta con otros switches de OpenFlow. También pueden conectarse a los dispositivos de usuarios finales que forman parte de un flujo de paquetes.</p>
+          <p></p>
+          <p>Dentro de cada switch, se utiliza una serie de tablas implementadas en el hardware o el firmware para administrar flujos de paquetes a través del switch. Para el switch, un flujo es una secuencia de paquetes que coincide con una entrada específica en una tabla de flujo. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Esta figura muestra el funcionamiento de SDN. En el centro hay un switch de OpenFlow. Dentro del switch OpenFlow hay seis cuadros, tres en la parte superior y tres debajo. En la parte inferior hay tres cuadros, cada uno rotulado "Tabla de flujo". Hay una flecha que apunta de la tabla de flujo izquierda a la tabla de flujo del centro y luego a la tabla de flujo de la derecha. La tabla de flujo identifica los paquetes entrantes con un flujo en particular y especifica las funciones que se realizarán sobre los paquetes. Puede haber tablas de flujo múltiples que funcionan a modo de canalización. Los tres cuadros superiores representan el software de la tabla del medidor, la tabla de grupos y el canal seguro. La tabla del medidor puede activar diversas acciones relacionadas con el rendmiento en un flujo. La tabla de grupos puede tomar diversas medidas activadas por un flujo de la tabla de flujo. Los términos "Hardware" y "Firmware" están dentro del switch de OpenFlow. El switch de OpenFlow tiene varias flechas que lo conectan a otros dispositivos del diagrama. Hay tres flechas que apuntan a tres sistemas terminales debajo que se muestran como computadoras host. En el switch de OpenFlow hay una flecha bidireccional que apunta a la derecha hacia otros dos switches de OpenFlow. Los tres switches de OpenFlow tienen una flecha bidireccional que apunta a un controlador SDN representado con un servidor informático, que se comunica con el protocolo OpenFlow por SSL.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

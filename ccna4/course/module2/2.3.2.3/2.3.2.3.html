@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.3 Protocolo de autenticación de intercambio de señales (CHAP)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolo de autenticación de intercambio de señales (CHAP)</h1>
+        <div>
+          <p>Una vez que se establece la autenticación con PAP, no se vuelve a autenticar. Esto deja la red vulnerable a los ataques. A diferencia de PAP, que autentica solo una vez, CHAP realiza desafíos periódicos para asegurar que el nodo remoto siga teniendo un valor de contraseña válido. El valor de contraseña varía y cambia de manera impredecible mientras existe el enlace. CHAP utiliza el comando <b>ppp authentication chap</b>.</p>
+          <p></p>
+          <p>
+            <b>Proceso de CHAP</b>
+          </p>
+          <p></p>
+          <p>Una vez completa la fase de establecimiento del enlace PPP, el router local envía un mensaje de desafío al nodo remoto, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>El nodo remoto responde con un valor que se calcula mediante una función hash unidireccional. Generalmente es MD5 basado en la contraseña y el mensaje de desafío, como se muestra en la figura 2. </p>
+          <p></p>
+          <p>El router local compara la respuesta con su propio cálculo del valor de hash esperado. Si los valores coinciden, el nodo de inicio reconoce la autenticación, como se muestra en la figura 3. Si los valores no coinciden, el nodo de inicio finaliza la conexión de inmediato.</p>
+          <p></p>
+          <p>CHAP proporciona protección contra los ataques de reproducción mediante el uso de un valor de desafío variable que es exclusivo e impredecible. Como la comprobación es única y aleatoria, el valor hash resultante también es único y aleatorio. El uso de comprobaciones reiteradas limita el tiempo de exposición ante cualquier ataque. El router local o un servidor de autenticación de terceros tiene el control de la frecuencia y la temporización de los desafíos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Las figuras 1 a 3 muestran el inicio de una conexión CHAP entre dos routers.  En la figura 1, el router 3 inicia el intercambio de tres vías y envía un mensaje de desafío al router 1. La figura 2 muestra el router 1 que responde a la solicitud de desafío enviando su nombre de usuario de CHAP junto con un valor hash para la contraseña. La figura 3 muestra el router 3 que evalúa el nombre de usuario y valida el hash comparándolo con el hash de la contraseña que se encuentra en la base de datos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

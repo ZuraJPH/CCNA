@@ -1,0 +1,1 @@
+En la figura se muestra un router y un servidor que demuestran que se puede realizar una copia de respaldo de IOS en un servidor TFTP.

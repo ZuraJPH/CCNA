@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.1 Problemas de direccionamiento IP de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas de direccionamiento IP de VLAN</h1>
+        <div>
+          <p>Cada VLAN debe corresponder a una subred IP única. Si dos dispositivos en la misma VLAN tienen direcciones de subred diferentes, no se pueden comunicar. Este es un problema frecuente y se resuelve fácilmente mediante la identificación de la configuración incorrecta y el cambio de la dirección de la subred por una dirección correcta.</p>
+          <p></p>
+          <p>En la figura 1, la PC1 no se puede conectar al servidor Web/TFTP que se muestra. </p>
+          <p></p>
+          <p>La verificación de las opciones de configuración IPv4 de la PC1, que se muestra en la figura 2, revela el error más frecuente en la configuración de redes VLAN: una dirección IPv4 mal configurada. La PC1 se configuró con la dirección IPv4 172.172.10.21, pero debería haberse configurado con la dirección 172.17.10.21.</p>
+          <p></p>
+          <p>En la figura 3, el cuadro de diálogo de la configuración de Fast Ethernet de la PC1 muestra la dirección IPv4 actualizada, 172.17.10.21. El resultado que se muestra en la parte inferior indica que la PC1 recuperó la conectividad al servidor Web/TFTP que se encuentra en la dirección IPv4 172.17.10.30.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una LAN pequeña con una PC conectada al switch 2, una PC conectada al switch 3 y un servidor Web conectado al switch 1.  Los enlaces entre los switches son enlaces troncales y se permiten las VLAN necesarias.  La PC conectada al switch 2 tiene una llamada que indica que no puede conectarse al servidor Web. La figura 2 muestra el resultado del comando “ip config” en la PC. La figura 3 muestra una captura de pantalla para configurar la dirección IP en la PC para cambiarla a la subred correcta.  Observe que el captura de pantalla es de una PC en Packet Tracer.  A continuación se presenta el resultado de un comando ping en la PC que muestra un ping correcto al servidor Web.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

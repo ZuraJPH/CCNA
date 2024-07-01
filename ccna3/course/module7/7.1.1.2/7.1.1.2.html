@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.2 Resumen automático de EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resumen automático de EIGRP </h1>
+        <div>
+          <p>Uno de los métodos de ajuste más comunes de EIGRP es habilitar y deshabilitar el resumen automático de ruta. El resumen de ruta permite que un router agrupe redes y las anuncie como un gran grupo por medio de una única ruta resumida. La capacidad para resumir rutas es necesaria debido al rápido crecimiento de las redes.</p>
+          <p></p>
+          <p>Un router de frontera es un router que se ubica en el límite de una red. Este router debe poder anunciar todas las redes conocidas dentro de su tabla de routing a un router de red o router ISP conectado directamente. Potencialmente, esta convergencia puede dar como resultado tablas de rutas muy grandes. Imagine si un solo router tuviera 10 redes diferentes y debiera anunciar las 10 entradas de rutas a un router conector. ¿Qué sucedería si ese router conector también tuviera 10 redes y debiera anunciar las 20 rutas a un router ISP? Si cada router de la empresa siguiera este patrón, la tabla de routing del router ISP sería enorme. </p>
+          <p></p>
+          <p>Para limitar la cantidad de anuncios de routing y el tamaño de las tablas de routing, el protocolo EIGRP proporciona funciones de resumen de ruta. El resumen disminuye la cantidad de entradas en las actualizaciones de routing y reduce la cantidad de entradas en las tablas de routing locales. Reduce, además, el uso del ancho de banda para las actualizaciones de routing y acelera las búsquedas en las tablas de routing. </p>
+          <p></p>
+          <p>El protocolo EIGRP puede habilitarse para realizar el ⁪resumen automático en los límites con clase. Esto significa que el protocolo EIGRP reconoce de forma automática las subredes como una única red de clase A, B o C, y crea solo una entrada en la tabla de routing para la ruta resumida. Como resultado, todo el tráfico destinado a las subredes viaja por esa ruta. </p>
+          <p></p>
+          <p>En la ilustración, se muestra un ejemplo de la manera en que funciona el ⁪resumen automático. Los routers R1 y R2 están configurados con EIGRP para IPv4, con ⁪resumen automático. El R1 tiene tres subredes en la tabla de routing: 172.16.1.0/24, 172.16.2.0/24 y 172.16.3.0/24. En la arquitectura de direccionamiento de redes con clase, todas estas subredes se consideran parte de una red de clase B más grande: 172.16.0.0/16. Debido a que el protocolo EIGRP en el router R1 está configurado para que realice ⁪resumen automático, cuando envía su actualización de routing a R2, resume las tres subredes /24 como una única red 172.16.0.0/16. Esto reduce la cantidad de actualizaciones de routing enviadas y la cantidad de entradas en la tabla de routing de IPv4 del R2.</p>
+          <p></p>
+          <p>Todo el tráfico destinado a las tres subredes viaja a través de la única ruta. El R2 no mantiene rutas a subredes individuales y no se descubre información de subredes. </p>
+          <p></p>
+          <p>En una red empresarial, es posible que la ruta elegida para alcanzar la ruta resumida no sea la mejor elección para el tráfico que está intentando alcanzar la subred individual. La única forma en que todos los routers pueden encontrar las mejores rutas para cada subred individual es que los vecinos envíen información sobre las subredes. En esta situación, se debe deshabilitar el ⁪resumen automático. Cuando se deshabilita el resumen automático, las actualizaciones incluyen información de subredes. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran dos routers conectados directamente.  El router uno tiene 3 subredes: la uno setenta y dos punto dieciséis punto uno punto cero barra oblicua veinticuatro, la uno setenta y dos punto dieciséis punto dos punto cero barra oblicua veinticuatro, y la uno setenta y dos punto dieciséis punto tres punto cero barra oblicua veinticuatro.  EIGRP resumirá automáticamente estas subredes en los límites con clase de uno setenta y dos punto dieciséis punto cero punto cero barra oblicua dieciséis, ya que son subredes de una red de clase B.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra la topología simplificada de un edificio de oficinas con tres VLAN que abarcan tres pisos. Hay una actividad interactiva de clase.

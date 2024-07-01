@@ -1,0 +1,16 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+pre{overflow-x:hidden !important;}
+#ID_s1_txt01{letter-spacing:-.9px;}
+.colorr{color:#f68026 !important;}
+#ID_s2_txt01{padding-left:4px !important;line-height:15px}
+
+.truncated_txt{
+		letter-spacing: -0.8px !important;
+}
+
+

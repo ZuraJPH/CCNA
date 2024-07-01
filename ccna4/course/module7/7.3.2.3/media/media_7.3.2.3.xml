@@ -1,0 +1,26 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Marco de ACI</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Perfil de red de la aplicación</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Contrato de cliente o<br/> abonado]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[VLAN]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[VMware]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Servicios <br/>web]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Aplicación]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[Base de datos]]></text>
+	</component>
+</textcomponents>

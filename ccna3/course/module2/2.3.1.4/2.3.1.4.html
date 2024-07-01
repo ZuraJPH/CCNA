@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.4 Routing entre VLAN con puertos enrutados</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routing entre VLAN con puertos enrutados</h1>
+        <div>
+          <p>
+            <b>Puertos enrutados y puertos de acceso en switches</b>
+          </p>
+          <p></p>
+          <p>Un puerto enrutado es un puerto físico que funciona de manera similar a una interfaz en un router. A diferencia de los puertos de acceso, los puertos enrutados no se asocian a una VLAN determinada. Los puertos enrutados se comportan como una interfaz del router normal. Además, debido a la eliminación de la funcionalidad de capa 2, los protocolos de capa 2 (tales como STP), no funcionan en interfaces enrutadas. Sin embargo, algunos protocolos, como LACP y EtherChannel, funcionan en la capa 3.</p>
+          <p></p>
+          <p>A diferencia de los routers IOS de Cisco, los puertos enrutados en un switch IOS de Cisco no admiten subinterfaces.</p>
+          <p></p>
+          <p>Los puertos enrutados se utilizan para enlaces punto a punto. Las conexiones de routers WAN y dispositivos de seguridad son ejemplos del uso de puertos enrutados. En una red conmutada, los puertos enrutados se suelen configurar entre los switches de las capas de núcleo y de distribución. La figura muestra un ejemplo de puertos enrutados en una red conmutada de campus.</p>
+          <p></p>
+          <p>Para configurar los puertos enrutados, utilice el comando <b>no switchport</b> del modo de configuración de interfaz en los puertos adecuados. Por ejemplo, la configuración predeterminada de las interfaces en los switches Catalyst 3560 es de interfaces de capa 2, por lo que se deben configurar de forma manual como puertos enrutados. Además, asigne una dirección IP y otros parámetros de capa 3, según sea necesario. Después de asignar la dirección IP, verifique que el routing IP esté habilitado de manera global y que los protocolos de routing aplicables estén configurados. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> los switches de la serie Catalyst 2960 no admiten puertos enrutados.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos VLAN conectadas a un clúster de switches de capa de distribución con varias conexiones redundantes. Hay una llamada que indica que uno de los enlaces entre un par de switches de distribución se ha configurado como interfaz enrutada.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

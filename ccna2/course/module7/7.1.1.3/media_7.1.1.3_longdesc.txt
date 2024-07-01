@@ -1,0 +1,1 @@
+La figura muestra un router con un paquete que ingresa al puerto. El paquete se procesará por un A.C.L entrante. La figura también muestra un paquete que sale del router. Este paquete se procesará por un A.C.L saliente.

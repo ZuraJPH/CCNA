@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.1.2 Características de GRE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Características de GRE</h1>
+        <div>
+          <p>GRE es un protocolo de tunneling desarrollado por Cisco que puede encapsular una amplia variedad de tipos de paquete de protocolo dentro de túneles IP, lo que crea un enlace punto a punto virtual a los routers Cisco en puntos remotos a través de una internetwork IP. El tunneling IP que utiliza GRE habilita la expansión de la red a través de un entorno de backbone de protocolo único. Esto se logra mediante la conexión de subredes multiprotocolo en un entorno de backbone de protocolo único.</p>
+          <p>Las características de GRE son las siguientes:</p>
+          <p>
+            <ul>
+              <li>GRE se define como un estándar IETF (RFC 2784).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>En el encabezado IP externo, se utiliza el número 47 en el campo de protocolo para indicar que lo que sigue es un encabezado GRE.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La encapsulación de GRE utiliza un campo de tipo de protocolo en el encabezado GRE para admitir la encapsulación de cualquier protocolo de capa 3 del modelo OSI. Los tipos de protocolo se definen en RFC 1700 como “EtherTypes”.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>GRE en sí mismo es independiente del estado; de manera predeterminada, no incluye ningún mecanismo de control de flujo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>GRE no incluye ningún mecanismo de seguridad sólido para proteger su contenido.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El encabezado GRE, junto con el encabezado de tunneling IP que se indica en la ilustración, crea por lo menos 24 bytes de sobrecarga adicional para los paquetes que se envían por túnel.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">El encabezado de un paquete encapsulado de GRE se muestra como cinco rectángulos. Igual que la última figura. Se extienden cinco rectángulos adyacentes unos a otros de izquierda a derecha debajo de la figura de la topología. Los cinco rectángulos están etiquetados de izquierda a derecha como: IP, GRE, IP, TCP y datos. Los dos primeros (IP y GRE) son del mismo color. Los tres rectángulos restantes son todos iguales, pero de un color diferente a los dos primeros. El rectángulo de GRE está dividido en dos rectángulos más pequeños: indicadores y tipo de protocolo. El campo de encabezado de señaladores identifica la presencia de campos de encabezado optativos.  El campo tipo de protocolo identifica el tipo de carga útil. Se usa EtherType 0x800 para IPv4.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

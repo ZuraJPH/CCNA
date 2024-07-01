@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide type="MBAR">
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+            <element type="IMAGE" src="media_5.2.2.2_s1.png" x="0" y="0" width="680" height="490" />
+            <element type="BUBBLE" compId="ID_s1_txt01" x="136" y="80" width="196" height="61" align="left" tailPosition="7" tailFlip="0" />
+            <element type="TEXT" id="ID_static_1" text="192.168.1.3" x="120" y="269" align="center" width="59" />
+            <element type="TEXT" id="ID_static_2" text="192.168.1.1" x="413" y="238" align="center" width="57" />
+            <element type="TEXT" compId="ID_s1_txt02" x="240" y="181" width="82" expand="left+right" align="center" />
+            <element type="ROUTER" textId="ID_s1_txt01" x="40" y="307" width="600" height="137" />
+            <element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_photo.jpg" />
+            <element type="IMAGE" x="54" y="53" width="572" height="413" subType="STD" src="5_2_2_2A.jpg" />
+            <element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#FFFFFF" />
+            <element type="IMAGE" src="img_border.png" x="0" y="0" width="680" height="490" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_photo.jpg" />
+            <element type="IMAGE" x="40" y="97" width="650" height="297" subType="STD" src="5_2_2_2B.jpg" />
+            <element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#FFFFFF" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="ROUTER" textId="ID_s4a_txt01" x="40" y="50" width="600" height="430" />
+            <element type="TEXT" subType="TITLE" compId="ID_s4_title" color="#FFFFFF" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="ROUTER" textId="ID_s5_txt01" x="40" y="75" width="600" height="300" />
+            <element type="TEXT" subType="TITLE" compId="ID_s5_title" color="#FFFFFF" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="ACTIVITY" subType="SYNTAX" compId="ID_SC2" x="25" y="60" width="630" height="390" resetId="ID_sc1_reset" showMeId="ID_sc1_showme" showAllId="ID_sc1_showall" />
+            <element type="TEXT" subType="TITLE" compId="ID_s6_title" color="#FFFFFF" />
+        </slide>
+    </slide>
+    <text id="ID_s1_txt01">
+        <![CDATA[<table width="420" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>R1(config)# <strong>snmp-server community batonaug ro SNMP_ACL</strong></td>
+  </tr>
+  <tr>
+    <td>R1(config)# <strong>snmp-server location NOC_SNMP_MANAGER</strong></td>
+  </tr>
+  <tr>
+    <td>R1(config)# <strong>snmp-server contact Wayne World</strong></td>
+  </tr>
+  <tr>
+    <td>R1(config)# <strong>snmp-server host 192.168.1.3 version 2c batonaug</strong></td>
+  </tr>
+  <tr>
+    <td>R1(config)# <strong>snmp-server enable traps</strong></td>
+  </tr>
+  <tr>
+    <td>R1(config)# <strong>ip access-list standard SNMP_ACL</strong></td>
+  </tr>
+  <tr>
+    <td>R1(config-std-nacl)# <strong>permit 192.168.1.3</strong></td>
+  </tr>
+</table>]]>
+    </text>
+    <text id="ID_s4a_txt01">
+        <![CDATA[
+<pre>R1# <b>show snmp</b>
+Chassis: FTX1636848Z
+<font color="#F68026"><b>Contact: Wayne World
+Location: NOC_SNMP_MANAGER</b></font>
+0 SNMP packets input
+    0 Bad SNMP version errors
+    0 Unknown community name
+    0 Illegal operation for community name supplied
+    0 Encoding errors
+    0 Number of requested variables
+    0 Number of altered variables
+    0 Get-request PDUs
+    0 Get-next PDUs
+    0 Set-request PDUs
+    0 Input queue packet drops (Maximum queue size 1000)
+19 SNMP packets output
+    0 Too big errors (Maximum packet size 1500)
+    0 No such name errors
+    0 Bad values errors
+    0 General errors
+    0 Response PDUs
+<font color="#F68026">    <b>19 Trap PDUs</b></font>
+SNMP Dispatcher:
+   queue 0/75 (current/max), 0 dropped
+SNMP Engine:
+   queue 0/1000 (current/max), 0 dropped
+
+<font color="#F68026"><b>SNMP logging: enabled</b></font>
+<font color="#F68026"><b>    Logging to 192.168.1.3.162,</b></font> 0/10, 19 sent, 0 dropped.
+</pre>
+]]></text>
+    <text id="ID_s5_txt01">
+        <![CDATA[
+<pre>R1# <strong>show snmp community</strong>
+
+Community name: ILMI
+Community Index: cisco0
+Community SecurityName: ILMI
+storage-type: read-only              active
+
+
+<font color="#F68026"><b>Community name: batonaug
+Community Index: cisco7
+Community SecurityName: batonaug
+storage-type: nonvolatile            active       access-list: SNMP_ACL</b></font>
+
+
+Community name: batonaug@1
+Community Index: cisco8
+Community SecurityName: batonaug@1
+storage-type: nonvolatile            active       access-list: SNMP_ACL</pre>
+]]></text>
+</data>

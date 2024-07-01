@@ -1,0 +1,1 @@
+La figura muestra una red de tres switches, una computadora cliente y un servidor DHCP.  Un atacante inserta un servidor DHCP dudoso en la red para tratar de iniciar un ataque por suplantación de DHCP.

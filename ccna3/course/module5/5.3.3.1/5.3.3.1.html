@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.3.1 ¿Por qué utilizar protocolos de estado de enlace?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>¿Por qué utilizar protocolos de estado de enlace?</h1>
+        <div>
+          <p>Como se muestra en la ilustración, los protocolos de routing de estado de enlace presentan varias ventajas en comparación con los protocolos de routing vector distancia. </p>
+          <p>
+            <ul>
+              <li>
+                <b>Armado de un mapa topológico:</b> los protocolos de routing de estado de enlace crean un mapa topológico —o árbol de SPF— a partir de la topología de la red. Debido a que los protocolos de routing de estado de enlace intercambian estados de enlace, el algoritmo SPF puede crear un árbol SPF de la red. Al utilizar el árbol SPF, cada router puede determinar en forma independiente la ruta más corta a cada red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Convergencia rápida:</b> cuando reciben un LSP, los protocolos de routing de estado de enlace saturan de inmediato todas las interfaces con el LSP, excepto la interfaz desde la que se lo recibió. En cambio, el protocolo RIP necesita procesar cada actualización de routing y actualizar su tabla de routing antes de saturar otras interfaces. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Actualizaciones desencadenadas por eventos:</b> después de la saturación inicial con LSP, los protocolos de routing de estado de enlace solo envían un LSP cuando se produce un cambio en la topología. El LSP sólo incluye la información relacionada con el enlace afectado. A diferencia de algunos protocolos de routing vector distancia, los protocolos de routing de estado de enlace no envían actualizaciones periódicas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Diseño jerárquico:</b> los protocolos de routing de estado de enlace utilizan el concepto de áreas. Las áreas múltiples crean un diseño jerárquico para redes y permiten un mejor agregado de rutas (sumarización) y el aislamiento de los problemas de routing dentro del área. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra las ventajas de los protocolos de routing de estado de enlace. La lista es un resumen del texto de la página.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

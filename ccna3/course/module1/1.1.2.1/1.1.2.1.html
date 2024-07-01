@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.1 Diseño de escalabilidad </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Diseño de escalabilidad </h1>
+        <div>
+          <p>El encargado del diseño de una red de tamaño pequeño, mediano o grande debe elaborar una estrategia que posibilite la disponibilidad y el escalamiento de la red de manera sencilla y eficaz. En una estrategia de diseño básico de red, se incluyen las siguientes recomendaciones:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Utilice equipo modular expansible o de dispositivos agrupados que puedan actualizarse fácilmente para incrementar las capacidades. Se pueden agregar módulos de dispositivos a los equipos existentes para admitir nuevos dispositivos y características sin necesidad de actualizaciones de equipos a gran escala.  Algunos dispositivos se pueden integrar en un clúster para que funcionen como un solo dispositivo, a fin de simplificar la administración y la configuración.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Diseñe la red jerárquica para que incluya módulos que se puedan agregar, actualizar y modificar según sea necesario, sin afectar el diseño de otras áreas funcionales de la red. Por ejemplo, cree una capa de acceso independiente que se pueda expandir sin afectar las capas de distribución y de núcleo de la red de campus. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cree una estrategia de direcciones IPv4 o IPv6 que sea jerárquica. Si el direccionamiento se planifica meticulosamente, se evita la necesidad de volver a direccionar la red para admitir usuarios y servicios adicionales. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Elija routers o switches de capas múltiples para limitar broadcast y filtrar otro tipo de tráfico no deseado en la red. Utilice dispositivos de capa 3 para filtrar y reducir el tráfico al núcleo de la red. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, los requisitos de diseño de red más avanzado incluyen lo siguiente:</p>
+          <p>
+            <ul>
+              <li>La implementación de enlaces redundantes en la red, entre los dispositivos esenciales y los dispositivos de capa de acceso y de capa de núcleo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La implementación de varios enlaces entre los equipos, ya sea con agregación de enlaces (EtherChannel) o con balanceo de carga de mismo costo para aumentar el ancho de banda. La combinación de varios enlaces Ethernet en una única configuración con balanceo de carga de EtherChannel aumenta el ancho de banda disponible. Las implementaciones de EtherChannel se pueden utilizar cuando, por restricciones de presupuesto, no se pueden adquirir interfaces de alta velocidad o tendidos de fibra óptica.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El uso de un protocolo de routing escalable y la implementación de características dentro de ese protocolo para aislar las actualizaciones de routing y minimizar el tamaño de la tabla de routing.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La implementación de conectividad inalámbrica para permitir movilidad y expansión.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Los gráficos que aparecen en la figura son diferentes ejemplos de redundancia.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s2_txt03,#ID_s2_txt04{
+	letter-spacing: -0.5px !important;
+}

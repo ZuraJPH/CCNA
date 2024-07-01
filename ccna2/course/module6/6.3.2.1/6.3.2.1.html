@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.1 Configuración del routing entre VLAN antiguo: preparación</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración del routing entre VLAN antiguo: preparación</h1>
+        <div>
+          <p>El routing entre VLAN antiguo requiere que los routers tengan varias interfaces físicas. El router realiza el enrutamiento al conectar cada una de sus interfaces físicas a una VLAN única. Además, cada interfaz se configura con una dirección IPv4 para la subred asociada con la VLAN específica a la cual está conectada. Al configurar las direcciones IPv4 en las interfaces físicas, los dispositivos de red conectados a cada una de las VLAN pueden comunicarse con el router mediante la interfaz física conectada a la misma VLAN. En esta configuración los dispositivos de red pueden utilizar el router como un gateway para acceder a los dispositivos conectados a las otras VLAN.</p>
+          <p></p>
+          <p>El proceso de enrutamiento requiere del dispositivo de origen para determinar si el dispositivo de destino es local o remoto con respecto a la subred local. El dispositivo de origen realiza esta determinación al comparar las direcciones IPv4 de origen y de destino con la máscara de subred. Una vez que se determina que la dirección IPv4 de destino está en una red remota, el dispositivo de origen debe identificar adónde necesita reenviar el paquete para llegar al dispositivo de destino. El dispositivo de origen examina la tabla de enrutamiento local para determinar dónde es necesario enviar los datos. Los dispositivos utilizan sus gateways predeterminados como destino de capa 2 para todo el tráfico que debe abandonar la subred local. El gateway predeterminado es la ruta que el dispositivo utiliza cuando no tiene otra ruta explícitamente definida hacia la red de destino. La dirección IPv4 de la interfaz del router en la subred local actúa como gateway predeterminado para el dispositivo emisor.</p>
+          <p></p>
+          <p>Una vez que el dispositivo de origen determina que el paquete debe viajar a través de la interfaz del router local en la VLAN conectada, envía una solicitud de ARP para determinar la dirección MAC de la interfaz del router local. Una vez que el router envía su respuesta de ARP al dispositivo de origen, este puede utilizar la dirección MAC para finalizar el entramado del paquete antes de enviarlo a la red como tráfico de unidifusión.</p>
+          <p></p>
+          <p>Dado que la trama de Ethernet tiene la dirección MAC de destino de la interfaz del router, el switch sabe exactamente a qué puerto del switch reenviar el tráfico de unidifusión para llegar a la interfaz del router de dicha VLAN. Cuando la trama llega al router, el router elimina la información de la dirección MAC de origen y destino para examinar la dirección IPv4 de destino del paquete. El router compara la dirección de destino con las entradas en la tabla de enrutamiento para determinar dónde es necesario reenviar los datos para alcanzar el destino final. Si el router determina que la red de destino es una red conectada en forma local, como sería el caso del routing entre VLAN, envía una solicitud de ARP por la interfaz que está conectada físicamente a la VLAN de destino. El dispositivo de destino responde al router con la dirección MAC, la cual luego utiliza el router para entramar el paquete. El router envía el tráfico unicast al switch, que lo reenvía por el puerto donde se encuentra conectado el dispositivo de destino.</p>
+          <p></p>
+          <p>Haga clic en Reproducir en la figura para ver cómo se realiza el routing entre VLAN antiguo.</p>
+          <p></p>
+          <p>Aunque existen muchos pasos en el proceso de routing entre VLAN, cuando dos dispositivos en diferentes VLAN se comunican a través de un router, el proceso completo tiene lugar en una fracción de segundo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación que demuestra los diferentes pasos involucrados con el routing entre VLAN antiguo. El proceso incluye la detección ARP para detectar los dispositivos conectados, la entrega de paquetes con unidifusión y el etiquetado de tramas en los enlaces troncales. Se proporciona una nota que indica que no se etiquetan los paquetes que se dirigen al router porque no es un enlace troncal.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

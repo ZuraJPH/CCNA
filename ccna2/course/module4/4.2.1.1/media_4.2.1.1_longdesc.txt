@@ -1,0 +1,1 @@
+La figura es una animación que demuestra cómo un switch de LAN toma decisiones de reenvío según la dirección de destino de una trama entrante.

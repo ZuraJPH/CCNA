@@ -1,0 +1,55 @@
+﻿<textcomponents><!-- slide 2 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Comparación de eBGP y de iBGP</b>]]></text>
+	</component>
+	
+	<component id='ID_txt00'>
+		<text><![CDATA[<b>AS65001</b>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[<b>AS65002</b>]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[<b>Otro ISP</b>]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[<b>Internet</b>]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[<b>iBGP</b>]]></text>
+	</component>
+
+	<component id='ID_txt05'>
+		<text><![CDATA[<b>iBGP</b>]]></text>
+	</component>
+
+	<component id='ID_txt06'>
+		<text><![CDATA[<b>iBGP</b>]]></text>
+	</component>
+
+	<component id='ID_txt07'>
+		<text><![CDATA[<b>iBGP</b>]]></text>
+	</component>
+
+	<component id='ID_txt08'>
+		<text><![CDATA[<b>iBGP</b>]]></text>
+	</component>
+    <component id='ID_txt09'>
+		<text><![CDATA[<b>iBGP</b>]]></text>
+	</component>
+	
+
+	<component id='ID_txt010'>
+		<text><![CDATA[<b>eBGP</b>]]></text>
+	</component>
+
+	<component id='ID_txt011'>
+		<text><![CDATA[<b>eBGP</b>]]></text>
+	</component>
+
+	<component id='ID_txt012'>
+		<text><![CDATA[<b>eBGP</b>]]></text>
+	</component><!-- end slide 2 --></textcomponents>

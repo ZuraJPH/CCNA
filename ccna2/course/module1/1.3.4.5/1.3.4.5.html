@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.4.5 Ejemplos de routing dinámico IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.4.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de routing dinámico IPv6</h1>
+        <div>
+          <p>Los routers R1 y R2 se configuraron con el protocolo de routing dinámico EIGRP para IPv6. (Este es el equivalente a EIGRP para IPv4 en IPv6).</p>
+          <p></p>
+          <p>Para ver la tabla de routing en el R1, introduzca el comando <b>show ipv6 route</b>, como se muestra en la ilustración. En el resultado de la ilustración, se muestra la tabla de routing del R1 después del intercambio de actualizaciones y la convergencia de los routers. Además de las rutas conectadas y locales, hay dos entradas “<b>D</b>” (rutas EIGRP) en la tabla de routing. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una red de dos routers conectados a la nube de Internet a través de un enlace WAN, y cada uno tiene dos redes activas en los puertos gigabit Ethernet.  El resultado se muestra desde el comando show ipv6 route que se ejecuta en uno de los routers.  La lista incluye tres rutas locales, tres direcciones IP de interfaz y dos rutas aprendidas de EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

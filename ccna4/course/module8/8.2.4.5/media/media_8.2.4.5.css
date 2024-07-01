@@ -1,0 +1,18 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+.or1{
+  color: #F68026;
+}
+.greenColor{
+	color: #459E3F;
+}
+#ID_s4_txt01,#ID_s6_txt01{
+	background-color: #0D658B;
+	padding: 5px 0px 5px 5px !important;
+}
+
+

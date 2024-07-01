@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.5 Servicios diferenciados</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Servicios diferenciados</h1>
+        <div>
+          <p>El modelo de Calidad de Servicio (QoS) de servicios diferenciados (DiffServ) especifica un mecanismo simple y escalable para clasificar y administrar el tráfico de red y proporcionar las garantías de QoS en redes IP modernas. Por ejemplo, DiffServ puede proporcionar servicio garantizado de baja latencia al tráfico de red crítico, como voz o video, al mismo tiempo que proporciona garantías del mejor tráfico a servicios no críticos como tráfico web o transferencias de archivos.</p>
+          <p></p>
+          <p>El diseño de DiffServ supera las limitaciones de los modelos de mejor esfuerzo e IntServ. El modelo DiffServ se describe en RFC 2474, 2597, 2598, 3246, 4594. DiffServ puede proporcionar una Calidad de Servicio “casi garantizada” sin perder rentabilidad ni escalabilidad.</p>
+          <p></p>
+          <p>El modelo DiffServ es un concepto similar al de enviar un paquete mediante un servicio de entrega. Usted solicita (y paga) un nivel de servicio cuando envía un paquete. En la red de paquetes, se reconoce el nivel de servicio por el que usted pagó y se le brinda a su paquete servicio normal o preferencial, según lo que usted solicitó.</p>
+          <p></p>
+          <p> DiffServ no es una estrategia de QoS de extremo a extremo porque no puede otorgar garantías de extremo a extremo. Sin embargo, el modelo DiffServ es un enfoque más escalable para implementar QoS. A diferencia de IntServ y "hard QoS" (QoS fuerte) en los que los hosts terminales señalan sus necesidades de QoS a la red, DiffServ no utiliza la señalización. En su lugar, DiffServ usa un enfoque de “soft QoS” (QoS suave).  Funciona en el modelo que proporciona QoS, donde los elementos de red se configuran para mantener varias clases de tráfico cada uno con requisitos de QoS diferentes.</p>
+          <p></p>
+          <p>La Figura 1 es una simple ilustración del modelo DiffServ.</p>
+          <p></p>
+          <p>Mientras el host envía tráfico a un router, el router clasifica los flujos en agregados (clases) y proporciona la política QoS apropiada para las clases. DiffServ impone y aplica los mecanismos de QoS en base a saltos, aplicando uniformemente el significado global a cada clase de tráfico para proporcionar flexibilidad y escalabilidad. Por ejemplo, DiffServ podría configurarse para agrupar todos los flujos de TCP como clase única y asignar el ancho de banda para dicha clase, en vez de para los flujos individuales, como lo haría IntServ. Además de clasificar el tráfico, DiffServ minimiza los requisitos de mantenimiento de señales y estados en cada nodo de red.</p>
+          <p></p>
+          <p>Específicamente, DiffServ divide el tráfico de red en clases según los requisitos de la empresa. Se puede asignar a un nivel diferente de servicio a cada una de las clases. A medida que los paquetes atraviesan una red, cada uno de los dispositivos de red identifica la clase de paquete y brinda servicios al paquete según esa clase. Con DiffServ, es posible elegir muchos niveles de servicio. Por ejemplo, al tráfico de voz desde teléfonos IP se le otorga generalmente un trato preferencial sobre el resto del tráfico de aplicaciones, al correo electrónico se le da generalmente el servicio de mejor esfuerzo, y al tráfico no empresarial se le puede asignar muy poco servicio o bloquearlo por completo.</p>
+          <p></p>
+          <p>La figura 2 incluye las ventajas y desventajas del modelo DiffServ.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Las redes modernas usan principalmente el modelo DiffServ. Sin embargo, debido a los volúmenes crecientes de tráfico sensible a demoras y fluctuaciones, en ocasiones IntServ y RSVP se implementan juntos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un ejemplo de modelo simple de QoS DiffServ. La figura 2 muestra una tabla de ventajas y desventajas del modelo de QoS DiffServ.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

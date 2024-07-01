@@ -1,0 +1,1 @@
+En la figura se muestran tres routers interconectados.  Cada uno tiene un paquete de saludo entre ellos.  Hay una tabla que indica los temporizadores de saludo para diferentes velocidades de enlace.  Un T1, o uno más lento, envía paquetes de saludo cada sesenta segundos.  Un enlace más rápido que un T1 envía paquetes de saludo cada cinco segundos.

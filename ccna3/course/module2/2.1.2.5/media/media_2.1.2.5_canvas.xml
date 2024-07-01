@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR"> 
+	
+<slide>
+<element type="ROUTER" textId="ID_router_txt1" x="4" y="60.5" width="445" height="305" />
+<text id="ID_router_txt1"><![CDATA[<pre>S1(config)<b># vlan 10</b> 
+S1(config-vlan)<b># name SALES</b> 
+S1(config-vlan)<b># vlan 20</b> 
+S1(config-vlan)<b># name MARKETING</b> 
+S1(config-vlan)<b># vlan 30</b> 
+S1(config-vlan)<b># name ACCOUNTING</b> 
+S1(config-vlan)<b># end</b> 
+S1<b>#</b></pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt2" x="4" y="60.5" width="445" height="305" />
+<text id="ID_router_txt2"><![CDATA[<pre>S1<b># show vlan brief</b> 
+
+VLAN Name                Status   Ports 
+---- ------------------  -------- -------------------------- 
+1    default             active   Fa0/3, Fa0/4, Fa0/5, Fa0/6 
+                                  Fa0/7, Fa0/8, Fa0/9, Fa0/10 
+                                  Fa0/11, Fa0/12, Fa0/13, Fa0/14 
+                                  Fa0/15, Fa0/16, Fa0/17, Fa0/18 
+                                  Fa0/19, Fa0/20, Fa0/21, Fa0/22 
+                                  Fa0/23, Fa0/24, Gi0/1, Gi0/2 
+<span class="orange">10   SALES                active 
+20   MARKETING            active 
+30   ACCOUNTING           active</span> 
+1002 fddi-default         act/unsup 
+1003 token-ring-default   act/unsup 
+1004 fddinet-default      act/unsup 
+1005 trnet-default        act/unsup 
+S1#</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+</slide>
+
+
+<slide>
+<element type="ROUTER" textId="ID_router_txt3" x="4" y="60.5" width="445" height="305" />
+<text id="ID_router_txt3"><![CDATA[<pre>S1<b># show vtp status</b> 
+VTP Version capable            : 1 to 3 
+VTP version running            : 1 
+VTP Domain Name                : CCNA 
+VTP Pruning Mode               : Disabled 
+VTP Traps Generation           : Disabled 
+Device ID                      : f078.167c.9900 
+Configuration last modified by 0.0.0.0 at 3-1-93 02:02:45 
+Local updater ID is 0.0.0.0 (no valid interface found) 
+
+Feature VLAN: 
+-------------- 
+VTP Operating Mode               : Server 
+Maximum VLANs supported locally  : 255 
+Number of existing VLANs         : 8 
+<span class="orange">Configuration Revision           : 6</span> 
+MD5 digest       : 0xFE 0x8D 0x2D 0x21 0x3A 0x30 0x99 0xC8 
+                   0xDB 0x29 0xBD 0xE9 0x48 0x70 0xD6 0xB6 
+S1#</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+</slide>
+</slide>
+</data>

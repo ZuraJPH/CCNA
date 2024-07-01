@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.1 Resolución de problemas de una ruta faltante</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de una ruta faltante</h1>
+        <div>
+          <p>Las redes están condicionadas a situaciones que pueden provocar un cambio en su estado con bastante frecuencia:</p>
+          <p>
+            <ul>
+              <li>Falla una interfaz.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un proveedor de servicios desactiva una conexión.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los enlaces se sobresaturan.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un administrador ingresa una configuración incorrecta.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cuando se produce un cambio en la red, es posible que se pierda la conectividad. Los administradores de red son responsables de identificar y solucionar el problema. Para encontrar y resolver estos problemas, un administrador de red debe conocer las herramientas que lo ayudarán a aislar los problemas de routing de manera rápida. </p>
+          <p></p>
+          <p>Entre los comandos comunes para la resolución de problemas de IOS, se encuentran los siguientes: </p>
+          <p>
+            <ul>
+              <li>
+                <b>ping</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>traceroute</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interface brief </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show cdp neighbors detail</b>
+                <span class="cmd">
+                  <b></b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestra el resultado de un ping extendido de la interfaz de origen del R1 a la interfaz LAN del R3. Un ping extendido es una versión mejorada de la utilidad ping. El ping extendido permite especificar la dirección IP de origen para los paquetes ping.</p>
+          <p></p>
+          <p>En la figura 2, se muestra el resultado de un comando traceroute del R1 a la LAN del R3.</p>
+          <p></p>
+          <p>En la figura 3, se muestra la tabla de routing del R1. </p>
+          <p></p>
+          <p>En la figura 4, se proporciona un estado rápido de todas las interfaces del router. </p>
+          <p></p>
+          <p>En la figura 5, se proporciona una lista de dispositivos Cisco conectados directamente. Este comando valida la conectividad de la capa 2 (y, por lo tanto, la de la capa 1). Por ejemplo, si en el resultado del comando se indica un dispositivo vecino, pero no se puede hacer ping a este, entonces se debe investigar el direccionamiento de la capa 3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  La figura 1 muestra el resultado del comando ping en el router 1 a la PC en la LAN del router 3.  Este ping está usando la opción de origen para originar el ping desde la interfaz de la LAN del router 1. La figura dos muestra el resultado del comando "trace route" en el router uno a la PC en la LAN del router tres. La figura tres muestra el resultado del comando “show ip route” en el router uno, que muestra la tabla de routing. La figura cuatro muestra el resultado del comando “show ip interface brief” en el router uno que indica que las interfaces WAN y LAN están activas. La figura cinco muestra el resultado del comando “show cdp neighbors” en el router uno que indica que el router dos es vecino junto con el switch LAN asociado al router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

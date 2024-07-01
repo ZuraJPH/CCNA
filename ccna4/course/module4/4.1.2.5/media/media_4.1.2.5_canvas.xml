@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+		<element type="IMAGE" src="media_4.1.2.5_topo.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" id="ID_static_1" text="S0/0/0" x="171" y="178" align="center" width="36" />
+<element type="TEXT" id="ID_static_2" text="G0/0" x="153" y="234" align="center" width="26" />
+<element type="TEXT" id="ID_static_3" text="192.168.11.0/24" x="257" y="339" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_4" text="192.168.30.0/24" x="328" y="280" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_5" text="192.168.31.0/24" x="521.8" y="278" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_6" text="S0/0/1" x="467" y="178" align="center" width="34" />
+<element type="TEXT" id="ID_static_7" text="G0/1" x="223" y="234" align="center" width="24" />
+<element type="TEXT" id="ID_static_8" text="192.168.10.0/24" x="58" y="278" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_9" text="G0/0" x="426" y="232" align="center" width="26" />
+<element type="TEXT" id="ID_static_10" text="G0/1" x="498" y="232" align="center" width="24" />
+<element type="TEXT" id="ID_static_11" text="S0/0/0" x="271" y="102" align="center" width="36" />
+<element type="TEXT" id="ID_static_12" text="S0/0/1" x="370" y="102" align="center" width="34" />
+<element type="TEXT" compId="ID_txt04" x="78" y="208" width="93" expand="left" align="right" />
+<element type="TEXT" compId="ID_txt05" x="504" y="208" width="93" expand="right" align="left" />
+<element type="TEXT" compId="ID_txt01" x="426" y="55" width="215" expand="down" align="left" class="orangeCallOut" />
+<element type="BUBBLE" compId="ID_txt02" x="235" y="152" width="182" height="113" align="left" tailPosition="9" tailFlip="0" />
+<element type="BUBBLE" compId="ID_txt03" x="36" y="54" width="194" height="111" align="left" tailPosition="5" tailFlip="0" />
+<element type="TEXT" subType="TITLE" compId="ID_title"/>
+	</slide>
+		
+</data>

@@ -1,0 +1,1 @@
+En la figura se muestra la fórmula de cálculo de la métrica de EIGRP y la salida que genera el comando “show ip route” en el router dos.  La métrica para una ruta aparece resaltada en naranja.

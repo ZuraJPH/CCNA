@@ -1,0 +1,15 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s2_txt02,#ID_s2_txt03,#ID_s2_txt01{text-shadow: 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF;
+
+}
+
+td img.pics1{margin:10px 40px}
+td img.pics3,td img.pics4{margin:10px 13px 0 18px}
+
+
+#ID_s1_txt03,#ID_s1_txt02{
+	text-shadow: 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF;
+}

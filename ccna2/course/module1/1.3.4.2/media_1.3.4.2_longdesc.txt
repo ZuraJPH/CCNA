@@ -1,0 +1,1 @@
+La figura muestra comando de CLI router espacio signo de pregunta.  Este comando mostrará todos los protocolos de routing admitidos por el IOS actual.  

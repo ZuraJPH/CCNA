@@ -1,0 +1,96 @@
+﻿<textcomponents>
+	<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Actividad: Clasificar las opciones de acceso WAN</b>]]></text>
+	</component>
+
+	<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucción]]></text>
+	</component>
+
+	<component id='ID_s1_instr_body'>
+	<text><![CDATA[Clasifique cada opción de acceso WAN arrastrando cada una al espacio correspondiente en el diagrama.]]></text>
+	</component><!--Drag and Drop--><component id='ID_s1_drag01'>
+		<text><![CDATA[DSL, cable,<br> inalámbrico]]></text>
+	</component>
+
+	<component id='ID_s1_drag02'>
+		<text><![CDATA[Privada]]></text>
+	</component>
+
+	<component id='ID_s1_drag03'>
+		<text><![CDATA[T1/E1, T3/E3]]></text>
+	</component>
+
+	<component id='ID_s1_drag04'>
+		<text><![CDATA[PSTN, ISDN]]></text>
+	</component>
+
+	<component id='ID_s1_drag05'>
+		<text><![CDATA[Líneas arrendadas]]></text>
+	</component>
+
+	<component id='ID_s1_drag06'>
+		<text><![CDATA[Conmutada por circuitos]]></text>
+	</component>
+
+	<component id='ID_s1_drag07'>
+		<text><![CDATA[Dedicada]]></text>
+	</component>
+
+	<component id='ID_s1_drag08'>
+		<text><![CDATA[Pública]]></text>
+	</component>
+
+	<component id='ID_s1_drag09'>
+		<text><![CDATA[Banda ancha, VPN]]></text>
+	</component>
+
+	<component id='ID_s1_drag10'>
+
+		<text><![CDATA[MetroEthernet, MPLS, Frame Relay, ATM]]></text>
+	</component>
+
+
+	<component id='ID_s1_CORRECT_TITLE'>
+		<text><![CDATA[Correcto]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_BODY'>
+		<text><![CDATA[Clasificó correctamente las opciones de acceso WAN según sus tipos.]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_TITLE'>
+		<text><![CDATA[Incorrecto]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_BODY'>
+		<text><![CDATA[No clasificó correctamente las opciones de acceso WAN según sus tipos. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+	</component>
+
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[Verificar]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[Restablecer]]></text>
+	</component>
+
+
+	<component id="ID_s1_txt01">
+		<text><![CDATA[WAN]]></text>
+	</component>
+
+	<component id="ID_s1_txt02">
+	  <text><![CDATA[Conmutado]]></text> 
+	</component>
+
+	<component id="ID_s1_txt03">
+	  <text><![CDATA[Internet]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt04">
+	  <text><![CDATA[Conmutada por paquetes]]></text> 
+	</component>
+
+
+</textcomponents>

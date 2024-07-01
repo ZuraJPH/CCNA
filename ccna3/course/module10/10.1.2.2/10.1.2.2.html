@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.2 Comprobación de la ruta predeterminada IPv4 propagada</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comprobación de la ruta predeterminada IPv4 propagada</h1>
+        <div>
+          <p>Verifique la configuración de la ruta predeterminada en el R2 mediante el comando <b>show ip route</b>, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para verificar que la ruta predeterminada se haya propagado al R1 y al R3. Observe que el origen de la ruta es <b>O*E2</b>, lo que indica que se la detectó mediante OSPFv2. El asterisco indica que esa ruta es una buena candidata para la ruta predeterminada. La designación “E2” indica que se trata de una ruta externa. </p>
+          <p></p>
+          <p>Las rutas externas pueden ser externa de tipo 1 o externa de tipo 2. La diferencia entre ambos tipos es la manera en que se calcula el costo (métrica) de la ruta. El costo de una ruta de tipo 2 siempre es el costo externo, independientemente del costo interno para llegar a esa ruta. El costo de tipo 1 es la suma del costo externo y del costo interno necesario para llegar a esa ruta. Para el mismo destino, siempre se prefiere una ruta de tipo 1 a una ruta de tipo 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la salida del comando "show ip route".  Se resaltan el gateway de último recurso y la ruta de estado predeterminada. La figura dos es una actividad interactiva que permite que el estudiante practique cómo incluir en una lista las entradas de la tabla de routing para los routers dos y tres para, de este modo, comprobar que la ruta estática predeterminada esté configurada y se propague al router tres correctamente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

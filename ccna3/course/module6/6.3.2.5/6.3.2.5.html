@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.5 Como calcular la métrica de EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Como calcular la métrica de EIGRP</h1>
+        <div>
+          <p>Si bien EIGRP calcula automáticamente la métrica de la tabla de routing utilizada para elegir la mejor ruta, es importante que el administrador de red comprenda cómo se determinaron estas métricas.</p>
+          <p></p>
+          <p>La figura muestra la métrica compuesta utilizada por EIGRP. Mediante el uso de los valores predeterminados para K1 y K3, el cálculo puede simplificarse al ancho de banda más lento (o ancho de banda mínimo), más la suma de todos los retrasos. </p>
+          <p></p>
+          <p>En otras palabras, al analizar los valores de ancho de banda y de retraso para todas las interfaces de salida de la ruta, podemos determinar la métrica de EIGRP de la siguiente manera: </p>
+          <p>
+            <b>Paso 1:  </b>Determine el enlace con el ancho de banda más lento. Utilice ese valor para calcular el ancho de banda (10 000 000/ancho de banda).</p>
+          <p>
+            <b>Paso 2:  </b>Determine el valor de retraso para cada interfaz de salida en el camino al destino. Sume los valores de retraso y divida por 10 (suma de los retrasos/10). </p>
+          <p>
+            <b>Paso 3:  </b>Esta métrica compuesta produce un valor de 24 bits; sin embargo, EIGRP utiliza un valor de 32 bits. Al multiplicar el valor de 24 bits por 256, se amplía la métrica compuesta a 32 bits. Por lo tanto, sume los valores de ancho de banda y de retraso calculados, y multiplique la suma por 256 para obtener la métrica de EIGRP.</p>
+          <p></p>
+          <p>La salida de la tabla de routing para el R2 muestra que la ruta a 192.168.1.0/24 tiene una métrica de EIGRP de 3 012 096. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra la fórmula de cálculo de la métrica de EIGRP y la salida que genera el comando “show ip route” en el router dos.  La métrica para una ruta aparece resaltada en naranja.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.2.1 ACL IPv4 estándar y extendidas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ACL IPv4 estándar y extendidas</h1>
+        <div>
+          <p>Los dos tipos de ACL de IPv4 de Cisco son estándar y extendida.</p>
+          <p></p>
+          <p>Las ACL estándar se pueden utilizar para permitir o denegar el tráfico de direcciones IPv4 de origen únicamente. El destino del paquete y los puertos involucrados no se evalúan. En el ejemplo de la figura 1, se permite todo el tráfico de la red 192.168.30.0/24. Debido a la instrucción implícita “deny any” al final, todo el tráfico, excepto el tráfico proveniente de la red 192.168.30.0/24, se bloquea con esta ACL. Las ACL estándar se crean en el modo de configuración global.</p>
+          <p></p>
+          <p>Las ACL extendidas filtran paquetes IPv4 según varios atributos:</p>
+          <p>
+            <ul>
+              <li>Tipo de protocolo</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dirección IPv4 de origen</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dirección IPv4 de destino</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Puertos TCP o UDP de origen</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Puertos TCP o UDP de destino</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Información optativa de tipo de protocolo para un control más preciso</li>
+            </ul>
+          </p>
+          <p>En la figura 2, la ACL 103 permite el tráfico que se origina desde cualquier dirección en la red 192.168.30.0/24 hasta cualquier red IPv4 si el puerto de host de destino es 80 (HTTP). Las ACL extendidas se crean en el modo de configuración global.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> Se analizará la sintaxis del comando con más detalle en este capítulo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la sintaxis de una ACL estándar.  La línea dice: access list 10 permit 192 punto 168 punto 30 punto cero cero punto cero punto cero punto 255. La figura 2 muestra la sintaxis de una ACL extendida que permite el tráfico que se origina en cualquier dirección de la red 192 punto 168 punto 30 punto cero barra diagonal 24 y se dirige a cualquier red, si el puerto de host de destino es 80, que es HTTP.  La sintaxis es: access list 103 permit tcp. 192 punto 168 punto 30 punto cero cero punto cero punto cero punto 255 any eq. 80.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

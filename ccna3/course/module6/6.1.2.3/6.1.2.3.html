@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.3 Paquetes de actualización y acuse de recibo EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paquetes de actualización y acuse de recibo EIGRP</h1>
+        <div>
+          <p>
+            <b>Paquetes de actualización EIGRP</b>
+          </p>
+          <p>EIGRP envía paquetes de actualización para propagar información de routing. Los paquetes de actualización se envían sólo cuando es necesario. Las actualizaciones de EIGRP sólo contienen la información de routing necesaria y sólo se envían a los routers que la requieren. </p>
+          <p></p>
+          <p>A diferencia del protocolo de routing con vector de distancia RIP, EIGRP no envía actualizaciones periódicas, y las entradas de ruta no caducan. En cambio, EIGRP envía actualizaciones incrementales solo cuando se modifica el estado de un destino. Esto puede incluir cuando una nueva red está disponible, cuando una red existente deja de estar disponible, o cuando ocurre un cambio en la métrica de routing de una red existente. </p>
+          <p></p>
+          <p>EIGRP utiliza los términos <i>actualización parcial</i> y <i>actualización limitada</i> cuando se refiere a sus actualizaciones. Una actualización parcial significa que la actualización solo incluye información acerca de los cambios de ruta. La actualización limitada hace referencia al envío de actualizaciones parciales solo a los routers que se ven afectados por el cambio. Las actualizaciones limitadas permiten que EIGRP minimice el ancho de banda que se requiere para enviar actualizaciones de EIGRP.</p>
+          <p></p>
+          <p>Los paquetes de actualización EIGRP usan la entrega confiable, lo que significa que el router emisor requiere un acuse de recibo. Los paquetes de actualización se envían como multicast cuando son requeridos por múltiples routers, o como unicast cuando son requeridos por sólo un router. En la figura las actualizaciones se envían como unidifusión debido a que los enlaces son punto a punto.</p>
+          <p></p>
+          <p>
+            <b>Paquetes de acuse de recibo EIGRP</b>
+          </p>
+          <p></p>
+          <p>EIGRP envía paquetes de acuse de recibo (ACK) cuando se usa el método de entrega confiable. Un acuse de recibo EIGRP es un paquete de saludo EIGRP sin ningún dato. RTP utiliza la entrega confiable para los paquetes de actualización, consulta y respuesta. Los paquetes de acuse de recibo EIGRP se envían siempre como transmisiones de unidifusión poco confiables. El sentido de la entrega poco confiable es que, de otra manera, habría un bucle interminable de acuses de recibo.</p>
+          <p></p>
+          <p>En la figura, el R2 perdió la conectividad a la LAN conectada a su interfaz gigabit Ethernet. El R2 envía inmediatamente una actualización al R1 y al R3, donde se señala la ruta fuera de servicio. El R1 y el R3 responden con un acuse de recibo para que el R2 sepa que recibieron la actualización.</p>
+          <p>
+            <b>Nota</b>: En algunos documentos, se hace referencia al saludo y al acuse de recibo como un único tipo de paquete EIGRP. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran tres routers interconectados.  La LAN del router dos se encuentra inactiva.  Hay un paquete de actualización que se transmite del router dos al router uno y al router tres.  Los routers uno y tres están reenviando un paquete de acuse de recibo al router dos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

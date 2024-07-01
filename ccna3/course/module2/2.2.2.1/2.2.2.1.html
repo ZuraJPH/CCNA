@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.1 Errores relacionados con direcciones IP y máscaras de subred</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Errores relacionados con direcciones IP y máscaras de subred</h1>
+        <div>
+          <p>Las VLAN corresponden a subredes únicas en la red. Para que el routing entre VLAN funcione, es necesario conectar un router a todas las VLAN, ya sea por medio de interfaces físicas separadas o subinterfaces. A cada interfaz o subinterfaz se le debe asignar una dirección IP que corresponda a la subred a la cual está conectada. Esto permite que los dispositivos en la VLAN se comuniquen con la interfaz del router y habilita el routing del tráfico a otras VLAN conectadas al router.</p>
+          <p></p>
+          <p>Los siguientes son algunos errores comunes de asignación de direcciones IP:</p>
+          <p>
+            <ul>
+              <li>Como se muestra en la figura 1, el router R1 se configuró con la dirección IPv4 incorrecta en la interfaz G0/0. Esto evita que la PC1 pueda comunicarse con el router R1 en la VLAN 10. Para corregir este problema, asigne la dirección IPv4 correcta a la interfaz G0/0 del router R1 mediante el comando <b>ip address 172.17.10.1 255.255.255.0</b>. Una vez asignada la interfaz del router a la dirección IP correcta, la PC1 puede utilizar la interfaz del router como gateway predeterminado para acceder a otras VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>En la figura 2, la PC1 se configuró con la dirección IPv4 incorrecta para la subred asociada con la VLAN 10. Esto evita que la PC1 pueda comunicarse con el router R1 en la VLAN 10. Para corregir este problema, asigne la dirección IPv4 correcta a la PC1. Según el tipo de computadora que utilice, los detalles de configuración pueden ser diferentes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 3, la PC1 se configuró con la máscara de subred incorrecta. Según la máscara de subred configurada para PC1, PC1 está en la red 172.17.0.0. El resultado es que la PC1 calcula que la PC3, con la dirección IPv4 172.17.30.23, se encuentra en la misma subred que la PC1. La PC1 no reenvía el tráfico destinado a la PC3 a la interfaz G0/0 del router R1, por lo tanto, el tráfico nunca llega a la PC3. Para corregir este problema, cambie la máscara de subred en PC1 a 255.255.255.0. Según el tipo de computadora que utilice, los detalles de configuración pueden ser diferentes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra que una subinterfaz en un router conectado en una topología de routing entre VLAN antigua se configuró con una dirección IP incorrecta. Esto impide que los hosts en esa VLAN se enruten correctamente a otras VLAN. En la figura dos, se muestra un host que se configuró con una dirección IP incorrecta. Esto podría impedir que el host se comunique con el router en otra VLAN. En la figura tres, se muestra un host que se configuró con la dirección IP 172 punto 17 punto 10 punto 21 barra diagonal 16 en una VLAN y un host ubicado en otra VLAN configurada con la dirección IP 172 punto 17 punto 30 punto 23 barra diagonal 24.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

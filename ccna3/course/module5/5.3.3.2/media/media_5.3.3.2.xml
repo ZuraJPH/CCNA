@@ -1,0 +1,40 @@
+<textcomponents>
+
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Desventajas de los protocolos de routing de estado de enlace</b>]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>El mantenimiento de una base de datos de estado de enlace y un árbol SPF requiere memoria adicional.</li><li>El cálculo del algoritmo SPF también requiere mayor procesamiento de CPU.</li><li>La saturación de LSP puede afectar de manera negativa el ancho de banda.</li></ul></textformat>]]></text> 
+</component>
+
+
+<component id="ID_title">
+<text><![CDATA[<b>Creación de áreas para minimizar el uso de<br>recursos del router</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>Área 0</b>]]></text> 
+  </component>
+
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Área 51</b>]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[<b>Área 1</b>]]></text> 
+  </component>
+
+    <component id="ID_txt04">
+  <text><![CDATA[No se saturaron estas áreas con LSP. No debe volverse a ejecutar el algoritmo SPF en estas áreas.]]></text> 
+  </component>
+
+ <component id="ID_txt05">
+  <text><![CDATA[Se saturó con LSP solamente esta área.]]></text> 
+  </component>
+
+   <component id="ID_txt06">
+  <text><![CDATA[Volver a ejecutar el algoritmo SPF.]]></text> 
+  </component>
+
+</textcomponents>

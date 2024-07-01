@@ -1,0 +1,14 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#ID_txt07,#ID_txt06,#ID_txt04,#ID_txt05,#ID_txt02,#ID_txt03{line-height:11px !important;}
+/*@media only screen and (device-width: 768px)
+{
+	#ID_txt01
+{
+	margin-top: 40px !important;
+}
+}*/

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.1 Resolución de problemas de vecinos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de vecinos</h1>
+        <div>
+          <p>En este ejemplo, se demostrará cómo resolver problemas de vecinos. En la topología que se muestra en la figura 1, todos los routers están configurados para admitir el routing de OSPFv2. </p>
+          <p></p>
+          <p>Un vistazo a la tabla de routing del R1, que se muestra en la figura 2, nos permite saber que no agrega rutas OSPFv2. Existen varios posibles motivos para esto. Sin embargo, un requisito para que se forme una relación de vecinos entre dos routers es la conectividad de capa 3 del modelo OSI. </p>
+          <p></p>
+          <p>La salida de la figura 3 confirma que la interfaz S0/0/0 está activa y en funcionamiento. El ping correcto también confirma que la interfaz serial del R2 está activa. Un ping correcto no significa que se formará una adyacencia, porque es posible que haya subredes superpuestas o parámetros OSPF mal configurados. Todavía debe verificar que las interfaces en los dispositivos conectados compartan la misma subred. Si el ping no fue correcto, revise el cableado y verifique que las interfaces en los dispositivos conectados estén configuradas correctamente y funcionen.</p>
+          <p></p>
+          <p>A fin de habilitar una interfaz para OSPFv2, se debe configurar un comando <b>network </b>coincidente en el proceso de routing de OSPFv2. Las interfaces OSPFv2 activas pueden verificarse mediante el comando <b>show ip ospf interface</b>. El resultado de la figura 4 verifica que la interfaz Serial 0/0/0 está habilitada para OSPFv2. Si las interfaces conectadas en dos routers no están habilitadas para OSPF, los vecinos no formarán una adyacencia.</p>
+          <p></p>
+          <p>Verifique la configuración de OSPFv2 mediante el comando <b>show ip protocols</b>. La salida del comando, que se muestra en la figura 5, verifica que OSPFv2 está habilitado y también enumera las redes que se anuncian como habilitadas por medio del comando <b>network</b>. Si una dirección IPv4 en una interfaz está incluida en una red habilitada para OSPFv2, la interfaz está habilitada para OSPFv2. </p>
+          <p></p>
+          <p>Sin embargo, observe que la interfaz Serial 0/0/0 figura como pasiva. Recuerde que el comando <b>passive-interface</b> detiene las actualizaciones de routing entrantes y salientes, debido a que el efecto del comando ocasiona que el router deje de enviar y recibir paquetes de saludo a través de una interfaz. Por esta razón, los routers no formarán una relación de vecinos.</p>
+          <p></p>
+          <p>Para deshabilitar la interfaz como pasiva, use el comando <b>no passive-interface</b> del modo de configuración del router, como se muestra en la figura 6. Después de deshabilitar la interfaz pasiva, los routers establecen una adyacencia, como lo indica el mensaje de información generado automáticamente.</p>
+          <p></p>
+          <p>Una verificación rápida de la tabla de routing, que se muestra de la figura 7, confirma que OSPFv2 ahora intercambia información de routing.</p>
+          <p></p>
+          <p>Otro problema que puede surgir es que dos routers vecinos tengan tamaños de unidad máxima de transmisión (MTU) incompatibles en las interfaces conectadas. El tamaño de MTU es el paquete de capa de red más grande que el router reenvía por cada interfaz. De manera predeterminada, los routers tienen un tamaño de MTU de 1500 bytes. Sin embargo, este valor se puede cambiar para los paquetes IPv4 mediante el comando de configuración de interfaces <b>ip mtu </b><i>size </i>o mediante el comando de interfaz <b>ipv6 mtu </b><i>size </i>para los paquetes IPv6. Si dos routers conectados tuvieran valores de MTU incompatibles, igualmente intentarían formar una adyacencia, pero no intercambiarían sus LSDB y la relación de vecinos fallaría. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. Se resalta la red interna, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la salida del comando "show ip route" en el router uno. En la figura tres, se muestra la salida del comando "show ip interface brief" en el router uno y un ping exitoso. En la figura cuatro, se muestra la salida del comando "show ip ospf interface serial cero barra diagonal cero barra diagonal cero". En la figura cinco, se muestra la salida del comando "show ip protocols" en el router uno. Se resalta la interfaz Serial cero barra diagonal cero barra diagonal cero para identificarla como una interfaz pasiva. En la figura seis, se muestra la sintaxis para configurar la interfaz Serial cero barra diagonal cero barra diagonal cero de modo que no sea pasiva. En la figura siete, se muestra la salida del comando "show ip route ospf" en el router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

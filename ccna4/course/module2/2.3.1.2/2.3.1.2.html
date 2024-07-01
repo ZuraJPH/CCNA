@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.2 Comando de configuración básica de PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comando de configuración básica de PPP</h1>
+        <div>
+          <p>Para establecer PPP como el método de encapsulación que usa una interfaz serial, utilice el comando de configuración de interfaz <b>encapsulation ppp</b>. El comando no tiene ningún argumento. Recuerde que si no se configura PPP en un router Cisco, la encapsulación predeterminada para las interfaces seriales es HDLC.</p>
+          <p></p>
+          <p>En la ilustración, se muestra que los routers R1 y R2 se configuraron con una dirección IPv4 y una dirección IPv6 en las interfaces seriales.  PPP es una encapsulación de capa 2 que admite varios protocolos de capa 3, incluidos IPv4 e IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers que se están conectando a una nube de WAN.  La figura muestra la salida del archivo de configuración y la sección de la salida que indica la interfaz serial.  Cada puerto serial se configura con una dirección IP versión 4 y una dirección IP versión 6 y se configura para usar PPP como protocolo de encapsulamiento.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

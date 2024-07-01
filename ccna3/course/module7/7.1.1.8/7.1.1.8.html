@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.8 Ruta resumida (cont.)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta resumida (cont.)</h1>
+        <div>
+          <p>EIGRP usa la interfaz Null0 para evitar estos tipos de bucles de routing. En la ilustración, se muestra una situación en la que una ruta Null0 evita que se produzca un bucle de routing como el que se explicó en el ejemplo anterior:</p>
+          <p></p>
+          <p>1. El R1 tiene una ruta predeterminada 0.0.0.0/0 mediante el router ISP.</p>
+          <p>2. El R1 envía una actualización de routing al R2 con la ruta predeterminada.</p>
+          <p>3. El R2 instala la ruta predeterminada del R1 en su tabla de routing IPv4.</p>
+          <p>4. La tabla de routing del R2 contiene las subredes 172.16.1.0/24, 172.16.2.0/24 y 172.16.3.0/24 en su tabla de routing.</p>
+          <p>5. El R2 instala la ruta resumida 172.16.0.0/16 a Null0 en la tabla de routing.</p>
+          <p>6. El R2 envía una actualización resumida al R1 para la red 172.16.0.0/16.</p>
+          <p>7. El R1 instala la ruta resumida para 172.16.0.0/16 mediante el R2.</p>
+          <p>8. El R1 recibe un paquete para 172.16.4.10. Debido a que el R1 tiene una ruta para 172.16.0.0/16 mediante el R2, reenvía el paquete al R2.</p>
+          <p>9. El R2 recibe el paquete con la dirección de destino 172.16.4.10 del R1. El paquete no coincide con ninguna subred específica de 172.16.0.0, pero coincide con la ruta resumida 172.16.0.0/16 a Null0. Mediante la ruta Null0, se descarta el paquete.</p>
+          <p></p>
+          <p>Una ruta resumida en el R2 para 172.16.0.0/16 a la interfaz Null0 descarta cualquier paquete que empiece con 172.16.x.x y que no tenga una coincidencia más larga con ninguna de las subredes: 172.16.1.0/24, 172.16.2.0/24 o 172.16.3.0/24.</p>
+          <p></p>
+          <p>Incluso si el R2 tiene una ruta predeterminada 0.0.0.0/0 en la tabla de routing, la ruta Null0 es una coincidencia más larga.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: la ruta resumida Null0 se elimina cuando se deshabilita el resumen automático con el comando <b>no auto-summary</b> del modo de configuración del router.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra una red en la cual el router uno está conectado al ISP y al router dos.  El router dos resumió la ruta uno setenta y dos punto dieciséis punto cero y la envió al router uno.  El router dos también tiene una ruta estática predeterminada al router uno.  En este caso, se utiliza una interfaz null cero para evitar que se produzca un bucle de routing.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

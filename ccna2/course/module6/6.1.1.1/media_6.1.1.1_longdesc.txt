@@ -1,0 +1,1 @@
+La figura muestra un edificio de oficinas con tres pisos y cada piso tiene estaciones de trabajo en cada una de las tres VLAN.

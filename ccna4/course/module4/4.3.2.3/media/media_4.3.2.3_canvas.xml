@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide>
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <element type="IMAGE" src="media_4.3.2.3.png" x="0" y="0" width="680" height="490" />
+
+        <element type="TEXT" id="ID_static_1" text="S0/0/0" x="239" y="127" align="center" width="36" />
+        <element type="TEXT" id="ID_static_2" text="G0/0" x="208" y="166" align="center" width="26" />
+        <element type="TEXT" id="ID_static_3" text="S0/0/1" x="416" y="127" align="center" width="34" />
+        <element type="TEXT" id="ID_static_4" text="G0/1" x="301" y="166" align="center" width="24" />
+        <element type="TEXT" class="alg"  id="ID_static_5" text="2001:DB8:CAFE:10::/64" x="98" y="215" align="center" width="123" bold="1" />
+        <element type="TEXT" id="ID_static_6" text="G0/1" x="455" y="174" align="center" width="24" />
+        <element type="TEXT" id="ID_static_7" text="S0/0/0" x="275" y="82" align="center" width="36" />
+        <element type="TEXT" id="ID_static_8" text="S0/0/1" x="374" y="82" align="center" width="34" />
+        <element type="TEXT" id="ID_static_9" text=":2" x="301" y="95" align="center" width="8" />
+        <element type="TEXT" id="ID_static_10" text=":2" x="377" y="95" align="center" width="8" />
+        <element type="TEXT" id="ID_static_11" text=":1" x="263" y="142" align="center" width="8" />
+        <element type="TEXT" id="ID_static_12" text=":1" x="422" y="142" align="center" width="8" />
+        <element type="TEXT" class="alg"  id="ID_static_13" text="2001:DB8:CAFE:11::/64" x="296" y="214" align="center" width="123" bold="1" />
+        <element type="TEXT" class="alg"  id="ID_static_14" text="2001:DB8:CAFE:30::/64" x="435" y="215" align="center" width="123" bold="1" />
+        <element type="TEXT" id="ID_static_15" text=":1" x="216" y="179" align="center" width="8" />
+        <element type="TEXT" id="ID_static_16" text=":1" x="306" y="179" align="center" width="8" />
+        <element type="TEXT" id="ID_static_17" text=":1" x="454" y="189" align="center" width="8" />
+        <element type="TEXT" class="alg"  id="ID_static_18" text="2001:DB8:CAFE:10::10/64" x="96" y="359" align="center" width="136" bold="1" />
+        <element type="TEXT" class="alg"  id="ID_static_19" text="2001:DB8:CAFE:11::11/64" x="245" y="359" align="center" width="136" bold="1" />
+        <element type="TEXT" class="alg"  id="ID_static_20" text="2001:DB8:CAFE:30::12/64" x="391" y="359" align="center" width="136" bold="1" />
+        <element type="TEXT" class="alg"  id="ID_static_21" text="2001:DB8:FEED:1::/64" x="146" y="99" align="center" width="115" bold="1"/>
+        <element type="TEXT" class="alg"  id="ID_static_22" text="2001:DB8:FEED:2::/64" x="405" y="99" align="center" width="115" bold="1"/>
+        <element type="ROUTER" textId="ID_router_txt1" x="40" y="390" width="600" height="80" />
+        <element type="TEXT" subType="TITLE" compId="ID_title" />
+    </slide>
+    <text id="ID_router_txt1">
+        <![CDATA[
+	<table width="500" border="0" cellspacing="0" cellpadding="0"> <tr> <td>R1(config)# <b>interface s0/0/0</b></td> </tr> <tr> <td>R1(config-if)# <b>ipv6 traffic-filter NO-R3-LAN-ACCESS in</b></td> </tr></table>
+]]>
+    </text>
+</data>

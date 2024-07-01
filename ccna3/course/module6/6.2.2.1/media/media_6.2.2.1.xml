@@ -1,0 +1,23 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Comando <font face="_typewriter">show ip eigrp neighbors</font></b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Dirección IPv4 del vecino]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Interfaz local que recibe paquetes de saludo EIGRP]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Segundos restantes antes de declarar que el vecino está inactivo<br/><br/>El tiempo de espera actual se restablece al tiempo de espera máximo cada vez que se recibe un paquete de saludo.]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Cantidad de tiempo desde que el vecino se agregó a la tabla de vecinos]]></text>
+</component>
+
+</textcomponents>

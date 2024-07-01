@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.1 Modo de configuración de RIP en el router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modo de configuración de RIP en el router</h1>
+        <div>
+          <p>Si bien el protocolo RIP se utiliza con muy poca frecuencia en las redes modernas, es útil como base para comprender el routing de red básico. Esta sección se proporciona una breve descripción general de la forma en que se configuran los valores básicos de RIP y la manera en que se verifica RIPv2. </p>
+          <p></p>
+          <p>Consulte la topología de referencia en la figura 1 y la tabla de direccionamiento en la figura 2. En esta situación, todos los routers se configuraron con funciones de administración básicas, y todas las interfaces identificadas en la topología de referencia están configuradas y habilitadas. No hay rutas estáticas configuradas ni protocolos de routing habilitados, por lo que el acceso remoto de red es imposible en ese momento. RIPv1 se utiliza como protocolo de routing dinámico. Para habilitar RIP, utilice el comando <b>router rip</b>, como se muestra en la figura 3. Este comando no inicia en forma directa el proceso del RIP. En cambio, proporciona acceso al modo de configuración del router, donde se configuran los parámetros de routing RIP. Al habilitar RIP, la versión predeterminada es RIPv1.</p>
+          <p></p>
+          <p>Para deshabilitar y eliminar RIP, utilice el comando de configuración global <b>no router rip</b>. Este comando detiene el proceso RIP y elimina todas las configuraciones RIP existentes. </p>
+          <p></p>
+          <p>En la figura 4, se muestran los diversos comandos RIP que se pueden configurar. En esta sección, se abordan las palabras clave resaltadas. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres routers conectados linealmente a través de enlaces WAN.  R1 está conectado a R2 a través de un enlace WAN serie y tiene una LAN en su interfaz Gigabit-Ethernet.  R2 está conectado tanto a R1 como a R3 a través de enlaces WAN serie y también tiene una LAN en su interfaz Gigabit-Ethernet.  R3 solo está conectado a R2 a través de un enlace WAN serie y tiene una LAN en su interfaz Gigabit-Ethernet.  Hay cinco direcciones de red diferentes en la figura.  La figura dos muestra una tabla de routing simplificada para la red.  Los routers R-1 y R-3 poseen 2 redes conectadas directamente y el router R-2 tiene tres.  La figura tres muestra los comandos utilizados para habilitar RIP en un router.  La figura comienza en el modo EXEC privilegiado, y el primer comando es config t, que pasa al modo de configuración global.  El siguiente comando es router rip, que activa RIP en el router y coloca el indicador en router-rip. La figura cuatro muestra el resultado de ingresar un signo de interrogación en el indicador del router-rip.  Este comando hace que el router enumere todos los comandos que se pueden ingresar desde el indicador del router-rip.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

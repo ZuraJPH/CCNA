@@ -1,0 +1,1 @@
+La figura representa una tabla que enumera y describe los cinco tipos de paquetes de OSPF.  La figura tiene una segunda tabla que detalla los once tipos de paquetes de LSA.

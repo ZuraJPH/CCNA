@@ -1,0 +1,112 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar la terminología de SPAN</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Arrastre cada término al campo que se encuentra junto a la descripción correspondiente.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Unió correctamente cada término de SPAN con su descripción.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No unió correctamente cada término de SPAN con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font color="#FFFFFF" size="15">Términos</font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[SPAN]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Tráfico de egreso]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Puerto de origen]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[Sesión de SPAN]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Replicación de puertos]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[Puerto de destino]]></text>
+</component>
+
+<component id='ID_s1_drag07'>
+	<text><![CDATA[Tráfico de ingreso]]></text>
+</component>
+
+<component id='ID_s1_drag08'>
+	<text><![CDATA[RSPAN]]></text>
+</component><!--Questions--><component id='ID_s1_target_header'>
+	<text><![CDATA[<font size="15">Términos</font>]]></text>
+</component>
+<component id='ID_s1_text_header'>
+	<text><![CDATA[<font size="15">Descripciones</font>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Una característica en los switches CISCO es un tipo de puerto reflejado que envía las copias de la trama que ingresan a un puerto a otro puerto en el mismo switch]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[Tráfico que sale del switch]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[Supervisados con uso de la característica SPAN]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[Una asociación de un puerto de destino con uno o más puertos de origen]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[Una característica que permite que un switch haga una copia de las tramas de Ethernet y la envíe a un puerto con un analizador de paquetes asociado para la captura]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[Supervisa los puertos de origen, generalmente donde se conectan un analizador de paquetes, los ID o los IPS]]></text> 
+</component>
+
+<component id="ID_s1_txt07">
+  <text><![CDATA[Tráfico que ingresa al switch]]></text> 
+</component>
+
+<component id="ID_s1_txt08">
+  <text><![CDATA[Permite que los puertos de origen y destino estén en switches diferentes]]></text> 
+</component>
+
+</textcomponents>

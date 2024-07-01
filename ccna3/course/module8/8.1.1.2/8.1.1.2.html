@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.2 Características de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Características de OSPF</h1>
+        <div>
+          <p>Las características de OSPF, las cuales se muestran en la figura 1, incluyen lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Sin clase</b>: el protocolo OSPFv2 fue concebido como un protocolo sin clase, por lo tanto admite VLSM (máscara de subred de longitud variable) y CIDR (routing entre dominios sin clase) de IPv4.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Eficaz:</b> los cambios de routing dirigen actualizaciones de routing (no hay actualizaciones periódicas). Usa el algoritmo SPF para elegir la mejor ruta.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Convergencia rápida:</b> propaga rápidamente los cambios que se realizan a la red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Escalable:</b> funciona bien en tamaños de redes pequeños y grandes. Se pueden agrupar los routers en áreas para admitir un sistema jerárquico. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Seguro</b>: el protocolo OSPFv2 admite autenticación MD5 y por algoritmo de hash seguro (SHA). El protocolo OSPFv3 utiliza el protocolo de seguridad de Internet (IPSec) para agregar la autenticación de paquetes de OSPFv3. Cuando la autenticación está habilitada, los routers OSPF solo aceptan actualizaciones de routing cifradas de pares con la misma contraseña compartida previamente.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La distancia administrativa (AD) es la confiabilidad (o preferencia) del origen de la ruta. OSPF tiene una distancia administrativa predeterminada de 110. Como se muestra en la figura 2, el protocolo OSPF tiene un número más bajo (lo que lo convierte un protocolo de routing preferido antes que IS-IS y RIP) en los dispositivos Cisco.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se enumeran las siguientes características de OSPF: eficaz, con convergencia rápida, escalable, seguro y sin clase. La figura dos es una tabla que enumera las distancias administrativas de los protocolos de routing. Se resalta el valor "110" para OSPF .</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

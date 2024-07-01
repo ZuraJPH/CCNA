@@ -1,0 +1,25 @@
+﻿<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Operación de seguridad de puertos</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Atacante 1]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Atacante 2]]></text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[MAC A]]></text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[MAC A]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[MAC F]]></text>
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[El puerto 0/1 habilita MAC A<br/>El puerto 0/2 habilita MAC B<br/>El puerto 0/3 habilita MAC C]]></text>
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.4 Filtrado de paquetes con ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrado de paquetes con ACL</h1>
+        <div>
+          <p>El filtrado de paquetes controla el acceso a una red mediante el análisis de los paquetes entrantes y salientes y la transferencia o el descarte de estos según criterios determinados. El filtrado de paquetes se puede realizar en la capa 3 o en la capa 4. Las ACL estándar filtran sólo en la Capa 3. Las ACL extendidas filtran en las capas 3 y 4. </p>
+          <p></p>
+          <p>Por ejemplo, una ACL se puede configurar para “permitir el acceso web a los usuarios de la red A, pero denegar el resto de los servicios a los usuarios de esa red. Denegar el acceso HTTP a los usuarios de la red B, pero permitir que los usuarios de la red B tengan todo otro tipo de acceso”. Consulte la figura para analizar la secuencia de decisiones que aplica el filtro de paquetes para realizar esta tarea.</p>
+          <p></p>
+          <p>Para esta situación, el filtro de paquetes examina cada paquete de la siguiente manera:</p>
+          <p>
+            <ul>
+              <li>Si el paquete es un SYN de TCP de la red A que utiliza el puerto 80, tiene permiso para pasar. El resto de los tipos de acceso se deniega a esos usuarios.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si el paquete es un SYN de TCP de la red B que utiliza el puerto 80, se bloquea. Sin embargo, se permite el resto de los tipos de acceso.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Este es solo un ejemplo sencillo. Se pueden configurar varias reglas para permitir o denegar otros servicios a usuarios específicos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es un diagrama de flujo utilizado para representar el proceso de filtrado de paquetes. En el ejemplo, la ACL está diseñada para detectar los paquetes que solicitan servicios web del puerto 80.  El primer paso consiste en determinar de qué red viene el paquete mirando el encabezado de la trama.  En la figura, hay dos opciones, red A y red B. Una vez que se determina la red de origen, el siguiente paso consiste en determinar si el paquete solicita servicios del puerto 80 mirando el encabezado de TCP.  Si el paquete viene de la red A y solicita el puerto 80, su paso está permitido.  Si el paquete no está solicitando el puerto 80, será denegado.  Se aplica lo contrario a los paquetes provenientes de la red B. Si el paquete viene de la red B y solicita el puerto 80, se deniega, y el resto de las solicitudes se permiten.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.7 Recuperación de contraseñas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Recuperación de contraseñas</h1>
+        <div>
+          <p>Las contraseñas de los dispositivos se utilizan para evitar el acceso no autorizado. Las contraseñas encriptadas, como las contraseñas generadas mediante "enable secret", se deben reemplazar después de su recuperación. De acuerdo con el dispositivo, el procedimiento detallado para la recuperación de contraseñas varía; sin embargo, todos los procedimientos de recuperación de contraseñas siguen el mismo principio:</p>
+          <p></p>
+          <p>
+            <b>Paso 1</b>: Ingresar en el modo ROMMON.</p>
+          <p></p>
+          <p>
+            <b>Paso 2</b>. Cambiar el registro de configuración a 0x2142 para ignorar el archivo de configuración de inicio.</p>
+          <p></p>
+          <p>
+            <b>Paso 3.</b> Realizar los cambios necesarios en el archivo original de configuración de inicio.</p>
+          <p></p>
+          <p>
+            <b>Paso 4</b>: Guardar la configuración nueva.</p>
+          <p></p>
+          <p>Para la recuperación de contraseñas, se requiere el acceso a la consola del dispositivo a través de un terminal o el software emulador de terminal en una PC. Las configuraciones de terminal para acceder al dispositivo son:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>9600 velocidades en baudios</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sin paridad</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>8 bits de datos</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>1 bit de parada</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sin control del flujo</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Con el acceso a la consola, el usuario puede acceder al modo ROMMON mediante una secuencia de interrupción durante el proceso de arranque o eliminando la memoria flash externa cuando el dispositivo está apagado.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La secuencia de interrupción para PuTTY es Ctrl+Break. Puede encontrar una lista de secuencias de teclas de interrupción estándares para otros emuladores de terminales y sistemas operativos en: <a href="http://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/12818-61.html" target="_blank">http://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/12818-61.html</a></p>
+          <p></p>
+          <p>El software ROMMON admite algunos comandos básicos, como <b>confreg</b>. El comando <b>confreg 0x2142</b> permite que el usuario defina el registro de configuración en 0x2142. Con el registro de configuración en 0x2142, el dispositivo ignorará el archivo de configuración de inicio durante el arranque. El archivo de configuración de inicio es donde se almacenan las contraseñas olvidadas. Después de configurar el registro de configuración en 0x2142, escriba <b>reset</b> en la petición de entrada para reiniciar el dispositivo. Introduzca la secuencia de interrupción mientras el dispositivo esté reiniciando y descomprimiendo el IOS. En la Figura 1 se muestra la salida del terminal de un router 1941 en modo ROMMON después de usar una secuencia de interrupción durante el proceso de arranque.</p>
+          <p></p>
+          <p>Cuando el dispositivo haya terminado la recarga, copie la configuración de arranque a la configuración en ejecución, tal como se muestra en la Figura 2.</p>
+          <p></p>
+          <p>PRECAUCIÓN: <i>No</i> ejecute el comando <b>copy running-config startup-config</b>. Este comando borra la configuración de inicio original.</p>
+          <p></p>
+          <p>Dado que está en el modo EXEC privilegiado, ahora puede configurar todas las contraseñas necesarias. Una vez configuradas las nuevas contraseñas, vuelva a cambiar el registro de configuración a 0x2102 con el comando <b>config-register 0x2102</b> en el modo de configuración global. Guarde running-config en startup-config y vuelva a cargar el dispositivo, tal como se indica en la Figura 2.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> <b>cisco</b> no es una buena contraseña y aquí la usamos solo a modo de ejemplo.</p>
+          <p></p>
+          <p>El dispositivo ahora utiliza las contraseñas para autenticación recién configuradas. Recuerde utilizar los comandos <b>show</b> para verificar que todas las configuraciones siguen vigentes. Por ejemplo, verifique que las interfaces adecuadas no estén apagadas después de recuperar la contraseña.</p>
+          <p></p>
+          <p>El siguiente enlace proporciona instrucciones detalladas para el procedimiento de recuperación de contraseñas para un dispositivo específico:</p>
+          <p></p>
+          <p>
+            <a href="http://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-software-releases-121-mainline/6130-index.html" target="_blank">http://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-software-releases-121-mainline/6130-index.html</a>
+          </p>
+          <p></p>
+          <p>Utilice el Verificador de la sintaxis de la Figura 3 para practicar la recuperación de contraseñas en un router.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

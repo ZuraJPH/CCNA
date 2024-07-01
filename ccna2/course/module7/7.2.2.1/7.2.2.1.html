@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.1 Método 1: usar un editor de texto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Método 1: usar un editor de texto</h1>
+        <div>
+          <p>Después de familiarizarse con el proceso de creación y edición de ACL, puede ser más fácil generar la ACL mediante un editor de texto como el Bloc de notas de Microsoft. Esto permite crear o editar la ACL y luego pegarla en la interfaz del router. Para una ACL existente, puede utilizar el comando <b>show running-config</b> para mostrar la ACL, copiarla y pegarla en el editor de texto, realizar los cambios necesarios y pegarla nuevamente en la interfaz del router. </p>
+          <p></p>
+          <p>
+            <b>Configuración.</b> Suponga, por ejemplo, que la dirección host IPv4 de la ilustración se introdujo incorrectamente. En lugar del host 192.168.10.99, debería ser el host 192.168.10.10. Los pasos para editar y corregir la ACL 1 son los siguientes:</p>
+          <p></p>
+          <p>
+            <b>Paso 1: </b>Muestre la ACL mediante el comando <b>show running-config</b>. En el ejemplo de la ilustración, se utiliza la palabra clave <b>include</b> para mostrar solamente las ACE.</p>
+          <p></p>
+          <p>
+            <b>Paso 2: </b>Seleccione la ACL, cópiela y, luego, péguela en el Bloc de notas de Microsoft. Edite la lista según sea necesario. Una vez que la ACL se muestre correctamente en el Bloc de notas de Microsoft, selecciónela y cópiela.</p>
+          <p></p>
+          <p>
+            <b>Paso 3: </b>En el modo de configuración global, elimine la lista de acceso con el comando <b>no access-list 1</b>. De lo contrario, las nuevas instrucciones se agregarán a la ACL existente. A continuación, pegue la nueva ACL en la configuración del router.</p>
+          <p></p>
+          <p>
+            <b>Paso 4: </b>Verifique los cambios mediante el comando <b>show running-config</b>.</p>
+          <p></p>
+          <p>Es necesario recordar que, al utilizar el comando <b>no access-list</b>, las distintas versiones del software IOS actúan de forma diferente. Si la ACL que se eliminó sigue estando aplicada a una interfaz, algunas versiones del IOS actúan como si no hubiera ninguna ACL que proteja la red, mientras que otras deniegan todo el tráfico. Por esta razón, es aconsejable eliminar la referencia a la lista de acceso de la interfaz antes de modificar la lista. Si hay un error en la nueva lista, debe deshabilitarla y solucionar el problema. En ese caso, la red no tiene ninguna ACL durante el proceso de corrección.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el proceso para usar un editor de texto para editar un A.C.L numerada.  El primer comando crea una A.C.L numerada con el número 1. La A.C.L se puede ver mediante el comando show running guión config pipe include access guión list 1.  La A.C.L puede copiarse y pegarse en un editor de texto y editarse.  La A.C.L actual se elimina de la interfaz con la palabra clave no. La nueva A.C.L se pega en el router y puede verificarse con el comando show running guión config pipe include access guión list 1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

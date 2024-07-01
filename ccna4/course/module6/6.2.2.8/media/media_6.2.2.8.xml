@@ -1,0 +1,34 @@
+<textcomponents>
+<component id="ID_title">
+		<text><![CDATA[<b>Mecanismos de prevención de congestión</b>]]>
+	</text>
+	</component>
+	<component id="ID_text01">
+		<text><![CDATA[Cola completa]]>
+	</text>
+	</component>
+	<component id="ID_text02">
+		<text><![CDATA[Umbral máximo]]>
+	</text>
+	</component>
+	<component id="ID_text03">
+		<text><![CDATA[Umbral mínimo]]>
+	</text>
+	</component>
+	<component id="ID_text04">
+		<text><![CDATA[Cola vacía]]>
+	</text>
+	</component>
+	<component id="ID_text05">
+		<text><![CDATA[Caídas completas]]>
+	</text>
+	</component>
+	<component id="ID_text06">
+		<text><![CDATA[% de caídas]]>
+	</text>
+	</component>
+	<component id="ID_text07">
+		<text><![CDATA[Sin caídas]]>
+	</text>
+	</component>
+</textcomponents>

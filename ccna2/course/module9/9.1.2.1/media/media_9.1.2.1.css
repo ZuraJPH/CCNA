@@ -1,0 +1,25 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+.width50{
+	width:50%;
+}
+#static_txt01 {font-family:Courier New;width:168.5px !important;}
+@media only screen and (device-width: 768px)
+{
+	#static_txt01
+	{
+		width: 200px !important;
+		margin-left: -30px !important;
+	}
+}

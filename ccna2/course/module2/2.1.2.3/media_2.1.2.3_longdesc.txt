@@ -1,0 +1,1 @@
+La figura muestra un router en Internet (R2) que se conecta a un router de rutas internas(R1).  El R1 se conecta al mundo exterior mediante una ruta estática predeterminada que apunta a R2.  

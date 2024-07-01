@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.2 Análisis de tráfico sospechoso</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Análisis de tráfico sospechoso</h1>
+        <div>
+          <p>La función Analizador de puertos con switches (SPAN) de los switches Cisco es un tipo de puertos reflejados que envía copias de la trama que ingresa a un puerto, desde otro puerto del mismo switch. SPAN permite que los administradores o los dispositivos recopilen y analicen el tráfico. </p>
+          <p></p>
+          <p>Como se muestra en la Figura 1, SPAN suele implementarse para enviar tráfico a dispositivos especializados como:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Analizadores de paquetes</b>: usan software como Wireshark para capturar y analizar el tráfico para solucionar problemas. Por ejemplo, un administrador puede capturar el tráfico destinado a un servidor para solucionar problemas de funcionamiento insatisfactorio de una aplicación de red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Sistemas de protección contra intrusiones (IPS)</b>: Los IPS se centran en el aspecto de seguridad del tráfico y se implementan para detectar ataques a la red mientras suceden, al enviar alertas o bloquear los paquetes maliciosos durante el ataque. Los IPS suelen implementarse como servicio en un router ISR G2 o con un dispositivo exclusivo.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Mientras que los analizadores de paquetes suelen usarse para solucionar problemas, el IPS busca patrones específicos en el tráfico. A medida que el flujo de tráfico pasa por los IPS, se analiza el tráfico en tiempo real y se toman medidas al detectar patrones de tráfico malicioso. </p>
+          <p></p>
+          <p>Las redes modernas son entornos conmutados. Por lo tanto, SPAN es fundamental para un funcionamiento eficaz de IPS. SPAN puede implementarse como SPAN local o SPAN remoto (RSPAN).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un ejemplo de configuración de Cisco SPAN. Un PCA cliente está conectado al puerto F01/ en el switch S1. El puerto F0/2 del switch es un puerto SPAN que puede conectarse a un sensor IPS o a una computadora con analizador de paquetes instalado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

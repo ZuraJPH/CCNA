@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.1 Motivación para el uso de PPPoE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Motivación para el uso de PPPoE</h1>
+        <div>
+          <p>Además de comprender las diversas tecnologías disponibles para el acceso a Internet de banda ancha, también es importante comprender el protocolo de capa de enlace de datos subyacente que utiliza el ISP para formar una conexión.</p>
+          <p></p>
+          <p>Un protocolo de capa de enlace de datos que usan generalmente los ISP es PPP. PPP se puede utilizar en todos los enlaces seriales, incluidos aquellos enlaces creados con módems de dial-up analógicos e ISDN. Actualmente, es probable que el enlace que va de un usuario de dial-up a un ISP mediante módems analógicos utilice PPP. En la figura 1, se muestra una representación básica de esa conexión de dial-up analógico con PPP.</p>
+          <p></p>
+          <p>Además, los ISP suelen usar PPP como protocolo de enlace de datos a través de las conexiones de banda ancha. Esto se debe a varios motivos. En primer lugar, PPP admite la capacidad de asignar direcciones IP a los extremos remotos de un enlace PPP. Cuando PPP está habilitado, los ISP pueden utilizarlo para asignar una dirección IPv4 pública a cada cliente. Lo que es más importante, PPP admite la autenticación CHAP. A menudo, los ISP prefieren utilizar CHAP para autenticar a los clientes, ya que, durante la autenticación, los ISP pueden revisar los registros contables para determinar si el cliente pagó la factura antes de permitirle conectarse a Internet.</p>
+          <p></p>
+          <p>Estas tecnologías salieron al mercado en el siguiente orden, con una compatibilidad variable para PPP:</p>
+          <p>1. Módems análogos para dial-up que podían utilizar PPP y CHAP</p>
+          <p>2. ISDN para dial-up que podían utilizar PPP y CHAP</p>
+          <p>3. DSL, que no establecía un enlace punto a punto y no admitía PPP ni CHAP</p>
+          <p></p>
+          <p>Los ISP consideran que PPP es valioso debido a las características de autenticación, contabilidad y administración de enlaces. Los clientes valoran la facilidad y la disponibilidad de la conexión Ethernet. Sin embargo, los enlaces Ethernet no admiten PPP de forma nativa. PPP por Ethernet (PPPoE) ofrece una solución a este problema. Como se muestra en la figura 2, PPPoE permite el envío de tramas PPP encapsuladas dentro de tramas de Ethernet.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tramas de PPP sobre una conexión de Internet por acceso telefónico antigua. PC1 se conecta a una nube de Telco/ISP. Esta línea está indicada como línea telefónica (a POTS). Arriba de la línea se encuentran dos cuadrados adyacentes. El cuadrado izquierdo está indicado como PPP y el cuadrado derecho como paquete IP. Hay una flecha que apunta desde el cuadrado del paquete IP hacia la nube de Telco/ISP. Una conexión WAN relámpago va desde la nube de Telco/ISP a una nube indicada como Internet. En la parte inferior de la figura, las palabras son: En un caso de Internet por acceso telefónico antigua, la PC1 llega a Internet a través de la nube de TELCO/ISP mediante un dispositivo FAX/MÓDEM. La figura 2 muestra la PC1 conectada a través de PPPoE con un módem DSL. El módem DSL se conecta a través de un enlace WAN indicado como DSL a la nube de TELCO/ISP. La nube de TELCO/IPS se conecta con la nube de internet. Arriba de PPPoE hay tres rectángulos adyacentes indicados como Ethernet, PPP y paquete IP. Una flecha apunta desde el rectángulo del paquete IP hacia la nube de TELCO/ISP. Arriba de la conexión DSL hay dos rectángulos indicados como PPP y paquete IP. Una flecha apunta desde el rectángulo del paquete IP hacia la nube de TELCO/ISP. Las palabras debajo de la figura son: PC1 se conecta directamente a un módem DSL. En las redes de acceso telefónico anteriores, PC1 se conecta a Internet mediante la nube de TELCO/ISP con un módem. </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

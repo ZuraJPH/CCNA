@@ -1,0 +1,1 @@
+La figura muestra el resultado del comando “show vlan brief” en un switch.

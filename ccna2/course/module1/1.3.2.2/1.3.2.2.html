@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.2.2 Entradas de tabla de routing conectadas directamente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entradas de tabla de routing conectadas directamente</h1>
+        <div>
+          <p>Una interfaz activa, correctamente configurada y conectada directamente, genera dos entradas en la tabla de routing. En la ilustración, se muestran las entradas de la tabla de routing IPv4 en el R1 para la red conectada directamente 192.168.10.0. </p>
+          <p></p>
+          <p>La entrada de la tabla de routing para las interfaces conectadas directamente es más simple que las entradas para las redes remotas. Las entradas contienen la siguiente información:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Origen de la ruta:</b> identifica el modo en que se descubrió la ruta. Las interfaces conectadas directamente tienen dos códigos de origen de ruta. El código“<b>C</b>” identifica una red conectada directamente. El código “<b>L</b>” identifica la dirección IPv4 asignada a la interfaz del router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Red de destino:</b> la dirección de la red remota.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz de salida:</b> identifica la interfaz de salida que se utiliza para reenviar paquetes a la red de destino.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> antes de IOS 15, no se mostraban las entradas de la tabla de routing de ruta local (<b>L</b>) en la tabla de routing IPv4. Las entradas de ruta local (<b>L</b>) siempre formaron parte de la tabla de routing IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los dos códigos fuente de ruta para una ruta conectada directamente en un router.  La figura resalta cómo se aprendió la ruta, la red de destino y la interfaz en el router conectado a la red de destino.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

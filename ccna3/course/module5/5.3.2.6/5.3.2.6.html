@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.6 Armado de la base de datos de estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Armado de la base de datos de estado de enlace</h1>
+        <div>
+          <p>El paso final en el proceso de routing de estado de enlace es que cada router utiliza la base de datos para construir un mapa completo de la topología y calcula la mejor ruta para cada red de destino.  </p>
+          <p></p>
+          <p>Finalmente, todos los routers reciben un LSP de todos los demás routers de estado de enlace en el área de routing. Dichos LSP se almacenan en la base de datos de estado de enlace. </p>
+          <p></p>
+          <p>En el ejemplo en la ilustración, se muestra el contenido de la base de datos de estado de enlace del R1.</p>
+          <p></p>
+          <p>Como resultado del proceso de saturación, el R1 obtuvo la información de estado de enlace para cada router de su área de routing. Observe que R1 también incluye su propia información de estado de enlace en la base de datos de estado de enlace.</p>
+          <p></p>
+          <p>Con una base de datos de estado de enlace completa, el R1 ahora puede utilizar la base de datos y el algoritmo SPF (Primero la ruta más corta) para calcular la ruta preferida o la ruta más corta a cada red, lo que da como resultado el árbol SPF. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el contenido de la base de datos de estado de enlace en el router R1.  Esta tabla muestra los estados de enlace para todos los routers en la red local.  Por ejemplo, la base de datos enumera todas las redes conectadas del router R1, el costo de cada enlace y los estados de enlace para los routers R2, R3, R4 y R5.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

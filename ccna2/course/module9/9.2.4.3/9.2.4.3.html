@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.4.3 Configuración de reenvío de puertos con IOS</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de reenvío de puertos con IOS</h1>
+        <div>
+          <p>Los comandos de IOS que se usan para implementar el reenvío de puertos son similares a los que se usan para configurar la NAT estática.  Básicamente, el reenvío de puertos es una traducción de NAT estática con un número de puerto TCP o UDP específico.</p>
+          <p></p>
+          <p>En la figura 1, se muestra el comando de NAT estática que se usa para configurar el reenvío de puertos con IOS. </p>
+          <p></p>
+          <p>En la figura 2, se muestra un ejemplo de configuración del reenvío de puertos con comandos de IOS en el router R2.  La dirección 192.168.10.254 es la dirección IPv4 local interna del servidor web que escucha en el puerto 80. Los usuarios accederán a este servidor web interno con la dirección IPv4 global 209.165.200.225, una dirección IPv4 pública única a nivel global. En este caso, es la dirección de la interfaz Serial 0/1/0 del R2. El puerto global se configura como 8080. Este es el puerto de destino que se utiliza junto con la dirección IPv4 global 209.165.200.225 para acceder al servidor web interno. Observe los siguientes parámetros de comando dentro de la configuración NAT:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>ip-local</i>
+                </span> = 192.168.10.254</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>puerto local</i>
+                </span> = 80</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>ip-global</i>
+                </span> = 209.165.200.225</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>puerto global</i>
+                </span> = 8080</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cuando no se utiliza un número de puerto bien conocido, el cliente debe especificar el número de puerto de la aplicación.</p>
+          <p></p>
+          <p>Al igual que otros tipos de NAT, el reenvío de puertos requiere que se configuren las interfaces NAT interna y externa.</p>
+          <p></p>
+          <p>Como en el caso de la NAT estática, se puede utilizar el comando <b>show ip nat translations</b> para verificar el reenvío de puertos, como se muestra en la figura 3. </p>
+          <p></p>
+          <p>En el ejemplo, cuando el router recibe el paquete con la dirección IPv4 global interna 209.165.200.225 y un puerto TCP de destino 8080, el router realiza una búsqueda en la tabla de NAT con la dirección IPv4 de destino y el puerto de destino como claves. A continuación, el router traduce la dirección a la dirección local interna del host 192.168.10.254 y el puerto de destino 80. Luego, el R2 reenvía el paquete al servidor web. En el caso de los paquetes de retorno del servidor web al cliente, este proceso se invierte.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la sintaxis para configurar un reenvío a puerto asignado utilizando Cisco IOS. Verá una tabla en la que se describen las opciones de los comandos. En la figura número dos se muestra un router con una red interna a la izquierda y una red externa a la derecha.  Esto se logra mediante NAT estática. Los comandos para configurar el reenvío a puerto asignado aparecen debajo de la imagen. En la figura número tres se muestra un router SOHO con una red interna a la izquierda y una red externa a la derecha.  La salida del comando "show i. p. nat translations" se incluye debajo de la imagen.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#flashContent {
+    width: 98%;
+    height: 98%;
+}
+
+#play,
+#pause,
+#fforward,
+#rewind,
+#start,
+#end {
+    width: 40px;
+}
+
+#image_13 {
+    left: -13px !important;
+}
+
+#ID_txt10,
+#ID_txt11,
+#ID_txt12,
+#ID_txt13,
+#ID_txt14,
+#ID_txt15 {
+    letter-spacing: -0.2px!important;
+}
+
+#text_6,
+#text_8,
+#text_14,
+#text_17,
+#text_27,
+#text_29,
+#text_35,
+#text_64 {
+    left: 8px !important;
+}
+
+#text_35,
+#text_64 {
+    left: 3px !important;
+}
+
+#text_54 {
+    left: 2px !important;
+}
+
+#text_45,
+#text_52 {
+    left: -2px !important;
+}
+
+@media only screen and (device-width: 768px) {
+    #ID_txt10,
+    #ID_txt11,
+    #ID_txt12,
+    #ID_txt13,
+    #ID_txt14,
+    #ID_txt15 {
+        letter-spacing: -0.5px!important;
+        left: 2px!important;
+    }
+}
+
+#image_11 {
+    left: -11px !important;
+}
+
+#image_36,
+#image_42,
+#image_57,
+#image_22,
+#image_59,
+#image_46,
+#image_49,
+#image_47,
+#image_53,
+#image_65,
+#image_70,
+#image_68,
+#image_38 {
+    left: -12px !important;
+}
+
+#image_24,
+#image_61,
+#image_51,
+#image_40 {
+    left: -11px !important;
+}
+
+#image_44 {
+    left: -11px !important;
+    top: 0.2px !important;
+}
+
+#image_49 {
+    top: -2px !important;
+}
+
+#image_55,
+#image_63 {
+    left: -11px !important;
+}

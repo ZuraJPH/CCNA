@@ -1,0 +1,1 @@
+La figura 1 muestra la topología estándar de laboratorio de CCNA con la asignación IPV4 de direcciones IPv6.  La figura 2 muestra la salida del comando show ip route en el router 1. La figura 3 muestra la salida del comando show ipv 6 route en el router 1. La figura 4 muestra un flujograma de solución de problemas en la capa de red.

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.4.1.1 Resolución de problemas de la encapsulación PPP serial</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resolución de problemas de la encapsulación PPP serial</h1>
+        <div>
+          <p>Para la solución de problemas, se utiliza el comando <b>debug</b>, al que se accede en el modo EXEC con privilegios de la interfaz de línea de comandos. El resultado de <b>debug</b> muestra información sobre diferentes operaciones del router, relacionada con el tráfico generado o recibido por el router, y cualquier mensaje de error. Esto puede consumir una cantidad considerable de recursos, y el router se ve obligado a aplicar el switching de procesos a los paquetes que se depuran. El comando <b>debug</b> no se debe usar como herramienta de control; en cambio, está diseñado para ser utilizado durante un período breve para la resolución de problemas. </p>
+          <p></p>
+          <p>Utilice el comando <b>debug ppp</b> para mostrar información sobre el funcionamiento de PPP. En la ilustración, se muestra la sintaxis del comando. Utilice la versión <b>no</b> de este comando para deshabilitar el resultado de la depuración.</p>
+          <p></p>
+          <p>Utilice el comando <b>debug ppp</b> cuando intente buscar lo siguiente: </p>
+          <p>
+            <ul>
+              <li>Los protocolos NCP que se admiten en cualquier extremo de una conexión PPP </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cualquier bucle que pudiera existir en una internetwork PPP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los nodos que negocian conexiones PPP correctamente (o no)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los errores que ocurrieron en la conexión PPP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las causas para las fallas de la sesión CHAP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las causas para las fallas de la sesión PAP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Información específica del intercambio de conexiones PPP mediante el protocolo de devolución de llamada (CBCP), que usan los clientes Microsoft</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Información de número de secuencia de paquete incorrecta donde está habilitada la compresión MPPC</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los siguientes parámetros para el comando debug PPP: paquete, negociación, error, autenticación, compresión y CDCP.  El paquete se utiliza para mostrar los paquetes de PPP que se envían y reciben. La negociación se utiliza para mostrar los paquetes de PPP durante el inicio de PPP. El error se utiliza para mostrar errores de protocolo. La autenticación se utiliza para mostrar mensajes de protocolo de autenticación incluidos los intercambios de CHAP y de PAP. La compresión se utiliza para mostrar información específica al intercambio de las conexiones PPP mediante MPPC. CDCP se utiliza para mostrar los errores y las estadísticas del protocolo asociados con las negociaciones de conexiones PPP mediante MSCB.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

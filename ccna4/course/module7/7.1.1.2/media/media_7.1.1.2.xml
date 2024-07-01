@@ -1,0 +1,29 @@
+﻿<textcomponents>
+
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Redes convergentes</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>HVAC</b>]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<b>Teléfono</b>]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[<b>Alimentación</b>]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Datos</b>]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[<b>vídeo</b>]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[<b>Seguridad física</b>]]></text>
+	</component>
+
+	<component id="ID_caption">
+		<text><![CDATA[A medida que IdC evolucione, las redes individuales se conectarán entre sí e incluirán seguridad, análisis y administración.]]></text>
+	</component>
+	
+</textcomponents>

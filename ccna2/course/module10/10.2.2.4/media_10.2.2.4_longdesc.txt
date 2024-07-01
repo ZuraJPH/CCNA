@@ -1,0 +1,1 @@
+En la figura se muestra un R1 configurado con el comando ‘service timestamps log datetime’ para obligar a los mensajes de registro a que indiquen la fecha y hora.

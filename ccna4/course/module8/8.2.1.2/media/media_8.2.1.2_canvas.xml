@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="ROUTER" textId="ID_router_txt1" x="40" y="70" width="600" height="335" />
+<text id="ID_router_txt1"><![CDATA[<pre>R1# <b>show ip sla application</b>
+       IP Service Level Agreements
+Version: Round Trip Time MIB 2.2.0, Infrastructure Engine-III   
+
+<font color="#F68026"><b>Supported Operation Types:
+       icmpEcho</b></font>, path-echo, path-jitter, udpEcho, tcpConnect, http
+       dns, udpJitter, dhcp, ftp, VoIP, icmpJitter       
+       802.1agEcho VLAN, Port, 802.1agJitter VLAN, Port, y1731Delay       
+       y1731Loss, udpApp, wspApp, mcast, generic   
+
+Supported Features:
+       IPSLAs Event Publisher   
+
+IP SLAs low memory water mark: 61167610 
+Estimated system max number of entries: 44800   
+
+Estimated number of configurable operations: 44641 
+Number of Entries configured  : 0 
+Number of active Entries      : 0 
+Number of pending Entries     : 0 
+Number of inactive Entries    : 0 
+Time of last change in whole IP SLAs: *20:27:15.935 UTC Wed Jan 27 2016</pre>]]></text>
+<element type="TEXT" subType="TITLE" compId="ID_s1_title" color="#FFFFFF"/>
+</slide>
+</data>

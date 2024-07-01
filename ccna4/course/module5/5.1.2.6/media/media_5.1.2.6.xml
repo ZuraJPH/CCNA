@@ -1,0 +1,23 @@
+﻿<textcomponents><!--SLIDE 1--><component id="ID_s1_title">
+		<text><![CDATA[<b>Roles de 802.1X</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Suplicante</b>]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Requiere acceso y responde a las solicitudes del switch]]></text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[<b>Autenticador</b>]]></text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Controla el acceso físico a la red según el estado de autenticación del cliente]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[<b>Autenticación</b>]]></text>
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[Ejecuta la autenticación del cliente]]></text>
+	</component>
+	
+</textcomponents>

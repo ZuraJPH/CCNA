@@ -1,0 +1,37 @@
+﻿<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Modelos para implementar QoS</b>]]></text>
+	</component>
+	
+<component id="ID_table">
+<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='3' class="mtable">
+
+	<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="5"></font></td>
+		</tr>
+
+		<tr class="mtable_top">
+			<td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>
+	<tr>
+		<td width="149" bgcolor='#666263' valign="top" class="width"><font color='#ffffff'><b>Modelo</b></font></td>
+		<td width="449" bgcolor='#666263' valign="top"><font color='#ffffff'><b>Descripción</b></font></td>
+	 </tr>
+	<tr>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Modelo de mejor esfuerzo (calidad en el servicio)</td>
+		<td bgcolor='#E9E7E8'><font color='#393536'><textformat blockindent="-16"><ul><li>No se trata realmente de una implementación ya que no se configura explícitamente el QoS.</li><li>Se utiliza cuando no se requiere QoS.</li></ul></textformat></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Servicios integrados (IntServ)</td>
+		<td bgcolor='#F2F2F2'><font color='#393536'><textformat blockindent="-16"><ul><li>Proporciona QoS muy alta a los paquetes de IP con garantía de entrega.</li></ul><ul><li>Define un proceso de señalización para que las aplicaciones señalen a la red que requieren QoS especial por un tiempo y qué ancho de banda debe reservarse.</li></ul><ul><li>Sin embargo, IntServ puede limitar seriamente la escalabilidad de una red.</li></ul></textformat></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8'>Servicios diferenciados (DiffServ)</td>
+		<td bgcolor='#E9E7E8'><font color='#393536'><textformat blockindent="-16"><ul><li>Proporciona alta escalabilidad y flexibilidad en la implementación de QoS.</li><li>Los dispositivos de red reconocen las clases de tráfico y proporcionan distintos niveles de QoS a diferentes clases de tráfico.</li></ul></textformat></td>
+	</tr>
+
+</table>]]></text>
+</component>
+	
+</textcomponents>

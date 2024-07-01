@@ -1,0 +1,9 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s4_txt01,#ID_s5_txt01{
+	background-color: "#FFFFFF";
+	box-shadow: 2px 2px 2px 2px #888888;
+}

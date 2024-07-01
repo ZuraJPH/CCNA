@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.3.1 Comandos para la resolución de problemas de OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos para la resolución de problemas de OSPFv3</h1>
+        <div>
+          <p>Consulte la figura 1 para ver la topología de referencia OSPFv3.</p>
+          <p></p>
+          <p>La resolución de problemas de OSPFv3 es casi idéntica a la de OSPFv2; por eso, muchos comandos y criterios de resolución de problemas de OSPFv3 también se aplican a OSPFv3.</p>
+          <p></p>
+          <p>Por ejemplo, los siguientes son los comandos equivalentes que se utilizan con OSPFv3:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 protocols</b> (figura 2): este comando se utiliza para verificar información fundamental de configuración de OSPFv3, incluidas la ID del proceso OSPFv3, la ID del router y las interfaces de las que el router recibe actualizaciones.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 ospf neighbor</b> (figura 3): se utiliza para verificar que el router haya formado una adyacencia con sus routers vecinos. Este resultado muestra la ID del router vecino, la prioridad del vecino, el estado de OSPFv3, el temporizador de tiempo muerto, la ID de la interfaz vecina y la interfaz mediante la cual se puede acceder al vecino. Si no se muestra la ID del router vecino o este no se muestra en el estado <b>FULL</b> o <b>2WAY</b>, los dos routers no formaron una adyacencia OSPFv3. Si dos routers no establecieron adyacencia, no se intercambiará la información de estado de enlace. Las bases de datos de estado de enlace incompletas pueden crear árboles SPF y tablas de routing imprecisos. Es posible que no existan rutas hacia las redes de destino o que estas no constituyan las mejores rutas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 ospf interface</b> (figura 4): se usa para mostrar los parámetros de OSPFv3 que se configuraron en una interfaz, como la ID del proceso OSPFv3 a la que se asignó la interfaz, el área en la que están las interfaces, el costo de la interfaz y los intervalos de saludo y de tiempo muerto. Al agregar el nombre y número de la interfaz al comando, se muestra la salida para una interfaz específica. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 ospf</b> (figura 5): se usa para examinar la ID del proceso OSPF y la ID del router, además de la información sobre las transmisiones de LSA.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ipv6 route ospf</b> (figura 6): se utiliza para mostrar solo las rutas OSPFv3 detectadas en la tabla de routing. La salida muestra que el R1 descubrió alrededor de cuatro redes remotas mediante OSPFv3.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>clear ipv6 ospf </b>[<i>process-id</i>]<b> process</b>: se usa para restablecer las adyacencias de vecinos OSPFv3. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. Se resalta la red interna, menos el enlace entre el router dos y el ISP. En la figura dos, se muestra la salida del comando "show ipv6 protocols" en el router uno. En la figura tres, se muestra el resultado del comando "show ipv6 neighbors" en el router uno. En la figura cuatro, se muestra la salida del comando "show ipv6 ospf interface s. cero barra diagonal cero barra diagonal cero" en el router uno. En la figura cinco, se muestra la salida del comando "show ipv6 ospf" en el router uno. En la figura seis, se muestra la salida del comando "show ipv6 route ospf:" en el router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

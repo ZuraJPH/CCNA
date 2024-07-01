@@ -1,0 +1,14 @@
+﻿<textcomponents><!--SLIDE 1--><component id="ID_s1_title">
+		<text><![CDATA[<b>Duplicación de trama de switch para la captura de paquetes</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Tráfico de unidifusión PC1-PC2]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Tráfico duplicado]]></text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Analizador de protocolos]]></text>
+	</component>
+	
+</textcomponents>

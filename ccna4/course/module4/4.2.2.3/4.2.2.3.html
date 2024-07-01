@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.3 Filtrado de tráfico con ACL extendidas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrado de tráfico con ACL extendidas</h1>
+        <div>
+          <p>En el ejemplo que se muestra en la figura 1, se deniega el tráfico FTP de la subred 192.168.11.0 que va a la subred 192.168.10.0, pero se permite el resto del tráfico. Recuerde que FTP utiliza los puertos TCP 20 y 21, por lo tanto, la ACL requiere ambas palabras claves de nombre de puerto <b>ftp</b> y <b>ftp-data</b> o <b>eq 20</b> y <b>eq 21</b> para denegar el tráfico FTP.</p>
+          <p></p>
+          <p>Si se utilizan números de puerto en vez de nombres de puerto, los comandos se deben escribir de la siguiente forma:</p>
+          <p></p>
+          <p>
+            <span class="cmd">
+              <b>access-list 101 deny tcp 192.168.11.0 0.0.0.255 192.168.10.0 0.0.0.255 eq 20</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">
+              <b>access-list 101 deny tcp 192.168.11.0 0.0.0.255 192.168.10.0 0.0.0.255 eq 21</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Para evitar que la instrucción <b>deny any</b> implícita al final de la ACL bloquee todo el tráfico, se agrega la instrucción <b>permit ip any any</b>. Si no hay por lo menos una instrucción <b>permit</b> en una ACL, todo el tráfico en la interfaz donde se aplicó esa ACL se descarta. La ACL se debe aplicar en sentido de entrada en la interfaz G0/1 para filtrar el tráfico de la LAN 192.168.11.0/24 cuando ingresa a la interfaz del router.</p>
+          <p></p>
+          <p>En el ejemplo que se muestra en la figura 2, se deniega el tráfico de Telnet de cualquier origen a la LAN 192.168.11.0/24, pero se permite el resto del tráfico IP. Debido a que el tráfico destinado a la LAN 192.168.11.0/24 sale de la interfaz G0/1, la ACL se aplica a G0/1 con la palabra clave <b>out</b>. Observe el uso de las palabras clave <b>any</b> en la instrucción permit. Esta instrucción permit se agrega para asegurar que no se bloquee ningún otro tipo de tráfico. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> en ambos ejemplos en las figuras 1 y 2, se utiliza la instrucción <b>permit ip any any</b> al final de la ACL. Para obtener mayor seguridad, se puede utilizar el comando <b>permit 192.168.11.0 0.0.0.255 any</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno se muestra un router con un segmento de red local en cada una de las dos interfaces Ethernet Gigabit.  Cada segmento consiste en un switch y una computadora.  La interfaz gigabit Ethernet cero barra diagonal cero se encuentra en la red 192 punto 168 punto 10 punto cero, y la interfaz cero barra diagonal uno se encuentra en la red 192 punto 168 punto 11 punto cero.  La figura muestra la creación de una ACL que deniegue el tráfico FTP de la subred punto 11 que va a la subred punto 10.  El primer comando de esta ACL es: access guion list 101 deny tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 any eq ftp  El comando siguiente es: access guion list 101 deny tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 any igual ftp guion data.  El último comando permite todo el otro tráfico y es: access guion list 101 permit ip any any.  La ACL luego se aplica a la interfaz gigabit Ethernet en la dirección entrante con el comando ip access guion group 101 in. La figura 2 muestra una ACL que deniega el tráfico Telnet de cualquier origen a la LAN 192 punto 168 punto 11 punto cero barra diagonal 24, pero permite todos los demás tipos de tráfico IP.  El primer comando es access guion list 102 deny tcp any 192 punto 168 punto 11 punto cero cero punto cero punto cero punto 255 any eq 23.  El último comando permite todo el otro tráfico y es: access guion list 102 permit ip any any.  Finalmente se aplica la ACL a la interfaz en el sentido saliente mediante el comando ip access guión group 102 out.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

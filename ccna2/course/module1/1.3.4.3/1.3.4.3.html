@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.4.3 Ejemplos de routing dinámico IPv4 </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de routing dinámico IPv4 </h1>
+        <div>
+          <p>En este ejemplo de routing dinámico, suponga que el R1 y el R2 se configuraron para admitir el protocolo de routing dinámico EIGRP. Los routers también anuncian las redes conectadas directamente. El R2 anuncia que es el gateway predeterminado a otras redes. </p>
+          <p></p>
+          <p>En el resultado de la ilustración, se muestra la tabla de routing del R1 después del intercambio de actualizaciones y la convergencia de los routers. Además de la interfaz conectada y la interfaz link-local, hay tres entradas “<b>D</b>” en la tabla de routing. </p>
+          <p>
+            <ul>
+              <li>La entrada que comienza con “<b>D*EX</b>” identifica que el origen de esta entrada fue EIGRP (“<b>D</b>"). La ruta es candidata a ser una ruta predeterminada (“<b>*</b>”) y es una ruta externa (“*<b>EX</b>”) reenviada por EIGRP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las otras dos entradas “<b>D</b>” son rutas instaladas en la tabla de routing según la actualización del R2 que anuncia sus LAN.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una red de dos routers conectados a través de un enlace WAN, y cada uno tiene dos redes activas en los puertos Gigabit Ethernet.  Los routers usan EIGRP y se muestra el resultado del comando show ip route barra vertical begin Gateway.  La tabla de routing del router enumera los tres rutas conectadas, las tres direcciones IP de interfaz local, dos rutas aprendidas mediante EIGRP y una ruta externa reenviada por EIGRP que es la ruta candidata predeterminada.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

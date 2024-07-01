@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.2 Algoritmo vector distancia</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algoritmo vector distancia</h1>
+        <div>
+          <p>El algoritmo de routing se encuentra en el centro del protocolo vector distancia. El algoritmo se utiliza para calcular los mejores caminos y después enviar dicha información a los vecinos. </p>
+          <p></p>
+          <p>El algoritmo utilizado para los protocolos de routing define los siguientes procesos:</p>
+          <p>
+            <ul>
+              <li>El mecanismo para enviar y recibir información de routing.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El mecanismo para calcular las mejores rutas e instalar rutas en la tabla de routing.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El mecanismo para detectar cambios en la topología y reaccionar ante ellos.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la animación de la figura, R1 y R2 están configurados con el protocolo de routing RIP. El algoritmo envía y recibe actualizaciones. Tanto R1 como R2 obtienen información nueva de la actualización. En este caso, cada router obtiene información acerca de una red nueva. El algoritmo de cada router realiza los cálculos de manera independiente y actualiza la tabla de routing con la información nueva. Cuando la LAN del R2 deja de funcionar, el algoritmo compone una actualización dirigida y la envía al R1. Luego, R1 elimina la red de la tabla de routing.  </p>
+          <p></p>
+          <p>Los diferentes protocolos de routing utilizan diversos algoritmos para instalar rutas en la tabla de routing, enviar actualizaciones a los vecinos y determinar las rutas. Por ejemplo:</p>
+          <p>
+            <ul>
+              <li>RIP utiliza el algoritmo de Bellman-Ford como algoritmo de routing. Se basa en dos algoritmos desarrollados por Richard Bellman y Lester Ford júnior en 1958 y 1956.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IGRP y EIGRP utilizan el algoritmo de actualización por difusión (DUAL) como algoritmo de routing, desarrollado por el Dr. J.J. Garcia-Luna-Aceves en SRI International. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el propósito de los algoritmos de routing, que consiste en enviar y recibir actualizaciones, para calcular la mejor ruta e instalar rutas en la tabla, y detectar y responder a los cambios de topología.  La figura es una animación que muestra dos routers que se envían actualizaciones periódicas entre sí, calculan los mejores routers y mantienen la tabla de routing.  La animación también muestra una red que falla y el router al que está conectada enviando una actualización para alertar al otro router de la falla.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

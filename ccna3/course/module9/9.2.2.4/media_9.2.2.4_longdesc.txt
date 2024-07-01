@@ -1,0 +1,1 @@
+La figura uno muestra la salida recibida al utilizar el comando show ip ospf database en un router OSPF multiárea.  Se resaltan los estados de enlace del router en la LSDB. La figura dos es una actividad interactiva que permite que el estudiante practique cómo utilizar el comando show ip ospf database en dos routers OSPF multiárea conectados.

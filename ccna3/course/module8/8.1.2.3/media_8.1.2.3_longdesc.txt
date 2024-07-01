@@ -1,0 +1,1 @@
+La figura muestra el contenido del paquete de saludo de OSPF.  En la figura se resaltan el tipo, la ID del router, la ID del área, la máscara de red, el intervalo de saludo, la prioridad del router, la ID del router designado, la ID del router designado de respaldo y la lista de vecinos.

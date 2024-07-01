@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.2 Problemas en los puertos de switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas en los puertos de switch</h1>
+        <div>
+          <p>Hay varias configuraciones de switch incorrectas comunes que puede producirse al configurar el routing entre varias VLAN.</p>
+          <p></p>
+          <p>Al utilizar el modelo de routing antiguo para routing entre VLAN, asegúrese de que los puertos del switch que se conectan a las interfaces del router estén configurados en las VLAN correctas. Si un puerto de switch no está configurado para la VLAN adecuada, los dispositivos configurados en esa VLAN no se pueden conectar a la interfaz del router, por lo que dichos dispositivos no pueden enviar datos a las demás VLAN.</p>
+          <p></p>
+          <p>Como se puede ver en la topología de la figura 1, la PC1 y la interfaz G0/0 del router R1 están configuradas en la misma subred lógica, como lo indica su asignación de dirección IPv4. Sin embargo, el puerto de switch F0/4 que se conecta a la interfaz G0/0 del router R1 no está configurado y permanece en la VLAN predeterminada. Dado que el router R1 está en una VLAN diferente que PC1, no pueden comunicarse.</p>
+          <p></p>
+          <p>Para corregir este problema, el puerto F0/4 en el switch S1 debe estar en modo de acceso (<b>switchport access mode</b>) y ser asignado a la VLAN 20 (<b>switchport access vlan 20</b>). Cuando el puerto del switch se configura en modo de acceso y se asigna a la VLAN correcta, la PC1 puede comunicarse con la interfaz G0/0 del router R1, que le permite acceder a las otras VLAN conectadas al router R1.</p>
+          <p></p>
+          <p>La topología de la figura 2 muestra el modelo de routing router-on-a-stick. Sin embargo, la interfaz F0/5 en el switch S1 no está configurada como enlace troncal y queda en la VLAN predeterminada para el puerto. Como resultado, el router no puede realizar routing entre las VLAN, porque cada una de las subinterfaces configuradas no puede enviar ni recibir el tráfico con etiquetas de VLAN. </p>
+          <p></p>
+          <p>Para corregir este problema, emita el comando <b>switchport mode trunk</b> en el modo de configuración de interfaz para el puerto del switch F0/5 en el switch S1. Esto convierte a la interfaz en un puerto de enlace troncal, lo que permite que se establezca un enlace troncal entre el R1 y el S1. Una vez que el enlace troncal se establece correctamente, los dispositivos conectados a cada una de las VLAN pueden comunicarse con la subinterfaz asignada a su VLAN, lo que permite el routing entre VLAN.</p>
+          <p></p>
+          <p>En la topología de la figura 3 se muestra que el enlace troncal entre el S1 y S2 está inactivo. Dado que no hay una conexión o ruta redundante entre los dispositivos, ninguno de los dispositivos conectados al S2 puede llegar al router R1. Como resultado, ninguno de los dispositivos conectados al S2 puede realizar routing a otras VLAN a través del R1.</p>
+          <p></p>
+          <p>Para reducir el riesgo de una falla en el enlace entre switches que interrumpa el routing entre VLAN, el diseño de red debe contar con enlaces redundantes y rutas alternativas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra una topología de routing entre VLAN antigua que indica dos VLAN con los enlaces físicos hacia el router como VLAN predeterminadas. En la figura dos, se muestra una topología de routing entre VLAN de router-on-a-stick que indica dos VLAN y un solo enlace físico hacia el router como VLAN predeterminadas. En la figura tres, se muestra una topología de routing entre VLAN de router-on-a-stick que indica que se agrega un segundo switch, pero con un enlace troncal inoperante entre los dos switches.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

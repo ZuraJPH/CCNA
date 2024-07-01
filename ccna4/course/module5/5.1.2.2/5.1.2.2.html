@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.2 Mitigación de ataques por saturación de tabla de direcciones MAC</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mitigación de ataques por saturación de tabla de direcciones MAC</h1>
+        <div>
+          <p>El método más simple y eficaz de evitar ataques por saturación de la tabla de direcciones MAC es habilitar la seguridad de puertos. </p>
+          <p></p>
+          <p>La seguridad de puertos permite que un administrador especifique direcciones MAC estáticas para un puerto, o permite que el switch obtenga dinámicamente una cantidad limitada de direcciones MAC. Al limitar a uno la cantidad de direcciones MAC permitidas en un puerto, la seguridad de puertos se puede usar para controlar la expansión no autorizada de la red, como se muestra en la figura.</p>
+          <p></p>
+          <p>Cuando se asignan direcciones MAC a un puerto seguro, dicho puerto solo reenvía tramas con direcciones MAC de origen del grupo de direcciones definidas. Cuando un puerto configurado con seguridad de puertos recibe una trama, se compara la dirección MAC de origen de la trama con la lista de direcciones de origen seguras que se configuró manualmente o se detectó automáticamente en el puerto.</p>
+          <p></p>
+          <p>Si se configura un puerto como seguro y se alcanza la cantidad máxima de direcciones MAC, cualquier intento adicional de conexión de las direcciones MAC desconocidas genera una violación de seguridad. La figura resume estos puntos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un switch de capa 3 con una PC legítima y dos PC de atacante conectadas. La figura muestra una operación de seguridad de puerto en una topología, donde la cantidad permitida de direcciones MAC en un puerto se limita a uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+En la figura 1, se muestran los modos del protocolo VTP. En la figura 2, se resume el funcionamiento de los tres modos.

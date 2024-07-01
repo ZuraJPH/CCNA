@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.3.1.2 Capítulo 9: OSPF multiárea</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 9: OSPF multiárea</h1>
+        <div>
+          <p>OSPF de área única es útil en redes más pequeñas, pero en redes más grandes, OSPF multiárea es una mejor opción. OSPF multiárea resuelve los problemas de las tablas de routing extensas, las bases de datos de estado de enlace muy grandes y los cálculos frecuentes del algoritmo SPF, como se muestra en las figuras 1 y 2.</p>
+          <p></p>
+          <p>El área principal se denomina “área troncal” (área 0) y el resto de las áreas deben estar conectadas a esta. Se sigue produciendo el routing entre áreas, y muchas de las operaciones de routing, como volver a calcular la base de datos, se guardan en un área.</p>
+          <p></p>
+          <p>Existen cuatro tipos de routers OSPF diferentes: el router interno, el router troncal, el router de área perimetral (ABR) y el router de frontera de sistema autónomo (ASBR). Un router se puede clasificar como uno o más tipos de router.</p>
+          <p></p>
+          <p>Las notificaciones de estado de enlace (LSA) son los bloques funcionales de OSPF. Este capítulo se centró en las LSA de tipo 1 a 5. Las LSA de tipo 1 se denominan “entradas de enlace de router”. Las LSA de tipo 2 se denominan “entradas de enlace de red”, y los DR saturan las áreas con ellas. Las LSA de tipo 3 se denominan “entradas de enlace de resumen”, y los ABR saturan las áreas con ellas. El ABR genera una LSA de resumen de tipo 4 solo cuando existe un ASBR en el área. Las LSA externos de tipo 5 anuncian rutas a redes que se encuentran fuera del sistema autónomo de OSPF. Las LSA de tipo 5 se originan en el ASBR y se propagan hacia todo el sistema autónomo. </p>
+          <p></p>
+          <p>En las tablas de routing IPv4, las rutas OSPFv2 se identifican con los siguientes descriptores: O, O IA, O E1 u O E2. Cada router utiliza el algoritmo SPF en virtud de la LSDB para crear un árbol SPF. El árbol de SPF se utiliza para determinar las mejores rutas. </p>
+          <p></p>
+          <p>No se requieren comandos especiales para implementar una red OSPF multiárea. Un router se convierte en ABR cuando tiene dos instrucciones <b>network</b> en diferentes áreas.</p>
+          <p></p>
+          <p>Este es un ejemplo de una configuración OSPF:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>router ospf 10</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>router-id 1.1.1.1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>network 10.1.1.1 0.0.0.0 area 1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>network 10.1.2.1 0.0.0.0 area 1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>network 192.168.10.1 0.0.0.0 area 0</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Los comandos que se utilizan para verificar la configuración de OSPFv2 son los siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf neighbor </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface brief</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route ospf</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf database </b>
+              </li>
+            </ul>
+          </p>
+          <p>Para usar el comando equivalente de OSPFv3, simplemente reemplace <b>ip</b> por <b>ipv6</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Las figuras uno y dos muestran una topología OSPF multiárea con referencias que enfatizan las ventajas, las que incluyen tablas de routing más pequeñas, mensajes de LSA organizados y el uso reducido del algoritmo SPF, lo que produce un routing más eficiente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra a un trabajador conectado a una red y una lista con varios comandos de configuración de SNMP básicos.

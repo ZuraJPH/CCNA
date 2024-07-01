@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.3 Aplicación de una ACL de IPv6 a una interfaz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Aplicación de una ACL de IPv6 a una interfaz</h1>
+        <div>
+          <p>Después de que se configura una ACL de IPv6, se la vincula a una interfaz mediante el comando <b>ipv6 traffic-filter</b>: </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)#</span>
+            <span class="cmd">
+              <b> ipv6 traffic-filter</b>
+            </span>
+            <span class="cmd">
+              <i> access-list-name </i>
+            </span>
+            <span class="cmd">{</span>
+            <span class="cmd">
+              <b>in </b>
+            </span>
+            <span class="cmd">|</span>
+            <span class="cmd">
+              <b> out</b>
+            </span>
+            <span class="cmd">}</span>
+          </p>
+          <p></p>
+          <p>En la ilustración, se muestra la ACL NO-R3-LAN-ACCESS configurada anteriormente y los comandos utilizados para aplicar la ACL de IPv6 de entrada a la interfaz S0/0/0. Si se aplica la ACL a la interfaz S0/0/0 de entrada, se denegarán los paquetes de 2001:DB8:CAFE:30::/64 en ambas LAN en el R1.</p>
+          <p></p>
+          <p>Para eliminar una ACL de una interfaz, primero introduzca el comando <b>no ipv6 traffic-filter</b> en la interfaz y, luego, introduzca el comando global <b>no ipv6 access-list</b> para eliminar la lista de acceso.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> Tanto en IPv4 como en IPv6 se utiliza el comando <b>access-class</b> para aplicar una lista de acceso a los puertos VTY.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la topología de red de referencia de ACL de tres routers.  La figura muestra los comandos para aplicar una ACL IPv6 a una interfaz en R-1.  La figura comienza en el modo de configuración global y el primer comando es interface s cero barra diagonal cero barra diagonal cero.  El siguiente comando es: ipv6 traffic guion filter no guion R 3 guion lan guion access in.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figura muestra una tabla de modelos y niveles de seguridad de SNMP.  Las columnas incluidas son: modelo, nivel, autenticación, encriptación y resultado.

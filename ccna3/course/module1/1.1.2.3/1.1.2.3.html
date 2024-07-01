@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.3 Dominios de fallas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dominios de fallas</h1>
+        <div>
+          <p>Una red bien diseñada no solo controla el tráfico, sino que además limita el tamaño de los dominios de fallas. Un dominio de fallas es el área de la red que se ve afectada cuando un dispositivo o un servicio de red esenciales experimentan problemas. </p>
+          <p></p>
+          <p>La función del dispositivo que inicialmente falla determina el impacto del dominio de fallas. Por ejemplo, un switch que funciona mal en un segmento de red normalmente afecta solo a los hosts de ese segmento. Sin embargo, si la falla se presenta en el router que conecta este segmento con otros segmentos, el impacto es mucho mayor. </p>
+          <p></p>
+          <p>El uso de enlaces redundantes y equipos confiables de alta tecnología minimizan las posibilidades de interrupciones de los servicios de la red. Si los dominios de fallas son más pequeños, se reduce el impacto de las fallas sobre la productividad de la empresa. Además, simplifican el proceso de resolución de problemas, lo que reduce el tiempo de inactividad para todos los usuarios.</p>
+          <p></p>
+          <p>En la figura, haga clic en cada dispositivo de red resaltado para ver el dominio de fallas relacionado.</p>
+          <p></p>
+          <p>
+            <b>Limitación del tamaño de los dominios de fallas </b>
+          </p>
+          <p></p>
+          <p>Dado que una falla en la capa de núcleo de una red puede tener un gran impacto, el diseñador de red suele enfocarse en los esfuerzos para prevenir fallas. Estos esfuerzos pueden suponer un gran incremento del costo de implementación de la red. En el modelo de diseño jerárquico, es más fácil y, generalmente, más económico controlar el tamaño de un dominio de fallas en la capa de distribución. En esta capa, los errores de la red se pueden contener en un área más pequeña, de manera que se vean afectados menos usuarios. Cuando se utilizan dispositivos de capa 3 en la capa de distribución, cada router funciona como gateway para un número limitado de usuarios de la capa de acceso. </p>
+          <p></p>
+          <p>
+            <b>Implementación de un bloque de switches</b>
+          </p>
+          <p></p>
+          <p>Los routers, o los switches multicapa, generalmente se implementan de a pares, y los switches de capa de acceso se dividen en partes iguales entre ellos. A esta configuración se la denomina “bloque de switches de edificio” o “de departamento”. Cada bloque de switches funciona de manera independiente. Como resultado, la falla de un único dispositivo no desactiva la red. Ni siquiera la falla de todo un bloque de switches afecta a un gran número de usuarios finales.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestra un router perimetral conectado a Internet.  Tiene dos redes conectadas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		 <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_4.4.2.8.png" />
+
+            <element type="TEXT" id="ID_static_1" text="S0/0/0" x="209" y="164" align="center" width="36" />
+            <element type="TEXT" id="ID_static_2" text="G0/0" x="174" y="223" align="center" width="26" />
+            <element type="TEXT" id="ID_static_3" text="S0/0/1" x="413" y="160" align="center" width="34" />
+            <element type="TEXT" id="ID_static_4" text="G0/1" x="255" y="223" align="center" width="24" />
+            <element type="TEXT" id="ID_static_5" text="2001:DB8:CAFE:10::/64" x="29" y="266" align="center" width="123" class="alg" bold="1" />
+            <element type="TEXT" id="ID_static_6" text="G0/1" x="437" y="235" align="center" width="24" />
+            <element type="TEXT" id="ID_static_7" text="S0/0/0" x="270" y="109" align="center" width="36" />
+            <element type="TEXT" id="ID_static_8" text="S0/0/1" x="380" y="109" align="center" width="34" />
+            <element type="TEXT" id="ID_static_9" text=":2" x="287" y="123" align="center" width="9" />
+            <element type="TEXT" id="ID_static_10" text=":2" x="380" y="124" align="center" width="9" />
+            <element type="TEXT" id="ID_static_11" text=":1" x="230" y="177" align="center" width="8" />
+            <element type="TEXT" id="ID_static_12" text=":1" x="423" y="173" align="center" width="8" />
+            <element type="TEXT" id="ID_static_13" text="2001:DB8:CAFE:11::/64" x="257" y="269" align="center" width="123" class="alg" bold="1"/>
+            <element type="TEXT" id="ID_static_14" text="2001:DB8:CAFE:30::/64" x="431" y="268" align="center" width="123" class="alg" bold="1"/>
+            <element type="TEXT" id="ID_static_15" text=":1" x="183" y="237" align="center" width="8" />
+            <element type="TEXT" id="ID_static_16" text=":1" x="255" y="237" align="center" width="8" />
+            <element type="TEXT" id="ID_static_17" text=":1" x="439" y="246" align="center" width="8" />
+            <element type="TEXT" id="ID_static_18" text="2001:DB8:CAFE:10::10/64" x="64" y="415" align="center" width="136" class="alg" bold="1"/>
+            <element type="TEXT" id="ID_static_19" text="2001:DB8:CAFE:11::11/64" x="216" y="415" align="center" width="136" class="alg" bold="1"/>
+            <element type="TEXT" id="ID_static_20" text="2001:DB8:CAFE:30::12/64" x="372" y="415" align="center" width="136" class="alg" bold="1"/>
+            <element type="TEXT" id="ID_static_21" text="2001:DB8:FEED:1::/64" x="122" y="126" align="center" width="115" class="alg" bold="1"/>
+            <element type="TEXT" id="ID_static_22" text="2001:DB8:FEED:2::/64" x="412" y="123" align="center" width="115" class="alg" bold="1"/>
+            <element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+            <element type="TEXT" compId="ID_s1_txt01" x="46" y="68" width="221" expand="up+down" align="left" class="orangeCallOut" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="ROUTER" textId="ID_router_txt1" x="40" y="89" width="600" height="264.15" />
+         
+            <element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#ffffff" />
+        </slide>
+        <slide>
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+            <element type="ROUTER" textId="ID_router_txt2" x="40" y="89" width="600" height="264.15" />
+        
+            <element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#ffffff" />
+        </slide>
+		
+		
+	
+<text id="ID_router_txt1"><![CDATA[<pre>R1# <b>show access-list</b>
+IPv6 access list DENY-ACCESS
+    permit ipv6 any 2001:DB8:CAFE:11::/64 sequence 10
+    deny ipv6 any 2001:DB8:CAFE:10::/64 sequence 20
+R1# <b>show running-config | section interface GigabitEthernet0/1</b>
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:CAFE:11::1/64
+ ipv6 eigrp 1
+ ipv6 traffic-filter DENY-ACCESS out
+R1#
+</pre>]]></text>
+		
+<text id="ID_router_txt2"><![CDATA[<pre>R1(config)# <b>no ipv6 access-list DENY-ACCESS</b>
+R1(config)# <b>interface g0/1</b>
+R1(config-if)# <b>no ipv6 traffic-filter DENY-ACCESS out</b>
+R1(config-if)#
+!-----------------------------------------------------
+R3(config)# <b>ipv6 access-list DENY-ACCESS</b>
+R3(config-ipv6-acl)# <b>permit ipv6 any 2001:DB8:CAFE:11::/64</b>
+R3(config-ipv6-acl)# <b>deny ipv6 any 2001:DB8:CAFE:10::/64</b>
+R3(config-ipv6-acl)# <b>exit</b>
+R3(config)# <b>interface g0/0</b>
+R3(config-if)# <b>ipv6 traffic-filter DENY-ACCESS in</b>
+R3(config-if)#
+</pre>]]></text>
+		
+</slide>
+</data>

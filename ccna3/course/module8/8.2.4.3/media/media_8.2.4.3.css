@@ -1,0 +1,7 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+.small_space {margin-left:20px;}
+.large_space {display: block;float: left;margin-left: 40px; text-align:left;}

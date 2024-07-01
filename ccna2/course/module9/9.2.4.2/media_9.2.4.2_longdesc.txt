@@ -1,0 +1,1 @@
+En la figura se muestra un router inalámbrico con una red interna a la izquierda y una red externa a la derecha.  Puede verse una captura de pantalla la GUI del Packet Tracer configurando el reenvío a puerto asignado.  

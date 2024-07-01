@@ -1,0 +1,1 @@
+La figura muestra una computadora a un lado de una pared de ladrillos y un mundo en el otro lado de la pared.  La pared de ladrillos representa un firewall, y el texto indica que el tráfico de red puede ser permitido o denegado.

@@ -1,0 +1,19 @@
+﻿<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Etiquetas de estratos de NTP</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Estrato 0]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Estrato 1]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Estrato 2]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Estrato 3]]></text>
+	</component>
+
+</textcomponents>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.4 Mitigación de ataques de DHCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mitigación de ataques de DHCP</h1>
+        <div>
+          <p>Un ataque de suplantación de DHCP se produce cuando un servidor DHCP dudoso se conecta a la red y brinda parámetros de configuración IP falsos a los clientes legítimos. La suplantación de DHCP es riesgosa porque los clientes pueden arrendar información de IP de direcciones de servidores DNS maliciosos, gateway predeterminados maliciosos o asignaciones de IP maliciosas.</p>
+          <p></p>
+          <p>Las mejores prácticas de seguridad recomiendan el uso de la detección DHCP para mitigar los ataques de suplantación de DHCP. </p>
+          <p></p>
+          <p>Si la detección DHCP está habilitada en una interfaz o VLAN y un switch recibe un paquete DHCP en un puerto no confiable, el switch compara la información del paquete de origen con la almacenada en la base de datos vinculante de detección DHCP. El switch negará los paquetes que contengan la siguiente información:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Mensajes no autorizados del servidor DHCP que provengan de un puerto no confiable.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mensajes del cliente DHCP que no cumplan con la base de datos de enlaces de detección DHCP o con los límites de velocidad.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En una red grande, la creación de la base de datos de enlaces de detección DHCP puede llevar tiempo una vez que se habilita. Por ejemplo, la detección DHCP podría tardar dos días en completar la base de datos si el tiempo de arrendamiento DHCP es de cuatro días.</p>
+          <p></p>
+          <p>La detección DHCP reconoce dos tipos de puertos:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Puertos de confianza de DHCP</b>: Solo se puede confiar en los puertos conectados a servidores DHCP corriente arriba. Estos puertos deben hacer que los servidores DHCP legítimos respondan con mensajes de oferta de DHCP y de acuse de recibo de DHCP. Los puertos confiables se deben identificar explícitamente en la configuración.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Puertos no confiables</b>: estos puertos se conectan a los hosts que no deben proporcionar mensajes de servidor DHCP. De manera predeterminada, todos los puertos de switch no son confiables.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figura proporciona una representación visual de la asignación de puertos de detección DHCP en una red. Observe cómo los puertos confiables siempre conducen al servidor de DHCP legítimo, mientras que el resto de los puertos (es decir, los puertos de acceso que se conectan a los terminales) no son confiables de manera predeterminada.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Para obtener más información sobre la detección DHCP, consulte el curso de Seguridad CCNA (CCNA Security).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra un switch con un servidor DHCP conectado a un puerto configurado como puerto de confianza.  El switch está conectado a otro switch que tiene una computadora cliente de DHCP en un puerto no confiable y una computadora DHCP dudosa del atacante en un puerto no confiable.  La computadora dudosa no podrá actuar como servidor, ya que está en un puerto no confiable.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

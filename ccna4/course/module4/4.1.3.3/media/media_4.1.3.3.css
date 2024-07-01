@@ -1,0 +1,6 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s4_txt01 {line-height:17px;}

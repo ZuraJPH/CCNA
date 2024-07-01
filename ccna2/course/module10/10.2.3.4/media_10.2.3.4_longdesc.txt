@@ -1,0 +1,1 @@
+En la figura número uno se muestra que la salida del comando show logging barra vertical include changed state to up en un router. En la figura número dos se muestra una actividad interactiva que permite que los alumnos practiquen el uso de los comandos para configurar un servidor syslog y verificar su correcto funcionamiento.

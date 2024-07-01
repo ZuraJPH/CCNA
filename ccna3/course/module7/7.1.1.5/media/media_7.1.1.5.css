@@ -1,0 +1,23 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+@media only screen and (device-width: 768px) {
+    #ID_static_5, #ID_static_24{
+        letter-spacing:-0.8px !important;
+    }
+    
+    #ID_static_23 {
+        letter-spacing: -1.6px !important;
+    }
+}

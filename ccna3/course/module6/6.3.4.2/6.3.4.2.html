@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.4.2 DUAL: sucesor factible</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>DUAL: sucesor factible</h1>
+        <div>
+          <p>Actualmente, el R2 usa al R3 como el sucesor a 192.168.1.0/24. Además, el R2 actualmente incluye al R1 como un FS, como se muestra en la figura 1. </p>
+          <p></p>
+          <p>La salida de <b>show ip eigrp topology</b> para el R2 en la figura 2 verifica que el R3 es el sucesor y el R1 es el FS para la red 192.168.1.0/24. Para comprender la manera en que DUAL puede usar un FS cuando la ruta que usa el sucesor no está disponible, se simula una falla de enlace entre el R2 y el R3.</p>
+          <p></p>
+          <p>Antes de simular la falla, debe habilitarse la depuración de DUAL mediante el comando <b>debug eigrp fsm</b> en el R2, como se muestra en la figura 3. La falla de enlace se simula mediante el comando <b>shutdown</b> en la interfaz Serial 0/0/1 del R2. </p>
+          <p></p>
+          <p>La salida de <b>debug</b> muestra la actividad que genera DUAL cuando un enlace queda fuera de servicio. El R2 debe informar a todos los vecinos EIGRP del enlace perdido y también actualizar sus propias tablas de routing y de topología. En este ejemplo, solo se muestran determinadas salidas de <b>debug</b>. Observe en particular que la FSM DUAL busca y encuentra un FS para la ruta en la tabla de topología de EIGRP. </p>
+          <p></p>
+          <p>El FS R1 ahora se convierte en el sucesor y se instala en la tabla de routing como la nueva mejor ruta a 192.168.1.0/24, como se muestra en la figura 4. Con un FS, este cambio en la tabla de routing sucede casi de inmediato.</p>
+          <p></p>
+          <p>Como se muestra en la figura 5, la tabla de topología para el R2 ahora muestra al R1 como el sucesor, y no hay nuevos FS. Si el enlace entre el R2 y el R3 se activa nuevamente, el R3 vuelve a ser el sucesor y el R1 se convierte una vez más en el FS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP y la red interna aparece resaltada, menos el enlace entre el router dos y el ISP. Hay una flecha que sale del router dos y apunta a la red de LAN del router tres, y el router uno aparece dentro de un círculo con la frase “feasible successor” (sucesor factible) a su lado.  El enlace serial entre el router dos y el router tres está desactivado. En la figura dos, se muestra la salida que genera el comando “show ip eigrp topology” en el router dos con las rutas del sucesor y sucesor factible resaltadas en color naranja. En la figura tres, se muestra la salida que genera el comando “debug eigrp fsm” en el router dos.  Luego, la interfaz serial se apaga y se muestran mensajes sobre el proceso DUAL. En la figura cuatro, se muestra la salida que genera el comando “show ip route” en el router dos con el nuevo sucesor. En la figura cinco, se muestra la salida que genera el comando “show ip eigrp topology” en el router dos con la nueva ruta del sucesor.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

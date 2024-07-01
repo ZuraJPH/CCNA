@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.3.3 DR y BDR OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>DR y BDR OSPF</h1>
+        <div>
+          <p>¿Por qué se necesita elegir un DR y un BDR?</p>
+          <p></p>
+          <p>Las redes multiacceso pueden crear dos retos para OSPF en relación con la saturación de las LSA:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Creación de varias adyacencias:</b> las redes Ethernet podrían interconectar muchos routers OSPF con un enlace común. La creación de adyacencias con cada router es innecesaria y no se recomienda, ya que conduciría al intercambio de una cantidad excesiva de LSA entre routers en la misma red.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Saturación intensa con LSA:</b> los routers de estado de enlace saturan con sus LSA cada vez que se inicializa OSPF o cuando se produce un cambio en la topología. Esta saturación puede llegar a ser excesiva.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para comprender el problema de las adyacencias múltiples, se debe estudiar una fórmula:</p>
+          <p></p>
+          <p>Para cualquier cantidad de routers (designada como <i>n</i>) en una red multiacceso, hay <i>n</i> (<i>n</i> − 1) / 2 adyacencias. </p>
+          <p></p>
+          <p>En la figura 1, se muestra una topología simple de cinco routers, los cuales están conectados a la misma red Ethernet multiacceso. Sin ningún tipo de mecanismo para reducir la cantidad de adyacencias, estos routers en forma colectiva formarán 10 adyacencias: </p>
+          <p></p>
+          <p>5 (5 – 1) / 2 = 10 </p>
+          <p></p>
+          <p>Puede parecer poco, pero a medida que se agregan routers a la red, la cantidad de adyacencias aumenta notablemente, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>Para comprender el problema de la saturación intensa con LSA, reproduzca la animación de la figura 3. En la animación, el R2 envía una LSA. Este evento hace que cada router también envíe una LSA. Los acuses de recibo requeridos que se envían por cada LSA recibida no se muestran en la animación. Si cada router en una red multiacceso tuviera que saturar y reconocer todas las LSA recibidas a todos los demás routers en la misma red multiacceso, el tráfico de la red se volvería bastante caótico.</p>
+          <p></p>
+          <p>La solución para administrar la cantidad de adyacencias y la saturación con LSA en una red multiacceso es el DR. En las redes multiacceso, OSPF elige un DR para que funcione como punto de recolección y distribución de las LSA enviadas y recibidas. También se elige un BDR en caso de que falle el DR. Todos los otros routers se convierten en DROTHER. Un DROTHER es un router que no funciona como DR ni como BDR.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El DR se utiliza solo para la transmisión de LSA. El router seguirá usando el mejor router de siguiente salto indicado en la tabla de routing para el reenvío de los demás paquetes.</p>
+          <p></p>
+          <p>Reproduzca la animación de la figura 4 para ver la función del DR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cinco routers. Los cincos están conectados a un switch central. Ningún router está directamente conectado con otro router.  La figura demuestra una red multiacceso que requeriría la formación de 10 adyacencias. La figura dos es un gráfico que demuestra cómo un aumento en la cantidad de routers genera un aumento drástico en la cantidad de adyacencias.  Por ejemplo: 5 routers requerirán 10 adyacencias, 20 routers requerirán 190 adyacencias y 100 routers requerirán 4950 adyacencias. En la figura tres, se muestran cinco routers. Los tres están conectados a un switch central. Ningún router está directamente conectado con otro router.  La figura es una animación que muestra a un router que envía un anuncio de estado de enlace a cada uno de los otros routers con los que formó una adyacencia.  Como cada uno de estos cuatro routers recibe el LSA, enviarán su propio LSA.  Esto demuestra una gran cantidad de tráfico de red innecesario. En la figura cuatro, se muestra la misma topología que la de la figura tres. Sin embargo, ahora la red tiene un router elegido como router designado y otro como router designado de respaldo.  Los otros routers envían su LSA a estos dos routers solamente.  El DR luego envía el LSA a los otros routers.  Esto reduce considerablemente el tráfico de red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

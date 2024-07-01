@@ -1,0 +1,1 @@
+En la figura, se muestra la salida del comando show ipv.6. interface brief.  La figura muestra las direcciones IPv6 para las 3 interfaces del router R1 y resalta las direcciones de enlace local.  Cada interfaz tiene la misma dirección de enlace local, que es F E 8 0 dos puntos dos puntos 3 2 F 7 dos puntos D E F dos puntos F E A 3 dos puntos D A 0.

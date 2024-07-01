@@ -1,0 +1,1 @@
+La figura 1 muestra la verificación de la sesión de SPAN con el comando "show monitor". La figura 2 es una actividad interactiva que permite que los estudiantes configuren y verifiquen SPAN.

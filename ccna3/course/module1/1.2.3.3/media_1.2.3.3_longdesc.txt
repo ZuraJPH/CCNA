@@ -1,0 +1,1 @@
+En la figura uno, se muestra un ejemplo de una configuración del router para RIPv2. En la figura dos, se muestra el resultado que genera el comando show running guion config en un router. En la figura tres, se muestra una actividad interactiva que permite que el estudiante practique realizar la configuración básica en un router.

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.3 Detección de la red</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Detección de la red</h1>
+        <div>
+          <p>Después del arranque inicial y del proceso de detección, la tabla de routing se actualiza con todas las redes conectadas directamente y las interfaces en que residen dichas redes.</p>
+          <p></p>
+          <p>Si se configura un protocolo de routing, el siguiente paso es que el router comience a intercambiar actualizaciones de routing para obtener información sobre rutas remotas.</p>
+          <p></p>
+          <p>El router envía un paquete de actualización por todas las interfaces habilitadas en el router. La actualización contiene la información en la tabla de routing, que en este momento consta de todas las redes conectadas directamente.</p>
+          <p></p>
+          <p>Al mismo tiempo, el router también recibe y procesa actualizaciones similares de otros routers conectados. Una vez recibida la actualización, el router revisa si contiene información de red nueva, y se agrega a la tabla de routing toda red que no esté incluida en ella aún.  </p>
+          <p></p>
+          <p>Para ver la configuración de la topología entre tres routers (R1, R2 y R3 con RIPv2 habilitado), consulte la figura. Sobre la base de esta topología, a continuación se muestra una lista de las distintas actualizaciones que el R1, el R2 y el R3 envían y reciben durante la convergencia inicial.</p>
+          <p></p>
+          <p>R1: </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.1.0.0 desde la interfaz serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.2.0.0 desde la interfaz FastEthernet0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización del R2 acerca de la red 10.3.0.0 e incrementa el conteo de saltos en 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la red 10.3.0.0 en la tabla de routing con una métrica de 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R2: </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.3.0.0 desde la interfaz serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.2.0.0 desde la interfaz serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización del R1 acerca de la red 10.1.0.0 e incrementa el conteo de saltos en 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la red 10.1.0.0 en la tabla de routing con una métrica de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización del R3 acerca de la red 10.4.0.0 e incrementa el conteo de saltos en 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la red 10.4.0.0 en la tabla de routing con una métrica de 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R3: </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.4.0.0 desde la interfaz serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envía una actualización acerca de la red 10.3.0.0 desde la interfaz FastEthernet0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Recibe una actualización del R2 acerca de la red 10.2.0.0 e incrementa el conteo de saltos en 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Almacena la red 10.2.0.0 en la tabla de routing con una métrica de 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Haga clic en <b>Reproducir</b> en la figura para ver una animación sobre cómo R1, R2 y R3 comienzan el intercambio inicial. </p>
+          <p></p>
+          <p>Después de esta primera ronda de intercambios de actualizaciones, cada router tiene información acerca de las redes conectadas de sus vecinos conectados directamente. Sin embargo, ¿observó que R1 todavía no tiene información acerca de 10.4.0.0 al igual que R3 acerca de 10.1.0.0? La información completa y la convergencia de la red no ocurren hasta que se produce otro intercambio de información de routing. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación que es una continuación de la página anterior.  Cada router agrega sus redes conectadas en un paquete de actualización y envía los paquetes en cada una de las interfaces activas.  Dado que los routers reciben y leen los paquetes de otros routers conectados directamente, agregarán las redes recién detectadas a sus propias tablas de routing. También agregarán el conteo de saltos como métrica para comunicarse con esta red específica.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

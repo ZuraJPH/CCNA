@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.2 Routing entre VLAN antiguo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routing entre VLAN antiguo</h1>
+        <div>
+          <p>Históricamente, la primera solución para el routing entre VLAN se valía de routers con varias interfaces físicas. Era necesario conectar cada interfaz a una red separada y configurarla para una subred diferente. </p>
+          <p></p>
+          <p>En este enfoque antiguo, el routing entre VLAN se realiza mediante la conexión de diferentes interfaces físicas del router a diferentes puertos físicos de switch. Los puertos de switch conectados al router se colocan en modo de acceso, y cada interfaz física se asigna a una VLAN diferente. Cada interfaz del router puede entonces aceptar el tráfico desde la VLAN asociada a la interfaz del switch que se encuentra conectada y el tráfico puede enrutarse a otras VLAN conectadas a otras interfaces.</p>
+          <p></p>
+          <p>Haga clic en Reproducir en la figura para ver una animación del routing entre VLAN antiguo.</p>
+          <p></p>
+          <p>Tal como se observa en la animación:</p>
+          <p></p>
+          <p>1. La PC1 en la VLAN 10 se comunica con la PC3 en la VLAN 30 a través del router R1.</p>
+          <p></p>
+          <p>2. PC1 y PC3 están en VLAN diferentes y tienen direcciones IPv4 en subredes diferentes. </p>
+          <p></p>
+          <p>3. El router R1 tiene una interfaz separada configurada para cada una de las VLAN.</p>
+          <p></p>
+          <p>4. La PC1 envía el tráfico de unidifusión destinado a la PC3 al switch S2 en la VLAN 10, desde el cual luego se reenvía por la interfaz troncal al switch S1. </p>
+          <p></p>
+          <p>5. El switch S1 luego reenvía el tráfico de unidifusión a través de su interfaz F0/3 a la interfaz G0/0 del router R1. </p>
+          <p></p>
+          <p>6. El router enruta el tráfico de unidifusión a través de la interfaz G0/1, que está conectada a la VLAN 30. </p>
+          <p></p>
+          <p>7. El router reenvía el tráfico unicast al switch S1 en la VLAN 30. </p>
+          <p></p>
+          <p>8. El switch S1 luego reenvía el tráfico de unidifusión al switch S2 a través del enlace troncal activo, tras lo cual el switch S2 puede reenviar el tráfico de unidifusión a la PC3 en la VLAN 30.</p>
+          <p></p>
+          <p>En este ejemplo el router se configuró con dos interfaces físicas separadas para interactuar con las distintas VLAN y realizar el enrutamiento.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> este método de routing entre VLAN no es eficaz y, por lo general, ya no se implementa en las redes conmutadas. Se muestra en este curso solo con fines explicativos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación con una topología que muestra tres hosts conectados a un clúster de tres switches. Los switches se conectan entre sí a través de enlaces troncales y un switch se conecta a un router con dos cables físicos. La animación muestra cómo se desplaza un paquete de unidifusión a través de la topología y requiere que el router pueda reenviar los paquetes a diferentes subredes. Se resalta la necesidad de que se conecten dos cables a dos interfaces físicas en el router para lograr que la conectividad entre subredes sea posible.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

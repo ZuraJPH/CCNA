@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.1 Configurar las ACL extendidas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configurar las ACL extendidas</h1>
+        <div>
+          <p>Los pasos del procedimiento para configurar ACL extendidas son los mismos que para las ACL estándar. Primero se configura la ACL extendida y, a continuación, se activa en una interfaz. Sin embargo, la sintaxis de los comandos y los parámetros son más complejos, a fin de admitir las funciones adicionales proporcionadas por las ACL extendidas. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> La lógica interna aplicada al ordenamiento de las instrucciones de las ACL estándar no se aplica a las ACL extendidas. El orden en que se introducen las instrucciones durante la configuración es el orden en que se muestran y se procesan.</p>
+          <p></p>
+          <p>En la figura 1, se muestra la sintaxis frecuente de los comandos para las ACL de IPv4 extendidas. Observe que hay muchas palabras clave y parámetros para las ACL extendidas. No es necesario utilizar todas las palabras clave y todos los parámetros al configurar una ACL extendida. Recuerde que puede usar <b>?</b> para obtener ayuda al introducir comandos complejos. </p>
+          <p></p>
+          <p>En la figura 2, se muestra un ejemplo de una ACL extendida. En este ejemplo, el administrador de red configuró las ACL para restringir el acceso de red a fin de permitir la navegación de sitios web solo desde la LAN conectada a la interfaz G0/0 a cualquier red externa. La ACL 103 permite que el tráfico proveniente de cualquier dirección en la red 192.168.10.0 vaya a cualquier destino, sujeto a la limitación de que el tráfico utilice solo los puertos 80 (HTTP) y 443 (HTTPS).</p>
+          <p></p>
+          <p>La naturaleza de HTTP requiere que el tráfico fluya nuevamente hacia la red desde los sitios web a los que se accede mediante clientes internos. El administrador de red desea restringir ese tráfico de retorno a los intercambios HTTP de los sitios web solicitados y denegar el resto del tráfico. La ACL 104 logra esto mediante el bloqueo de todo el tráfico entrante, excepto las conexiones establecidas previamente. La instrucción permit en la ACL 104 permite el tráfico entrante con el parámetro <b>established</b>.</p>
+          <p></p>
+          <p>El parámetro <b>established</b> permite que solo las respuestas al tráfico procedente de la red 192.168.10.0/24 vuelvan a esa red. Si el segmento TCP que regresa tiene los bits ACK o de restablecimiento (RST) establecidos, que indican que el paquete pertenece a una conexión existente, se produce una coincidencia. Sin el parámetro <b>established</b> en la instrucción de ACL, los clientes pueden enviar tráfico a un servidor web, pero no recibir el tráfico que vuelve de dicho servidor.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la sintaxis de los comandos comunes y opciones para una ACL extendida.  El comando debe ser una instrucción permit o deny, el protocolo, las direcciones de origen y de destino, un operador como eq y el puerto opcional. La figura 2 muestra un ejemplo de configuración de una ACL extendida.  El primer comando es: access guion list 103 permit tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 any eq 80.  Esto bloquea los datos básicos de páginas web.  La siguiente línea permite el tráfico web seguro, y el comando es: access guion list 103 permit tcp 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255 any eq 443.  El último comando de configuración de ACL crea una nueva ACL que es un comando opcional que solo permite los datos de retorno que responden a una conexión establecida.  El comando es: access guion list 104 permit tcp 192 punto 168 punto 20 punto cero cero punto cero punto cero punto 255 established.  La primera ACL luego se aplica a la interfaz gigabit Ethernet que tiene un segmento de red, y se aplica en el sentido entrante.  Esto inspeccionará el tráfico que sale del segmento y llega al router.  La segunda ACL se aplica a la misma interfaz, pero en el sentido saliente, por lo que se examina el tráfico que se dirige hacia el segmento de red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

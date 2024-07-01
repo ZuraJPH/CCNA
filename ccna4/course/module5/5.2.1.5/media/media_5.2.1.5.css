@@ -1,0 +1,24 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#text_19{
+	margin-left:-5px !important;
+	}
+
+/*#htmlMedia{
+	margin-left: -100px;
+}*/
+#ID_info_01,#ID_info_02,#ID_info_03,#ID_info_04,#ID_info_05
+{
+	background-color: #FFFFFF;
+padding: 5px !important;
+/*padding-bottom: 5px !important;*/
+box-shadow: 1px 1px 1px 1px #888888;
+
+}
+#ID_bubble_04,#ID_bubble_03,#ID_bubble_02,#ID_bubble_01
+{
+	color: #ffffff !important;
+}

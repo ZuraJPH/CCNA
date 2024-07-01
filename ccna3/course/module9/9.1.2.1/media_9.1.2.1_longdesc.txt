@@ -1,0 +1,1 @@
+La figura uno muestra una tabla que identifica todos los tipos de LSA de OSPF, de uno a once. La figura dos muestra una tabla que identifica los tipos de LSA de OSPF más comunes, de uno a cinco.

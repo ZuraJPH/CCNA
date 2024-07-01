@@ -1,0 +1,1 @@
+Esta actividad interactiva proporciona los ID de puente y los tipos de enlace. Con esta información, el estudiante debe identificar los diferentes roles de puerto en una topología.

@@ -1,0 +1,1 @@
+En la figura uno, se muestra la salida del siguiente comando ejecutado en el router R1: show ipv6. ospf neighbor.  La figura dos es un elemento de medios interactivos que permite que el estudiante verifique los vecinos OSPFv3 en el router R2.

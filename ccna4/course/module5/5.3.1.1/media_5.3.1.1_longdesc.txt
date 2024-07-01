@@ -1,0 +1,1 @@
+La figura muestra el switch S1 conectado con las computadoras PC1 y PC2, y con una computadora portátil. Muestra que el tráfico entre PC1 y PC2 también se envía a la computadora portátil con un analizador de paquetes instalado.

@@ -1,0 +1,1 @@
+En la figura se muestra la salida que genera el comando “show ip eigrp neighbors”.  La dirección IP de vecinos, la interfaz local, los segundos antes de declarar que el vecino está desactivado y el tiempo de actividad aparecen resaltados en color naranja.

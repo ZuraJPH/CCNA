@@ -1,0 +1,1 @@
+La figura muestra los mensajes de LSA de tipo tres que se propagan entre las áreas por los ABR e indica la necesidad de una LSA de tipo tres para cada subred.

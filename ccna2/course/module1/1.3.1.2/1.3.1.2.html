@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.1.2 Orígenes de la tabla de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Orígenes de la tabla de routing</h1>
+        <div>
+          <p>En los routers Cisco , se puede utilizar el comando <b>show ip route</b> para mostrar la tabla de routing IPv4 de un router. Los routers proporcionan información adicional de la ruta, incluso la forma en que se descubrió la ruta, cuánto tiempo estuvo la ruta en la tabla de routing y qué interfaz específica se debe utilizar para llegar a un destino predefinido.</p>
+          <p></p>
+          <p>Las entradas en la tabla de routing se pueden agregar como lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaces de ruta local:</b> se agregan cuando la interfaz está configurada y activa. Esta entrada solo se muestra en la versión IOS 15 o más reciente para las rutas IPv4, y en todas las versiones de IOS para las rutas IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaces conectadas directamente:</b> se agregan a la tabla de routing cuando la interfaz está configurada y activa.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rutas estáticas:</b> se agregan cuando una ruta se configura manualmente y la interfaz de salida está activa. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de routing dinámico:</b> se agrega cuando se implementan protocolos de routing que descubren la red de manera dinámica, como EIGRP u OSPF, y cuando se identifican las redes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los orígenes de las entradas de la tabla de routing se identifican con un código. El código identifica la forma en que se descubrió la ruta. Por ejemplo, los códigos frecuentes incluyen lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>L:</b> identifica la dirección asignada a la interfaz de un router. Esto permite que el router determine de forma eficaz si recibe un paquete para la interfaz o para reenviar.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>C:</b> identifica una red conectada directamente. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>S:</b> identifica una ruta estática creada para llegar a una red específica. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>D:</b> identifica una red que se descubre de forma dinámica de otro router con EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O:</b> indica una red que se descubre de forma dinámica de otro router con el protocolo de routing OSPF.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la ilustración, se muestra la tabla de enrutamiento del R1 en una red simple. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una red que consta de dos routers conectados a través de un enlace serial WAN.  Cada router tiene un switch en sus dos puertos gigabit Ethernet.  Cada uno de los cuatro switches tiene una computadora conectada a él.  Esta red tiene cinco redes totales y por lo tanto cinco direcciones de red.  La figura muestra el resultado del comando show ip route ejecutado en uno de los routers.  El resultado enumera las rutas conectadas, los routers aprendidos con un protocolo de routing y las direcciones IP de la interfaz activa.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

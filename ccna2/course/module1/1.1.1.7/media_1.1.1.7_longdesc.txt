@@ -1,0 +1,1 @@
+La figura uno es un elemento de medios interactivos en la que el estudiante debe conectar la función de memoria con su tipo. La figura dos es un elemento de medios interactivos que presenta al estudiante la vista posterior un router Cisco serie 1941 y una lista de puertos.  El estudiante debe conectar el nombre de puerto con la ubicación apropiada en el panel trasero.

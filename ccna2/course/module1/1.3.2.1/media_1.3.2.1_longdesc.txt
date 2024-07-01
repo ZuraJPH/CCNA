@@ -1,0 +1,1 @@
+La figura muestra el resultado del comando show ip route, que es una tabla de routing vacía.  Este es el resultado de ejecutar el comando en un router que no tiene interfaces configuradas.

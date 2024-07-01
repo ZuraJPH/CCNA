@@ -1,0 +1,1 @@
+En la figura se muestran cuatro switches multicapa y dos switches de capa de acceso.  La PC 1 está conectada a uno de los switches de acceso.  Dos de los switches multicapa están funcionando como routers.  En la leyenda de la PC, se puede leer "I cannot reach my default gateway" (No puedo llegar a mi gateway predeterminado).

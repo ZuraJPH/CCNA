@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.1 Comunicación dúplex</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comunicación dúplex</h1>
+        <div>
+          <p>En la ilustración, se muestra la comunicación en dúplex completo y semidúplex.</p>
+          <p></p>
+          <p>La comunicación en dúplex completo mejora el rendimiento de una LAN conmutada.  La comunicación en dúplex completo aumenta el ancho de banda eficaz al permitir que ambos extremos de una conexión transmitan y reciban datos simultáneamente. Esto también se conoce como comunicación bidireccional. Este método de optimización de rendimiento de la red requiere microsegmentación.  Las LAN microsegmentadas se crean cuando un puerto de switch tiene solo un dispositivo conectado y funciona en modo dúplex completo. Cuando un puerto de switch opera en modo dúplex completo, no hay dominio de colisión conectado al puerto.</p>
+          <p></p>
+          <p>A diferencia de la comunicación en dúplex completo, la comunicación en semidúplex es unidireccional. El envío y la recepción de datos no ocurren al mismo tiempo. La comunicación en semidúplex genera problemas de rendimiento debido a que los datos fluyen en una sola dirección por vez, lo que a menudo provoca colisiones. Las conexiones semidúplex suelen verse en los dispositivos de hardware más antiguos, como los hubs. La comunicación en dúplex completo reemplazó a la semidúplex en la mayoría del hardware.</p>
+          <p></p>
+          <p>Las NIC Gigabit Ethernet y de 10 Gb requieren conexiones dúplex completo para funcionar. En el modo dúplex completo, el circuito de detección de colisiones de la NIC se encuentra inhabilitado. Las tramas enviadas por los dos dispositivos conectados no pueden colisionar, dado que estos utilizan dos circuitos independientes en el cable de red. Las conexiones dúplex completo requieren un switch que admita la configuración dúplex completo o una conexión directa entre dos dispositivos mediante un cable Ethernet. </p>
+          <p></p>
+          <p>En general, la eficacia de una configuración Ethernet compartida estándar basada en hubs es del 50% al 60% del ancho de banda indicado. Dúplex completo ofrece el 100% de eficacia en ambas direcciones (transmisión y recepción). Como resultado, se obtiene un uso potencial del 200% del ancho de banda indicado.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos conjuntos de switches. Un conjunto se denomina Comunicación por dúplex completo y semidúplex. Este conjunto está conectado con un cable Ethernet y posee la capacidad para enviar y recibir datos simultáneamente. El segundo conjunto de switches se denomina Comunicación por semidúplex. Este conjunto posee la capacidad para enviar o recibir datos.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

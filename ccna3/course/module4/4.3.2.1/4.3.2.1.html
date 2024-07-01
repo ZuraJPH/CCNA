@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.1 HSRP: Descripción general</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>HSRP: Descripción general</h1>
+        <div>
+          <p>El Protocolo de router de reserva activa (HSRP) fue diseñado por Cisco para permitir la redundancia de gateway sin una configuración adicional de los terminales. Los routers configurados con el protocolo HSRP funcionan en conjunto para desempeñarse como un único gateway predeterminado virtual (router) para los terminales, como se muestra en la figura. El HSRP selecciona uno de los routers para que sea el router activo. El router activo actuará como gateway predeterminado para los terminales. El otro router será el router de reserva. Si falla el router activo, el router de reserva asumirá automáticamente el rol de router activo. Asumirá la función del gateway predeterminado para los terminales. No se requieren cambios de configuración en los terminales.</p>
+          <p></p>
+          <p>Los hosts están configurados con una sola dirección de gateway predeterminado que tanto los routers activos como los de espera pueden reconocer. La dirección de gateway predeterminado es una dirección IPv4 virtual junto con una dirección MAC virtual compartida entre ambos routers HSRP.  Los terminales utilizan esta dirección IPv4 virtual como su dirección de gateway predeterminado. El administrador de redes configura la dirección IPv4 virtual del HSRP. La dirección MAC virtual se crea automáticamente. Sin importar que router físico se utilice, la dirección IPv4 virtual y las direcciones MAC proporcionan la asignación de direcciones al gateway predeterminado para los terminales.</p>
+          <p></p>
+          <p>Solo el router activo recibirá y reenviará el tráfico enviado al gateway predeterminado. Si falla el router activo, o falla la comunicación al router activo, el router de reserva asume el rol de router activo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

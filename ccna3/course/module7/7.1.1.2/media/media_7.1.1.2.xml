@@ -1,0 +1,50 @@
+<textcomponents>
+<component id="ID_title">
+  	<text><![CDATA[<b>Resumen automático en el límite de las redes con clase</b>]]></text> 
+</component>
+  
+<component id="ID_txt01">
+	<text><![CDATA[Tabla de routing IPv4]]></text>
+</component>
+
+<component id="ID_txt02">
+ 	<text><![CDATA[172.16.0.0/16 a través del R1]]></text> 
+</component>
+  
+<component id="ID_txt03">
+	<text><![CDATA[Actualización del resumen: 172.16.0.0/16]]></text> 
+</component>
+ 
+<component id="ID_txtTable">
+		<text><![CDATA[<table header='none' bordercolor='#C1ABD1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' style="width:420px;height:133px;">
+		<tr>
+			<td colspan='2' bgcolor='#C1ABD1' valign="top"><font color='#402450'><b>Redes con clase</b></font></td>	
+		</tr>
+		<tr class="liner">
+			<td colspan='2' bgcolor='#402450' class="liner_top"><font size='1' color='#402450'><span style="color:#402450">.</span></font></td>
+		</tr>
+		<tr>		
+			<td bgcolor="#FFFFFF" width="220" valign="top"><font color='#393536'>Clase A: 0.0.0.0 a 127.255.255.255</font></td>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#393536'>Máscara predeterminada: 255.0.0.0 o /8</font></td>			 
+		</tr>
+		<tr>		
+			<td bgcolor="#FFFFFF" width="120" valign="top"><font color='#F68026'><b>Clase B: 128.0.0.0 a 191.255.255.255</b></font></td>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#F68026'><b>Máscara predeterminada: 255.255.0.0 o /16</b></font></td>			 
+		</tr>
+		<tr>		
+			<td bgcolor="#FFFFFF" width="120" valign="top"><font color='#393536'>Clase C: 192.0.0.0 a 223.255.255.255</font></td>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#393536'>Máscara predeterminada: 255.255.255.0 o /24</font></td>			 
+		</tr>
+	</table>]]></text> 
+</component>
+
+
+<component id="ID_txt06">
+	<text><![CDATA[<b>Subredes</b><br/>172.16.1.0/24<br/>172.16.2.0/24<br/>172.16.3.0/24]]></text>
+</component>
+  
+<component id="ID_bubble">
+	<text><![CDATA[Un router del protocolo EIGRP para IPv4 configurado para el ⁪resumen automático.]]></text> 
+</component>
+
+</textcomponents>

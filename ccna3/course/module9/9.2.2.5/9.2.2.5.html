@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.5 Verificación de OSPFv3 multiárea</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de OSPFv3 multiárea</h1>
+        <div>
+          <p>Al igual que OSPFv2, OSPFv3 proporciona comandos de verificación de OSPFv3 similares. Consulte la topología OSPFv3 de referencia en la figura 1. </p>
+          <p></p>
+          <p>En la figura 2, se muestra la configuración OSPFv3 del R1. Observe que el comando confirma que ahora existen dos áreas. También identifica cada interfaz habilitada para las respectivas áreas.</p>
+          <p></p>
+          <p>En la figura 3, se verifican las interfaces con OSPFv3 habilitado y el área a la que pertenecen.</p>
+          <p></p>
+          <p>En la figura 4, se muestra la tabla de routing del R1. Observe que la tabla de routing IPv6 muestra entradas <b>OI</b> en la tabla de routing para identificar las redes descubiertas a partir de otras áreas. Específicamente, la <b>O</b> representa las rutas OSPF, y la <b>I</b> significa “interárea”, lo que quiere decir que la ruta se originó en otra área. Recuerde que R1 está en el área 0 y que la subred 2001:DB8:CAFE:3::/64 está conectada a R3 en el área 2. La entrada [110/1295] de la tabla de routing representa la distancia administrativa asignada a OSPF (110) y el costo total de las rutas (costo de 1295).</p>
+          <p></p>
+          <p>En la figura 5, se muestra el contenido de la LSDB del R1. El comando muestra información similar a la de su equivalente de OSPFv2. No obstante, la LSDB de OSPFv3 contiene tipos de LSA adicionales que no están disponibles en OSPFv2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una topología de OSPFv3 multiárea IPv6. La figura dos muestra la salida recibida al utilizar el comando show ipv6 protocols.  La imagen resalta la cantidad de áreas a las que pertenece el router y las redes que se están enrutando. La figura tres muestra la salida recibida del comando show ipv6 ospf interface brief y resalta la columna que muestra las áreas en las que cada interfaz está conectada. La figura cuatro muestra la salida del comando show ipv6 route ospf, que verificará las rutas OSPF multiárea.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

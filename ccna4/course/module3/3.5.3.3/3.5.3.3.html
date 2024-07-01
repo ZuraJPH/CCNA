@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.5.3.3 Verificación de eBGP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.5.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de eBGP</h1>
+        <div>
+          <p>Se pueden usar tres comandos para verificar el protocolo eBGP, como se muestra en la figura 1.</p>
+          <p></p>
+          <p>La figura 2 muestra la salida de la tabla de routing IPv4 de la empresa A. Observe cómo el código de origen <b>B</b> identifica que la ruta fue aprendida mediante el BGP. Específicamente, en este ejemplo, la empresa A recibió una ruta predeterminada publicada por BGP desde ISP-1.</p>
+          <p></p>
+          <p>La figura 3 muestra la salida de la tabla de BGP de la empresa A. La primera entrada 0.0.0.0 con un salto siguiente 209.165.201.1 es la ruta predeterminada publicada por ISP-1. La ruta del AS muestra el AS simple de 65001 porque la red 0.0.0.0/0 publicada por el ISP-1, surgió del mismo AS. La mayoría de las entradas de la tabla de BGP muestran los números del sistema autónomo múltiple en la ruta y detallan la secuencia de números de AS necesarios para llegar a la red de destino.</p>
+          <p></p>
+          <p>La segunda entrada, 198.133.219.0/24, es la red anunciada por el router de la empresa A al ISP-1. La dirección del siguiente salto de 0.0.0.0 indica que la red 198.133.219.0/24 se originó en este router.</p>
+          <p></p>
+          <p>La figura 4 muestra el estado de la conexión BGP en la empresa A. La primera línea muestra la dirección IPv4 local utilizada para emparejarse con otro vecino BGP y el número de AS local de este router. Aparecerá la dirección y el número de AS del vecino BGP remoto en la parte inferior del resultado.</p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para practicar la configuración y verificación del protocolo BGP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 tiene una tabla de dos columnas con un comando en la columna izquierda y la descripción en la columna derecha. El primer comando es show ip route, que se utiliza para verificar que las rutas anunciadas por el vecino BGP estén presentes en la tabla de routing IPv4. El siguiente comando es show ip bgp, que se utiliza para verificar que las redes IPv4 recibidas y anunciadas estén en la tabla de BGP. El último comando es show ip bgp summary, que se utiliza para verificar los vecinos BGP y demás información de BGP. La figura 2 muestra cómo el router perimetral en AS 65000 Empresa A recibió una ruta predeterminada a través del protocolo de routing BGP a través de la interfaz 209.165.201.1 del router vecino. La figura 3 muestra la tabla de BGP del router de la empresa A. Las columnas de la tabla son, de izquierda a derecha: red, siguiente salto, métrica, locprf, peso y ruta. La primera entrada es 0.0.0.0, 209.165.201.1 0, 0, 65001. La segunda entrada es 198.133.219.0/24 0.0.0.0, 0, 32768, i. La figura 4 muestra la salida del comando show ip bgp summary, que incluye el identificador de router de BGP para el router de la empresa A como 209.165.201.2, número local de AS 65000. También muestra que la dirección IP 209.165.201.1 es vecina y se encuentra en AS 65001.  La figura 5 es el Syntax Checker para configurar y verificar eBGP.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

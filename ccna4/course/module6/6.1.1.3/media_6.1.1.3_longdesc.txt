@@ -1,0 +1,1 @@
+La figura 1 muestra tres ejemplos de puntos de congestión típicos: agregación, incompatibilidad de velocidad, y LAN a WAN. La figura 2 muestra una tabla de causas de demora.

@@ -1,0 +1,194 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar la terminología de BGP</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Arrastre cada término al campo que se encuentra junto a la descripción correspondiente.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Unió correctamente cada término con su descripción.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No unió correctamente cada término con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font color="#FFFFFF" size="15">Pasos</font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Conexión simple]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[iBGP]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Número de AS]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[BGP]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Alojamiento múltiple]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[eBGP]]></text>
+</component><!--Questions--><component id='ID_s1_target_header'>
+	<text><![CDATA[<font size="15">Términos</font>]]></text>
+</component>
+<component id='ID_s1_text_header'>
+	<text><![CDATA[<font size="15">Descripción</font>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Cuando el sistema autónomo (AS, autonomous system) tiene una conexión única a Internet o a otro AS.]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[El protocolo de routing utilizado entre routers del mismo AS.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[Identificador único del AS dentro de Internet.]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[Protocolo utilizado para intercambiar información de routing entre sistemas autónomos, como ISP, empresas y proveedores de contenido.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[Cuando el AS tiene conexiones a varios sistemas autónomos.]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[El protocolo de routing utilizado entre routers de distintos sistemas autónomos.]]></text> 
+</component>
+
+
+
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Actividad: Identificar el diseño de BGP</b>]]></text>
+</component>
+
+<component id="MCTable_title">
+	<text><![CDATA[Descripciones]]></text>
+</component>
+
+<component id='ID_s2_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s2_instr_body'>
+	<text><![CDATA[Marque el campo correspondiente junto a cada descripción para indicar sus respuestas.]]></text>
+</component><!-- buttons --><component id="ID_s2_CHECK">
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id="ID_s2_RESET">
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Number of rows in the table--><component id="txt_numrows">
+	<text><![CDATA[6]]></text>
+</component><!--Number of columns for the answers in the table. Do not count the question column--><component id="txt_numcols">
+	<text><![CDATA[4]]></text>
+</component><!--Answer column headers--><component id="txt_col1">
+	<text><![CDATA[Alojamiento<br>único]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[Solo<br>ruta<br>predeterminada]]></text>
+</component>
+
+<component id="txt_col3">
+	<text><![CDATA[Ruta<br>predeterminada y<br>rutas del ISP]]></text>
+</component>
+
+<component id="txt_col4">
+	<text><![CDATA[Todas las<br>rutas de<br>Internet]]></text>
+</component><!--Question text - blockindent code moves the text away from the left edge a bit--><!--Question text - If questions are numbered, use blockindent for hanging indents--><component id="txt_q1">
+	<text><![CDATA[En este tipo de diseño, solo las rutas del ISP y una ruta predeterminada son anunciadas por el ISP.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Este tipo de diseño es el método más simple para implementar el BGP.]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Este tipo de diseño incluye las rutas de más de 550 000 redes.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Este tipo de diseño puede determinar qué ISP usar como la mejor ruta para reenviar tráfico para cualquier red.]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[En este tipo de diseño, no se debe utilizar BGP, a menos que haya situaciones específicas que lo necesiten.]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[En este tipo de diseño, el ISP solo anuncia una ruta predeterminada.]]></text>
+</component><!--Answers - Give the column number(s), column numbering start with 1 not 0--><!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[3]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[4]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[4]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[2]]></text>
+</component><!-- Correct Feedback --><component id="ID_s2_titleCorrect">
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id="ID_s2_correctText">
+	<text><![CDATA[Identificó correctamente los tipos de diseño correctos.]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_s2_titleIncorrect">
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id="ID_s2_IncorrectText">
+	<text><![CDATA[<p>No identificó correctamente los tipos de diseño correctos o le falta una respuesta correcta.</p><p>Sugerencia: Si todos los cuadros seleccionados están en color verde, le falta una segunda respuesta correcta en una de las preguntas.</p>]]></text>
+</component>
+
+</textcomponents>

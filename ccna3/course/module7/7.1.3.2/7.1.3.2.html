@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.3.2 Temporizadores de saludo y de tiempo espera</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Temporizadores de saludo y de tiempo espera</h1>
+        <div>
+          <p>
+            <b>Intervalos de saludo y tiempos de espera en EIGRP para IPv4</b>
+          </p>
+          <p></p>
+          <p>EIGRP usa un protocolo de saludo ligero para establecer y controlar el estado de conexión de los vecinos. El tiempo de espera le indica al router la cantidad máxima de tiempo que debe esperar para recibir el siguiente saludo, antes de declarar que el vecino es inalcanzable. </p>
+          <p></p>
+          <p>Los intervalos de saludo y los tiempos de espera se pueden configurar por interfaz y no tienen que coincidir con otros routers EIGRP para establecer o mantener adyacencias. El comando para configurar un intervalo de saludo diferente es el siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip hello-interval eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as segundos</i>
+            </span>
+          </p>
+          <p></p>
+          <p>Si cambia el intervalo de saludo, asegúrese de que el valor del tiempo de espera sea igual o superior al intervalo de saludo. De lo contrario, la adyacencia de vecino se desactiva después de que expira el tiempo de espera y antes del siguiente intervalo de saludo. Para configurar un tiempo de espera diferente, use el siguiente comando:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip hold-time eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as segundos</i>
+            </span>
+          </p>
+          <p></p>
+          <p>El valor<i> segundos</i> para los intervalos de saludo y de tiempo de espera puede ser de 1 a 65 535. </p>
+          <p></p>
+          <p>En la figura 1, se muestra la configuración del R1 para usar un intervalo de saludo de 50 segundos y un tiempo de espera de 150 segundos. Se puede usar la forma <b>no</b> de los dos comandos para restaurar los valores predeterminados.</p>
+          <p></p>
+          <p>No es necesario que el tiempo del intervalo de saludo y el tiempo de espera coincidan para que dos routers formen una adyacencia EIGRP.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para configurar la interfaz adyacente en el R2 con los mismos valores del R1. </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Intervalos de saludo y tiempos de espera en EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>EIGRP para IPv6 utiliza los mismos tiempos de intervalo de saludo y de espera que EIGRP para IPv4. Los comandos del modo de configuración de interfaz son parecidos a los que se usan para IPv4:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 hello-interval eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as segundos</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 hold-time eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>número-as segundos</i>
+            </span>
+          </p>
+          <p></p>
+          <p>En la figura 3, se muestra la configuración de los tiempos de intervalo de saludo y de espera para el R1 y el R2 con EIGRP para IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la sintaxis para configurar los temporizadores de saludo y de tiempo de espera para EIGRP mediante IPV4. La figura dos es una actividad interactiva que permite que el estudiante practique configurar los temporizadores de saludo y de tiempo de espera. En la figura tres, se muestra la sintaxis para configurar los temporizadores de saludo y de tiempo de espera para EIGRP mediante IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

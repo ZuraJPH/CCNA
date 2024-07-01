@@ -1,0 +1,73 @@
+﻿<textcomponents><!--Slide 1--><component id="ID_s1_title">
+		<text><![CDATA[Capas de abstracción de la arquitectura de PC]]></text>
+	</component>
+
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Servicios]]></text>
+	</component>
+
+	<component id="ID_s1_txt02">
+		<text><![CDATA[<font color="#652C8A">Web, correo electrónico y servidores de archivos</font>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt03">
+		<text><![CDATA[SO]]></text>
+	</component>
+
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Firmware (ROM)]]></text>
+	</component>
+
+	<component id="ID_s1_txt05">
+		<text><![CDATA[Hardware<br>CPU, memoria, NIC, disco]]></text>
+	</component><!--End Slide 1--><!--Slide 2--><component id="ID_s2_title">
+		<text><![CDATA[Capas de abstracción de la arquitectura virtual]]></text>
+	</component>
+
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Servicio]]></text>
+	</component>
+	
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Servicio]]></text>
+	</component>
+	
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Servicio]]></text>
+	</component>
+	
+	<component id="ID_s2_txt04">
+		<text><![CDATA[<font color="#652C8A">Servidor web</font>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt05">
+		<text><![CDATA[<font color="#652C8A">Servidor de correo electrónico</font>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt06">
+		<text><![CDATA[<font color="#652C8A">Servidor de archivos</font>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt07">
+		<text><![CDATA[SO]]></text>
+	</component>
+
+	<component id="ID_s2_txt08">
+		<text><![CDATA[SO]]></text>
+	</component>
+
+	<component id="ID_s2_txt09">
+		<text><![CDATA[SO]]></text>
+	</component>
+
+	<component id="ID_s2_txt10">
+		<text><![CDATA[<font color="#077A77">Hipervisor</font>]]></text>
+	</component>
+
+	<component id="ID_s2_txt11">
+		<text><![CDATA[Firmware (ROM)]]></text>
+	</component>
+
+	<component id="ID_s2_txt12">
+		<text><![CDATA[Hardware<br>CPU, memoria, NIC, disco]]></text>
+	</component><!--End Slide 2--></textcomponents>

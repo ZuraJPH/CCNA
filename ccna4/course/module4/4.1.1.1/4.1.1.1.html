@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.1 Listas ACL y la máscara de wildcard</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Listas ACL y la máscara de wildcard</h1>
+        <div>
+          <p>
+            <b>Nota</b>: Esta sección incluye un breve repaso del funcionamiento y de la configuración de ACL IPv4 estándar. Si necesita un repaso adicional, consulte el Capítulo 7, Listas de control de acceso en el curso <i>Routing and Switching Essentials v6</i> . </p>
+          <p></p>
+          <p>Una ACL es una lista secuencial de instrucciones permit (permitir) o deny (denegar), conocidas como “entradas de control de acceso” (ACE). Las ACE también se denominan comúnmente “instrucciones de ACL”. Cuando el tráfico de la red atraviesa una interfaz configurada con una ACL, el router compara la información dentro del paquete con cada ACE, en orden secuencial, para determinar si el paquete coincide con una de las ACE. </p>
+          <p></p>
+          <p>Las ACE de IPv4 incluyen el uso de máscaras wildcard. Una máscara wildcard es una cadena de 32 dígitos binarios que el router utiliza para determinar qué bits de la dirección debe examinar para obtener una coincidencia.</p>
+          <p></p>
+          <p>En la figura 1 se muestra cómo las diferentes máscaras wildcard filtran las direcciones IPv4. Recuerde que, en el ejemplo, el valor binario 0 indica un bit que debe coincidir y el valor binario 1 indica un bit que se puede ignorar.</p>
+          <p></p>
+          <p>La figura 2 muestra tres ejemplos de máscaras de wildcard que coinciden con subredes.</p>
+          <p></p>
+          <p>En el primer ejemplo, la máscara wildcard estipula que cada bit en la IPv4 192.168.1.1 debe coincidir con exactitud.</p>
+          <p></p>
+          <p>En el segundo ejemplo, la máscara wildcard estipula que no habrá coincidencias.</p>
+          <p></p>
+          <p>En el tercer ejemplo, la máscara wildcard estipula que cualquier host dentro de la red 192.168.1.0/24 tendrá una coincidencia.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra cinco máscaras wildcard de 8 bits.  El Ejemplo 1 es cero cero cero cero cero cero cero cero, que coincidirá con todos los bits de dirección en el octeto.  El ejemplo 2 es cero cero uno uno uno uno uno uno, que coincidirá con los primeros dos bits e ignorará los seis últimos bits de direccionamiento.  El ejemplo tres es cero cero cero cero uno uno uno uno, que coincidirá con los primeros cuatro bits e ignorará los cuatro últimos bits.  El ejemplo cuatro es uno uno uno uno uno uno cero cero, que ignorará los primeros seis bits de direccionamiento y hará coincidir los dos últimos.  El ejemplo cinco uno uno uno uno uno uno uno uno, que ignorará todos los bits del octeto. La figura 2 muestra tres ejemplos de direcciones IPv4 y de máscaras de comodín.  El Ejemplo 1 tiene una máscara wildcard de 32 ceros, por lo tanto ordena al A.C.L que coincida exactamente  con la dirección I.P.  El ejemplo dos tiene una máscara wildcard de 32 unos, por lo tanto cualquier dirección de I.P. será una coincidencia.  El ejemplo tres tiene una máscara wildcard de 24 ceros desde a izquierda y yendo hacia la derecha, seguida de ocho unos.  Esto coincide efectivamente con una red de clase C donde coinciden los primeros 24 bits.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

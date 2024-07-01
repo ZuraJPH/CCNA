@@ -1,0 +1,1 @@
+La figura 1 muestra una tabla de terminología de SPAN local. La figura 2 muestra el tipo de puertos SPAN que se usan en una red.

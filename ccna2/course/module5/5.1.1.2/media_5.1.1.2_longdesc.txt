@@ -1,0 +1,1 @@
+La figura muestra el resultado del comando dir flash dos puntos.  Este comando muestra el contenido de la memoria flash y la figura enumera los diferentes archivos, incluido el archivo de IOS.

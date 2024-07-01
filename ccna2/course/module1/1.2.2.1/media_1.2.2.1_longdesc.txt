@@ -1,0 +1,1 @@
+La figura es un diagrama de flujo del proceso de decisión de reenvío de paquetes por el que pasa un router al recibir un paquete.  Este es un resumen de la lectura.

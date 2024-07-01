@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.5.1.2 Capítulo 6: EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.5.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 6: EIGRP</h1>
+        <div>
+          <p>EIGRP (protocolo de routing de gateway interior mejorado) es un protocolo de routing por vector de distancias sin clase. EIGRP es una mejora de otro protocolo de routing de Cisco llamado IGRP (Interior Gateway Routing Protocol, protocolo de routing de gateway interior) que ahora es obsoleto. EIGRP se lanzó originalmente en 1992 como un protocolo exclusivo de Cisco disponible solamente en los dispositivos de Cisco. En 2013, Cisco cedió una funcionalidad básica de EIGRP como estándar abierto al IETF. </p>
+          <p></p>
+          <p>EIGRP utiliza el código de origen "D" para DUAL en la tabla de routing. EIGRP tiene una distancia administrativa predeterminada de 90 para las rutas internas y de 170 para las rutas importadas desde un origen externo, como rutas predeterminadas.</p>
+          <p></p>
+          <p>EIGRP es un protocolo de routing por vector de distancias avanzado que incluye características que no se encuentran en otros protocolos de routing por vector de distancias, como RIP. Estas características incluyen: algoritmo de actualización por difusión (DUAL), establecimiento de adyacencias de vecinos, protocolo de transporte confiable (RTP), actualizaciones parciales y limitadas, y equilibrio de carga de mismo costo y con distinto costo.</p>
+          <p></p>
+          <p>EIGRP utiliza módulos dependientes de protocolo (PDM), lo que le otorga la capacidad de admitir diferentes protocolos de capa 3, incluidos IPv4 e IPv6. EIGRP utiliza RTP (Reliable Transport Protocol) como protocolo de la capa de Transporte para la entrega de paquetes EIGRP. EIGRP utiliza entrega confiable para las actualizaciones, las consultas y las respuestas EIGRP, y utiliza entrega poco confiable para los saludos y acuses de recibo EIGRP. RTP confiable significa que se debe devolver un acuse de recibo EIGRP.</p>
+          <p></p>
+          <p>Antes de enviar cualquier actualización de EIGRP, el router primero debe detectar sus vecinos. Esto se realiza mediante los paquetes de saludo EIGRP. No es necesario que los valores de saludo y de espera coincidan para que dos routers se conviertan en vecinos. El comando <b>show ip eigrp neighbors</b> se utiliza para ver la tabla de vecinos y para verificar que EIGRP haya establecido una adyacencia con sus vecinos.</p>
+          <p></p>
+          <p>EIGRP no envía actualizaciones periódicas, como RIP. EIGRP envía actualizaciones parciales o limitadas, que incluyen solo los cambios de ruta. Las actualizaciones solo se envían a los routers que se ven afectados por el cambio. La métrica compuesta de EIGRP utiliza el ancho de banda, el retraso, la confiabilidad y la carga para determinar la mejor ruta. De manera predeterminada, sólo se usan el ancho de banda y el retardo.</p>
+          <p></p>
+          <p>En el centro de EIGRP se encuentra DUAL (Algoritmo de actualización por difusión). La máquina de estados finitos DUAL se utiliza para determinar la mejor ruta y las rutas de respaldo posibles hacia cada red de destino. Un sucesor es un router vecino que se utiliza para el reenvío de paquetes mediante el uso de la ruta menos costosa hacia la red de destino. Distancia factible (FD) es la métrica calculada más baja para llegar a la red de destino a través del sucesor. Un sucesor factible (FS) es un vecino que tiene una ruta de respaldo sin bucles hacia la misma red que el sucesor, y también cumple con la condición de factibilidad. La condición de factibilidad (FC) se cumple cuando la distancia notificada (RD) de un vecino hacia una red es menor que la distancia factible del router local hacia la misma red de destino. La distancia notificada es simplemente una distancia factible EIGRP de vecinos a la red de destino.</p>
+          <p></p>
+          <p>EIGRP se configura con el comando<b> router eigrp </b><i>autonomous-system </i>. El valor de sistema autónomo es, en realidad, una ID de proceso y debe ser el mismo en todos los routers que estén en el dominio de routing EIGRP. El comando <b>network</b> es similar al que se utiliza con RIP. La red es la dirección de red con clase de las interfaces conectadas directamente en el router. Una máscara de comodín es un parámetro opcional que puede utilizarse para incluir sólo interfaces específicas.</p>
+          <p></p>
+          <p>EIGRP para IPv6 tiene muchas similitudes con EIGRP para IPv4. Sin embargo, a diferencia del comando network de IPv4, IPv6 se habilita en la interfaz con el comando<b> ipv6 eigrp </b><i>autonomous-system</i> para la configuración de interfaz.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra una vista ampliada del encabezado de EIGRP.  Se muestran los tipos de TLV con los valores K resaltados, junto con el tiempo de espera.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

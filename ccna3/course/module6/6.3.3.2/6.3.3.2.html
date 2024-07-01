@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.2 Introducción a DUAL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a DUAL</h1>
+        <div>
+          <p>EIGRP utiliza el algoritmo de convergencia DUAL. La convergencia es fundamental para las redes para evitar bucles de routing. </p>
+          <p></p>
+          <p>Los bucles de routing, incluso los temporarios, pueden ser perjudiciales para el rendimiento de la red. Los protocolos de routing por vector de distancias, como RIP, evitan los bucles de routing con temporizadores de espera y horizonte dividido. A pesar de que EIGRP utiliza ambas técnicas, las usa de manera un tanto diferentes; la forma principal en la que EIGRP evita los bucles de routing es con el algoritmo DUAL. </p>
+          <p></p>
+          <p>Haga clic en Reproducir en la figura para ver la operación básica de DUAL.</p>
+          <p></p>
+          <p>El algoritmo DUAL se utiliza para asegurar que no haya bucles en cada instancia a través del cómputo de una ruta. Esto permite que todos los routers involucrados en un cambio de topología se sincronicen al mismo tiempo. Los routers que no se ven afectados por los cambios en la topología no se encuentran involucrados en el recálculo. Este método proporciona a EIGRP mayor tiempo de convergencia que a otros protocolos de routing por vector de distancias.</p>
+          <p></p>
+          <p>La máquina de estados finitos (FSM) DUAL realiza el proceso de decisión para todos los cómputos de ruta. Una FSM es un modelo de flujo de trabajo, similar a un diagrama de flujo, que está compuesto por lo siguiente:</p>
+          <p>
+            <ul>
+              <li>Un número finito de etapas (estados)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Transiciones entre estas etapas</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Operaciones </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La FSM DUAL rastrea todas las rutas, y utiliza las métricas de EIGRP para seleccionar rutas eficaces sin bucles e identificar las rutas con el menor costo para introducirlas en la tabla de routing.</p>
+          <p></p>
+          <p>El recálculo del algoritmo DUAL puede ser muy exigente para el procesador. EIGRP mantiene una lista de rutas de respaldo que DUAL ya determinó que no tienen bucles para evitar los recálculos siempre que sea posible. Si la ruta principal en la tabla de routing falla, el mejor camino de respaldo se agrega de inmediato a la tabla de routing.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En esta animación, se muestran tres routers. Cada router está conectado a los otros dos routers mediante enlaces seriales.  Al hacer clic en Reproducir, la red LAN del router dos se desconecta y el router dos envía un paquete de actualización a los routers uno y tres.  Una vez que los routers uno y tres reciben el paquete de actualización, envían un paquete de acuse de recibo.  Luego, el router dos envía un paquete de consulta a los routers uno y tres, los cuales envían un paquete de respuesta al router dos.  El router dos luego envía un paquete de acuse de recibo a los routers uno y tres.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

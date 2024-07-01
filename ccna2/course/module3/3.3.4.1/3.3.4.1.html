@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.1 Entradas de la tabla de routing IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entradas de la tabla de routing IPv6</h1>
+        <div>
+          <p>Los componentes de la tabla de routing IPv6 son muy similares a los de la tabla de routing IPv4. Por ejemplo, se completa con las interfaces conectadas directamente, con las rutas estáticas y con las rutas descubiertas de forma dinámica. </p>
+          <p></p>
+          <p>Dado que IPv6 fue diseñado como un protocolo sin clase, todas las rutas son en realidad rutas finales de nivel 1. No hay rutas principales de nivel 1 para rutas secundarias de nivel 2. </p>
+          <p></p>
+          <p>La topología que se muestra en la ilustración se utiliza como la topología de referencia para esta sección.  Observe lo siguiente en la topología:</p>
+          <p>
+            <ul>
+              <li>El R1, el R2 y el R3 están configurados en una topología de malla completa. Todos los routers tienen rutas redundantes hacia diversas redes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R2 es el router perimetral y se conecta con el ISP. Sin embargo, no se anuncia una ruta estática predeterminada.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Se configuró EIGRP para IPv6 en los tres routers.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Nota</b>: Aunque EIGRP para IPv6 se utiliza para completar las tablas de routing, el funcionamiento y la configuración de EIGRP exceden el ámbito de este curso.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología de tres routers configurados en un diseño triangular. Cada router está conectado a los otros dos routers, lo que proporciona una topología de malla completa.  Cada router tiene dos enlaces WAN serie activos con direcciones IPv6 y cada router tiene una LAN en una interfaz de gigabit Ethernet con una dirección IPv6.  El protocolo de routing utilizado es EIGRP para IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

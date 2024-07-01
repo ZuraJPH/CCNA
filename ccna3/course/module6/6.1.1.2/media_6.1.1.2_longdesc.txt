@@ -1,0 +1,1 @@
+En la figura se muestra que el EIGRP mantiene tres tablas distintas para IPv4 e IPv6.  Estas son la tabla de vecinos, la tabla de topología y la tabla de routing.  Hay un total de seis tablas.

@@ -1,0 +1,1 @@
+La figura muestra el resultado del comando show ip route barra vertical begin Gateway.  Esto muestra la tabla de routing para el router R1, que tiene tres rutas conectadas directamente con tres direcciones IP de interfaz, cinco rutas aprendidas a través de RIP, una ruta predeterminada candidata y un gateway de último recurso configurado.

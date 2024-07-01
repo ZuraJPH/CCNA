@@ -1,0 +1,1 @@
+La figura muestra la diferencia entre una trama de Ethernet y una trama 802.1Q.  La segunda trama tiene la etiqueta 802.1Q agregada al encabezado de la trama.

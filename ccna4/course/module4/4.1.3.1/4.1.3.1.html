@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.3.1 Configurar la ACL IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configurar la ACL IPv4</h1>
+        <div>
+          <p>La sintaxis completa del comando de ACL estándar es la siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>access-list </b>
+            </span>
+            <span class="cmd">
+              <i>número-acl</i>
+            </span>
+            <span class="cmd"> { </span>
+            <span class="cmd">
+              <b>deny</b>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <b>permit</b>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <b>remark</b>
+            </span>
+            <span class="cmd"> } </span>
+            <span class="cmd">
+              <i>origen</i>
+            </span>
+            <span class="cmd"> [</span>
+            <span class="cmd">
+              <i>wildcard-origen</i>
+            </span>
+            <span class="cmd"> ][ </span>
+            <span class="cmd">
+              <b>log</b>
+            </span>
+            <span class="cmd"> ]</span>
+          </p>
+          <p></p>
+          <p>En la figura 1, se explica detalladamente la sintaxis para una ACL estándar.</p>
+          <p></p>
+          <p>Las ACE pueden permitir o denegar un solo host o un rango de direcciones host. Para crear una ACL numerada 10, que permita un host específico con la dirección IPv4 192.168.10.10, debe introducir lo siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit host 192.168.10.10</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Como se muestra en la figura 2, para crear una instrucción que permita un rango de direcciones IPv4 en una ACL numerada 10 que permite todas las direcciones IPv4 en la red 192.168.10.0/24, debe introducir lo siguiente:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit 192.168.10.0 0.0.0.255</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Para eliminar la ACL, se utiliza el comando de configuración global <b>no access-list 10</b>. La ejecución del comando <b>show access-list</b> confirma que se eliminó la lista de acceso 10.</p>
+          <p></p>
+          <p>Como se muestra en la figura 3, se utiliza la palabra clave <b>remark</b> en los documentos, que facilita mucho comprender las listas de acceso. Cuando se revisa la ACL en la configuración mediante el comando <b>show running-config</b>, también se muestra el comentario.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra la sintaxis de los comando para las A.C.L. estándar. Los parámetros principales son el comando access guión list seguido de un número, una sentencia de permiso o negación, la direcciones I.P. de origen y destino, y la máscara wildcard opcional. Las otras opciones incluyen un comentario que se usa para documentar el A.C.L y el registro de palabra clave que se utiliza para enviar mensajes sobre los paquetes que hacen coincidir el A.C.L con la consola. La figura dos muestra la creación de un A.C.L estándar,  access guión list diez permit 192 punto 168 punto 10 punto cero cero cero cero 255. El IOS tiene un comando que se ejecuta desde el modo exec con privilegios que mostrará todas las listas de acceso en un router. Ese comando es show acces guión list. El proceso para eliminar una A.C.L de un router se realiza en el modo de configuración global. El comando es no access guión list, seguido del número de A.C.L a eliminar. En la figura muestra tres el uso de la palabra clave, comentario. El comando es access guión list 10 comentario permit hosts de desde LAN 192 punto 168 punto 10 punto cero. Este comando es seguido por el comando de configuración de A.C.L, access guión list diez permit 192 punto 168 punto 10 punto cero cero punto cero punto cero punto 255. La figura muestra el A.C.L final y muestra que el comentario se indica en el archivo de configuración para servir como documentación del propósito del A.C.L.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

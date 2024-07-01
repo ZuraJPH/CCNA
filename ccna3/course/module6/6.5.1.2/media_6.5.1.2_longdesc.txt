@@ -1,0 +1,1 @@
+En la figura se muestra una vista ampliada del encabezado de EIGRP.  Se muestran los tipos de TLV con los valores K resaltados, junto con el tiempo de espera.

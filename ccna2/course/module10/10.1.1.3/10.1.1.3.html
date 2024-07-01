@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.3 Detección de dispositivos con CDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Detección de dispositivos con CDP</h1>
+        <div>
+          <p>Con el CDP habilitado en la red, el comando <b>show cdp neighbors</b> se puede utilizar para determinar el diseño de la red.</p>
+          <p></p>
+          <p>Por ejemplo, considere la falta de documentación en la topología de la Figura 1. No hay información disponible relacionada con el resto de la red. El comando <b>show cdp neighbors</b> proporciona información útil sobre cada dispositivo adyacente CDP, como los siguientes datos:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Identificadores de dispositivos</b> - El nombre de host del dispositivo adyacente (S1).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Identificador de puerto</b> - El nombre de los puertos local y remoto (Gig 0/1 y Fas 0/5, respectivamente).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Lista de funcionalidades</b> - Indica si el dispositivo es un router o un switch (S para switch; I para IGMP está más allá del ámbito de este curso).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Plataforma</b> - La plataforma de hardware del dispositivo (WS-C2960 para el switch Cisco 2960).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si se necesita más información, el comando detallado <b>show cdp neighbors</b> también puede proporcionar información, como la versión del IOS y las direcciones IPv4 de los componentes adyacentes, tal como se indica en la Figura 2. Al tener acceso a S1 ya sea en forma remota por medio de SSH o físicamente a través del puerto de la consola, un administrador de redes puede determinar cuáles son los otros dispositivos conectados a S1, tal como se indica en la salida del comando <b>show cdp neighbors</b>, en la Figura 3.</p>
+          <p></p>
+          <p>Otro switch, S2, se revela en el resultado. El administrador de redes después tiene acceso a S2 y muestra los componentes adyacentes de CDP, tal como se indica en la Figura 4. El único dispositivo conectado al S2 es el S1. Por lo tanto, no hay más dispositivos a descubrir en la topología. El administrador de redes ahora puede actualizar la documentación para reflejar los dispositivos detectados.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la Figura 1 se muestra un router conectado a una nube y la salida correspondiente al comando 'show cdp neighbors'. El router R1 tiene un componente adyacente CDP, el switch S1, que está conectado a la interfaz gigabitethernet0/0 local. En la Figura 2 se muestra un router conectado a un switch, que está conectado a una nube y la salida del comando 'show cdp neighbors detail'. La dirección IP para el switch S1 es 192.168.1.2 y ejecuta la versión 15.0 de IOS. En la Figura 3 se muestra la misma topología con la salida del comando 'show cdp neighbors' en el switch S1. El switch S1 está conectado a dos dispositivos. El router R1 está conectado la interfaz fastethernet0/5 local. El switch S2 está conectado a la interfaz fastethernet0/4 local. En la Figura 4 se muestra la topología completa con el router R1 conectado al switch S1, que está conectado al switch S3 y la salida del comando 'show cdp neighbors' en el switch S2. El switch S2 está conectado al switch S1 a través de la interfaz fastethernet0/4 local y no está conectado con ningún otro dispositivo que utilice CDP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

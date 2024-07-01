@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.1 Modo de árbol de expansión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modo de árbol de expansión</h1>
+        <div>
+          <p>PVST+ rápido es la implementación de Cisco de RSTP. Este admite RSTP por VLAN. La topología en la figura 1 posee dos VLAN: 10 y 20. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la configuración predeterminada de árbol de expansión en un switch Cisco de la serie Catalyst 2960 es PVST+. Los switches Cisco de la serie Catalyst 2960 admiten PVST+, PVST+ rápido y MST, pero solo puede haber una versión activa para todas las VLAN al mismo tiempo. </p>
+          <p></p>
+          <p>Los comandos de PVST+ rápido controlan la configuración de las instancias de árbol de expansión de las VLAN. La instancia de árbol de expansión se crea cuando se asigna una interfaz a una VLAN y se elimina cuando la última interfaz se traslada a otra VLAN. Además, puede configurar los parámetros de puertos y switches STP antes de que se cree una instancia de árbol de expansión. Estos parámetros se aplican cuando se crea una instancia de árbol de expansión.  </p>
+          <p></p>
+          <p>En la figura 2, se muestra la sintaxis de comandos Cisco IOS que se necesita para configurar PVST+ rápido en un switch Cisco. El comando necesario para configurar PVST+ rápido es el comando <b>spanning-tree mode rapid-pvst</b> del modo de configuración global. Cuando se especifica la interfaz que se debe configurar, las interfaces válidas incluyen puertos físicos, redes VLAN y canales de puertos. El rango de ID de la VLAN es de 1 a 4094 cuando está instalada la imagen mejorada del software (EI) y de 1 a 1005 cuando está instalada la imagen estándar del software (SI). El intervalo de canales de puerto es de 1 a 6.</p>
+          <p></p>
+          <p>En la figura 3, se muestran los comandos de PVST+ rápido configurados en el S1.</p>
+          <p></p>
+          <p>En la figura 4, el comando <b>show spanning-tree vlan 10</b> muestra la configuración de árbol de expansión para la VLAN 10 en el switch S1. Observe que la prioridad de BID está establecida en 4096. En el resultado, la instrucción “Spanning tree enabled protocol rstp” indica que el S1 ejecuta PVST+ rápido. Dado que el S1 es el puente raíz para la VLAN 10, todas sus interfaces son puertos designados.</p>
+          <p></p>
+          <p>En la figura 5, el comando <b>show running-config</b> se utiliza para verificar la configuración de PVST+ rápido en el S1.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Por lo general, no es necesario configurar el parámetro de <i>tipo de enlace</i> punto a punto para PVST+ rápido, porque no es muy común tener un <i>tipo de enlace</i>compartido. En la mayoría de los casos, la única diferencia entre la configuración de PVST+ y PVST+ rápido es el comando <b>spanning-tree mode rapid-pvst</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra tres switches interconectados mediante enlaces troncales.  El switch 1 es el puente raíz. La figura 2 muestra una tabla con los comandos para configurar PVST+ rápido y una descripción. La figura 3 muestra los comandos para configurar el switch 1 para que use PVST rápido y definir fast ethernet cero barra dos como tipo de enlace punto a punto. La figura 4 muestra el resultado del comando show spanning guion tree vlan 10. En la figura 5, se muestra el resultado del comando show run.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

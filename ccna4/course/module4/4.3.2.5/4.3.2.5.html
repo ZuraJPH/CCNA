@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.5 Verificación de ACL de IPv6 </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de ACL de IPv6 </h1>
+        <div>
+          <p>Los comandos que se utilizan para verificar una lista de acceso de IPv6 son similares a los que se utilizan para las ACL de IPv4. Con estos comandos, se puede verificar la lista de acceso de IPv6 RESTRICTED-ACCESS que se configuró anteriormente. En la figura 1, se muestra el resultado del comando <b>show ipv6 interface</b>. El resultado confirma que la ACL RESTRICTED-ACCESS está configurada en sentido de entrada en la interfaz G0/0.</p>
+          <p></p>
+          <p>Como se muestra en la figura 2, el comando <b>show access-lists</b> muestra todas las listas de acceso en el router, incluidas las ACL de IPv4 y de IPv6. Observe que, en las ACL de IPv6, los números de secuencia se colocan al final de la instrucción y no al principio, como ocurre en las listas de acceso de IPv4. Aunque las instrucciones aparecen en el orden en que se introdujeron, no siempre se presentan en incrementos de 10. Esto se debe a que las instrucciones remark que se introdujeron utilizan un número de secuencia, pero no se muestran en el resultado del comando <b>show access-lists</b>.</p>
+          <p></p>
+          <p>Al igual que las ACL extendidas para IPv4, las listas de acceso de IPv6 se muestran y se procesan en el orden en que se introducen las instrucciones. Recuerde que las ACL de IPv4 estándar utilizan una lógica interna que cambia el orden y la secuencia de procesamiento.</p>
+          <p></p>
+          <p>Como se muestra en la figura 3, el resultado del comando <b>show running-config</b> incluye todas las ACE y las instrucciones remark. Las instrucciones remark pueden colocarse antes o después de las instrucciones <b>permit</b> o <b>deny</b>, pero se debe mantener una ubicación coherente. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la salida del comando: show ipv6 interface gig cero barra diagonal cero.  La salida muestra la dirección IP y las listas de acceso configuradas en la interfaz. La figura dos muestra el resultado del comando show access guión lists. Este comando muestra las líneas configuradas en las listas ACL. La figura tres muestra el resultado del comando show running guión config.  Esta salida muestra el archivo de la configuración en ejecución e incluye todas las líneas en todas las listas ACL configuradas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

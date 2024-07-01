@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide type="MBAR">
+       
+            <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+            <slide>
+            	<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_2.3.2.3.A.png" />
+                <element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+                <element type="TEXT" compId="ID_s1_txt01" x="107" y="133" width="114.5" expand="down" align="center" />
+                <element type="TEXT" compId="ID_s1_txt02" x="438" y="133" width="113.7" expand="down" align="center" />
+                <element type="TEXT" compId="ID_s1_txt03" x="122" y="105" width="409.95" expand="up" align="center" />
+                <element type="TEXT" compId="ID_s1_txt04" x="265" y="177" width="123.6" expand="up" align="center" />
+                <element type="TEXT" compId="ID_s1_txt05" x="83" y="388" width="490.35" expand="down" align="left" corner="5" border="2"/>
+            </slide>
+            <slide>
+            	<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_2.3.2.3.B.png" />
+                <element type="TEXT" subType="TITLE" compId="ID_s2_title" />
+                <element type="TEXT" compId="ID_s2_txt01" x="107" y="133" width="114.5" expand="down" align="center" />
+                <element type="TEXT" compId="ID_s2_txt02" x="438" y="133" width="113.7" expand="down" align="center" />
+                <element type="TEXT" compId="ID_s2_txt03" x="122" y="105" width="409.95" expand="up" align="center" />
+                <element type="TEXT" compId="ID_s2_txt04" x="265" y="177" width="123.6" expand="up" align="center" />
+                <element type="TEXT" compId="ID_s2_txt06" x="83" y="388" width="490.35" expand="down" align="left" />
+                <element type="TEXT" compId="ID_s2_txt05" x="265" y="202" width="123.6" expand="down" align="center" />
+            </slide>
+            <slide>
+            	<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_2.3.2.3.C.png" />
+                <element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+                
+                <element type="ROUTER" textId="ID_static_1" x="360.5" y="321.45" align="center" width="203" size="10"/>
+                <element type="TEXT" compId="ID_s3_txt01" x="107" y="133" width="114.5" expand="down" align="center" />
+                <element type="TEXT" compId="ID_s3_txt02" x="438" y="133" width="113.7" expand="down" align="center" />
+                <element type="TEXT" compId="ID_s3_txt03" x="122" y="105" width="409.95" expand="up" align="center" />
+                <element type="TEXT" compId="ID_s3_txt04" x="265" y="177" width="123.6" expand="up" align="center" />
+                <element type="TEXT" compId="ID_s3_txt05" x="83" y="388" width="490.35" expand="down" align="left" />
+            </slide>
+             <text id="ID_static_1">
+        <![CDATA[<pre>username R1 password cisco123</pre>]]></text>
+        </slide>
+</data>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.4 Configuración de una ruta estática IPv6 conectada directamente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una ruta estática IPv6 conectada directamente</h1>
+        <div>
+          <p>Al configurar una ruta estática en redes punto a punto, una alternativa al uso de la dirección IPv6 de siguiente salto es especificar la interfaz de salida. Esto es una alternativa utilizada en IOS más antiguos o cada vez que se deshabilita CEF, para evitar el problema de búsquedas recursivas. </p>
+          <p></p>
+          <p>Por ejemplo, en la figura 1, se configuran tres rutas estáticas conectadas directamente en el R1 mediante la interfaz de salida. </p>
+          <p></p>
+          <p>La tabla de routing IPv6 para el R1 en la figura 2 muestra que cuando un paquete está destinado a la red 2001:DB8:ACAD:3::/64, el R1 busca una coincidencia en la tabla de routing y encuentra que puede reenviar el paquete desde su interfaz serial 0/0/0. No se necesita ninguna otra búsqueda.</p>
+          <p></p>
+          <p>Observe que la tabla de routing se ve diferente para la ruta configurada con una interfaz de salida que para la ruta configurada con una entrada recursiva.</p>
+          <p></p>
+          <p>La configuración de una ruta estática conectada directamente con una interfaz de salida permite que la tabla de routing resuelva esta interfaz en una única búsqueda, no en dos. Recuerde que con el uso del mecanismo de reenvío CEF, las rutas estáticas con una interfaz de salida se consideran innecesarias. Se realiza una única búsqueda utilizando una combinación de la FIB y la tabla de adyacencia almacenadas en el plano de datos.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en las figuras 3 y 4 para configurar las rutas estáticas IPv6 conectadas directamente.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN. La figura 1 muestra la configuración de las rutas estáticas a las redes remotas en el router 1 usando IPv6.  Las rutas estáticas se configuraron usando una interfaz de salida. La figura 2 muestra el proceso de búsqueda para que el router 1 se comunique con la LAN en el router 3. La figura tres es una actividad interactiva que permite que el estudiante configure una ruta estática en el router dos, mediante IPv6, para llegar a la LAN del router tres utilizando la interfaz de salida. La figura 4 es una actividad interactiva que permite que el estudiante configure rutas estáticas en el router 3 usando IPv6, apuntando a las redes del otro lado del router 2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

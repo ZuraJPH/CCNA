@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.2 Instrucción network faltante</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Instrucción network faltante</h1>
+        <div>
+          <p>En la figura 1, se muestra que la interfaz GigabitEthernet 0/1 del R1 ahora está configurada con la dirección 10.10.10.1/24 y está activa. El R1 y el R3 tienen una adyacencia establecida de vecinos EIGRP e intercambian información de routing. Sin embargo, como se muestra en la figura 2, una prueba de ping del router R3 a la interfaz G0/1 del R1 de 10.10.10.1 es incorrecta. </p>
+          <p></p>
+          <p>En la figura 3, con el comando <b>show ip protocols</b> en el router R1 se muestra que la red 10.10.10.0/24 no se anuncia a los vecinos EIGRP. Por lo tanto, la red 10.10.10.0 debe anunciarse.</p>
+          <p></p>
+          <p>En la figura 4, se muestra que el proceso EIGRP del R1 está configurado para incluir el anuncio de la red 10.0.0.0 con clase.</p>
+          <p></p>
+          <p>En la figura 5, se confirma la incorporación de la ruta 10.10.10.0/24 en la tabla de routing del R3. La posibilidad de alcance es verificada y confirmada haciendo ping en la interfaz GigabitEthernet 0/1 del R1.</p>
+          <p></p>
+          <p>
+            <b>EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>También se aplican comandos y criterios de solución de problemas similares en EIGRP para IPv6.</p>
+          <p></p>
+          <p>Los siguientes son los comandos equivalentes que se utilizan con EIGRP para IPv6:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 route</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>Para agregar una instrucción de la red que falta en IPv6, utilice el comando <b>ipv6 eigrp </b><i>autonomous-system</i> en el modo de configuración de interfaz. </p>
+          <p>Router(config-if)#<b> ipv6 eigrp </b><i>sistema-autónomo</i></p>
+          <p>
+            <b>Nota:</b> es posible que el filtrado que el router hace de actualizaciones de routing entrantes y salientes produzca otra forma de ruta faltante. Las ACL proporcionan filtrado para diferentes protocolos y pueden afectar el intercambio de mensajes del protocolo de routing. Esto puede hacer que las rutas no se incluyan en la tabla de routing. Utilice el comando <b>show ip protocols</b> para ver si hay alguna ACL aplicada a EIGRP. En este currículum no se trata la aplicación de filtros a las actualizaciones de routing.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran dos routers conectados con un cable serial.  El router uno tiene dos LAN y el router tres tiene una LAN. En la figura dos, se muestra el resultado del comando "ping" en el router tres que intentar alcanzar la red diez conectada al router uno.  Este ping no tiene éxito. En la figura tres, se muestra el resultado que genera el comando "show i. p. protocols" en el router uno. El resultado indica que el router uno no incluye la red diez en las actualizaciones de EIGRP. En la figura cuatro, se muestra la sintaxis para agregar la red diez a la configuración de EIGRP en el router uno. En la figura cinco, se muestra el resultado que genera el comando "show i. p. route" en el router uno junto con un ping exitoso en la red diez.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

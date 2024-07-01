@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<textcomponents>
+  <component id="ID_title">
+    <text><![CDATA[<b>Velocidades de transmisión de portadora</b>]]></text>
+  </component>
+  <component id="ID_table">
+    <text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	<tr class="mtable_title">
+		<td colspan="2" bgcolor='#FFFFFF'><font size="1"></font></td>
+	</tr>
+
+	<tr class="mtable_top">
+		<td colspan='2' bgcolor='#666263'><font size='1' color='#0E6360'>.</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263' valign="top" class="mtitle"><font color='#ffffff'><b>Tipo de línea</b></font></td>
+		<td bgcolor='#666263' valign="top" class="mtitle"><font color='#ffffff'><b>Capacidad de la velocidad de transmisión</b></font></td>	
+	</tr>
+
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>56</font></td>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>56 kb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>64</font></td>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>64 kb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>T1</font></td>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>1,544 Mb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>E1</font></td>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>2,048 Mb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>J1</font></td>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>1,544 Mb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>E3</font></td>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>34,368 Mb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>T3</font></td>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>44,736 Mb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>OC-1</font></td>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>51,84 Mb/s</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>OC-3</font></td>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>155,52 Mb/s</font></td> 
+	</tr>
+
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>OC-9</font></td> 	
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>466,56 Mb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>OC-12</font></td>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>622,08 Mb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>OC-18</font></td> 	
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>933,12 Mb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>OC-24</font></td> 	
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>1,244 Gb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>OC-36</font></td> 	
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>1,866 Gb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>OC-48</font></td> 	
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>2,488 Gb/s</font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>OC-96</font></td> 	
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>4,976 Gb/s</font></td> 
+	</tr>
+
+	<tr>
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>OC-192</font></td> 	
+		<td bgcolor='#E9E7E8' valign="middle"><font color='#393536'>9,954 Gb/s</font></td> 
+	</tr>
+
+	<tr>
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>OC-768</font></td> 	
+		<td bgcolor='#F2F2F2' valign="middle"><font color='#393536'>39,813 Gb/s</font></td>
+	</tr>
+
+	</table>]]></text>
+  </component>
+</textcomponents>

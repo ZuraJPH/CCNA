@@ -1,0 +1,1 @@
+La figura muestra un switch con un cable Ethernet en un puerto Ethernet conectado a un puerto LAN en un router.  Hay una computadora conectada al puerto de consola mediante un cable de consola.  Para poder administrar un switch de forma remota, este se debe configurar inicialmente a través del puerto de consola.

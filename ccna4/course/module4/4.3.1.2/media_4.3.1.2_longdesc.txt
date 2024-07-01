@@ -1,0 +1,1 @@
+La figura muestra un router que ejecuta IPv6 y envía el mensaje de solicitud de vecino ICMP.  Una computadora en el enlace responde con un mensaje de anuncio de vecino ICMP.  

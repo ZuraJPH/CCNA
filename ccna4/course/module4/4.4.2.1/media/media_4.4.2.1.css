@@ -1,0 +1,25 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#ID_static_4  ,#ID_static_5 , #ID_static_6 , #ID_static_7 , #ID_static_8 , 
+	#ID_static_9,#ID_static_10 {
+		font-size: 0.87em !important;
+	}
+
+	#ID_static_14{
+		left:-18px !important;
+	}
+	#ID_static_9{
+		left:-8px !important;
+	}
+
+	#ID_static_5, #ID_static_7 {
+		left:-7px !important;
+	}
+	
+
+	
+}

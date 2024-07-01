@@ -1,0 +1,11 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_s1_title{
+	margin-left: 115px;
+}
+#mc_table{
+	height: 409px !important;
+}

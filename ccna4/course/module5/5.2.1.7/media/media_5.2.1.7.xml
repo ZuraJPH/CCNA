@@ -1,0 +1,24 @@
+﻿<textcomponents>
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Cifrado y autenticación del mensaje SNMPv3</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+	<text><![CDATA[Nodo administrado]]></text>
+</component>
+<component id="ID_s1_txt02">
+	<text><![CDATA[Nodo administrado]]></text>
+</component>
+<component id="ID_s1_txt03">
+	<text><![CDATA[Nodo administrado]]></text>
+</component>
+<component id="ID_s1_txt04">
+	<text><![CDATA[Nodo administrado]]></text>
+</component>
+<component id="ID_s1_txt05">
+	<text><![CDATA[NMS]]></text>
+</component>
+<component id="ID_s1_txt06">
+	<text><![CDATA[Túnel cifrado]]></text>
+</component>
+
+</textcomponents>

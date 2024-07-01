@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.2 BPDU en RSTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>BPDU en RSTP</h1>
+        <div>
+          <p>RSTP utiliza BPDU tipo 2, versión 2. El protocolo STP 802.1D original utiliza BPDU tipo 0, versión 0. Sin embargo, los switches que ejecutan RSTP se pueden comunicar directamente con los switches que ejecutan el protocolo STP 802.1D original. RSTP envía BPDU y completa el byte del indicador de una forma ligeramente diferente a la del estándar 802.1D original:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La información de protocolo se puede vencer de inmediato en un puerto si no se reciben los paquetes de saludo durante tres períodos de saludo consecutivos (seis segundos, de manera predeterminada) o si caduca el temporizador de antigüedad máxima. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las BPDU se utilizan como un mecanismo de mantenimiento de la conexión (keepalive). Por lo tanto, tres BPDU perdidas de forma consecutiva indican que se perdió la conectividad entre un puente y su raíz vecina o puente designado. La rápida expiración de la información permite que las fallas se detecten muy rápidamente.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Nota</b>: Al igual que STP, los switches RSTP envían una BPDU con su información actual cada período de saludo (dos segundos, de manera predeterminada), incluso si el switch RSTP no recibe ninguna BPDU del puente raíz. </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, RSTP utiliza el byte del indicador de la BPDU versión 2:</p>
+          <p>
+            <ul>
+              <li>Los bits 0 y 7 se utilizan para cambios de topología y acuse de recibo. Se encuentran en el 802.1D original. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los bits 1 y 6 se utilizan para el proceso de Acuerdo de propuesta (para la convergencia rápida).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los bits 2 a 5 codifican el rol y el estado del puerto.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los bits 4 y 5 se utilizan para codificar la función del puerto mediante un código de 2 bits.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una tabla con los campos de una BPDU versión 2 de RSTP.  Otra tabla muestra el desglose del campo de indicadores y sus bits individuales.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

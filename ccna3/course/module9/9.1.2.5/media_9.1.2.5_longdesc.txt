@@ -1,0 +1,1 @@
+La figura muestra los mensajes de LSA de tipo cuatro generados por los ABR. Estos mensajes anuncian el ASBR a otras áreas y se propagan a través de todas las áreas conectadas.

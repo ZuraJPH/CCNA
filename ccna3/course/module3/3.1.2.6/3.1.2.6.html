@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.6 Puertos designados y alternativos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Puertos designados y alternativos</h1>
+        <div>
+          <p>Cuando se determina el puerto raíz de un switch, este último compara los costos de rutas de todos los puertos de switch que participan en el árbol de expansión. Al puerto de switch con el menor costo de ruta total hacia el puente raíz se le asigna de manera automática el rol de puerto raíz, ya que es el más cercano al puente raíz. En una topología de red de switches, todos los switches que no sean puente raíz poseen un único puerto raíz seleccionado, y ese puerto proporciona la ruta de menor costo de vuelta al puente raíz. </p>
+          <p></p>
+          <p>Los puentes raíz no tienen ningún puerto raíz. Todos los puertos del puente raíz son puertos designados. Los switches que no sean el puente raíz de una topología de red tienen un solo puerto raíz definido.</p>
+          <p></p>
+          <p>La figura muestra una topología con cuatro switches. Al examinar los roles de puerto, vemos que el puerto F0/1 del switch S3 y el puerto F0/3 del switch S4 se han seleccionado como puertos raíz porque tienen la ruta con el menor costo (costo de la ruta hacia la raíz) al puente raíz para sus respectivos switches.  </p>
+          <p></p>
+          <p>S2 tiene dos puertos, F0/1 y F0/2, con rutas de igual costo al puente raíz. En este caso los ID de puente de los switches vecinos, S3 y S4, se utilizan para definir el empate. Esto se conoce como BID del emisor. El S3 tiene un BID de 24577.5555.5555.5555 y S4 tiene un BID de 24577.1111.1111.1111. Como el S4 tiene un BID menor, el puerto F0/1 de S2, el puerto conectado a S4, es el puerto raíz.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Los BID no se muestran en la figura.</p>
+          <p></p>
+          <p>Luego, deben seleccionarse los puertos designados en los segmentos compartidos. S2 y S3 se conectan al mismo segmento de LAN y, por lo tanto, intercambian tramas de BPDU. STP determina si el puerto F0/2 de S2 o el puerto F0/2 de S3 es el puerto designado para el segmento compartido. El puerto del switch con la ruta al puente raíz de menor costo (costo de la ruta hacia la raíz) se selecciona como puerto designado. El puerto F0/2 de S3 tiene una ruta de menor costo al puente raíz, así que será el puerto designado para ese segmento.</p>
+          <p></p>
+          <p>S2 y S4 pasan por un proceso similar para su segmento compartido. El puerto F0/1 de S4 tiene la ruta de menor costo al puente raíz y se convierte en el puerto designado en este segmento compartido.</p>
+          <p></p>
+          <p>Se han asignado todos los roles de puerto de STP a excepción del puerto F0/2 de S2. El puerto F0/1 de S2 ya se seleccionó como puerto raíz para ese switch. Debido a que el puerto F0/2 de S3 es el puerto designado para este segmento, el puerto F0/2 de S2 se convertirá en un puerto alternativo.</p>
+          <p></p>
+          <p>El puerto designado es el puerto que envía y recibe tráfico, desde y hacia ese segmento al puente raíz. Este es el mejor puerto en ese segmento al puente raíz. El puerto alternativo no envía ni recibe tráfico en ese segmento. Esta es la parte de prevención de bucles de STP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

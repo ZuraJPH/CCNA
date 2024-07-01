@@ -1,0 +1,67 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Funcionamiento de SDN</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Controlador SDN]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Protocolo OpenFlow sobre TLS]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<b>Switch OpenFlow</b>]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Tabla de medida]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Tabla de grupo]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Canal seguro]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[<b>Software</b>]]></text>
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[Tabla de flujo]]></text>
+	</component>
+	<component id="ID_txt09">
+		<text><![CDATA[Tabla de flujo]]></text>
+	</component>
+	<component id="ID_txt10">
+		<text><![CDATA[Tabla de<br>flujo]]></text>
+	</component>
+	<component id="ID_txt11">
+		<text><![CDATA[<b>Hardware/firmware</b>]]></text>
+	</component>
+	<component id="ID_txt12">
+		<text><![CDATA[Switches OpenFlow]]></text>
+	</component>
+	<component id="ID_txt13">
+		<text><![CDATA[Terminales]]></text>
+	</component>
+	
+	
+	<component id="ID_titleTxt01">
+		<text><![CDATA[Tabla de medida]]></text>
+	</component>
+	<component id="ID_bodyTxt01">
+		<text><![CDATA[La tabla activa una variedad de acciones relacionadas con el funcionamiento en un flujo.]]></text>
+	</component>
+	
+	<component id="ID_titleTxt02">
+		<text><![CDATA[Tabla de grupo]]></text>
+	</component>
+	<component id="ID_bodyTxt02">
+		<text><![CDATA[Una tabla de flujo puede dirigir un flujo a una tabla de grupos, que puede alimentar una variedad de acciones que afecten a uno o más flujos.]]></text>
+	</component>
+	
+	<component id="ID_titleTxt03">
+		<text><![CDATA[Tabla de flujo]]></text>
+	</component>
+	<component id="ID_bodyTxt03">
+		<text><![CDATA[Esta tabla asigna los paquetes entrantes a un flujo determinado y especifica las funciones que deben realizarse en los paquetes. Puede haber tablas de flujo múltiples que funcionan a modo de canalización.]]></text>
+	</component>
+
+</textcomponents>

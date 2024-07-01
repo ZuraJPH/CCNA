@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.1.2 Envío de un paquete</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Envío de un paquete</h1>
+        <div>
+          <p>En la animación de la ilustración, la PC1 envía un paquete a la PC2. La PC1 debe determinar si la dirección IPv4 de destino está en la misma red. La PC1 determina su propia subred realizando una operación <b>AND</b> en su propia dirección y máscara de subred IPv4. Esto produce la dirección de red a la que pertenece la PC1. A continuación, la PC1 realiza la misma operación <b>AND</b> con la dirección IPv4 de destino del paquete y la máscara de subred de la PC1. </p>
+          <p></p>
+          <p>Si la dirección de red de destino está en la misma red que la PC1, entonces la PC1 no utiliza el gateway predeterminado.  En lugar de esto, la PC1 consulta su caché ARP para obtener la dirección MAC del dispositivo con esa dirección IPv4 de destino. Si la dirección MAC no está en la caché, la PC1 genera una solicitud de ARP para obtener la dirección a fin de completar el paquete y enviarlo al destino. Si la dirección de red de destino está en una red diferente, la PC1 reenvía el paquete a su gateway predeterminado.</p>
+          <p></p>
+          <p>Para determinar la dirección MAC del gateway predeterminado, la PC1 busca la dirección IPv4 del gateway predeterminado y la dirección MAC relacionada en su tabla ARP.</p>
+          <p></p>
+          <p>Si no existe ninguna entrada ARP para el gateway predeterminado en la tabla ARP, la PC1 envía una solicitud de ARP. El router R1 envía una respuesta de ARP. Luego, la PC1 puede reenviar el paquete a la dirección MAC del gateway predeterminado, la interfaz Fa0/0 del router R1.</p>
+          <p></p>
+          <p>Para los paquetes IPv6, se realiza un proceso similar. En lugar del proceso ARP, la resolución de direcciones IPv6 utiliza los mensajes ICMPv6 de solicitud y de anuncio de vecino. Las asignación de direcciones IPv6 a MAC se guarda en una tabla similar a la caché ARP, denominada “caché de vecinos”.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa una animación de una computadora que envía un paquete de datos a través de tres routers a otra computadora.  La figura muestra que la computadora de origen advierte que la de destino está en una red diferente y por lo tanto debe enviar el paquete al gateway predeterminado.  La computadora busca en su memoria caché de ARP para determinar la dirección MAC del gateway predeterminado y encapsula los datos en un paquete con la dirección MAC del gateway.  </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

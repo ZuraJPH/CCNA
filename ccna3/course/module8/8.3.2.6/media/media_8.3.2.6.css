@@ -1,0 +1,39 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#ID_SC3 li{
+	line-height:14px;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+	#ID_static_4  ,#ID_static_8, #ID_static_9 , #ID_static_10 , #ID_static_13 , #ID_static_15{
+		font-size: 0.816666666666667em !important;
+	}
+
+	#ID_static_8{
+		left:-3px !important;
+
+	}
+
+	#ID_static_13{
+		left:-4px !important;
+		top:2px !important;
+		
+	}
+
+
+	
+}
+

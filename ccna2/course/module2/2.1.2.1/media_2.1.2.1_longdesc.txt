@@ -1,0 +1,1 @@
+La figura enumera los motivos para utilizar el routing estático.  Estos incluyen, conexión a una red específica, conexión a un router de rutas internas, resumen de las entradas de routing y creación de una ruta de respaldo.

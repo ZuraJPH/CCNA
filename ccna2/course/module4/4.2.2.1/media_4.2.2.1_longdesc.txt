@@ -1,0 +1,1 @@
+La figura muestra cómo tres dispositivos conectados a tres puertos de switch independientes pertenecen cada uno a su propio dominio de colisión, pero siguen dentro del mismo dominio de difusión.

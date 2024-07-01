@@ -1,0 +1,1 @@
+La figura uno muestra una topología de tres routers (R1, R2 y R3) y de tres áreas de OSPF (área 1, área 0 y área 2) en una red IPv6. La figura dos muestra cómo configurar el router ABR R1 en las áreas 1 y 0 de OSPFv3. La figura tres muestra la sintaxis necesaria para configurar la OSPFv3 multiárea para dos ABR (R2 y R3).

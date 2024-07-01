@@ -1,0 +1,20 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Detección DHCP confiable y asignaciones de puertos no confiables</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Puerto confiable]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Puerto no confiable]]></text>
+	</component>	
+	
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Servidor DHCP]]></text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Equipo del usuario]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[Atacante]]></text>
+	</component><!-- end slide 1 --></textcomponents>

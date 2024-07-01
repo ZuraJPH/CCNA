@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.4 Tipos de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tipos de enlace</h1>
+        <div>
+          <p>Mediante el uso del modo dúplex en el puerto, el tipo de enlace proporciona una categorización para cada puerto que participa en RSTP. Según lo que se conecta a cada puerto, se pueden identificar dos tipos diferentes de enlace:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Punto a punto</b>: un puerto que funciona en modo de dúplex completo generalmente conecta un switch a otro y es candidato para la transición rápida al estado de reenvío.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Compartido</b>: un puerto que funciona en modo half-duplex conecta un switch a un hub que conecta varios dispositivos.</li>
+            </ul>
+          </p>
+          <p>En la ilustración, haga clic en cada enlace para obtener información acerca de los tipos de enlace.</p>
+          <p></p>
+          <p>El tipo de enlace puede determinar si el puerto puede pasar de inmediato al estado de reenvío, siempre que se cumplan ciertas condiciones. Estas condiciones son distintas para los puertos de extremo y para los puertos que no son de extremo. Los puertos que no son de extremo se categorizan en dos tipos de enlaces: punto a punto y compartido. El tipo de enlace se determina automáticamente, pero se puede anular con una configuración de puerto explícita mediante el comando <b>spanning-tree link-type </b>{ <b>point-to-point</b> | <b>shared</b> }. Las características de los roles de puerto en relación con los tipos de enlace incluyen lo siguiente:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Las conexiones de puerto de extremo y punto a punto son candidatas para la transición rápida al estado de reenvío. Sin embargo, antes de que se considere el parámetro de tipo de enlace, RSTP debe determinar la función de puerto. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los puertos raíz no utilizan el parámetro de tipo de enlace. Los puertos raíz son capaces de realizar una transición rápida al estado de reenvío siempre que el puerto se encuentre sincronizado (reciba una BPDU del puente raíz).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>En la mayoría de los casos, los puertos alternativos y de respaldo no utilizan el parámetro de tipo de enlace. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los puertos designados son los que más utilizan el parámetro de tipo de enlace. La transición rápida al estado de reenvío para el puerto designado ocurre solo si el parámetro de tipo de enlace se establece en <b>point-to-point</b>.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres switches, todos interconectados.  El switch uno está marcado como puente raíz y todos sus puertos son puertos designados y en modo de reenvío.  Los puertos de los switches dos y tres están marcados como raíz, designados, alternativos y de extremo según corresponda.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

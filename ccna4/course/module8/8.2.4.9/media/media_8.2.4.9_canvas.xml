@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+
+ <slide type="MBAR">
+	<slide>
+		<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+		<element type="IMAGE" src="media_8.2.4.9.png" x="0" y="0" width="680" height="490" />
+		<element type="TEXT" compId="ID_s1_txt01" x="133" y="430" width="214" expand="down" align="left" size="10" />
+		<element type="TEXT" id="ID_static_3" text="10.1.10.10/24" x="161.75" y="406.85" width="218.75" align="left"  color="#652C8A" bold="1" />
+		<element type="TEXT" id="ID_static_3one" text="2001:DB8:ACAD:1:5075:D0FF:FE8E:9AD8/64" x="131.75" y="418" width="218.75" align="left"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_4" text="2001:DB8:ACAD:1::/64" x="207.6" y="198.85" width="111.75" align="left"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_5" text="2001:DB8:ACAD:2::/64" x="170" y="104.6" width="111.75" align="left"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_6" text="2001:DB8:ACAD:3::/64" x="385.2" y="104.55" width="111.75" align="right"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_7" text="2001:DB8:ACAD:4::/64" x="335" y="208" width="111.75" align="right"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_8" text="10.1.10.0/24" x="207.6" y="222.05" width="64" align="left" color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_9" text="172.16.1.0/24" x="388" y="230" width="70" align="left"  color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_10" text="192.168.1.0/30" x="208" y="93.95" width="76" align="left"  color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_11" text="192.168.1.4/30" x="385.2" y="93.5" width="76" align="left"  color="#652C8A" bold="1" />
+		<element type="TEXT" id="ID_static_12" text="S0/0/0" x="270" y="83.3" width="35" align="left" bold="1" />
+		<element type="TEXT" id="ID_static_13" text=":2" x="310.75" y="116.85" width="12.95" align="left" color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_14" text=".2" x="301.5" y="96.05" width="12.95" align="left"  color="#652c8a" size="10" bold="1" />
+		<element type="TEXT" id="ID_static_15" text="S0/0/1" x="371.8" y="83.3" width="35" align="left" bold="1" />
+		<element type="TEXT" id="ID_static_16" text=":1" x="230.85" y="141.7" width="12.95" align="left" color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_17" text=".5" x="371.3" y="96.8" width="12.95" align="left" color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_18" text="S0/0/0" x="183.5" y="121.95" width="35" align="left" bold="1" />
+		<element type="TEXT" id="ID_static_19" text=".1" x="203.7" y="134" width="12.95" align="left" color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_20" text="S0/0/1" x="447.55" y="127.4" width="35" align="left"  bold="1" />
+		<element type="TEXT" id="ID_static_21" text=".6" x="446.3" y="139.45" width="12.95" align="left"  color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_22" text=":2" x="433.95" y="162.75" width="12.95" align="left"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_23" text="G0/0" x="172" y="188" width="26.95" align="left"  bold="1" />
+		<element type="TEXT" id="ID_static_24" text=".1" x="207.6" y="210.45" width="12.95" align="left"  color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_25" text=":1" x="460.95" y="189.05" width="12.95" align="left"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_26" text="G0/0" x="480.6" y="188.05" width="26.95" align="left"  bold="1" />
+		<element type="TEXT" id="ID_static_27" text=".1" x="461.5" y="219" width="12.95" align="left"  color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_28" text=":1" x="208.8" y="188.5" width="12.95" align="left"  color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_29" text="172.16.1.100/24" x="429.6" y="415.85" width="129.75" align="left"  color="#652c8a" bold="1" />
+		
+		<element type="TEXT" id="ID_static_30" text="10.1.10.100/24" x="314" y="360.85" width="129.75" align="left"  color="#652c8a" bold="1" />
+		<element type="TEXT" id="ID_static_34" text="2001:DB8:ACAD:1::100/64" x="314" y="372" width="129.75" align="left" size="9" color="#386B33" bold="1" />
+		<element type="TEXT" id="ID_static_31" text=":1" x="364.3" y="116.85" width="13" align="left"  color="#386B33" bold="1" />
+	<element type="TEXT" id="ID_static_32" text="2001:DB8:ACAD:4::100/64" x="429.6" y="427" width="129.75" align="left"  color="#386B33" bold="1" />
+	
+		<element type="BUBBLE" compId="ID_s1_txt02" x="500.6" y="118" width="172.95" height="80" align="left" tailPosition="9" tailFlip="0" />
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+ 
+ <slide>
+ 	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="TEXT" subType="TITLE" compId="ID_s2_title" color="#FFFFFF"/>
+<element type="ROUTER" textId="ID_router_txt1" x="40" y="56.65" width="600" height="291" />
+<text id="ID_router_txt1"><![CDATA[<pre>R3# <b>show ip access-lists</b>
+Extended IP access list 100
+    deny ip 172.16.1.0 0.0.0.255 any (3 match(es))
+    permit ip any any
+    
+R3# <b>show ip interface Serial 0/0/1 | include access list</b>
+   Outgoing access list is not set
+   <span class="or1"><b>Inbound access list is not set</b></span>
+
+R3# <b>show ip interface gigabitethernet 0/0 | include access list</b>
+   Outgoing access list is not set
+   <span class="or1"><b>Inbound  access list is 100</b></span>
+</pre>]]></text><!---->
+</slide>
+
+
+<slide>
+	<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_tables.jpg" />
+<element type="TEXT" subType="TITLE" compId="ID_s3_title" color="#FFFFFF"/>
+<element type="ROUTER" textId="ID_router_txt2" x="40" y="56.65" width="600" height="291"/>
+
+<text id="ID_router_txt2"><![CDATA[<pre>R3(config)# <b>interface gigabitethernet 0/0</b>
+R3(config-if)# <b>no ip access-group 100 in</b>
+R3(config-if)# <b>interface serial 0/0/1</b>
+R3(config-if)# <b>ip access-group 100 in</b>
+
+</pre>]]></text> <!---->
+</slide>
+	
+	</slide>
+
+
+</data>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.3 Auto-MDIX</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Auto-MDIX</h1>
+        <div>
+          <p>Hasta hace poco, se requerían determinados tipos de cable (cruzado o directo) para conectar dispositivos. Las conexiones switch a switch o switch a router requerían el uso de diferentes cables Ethernet. Mediante el uso de la característica automática de conexión cruzada de interfaz dependiente del medio (auto-MDIX) en una interfaz, se elimina este problema. Al habilitar la característica auto-MDIX, la interfaz detecta automáticamente el tipo de conexión de cable requerido (directo o cruzado) y configura la conexión conforme a esa información. Al conectarse a los switches sin la función auto-MDIX, los cables directos deben utilizarse para conectar a dispositivos como servidores, estaciones de trabajo o routers. Los cables cruzados se deben utilizar para conectarse a otros switches o repetidores. </p>
+          <p></p>
+          <p>Con la característica auto-MDIX habilitada, se puede usar cualquier tipo de cable para conectarse a otros dispositivos, y la interfaz se ajusta de manera automática para proporcionar comunicaciones satisfactorias. En los switches Cisco más modernos, el comando del modo de configuración de interfaz <b>mdix auto</b> habilita la característica. Cuando se usa auto-MDIX en una interfaz, la velocidad y el modo dúplex de la interfaz se deben establecer en <b>auto</b> para que la característica funcione correctamente.</p>
+          <p>Los comandos para habilitar auto-MDIX se muestran en la figura 1.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la característica auto-MDIX está habilitada de manera predeterminada en los switches Catalyst 2960 y Catalyst 3560, pero no está disponible en los switches más antiguos Catalyst 2950 y Catalyst 3550.</p>
+          <p></p>
+          <p>Para examinar la configuración de auto-MDIX de una interfaz específica, use el comando <b>show controllers ethernet-controller</b> con la palabra clave <b>phy</b>. Para limitar los resultados a las líneas que se refieren a auto-MDIX, use el filtro <b>include Auto-MDIX</b>. Como se muestra en la figura 2, el resultado indica On (Habilitada) u Off (Deshabilitada) para la característica.</p>
+          <p></p>
+          <p>Use el verificador de sintaxis de la figura 3 para configurar la interfaz FastEthernet 0/1 de S2 con auto-MDIX.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra una tabla que enumera los comandos utilizados para configurar la función MDIX en una interfaz de puerto de switch.  La CLI comienza en el mode EXEC con privilegios y el primer comando es configure terminal.  Esto pasa al modo de configuración global.  El siguiente comando es interface fast Ethernet cero barra uno, y la línea del switch se transforma en config guion if entre paréntesis.  El siguiente comando es duplex full.  El siguiente comando es speed 100.  El nuevo comando es mdix auto, que establece la opción de mdix como automático. La tabla termina con el comando copy running guión config startup guión config. La figura dos muestra el resultado del comando show controllers Ethernet guión controller f.a. cero barra uno phy barra vertical include auto guión mdix. La figura tres es una actividad interactiva que permite que el estudiante configure una interfaz de puerto de switch con la opción mdix.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

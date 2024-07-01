@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.1 Switching como concepto general en tecnología de redes y telecomunicaciones</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Switching como concepto general en tecnología de redes y telecomunicaciones</h1>
+        <div>
+          <p>El concepto de switching y reenvío de tramas es universal en la tecnología de redes y en las telecomunicaciones. En las redes LAN, WAN y en la red pública de telefonía conmutada (PSTN), se usan diversos tipos de switches. El concepto fundamental de switching hace referencia a un dispositivo que toma una decisión según dos criterios:</p>
+          <p>
+            <ul>
+              <li>Puerto de entrada </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dirección de destino</li>
+            </ul>
+          </p>
+          <p>La decisión sobre cómo un switch reenvía el tráfico se toma en relación con el flujo de ese tráfico. El término “entrada” se usa para describir el lugar de un puerto por donde ingresa una trama al dispositivo. El término “salida” se usa para describir las tramas que salen del dispositivo desde un puerto determinado. </p>
+          <p></p>
+          <p></p>
+          <p>Los switches LAN mantienen una tabla que usan para determinar cómo reenviar el tráfico a través del switch. Haga clic en el botón Reproducir de la ilustración para ver una animación del proceso de switching. En este ejemplo:  </p>
+          <p>
+            <ul>
+              <li>Si un mensaje ingresa al puerto 1 del switch y la dirección de destino es EA, el switch reenvía el tráfico por el puerto 4. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si un mensaje ingresa al puerto 5 del switch y la dirección de destino es EE, el switch reenvía el tráfico por el puerto 1. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si un mensaje ingresa al puerto 3 del switch y la dirección de destino es AB, el switch reenvía el tráfico por el puerto 6. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La única inteligencia que poseen los switches LAN es la capacidad de usar la tabla para reenviar el tráfico según el puerto de entrada y la dirección de destino de un mensaje. Con los switches LAN, hay solamente una tabla de switching principal que describe una asociación estricta entre las direcciones y los puertos; por lo tanto, un mensaje con una dirección de destino determinada siempre sale por el mismo puerto de salida, independientemente del puerto de entrada por el que ingresa. </p>
+          <p></p>
+          <p>Los switches Ethernet de capa 2 reenvían tramas de Ethernet según la dirección MAC de destino de las tramas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es una animación que demuestra cómo un switch de LAN toma decisiones de reenvío según la dirección de destino de una trama entrante.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

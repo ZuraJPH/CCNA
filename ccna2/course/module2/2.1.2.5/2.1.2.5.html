@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.5 Ruta estática flotante</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta estática flotante</h1>
+        <div>
+          <p>Otro tipo de ruta estática es una ruta estática flotante. Las rutas estáticas flotantes son rutas estáticas que se utilizan para proporcionar una ruta de respaldo a una ruta estática o dinámica principal, en el caso de una falla del enlace. La ruta estática flotante se utiliza únicamente cuando la ruta principal no está disponible.</p>
+          <p></p>
+          <p>Para lograrlo, la ruta estática flotante se configura con una distancia administrativa mayor que la ruta principal. La distancia administrativa representa la confiabilidad de una ruta. Si existen varias rutas al destino, el router elegirá la que tenga una menor distancia administrativa. </p>
+          <p></p>
+          <p>Por ejemplo, suponga que un administrador desea crear una ruta estática flotante como respaldo de una ruta descubierta por EIGRP. La ruta estática flotante se debe configurar con una distancia administrativa mayor que el EIGRP. El EIGRP tiene una distancia administrativa de 90. Si la ruta estática flotante se configura con una distancia administrativa de 95, se prefiere la ruta dinámica descubierta por el EIGRP a la ruta estática flotante.  Si se pierde la ruta descubierta por el EIGRP, en su lugar se utiliza la ruta estática flotante. </p>
+          <p></p>
+          <p>En la ilustración, el router de la sucursal generalmente reenvía todo el tráfico al router de la oficina central (HQ) mediante el enlace WAN privado. En este ejemplo, los routers intercambian información de la ruta utilizando el EIGRP. Una ruta estática flotante, con una distancia administrativa de 91 o superior, se puede configurar para que funcione como ruta de respaldo. Si el enlace WAN privado falla y la ruta EIGRP desaparece de la tabla de routing, el router selecciona la ruta estática flotante como la mejor ruta para alcanzar la LAN de la oficina central.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra dos routers y cada uno tiene 2 rutas para conectarse al otro.  Una es a través de la red interna y la otra puede realizarse a través de Internet.  Podría haber una ruta EIGRP primaria entre ellos.  El administrador puede configurar una ruta estática como ruta alternativa en caso de que falle la otra ruta.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

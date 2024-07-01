@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.3 Configuración de una ruta estática IPv6 de siguiente salto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una ruta estática IPv6 de siguiente salto</h1>
+        <div>
+          <p>En una ruta estática de siguiente salto, solo se especifica la dirección IPv6 del siguiente salto. La interfaz de salida se deriva del próximo salto. Por ejemplo, en la figura 1, se configuran tres rutas estáticas de siguiente salto en el R1.</p>
+          <p></p>
+          <p>Al igual que con IPv4, antes de que un router reenvíe un paquete, el proceso de la tabla de routing debe resolver la ruta para determinar qué interfaz de salida se utilizará para reenviar el paquete. El proceso de resolución de la ruta varía en función del tipo de mecanismo de reenvío que utiliza el router. CEF (Cisco Express Forwarding) es el comportamiento predeterminado en la mayoría de las plataformas que ejecutan el IOS 12.0 o posterior.</p>
+          <p></p>
+          <p>En la figura 2, se detalla el proceso básico de resolución de la ruta para el reenvío de paquetes en la tabla de routing para el R1 sin el uso de CEF. Cuando un paquete está destinado a la red 2001:DB8:ACAD:3::/64, el R1:</p>
+          <p></p>
+          <p>1. Busca una coincidencia en la tabla de routing y encuentra que debe reenviar paquetes a la dirección IPv6 2001:DB8:ACAD:4::2 del siguiente salto. Todas las rutas que hacen referencia solo a la dirección IPv6 del siguiente salto y que no hacen referencia a una interfaz de salida deben resolver la dirección IPv6 del siguiente salto con otra ruta de la tabla de routing que tenga una interfaz de salida.</p>
+          <p></p>
+          <p>2. En esta instancia, el R1 debe determinar cómo alcanzar la dirección 2001:DB8:ACAD:4::2. Por lo tanto, busca una coincidencia por segunda vez. En este caso, la dirección IPv6 coincide con la ruta para la red conectada directamente 2001:DB8:ACAD:4::/64 con la interfaz de salida Serial 0/0/0. Esta búsqueda le comunica al proceso de la tabla de routing que este paquete se reenvía fuera de esa interfaz. </p>
+          <p></p>
+          <p>Por lo tanto, en realidad, se requieren dos procesos de búsqueda en la tabla de routing para reenviar cualquier paquete a la red 2001:DB8:ACAD:3::/64. Cuando el router tiene que realizar múltiples búsquedas en la tabla de enrutamiento antes de reenviar un paquete, éste realiza un proceso que se conoce como búsqueda recurrente. </p>
+          <p></p>
+          <p>Una ruta estática IPv6 recursiva es válida (es decir, es candidata para agregarse a la tabla de routing) solo cuando el siguiente salto especificado resuelve a una interfaz de salida válida, ya sea de forma directa o indirecta.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis en las figuras 3 y 4 para configurar las rutas estáticas IPv6 de siguiente salto.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Estas figuras se basan en el diagrama de laboratorio estándar.  R1 con una LAN se conecta a R2 con una LAN que se conecta a R3 con una LAN. La figura 1 muestra la configuración de las rutas estáticas a las redes remotas en el router 1 usando IPv6.  Las rutas estáticas se configuraron usando la dirección del próximo salto. La figura 2 muestra el proceso de búsqueda recursiva para que el router 1 se comunique con la LAN en el router 3.  Este proceso se requiere siempre que se ingrese una ruta estática usando un próximo salto en lugar de una interfaz de salida. La figura tres es una actividad interactiva que permite que el estudiante configure una ruta estática en el router dos, mediante IPv6, para llegar a la LAN del router tres utilizando la dirección de siguiente salto. La figura 4 es una actividad interactiva que permite que el estudiante configure rutas estáticas en el router 3 usando IPv6, apuntando a las redes del otro lado del router 2.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

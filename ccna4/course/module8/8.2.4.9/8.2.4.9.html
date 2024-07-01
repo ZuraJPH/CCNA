@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.9 Paso 7: Verificar las ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.9_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 7: Verificar las ACL</h1>
+        <div>
+          <p>En los routers, puede haber ACL configuradas que prohíben a los protocolos atravesar la interfaz en sentido entrante o saliente.</p>
+          <p></p>
+          <p>Use el comando <b>show ip access-lists</b> para visualizar el contenido de todas las ACL de IPv4 y el comando <b>show ipv6 access-list</b> para visualizar el contenido de todas las ACL de IPv6 configuradas en un router. Como una opción de este comando, se puede visualizar una ACL específica al introducir el nombre o el número de la ACL. Los comandos <b>show ip interfaces</b> y <b>show ipv6 interfaces</b> muestran la información de interfaz IPv4 e IPv6 que indica hay alguna ACL de IP establecida en la interfaz.</p>
+          <p></p>
+          <p>
+            <b>Ejemplo de resolución de problemas</b>
+          </p>
+          <p>Para prevenir los ataques de suplantación de identidad, el administrador de red decidió implementar una ACL para evitar que los dispositivos con la dirección de red de origen 172.16.1.0/24 ingresen a la interfaz de entrada S0/0/1 en el R3, como se muestra en la figura 1. Se debe permitir el resto del tráfico IP.</p>
+          <p></p>
+          <p>Sin embargo, poco después de implementar la ACL, los usuarios en la red 10.1.10.0/24 no podían conectarse a los dispositivos en la red 172.16.1.0/24, incluido el SRV1. Como se ve en la figura 2, el comando <b>show ip access-lists</b> muestra que la ACL está configurada correctamente. El comando <b>show ip interfaces serial 0/0/1</b> indica que la ACL nunca se aplicó a la interfaz entrante del puerto Serial 0/0/1. Una investigación más profunda revela que la ACL se aplicó accidentalmente a la interfaz G0/0, lo que bloqueó todo el tráfico saliente de la red 172.16.1.0/24. </p>
+          <p></p>
+          <p>Una vez ubicada correctamente la ACL IPv4 en la interfaz entrante del puerto Serial 0/0/1, como se muestra en la figura 3, los dispositivos podrán conectarse con éxito al servidor.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la topología estándar de laboratorio de CCNA con la asignación IPV4 de direcciones IPv6.  La llamada del router 3 dice que para prevenir los ataques por suplantación, se deben denegar el ingreso de todos los paquetes con dirección de origen 172.16.1.0/24 al puerto serial 0/0/0. La figura 2 muestra la salida del comando show ip access guion lists del router 3, seguida de la salida del comando show ip interface serial cero barra diagonal cero barra diagonal uno barra vertical include access list, seguida de la salida del comando show ip interface gigabit ethernet cero barra diagonal cero barra diagonal uno barra vertical include access list. La figura 3 muestra los comandos para eliminar la lista de acceso cien de la entrada de gigabit ethernet 0/0 y agregarla a la entrada del puerto serial 0/0/1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

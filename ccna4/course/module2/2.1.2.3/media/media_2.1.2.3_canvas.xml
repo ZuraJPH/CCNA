@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide>
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_2.1.2.3.png" />
+        <element type="TEXT" textId="ID_router_txt1" x="47" y="157" width="600" height="59" />
+        <text id="ID_router_txt1">
+            <![CDATA[<pre>Router(config)<b># interface s0/0/0</b><br>Router(config-if)<b># encapsulation hdlc</b></pre>]]></text>
+        <element type="TEXTBOX" bodyId="ID_txt01" x="35" y="230" width="600" height="80" animated="1" subType="ROLLOVER" />
+        <element type="TEXT" subType="TITLE" compId="ID_title" />
+    </slide>
+</data>

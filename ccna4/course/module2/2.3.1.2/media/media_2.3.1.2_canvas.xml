@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide>
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_2.3.1.2.png" />
+        <element type="TEXT" id="ID_static_1" text="S0/0/0" x="184.75" y="164.65" align="center" width="34.35" />
+        <element type="TEXT" id="ID_static_2" text="S0/0/0" x="462.6" y="168.85" align="center" width="34.35" />
+        <element type="ROUTER" textId="ID_router_txt1" x="28.85" y="218.3" width="290" height="110" />
+        <element type="ROUTER" textId="ID_router_txt2" x="391.95" y="218.3" width="290" height="110" />
+        <element type="TEXT" subType="TITLE" compId="ID_title" />
+    </slide>
+    <text id="ID_router_txt1">
+        <![CDATA[<pre>hostname R1
+!
+interface Serial 0/0/0
+ ip address 10.0.1.1 255.255.255.252
+ ipv6 address 2001:db8:cafe:1::1/64
+<span class="align">encapsulation ppp</span>
+</pre>]]></text>
+    <text id="ID_router_txt2">
+        <![CDATA[<pre>hostname R2
+!
+interface Serial 0/0/0
+ ip address 10.0.1.2 255.255.255.252
+ ipv6 address 2001:db8:cafe:1::2/64
+<span class="align">encapsulation ppp</span>
+</pre>]]></text>
+</data>

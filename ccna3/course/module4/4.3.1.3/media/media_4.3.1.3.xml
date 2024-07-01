@@ -1,0 +1,27 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Pasos para la conmutación por falla del router</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Internet o troncal del ISP]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Router virtual]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Nuevo router de<br>reenvío]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[LAN]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Fallo de enlace o dispositivo: el router de reserva se convierte en el router de envío.]]></text> 
+</component>
+
+</textcomponents>

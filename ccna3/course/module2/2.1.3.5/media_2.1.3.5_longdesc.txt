@@ -1,0 +1,1 @@
+En la figura 1, se muestra la salida de un intento de crear una VLAN extendida. En la figura 2, se muestra la configuración de una VLAN extendida. En la figura 3, se muestra la comprobación de la VLAN. La figura 4 representa un verificador de sintaxis para configurar y comprobar VLAN extendidas.

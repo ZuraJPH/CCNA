@@ -1,0 +1,10 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Ventajas de los protocolos de routing de estado de enlace</b>]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Cada router arma su propio mapa topológico de la red para determinar la ruta más corta.</li><li>Se logra una convergencia más rápida mediante la saturación inmediata con LSP.</li><li>Los LSP se envían solo cuando hay un cambio en la topología y contienen únicamente información relacionada con ese cambio.</li><li>Se utiliza diseño jerárquico al implementar varias áreas.</li></ul></textformat>]]></text> 
+</component>
+
+</textcomponents>

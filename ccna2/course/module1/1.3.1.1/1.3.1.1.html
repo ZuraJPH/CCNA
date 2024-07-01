@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.1.1 La tabla de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La tabla de routing</h1>
+        <div>
+          <p>La tabla de enrutamiento de un router almacena información sobre lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Rutas conectadas directamente:</b> estas rutas provienen de las interfaces activas del router. Los routers agregan una ruta conectada directamente cuando una interfaz se configura con una dirección IP y se activa. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rutas remotas:</b> estas son redes remotas conectadas a otros routers. Las rutas que van a estas redes se pueden configurar de forma estática o aprender de manera dinámica mediante protocolos de routing dinámico. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Concretamente, una tabla de routing es un archivo de datos que se encuentra en la RAM y se utiliza para almacenar información de rutas sobre redes remotas y conectadas directamente. La tabla de routing contiene asociaciones de red o de siguiente salto. Estas asociaciones le indican al router que un destino en particular se puede alcanzar de forma óptima si se envía el paquete hacia un router en particular que representa el siguiente salto en el camino hacia el destino final. La asociación del siguiente salto también puede ser la interfaz de salida hacia el siguiente destino. </p>
+          <p></p>
+          <p>En la ilustración, se identifican las redes conectadas directamente y las redes remotas del router R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran dos routers conectados entre sí a través de un enlace serial WAN.  Cada router tiene dos redes locales conectadas a las interfaces de red LAN.  Cualquier red que se asigne a la interfaz local de un router se considera una red conectada directamente y todas las redes conectadas a otros routers se consideran redes remotas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

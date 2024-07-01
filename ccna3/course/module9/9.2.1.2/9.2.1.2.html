@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.2 Configuración de OSPFv2 multiárea</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de OSPFv2 multiárea</h1>
+        <div>
+          <p>En la figura 1, se muestra la topología OSPF multiárea de referencia. En este ejemplo:</p>
+          <p>
+            <ul>
+              <li>El R1 es un ABR porque tiene interfaces en el área 1 y una interfaz en el área 0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 es un router troncal interno porque todas sus interfaces están en el área 0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R3 es un ABR porque tiene interfaces en el área 2 y una interfaz en el área 0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Esta topología no es un dominio de routing OSPF multiárea típico, pero se utiliza para mostrar un ejemplo de configuración.</p>
+          <p></p>
+          <p>No se requieren comandos especiales para implementar esta red de OSPF de diversas áreas. Un router se convierte en ABR cuando tiene dos instrucciones <b>network</b> en diferentes áreas.</p>
+          <p></p>
+          <p>Como se muestra en la figura 2, se asignó la ID de router 1.1.1.1 al R1. Este ejemplo activa OSPF en las dos interfaces LAN del área 1. La interfaz serial se configura como parte de OSPF de área 0. Dado que R1 tiene interfaces conectadas a dos áreas diferentes, es un ABR.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para configurar OSPF multiárea en el R2 y el R3. En este verificador de sintaxis, en el R2, use la máscara de comodín de la dirección de red de la interfaz. En el R3, use la máscara de comodín 0.0.0.0 para todas las redes.</p>
+          <p></p>
+          <p>Al finalizar la configuración de R2, observe los mensajes informativos acerca de la adyacencia con R1 (1.1.1.1).</p>
+          <p></p>
+          <p>Al finalizar la configuración de R3, observe los mensajes informativos acerca de la adyacencia con R2 (2.2.2.2). Asimismo, observe cómo el esquema de asignación de direcciones IPv4 utilizado para la ID del router facilita la identificación del vecino. </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> las máscaras de comodín inversas utilizadas para configurar el R2 y el R3 difieren a propósito, con el fin de mostrar las dos alternativas para introducir las instrucciones <b>network</b>. El método de interfaz utilizado para R3 es más simple, ya que la máscara de comodín siempre es <b>0.0.0.0</b> y no es necesario calcularla.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una topología de tres routers (R1, R2 y R3) y de tres áreas de OSPF (área 1, área 0 y área 2). La figura dos muestra cómo configurar el router ABR R1 en el área 1 y el área 0. La figura tres muestra la sintaxis necesaria para configurar OSPF multiárea para dos routers (R2 y R3).</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

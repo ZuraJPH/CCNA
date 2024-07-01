@@ -1,0 +1,36 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+  <text><![CDATA[<b>Capa de acceso</b>]]></text> 
+</component>
+<component id="ID_s1_label1">
+  <text><![CDATA[Internet]]></text> 
+</component>
+<component id="ID_s1_label2">
+  <text><![CDATA[Internet]]></text> 
+</component>
+<component id="ID_s1_label3">
+  <text><![CDATA[Capa de núcleo central]]></text> 
+</component>
+<component id="ID_s1_label4">
+  <text><![CDATA[Capa de distribución]]></text> 
+</component>
+<component id="ID_s1_label5">
+  <text><![CDATA[Capa de acceso]]></text> 
+</component>
+
+
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Núcleo contraído</b>]]></text> 
+</component>
+<component id="ID_s2_label1">
+  <text><![CDATA[Internet]]></text> 
+</component>
+<component id="ID_s2_label2">
+  <text><![CDATA[Internet]]></text> 
+</component>
+<component id="ID_s2_label3">
+  <text><![CDATA[Capa de núcleo contraído]]></text> 
+</component>
+
+</textcomponents>

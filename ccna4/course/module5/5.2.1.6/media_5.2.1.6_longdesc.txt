@@ -1,0 +1,1 @@
+La figura 1 muestra partes de la estructura de MIB. La figura 2 muestra un gráfico de uso de CPU de la herramienta de representación gráfica de SNMP. La figura 3 muestra un comando de CLI que sirve para extraer información de la base de datos de MIB. La figura 4 muestra una captura de pantalla del software de navegación de SNMP de Cisco.

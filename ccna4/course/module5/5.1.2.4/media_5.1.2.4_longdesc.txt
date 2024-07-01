@@ -1,0 +1,1 @@
+La figura muestra un switch con un servidor DHCP conectado a un puerto configurado como puerto de confianza.  El switch está conectado a otro switch que tiene una computadora cliente de DHCP en un puerto no confiable y una computadora DHCP dudosa del atacante en un puerto no confiable.  La computadora dudosa no podrá actuar como servidor, ya que está en un puerto no confiable.  

@@ -1,0 +1,1 @@
+La figura muestra los seis pilares del sistema de IoT, con la Internet de las cosas en la parte inferior, los pilares en el medio y las aplicaciones en la parte superior. Los seis pilares son conectividad de red, computación en la niebla, seguridad (cibernética y física), análisis de datos, administración y automatización, y plataforma para la habilitación de aplicaciones.

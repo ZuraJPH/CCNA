@@ -1,0 +1,1 @@
+En la figura se muestran algunos conceptos de DUAL.  Se incluyen las rutas sin bucle, las rutas de respaldo sin bucle, la convergencia rápida y el uso del ancho de banda mínimo.

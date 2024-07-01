@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <slide type="MBAR">
+        <!--<element type="IMAGE" src="bg.png" x="0" y="0" width="680" height="490"/> -->
+        <slide>
+            <element type="ROUTER" textId="ID_router_txt1" x="64" y="121" width="555" height="237.55" />
+            <text id="ID_router_txt1">
+                <![CDATA[<pre>Readonly ROMMON initialized
+ 
+monitor: command "boot" aborted due to user interrupt
+rommon 1 > <b>confreg 0x2142</b>
+rommon 2 > <b>reset</b>
+ 
+System Bootstrap, Version 15.0(1r)M9, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2010 by cisco Systems, Inc.
+&lt;se omitió el resultado&gt;</pre>]]></text>
+            <element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+            <element type="TEXT" compId="ID_s1_txt01" x="74" y="260" width="500" expand="down" align="left" color="#000000" />
+        </slide>
+        <slide>
+            <element type="ROUTER" textId="ID_router_txt2" x="64" y="121" width="555" height="260.05" />
+            <text id="ID_router_txt2">
+                <![CDATA[<pre>Router# <b>copy startup-config running-config</b>
+Destination filename [running-config]?
+ 
+1450 bytes copied in 0.156 secs (9295 bytes/sec)
+Router# <b>conf t</b>
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)# <b>enable secret cisco</b>
+Router(config)# <b>config-register 0x2102</b>
+Router(config)# <b>end</b>
+Router# <b>copy running-config startup-config</b>
+Destination filename [startup-config]?
+Building configuration...
+[OK]
+Router# <b>reload</b></pre>]]></text>
+            <element type="TEXT" subType="TITLE" compId="ID_s2_title" />
+        </slide>
+        <slide>
+            <element type="ACTIVITY" subType="SYNTAX" compId="ID_s1_SC" x="20" y="50" width="630" height="398" resetId="ID_s1_reset" showMeId="ID_s1_showme" showAllId="ID_s1_showall" />
+            <element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+        </slide>
+    </slide>
+</data>

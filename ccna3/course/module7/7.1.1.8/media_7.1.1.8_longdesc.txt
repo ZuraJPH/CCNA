@@ -1,0 +1,1 @@
+En la figura, se muestra una red en la cual el router uno está conectado al ISP y al router dos.  El router dos resumió la ruta uno setenta y dos punto dieciséis punto cero y la envió al router uno.  El router dos también tiene una ruta estática predeterminada al router uno.  En este caso, se utiliza una interfaz null cero para evitar que se produzca un bucle de routing.

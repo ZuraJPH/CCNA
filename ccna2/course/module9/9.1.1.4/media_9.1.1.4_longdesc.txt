@@ -1,0 +1,1 @@
+En la figura se muestra el router dos con una red interna a la izquierda con una PC y una red externa a la derecha con un I.S.P.  Las direcciones local interna, local externa, global interna y global externa están enumeradas para la PC y el servidor web.

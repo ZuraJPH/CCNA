@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.2 Enlace y estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Enlace y estado de enlace</h1>
+        <div>
+          <p>El primer paso en el proceso de routing de estado de enlace es que cada router descubra sus propios enlaces y sus propias redes conectadas directamente. Cuando se configura una interfaz de router con una dirección IP y una máscara de subred, la interfaz se vuelve parte de esa red.  </p>
+          <p></p>
+          <p>Consulte la topología en la Figura 1. A los fines de este análisis, suponga que el R1 se configuró previamente y que tenía plena conectividad a todos los vecinos. Sin embargo, se cortó la alimentación del R1 brevemente y tuvo que reiniciarse. </p>
+          <p></p>
+          <p>Durante el arranque, el R1 carga el archivo de configuración de inicio guardado. A medida que se activan las interfaces configuradas anteriormente, el R1 obtiene información sobre sus propias redes conectadas directamente. Más allá de los protocolos de routing utilizados, dichas redes conectadas directamente ahora constituyen entradas en la tabla de routing. </p>
+          <p></p>
+          <p>Como ocurre con los protocolos vector distancia y las rutas estáticas, la interfaz debe configurarse de manera adecuada con una dirección IPv4 y una máscara de subred, y el enlace debe encontrarse en estado activo antes de que el protocolo de routing de estado de enlace pueda obtener información sobre un enlace. Asimismo, como ocurre con los protocolos vector distancia, la interfaz debe incluirse en una de las instrucciones <b>network</b> de configuración del router para que pueda participar en el proceso de routing de estado de enlace. </p>
+          <p></p>
+          <p>En la figura 1, se muestra el R1 enlazado a cuatro redes conectadas directamente: </p>
+          <p>
+            <ul>
+              <li>FastEthernet 0/0, 10.1.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial 0/0/0, 10.2.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial 0/0/1, 10.3.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial 0/1/0, 10.4.0.0/16 </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en las figuras 2 a 5, la información de estado de enlace incluye lo siguiente:</p>
+          <p>
+            <ul>
+              <li>La dirección IPv4 y la máscara de subred de la interfaz</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El tipo de red, como Ethernet (difusión) o enlace serial punto a punto</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El costo de dicho enlace</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cualquier router vecino en dicho enlace</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la implementación de OSPF de Cisco especifica la métrica de routing OSPF como el costo del enlace sobre la base del ancho de banda de la interfaz de salida. A los fines de este capítulo, utilizamos valores de costo arbitrarios para simplificar la demostración.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio y está conectado a dos de los otros routers.  La figura tiene costos de enlace en cada enlace entre routers.  La figura se centra en el router R1, que tiene tres enlaces WAN seriales activos y una red local en una interfaz Fast Ethernet.  Cada enlace tiene un costo que aparece junto al enlace.  La figura dos muestra información de la interfaz Fast Ethernet del router R1.  Su dirección IP es 10 punto 1 punto 0 punto 1, se encuentra en la red 10 punto 1 punto cero punto cero barra diagonal 16, y tiene un costo de 2. La figura tres muestra la información para la interfaz serial cero barra diagonal cero barra diagonal cero del router R1.  Su dirección IP es 10 punto 2 punto 0 punto 1, se encuentra en la red 10 punto 2 punto cero punto cero barra diagonal 16, tiene un costo de 20 y tiene el router R2 como router vecino. La figura cuatro muestra información para la interfaz serial cero barra diagonal cero barra diagonal cero del router R1.  Su dirección IP es 10 punto 3 punto 0 punto 1, se encuentra en la red 10 punto 3 punto cero punto cero barra diagonal 16, tiene un costo de 5 y tiene el router R3 como router vecino. La figura cinco muestra información para la interfaz serial cero barra diagonal cero barra diagonal cero del router R1.  Su dirección IP es 10 punto 4 punto 0 punto 1, se encuentra en la red 10 punto 4 punto cero punto cero barra diagonal 16, tiene un costo de 20 y tiene el router R4 como router vecino.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+En la figura, se muestra un diagrama de flujo que describe los pasos para solucionar problemas de OSPF.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.5 Reparación de un problema del árbol de expansión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Reparación de un problema del árbol de expansión</h1>
+        <div>
+          <p>Una forma de corregir la falla del árbol de expansión es eliminar de manera manual los enlaces redundantes en la red conmutada, ya sea físicamente o mediante la configuración, hasta eliminar todos los bucles de la topología. Cuando se rompen los bucles, las cargas de tráfico y de CPU deberían disminuir a niveles normales, y la conectividad a los dispositivos debería restaurarse.</p>
+          <p></p>
+          <p>Si bien esta intervención restaura la conectividad a la red, el proceso de resolución de problemas no finaliza aquí. Se eliminó toda la redundancia de la red conmutada, y ahora se deben restaurar los enlaces redundantes.</p>
+          <p></p>
+          <p>Si no se resolvió la causa subyacente de la falla del árbol de expansión, es probable que al restaurar los enlaces redundantes se desate una nueva tormenta de difusión. Antes de restaurar los enlaces redundantes, determine y corrija la causa de la falla del árbol de expansión. Controle atentamente la red para asegurarse de que se haya resuelto el problema.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cuatro switches que están interconectados.  Cada puerto está marcado con su modo, y el switch 2 está marcado como puente raíz.  Se eliminó el bucle, y el árbol de expansión está funcionando nuevamente como se esperaba.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

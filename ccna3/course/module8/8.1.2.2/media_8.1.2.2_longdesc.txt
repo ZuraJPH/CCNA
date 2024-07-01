@@ -1,0 +1,1 @@
+La figura representa una tabla que enumera los cinco tipos de paquetes OSPF.

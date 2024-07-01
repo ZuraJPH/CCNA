@@ -1,0 +1,1 @@
+La figura uno es un diagrama de flujo que muestra los pasos a seguir en el diagnóstico de los problemas de conectividad cuando las VLAN estén en uso. La figura dos muestra el resultado del comando “show mac address guión table interface fast ethernet cero barra uno” en el switch 1 y el resultado de “show interfaces fast ethernet cero barra uno switchport” en el switch 1.

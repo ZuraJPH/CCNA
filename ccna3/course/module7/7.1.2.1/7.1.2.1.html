@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.1 Propagación de una ruta estática predeterminada </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propagación de una ruta estática predeterminada </h1>
+        <div>
+          <p>El uso de una ruta estática a 0.0.0.0/0 como ruta predeterminada no constituye routing dependiente de protocolo. La ruta estática predeterminada "quad zero" se puede utilizar con cualquier protocolo de routing actualmente admitido. En general, la ruta estática predeterminada se configura en el router que tiene una conexión a una red fuera del dominio de routing EIGRP; por ejemplo, a un ISP.</p>
+          <p></p>
+          <p>En la figura 1, el R2 es el router de gateway que conecta el dominio de routing EIGRP a Internet. Cuando se configura la ruta estática predeterminada, es necesario propagar esa ruta en todo el dominio EIGRP, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>Un método para propagar una ruta estática predeterminada dentro del dominio de routing EIGRP es mediante el comando <b>redistribute static</b>. El comando <b>redistribute static</b> le indica a EIGRP que incluya rutas estáticas en sus actualizaciones de EIGRP a otros routers. En la figura 3, se muestra la configuración de la ruta estática predeterminada y el comando <b>redistribute static</b> en el router R2. </p>
+          <p></p>
+          <p>En la figura 4, se verifica que el router R2 recibió la ruta predeterminada y la instaló en su tabla de routing IPv4.</p>
+          <p></p>
+          <p>En la figura 5, el comando <b>show ip protocols</b> verifica que el R2 redistribuye las rutas estáticas dentro del dominio de routing EIGRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar con el enlace extra entre el router uno y el router tres.  El router dos está conectado al ISP. La red interna aparece resaltada, menos el enlace entre el router dos y el ISP.  En la figura dos, se muestra que el router dos tiene una ruta estática predeterminada que apunta al ISP y que la propaga a los routers uno y tres. En la figura tres, se muestra la sintaxis para configurar una ruta estática predeterminada en el router dos y propagarla mediante el proceso de routing de EIGRP. La figura cuatro muestra el resultado que genera el comando "show i. p. route" en el router dos, que demuestra que la ruta estática está presente. La figura cinco muestra el resultado que genera el comando "show i. p. protocols" en el router dos, que demuestra que el EIGRP redistribuye la ruta estática.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

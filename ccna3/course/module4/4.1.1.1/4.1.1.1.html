@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.1 Introducción a la agregación de enlaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a la agregación de enlaces</h1>
+        <div>
+          <p>En la figura, el tráfico proveniente de varios enlaces (normalmente, 100 Mb/s o 1000 Mb/s) se agrega en el switch de acceso y se debe enviar a los switches de distribución. Debido a la agregación de tráfico, debe haber enlaces con un ancho de banda superior entre los switches de acceso y de distribución.</p>
+          <p></p>
+          <p>Tal vez sea posible usar enlaces más rápidos (por ejemplo, de 10 Gb/s) en el enlace agregado entre los switches de capa de acceso y de distribución. Sin embargo, agregar enlaces más rápidos es costoso. Además, como la velocidad aumenta en los enlaces de acceso, ni siquiera el puerto más rápido posible en el enlace agregado es lo suficientemente rápido para agregar el tráfico proveniente de todos los enlaces de acceso.</p>
+          <p></p>
+          <p>También es posible combinar la cantidad de enlaces físicos entre los switches para aumentar la velocidad general de la comunicación switch a switch. Sin embargo, de manera predetermina, STP está habilitado en los dispositivos de capa 2, como los switches. STP bloquea los enlaces redundantes para evitar los bucles de routing. </p>
+          <p></p>
+          <p>Por estos motivos, la mejor solución es implementar una configuración de EtherChannel.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un switch de capa de acceso conectado a dos switches de capa de distribución. Cada conexión se establece mediante dos enlaces entre los switches.  En la figura se muestra que uno de los cuatro enlaces se encuentra actualmente en modo de bloqueo debido al protocolo de árbol de expansión.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

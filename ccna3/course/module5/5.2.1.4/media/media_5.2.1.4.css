@@ -1,0 +1,53 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+	min-height: 390px;
+	min-width:470px;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+
+#ID_txt10 , #ID_txt11 , #ID_txt12 , #ID_txt13 , #ID_txt14 , #ID_txt15{
+	left:10px !important;
+}
+
+#text_64 , #text_62, #text_60 , #text_58 , #text_56 , #text_54, #text_38 , #text_42 , #text_36 , #text_40 ,
+ #text_34 , #text_30 , #text_32, #text_28 , #text_26 , #text_24, #text_22, #text_20 , #text_18, #text_16,
+ #text_50{
+	left: 7px !important;
+}
+
+#image_51{
+	left: -7px !important;
+}
+
+#image_47,#image_45{
+	left: -12px !important;
+}
+
+#image_8{
+	left: -11px !important;
+}
+
+#text_13{
+	left:2px !important;
+}
+
+#image_10{
+	left: -11px !important;
+}
+#image_14{
+	left: -9px !important;
+}
+#image_59,#image_37,#image_41,#image_21{
+	left: -2px !important;
+}
+

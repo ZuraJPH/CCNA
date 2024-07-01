@@ -1,0 +1,41 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Sintaxis del comando <font face="_typewriter">ip route</font>]]></text>
+</component>
+
+  <component id="ID_table">
+  <text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+  	<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="1"> </font></td>
+		</tr>
+	<tr>
+
+		<td colspan='2' bgcolor='#4E4C4D' class="mtable_top"><font size='1' color='#4E4C4D'>.</font></td>
+	</tr>
+	<tr>
+	
+		
+		<td width="110" bgcolor='#666263' valign="top" ><font color='#ffffff' ><b>Parámetro</b></font></td>
+		<td bgcolor='#666263'  valign="top" class="mtitle"><font color='#ffffff' ><b>Descripción</b></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">network-address</font></td>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' ><textformat blockindent="-14">Dirección de la red de destino de la red remota que será agregada a la tabla de routing</textformat></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font color='#393536' face="_typewriter">máscara-subred</font></td>
+		<td bgcolor='#F2F2F2' valign="top"><font color='#393536' ><textformat blockindent="-14"><li>Máscara de subred de la red remota que se <span id="span1">agregará a la tabla de routing.</span></li><li>La máscara de subred se puede modificar para <span id="span1">resumir un grupo de redes.</span></li></textformat></font></td></tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">ip-address</font></td>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' ><textformat blockindent="-14"><li>Se la denomina comúnmente como <span id="span1">dirección IP del router de siguiente salto.</span></li><li>Suele utilizarse para la conexión a un medio <span id="span1">de difusión (es decir, Ethernet).</span></li><li>Por lo general, crea una búsqueda recursiva</li></textformat></font></td>
+	</tr>
+	<tr><td bgcolor='#F2F2F2' valign="top"><font color='#393536' face="_typewriter">interfaz-salida</font></td>
+		<td bgcolor='#F2F2F2' valign="top"><font color='#393536'  ><textformat blockindent="-14"><li>Use la interfaz de salida para reenviar paquetes <span id="span1">a la red de destino.</span></li><li>También se la denomina ruta estática conectada <span id="span1">directamente.</span></li><li>Suele utilizarse para conectarse en una configuración punto <span id="span1">a punto.</span></li></textformat></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">distancia</font></td>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' ><textformat blockindent="-14"><li>Configura una distancia administrativa <span id="span1"> (opcional).</span></li><li>Suele utilizarse para configurar una ruta <span id="span1"> estática flotante.</span></li></textformat></font></td>
+	</tr>
+	</table>]]></text>
+  </component>
+</textcomponents>

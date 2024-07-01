@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.1 Introducción a las VPN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción a las VPN</h1>
+        <div>
+          <p>Las organizaciones necesitan redes seguras, confiables y rentables para interconectar varias redes, por ejemplo, para permitir que las sucursales y los proveedores se conecten a la red de la oficina central de una empresa. Además, con el aumento en la cantidad de trabajadores a distancia, hay una creciente necesidad de las empresas de contar con formas seguras, confiables y rentables para que los empleados que trabajan en oficinas pequeñas y oficinas domésticas (SOHO), y en otras ubicaciones remotas se conecten a los recursos en sitios empresariales.</p>
+          <p></p>
+          <p>Como se muestra en la figura, las organizaciones utilizan redes VPN para crear una conexión de red privada de extremo a extremo a través de redes externas como Internet. El túnel elimina la barrera de distancia y permite que los usuarios remotos accedan a los recursos de red del sitio central. Una VPN es una red privada creada mediante tunneling a través de una red pública, generalmente Internet. Una VPN es un entorno de comunicaciones en el que el acceso se controla de forma estricta para permitir las conexiones de peers dentro de una comunidad de interés definida.</p>
+          <p></p>
+          <p>Las primeras VPN eran exclusivamente túneles IP que no incluían la autenticación o el cifrado de los datos. Por ejemplo, el encapsulamiento de routing genérico (GRE) es un protocolo de túneles desarrollado por Cisco que puede encapsular una amplia variedad de tipos de paquetes de protocolo de capa de red dentro de túneles IP, pero no admite encriptación. Esto crea un enlace virtual punto a punto a los routers Cisco en puntos remotos a través de una internetwork IP.</p>
+          <p></p>
+          <p>En la actualidad, las redes privadas virtuales generalmente se refieren a la implementación segura de VPN con cifrado, como las VPN con IPsec.</p>
+          <p>Para implementar las VPN, se necesita un gateway VPN. El gateway VPN puede ser un router, un firewall o un dispositivo de seguridad adaptable (ASA) de Cisco. Un ASA es un dispositivo de firewall independiente que combina la funcionalidad de firewall, concentrador VPN y prevención de intrusiones en una imagen de software.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra cuatro conexiones VPN diferentes a través de una nube de Internet que vuelve al edificio corporativo principal, el sitio principal. El sitio principal tiene un firewall Cisco ASA que se usa para conectarse a la nube o la red corporativa. El primer tipo de conexión VPN con el sitio principal es un partner de negocios con un router Cisco. El segundo tipo de VPN es una oficina regional con un firewall Cisco ASA. El tercer tipo de conexión es una SOHO con un router Cisco. El último tipo de conexión VPN es una PC portátil de trabajador móvil con Cisco AnyConnect instalado. </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

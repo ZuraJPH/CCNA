@@ -1,0 +1,1 @@
+La figura muestra una red conmutada con múltiples VLAN.  Una PC está conectada a un concentrador conectado a la red conmutada.  Un paquete enviado desde la PC se transmite a cualquier switch que tenga una conexión a la VLAN uno.

@@ -1,0 +1,1 @@
+La figura es un elemento de medios interactivos que presenta una red con la información de direccionamiento documentada y permite que el estudiante ensamble correctamente una entrada de la tabla de routing.

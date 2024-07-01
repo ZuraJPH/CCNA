@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.1 Configuración de PPPoE</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de PPPoE</h1>
+        <div>
+          <p>Con la capacidad de enviar y recibir tramas PPP entre los routers, el ISP puede seguir utilizando el mismo modelo de autenticación que con los módems analógicos e ISDN. Para que todo funcione, los routers cliente e ISP necesitan una configuración adicional, incluida la configuración de PPP, como se muestra en la figura 1. Para comprender la configuración, tenga en cuenta lo siguiente:</p>
+          <p></p>
+          <p>1. Para crear un túnel PPP, la configuración utiliza una interfaz de marcador. Una interfaz de marcador es una interfaz virtual. La configuración de PPPoE se ubica en la interfaz del marcador, no en la interfaz física. La interfaz de marcador se crea con el comando <b>interface dialer </b><i>número </i>. El cliente puede configurar una dirección IP estática, pero es más probable que el ISP le asigne automáticamente una dirección IP pública.</p>
+          <p></p>
+          <p>2. En general, la configuración de CHAP de PPP define la autenticación unidireccional; por lo tanto, el ISP autentica al cliente. El nombre de host y la contraseña configurados en el router del cliente deben coincidir con el nombre de host y la contraseña configurados en el router ISP. Observe en la ilustración que el nombre de usuario y la contraseña de CHAP coinciden con la configuración del router ISP.</p>
+          <p></p>
+          <p>3. La interfaz Ethernet física que se conecta al módem DSL se habilita con el comando <b>pppoe enable</b>, que habilita PPPoE y enlaza la interfaz física a la interfaz del marcador. La interfaz de marcador se enlaza a la interfaz Ethernet con los comandos <b>dialer pool</b> y <b>pppoe-client</b>, con el mismo número. El número de la interfaz del marcador no tiene que coincidir con el número de conjunto del marcador.</p>
+          <p></p>
+          <p>4. Para admitir los encabezados PPPoE, la unidad máxima de transmisión (MTU) se debe establecer en 1492, en lugar del valor predeterminado 1500.</p>
+          <p>Utilice el verificador de sintaxis en la figura 2 para practicar la configuración de PPPoE.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un ejemplo de configuración de PPPoE para el router de un cliente. La primera sección etiquetada 1 es PPP e IP en marcador con los siguientes comandos: interface dialer 2, encapsulation ppp, ip address negotiated. La segunda sección etiquetada 2 es autenticación solo entrante con los siguientes comandos: ppp chap hostname Fred, ppp chap password Barney. Una flecha se extiende desde estos dos comandos hasta un cuadro que contiene las siguientes palabras: Router ISP, usuario: Fred, contraseña: Barney, estado: Pagado por completo. Los siguientes comandos de configuración son los siguientes: ip mtu 1492, dialer pool 1, no shutdown, interface gigabitethernet0/1, no ip address, pppoe enable, pppoe-client dial-pool-number 1, no shutdown. Un cuadro etiquetado 3 muestra las flechas que señalan al número 1 en el comando dialer pool 1 y al número 1 en el comando pppoe-client dial-pool-number 1. Las palabras dentro del cuadro número 3 son las siguientes: El conjunto de marcadores debe coincidir. El elemento 4 se encuentra junto al comando ip mtu 1492.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

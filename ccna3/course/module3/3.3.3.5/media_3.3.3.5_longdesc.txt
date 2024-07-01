@@ -1,0 +1,1 @@
+La figura muestra cuatro switches que están interconectados.  Cada puerto está marcado con su modo, y el switch 2 está marcado como puente raíz.  Se eliminó el bucle, y el árbol de expansión está funcionando nuevamente como se esperaba.

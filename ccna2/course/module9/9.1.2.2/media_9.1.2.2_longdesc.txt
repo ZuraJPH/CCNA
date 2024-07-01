@@ -1,0 +1,1 @@
+En la figura se muestra una red con tres computadoras. La red está conectada a un router NAT, que está conectado a Internet.  Hay una tabla que muestra un rango de direcciones públicas externas disponibles que pueden asignarse a direcciones privadas internas.  Esto demuestra NAT dinámica.

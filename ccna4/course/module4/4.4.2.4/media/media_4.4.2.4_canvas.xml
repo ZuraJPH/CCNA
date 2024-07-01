@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+			
+			<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+			<element type="IMAGE" src="media_4.4.2.4.png" x="0" y="0" width="680" height="490"/>
+<element type="TEXT" id="ID_static_1" text="192.168.10.10" x="114" y="317" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_2" text="192.168.10.0/24" x="68" y="169" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_3" text="S0/0/0" x="205" y="92" align="center" width="36"/>
+<element type="TEXT" id="ID_static_4" text="192.168.11.0/24" x="258" y="218" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_5" text="192.168.11.10" x="210" y="317" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_6" text="192.168.30.12" x="340" y="317" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_7" text="192.168.31.12" x="432" y="316" align="center" width="75" bold="1"/>
+<element type="TEXT" id="ID_static_8" text="192.168.30.0/24" x="290" y="168" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_9" text="192.168.31.0/24" x="480" y="217" align="center" width="86" bold="1"/>
+<element type="TEXT" id="ID_static_10" text="S0/0/1" x="407" y="92" align="center" width="34" />
+<element type="TEXT" id="ID_static_11" text="G0/0" x="155" y="141" align="center" width="26" />
+<element type="TEXT" id="ID_static_12" text="S0/0/0" x="249" y="64" align="center" width="36" />
+<element type="TEXT" id="ID_static_13" text="S0/0/1" x="348" y="62" align="center" width="34" />
+<element type="TEXT" id="ID_static_14" text="G0/1" x="243" y="134" align="center" width="24" />
+<element type="TEXT" id="ID_static_15" text="G0/1" x="465" y="132" align="center" width="24" />
+<element type="TEXT" id="ID_static_16" text="G0/0" x="379" y="133" align="center" width="26" />
+			<element type="ROUTER" textId="ID_s1_txt01" x="40" y="370" width="600" height="100"/>	
+</slide>
+<text id="ID_s1_txt01"><![CDATA[<pre>R3# <b>show access-lists 140</b>
+Extended IP access list 140 
+   10 deny tcp host 192.168.30.1 any eq telnet 
+   20 permit ip any any (5 match(es))</pre>]]></text>
+	<!-- <table width="432" border="0" cellspacing="0" cellpadding="0"> <tr> <td colspan="2">R3# <strong>show access-lists 140</strong></td> </tr> <tr> <td colspan="2">Extended IP access list 140</td> </tr> <tr> <td width="51">&nbsp;</td> <td width="275">10 deny tcp host 192.168.30.1 any eq telnet</td> </tr> <tr> <td>&nbsp;</td> <td>20 permit ip any any (5 match(es))</td> </tr></table>
+]]></text> -->
+</data>

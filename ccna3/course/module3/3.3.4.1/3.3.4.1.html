@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.1 Conceptos de apilamiento de switches</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Conceptos de apilamiento de switches</h1>
+        <div>
+          <p>Una pila de switches puede contener hasta nueve switches Catalyst 3750 conectados a través de sus puertos StackWise. Uno de los switches controla la operación de la pila y se denomina switch maestro de la pila. El switch maestro de la pila y otros switches de la pila son miembros de la pila. Los protocolos de capa 2 y capa 3 presentan la pila de switch completa como una sola entidad para la red. La Figura 1 muestra la placa de circuito de cuatro switches Catalyst 3750 y cómo están conectados en una pila.</p>
+          <p></p>
+          <p>Cada miembro se identifica mediante su propio número de miembro de la pila. Todos los miembros se pueden elegir como maestros. Si el maestro deja de estar disponible, existe un proceso automático para escoger un nuevo switch maestro entre los miembros de la pila restantes. Uno de los factores es el valor de prioridad de miembro de la pila. El switch con el valor de prioridad más alto de miembro de la pila se convierte en maestro.</p>
+          <p></p>
+          <p>Uno de los beneficios principales de una pila de switch es que usted administra la pila mediante una única dirección IP. La dirección IP es una configuración a nivel del sistema y no es específica para el maestro u otro miembro. Puede administrar la pila a través de la misma dirección IP incluso si se quita el maestro o cualquier otro miembro de la pila.</p>
+          <p></p>
+          <p>El maestro contiene archivos guardados y de configuración de ejecución para la pila. Por lo tanto, hay solo un archivo de configuración a administrar y mantener. Los archivos de configuración incluyen las configuraciones del nivel de sistema para la pila y las configuraciones de nivel de interfaz para cada miembro. Cada miembro tiene una copia actual de estos archivos como respaldo.</p>
+          <p></p>
+          <p>El switch se administra como switch único incluidas las contraseñas, las redes VLAN y las interfaces. La figura 2 muestra las interfaces en una pila de cuatro switches de 52 puertos. Observe que el primer número después del tipo de interfaz es el número de miembro de la pila.</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

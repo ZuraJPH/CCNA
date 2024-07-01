@@ -1,0 +1,1 @@
+La figura muestra dos routers y cada uno tiene 2 rutas para conectarse al otro.  Una ruta es a través de la red interna y la otra puede realizarse a través de Internet.  Podría haber una ruta EIGRP primaria entre ellos.  El administrador puede configurar una ruta estática como ruta alternativa en caso de que falle la otra ruta.

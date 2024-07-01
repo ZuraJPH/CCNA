@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.4.2 Modos de interfaz negociados</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modos de interfaz negociados</h1>
+        <div>
+          <p>Las interfaces Ethernet de los switches de las series Catalyst 2960 y Catalyst 3560 admiten diversos modos de enlace troncal con la ayuda de DTP:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>switchport mode access</b>: coloca la interfaz (puerto de acceso) en modo de enlace no troncal permanente y negocia para convertir el enlace en uno no troncal. La interfaz se convierte en una interfaz no troncal, independientemente de si la interfaz vecina es una interfaz troncal.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>switchport mode access</b>: hace que la interfaz pueda convertir el enlace en un enlace troncal. La interfaz se convierte en una interfaz troncal si la interfaz vecina se establece en modo de enlace troncal o deseado. El modo de switchport predeterminado para todas las interfaces Ethernet es <b>dynamic auto</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>switchport mode dynamic desirable</b>: hace que la interfaz intente convertir el enlace en un enlace troncal de forma activa. La interfaz se convierte en una interfaz troncal si la interfaz vecina se establece en modo de enlace troncal, deseado o dinámico automático. Este es el modo de switchport predeterminado en los switches antiguos, como los switches de las series Catalyst 2950 y 3550.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>switchport mode trunk</b>: coloca la interfaz en modo de enlace troncal permanente y negocia para convertir el enlace en un enlace troncal. La interfaz se convierte en una interfaz de enlace troncal, incluso si la interfaz vecina no es una interfaz de enlace troncal.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>switchport nonegotiate</b>: evita que la interfaz genere tramas DTP. Puede utilizar este comando solo cuando el modo de switchport de la interfaz es <b>access</b> o <b>trunk</b>. Para establecer un enlace troncal, debe configurar manualmente la interfaz vecina como interfaz troncal.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 1, se muestran los resultados de las opciones de configuración de DTP en extremos opuestos de un enlace troncal conectado a los puertos de un switch Catalyst 2960.</p>
+          <p></p>
+          <p>Configure los enlaces troncales estáticamente siempre que sea posible. El modo de DTP predeterminado depende de la versión del software IOS de Cisco y de la plataforma. Para determinar el modo de DTP actual, emita el comando <b>show dtp interface</b>, como se muestra en la figura 2.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para determinar el modo de DTP en la interfaz F0/1.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> por lo general, se recomienda que la interfaz se establezca en <b>trunk</b> y <b>nonegotiate</b> cuando se requiere un enlace troncal. Se debe inhabilitar DTP en los enlaces cuando no se deben usar enlaces troncales.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra una tabla que incluye el modo resultante de enlace basado en la configuración del puerto.  Los modos de puerto que se incluyen son dinámico automático, dinámico deseado, de enlace troncal y de acceso. En la figura dos, muestra la salida del comando "show dtp interface f cero barra diagonal uno". La figura tres es una actividad interactiva que permite que el estudiante practique utilizar el comando "show dtp interface f cero barra diagonal uno".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

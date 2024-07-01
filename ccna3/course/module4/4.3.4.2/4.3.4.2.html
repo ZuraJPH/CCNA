@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.4.2 Comandos de depuración del HSRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comandos de depuración del HSRP </h1>
+        <div>
+          <p>Los comandos de depuración del HSRP le permiten ver el funcionamiento del HSRP cuando un router falla o está administrativamente apagado. Los comandos debug del protocolo HSRP disponibles pueden verse ingresando el comando <b>debug standby ?</b>, como se muestra en la figura 1. La topología se muestra en la figura 2.</p>
+          <p></p>
+          <p>Use <b>debug standby packets</b> para ver la recepción y el envío de paquetes de saludo cada 3 segundos, como se muestra en la figura 3 para el R2. Los routers HSRP supervisan estos paquetes de saludo e iniciarán un cambio de estado después de 10 segundos si no reciben saludos de un vecino de HSRP.</p>
+          <p></p>
+          <p>El HSRP se comporta de manera diferente, dependiendo de si el router activo falla o si es apagado manualmente por el administrador. Utilice <b>debug standby terse</b>, como se muestra en la figura 4, para ver los eventos del HSRP mientras el R1 se apaga y el R2 asume la función del router HSRP activo para la red 172.16.10.0/24.</p>
+          <p></p>
+          <p>La figura 5 muestra qué sucede en el R2 cuando el R1 se vuelve a encender. Debido a que el R1 se configura con el comando <b>standby 1 preempt</b>, inicia un pulso y asume el rol de router activo, como se destaca a continuación. El resto de la salida muestra que el R2 escucha activamente los mensajes de saludo durante el estado Speak hasta que confirma que el R1 es el nuevo router activo y el R2 es el nuevo router de reserva.</p>
+          <p></p>
+          <p>Si la interfaz G0/1 del R1 está administrativamente apagada, el R1 envía un mensaje Init que indica a todos los routers HSRP en el enlace que está renunciando a su rol de router activo. Como se muestra en la figura 6, 10 segundos después el R2 asume el rol de router HSRP activo.</p>
+          <p></p>
+          <p>Observe que el R2 inicia un temporizador de espera pasivo para el R1. Después de 3 minutos, este temporizador de espera pasivo expira y el R1 (172.16.10.2) se destruye, lo que significa que se elimina de la base de datos del HSRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

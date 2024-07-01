@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.2 Aplicación de ACL estándar IPv4 a las interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Aplicación de ACL estándar IPv4 a las interfaces</h1>
+        <div>
+          <p>Después de que se configura una ACL estándar IPv4, se vincula a una interfaz mediante el comando <b> ip access-group</b> en el modo de configuración de interfaz:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip access-group</b>
+            </span>
+            <span class="cmd"> { </span>
+            <span class="cmd">
+              <i>access-list-number</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>access-list-name</i>
+            </span>
+            <span class="cmd"> } { </span>
+            <span class="cmd">
+              <b>in</b>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <b>out</b>
+            </span>
+            <span class="cmd"> }</span>
+          </p>
+          <p></p>
+          <p>Para eliminar una ACL de una interfaz, primero introduzca el comando <b>no ip access-group</b> en la interfaz y, a continuación, introduzca el comando global <b>no access-list</b> para eliminar la ACL completa.</p>
+          <p></p>
+          <p>En la figura 1, se enumeran los pasos y la sintaxis para configurar y aplicar una ACL estándar numerada en un router.</p>
+          <p></p>
+          <p>En la figura 2, se muestra un ejemplo de una ACL diseñada para permitir una sola red.</p>
+          <p></p>
+          <p>Esta ACL solo permite que se reenvíe mediante la interfaz S0/0/0 el tráfico de la red de origen 192.168.10.0. El tráfico proveniente de redes distintas de la red 192.168.10.0 se bloquea.</p>
+          <p></p>
+          <p>En la primera línea, se identifica la ACL como lista de acceso 1. Esta lista permite el tráfico que coincide con los parámetros seleccionados. En este caso, la dirección IPv4 y la máscara wildcard que identifican a la red de origen son 192.168.10.0 0.0.0.255. Recuerde que existe una denegación implícita de todas las instrucciones que equivalen a agregar la línea<b> access-list 1 deny 0.0.0.0 255.255.255.255</b> o <b> access-list deny any</b> al final de la ACL.</p>
+          <p></p>
+          <p>El comando de configuración de interfaz <b>ip access-group 1 out</b> vincula la ACL 1 a la interfaz Serial 0/0/0 como filtro de salida.</p>
+          <p></p>
+          <p>Por lo tanto, la ACL 1 solo permite que los hosts de la red 192.168.10.0/24 salgan por el router R1. Esta lista deniega cualquier otra red, incluida la red 192.168.11.0</p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> En la figura uno se muestra la aplicación de un A.C.L a una interfaz. La primera línea crea un A.C.L. El siguiente comando se traslada a la interfaz en la que se colocará el A.C.L. El comando es interface serial cero barra cero barra cero. Una vez en el modo de configuración de interfaz el comando que se utiliza para aplicar una A.C.L a la interfaz es i.p. access guión group 1 out. La figura dos muestra una topología que representa los pasos y los comandos que se indican en la figura uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

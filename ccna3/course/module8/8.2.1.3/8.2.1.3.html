@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.3 ID de los routers</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ID de los routers</h1>
+        <div>
+          <p>Para participar en un dominio OSPF, cada router requiere una ID de router. La ID del router puede estar definida por un administrador o puede ser asignada en forma automática por el router. El router con OSPF habilitado usa la ID del router para realizar lo siguiente: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Identificar el router de manera exclusiva:</b> otros routers usan la ID del router para identificar de forma exclusiva cada router dentro del dominio OSPF y todos los paquetes que se originan en ellos. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Participar en la elección del DR:</b> en un entorno LAN multiacceso, la elección del DR se lleva a cabo durante el establecimiento inicial de la red OSPF. Cuando se activan los enlaces OSPF, el dispositivo de routing configurado con la prioridad más alta se elige como DR. Si se parte de la suposición de que no hay ninguna prioridad configurada o de que hay un empate, se elige como DR el router con la mayor ID de router. El dispositivo de routing con la segunda ID de router más alta se elige como BDR. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>¿Pero de qué manera el router determina la ID de router? Como se muestra en la ilustración, los routers Cisco obtienen la ID del router sobre la base de uno de tres criterios, en el siguiente orden de preferencia:</p>
+          <p>
+            <ul>
+              <li>La ID del router se configura explícitamente con el comando OSPF<b> router-id</b><i> rid </i>del modo de configuración del router. El valor<i> rid </i>es cualquier valor de 32 bits expresado como dirección IPv4. Este es el método recomendado para asignar una ID de router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si la ID del router no se configura explícitamente, el router elige la dirección IPv4 más alta de cualquiera de las interfaces loopback configuradas. Esta constituye la segunda mejor opción para asignar una ID de router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si no se configuró ninguna interfaz loopback, el router elige la dirección IPv4 activa más alta de cualquiera de sus interfaces físicas. Este es el método menos recomendado, ya que hace que a los administradores les resulte más difícil diferenciar entre routers específicos.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si el router usa la dirección IPv4 más alta para la ID del router, la interfaz no necesita tener OSPF habilitado. Esto significa que la dirección de interfaz no necesita estar incluida en uno de los comandos OSPF<span class="cmd"><i></i></span><i>network </i>para que el router utilice esa dirección IPv4 como ID de router. El único requisito es que la interfaz esté activa y en estado up (activo).</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: La ID del router parece una dirección IPv4, pero no es enrutable y, por lo tanto, no se incluye en la tabla de routing a menos que el proceso de routing de OSPF elija una interfaz (física o de loopback) que esté definida en forma adecuada por un comando <b>network</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura representa un diagrama de flujo que detalla el orden de precedencia de ID del router.  La primera pregunta se hace para saber si la ID del router está configurada explícitamente.  Si la respuesta es afirmativa, entonces esa es la ID del router.  Si la respuesta es negativa, la siguiente pregunta es si hay una interfaz de loopback configurada.  Si la respuesta es afirmativa, entonces esa es la ID del router.  Si la respuesta es negativa, esa ID del router es la dirección IP activa más alta configurada.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

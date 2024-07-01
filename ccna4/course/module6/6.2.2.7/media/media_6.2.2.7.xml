@@ -1,0 +1,23 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Varios límites de confianza</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[Terminales]]></text>
+	</component>
+
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Acceso]]></text>
+	</component>
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[Distribución]]></text>
+	</component>
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[Núcleo]]></text>
+	</component>
+	<component id='ID_s1_txt05'>
+		<text><![CDATA[Agregación de WAN]]></text>
+	</component>
+	<component id='ID_s1_txt06'>
+		<text><![CDATA[Límite de confianza]]></text>
+	</component><!-- end slide 1 --></textcomponents>

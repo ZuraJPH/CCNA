@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.3.1 Intervalos de saludo y tiempo muerto de OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Intervalos de saludo y tiempo muerto de OSPF</h1>
+        <div>
+          <p>Los intervalos de saludo y tiempo muerto de OSPF pueden configurarse por interfaz. Los intervalos de OSPF deben coincidir, de lo contrario, no se crea una adyacencia de vecino.</p>
+          <p></p>
+          <p>Para verificar los intervalos de la interfaz OSPFv2 configurados actualmente, use el comando <b>show ip ospf interface</b>, como se muestra en la figura 1. Los intervalos de saludo y tiempo muerto de la interfaz Serial 0/0/0 están establecidos en los valores predeterminados: 10 segundos y 40 segundos, respectivamente. </p>
+          <p></p>
+          <p>En la figura 2, se presenta un ejemplo de uso de una técnica de filtrado para mostrar los intervalos de OSPFv2 de la interfaz serial 0/0/0 con OSPF habilitado en el R1. </p>
+          <p></p>
+          <p>En la figura 3, se usa el comando <b>show ip ospf neighbor</b> en el R1 para verificar que el R1 es adyacente al R2 y el R3. Observe en la salida que el tiempo muerto cuenta regresivamente a partir de los 40 segundos. De manera predeterminada, este valor se actualiza cada 10 segundos cuando R1 recibe un saludo del vecino.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la salida del comando "show ip ospf interface serial cero barra diagonal cero barra diagonal cero".  Se resaltan los temporizadores. En la figura uno, se muestra la salida del comando "show ip ospf interface serial cero barra diagonal cero barra diagonal cero barra vertical include timer".  Se resaltan los temporizadores de saludo y de tiempo muerto. En la figura tres, se muestra la salida del comando "show ip ospf neighbors".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

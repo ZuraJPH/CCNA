@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.6 Verificación del resumen automático: tabla de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación del resumen automático: tabla de routing</h1>
+        <div>
+          <p>Examine la tabla de routing para verificar que se haya recibido la ruta resumida.</p>
+          <p></p>
+          <p>En la parte superior de la figura 1, se muestra la tabla de routing del R3 antes de que se habilite el ⁪resumen automático. En la parte inferior de la figura, se muestra la misma tabla de routing después de que se habilita el resumen automático mediante el comando <b>auto-summary</b>. Observe que con el resumen automático habilitado, la tabla de routing del R3 ahora solo contiene la dirección de red de clase B 172.16.0.0/16. El sucesor o el router de siguiente salto es el R1, a través de 192.168.10.5.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> el resumen automático solo es una opción con EIGRP para IPv4. El direccionamiento con clase no existe en IPv6, por lo tanto, el resumen automático no es necesario con EIGRP para IPv6.</p>
+          <p></p>
+          <p>Un problema relacionado con el resumen automático de ruta es que una dirección resumida también anuncia redes que no están disponibles en el router de anuncio. Por ejemplo, el R1 anuncia la dirección resumida 172.16.0.0/16, pero en realidad solo está conectado con las subredes 172.16.1.0/24, 172.16.2.0/24 y 172.16.3.0/30. Por lo tanto, el R1 puede recibir paquetes entrantes hacia destinos que no existen. Esto podría ser un problema si el R1 tuviera un gateway predeterminado configurado, ya que reenviaría una solicitud a un destino que no existe.</p>
+          <p></p>
+          <p>El protocolo EIGRP evita este problema al agregar una ruta de red para la ruta de red con clase a la tabla de routing. Esta entrada de red dirige los paquetes a una interfaz Null. La interfaz Null0, comúnmente conocida como "el limbo electrónico", es una interfaz virtual del IOS que constituye una ruta hacia ninguna parte. Los paquetes que vinculan una ruta con una interfaz de salida Null0 se descartan. </p>
+          <p></p>
+          <p>En la figura 2, se muestra la tabla de routing del R1. Observe que las dos entradas resaltadas son rutas resumidas para 172.16.0.0/16 y 192.168.10.0/24 a la interfaz Null0. Si el R1 recibe un paquete que tiene como destino una red anunciada por la máscara con clase pero dicha red no existe, descartará el paquete y enviará un mensaje de notificación al origen. </p>
+          <p></p>
+          <p>EIGRP para IPv4 automáticamente incluye un resumen de rutas Null0 cuando se producen las siguientes condiciones:</p>
+          <p>
+            <ul>
+              <li>El ⁪resumen automático está habilitado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Por lo menos existe una subred que se aprendió a través de EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Hay dos o más comandos <b>network</b> del modo de configuración del router EIGRP.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el resultado generado por el comando "show i. p. route e. i. g. r. p." en el router tres.  El resultado se muestra una vez con el ⁪resumen automático habilitado y una vez con dicha función deshabilitada.  En la figura dos, se muestra el resultado que genera el comando "show i. p. route" en el router uno, que demuestra el uso de la interfaz null cero en EIGRP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

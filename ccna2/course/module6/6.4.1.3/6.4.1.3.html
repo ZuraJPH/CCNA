@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.1.3 Capítulo 6: VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Capítulo 6: VLAN</h1>
+        <div>
+          <p>En este capítulo, se presentaron las redes VLAN. Las VLAN se basan en conexiones lógicas, en lugar de conexiones físicas. Las VLAN son un mecanismo para permitir que los administradores de red creen dominios de difusión lógicos que puedan extenderse a través de un único switch o varios switches, independientemente de la cercanía física. Esta función es útil para reducir el tamaño de los dominios de difusión o para permitir la agrupación lógica de grupos o usuarios sin la necesidad de que estén ubicados físicamente en el mismo lugar.</p>
+          <p></p>
+          <p>Existen varios tipos de VLAN: </p>
+          <p>
+            <ul>
+              <li>VLAN predeterminada</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN de administración</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN nativa</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN de datos/de usuarios</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN de voz</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La <span class="cmd"><b></b></span><b>switchport access vlan </b><span class="cmd"><b></b></span>se utiliza para crear una VLAN en un switch. Después de crear una VLAN, el siguiente paso es asignar puertos a la VLAN. La <span class="cmd"><b></b></span><b>show vlan brief </b><span class="cmd"><b></b></span>muestra el tipo de asignación y pertenencia de VLAN para todos los puertos de switch. Cada VLAN debe corresponder a una subred IP única.</p>
+          <p></p>
+          <p>Utililce el <span class="cmd"><b></b></span><b>show vlan </b><span class="cmd"><b></b></span>para verificar si el puerto pertenece a la VLAN esperada. Si el puerto está asignado a la VLAN incorrecta, utilice el comando <span class="cmd"><b></b></span><b>switchport access vlan </b><span class="cmd"><b></b></span>para corregir la pertenencia de VLAN. Utililce el <span class="cmd"><b></b></span>comando <b>show mac address-table</b> para revisar qué direcciones se obtuvieron en un puerto determinado del switch y a qué VLAN se asignó ese puerto.</p>
+          <p></p>
+          <p>Un puerto de un switch es un puerto de acceso o un puerto de enlace troncal. Los puertos de acceso transportan el tráfico de una VLAN específica asignada al puerto. Un puerto de enlace troncal pertenece a todas las VLAN de manera predeterminada; por lo tanto, transporta el tráfico para todas las VLAN.</p>
+          <p></p>
+          <p>Los enlaces troncales de VLAN facilitan la comunicación entre switches mediante el transporte de tráfico relacionado con varias VLAN. El etiquetado de tramas IEEE 802.1Q permite diferenciar tramas de Ethernet asociadas a distintas VLAN a medida que atraviesan enlaces troncales en común. Para habilitar los enlaces troncales, utilice el comando <span class="cmd"><b></b></span><b>switchport mode trunk</b><span class="cmd"><b></b></span>. Utililce el <span class="cmd"><b></b></span><b>show interfaces trunk</b><span class="cmd"><b></b></span>para verificar si se estableció un enlace troncal entre los switches.</p>
+          <p></p>
+          <p>La negociación de enlaces troncales entre dispositivos de red la maneja el protocolo de enlace troncal dinámico (DTP), que solo funciona de punto a punto. DTP es un protocolo exclusivo de Cisco que se habilita de manera automática en los switches de las series Catalyst 2960 y Catalyst 3560.</p>
+          <p></p>
+          <p>Para volver un switch a la configuración predeterminada de fábrica con una VLAN predeterminada, utilice los comandos <b></b><b>delete flash:vlan.dat </b><span class="cmd"><b></b></span>y <span class="cmd"><b></b></span><b>erase startup-config.</b></p>
+          <p></p>
+          <p>En este capítulo también se examinó la configuración, verificación y resolución de problemas de las VLAN y los enlaces troncales mediante la utilización de la CLI de Cisco IOS.</p>
+          <p></p>
+          <p>El enrutamiento inter VLAN es el proceso de tráfico de enrutamiento entre diferentes VLAN, mediante un router dedicado o un switch multicapa. El enrutamiento inter VLAN facilita la comunicación entre los dispositivos aislados por los límites de la VLAN.</p>
+          <p></p>
+          <p>El routing entre VLAN antiguo dependía de que un puerto de router físico estuviera disponible para cada VLAN configurada. Esto fue reemplazado por la topología de router-on-a-stick, que depende de un router externo con subinterfaces de enlace troncal a un switch de capa 2. Con la opción de router-on-a-stick, se deben configurar en cada subinterfaz lógica el direccionamiento IP y la información de VLAN adecuados, y se debe configurar una encapsulación de enlace troncal que coincida con la interfaz troncal del switch.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura es la introducción de capítulo estándar y un gráfico de resumen.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

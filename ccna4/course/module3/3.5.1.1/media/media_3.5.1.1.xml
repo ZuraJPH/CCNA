@@ -1,0 +1,54 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_title">
+        <text>
+            <![CDATA[<b>Protocolos de routing IGP y EGP</b>]]></text>
+    </component>
+    <component id='ID_txt01'>
+        <text>
+            <![CDATA[ <b>AS empresa</b><br> 65002<br> (OSPF)]]></text>
+    </component>
+    <component id='ID_txt02'>
+        <text>
+            <![CDATA[ <b>AS 65003</b><br> ISP-3 (<br>EIGRP)]]></text>
+    </component>
+    <component id='ID_txt03'>
+        <text>
+            <![CDATA[ <b>AS proveedor</b><br> de contenido 65005<br> (OSPF)]]></text>
+    </component>
+    <component id='ID_txt04'>
+        <text>
+            <![CDATA[ <b>AS 65004</b><br> ISP-2<br> (OSPF)]]></text>
+    </component>
+    <component id='ID_txt05'>
+        <text>
+            <![CDATA[ <b>AS 65001</b><br> ISP-1 (<br>EIGRP)]]></text>
+    </component>
+    <component id='ID_txt06'>
+        <text>
+            <![CDATA[<b>BGP</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt07'>
+        <text>
+            <![CDATA[<b>BGP</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt08'>
+        <text>
+            <![CDATA[<b>BGP</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt09'>
+        <text>
+            <![CDATA[<b>BGP</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt010'>
+        <text>
+            <![CDATA[<b>BGP</b>]]>
+        </text>
+    </component>
+    <component id='ID_txt011'>
+        <text>
+            <![CDATA[<b>BGP</b>]]>
+        </text>
+    </component><!-- end slide 1 --></textcomponents>

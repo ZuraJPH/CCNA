@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.3.1 Configuración de parámetros básicos del router</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de parámetros básicos del router</h1>
+        <div>
+          <p>Los routers y switches Cisco tienen muchas similitudes. Admiten sistemas operativos modales y estructuras de comandos similares, así como muchos de los mismos comandos. Además, los pasos de configuración inicial son similares para ambos dispositivos. </p>
+          <p></p>
+          <p>Por ejemplo, las siguientes tareas de configuración se deben realizar en todo momento:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Asignar un nombre al dispositivo</b>: (Figura 1) para distinguirlo de otros routers.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Asegurar acceso de administración</b>: (Figura 2) asegura EXEC privilegiado, EXEC de usuario y acceso remoto.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Configurar un aviso</b>: (Figura 3) para proporcionar notificaciones legales de acceso no autorizado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Guarde siempre los cambios en un router como se muestra en la Figura 4 y verifique la configuración básica y las operaciones del router. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para configurar el router R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figura uno muestra el comando utilizado para configurar un nombre de host en un router.  Los comandos empiezan con el modo EXEC del usuario.  El primer comando es configure terminal y este comando pasa al modo de configuración global.  El siguiente comando es hostname R1.  El router ahora tiene configurado un nombre de host. La figura dos configura el router para que exija contraseñas para el acceso.  Los comandos comienzan en el modo de configuración global.  El primer comando establece una contraseña al acceder al modo de habilitación en el router, y es enable secret class.  La palabra clave secret le indica al router que cifre la contraseña en el archivo de configuración, y la contraseña utilizada es class.  Luego pasa al modo de configuración de consola con el comando line console 0.  Una vez en el modo de configuración de consola, el comando para establecer una contraseña es password cisco, y cisco es la contraseña real.  El siguiente comando indica al router que se requiere la contraseña para iniciar sesión y el comando que se usa para ello es login.  Luego pasa al modo de configuración de líneas terminales con el comando line v.t.y. cero espacio 4.  Esto restringe el acceso telnet en cinco conexiones.  Una vez en el modo de configuración de línea terminal, el comando para establecer una contraseña es password cisco, y cisco es la contraseña real.  El siguiente comando indica al router que se requiere la contraseña para iniciar sesión y el comando que se usa para ello es login.  El siguiente comando le indica al router que cifre todas las contraseñas en el archivo de configuración.  El comando se ejecuta desde el modo de configuración global y es service password guión encryption. La figura tres configura un mensaje de aviso que el router muestra cuando un usuario inicia sesión. El comando se ejecuta desde el modo de configuración global y es banner motd símbolo de dólar Authorized Access Only! símbolo de dólar (Solo acceso autorizado).  El símbolo de dólar se utiliza para que el router sepa dónde comienza y dónde finaliza el mensaje de aviso.  El símbolo puede ser cualquier símbolo, pero no puede estar en el mensaje. La figura cuatro muestra el comando que se utiliza para guardar el archivo de configuración de RAM a N V RAM.  El comando se ejecuta desde el modo EXEC privilegiado y es copy running guión configuration startup guión configuration. La figura cinco es una actividad interactiva que permite que el estudiante configure un nombre de host, restrinja el acceso mediante contraseñas y configure un aviso en un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

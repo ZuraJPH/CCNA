@@ -1,0 +1,24 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Verifique la configuración de CHAP</b>]]></text>
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Verifique el nombre de usuario de CHAP</b>]]></text>
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Mensaje de error en la autenticación</b>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt01">
+		<text><![CDATA[&lt;se omitió el resultado&gt;]]></text>
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[&lt;Se omitió el resultado&gt;]]></text>
+	</component>
+	
+	
+	<component id='ID_txt01'>
+		<text><![CDATA[<b>Cliente</b>]]></text>
+	</component>
+	<component id='ID_txt02'>
+		<text><![CDATA[<b>ISP</b>]]></text>
+	</component><!-- end slide 1 --></textcomponents>

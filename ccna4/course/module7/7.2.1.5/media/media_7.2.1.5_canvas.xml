@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+		<element type="IMAGE" src="../../../common/images/page_backgrounds/bg_conceptual.jpg" x="0" y="0" width="680" height="490" />
+		<element type="IMAGE" src="media_7.2.1.5.png" x="0" y="0" width="690" height="500" />
+		<element type="TEXT" compId="ID_txt01" x="281" y="87" width="116" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_txt02" x="439" y="201" width="116" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_txt03" x="377" y="388" width="116" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_txt04" x="184" y="388" width="116" expand="up+down" align="center" />
+<element type="TEXT" compId="ID_txt05" x="124" y="201" width="116" expand="up+down" align="center" />
+<element type="TEXT" subType="TITLE" compId="ID_title"/>
+<element type="TEXT" compId="ID_txt00" x="277" y="244" width="121" expand="up+down" align="center" color="#ffffff" />
+	</slide>
+</data>

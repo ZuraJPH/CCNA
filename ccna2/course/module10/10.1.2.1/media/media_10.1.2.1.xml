@@ -1,0 +1,13 @@
+﻿<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Operación del ⁪protocolo de detección de capa de enlace</b>]]></text>
+	</component>
+    <component id="ID_txt01">
+		<text><![CDATA[Anuncios del LLDP]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Los dispositivos Cisco admiten el envío de anuncios del LLDP neutrales con respecto al proveedor a los dispositivos conectados.]]></text>
+	</component>
+	
+</textcomponents>

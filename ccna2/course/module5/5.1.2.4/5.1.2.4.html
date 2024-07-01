@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.4 Verificación de la configuración de puertos de un switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificación de la configuración de puertos de un switch</h1>
+        <div>
+          <p>En la figura 1, se describen algunas de las opciones del comando <b>show</b> que son útiles para verificar las características configurables comunes de un switch.</p>
+          <p></p>
+          <p>En la figura 2, se muestra un resultado abreviado del comando <b>show running-config</b>. Use este comando para verificar que el switch se haya configurado correctamente. Como se observa en el resultado de S1, se muestra cierta información importante:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Interfaz Fast Ethernet 0/18 configurada con la VLAN 99 de administración</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN 99 configurada con la dirección IPv4 172.17.99.11 255.255.255.0</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Gateway predeterminado establecido en 172.17.99.1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El comando <b>show interfaces</b> es otro comando de uso frecuente que muestra información estadística y de estado sobre las interfaces de red del switch. El comando <b>show interfaces</b> se usa habitualmente cuando se configuran y se controlan los dispositivos de red. </p>
+          <p></p>
+          <p>En la figura 3, se muestra el resultado del comando <b>show interfaces fastEthernet 0/18</b>. En la primera línea de la ilustración, se indica que la interfaz FastEthernet 0/18 está “up/up”, lo que significa que está en funcionamiento. Más abajo en el resultado, se muestra que el modo dúplex es full (completo) y la velocidad es de 100 Mb/s.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la tabla que enumera los comandos show útiles para el uso en los switches.  El primer comando enumerado es show interfaces, que se utiliza para mostrar el estado y la configuración de las interfaces.  El siguiente comando enumerado es show startup guión config, que se utiliza para mostrar el archivo de configuración de inicio.  El siguiente comando enumerado es show running guión configuration, que se utiliza para mostrar la configuración en ejecución. El siguiente comando enumerado es show flash, que mostrará el sistema de archivos flash.  El siguiente comando enumerado es show version, que mostrará el estado del hardware y el software.  El siguiente comando enumerado es show history, que mostrará el historial de los comandos introducidos.  El siguiente comando enumerado es show ip interface guión id, que muestra la información de IP para la interfaz específica. El último comando enumerado es show mac guión address guión table, que mostrará la tabla de direcciones MAC V. La figura dos muestra el resultado del comando show running guión config.  El resultado se abrevia para mostrar información sobre el puerto de switch cero barra 18, incluida la asignación de LAN virtual para esa interfaz.  El resultado también muestra la dirección IP de la LAN 99 virtual que se configura en el switch y el gateway predeterminado. La figura tres muestra el resultado del comando show interfaces fast Ethernet cero barra 18.  Este resultado proporciona detalles sobre la interfaz específica, incluida la configuración de velocidad y duplex, el funcionamiento actual y la dirección IP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<textcomponents><!-- SLIDE 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Comandos de depuración del HSRP</b>]]></text>
+	</component>
+	
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[ ]]></text>
+	</component><!-- SLIDE 2 --><component id="ID_s2_title">
+		<text><![CDATA[<b>Topología del protocolo HSRP</b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt01'>
+		<text><![CDATA[Router virtual]]></text>
+	</component>
+
+	<component id='ID_s2_txt02'>
+		<text><![CDATA[Dirección IPv4 virtual<br/>172.16.10.1<br/>Dirección MAC virtual<br/>0000.0C07.AC01]]></text>
+	</component><!-- SLIDE 3 --><component id="ID_s3_title">
+		<text><![CDATA[<b>Ver los paquetes de saludo del protocolo HSRP en el router de reserva</b>]]></text>
+	</component><!-- SLIDE 4 --><component id="ID_s4_title">
+		<text><![CDATA[<b>El R1 falla y el R2 se elige como router HSRP activo</b>]]></text>
+	</component>
+	<component id="ID_s4_txt01">
+		<text><![CDATA[&lt;se omitió el resultado&gt;]]></text>
+	</component><!-- SLIDE 5 --><component id="ID_s5_title">
+		<text><![CDATA[<b>El R1 inicia un pulso para convertirse en el router HSRP activo</b>]]></text>
+	</component><!-- SLIDE 6 --><component id="ID_s6_title">
+		<text><![CDATA[<b>El R1 está administrativamente apagado y renuncia a ser el router HSRP activo</b>]]></text>
+	</component>
+
+</textcomponents>

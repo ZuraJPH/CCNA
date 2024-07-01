@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.2.4 Solución de problemas de ACL IPv4. Ejemplo 4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Solución de problemas de ACL IPv4. Ejemplo 4</h1>
+        <div>
+          <p>En la ilustración, el host 192.168.30.12 puede conectarse a 192.168.31.12 mediante Telnet, pero la política de la empresa establece que esta conexión no debe permitirse. Los resultados del comando <b>show access-lists 140</b> indican que se encontró una coincidencia para la instrucción permit.</p>
+          <p></p>
+          <p>
+            <b>Solución:</b> el host 192.168.30.12 puede utilizar Telnet para conectarse a 192.168.31.12 porque no hay reglas que denieguen el host 192.168.30.12 o su red como origen. La instrucción 10 de la lista de acceso 140 deniega la interfaz del router por la que el tráfico ingresa a este. La dirección host IPv4 en la instrucción 10 debería ser 192.168.30.12.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra otro ejemplo de error de ACL. y usa la misma topología de referencia.  Esta figura muestra la salida del siguiente comando ejecutado en R-3, show access guion lists 140. Se muestra la lista de acceso número 140.  Esta ACL en particular tiene 2 instrucciones.  La primera línea es 10 deny tcp 192 punto 168 punto 30 punto 1 any eq telnet.  La segunda línea es 20 permit ip any any, y ha tenido 5 coincidencias.  El ACL debe denegar la dirección de host, que es 192 punto 168 punto 30 punto 12 barra 24, pero está bloqueando la dirección 192 punto 168 punto 30 punto 1.  El error aquí se debe a que la dirección de origen es incorrecta.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

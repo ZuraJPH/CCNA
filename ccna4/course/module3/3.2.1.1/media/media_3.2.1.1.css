@@ -1,0 +1,12 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#ID_s1_caption,#ID_s2_caption{
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 2px #888888;
+	padding: 7px 7px 7px 7px;
+	border-radius: 2px;
+}

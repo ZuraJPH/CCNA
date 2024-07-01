@@ -1,0 +1,116 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<font size="17"><b>Actividad: Identificar las características del plano de control y el plano de datos</b></font>]]></text>
+</component>
+
+<component id="MCTable_title">
+	<text><![CDATA[Característica del plano]]></text>
+</component>
+
+<component id='ID_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_instr_body'>
+	<text><![CDATA[Marque el campo correspondiente junto a cada característica del plano para indicar sus respuestas.]]></text>
+</component><!-- buttons --><component id="ID_s1_CHECK">
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id="ID_s1_RESET">
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Number of rows in the table--><component id="txt_numrows">
+	<text><![CDATA[9]]></text>
+</component><!--Number of columns for the answers in the table. Do not count the question column--><component id="txt_numcols">
+	<text><![CDATA[2]]></text>
+</component><!--Answer column headers--><component id="txt_col1">
+	<text><![CDATA[<b>Plano de control</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Plano de datos</b>]]></text>
+</component><!--Question text - blockindent code moves the text away from the left edge a bit--><!--Question text - If questions are numbered, use blockindent for hanging indents--><component id="txt_q1">
+	<text><![CDATA[Generalmente, la estructura de switch que conecta los diversos puertos de red a un dispositivo]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[La información que se envía aquí es procesada por la CPU]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Contiene las tablas de los vecinos de protocolos de routing y tablas de topología]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Los cerebros de un dispositivo]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[Se utiliza para reenviar los flujos de tráfico]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[Toma decisiones de reenvío]]></text>
+</component>
+
+<component id="txt_q7">
+	<text><![CDATA[La información de este plano es generalmente procesada por un procesador especial]]></text>
+</component>
+
+<component id="txt_q8">
+	<text><![CDATA[También se denomina plano de reenvío]]></text>
+</component>
+
+<component id="txt_q9">
+	<text><![CDATA[Contiene tablas de routing de IPv4 e IPv6]]></text>
+</component><!--Answers - Give the column number(s), column numbering start with 1 not 0--><!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a7">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a8">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a9">
+	<text><![CDATA[1]]></text>
+</component><!-- Correct Feedback --><component id="ID_titleCorrect">
+	<text><![CDATA[<font size="17">Correcto</font>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Ha identificado correctamente las características del plano de control y del plano de datos]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_titleIncorrect">
+	<text><![CDATA[<font size="17">Incorrecto</font>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[No ha identificado correctamente las características del plano de control y del plano de datos Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+</textcomponents>

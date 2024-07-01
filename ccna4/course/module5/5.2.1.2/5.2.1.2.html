@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.2 Funcionamiento de SNMP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de SNMP</h1>
+        <div>
+          <p>Los agentes SNMP que residen en los dispositivos administrados recopilan y almacenan información sobre los dispositivos y su funcionamiento. El agente almacena esta información localmente en la MIB. El administrador de SNMP luego usa el agente SNMP para tener acceso a la información dentro de la MIB.</p>
+          <p></p>
+          <p>Existen dos solicitudes principales de administrador de SNMP: get y set. NMS usa una solicitud get para solicitar datos al dispositivo. NMS usa una solicitud "set" para cambiar las variables de configuración en el dispositivo de agente. Una solicitud set también puede iniciar acciones dentro de un dispositivo. Por ejemplo, una solicitud set puede hacer que un router se reinicie, que envíe o que reciba un archivo de configuración. El administrador de SNMP utiliza las acciones de las solicitudes get y set para realizar las operaciones descritas en la tabla de la figura 1.</p>
+          <p></p>
+          <p>El agente SNMP responde a las solicitudes del administrador de SNMP de la siguiente manera:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Obtener una variable de MIB</b>: el agente de SNMP ejecuta esta función en respuesta a GetRequest-PDU del administrador de red. El agente obtiene el valor de la variable de MIB solicitada y responde al administrador de red con dicho valor.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Definir una variable de MIB</b>: el agente de SNMP ejecuta esta función en respuesta a SetRequest-PDU del administrador de red. El agente de SNMP cambia el valor de la variable de MIB al valor especificado por el administrador de red. La respuesta del agente SNMP a una solicitud set incluye la nueva configuración en el dispositivo. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra el uso de una solicitud get de SNMP para determinar si la interfaz G0/0 está up/up (activa/activa).  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla de operaciones de SNMP junto con sus descripciones. La figura 2 muestra un trabajador que envía un paquete de SNMP GET para verificar la variable de MIB en la interfaz G0/0 del router R1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.3 Resumen automático </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Resumen automático </h1>
+        <div>
+          <p>El ⁪resumen automático de EIGRP puede crear problemas de routing de EIGRP.</p>
+          <p></p>
+          <p>En la figura 1, se muestra una topología de red diferente de la que se usó en este capítulo. No hay ninguna conexión entre el R1 y el R3. La LAN del R1 tiene la dirección de red 10.10.10.0/24, y la LAN del R3 es 10.20.20.0/24. </p>
+          <p></p>
+          <p>El R1 y el R3 tienen las interfaces seriales y las LAN habilitadas para EIGRP, como se muestra en la figura 2. Ambos routers realizan el resumen automático de EIGRP.</p>
+          <p></p>
+          <p>EIGRP para IPv4 puede configurarse para que resuma automáticamente las rutas en límites con clase. Si hay redes no contiguas, el resumen automático provoca un routing incongruente.</p>
+          <p></p>
+          <p>En la figura 3, la tabla de routing del R2 muestra que no recibe rutas individuales para las subredes 10.10.10.0/24 y 10.20.20.0/24. El R1 y el R3 resumen automáticamente esas subredes al límite con clase 10.0.0.0/8 cuando envían paquetes de actualización de EIGRP al R2. El resultado es que el R2 tiene dos rutas de igual costo a 10.0.0.0/8 en la tabla de routing, lo que puede ocasionar routing impreciso y pérdida de paquetes. Según se use balanceo de carga por paquete, por destino o CEF, es posible que los paquetes se reenvíen por la interfaz correcta o no.</p>
+          <p></p>
+          <p>En la figura 4, con el comando <b>show ip protocols</b> se verifica que se lleva a cabo el resumen automático en el R1 y el R3. Observe que ambos routers resumen la red 10.0.0.0/8 con la misma métrica.</p>
+          <p></p>
+          <p>El resumen automático está deshabilitado de manera predeterminada en IOS 12.2(33) y IOS 15. Para habilitar el ⁪resumen automático, utilice el comando <b>auto-summary</b> del modo de configuración del router EIGRP.</p>
+          <p></p>
+          <p>En las versiones anteriores a IOS 12.2(33) e IOS 15, el resumen automático estaba habilitado de manera predeterminada. Para deshabilitar el ⁪resumen automático, introduzca el comando <b>no auto-summary</b> en el modo de configuración del router EIGRP.</p>
+          <p></p>
+          <p>El problema de routing incongruente se debe al hecho de que la función de resumen automático está habilitada. Para corregir este problema, deshabilite la función en el R1 y el R3:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>router eigrp 1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>no auto-summary</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">---</span>
+          </p>
+          <p>
+            <span class="cmd">R3(config)# </span>
+            <span class="cmd">
+              <b>router eigrp 1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R3(config-router)# </span>
+            <span class="cmd">
+              <b>no auto-summary</b>
+            </span>
+          </p>
+          <p></p>
+          <p>En la figura 5, se muestra la tabla de routing en el R2 una vez deshabilitado el ⁪resumen automático en el R1 y el R3. Observe que el R2 ahora recibe las subredes individuales 10.10.10.0/24 y 10.20.20.0/24 del R1 y el R3, respectivamente. Se restauró el routing preciso y la conectividad en ambas subredes.</p>
+          <p></p>
+          <p>
+            <b>EIGRP para IPv6</b>
+          </p>
+          <p></p>
+          <p>En IPv6 no existen las redes con clase, por lo tanto, EIGRP para IPv6 no admite el resumen automático. Toda el resumen debe realizarse mediante rutas resumidas manuales EIGRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra el diagrama de laboratorio estándar sin el enlace extra entre el router uno y el router tres.  Tanto el router uno como el router tres tienen una LAN en la red diez y la función de ⁪resumen automático activada para EIGRP. Por lo tanto, ambos anuncian la red diez en el límite con clase. En la figura dos, se muestra la sintaxis para configurar EIGRP en los routers uno y tres, incluido el resumen automático. En la figura tres, se muestra el resultado que genera el comando "show i. p. route" en el router dos.  Esto demuestra que el router dos tiene dos rutas a la red diez. En la figura cuatro, se muestra el resultado que genera el comando "show i. p. protocols" en el router tres.  La red diez aparece resaltada para mostrar que se resume. En la figura cinco, se muestra el resultado del comando "show i. p. route" en el router dos después de que se deshabilitó el ⁪resumen automático en los routers uno y tres.  Ahora se enumeran las redes diez individuales en lugar del resumen.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

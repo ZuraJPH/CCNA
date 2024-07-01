@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.4.1.1 Conclusión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Conclusión</h1>
+        <div>
+          <p>El protocolo VTP (VLAN Trunking Protocol, protocolo de enlace troncal de VLAN) reduce la administración de VLAN en una red conmutada. Un switch configurado como el servidor VTP sincroniza la información de VLAN y la distribuye mediante enlaces troncales a switches con VTP habilitado en todo el dominio.</p>
+          <p></p>
+          <p>VTP opera en tres modos distintos: Servidor, Cliente y Transparente.</p>
+          <p></p>
+          <p>El número de revisión de la configuración se utiliza cuando se determina si un switch VTP debe mantener su base de datos de VLAN o actualizarla. Un switch sobrescribirá su base de datos de VLAN existente si recibe una actualización de VTP de otro switch en el mismo dominio con un número de revisión de la configuración más alto. Por lo tanto, cuando un switch se agrega a un dominio VTP, debe tener la configuración de VTP predeterminada o un número de revisión de la configuración más bajo que el servidor VTP.</p>
+          <p></p>
+          <p>La solución de problemas de VTP también puede incluir resolver errores causados por versiones de VTP incompatibles y nombres de dominio o contraseñas configurados incorrectamente. </p>
+          <p></p>
+          <p>El protocolo DTP (Dynamic Trunking Protocol, protocolo de enlace troncal dinámico), que funciona punto a punto entre dispositivos de red, administra la negociación de enlaces troncales. DTP es un protocolo exclusivo de Cisco que se habilita de manera automática en los switches de las series Catalyst 2960 y Catalyst 3560. Una mejor práctica general cuando se requiere un enlace troncal consiste en configurar la interfaz en <b>trunk</b> y <b>nonegotiate</b>. Se debe inhabilitar DTP en los enlaces cuando no se deben usar enlaces troncales. </p>
+          <p></p>
+          <p>Al abordar la solución de problemas del protocolo DTP, se pueden encontrar problemas relacionados con discrepancias de modo de enlace troncal, VLAN permitidas en un enlace troncal y discrepancias de VLAN nativas. </p>
+          <p></p>
+          <p>El switching de capa 3 que utiliza interfaces virtuales de switch (Switch Virtual Interface, SVI) es un método de routing entre VLAN que puede configurarse en los switches de la serie Catalyst 2960. Una SVI con la asignación de direcciones IP correcta se configura para cada VLAN y proporciona procesamiento de capa 3 para los paquetes que provienen de todos los puertos de switch asociados a dicha VLAN o que se dirigen a ella.</p>
+          <p></p>
+          <p>Otro método de routing entre VLAN de capa 3 consiste en el uso de puertos enrutados.  Un puerto enrutado es un puerto físico que funciona de manera similar a una interfaz en un router. Los puertos enrutados generalmente se configuran entre los switches de las capas de núcleo y de distribución.</p>
+          <p></p>
+          <p>La solución de problemas de routing entre VLAN con un router o con un switch de capa 3 es similar. Los errores comunes suelen estar relacionados con las configuraciones de VLAN, enlace troncal, la interfaz de capa 3 y las direcciones IP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Figura gráfico de resumen.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

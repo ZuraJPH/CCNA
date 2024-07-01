@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.5 Configuración de router-on-a-stick: verificación de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de router-on-a-stick: verificación de routing</h1>
+        <div>
+          <p>Después de configurar el router y el switch para llevar a cabo routing entre VLAN, el siguiente paso es verificar la conectividad de host a host. El acceso a los dispositivos en las VLAN remotas puede probarse con el comando <span class="cmd"><b></b></span><b>ping</b><span class="cmd"><b></b></span>. </p>
+          <p></p>
+          <p>En el ejemplo que se muestra en la figura, se inician un <span class="cmd"><b></b></span><b>ping </b><span class="cmd"><b></b></span>y un <span class="cmd"><b></b></span><b>tracert </b><span class="cmd"><b></b></span>desde PC1 a la dirección de destino de la PC3.</p>
+          <p></p>
+          <p>
+            <b>Prueba de ping</b>
+          </p>
+          <p></p>
+          <p>La <span class="cmd"><b></b></span><b>ping </b><span class="cmd"><b></b></span>envía una solicitud de eco ICMP a la dirección de destino. Cuando un host recibe una solicitud de eco del ICMP, éste responde con una respuesta de eco del ICMP para confirmar que recibió dicha solicitud. La <span class="cmd"><b></b></span><b>ping </b><span class="cmd"><b></b></span>calcula el tiempo transcurrido, para lo cual utiliza la diferencia de tiempo entre el momento en que se envió la solicitud de eco y el momento en que se recibió la respuesta de eco. El tiempo transcurrido se utiliza para determinar la latencia de la conexión. Al recibir una respuesta con éxito, confirma que existe una ruta entre el dispositivo emisor y el dispositivo receptor.</p>
+          <p></p>
+          <p>
+            <b>Prueba de tracert</b>
+          </p>
+          <p></p>
+          <p>Tracert es una utilidad práctica usada para confirmar la ruta enrutada tomada entre dos dispositivos. En los sistemas UNIX, la utilidad se especifica como <span class="cmd"><b></b></span><b>traceroute</b><b>. </b>Tracert también utiliza el ICMP para determinar la ruta tomada, pero utiliza las solicitudes de eco del ICMP con valores de tiempo de vida específicos definidos en la trama. </p>
+          <p></p>
+          <p>El valor de tiempo de vida determina con exactitud la cantidad de saltos del router que el eco del ICMP puede alcanzar. La primera solicitud de eco del ICMP se envía con un valor de tiempo de vida configurado para expirar en el primer router en la ruta hacia el dispositivo de destino. </p>
+          <p></p>
+          <p>Cuando se excede el tiempo de espera de la solicitud de eco ICMP en la primera ruta, se reenvía un mensaje ICMP desde el router hasta el dispositivo de origen. El dispositivo registra la respuesta desde el router y procede a enviar otra solicitud de eco del ICMP, pero esta vez con un valor de tiempo de vida mayor. Esto permite a la solicitud de eco del ICMP atravesar el primer router y llegar al segundo dispositivo en la ruta hacia el destino final. El proceso se repite de manera recursiva hasta que, finalmente, se envía la solicitud de eco ICMP hacia el dispositivo de destino final. Después de que se emite el comando <span class="cmd"><b></b></span><b>tracert </b><span class="cmd"><b></b></span>termina de ejecutarse, se muestra una lista de las interfaces de entrada del router alcanzadas por la solicitud de eco ICMP en camino al destino.</p>
+          <p></p>
+          <p>En el ejemplo, la utilidad <span class="cmd"><b></b></span><b>ping </b><span class="cmd"><b></b></span>pudo enviar una solicitud de eco ICMP a la dirección IP de la PC3. Además, la utilidad <span class="cmd"><b></b></span><b>tracert </b><span class="cmd"><b></b></span>confirma que el camino a la PC3 es a través de la dirección IP de la subinterfaz 172.17.10.1 del router R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los resultados de una prueba de ping a un host remoto desde la perspectiva de una PC en una VLAN y subred separadas a través de una topología de routing entre VLAN de router-on-a-stick.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

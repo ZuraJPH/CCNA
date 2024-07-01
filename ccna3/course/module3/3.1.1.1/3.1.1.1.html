@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.1 Redundancia en las capas 1 y 2 del modelo OSI</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Redundancia en las capas 1 y 2 del modelo OSI</h1>
+        <div>
+          <p>El diseño de red jerárquico de tres niveles, que utiliza las capas de núcleo, de distribución y de acceso con redundancia, intenta eliminar un único punto de falla en la red. Varias rutas conectadas por cables entre switches proporcionan redundancia física en una red conmutada. Esto mejora la confiabilidad y la disponibilidad de la red. Tener rutas físicas alternativas para que los datos atraviesen la red permite que los usuarios accedan a los recursos de red, a pesar de las interrupciones de la ruta.</p>
+          <p></p>
+          <p>Haga clic en el botón <b>Reproducir</b> de la figura 1 para ver una animación acerca de la redundancia. </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La PC1 se comunica con la PC4 a través de una topología de red redundante.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Cuando se interrumpe el enlace de red entre el S1 y el S2, el protocolo de árbol de expansión (STP) ajusta automáticamente la ruta entre la PC1 y la PC4 para compensar la interrupción. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Cuando se restaura la conexión de red entre el S1 y el S2, STP vuelve a ajustar la ruta para enrutar el tráfico directamente del S2 al S1 para llegar a la PC4.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para la mayoría de las organizaciones, la disponibilidad de la red es fundamental para cumplir con las necesidades empresariales; por lo tanto, el diseño de la infraestructura de red es un elemento crucial para empresas. La redundancia de rutas proporciona la disponibilidad necesaria de varios servicios de red, pues elimina la posibilidad de que exista un único punto de falla.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> la redundancia en la capa 1 del modelo OSI se representa mediante el uso de varios enlaces y dispositivos, pero se necesita más que solo la planificación física para completar la configuración de la red. Para que la redundancia funcione de forma sistemática, también se deben utilizar protocolos de capa 2 del modelo OSI, como STP.</p>
+          <p></p>
+          <p>La redundancia es una parte importante del diseño jerárquico para evitar que se interrumpan la entrega de los servicios de red a los usuarios. Las redes redundantes requieren la adición de rutas físicas, pero la redundancia lógica también debe formar parte del diseño. Sin embargo, las rutas redundantes en una red Ethernet conmutada pueden causar bucles físicos y lógicos en la capa 2. </p>
+          <p></p>
+          <p>Los bucles físicos en la capa 2 pueden ocurrir como consecuencia del funcionamiento normal de los switches, en especial, del proceso de descubrimiento y reenvío. Cuando existen varias rutas entre dos dispositivos en una red y no se implementan protocolos de árbol de expansión en los switches, ocurre un bucle en la capa 2. Un bucle en la capa 2 puede provocar tres problemas principales, como se indica en la figura 2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 es una animación que muestra tres switches: S1, S2 y S3.  Cada switch está conectado a los otros dos con un enlace troncal.  El S2 tiene conectadas la PC1, PC2 y PC3.  El S1 tiene conectada la PC4.  La PC1 se comunica con la PC4 a través del enlace troncal de S2 a S1.  El paquete viaja desde la PC1 a S2, a S1, a la PC4, y vuelve.  Luego, el enlace troncal entre S1 y S2 se desconecta.  El S2 detecta la interrupción y redirige los paquetes posteriores al S3. La figura 2 es una tabla que contiene las siguientes consideraciones que se deben tener en cuenta al implementar redundancia de LAN: la inestabilidad de la base de datos MAC, las tormentas de difusión y la transmisión de varias tramas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

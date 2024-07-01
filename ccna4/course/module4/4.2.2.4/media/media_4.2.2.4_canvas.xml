@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide>
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+        <element type="IMAGE" x="0" y="0" width="680" height="490" src="media_4.2.2.4.png" />
+        <element type="TEXT" id="ID_static_1" text="S0/0/0" x="255.45" y="78.5" align="center" width="35.85" />
+            <element type="TEXT" id="ID_static_2" text="S0/1/0" x="358.05" y="58.5" align="center" width="35.85" />
+            <element type="TEXT" id="ID_static_3" text="S0/0/1" x="358.65" y="79.3" align="center" width="34.05" />
+            <element type="TEXT" id="ID_static_4" text="S0/0/1" x="400.3" y="107.55" align="center" width="34.05" />
+            <element type="TEXT" id="ID_static_5" text="S0/0/0" x="221.65" y="98.3" align="center" width="35.85" />
+            <element type="TEXT" id="ID_static_6" text="G0/0" x="190.55" y="147.25" align="center" width="25.65" />
+            <element type="TEXT" id="ID_static_7" text="G0/1" x="270.55" y="147.25" align="center" width="23.85" />
+            <element type="TEXT" id="ID_static_8" text="192.168.11.0/24" x="298.2" y="218.35" align="center" width="85.55" />
+            <element type="TEXT" id="ID_static_9" text="192.168.10.0/24" x="100.75" y="218.35" align="center" width="85.55" />
+            <element type="TEXT" id="ID_static_10" text="10.1.1.1/30" x="277.45" y="123.55" align="center" width="59.1" />
+        <element type="ROUTER" textId="ID_router_txt1" x="40" y="300" width="600" height="168" />
+        <!--<text id="ID_router_txt1"><![CDATA[<pre>R1(config)# ip access-list extended SURFING R1(config-ext-nacl)# permit tcp 192.168.10.0 0.0.0.255 any eq 80 R1(config-ext-nacl)# permit tcp 192.168.10.0 0.0.0.255 any eq 443 R1(config-ext-nacl)# exit R1(config)# ip access-list extended BROWSING R1(config-ext-nacl)# permit tcp any 192.168.10.0 0.0.0.255 established R1(config-ext-nacl)# exit R1(config)# interface g0/0 R1(config-if)# ip access-group SURFING in R1(config-if)# ip access-group BROWSING out</pre>]]></text>-->
+        <element type="TEXT" subType="TITLE" compId="ID_title" />
+    </slide>
+    <text id="ID_router_txt1">
+        <![CDATA[
+		R1(config)# <b>ip access-list extended SURFING</b><br />
+		R1(config-ext-nacl)# <b>permit tcp 192.168.10.0 0.0.0.255 any eq 80</b><br />
+		R1(config-ext-nacl)# <b>permit tcp 192.168.10.0 0.0.0.255 any eq 443</b><br />
+		R1(config-ext-nacl)# <b>exit</b><br />
+		R1(config)# <b>ip access-list extended BROWSING </b><br />           
+		R1(config-ext-nacl)# <b>permit tcp any 192.168.10.0 0.0.0.255 established</b><br />
+		R1(config-ext-nacl)# <b>exit</b><br />
+		R1(config)# <b>interface g0/0</b><br />
+		R1(config-if)# <b>ip access-group SURFING in</b><br />
+		R1(config-if)# <b>ip access-group BROWSING out</b><br />
+	]]></text>
+</data>

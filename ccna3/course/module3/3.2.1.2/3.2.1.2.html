@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.2 Características de los protocolos de árbol de expansión</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Características de los protocolos de árbol de expansión</h1>
+        <div>
+          <p>A continuación, se detallan características de los diversos protocolos de árbol de expansión. Las palabras en cursiva indican si ese protocolo de árbol de expansión en particular es exclusivo de Cisco o una implementación del estándar IEEE.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>STP</b>: asume una instancia de árbol de expansión IEEE 802.1D para toda la red enlazada, independientemente de la cantidad de redes VLAN. Debido a que solo hay una instancia, los requisitos de CPU y de memoria para esta versión son menos que para el resto de los protocolos. Sin embargo, dado que solo hay una instancia, también hay solo un puente raíz y un árbol. El tráfico para todas las VLAN fluye por la misma ruta, lo que puede provocar flujos de tráfico poco óptimos. Debido a las limitaciones de 802.1D, la convergencia de esta versión es lenta.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>PVST+</b>: es una mejora que hizo Cisco de STP; proporciona una instancia separada de la implementación de Cisco de 802.1D para cada VLAN que se configura en la red. La velocidad de convergencia es similar al STP original. La instancia aparte admite PortFast, UplinkFast, BackboneFast, la protección BPDU, el filtro BPDU, la protección de raíz y la protección de bucle. Los roles de puerto se definen de la misma manera que con RSTP. La creación de una instancia para cada VLAN aumenta los requisitos de CPU y de memoria, pero admite los puentes raíz por VLAN. Este diseño permite la optimización del árbol de expansión para el tráfico de cada VLAN. La convergencia de esta versión es similar a la convergencia de 802.1D. Sin embargo, la convergencia es por VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RSTP (o IEEE 802.1w)</b>: es una evolución del árbol de expansión que proporciona una convergencia más rápida que la implementación original de 802.1D. Esta versión resuelve varios problemas de convergencia, pero dado que aún proporciona una única instancia de STP, no resuelve los problemas de flujo de tráfico poco óptimo. Para admitir una convergencia más rápida, los requisitos de uso de CPU y de memoria de esta versión son más exigentes que los de CTS, pero menos que los de PVST+ rápido.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>PVST+ rápido</b>: es una mejora que hizo Cisco de RSTP; utiliza PVST+. Proporciona una instancia de 802.1w distinta por VLAN. La instancia aparte admite PortFast, la protección BPDU, el filtro BPDU, la protección de raíz y la protección de bucle. Esta versión resuelve tanto los problemas de convergencia como los de flujo de tráfico inferiores al óptimo. Sin embargo, esta versión tiene los requisitos de CPU y de memoria más exigentes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>MSTP</b>: es el estándar IEEE 802.1s, inspirado en la implementación anterior de MISTP patentada por Cisco. Para reducir el número de instancias de STP requeridas, MSTP asigna varias VLAN con los mismos requisitos de flujo de tráfico en la misma instancia de árbol de expansión. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>MST</b>: es la implementación que hace Cisco de MSTP; proporciona hasta 16 instancias de RSTP (802.1w) y combina muchas VLAN con la misma topología física y lógica en una instancia de RSTP común. Cada instancia admite PortFast, protección BPDU, filtro BPDU, protección de raíz y protección de bucle. Los requisitos de CPU y de memoria de esta versión son menos que los de PVST+ rápido, pero más que los de RSTP.</li>
+            </ul>
+          </p>
+          <p>Los switches de Cisco con IOS 15.0 o posterior ejecutan PVST+ de manera predeterminada. Esta versión incluye muchas de las especificaciones IEEE 802.1D-2004, como puertos alternativos en lugar de los puertos no designados anteriores. Sin embargo, los switches deben configurarse explícitamente para el modo de árbol de expansión rápido para ejecutar este protocolo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una tabla que compara el estándar, los recursos, el tiempo de convergencia y los cálculos del árbol para diversas variedades de STP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+<text><![CDATA[<b>Implementación de SPAN de Cisco</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[PCA]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Puerto SPAN enviando copias de tráfico]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Sensor IPS]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[<b>o</b>]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Analizador de paquetes]]></text>
+</component><!--  end slide 1 --></textcomponents>

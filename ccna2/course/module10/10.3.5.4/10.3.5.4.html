@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.5.4 Desinstalación de la licencia</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.5.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Desinstalación de la licencia</h1>
+        <div>
+          <p>Para borrar una licencia permanente activa de los routers Cisco de las series 1900, 2900 y 3900, realice los siguientes pasos:</p>
+          <p></p>
+          <p>
+            <b>Paso 1: Deshabilite el paquete de tecnología.</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Deshabilite la licencia activa mediante el comando:</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>license boot module</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>nombre-módulo</i>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <b>technology-package</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>nombre-paquete </i>
+            </span>
+            <span class="cmd">
+              <b>disable</b>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Vuelva a cargar el router mediante el comando <b>reload</b>. Se requiere volver a cargarlo para que el paquete de software esté inactivo.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paso 2: Borre la licencia.</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Borre la licencia de paquete de tecnología del almacenamiento de licencias.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router# </span>
+            <span class="cmd">
+              <b>license clear</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>nombre-característica</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Borre el comando <b>license boot module</b> que se usó para deshabilitar la licencia activa:</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>no license boot module </b>
+            </span>
+            <span class="cmd">
+              <i>nombre-módulo</i>
+            </span>
+            <span class="cmd">
+              <b> technology-package </b>
+            </span>
+            <span class="cmd">
+              <i>nombre-paquete</i>
+            </span>
+            <span class="cmd">
+              <b> disable</b>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> algunas licencias, como las licencias incorporadas, no pueden borrarse. Solo se eliminan las licencias que se agregaron mediante el comando <b>license install</b>. Las licencias de evaluación no se eliminan.</p>
+          <p></p>
+          <p>En la figura 1, se muestra un ejemplo de eliminación de una licencia activa. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para desinstalar la licencia de seguridad en el router R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la sintaxis para deshabilitar el paquete de tecnología y borrar la licencia. En la figura número dos se muestra una actividad interactiva que permite que los alumnos practiquen cómo deshabilitar el paquete de tecnología y borrar la licencia.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

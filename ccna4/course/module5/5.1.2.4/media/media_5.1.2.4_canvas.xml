@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>	
+
+<slide>
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="../../../common/images/page_backgrounds/bg_topolgy_multislide.jpg" />
+<element type="IMAGE" x="0" y="0" width="680" height="490" src="media_5.1.2.4.png" />
+<element type="TEXT" compId="ID_s1_txt01" x="49" y="424" width="231" expand="up+down" align="left" />
+<element type="TEXT" compId="ID_s1_txt02" x="49" y="451" width="231" expand="up+down" align="left" />
+<element type="TEXT" compId="ID_s1_txt03" x="490" y="95" width="151" expand="up+down" align="left" />
+<element type="TEXT" compId="ID_s1_txt05" x="500" y="327" width="151" expand="up+down" align="left" />
+<element type="TEXT" compId="ID_s1_txt04" x="39" y="327" width="151" expand="up+down" align="right" />
+<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+</slide>
+
+</data>

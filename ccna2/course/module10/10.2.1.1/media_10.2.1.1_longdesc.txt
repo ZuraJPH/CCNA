@@ -1,0 +1,1 @@
+El router R1 se configura con el comando 'clock set 20:36:00 dec 11 2015'. En un mensaje de syslog se indica que se ha actualizado el reloj.

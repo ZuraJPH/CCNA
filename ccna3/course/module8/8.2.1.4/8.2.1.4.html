@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.4 Configuración de una ID de router OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuración de una ID de router OSPF</h1>
+        <div>
+          <p>Utilice el comando <b>router-id </b><i>rid </i>del modo de configuración del router para asignar manualmente un valor de 32 bits expresado como dirección IPv4 a un router. Un router OSPF se identifica ante otros routers mediante esta ID del router. </p>
+          <p></p>
+          <p>Como se muestra en la figura 1, se configuró una ID de router 1.1.1.1 en el R1, una ID 2.2.2.2 en el R2 y una ID 3.3.3.3 en el R3. </p>
+          <p></p>
+          <p>En la figura 2, se asigna la ID de router 1.1.1.1 al R1. Utilice el comando <b>show ip protocols</b> para verificar la ID del router.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> el R1 nunca se había configurado con una ID de router OSPF. De haber sido así, se debería modificar la ID del router.</p>
+          <p></p>
+          <p>Si la ID del router es la misma en dos routers vecinos, el router muestra un mensaje de error similar al siguiente: </p>
+          <p></p>
+          <p>
+            <span class="cmd">%OSPF-4-DUP_RTRID1: Detected router with duplicate router ID (Se detectó un router con una ID de router duplicada). </span>
+          </p>
+          <p></p>
+          <p>Para corregir este problema, configure todos los routers para que tengan una ID del router OSPF única.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para asignar una ID del router al R2 y al R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestra la topología de referencia de OSPF y se han agregado valores de ID de router.  El router R1 tiene una ID de router configurada de uno punto uno punto uno punto uno.  El router R2 tiene una ID de router configurada de dos punto dos punto dos punto dos.  El router R3 tiene una ID de router configurada de tres punto tres punto tres punto tres.  En la figura dos, se muestran los comandos utilizados para asignar una ID de router.  La figura comienza en el modo de configuración global.  El primer comando es router ospf. 10.  Con este comando, se configura OSPF en el router y se establece el proceso en 10.  El siguiente comando es router guion id uno punto uno punto uno punto uno.  Con este comando, se establece la ID del router.  La figura muestra la salida del comando show ip protocols. En la salida, se resalta la línea que muestra la ID del router. La figura tres es un elemento de medios interactivos que permite que el estudiante asigne una ID de router a un router.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<textcomponents>
+
+<component id="ID_title">
+ <text><![CDATA[<b>Siguiente puerto disponible</b>]]></text>
+ </component><!--table data--><component id="ID_txt01">
+   <text><![CDATA[<b>Tabla NAT con sobrecarga</b>]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>Dirección IP global interna</b>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Dirección IP local interna</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>Tabla NAT con sobrecarga</b>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>Dirección IP global interna</b>]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Dirección IP local interna</b>]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[<b>Interna</b>]]></text>
+      </component>
+<component id="ID_txt08">
+   <text><![CDATA[<b>Externa</b>]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[Internet]]></text>
+   </component>
+
+   <component id="ID_txt10">
+      <text><![CDATA[Svr1]]></text>
+      </component>
+	  
+	 <component id="ID_txt11">
+      <text><![CDATA[SA<br/>192.168.10.11:1444]]></text>
+     </component>
+	 
+	 	 <component id="ID_txt12">
+      <text><![CDATA[SA<br/>209.165.200.226:1444]]></text>
+     </component>
+	 
+	 	 <component id="ID_txt13">
+      <text><![CDATA[SA<br/>192.168.10.12:1444]]></text>
+     </component>
+	 
+	 	 <component id="ID_txt14">
+      <text><![CDATA[SA<br/>209.165.200.226:1445]]></text>
+     </component><!--ANIMATION CONTROLLER--><component id="end">
+		<text><![CDATA[Fin]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Adelantar]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pausar]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Reproducir]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Regresar]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Inicio]]></text>
+	</component>
+</textcomponents>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.2 Funcionamiento de LCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Funcionamiento de LCP</h1>
+        <div>
+          <p>El funcionamiento de LCP incluye las disposiciones para el establecimiento, el mantenimiento y la finalización de enlaces. El funcionamiento de LCP utiliza tres clases de tramas LCP para lograr el trabajo de cada una de las fases de LCP:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Las tramas de establecimiento de enlace establecen y configuran un enlace (solicitud de configuración, acuse de recibo de configuración, acuse de recibo negativo [NAK] de configuración y rechazo de configuración).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las tramas de mantenimiento de enlace administran y depuran un enlace (rechazo de código, rechazo de protocolo, solicitud de eco, respuesta de eco y solicitud de descarte).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Las tramas de terminación de enlace terminan un enlace (solicitud de terminación y acuse de recibo de terminación).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Establecimiento del enlace</b>
+          </p>
+          <p>El establecimiento del enlace es la primera fase de una operación LCP, como se observa en la figura 1. Esta fase se debe completar correctamente antes de que se intercambie cualquier paquete de capa de red. Durante el establecimiento del enlace, LCP abre una conexión y negocia los parámetros de configuración. El proceso de establecimiento del enlace comienza cuando el dispositivo de inicio envía una trama de solicitud de configuración al respondedor. La trama de solicitud de configuración incluye una cantidad variable de opciones de configuración necesarias para configurar en el enlace. </p>
+          <p></p>
+          <p>El iniciador incluye las opciones para la forma en que desea que se cree el enlace, incluidos los parámetros de protocolo o de autenticación. El respondedor procesa la solicitud: </p>
+          <p>
+            <ul>
+              <li>Si las opciones no son aceptables o no se reconocen, el respondedor envía un mensaje de NAK de configuración o de rechazo de configuración. Si esto sucede y la negociación falla, el iniciador debe reiniciar el proceso con nuevas opciones. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si las opciones son aceptables, el respondedor responde con un mensaje de acuse de recibo de configuración, y el proceso pasa a la fase de autenticación. La operación del enlace se entrega a NCP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Una vez que NCP completó todas las configuraciones necesarias, incluida la validación de la autenticación si se configuró, la línea está disponible para la transferencia de datos. Durante el intercambio de datos, LCP pasa al mantenimiento del enlace.</p>
+          <p></p>
+          <p>
+            <b>Mantenimiento del enlace</b>
+          </p>
+          <p>Durante el mantenimiento del enlace, LCP puede utilizar mensajes para la retroalimentación y para probar el enlace, como se muestra en la figura 2.</p>
+          <p>
+            <ul>
+              <li>
+                <b>Solicitud de eco, respuesta de eco y solicitud de descarte:</b> estas tramas se pueden utilizar para probar el enlace.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rechazo de código y rechazo de protocolo</b>: estos tipos de trama brindan retroalimentación cuando un dispositivo recibe una trama válida. El dispositivo emisor vuelve a enviar el paquete.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Terminación del enlace</b>
+          </p>
+          <p>Una vez finalizada la transferencia de datos en la capa de red, LCP termina el enlace, como se muestra en la figura 3. NCP solo termina el enlace NCP y de capa de red. El enlace permanece abierto hasta que LCP lo termina. Si LCP termina el enlace antes que NCP, también se termina la sesión NCP. </p>
+          <p></p>
+          <p>PPP puede terminar el enlace en cualquier momento. Esto podría suceder debido a la pérdida de la portadora, a un error de autenticación, a una falla de la calidad del enlace, al vencimiento de un temporizador de período inactivo o al cierre administrativo del enlace. LCP cierra el enlace mediante el intercambio de paquetes de terminación. El dispositivo que inicia la desactivación envía un mensaje de solicitud de terminación. El otro dispositivo responde con un mensaje de acuse de recibo de terminación. Una solicitud de terminación indica que el dispositivo que la envía necesita cerrar el enlace. Cuando se cierra el enlace, PPP informa a los protocolos de capa de red para que puedan tomar las medidas adecuadas.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra más detalles sobre el establecimiento del enlace PPP.  El primer router envía una solicitud de configuración LCP al router receptor, que a su vez devuelve un acuse de recibo de configuración de LCP. La figura 2 muestra los mensajes de mantenimiento del enlace PPP que se envían entre los dos routers.  La figura muestra las solicitudes de eco, los mensajes de respuesta de eco y los mensajes de rechazo de código que se envían entre ellos. La figura 3 muestra un router que envía un mensaje de solicitud de finalización de LCP al otro router, que a su vez responde con un mensaje de acuse de recibo de finalización de LCP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

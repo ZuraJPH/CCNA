@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+    <slide width="780">
+        <element type="IMAGE" x="0" y="0" width="1000" height="490" src="../../../common/images/page_backgrounds/bg_activity.jpg" />
+        <element type="IMAGE" src="media_4.1.2.6_topo.png" x="0" y="0" width="1000" height="490" />
+        <element type="TEXT" subType="TITLE" compId="ID_title" color="#FFFFFF" />
+        <element type="TEXT" id="ID_static_1" text="S0/0/0" x="517.8" y="182" align="center" width="36" />
+        <element type="TEXT" id="ID_static_2" text="Fa0/0" x="487.6" y="231" align="center" width="29" />
+        <element type="TEXT" id="ID_static_3" text="192.168.11.0/24" x="580.1" y="270" align="center" width="86" />
+        <element type="TEXT" compId="ID_server_txt" x="365" y="105" width="84" expand="down" align="right" />
+
+        <element type="TEXT" id="ID_static_4" text="192.168.30.0/24" x="779.4" y="270" align="center" width="86" />
+        <element type="TEXT" id="ID_static_5" text="S0/0/1" x="754.8" y="179.3" align="center" width="34" />
+        <element type="TEXT" id="ID_static_6" text="Fa0/1" x="562" y="231.5" align="center" width="28" />
+        <element type="TEXT" id="ID_static_7" text="192.168.10.0/24" x="408.45" y="270" align="center" width="86" />
+        <element type="TEXT" id="ID_static_8" text="Fa0/1" x="591.35" y="108" align="center" width="28" />
+        <element type="TEXT" id="ID_static_9" text="S0/1/0" x="687.55" y="108" align="center" width="36" />
+        <element type="TEXT" id="ID_static_10" text="S0/0/0" x="588.35" y="129" align="center" width="36" />
+        <element type="TEXT" id="ID_static_11" text="S0/0/1" x="687.55" y="129" align="center" width="34" />
+        <element type="TEXT" id="ID_static_12" text="Fa0/1" x="739.5" y="236" align="center" width="28" />
+        <element type="TEXTBOX" titleId="ID_instr_title" bodyId="ID_instruction" x="19" y="45" width="276.55" height="259" animated="0" subType="ROLLOVER" />
+        <!-- D&D1-->
+        <element type="ACTIVITY" subType="DRAGDROP" method="NORMAL" replicate="false" compWidth="130" compHeight="40" dragIcon="" dropIcon="" tickPosition="left" dragAlpha="1">
+            <!-- Drag area-->
+            <subelement type="DRAG" x="90" y="330" compId="ID_drag01" />
+            <subelement type="DRAG" x="90" y="384" compId="ID_drag02" />
+            <!-- Drop area-->
+            <subelement type="DROP" x="340" y="160" match="null" />
+            <subelement type="DROP" x="340" y="210" match="null" />
+            <subelement type="DROP" x="515" y="60" match="null" />
+            <subelement type="DROP" x="668" y="60" match="0" />
+            <subelement type="DROP" x="814" y="168" match="null" />
+            <subelement type="DROP" x="814" y="226" match="1" />
+            <!-- Chk&Reset Button -->
+            <subelement type="CHECK" x="20" y="458" width="127.1" height="21" compId="ID_CHECK" />
+            <subelement type="RESET" x="165" y="458" width="127.1" height="21" compId="ID_RESET" />
+            <!-- Feedback -->
+            <subelement type="FEEDBACK" x="360" y="200" width="300" height="200" correctTitleId="ID_s1_CORRECT_TITLE" correctBodyId="ID_s1_CORRECT_BODY" wrongTitleId="ID_s1_INCORRECT_TITLE" wrongBodyId="ID_s1_INCORRECT_BODY" />
+        </element>
+    </slide>
+</data>

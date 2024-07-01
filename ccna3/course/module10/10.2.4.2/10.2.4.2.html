@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.4.2 Estructuras de datos para la solución de problemas de OSPF multiárea </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Estructuras de datos para la solución de problemas de OSPF multiárea </h1>
+        <div>
+          <p>OSPF almacena la información de routing en cuatro estructuras de datos principales:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Tabla de interfaces:</b> esta tabla incluye una lista de todas las interfaces activas que se hayan habilitado para OSPF. Los LSA de tipo 1 incluyen las subredes asociadas a cada interfaz activa.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Tabla de vecinos:</b> esta tabla se utiliza para administrar las adyacencias de vecinos a través de los temporizadores de saludo y de tiempo muerto. Se agregan y se actualizan las entradas vecinas cuando se recibe un saludo. Los vecinos se eliminan cuando expira el temporizador de tiempo muerto.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de datos de estado de enlace (LSDB):</b> es la estructura de datos principales que utiliza OSPF para almacenar información de la topología de la red. Incluye información topológica completa sobre cada área a la que el router OSPF está conectado, además de cualquier ruta que esté disponible para alcanzar otras redes o sistemas autónomos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Tabla de routing:</b> después de que se calcula el algoritmo SPF, se ofrecen a la tabla de routing las mejores rutas para cada red.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Agregue la transcripción de medios</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+En la figura uno, se muestra la salida que genera el comando “show ip protocols”, en el cual se indica que el EIGRP es el protocolo actual.  La ID de router, el AD, el resumen y las redes aparecen resaltadas en color naranja. En la figura dos, se muestra una tabla de distintos protocolos y su distancia administrativa correspondiente.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.2.3 Ejemplos de interfaces conectadas directamente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ejemplos de interfaces conectadas directamente</h1>
+        <div>
+          <p>En los ejemplos de las figuras 1 a 3, se muestran los pasos para configurar y activar las interfaces conectadas al R1. Observe los mensajes informativos de capa 1 y 2 que se generan a medida que se activa cada interfaz.</p>
+          <p></p>
+          <p>A medida que se agregan interfaces, la tabla de routing agrega automáticamente las entradas conectadas (“<b>C</b>”) y locales (“<b>L</b>”). En la figura 4, se proporciona un ejemplo de la tabla de routing con las interfaces del R1 conectadas directamente configuradas y activadas.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para configurar y activar las interfaces conectadas al R2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura número uno muestra el comando para agregar una descripción a una interfaz y asignarle una dirección IP.  La figura muestra la interfaz de línea de comandos para un router y comienza en el modo de configuración global.  El primer comando pasa a la interfaz deseada, y el comando es interface gigabit Ethernet cero barra cero.  El siguiente comando configura una descripción en el archivo de configuración para la interfaz, y el comando es description link to LAN 1.  El siguiente comando asigna la dirección IP y la máscara de subred y es ip address 192 punto 168 punto 10 punto 1 255 punto 255 punto 255 punto cero.  Ahora la interfaz debe encenderse con el comando no shutdown.  Luego la interfaz cambia al estado activo (up). La figura dos configura la interfaz siguiente.  El primer comando pasa a la interfaz, y el comando es interface gigabit Ethernet cero barra uno.  El siguiente comando configura una descripción en el archivo de configuración para la interfaz, y el comando es description link to LAN 2.  El siguiente comando asigna la dirección IP y la máscara de subred y es ip address 192 punto 168 punto 11 punto 1 255 punto 255 punto 255 punto cero.  Ahora la interfaz debe encenderse con el comando no shutdown.  La interfaz cambia al estado activo (up). La figura tres configura la interfaz siguiente.  El primer comando pasa a la interfaz, y el comando es interface serial cero barra cero barra cero.  El siguiente comando configura una descripción en el archivo de configuración para la interfaz, y el comando es description link to R1.  El siguiente comando asigna la dirección IP y la máscara de subred y es ip address 209 punto 165 punto 200 punto 225 255 punto 255 punto 255 punto cero.  Luego, debe asignarse una frecuencia de reloj al enlace serial y el comando es clock rate 128000.  La interfaz se debe habilitar ahora con el comando no shutdown.  La interfaz cambia al estado activo (up). La figura cuatro muestra el resultado del comando show ip route route barra vertical Gateway.  Esto muestra la tabla de routing y aplica el filtro para mostrar todo lo que hay en el archivo después de la palabra gateway, incluida la palabra clave Gateway.  La tabla muestra las seis entradas esperadas debido a las tres interfaces configuradas en las tres figuras anteriores. La figura cinco es un elemento de medios interactivos que permite que el estudiante configure tres interfaces en un router de modo que se conecte al router de las cuatro figuras anteriores.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

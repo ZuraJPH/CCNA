@@ -1,0 +1,1 @@
+La figura 1 muestra una tabla de tres categorías de herramientas de QoS. La figura 2 muestra la secuencia de cómo se usan las tres herramientas cuando se aplica QoS al flujo de paquetes.

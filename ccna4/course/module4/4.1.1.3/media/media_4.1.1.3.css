@@ -1,0 +1,35 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+.purpleCallOut{
+
+-moz-border-radius:2px; /* Firefox 3.6 and earlier */
+-webkit-border-radius:2px;
+-khtml-border-radius:2px;
+background: none repeat scroll 0 0 #652C8A;
+border: 2px solid #652C8A;
+border-radius: 2px;
+padding: 2px 0px 3px 3px;
+
+}
+.greenCallOut{
+border:2px solid #5FBC21;
+border-radius:5px;
+-moz-border-radius:5px; /* Firefox 3.6 and earlier */
+-webkit-border-radius:5px;
+-khtml-border-radius:5px;
+padding:2px 0 3px 3px;
+background:#5FBC21;
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { }
+
+
+.sp1{
+margin-left:29px;
+}

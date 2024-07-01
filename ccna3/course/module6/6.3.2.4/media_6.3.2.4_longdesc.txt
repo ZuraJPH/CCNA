@@ -1,0 +1,1 @@
+En la figura uno, se muestra una tabla con diferentes tipos de medios y sus valores de retraso correspondientes. En la figura dos, se muestra la salida que genera el comando “show interface”. Los valores de retraso aparecen resaltados.

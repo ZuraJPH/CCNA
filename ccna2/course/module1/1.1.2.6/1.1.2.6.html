@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.6 Acceso a la consola</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Acceso a la consola</h1>
+        <div>
+          <p>En un entorno de producción, generalmente se accede a los dispositivos de infraestructura de manera remota mediante shell seguro (SSH) o el protocolo de transferencia de hipertexto seguro (HTTPS). El acceso a la consola solo es realmente necesario para realizar la configuración inicial de un dispositivo o si el acceso remoto falla.</p>
+          <p></p>
+          <p>El acceso a la consola requiere lo siguiente:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Cable de consola</b>: cable serial RJ-45 a DB-9 o cable serial USB</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Software de emulación de terminal:</b> Tera Term, PuTTY, HyperTerminal </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>El cable se conecta entre el puerto serie del host y el puerto de consola en el dispositivo. La mayoría de las computadoras portátiles y de escritorio ya no cuentan con puertos serie incorporados. Si el host no tiene ningún puerto serie, se puede utilizar el puerto USB para establecer una conexión de consola. Cuando se usa el puerto USB, se requiere un adaptador especial de puerto serie compatible USB a RS-232. </p>
+          <p></p>
+          <p>El ISR Cisco G2 admite una conexión serie de consola USB. Para establecer la conectividad, se requiere un USB de tipo A a tipo B (USB mini-B), así como un controlador de dispositivo del sistema operativo. Este controlador de dispositivo se puede descargar en <a href="http://www.cisco.com/" target="_blank">www.cisco.com</a>. Si bien estos routers tienen dos puertos de consola, los puertos solo se pueden usar de a uno por vez. Cuando se conecta un cable al puerto de consola USB, el puerto RJ-45 queda inactivo. Cuando se quita el cable USB del puerto USB, el puerto RJ-45 se activa.</p>
+          <p></p>
+          <p>En la tabla de la figura 1, se resumen los requisitos para las conexiones de consola. En la figura 2, se muestran los distintos puertos y cables que se requieren.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno es una tabla de requisitos de la conexión de consola de los routers Cisco.  Los encabezados de columna son los siguientes: puerto en la computadora, cable requerido, puerto en el ISR y emulación de terminales.  Por ejemplo, usar un puerto serial de una computadora requiere un cable de consola RJ-45 a DB-9 y se conecta al puerto de consola RJ-45 en el router.  Se puede utilizar el programa de emulación de terminal Tera Term o Putty. La figura dos es la misma tabla pero con imágenes de los puertos y los cables.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

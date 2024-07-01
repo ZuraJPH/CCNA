@@ -1,0 +1,1 @@
+La figura muestra el proceso DHCPv6 con estado para una computadora.  El router envía un mensaje de anuncio de router que no contiene información de direccionamiento e indica a la computadora que encuentre un servidor DHCPv6 para obtener toda la información de direccionamiento requerida.  Esta es la respuesta al mensaje de solicitud de router enviado por la computadora.

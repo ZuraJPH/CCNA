@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.4.4 Paso 2: Obtener una licencia</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.4.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 2: Obtener una licencia</h1>
+        <div>
+          <p>El segundo paso es obtener la licencia, que en realidad es un archivo de licencia. Un archivo de licencia, también conocido como Licencia de activación de software, se obtiene mediante una de las siguientes opciones:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Cisco License Manager (CLM) </b>- Es una aplicación de software gratuita que puede descargarse desde <a href="http://www.cisco.com/go/clm" target="_blank">http://www.cisco.com/go/clm</a>. Cisco License Manager es una aplicación autónoma de Cisco que ayuda a los administradores de red a implementar rápidamente varias licencias de software de Cisco a través de las redes. Cisco License Manager puede detectar dispositivos de red, ver su información de licencia y adquirir e implementar licencias de Cisco. La aplicación proporciona una GUI que simplifica la instalación y ayuda a automatizar la obtención de licencias, además de llevar a cabo varias tareas de licencia desde una ubicación central. CLM es gratuito y puede descargarse de CCO.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Portal de registro de licencias de Cisco </b>- Es el portal web para obtener y registrar licencias de software individuales: <a href="http://www.cisco.com/go/license" target="_blank">http://www.cisco.com/go/license</a>.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Ambos procesos requieren un número de PAK y un Identificador de dispositivo único (UDI). </p>
+          <p></p>
+          <p>La PAK se recibe al efectuar la compra. </p>
+          <p></p>
+          <p>El UDI es una combinación de la ID del producto (PID), el número de serie (SN) y la versión de hardware. El SN es un número de 11 dígitos que identifica exclusivamente un dispositivo. La PID identifica el tipo de dispositivo. Para la creación de licencias, solo se utilizan la PID y el SN. El UDI puede mostrarse mediante el comando <b>show license udi</b>, que se muestra en la figura 1. Esta información también está disponible en una bandeja de etiquetas extraíble que se encuentra en el dispositivo. En la figura 2, se muestra un ejemplo de la etiqueta extraíble en un router Cisco 1941.</p>
+          <p></p>
+          <p>Después de introducir la información adecuada, el cliente recibe un correo electrónico con la información de licencia para instalar el archivo de licencia. El archivo de licencia es un archivo de texto XML con la extensión .lic. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para determinar el UDI en el router R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la salida del comando "show license u. d. i." en el router uno. En la figura número dos se muestra un router con una etiqueta extraíble en la que se indica el UDI y el PID correspondientes al router. En la figura número tres se muestra una actividad interactiva que permite que el alumno practique cómo mostrar el UDI correspondiente a un router en la línea de comandos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

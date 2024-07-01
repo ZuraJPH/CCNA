@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.2 Verificar la configuración OSPFv2 multiárea general</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Verificar la configuración OSPFv2 multiárea general</h1>
+        <div>
+          <p>Utilice el comando <b>show ip protocols</b> para verificar el estado de OSPFv2. La salida del comando revela qué protocolos de routing están configurados en un router. También incluye las especificaciones de protocolo de routing, como ID de router, cantidad de áreas del router y redes incluidas en la configuración del protocolo de routing. </p>
+          <p></p>
+          <p>En la figura 1, se muestra la configuración OSPFv2 de R1. Observe que el comando muestra que existen dos áreas. La sección de routing para redes identifica las redes y sus respectivas áreas.</p>
+          <p></p>
+          <p>Utilice el comando <b>show ip ospf interface brief</b> para mostrar información concisa relacionada con OSPFv2 acerca de las interfaces habilitadas para OSPFv2. Este comando revela información útil, como la ID del proceso OSPFv2 que tiene asignada la interfaz, el área en la que se encuentran las interfaces y el costo de la interfaz. </p>
+          <p></p>
+          <p>En la figura 2, se verifican las interfaces habilitadas para OSPFv2 y las áreas a las que pertenecen.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para verificar la configuración general del R2 y el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra la salida recibida al utilizar el comando show ip protocols en una red OSPF multiárea. La imagen resalta la cantidad de áreas a las que pertenece el router y las redes que se están enrutando. La figura dos muestra la salida del comando show ip ospf interface brief y resalta la columna que muestra las áreas en las que cada interfaz está conectada. La figura tres muestra la salida del comando show ip protocols y del comando show ip ospf interface brief en dos routers conectados en una red OSPF multiárea.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

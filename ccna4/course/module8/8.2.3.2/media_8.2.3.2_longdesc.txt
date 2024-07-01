@@ -1,0 +1,1 @@
+La figura muestra el modelo de OSI con los síntomas y las causas en la capa de enlace de datos.

@@ -1,0 +1,6 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<i>Para determinar cuál es la mejor ruta de routing, se puede usar un protocolo de routing dinámico y las métricas que este utiliza.<br/><br/>Algunas métricas utilizadas incluyen las siguientes:<textformat blockindent="-14"><ul><li>Ancho de banda</li><li>Costo</li><li>Demora</li><li>Saltos</li></ul></textformat</i&gt;]]></text>
+</component>
+
+</textcomponents>

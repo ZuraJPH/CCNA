@@ -1,0 +1,1 @@
+En la figura se muestra un switch de capa de acceso conectado a dos switches de capa de distribución. Cada conexión se establece mediante dos enlaces entre los switches.  Los dos enlaces en cada conexión se agrupan para formar un EtherChannel entre los dos dispositivos. No hay puertos en el modo de bloqueo del protocolo STP.

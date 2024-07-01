@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.1 Problemas de configuración de switch de capa 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problemas de configuración de switch de capa 3</h1>
+        <div>
+          <p>Los problemas comunes al routing entre VLAN antiguo y con router-on-a-stick también se manifiestan en el contexto de switching de capa 3. Para resolver problemas de switching de capa 3, se debe revisar la corrección de los siguientes elementos:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>VLAN:</b> las VLAN deben estar definidas en todos los switches. Las VLAN deben estar habilitadas en los puertos de enlace troncal. Los puertos deben estar en las VLAN correctas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SVI</b>: la SVI debe tener la dirección IP o la máscara de subred correcta. Las SVI deben estar activadas. Cada SVI debe coincidir con el número de VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routing:</b> el routing debe estar habilitado. Cada interfaz o red debe agregarse al protocolo de routing o las rutas estáticas ingresadas, cuando corresponda.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hosts:</b> los hosts deben tener la dirección IP o la máscara de subred correcta. Los hosts deben contar con un gateway predeterminado asociado con una SVI o un puerto enrutado.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Para resolver problemas de switching de capa 3, debe familiarizarse con la implementación y la configuración de diseño de la topología.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología con dos subredes separadas por un switch de capa tres. Hay enlaces troncales a cada lado del switch de capa tres que conducen a los switches de capa dos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

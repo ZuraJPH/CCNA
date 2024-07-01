@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.3 Virtualización de servidores</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Virtualización de servidores</h1>
+        <div>
+          <p>La virtualización de servidores saca provecho de los recursos inactivos y consolida el número de servidores requeridos. Esto también permite que múltiples sistemas operativos existan en una sola plataforma de hardware.</p>
+          <p></p>
+          <p>Por ejemplo, en la figura, los ocho servidores dedicados anteriores se consolidaron en dos servidores con hipervisores para admitir varias instancias virtuales de los sistemas operativos.</p>
+          <p></p>
+          <p>El hipervisor es un programa, un firmware o un hardware que suma una capa de abstracción a la parte superior del hardware físico real. La capa de abstracción se utiliza para crear máquinas virtuales que tienen acceso a todo el hardware de la máquina física, como CPU, memoria, controladores de disco y NIC. Cada una de esas máquinas virtuales ejecuta un sistema operativo completo y separado. Con la virtualización, las empresas ahora pueden consolidar la cantidad de servidores necesarios. Por ejemplo, no resulta raro que 100 servidores físicos se consoliden como máquinas virtuales sobre 10 servidores físicos que usan hipervisores.</p>
+          <p></p>
+          <p>El uso de la virtualización normalmente incluye redundancia para brindar protección desde un punto sencillo de falla. La redundancia se puede implementar de diferentes maneras. Si falla el hipervisor, se puede reiniciar la VM en otro hipervisor. Además, la misma VM se puede ejecutar en dos hipervisores simultáneamente copiando las instrucciones de RAM y de CPU entre estos. Si falla un hipervisor, la VM continúa ejecutándose en el otro supervisor. Los servicios que se ejecutan en las VM también son virtuales y se pueden instalar o deshabilitar dinámicamente, según sea necesario.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura de instalación del SO de hipervisor muestra la estructura del hipervisor en dos servidores. El componente de hardware se encuentra en el nivel inferior, con el hipervisor instalado sobre el hardware. Cuatro instancias del sistema operativo están conectadas con el hipervisor. Para el servidor 1, hay cuatro instancias de SO Windows. En el servidor 1, sobre las cuatro instancias de SO Windows, están los servicios para servidor web, servidor de correo electrónico, servidor de SQL y servidor de archivos. Para el servidor 2, hay dos instancias de SO Windows y dos instancias de un SO Linux. En el servidor 2, sobre las dos instancias de SO Windows, están los servicios para el servidor de DHCP y el servidor de AD. En el servidor 2, sobre las dos instancias de SO Linux, están los servicios de servidor Radius y servidor NMS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

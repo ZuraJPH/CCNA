@@ -1,0 +1,136 @@
+﻿<textcomponents>
+<component id="ID_s1_title">
+	<text><![CDATA[<font size="17"><b>Actividad: Comparar características de tráfico</b></font>]]></text>
+</component>
+
+
+<component id="MCTable_title">
+	<text><![CDATA[Características del tráfico]]></text>
+</component>
+
+<component id='ID_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_instr_body'>
+	<text><![CDATA[Haga clic en el campo correspondiente junto a cada característica de tráfico para indicar sus respuestas.]]></text>
+</component><!-- buttons --><component id="ID_s1_CHECK">
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id="ID_s1_RESET">
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Number of rows in the table--><component id="txt_numrows">
+	<text><![CDATA[11]]></text>
+</component><!--Number of columns for the answers in the table. Do not count the question column--><component id="txt_numcols">
+	<text><![CDATA[3]]></text>
+</component><!--Answer column headers--><component id="txt_col1">
+	<text><![CDATA[<b>Voz</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Video</b>]]></text>
+</component>
+
+<component id="txt_col3">
+	<text><![CDATA[<b>Datos</b>]]></text>
+</component><!--Question text - blockindent code moves the text away from the left edge a bit--><!--Question text - If questions are numbered, use blockindent for hanging indents--><component id="txt_q1">
+	<text><![CDATA[Puede ser muy codicioso y consumir una gran parte de la capacidad de la red]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Sin QoS y una cantidad significativa de capacidad de ancho de banda adicional, el tráfico normalmente disminuye]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[No se puede volver a transmitir si se pierde]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Debe recibir una prioridad más alta de UDP]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[Requiere al menos 384 Kbs de ancho de banda]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[El tráfico puede resultar predecible y fluido]]></text>
+</component>
+
+<component id="txt_q7">
+	<text><![CDATA[No consume muchos recursos de red]]></text>
+</component>
+
+<component id="txt_q8">
+	<text><![CDATA[El tráfico puede resultar fluido o con estallidos]]></text>
+</component>
+
+<component id="txt_q9">
+	<text><![CDATA[El tráfico puede ser imprevisible, inconsistente y con estallidos]]></text>
+</component>
+
+<component id="txt_q10">
+	<text><![CDATA[Muy sensible a las demoras y paquetes descartados]]></text>
+</component>
+
+<component id="txt_q11">
+	<text><![CDATA[Si se pierden los paquetes en el tránsito, serán reenviados]]></text>
+</component><!--Answers - Give the column number(s), column numbering start with 1 not 0--><!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[3]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a7">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a8">
+	<text><![CDATA[3]]></text>
+</component>
+
+<component id="txt_a9">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a10">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a11">
+	<text><![CDATA[3]]></text>
+</component><!-- Correct Feedback --><component id="ID_titleCorrect">
+	<text><![CDATA[<font size="17">Correcto</font>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Ha clasificado correctamente las características del tráfico.]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_titleIncorrect">
+	<text><![CDATA[<font size="17">Incorrecto</font>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[No ha clasificado correctamente las características del tráfico. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+
+</textcomponents>

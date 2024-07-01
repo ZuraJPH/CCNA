@@ -1,0 +1,1 @@
+La figura muestra un edificio con varios pisos.  Los pisos más bajos son Ingeniería y Producción.  Los pisos medios son Finanzas y Contabilidad.  Los pisos superiores son Marketing y Ventas.   Estos pisos están todos conectados a un firewall, que se conecta a Internet.

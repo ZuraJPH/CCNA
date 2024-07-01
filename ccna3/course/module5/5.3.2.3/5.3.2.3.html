@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.3 Saludo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Saludo</h1>
+        <div>
+          <p>El segundo paso en el proceso de routing de estado de enlace es que cada router asume la responsabilidad de encontrarse con sus vecinos en redes conectadas directamente.  </p>
+          <p></p>
+          <p>Los routers con protocolos de routing de estado de enlace utilizan un protocolo de saludo para detectar cualquier vecino en sus enlaces.  Un vecino es cualquier otro router habilitado con el mismo protocolo de routing de estado de enlace. </p>
+          <p></p>
+          <p>Haga clic en Reproducir en la ilustración para ver una animación sobre el proceso de detección de vecinos de estado de enlace con paquetes de saludo.</p>
+          <p></p>
+          <p>En la animación, R1 envía paquetes de saludo por sus enlaces (interfaces) para detectar a sus vecinos.  R2, R3 y R4 responden al paquete de saludo con sus propios paquetes de saludo debido a que dichos routers están configurados con el mismo protocolo de routing de estado de enlace.  No hay vecinos fuera de la interfaz FastEthernet 0/0.  Debido a que el R1 no recibe un saludo en esta interfaz, no continúa con los pasos del proceso de routing de estado de enlace para el enlace FastEthernet 0/0. </p>
+          <p></p>
+          <p>Cuando dos routers de estado de enlace descubren que son vecinos, forman una adyacencia.  Estos pequeños paquetes de saludo continúan intercambiándose entre dos vecinos adyacentes y cumplen la función de keepalive (mantenimiento de la conexión) para monitorear el estado del vecino.  Si un router deja de recibir paquetes de saludo por parte de un vecino, dicho vecino se considera inalcanzable y se rompe la adyacencia.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra el router R1 con una interfaz Fast Ethernet activa y conectado a otros tres routers a través de cada uno de los tres enlaces WAN.  La figura es una animación que muestra cuando el router envía paquetes de saludo a las cuatro interfaces activas.  Los tres routers conectados devuelven paquetes de saludo al router R1.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

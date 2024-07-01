@@ -1,0 +1,1 @@
+En la figura pueden verse tres nubes.  Dos están etiquetadas como IPv6 y la otra como IPv4.  Los paquetes que se transmiten entre las dos redes IPv6 son paquetes IPv6 nativos.  Los paquetes que se transmiten entre IPv4 e IPv6 están traducidos.

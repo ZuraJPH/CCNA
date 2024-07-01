@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.4.1.2 Depuración de PPP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Depuración de PPP</h1>
+        <div>
+          <p>Además del comando <b>debug ppp</b>, existen otros comandos para la resolución de problemas de una conexión PPP.</p>
+          <p></p>
+          <p>Un buen comando para usar durante la resolución de problemas de encapsulación de interfaces seriales es el comando <b>debug ppp packet</b>, como se muestra en la figura 1. En el ejemplo de la ilustración, se representan intercambios de paquetes durante el funcionamiento normal de PPP, incluido el estado LCP, los procedimientos de LQM y el número mágico LCP.  </p>
+          <p></p>
+          <p>En la figura 2, se muestra el resultado del comando <b>debug ppp negotiation</b> en una negociación normal, donde ambos lados acuerdan los parámetros de NCP. En este caso, se proponen y se confirman los tipos de protocolo IPv4 e IPv6. El comando <b>debug ppp negotiation</b> permite que el administrador de red vea las transacciones de negociación PPP, identifique el problema o la etapa en que se produce el error, y desarrolle una solución.  El resultado incluye la negociación LCP, la autenticación, y la negociación NCP. </p>
+          <p></p>
+          <p>El comando <b>debug ppp error</b> se utiliza para mostrar los errores de protocolo y las estadísticas de errores con relación a la negociación y la operación de las conexiones PPP, como se muestra en la figura 3. Estos mensajes pueden aparecer cuando se habilita la opción de protocolo de calidad en una interfaz que ya ejecuta PPP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra la salida del comando debug ppp packet.  Esta salida muestra todos los paquetes de PPP enviados y recibidos por el router. La figura 2 muestra la salida del comando debug ppp negotiation.  Esta salida muestra todas las transacciones de negociación de PPP. La figura 3 muestra la salida del comando debug ppp error.  Esta salida muestra los errores de protocolo y las estadísticas de errores.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.4 Cambio de pertenencia de puertos de una VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cambio de pertenencia de puertos de una VLAN</h1>
+        <div>
+          <p>Existen varias maneras de cambiar la pertenencia de puertos de una VLAN. En la figura 1, se muestra la sintaxis para cambiar la pertenencia de un puerto de switch de la VLAN 1 con el comando <b>no switchport access vlan</b> del modo de configuración de interfaz. </p>
+          <p></p>
+          <p>La interfaz F0/18 se asignó anteriormente a la VLAN 20. Se introduce el comando <b>no switchport access vlan</b> para la interfaz F0/18. Examine el resultado del comando <b>show vlan brief</b> que le sigue inmediatamente, como se muestra en la figura 2. El comando <b>show vlan brief</b> muestra el tipo de asignación y pertenencia de VLAN para todos los puertos de switch. El comando <b>show vlan brief</b> muestra una línea para cada VLAN. El resultado para cada VLAN incluye el nombre, el estado y los puertos de switch de la VLAN.</p>
+          <p></p>
+          <p>La VLAN 20 sigue activa, aunque no tenga puertos asignados. En la figura 3, se muestra que el resultado del comando <b>show interfaces f0/18 switchport</b> verifica que la VLAN de acceso para la interfaz F0/18 se haya restablecido a la VLAN 1.</p>
+          <p></p>
+          <p>La pertenencia de VLAN de un puerto se puede cambiar fácilmente. No es necesario eliminar primero un puerto de una VLAN para cambiar su pertenencia de VLAN. Cuando se vuelve a asignar la pertenencia de VLAN de un puerto de acceso a otra VLAN existente, la nueva pertenencia de VLAN simplemente reemplaza la pertenencia de VLAN anterior. En la figura 4, el puerto F0/11 se asignó a la VLAN 20.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 5 para cambiar la pertenencia de puertos de una VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una tabla con los comandos de Cisco IOS necesarios para eliminar un puerto de switch de una VLAN. La figura dos muestra la sintaxis para eliminar el puerto F0/18 de una VLAN y el resultado del comando “show vlan brief” para verificar que el puerto F0/18 vuelva a la VLAN uno. La figura tres muestra el resultado del comando "show interfaces F0/18". La figura cuatro muestra la sintaxis para configurar F0/11 como puerto de acceso y miembro de la VLAN 20.  También se muestra el resultado del comando “show vlan brief” para verificar que el puerto esté asignado a la VLAN correcta. La figura cinco es una actividad interactiva que permite a los alumnos practicar trabajar con un switch y asignarlo y desasignarlo a una VLAN.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

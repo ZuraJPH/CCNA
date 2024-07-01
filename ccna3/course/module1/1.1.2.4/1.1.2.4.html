@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.4 Aumento del ancho de banda</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Aumento del ancho de banda</h1>
+        <div>
+          <p>
+            <b>Implementación de EtherChannel</b>
+          </p>
+          <p></p>
+          <p>En el diseño de red jerárquico, es posible que algunos enlaces entre los switches de acceso y distribución necesiten procesar una mayor cantidad de tráfico que otros enlaces. A medida que el tráfico de varios enlaces converge en un único enlace de salida, es posible que en dicho enlace se produzca un cuello de botella.  La agregación de enlaces permite que el administrador aumente el ancho de banda entre los dispositivos mediante la creación de un enlace lógico compuesto de varios enlaces físicos. Como se muestra en la ilustración, EtherChannel es una forma de agregación de enlaces que se utiliza en las redes conmutadas. </p>
+          <p></p>
+          <p>EtherChannel utiliza los puertos de switch existentes, por lo tanto, no es necesario incurrir en gastos adicionales para actualizar el enlace a una conexión más veloz y costosa. El enlace EtherChannel se ve como un enlace lógico que utiliza una interfaz EtherChannel. La mayoría de las tareas de configuración se realizan en la interfaz EtherChannel en lugar de en cada puerto individual, lo que asegura la coherencia de configuración en todos los enlaces. Por último, la configuración de EtherChannel aprovecha el balanceo de carga entre los enlaces que forman parte del mismo EtherChannel y, según la plataforma de hardware, se pueden implementar uno o más métodos de balanceo de carga.</p>
+          <p></p>
+          <p>En el capítulo "EtherChannel y protocolo HSRP", se detallan el funcionamiento y la configuración de EtherChannel. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura, se muestran dos switches multicapa conectados a un switch único.  Cada conexión utiliza un EtherChannel.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

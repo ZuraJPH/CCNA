@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.2 Estados de los puertos y funcionamiento de PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Estados de los puertos y funcionamiento de PVST+</h1>
+        <div>
+          <p>STP facilita la ruta lógica sin bucles en todo el dominio de difusión. El árbol de expansión se determina a través de la información obtenida en el intercambio de tramas de BPDU entre los switches interconectados. Para facilitar el aprendizaje del árbol de expansión lógico, cada puerto de switch sufre una transición a través de cinco estados posibles y tres temporizadores de BPDU.</p>
+          <p></p>
+          <p>El árbol de expansión queda determinado inmediatamente después de que el switch finaliza el proceso de arranque. Si un puerto de switch pasa directamente del estado de bloqueo al de reenvío sin información acerca de la topología completa durante la transición, el puerto puede crear un bucle de datos temporal. Por esta razón, STP introduce cinco estados de puertos. PVST+ utiliza los mismos cinco estados de puerto. La figura describe los siguientes estados de puerto que aseguran que no se produzcan bucles durante la creación del árbol de expansión lógico:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Bloqueo</b>: el puerto es un puerto alternativo y no participa en el reenvío de tramas. El puerto recibe tramas de BPDU para determinar la ubicación y el ID de raíz del switch del puente raíz y los roles de puertos que cada uno de estos debe asumir en la topología final de STP activa.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Escucha</b>: escucha a la espera de la ruta hacia la raíz. STP determinó que el puerto puede participar en el reenvío de tramas según las tramas de BPDU que recibió el switch. El puerto de switch recibe las tramas de BPDU, transmite sus propias tramas de BPDU e informa a los switches adyacentes que el puerto de switch se está preparando para participar de la topología activa.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Aprendizaje</b>: aprende las direcciones MAC. El puerto se prepara para participar en el reenvío de tramas y comienza a completar la tabla de direcciones MAC. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Reenvío</b>: el puerto se considera parte de la topología activa. Reenvía tramas de datos, además de enviar y recibir tramas BPDU. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Deshabilitado</b>: el puerto de la Capa 2 no participa en el árbol de expansión y no envía tramas. El estado deshabilitado se establece cuando el puerto de switch se encuentra administrativamente deshabilitado.</li>
+            </ul>
+          </p>
+          <p>Observe que la cantidad de puertos en cada uno de los diversos estados (bloqueo, escucha, aprendizaje o reenvío) se puede mostrar con el comando <b>show spanning-tree summary</b>.</p>
+          <p></p>
+          <p>Para cada VLAN en una red conmutada, PVST+ sigue cuatro pasos para proporcionar una topología de red lógica sin bucles:</p>
+          <p></p>
+          <p>
+            <b>Paso 1. Elegir un puente raíz</b>: solo un switch puede funcionar como puente raíz (para una determinada VLAN). El puente raíz es el switch con la menor ID de puente. En el puente raíz, todos los puertos son puertos designados (no son puertos raíz).</p>
+          <p></p>
+          <p>
+            <b>Paso 2. Seleccionar el puerto raíz en cada puerto que no es raíz</b>: PVST+ establece un puerto raíz en cada puente que no es raíz para cada VLAN. El puerto raíz es la ruta de menor costo desde el puente que no es raíz hasta el puente raíz, lo que indica la dirección de la mejor ruta hacia el puente raíz. Generalmente, los puertos raíz están en estado de reenvío.</p>
+          <p></p>
+          <p>
+            <b>Paso 3. Seleccionar el puerto designado en cada segmento</b>: PVST+ establece un puerto designado en cada enlace para cada VLAN. El puerto designado se selecciona en el switch que posee la ruta de menor costo hacia el puente raíz. Por lo general, los puertos designados se encuentran en el estado de reenvío y reenvían el tráfico para el segmento. </p>
+          <p></p>
+          <p>
+            <b>Paso 4. El resto de los puertos en la red con switches son puertos alternativos</b>: en general, los puertos alternativos se mantienen en el estado de bloqueo para romper la topología de bucle de forma lógica. Cuando un puerto se encuentra en el estado de bloqueo, no reenvía tráfico pero puede procesar los mensajes de BPDU recibidos.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una tabla que indica si un puerto recibirá BPDU, reenviará datos recibidos en la interfaz, reenviará los datos que provienen desde otra interfaz a través de un switch, o detectará direcciones MAC para los 5 modos diferentes de STP. Los cinco modos son bloqueo, escucha, aprendizaje, reenvío y desactivado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

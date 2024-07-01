@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.1 Ruta estática por defecto</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ruta estática por defecto</h1>
+        <div>
+          <p>Los routers suelen utilizar rutas predeterminadas configuradas de forma local, o bien, descubiertas por otro router, mediante un protocolo de routing dinámico. Una ruta predeterminada no requiere que ningún bit más significativo coincida entre la ruta predeterminada y la dirección IPv4 de destino. Una ruta predeterminada se utiliza cuando ninguna otra ruta de la tabla de routing coincide con la dirección IP de destino del paquete. Es decir, si no existe una coincidencia más específica, entonces se utiliza la ruta predeterminada como el gateway de último recurso. </p>
+          <p></p>
+          <p>En general, las rutas estáticas predeterminadas se utilizan al conectar:</p>
+          <p>
+            <ul>
+              <li>Un router perimetral a la red de un proveedor de servicios</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un router de rutas internas (aquel con solo un router vecino ascendente) </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Como se muestra en la ilustración, la sintaxis del comando para una ruta estática predeterminada es similar a la sintaxis del comando de cualquier otra ruta estática, con la excepción de que la dirección de red es <b>0.0.0.0</b> y la máscara de subred es <b>0.0.0.0</b>. </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Nota</b>: una ruta estática predeterminada IPv4 suele llamarse “ruta de cuádruple cero”. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra la sintaxis para configurar una ruta estática predeterminada.  La sintaxis es similar a una ruta estática estándar, excepto que la red de destino y la máscara de subred son todos ceros.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

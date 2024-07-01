@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.1 Características de EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Características de EIGRP </h1>
+        <div>
+          <p>EIGRP se lanzó originalmente en 1992 como un protocolo exclusivo disponible solamente en los dispositivos de Cisco. Sin embargo, en 2013, Cisco publicó una funcionalidad básica de EIGRP como estándar abierto al IETF, como una RFC informativa. Esto significa que otros proveedores de redes ahora pueden implementar EIGRP en sus equipos para que interoperen con routers que ejecuten EIGRP, ya sean de Cisco o de otros fabricantes. Sin embargo, las características avanzadas de EIGRP, como las áreas aisladas (stub) de EIGRP necesarias para la implementación de la red privada virtual dinámica multipunto (DMVPN), no se cederán al IETF. Como RFC informativa, Cisco mantendrá el control de EIGRP.</p>
+          <p></p>
+          <p>EIGRP incluye características de protocolos de routing de estado de enlace y vector distancia. Sin embargo, aún se basa en el principio clave del protocolo de routing por vector de distancias, según el cual la información acerca del resto de la red se obtiene a partir de vecinos conectados directamente.</p>
+          <p></p>
+          <p>EIGRP es un protocolo de routing por vector de distancias avanzado que incluye características que no se encuentran en otros protocolos de routing por vector de distancias, como RIP e IGRP.</p>
+          <p></p>
+          <p>En Cisco IOS versión 15.0(1)M, Cisco incorporó una nueva opción de configuración de EIGRP llamada <b>EIGRP designado</b>. El EIGRP designado habilita la configuración de EIGRP para IPv4 e IPv6 en un solo modo de configuración. Esto permite eliminar la complejidad de la configuración que se produce al configurar el EIGRP para IPv4 e IPv6. El EIGRP designado excede el ámbito de este curso.</p>
+          <p></p>
+          <p>Las características del EIGRP incluyen las siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Algoritmo de actualización por difusión</b>: como motor informático que impulsa al EIGRP, el algoritmo de actualización por difusión (DUAL, Diffusing Update Algorithm) constituye el centro del protocolo de routing. DUAL garantiza rutas de respaldo y sin bucles en todo el dominio de routing. Al usar DUAL, EIGRP almacena todas las rutas de respaldo disponibles a los destinos, de manera que se puede adaptar rápidamente a rutas alternativas si es necesario. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Establecimiento de adyacencias de vecinos</b>: el EIGRP establece relaciones con routers conectados directamente que también están habilitados para EIGRP. Las adyacencias de vecinos se usan para rastrear el estado de esos vecinos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocolo de transporte confiable</b>: el RTP (Reliable Transport Protocol, protocolo de transporte confiable) es exclusivo de EIGRP y se encarga de la entrega de los paquetes EIGRP a los vecinos. RTP y el rastreo de las adyacencias de vecinos establecen el marco para DUAL. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Actualizaciones parciales y limitadas</b>: el EIGRP utiliza los términos “parcial” y “limitado” cuando se refiere a sus actualizaciones. A diferencia de RIP, EIGRP no envía actualizaciones periódicas, y las entradas de ruta no vencen. El término “parcial” significa que la actualización solo incluye información acerca de cambios de ruta, como un nuevo enlace o un enlace que deja de estar disponible. El término “limitado” hace referencia a la propagación de las actualizaciones parciales que se envían solo a aquellos routers a que los cambios afecten. Esto minimiza el ancho de banda que se requiere para enviar actualizaciones de EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Equilibrio de carga de mismo costo y con distinto costo</b>: EIGRP admite el equilibrio de carga de mismo costo y el equilibrio de carga con distinto costo, lo que permite a los administradores distribuir mejor el flujo de tráfico en sus redes. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: En algunos documentos antiguos, se utiliza el término protocolo de “routing híbrido” para definir al EIGRP. Sin embargo, este término es engañoso, porque EIGRP no es un híbrido entre protocolos de routing por vector de distancias y protocolos de estado de enlace. EIGRP es únicamente un protocolo de routing por vector de distancias; por lo que Cisco ya no usa ese término para referirse a él.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra una tabla de protocolos de routing para IPv4 e IPv6, separados en protocolos de routing interior y exterior.  Los protocolos interiores se dividen en protocolos de routing con vector de distancia y de estado de enlace.  Los protocolos con vector de distancia son RIP y EIGRP para IPv4, y RIP NG y EIGRP para IPv6.  Los protocolos de estado de enlace son OSPF versión 2 e IS-IS para IPv4, y OSPF versión 3 e IS-IS para IPv6.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

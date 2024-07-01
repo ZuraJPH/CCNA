@@ -1,0 +1,26 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#ID_s4_txt04,#ID_s4_txt02,#ID_s4_txt03,#ID_s4_txt01,#ID_s3_txt03,#ID_s3_txt02,#ID_s3_txt01,#ID_s2_txt02,#ID_s2_txt01,#ID_s1_txt01{
+	line-height:1.1;
+}
+#ID_s4_txt04,#ID_s4_txt03,#ID_s3_txt03{
+	top:20px!important;
+}
+#ID_s4_txt02,#ID_s3_txt02,#ID_s2_txt02{
+	top:11px!important;
+}
+#ID_heading4{
+	line-height: 12px !important;
+}

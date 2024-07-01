@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.1 Entradas de la tabla de routing</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entradas de la tabla de routing</h1>
+        <div>
+          <p>La topología que se muestra en la figura 1 se utiliza como la topología de referencia para esta sección.  Observe lo siguiente en la topología:</p>
+          <p>
+            <ul>
+              <li>El R1 es el router perimetral que se conecta a Internet; por lo tanto, propaga una ruta estática predeterminada a R2 y R3. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R1, el R2 y el R3 contienen redes no contiguas separadas por otra red con clase.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R3 también introduce una ruta de superred 192.168.0.0/16.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2, se muestra la tabla de routing IPv4 del R1 con las rutas dinámicas, estáticas y conectadas directamente.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> en los inicios, la jerarquía de la tabla de routing en el IOS de Cisco se implementó con el esquema de routing con clase. Si bien la tabla de routing incorpora el direccionamiento con clase y sin clase, la estructura general aún se construye en base a este esquema con clase.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres routers conectados linealmente a través de enlaces WAN.  R-1 está conectado a R-2 a través de un enlace WAN serie, y tiene una LAN en una interfaz Ethernet.  R-2 está conectado a R-1 y R-3 a través de enlaces WAN serie, y tiene una LAN en una interfaz Ethernet.  R-3 solo se conecta a R-2 a través de un enlace WAN serie, y tiene dos LAN en las interfaces Ethernet.  R-1 tiene un enlace WAN serie a Internet, y el router R-3 tiene un enlace WAN serie a otra red en la nube. La figura 2 muestra el resultado del comando show ip route pipe begin Gateway.  Esto muestra la tabla de routing para el router R1, que tiene tres rutas conectadas directamente con tres direcciones IP de interfaz, cinco rutas aprendidas a través de RIP, una ruta predeterminada candidata y un gateway de último recurso configurado.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

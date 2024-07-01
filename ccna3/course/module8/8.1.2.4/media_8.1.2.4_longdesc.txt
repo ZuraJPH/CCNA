@@ -1,0 +1,1 @@
+En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio de la distribución en forma de diamante y está conectado a dos de los cuatro routers.  En la figura se muestran paquetes de saludo enviados y recibidos por todos los routers vecinos.

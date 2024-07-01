@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.8 Actividad: evaluar ACE extendidas</title>
+    <!-- Activity / Other / Flash Check Box -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Actividad: evaluar ACE extendidas</h1>
+        <div>
+          <p>Ingrese el texto del guión aquí</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" src="media/index.html" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Las figuras 1, 2, 3 y 4 son elementos de medios interactivos que permiten que el estudiante evalúe instrucciones de ACL extendidas. La topología de las cuatro actividades se encuentra en la figura 1. La red LAN 1 es 192.168.1.0/24 y se conecta a través de Fa0/0 en R1. Una PC 192.168.1.66 se encuentra en la red LAN. Una nota que apunta hacia Fa0/0 en R1 dice: La ACL 103 se aplica a la interfaz Fa0/0 en sentido de entrada. La red LAN 2 también se conecta a R1 a través de Fa0/1. La red LAN 2 es 192.168.2.0/24. S0/0/0 en R1 se conecta a S0/0/0 en R2 y es la red 172.16.1.0/30. Fa0/0 en R2 se usa para conectarse a LAN 3 172.16.3.0/24. Un servidor reside en la red LAN 3 y tiene la dirección IP 172.16.3.200. Fa0/1 en R2 se usa para conectarse a LAN 4 192.168.4.0/24. Una PC reside en la red LAN 4 y tiene la dirección IP 192.168.4.12. Las instrucciones indican hacer clic en los botones 2, 3 y 4 para realizar la actividad. Haga clic en el botón 1 para revisar la topología en cualquier momento. La figura 2 es una actividad para evaluar instrucciones de ACL extendidas. Situación 1: Consulte la topología en la primera figura. Esta situación proporciona la ACL extendida 103 y las combinaciones de origen y destino de la tabla. Sobre la base de esta información, determine si se permitirán o denegarán los paquetes. Arrastre las palabras Permitir o Denegar al campo junto a cada combinación de origen y destino. Haga clic en el botón 3 para continuar. La lista de acceso de cinco líneas es la siguiente: access-list 103 permit ip host 192.168.1.66 host 192.168.3.75, access-list 103 permit ip host 192.168.1.77 host 192.168.3.75, access-list 103 deny ip 192.168.1.0 0.0.0.255 host 192.1168.3.75, access-list 103 deny ip 192.168.1.0 0.0.0.255 192.168.4.0 0.0.0.255, access-list 103 permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255. Hay una tabla de 3 columnas para esta actividad. Una columna tiene direcciones IP de origen. Una columna tiene direcciones IP de destino. La tercera columna tiene el encabezado permit o deny y contiene un rectángulo vacío. El primer par de direcciones IP de origen y destino es 192.168.1.66 y 192.168.3.51. El segundo par es 192.168.1.66 y 192.168.3.75. El tercer par es 192.168.1.88 y 192.168.3.51. El cuarto par de direcciones es 192.168.1.88 y 192.168.3.75. El quinto par es 192.168.1.77 y 192.168.3.75. El último par es 192.168.1.33 y 192.168.2.34. Instrucciones de la figura 3. Situación 2: Consulte la topología en la primera figura. Esta situación proporciona la ACL extendida 104 y las combinaciones de origen y destino de la tabla. Sobre la base de esta información, determine si se permitirán o denegarán los paquetes. Arrastre los botones Permitir o Denegar hacia el campo junto a cada combinación de origen y destino. Haga clic en el botón 4 para continuar. La lista de acceso de cuatro líneas es la siguiente: access-list 104 deny tcp host 192.168.1.66 host 192.168.3.200 eq 80, access-list 104 permit tcp host 192.168.1.77 host 192.168.3.75 eq 22, access-list 104 deny ip 192.168.1.0 0.0.0.255 192.168.3.0 0.0.0.255, access-list 104 permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255. La figura contiene una tabla de cuatro columnas con dirección IP de origen, dirección IP de destino, protocolo y un rectángulo en blanco debajo de la columna de permitir o denegar. El primer conjunto de parámetros es el siguiente: 192.168.1.66 192.168.3.20 http. La segunda fila contiene 192.168.1.66, 192.168.4.75 y ssh. La tercera fila es 192.168.1.77, 192,168.3.75 y http. La cuarta fila es 192.168.1.88, 192.168.2.75 y http. La quinta fila es 192.168.1.77 192.168.3.75 y ssh. La última fila contiene 192.168.1.66, 192.168.3.200 y http. La figura 4 contiene instrucciones para la situación 3: Consulte la topología en la primera figura. Esta situación proporciona la ACL extendida 105 y las combinaciones de origen y destino de la tabla. Sobre la base de esta información, determine si se permitirán o denegarán los paquetes. Arrastre los botones Permitir o Denegar hacia el campo junto a cada combinación de origen y destino. La lista de acceso 105 tiene 4 líneas: access-list 105 permit tcp 192.168.1.0 0.0.0.255 host 192.168.3.200 eq 80, access-list 105 permit ip host 192.168.1.66 host 192.168.3.200, access-list 105 permit tcp 192.168.1.0 0.0.0.255 host 192.168.4.12 eq 22, access-list 105 permit tcp host 192.168.1.66 192.168.2.0 0.0.,0.255 eq 23. La figura 4 tiene una tabla de cuatro columnas con los 4 encabezados siguientes: origen, destino, protocolo y permitir o denegar. La columna permitir o denegar contiene rectángulos en blanco en el encabezado. La primera fila es 192.168.1.67, 192.168.2.88, http. La segunda fila es 192.168.1.66, 192.168.4.12, ssh. La tercera fila es 192.168.1.77 192.168.3.75, http. La cuarta fila es 192.168.1.66, 192.168.2.75 y Telnet. La quinta fila es 192.168.1.77 192.168.2.75 y Telnet. La última fila contiene 192.168.1.66, 192.168.3.200 y Telnet.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

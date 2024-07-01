@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.2 Cómo aplicar listas ACL a una interfaz</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cómo aplicar listas ACL a una interfaz</h1>
+        <div>
+          <p>Las listas ACL se pueden configurar para aplicarse al tráfico entrante o al tráfico saliente, como se muestra en la figura 1. La última instrucción de una ACL es siempre una denegación implícita. Esta instrucción se inserta automáticamente al final de cada ACL, aunque no se vea en la salida del comando show.</p>
+          <p></p>
+          <p>Como se muestra en la figura 2, puede configurar una ACL por protocolo, por sentido, por interfaz:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Una ACL por protocolo:</b> para controlar el flujo de tráfico en una interfaz, se debe definir una ACL para cada protocolo habilitado en la interfaz.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Una ACL por sentido:</b> las ACL controlan el tráfico en una interfaz de a un sentido por vez. Se deben crear dos ACL diferentes para controlar el tráfico entrante y saliente.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Una ACL por interfaz:</b> las ACL controlan el tráfico de una interfaz, por ejemplo, GigabitEthernet 0/0.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra un router con un paquete que ingresa a un puerto. El paquete se procesará por un A.C.L entrante. La figura también muestra un paquete que sale del router. Este paquete se procesará por un A.C.L saliente. La figura 2 muestra un router con dos interfaces activas. Las interfaces entrante y saliente ejecutan I.P.v.4 e I.P.v.6.  Con dos interfaces y dos protocolos en ejecución, este router podría tener un total de ocho ACL distintas aplicadas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+	
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+#image_9{
+	margin-left: -13px !important;
+}
+#image_8{
+	margin-left: -10px !important;
+}#image_7{
+	margin-left: -5px !important;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.2 Ventajas de EtherChannel</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ventajas de EtherChannel</h1>
+        <div>
+          <p>En los inicios, Cisco desarrolló la tecnología EtherChannel como una técnica switch a switch LAN para agrupar varios puertos Fast Ethernet o gigabit Ethernet en un único canal lógico.  Cuando se configura un EtherChannel, la interfaz virtual resultante se denomina “canal de puertos”. Las interfaces físicas se agrupan en una interfaz de canal de puertos.</p>
+          <p></p>
+          <p>La tecnología EtherChannel tiene muchas ventajas: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La mayoría de las tareas de configuración se pueden realizar en la interfaz EtherChannel en lugar de en cada puerto individual, lo que asegura la coherencia de configuración en todos los enlaces.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>EtherChannel depende de los puertos de switch existentes. No es necesario actualizar el enlace a una conexión más rápida y más costosa para tener más ancho de banda.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El equilibrio de carga ocurre entre los enlaces que forman parte del mismo EtherChannel. Según la plataforma de hardware, se pueden implementar uno o más métodos de equilibrio de carga.  Estos métodos incluyen equilibrio de carga de la MAC de origen a la MAC de destino o equilibrio de carga de la IP de origen a la IP de destino, a través de enlaces físicos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>EtherChannel crea una agregación que se ve como un único enlace lógico. Cuando existen varios grupos EtherChannel entre dos switches, STP puede bloquear uno de los grupos para evitar los bucles de switching. Cuando STP bloquea uno de los enlaces redundantes, bloquea el EtherChannel completo. Esto bloquea todos los puertos que pertenecen a ese enlace EtherChannel. Donde solo existe un único enlace EtherChannel, todos los enlaces físicos en el EtherChannel están activos, ya que STP solo ve un único enlace (lógico).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>EtherChannel proporciona redundancia, ya que el enlace general se ve como una única conexión lógica. Además, la pérdida de un enlace físico dentro del canal no crea ningún cambio en la topología, por lo que no es necesario volver a calcular el árbol de expansión. Suponiendo que haya por lo menos un enlace físico presente, el EtherChannel permanece en funcionamiento, incluso si su rendimiento general disminuye debido a la pérdida de un enlace dentro del EtherChannel.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra un switch de capa de acceso conectado a dos switches de capa de distribución. Cada conexión se establece mediante dos enlaces entre los switches.  Los dos enlaces en cada conexión se agrupan para formar un EtherChannel entre los dos dispositivos. No hay puertos en el modo de bloqueo del protocolo STP.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

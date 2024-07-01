@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.4 Protocolos de routing de estado de enlace</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocolos de routing de estado de enlace</h1>
+        <div>
+          <p>A diferencia de la operación del protocolo de routing vector distancia, un router configurado con un protocolo de routing de estado de enlace puede crear una “vista completa” o una topología de la red al reunir información proveniente de todos los demás routers.  </p>
+          <p></p>
+          <p>Para continuar con nuestra analogía de letreros, el uso de un protocolo de routing de estado de enlace es como tener un mapa completo de la topología de la red. Los letreros a lo largo de la ruta de origen a destino no son necesarios, debido a que todos los routers de estado de enlace usan un mapa de la red idéntico. Un router de estado de enlace usa la información de estado de enlace para crear un mapa de la topología y seleccionar el mejor camino hacia todas las redes de destino en la topología.  </p>
+          <p></p>
+          <p>Los protocolos de routing de estado de enlace no usan actualizaciones periódicas. Por otro lado, los routers habilitados para RIP envían actualizaciones periódicas de su información de routing a sus vecinos. Después de que los routers hayan aprendido sobre todas las redes requeridas (es decir, que hayan logrado la convergencia), solo se envía una actualización de estado de enlace cuando hay un cambio en la topología. Por ejemplo, la actualización del estado de enlace en la animación no se envía hasta que la red 172.16.3.0 se desactiva.  </p>
+          <p></p>
+          <p>Haga clic en Reproducir en la ilustración para ver operaciones de estado de enlace.  </p>
+          <p></p>
+          <p>Los protocolos de estado de enlace funcionan mejor en situaciones donde:</p>
+          <p>
+            <ul>
+              <li>El diseño de red es jerárquico, lo cual suele suceder en redes extensas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La adaptación rápida a los cambios de la red es fundamental.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los administradores están bien informados sobre la implementación y el mantenimiento de un protocolo de routing de estado de enlace.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Hay dos IGP de estado de enlace IPv4:</p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF:</b> popular protocolo de routing que se basa en normas</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IS-IS:</b> popular en redes de proveedores</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura dos, se muestran tres routers conectados en triángulo a través de enlaces WAN seriales. Cada router está conectado a los otros dos routers.  Cada router tiene dos enlaces seriales activos más una interfaz Ethernet, y hay seis direcciones de red en total en la figura.  La figura es una animación que muestra el proceso de un protocolo de routing de estado de enlace que detecta una falla de una red conectada directamente y envía de inmediato actualizaciones del enlace que modificarán otros routers de la falla.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

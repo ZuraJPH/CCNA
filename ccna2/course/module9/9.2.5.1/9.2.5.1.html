@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.5.1 ¿NAT para IPv6?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.5.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>¿NAT para IPv6?</h1>
+        <div>
+          <p>La cuestión del agotamiento del espacio de direcciones IPv4 es una prioridad para el IETF desde principios de la década de los noventa. La combinación de las direcciones IPv4 privadas definidas en RFC 1918 y de NAT cumple un papel decisivo para retrasar este agotamiento. NAT presenta desventajas considerables, y en enero de 2011, la IANA asignó sus últimas direcciones IPv4 a los RIR. </p>
+          <p></p>
+          <p>Uno de los beneficios de NAT para IPv4 que no fueron intencionales es que oculta la red privada de Internet pública. NAT tiene la ventaja de que ofrece un nivel de seguridad considerable al denegar el acceso de las computadoras que se encuentran en Internet pública a los hosts internos. Sin embargo, no debe considerarse como un sustituto de la seguridad de red adecuada, como la que proporciona un firewall.</p>
+          <p></p>
+          <p>En RFC 5902, el Consejo de Arquitectura de Internet (IAB) incluyó la siguiente cita sobre la traducción de direcciones de red IPv6:</p>
+          <p></p>
+          <p>“En general, se cree que una caja NAT proporciona un nivel de protección porque los hosts externos no pueden iniciar directamente una comunicación con los hosts detrás de una NAT. No obstante, no se deben confundir las cajas NAT con los firewalls. Como se analizó en la sección 2.2 de RFC4864, el acto de traducción en sí mismo no proporciona seguridad. La función de filtrado con estado puede proporcionar el mismo nivel de protección sin requerir una función de traducción”.</p>
+          <p></p>
+          <p>Con una dirección de 128 bits, IPv6 proporciona 340 sextillones de direcciones. Por lo tanto, el espacio de direcciones no es un problema. IPv6 se desarrolló con la intención de que la NAT para IPv4 con su traducción entre direcciones IPv4 públicas y privadas resulte innecesaria. Sin embargo, IPv6 implementa una forma de NAT. IPv6 incluye su propio espacio de direcciones IPv6 privadas y NAT, que se implementan de manera distinta de como se hace para IPv4.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra una nube etiquetada Internet.  La nube está conectada a tres redes privadas diferentes mediante diferentes clases de direccionamiento privado.  En uno de ellos se utiliza una red privada Clase A, en otro la red privada Clase B, en el tercero se utiliza la red privada Clase C.  En todas las redes privadas se está usando NAT en los routers de frontera.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

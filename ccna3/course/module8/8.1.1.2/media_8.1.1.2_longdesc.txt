@@ -1,0 +1,1 @@
+En la figura uno, se enumeran las siguientes características de OSPF: eficaz, con convergencia rápida, escalable, seguro y sin clase. La figura dos es una tabla que enumera las distancias administrativas de los protocolos de routing. Se resalta el valor "110" para OSPF .

@@ -1,0 +1,1 @@
+La figura 1 muestra un ejemplo de configuración para proteger SNMPv3. La figura 2 es un verificador de sintaxis interactivo que requiere la configuración de autenticación de SNMPv3 en R1.

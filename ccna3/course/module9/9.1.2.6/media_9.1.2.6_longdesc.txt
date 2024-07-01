@@ -1,0 +1,1 @@
+La figura muestra los mensajes de LSA de tipo cinco generados por el ASBR. Los mensajes llevan la información sobre las direcciones de red externas. Luego, los ABR regeneran el mensaje en otras áreas.

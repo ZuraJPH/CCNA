@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.5 Medición de los datos</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Medición de los datos</h1>
+        <div>
+          <p>Al documentar la red, con frecuencia es necesario reunir información directamente de los routers y los switches. Los comandos obvios y útiles para la documentación de red incluyen <b>ping</b>, <b>traceroute</b> y <b>telnet</b>, así como los siguientes comandos <b>show</b>: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Los comandos <b>show ip interface brief</b> y <b>show ipv6 interface brief</b> se usan para mostrar el estado activo o inactivo y la dirección IP de todas las interfaces en un dispositivo. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los comandos <b>show ip route</b> y <b>show ipv6 route</b> se usan para mostrar la tabla de routing de un router a fin de detectar los vecinos conectados directamente, los dispositivos remotos adicionales (a través de las rutas detectadas) y los protocolos de routing que se configuraron. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El comando <b>show cdp neighbors detail</b> sirve para obtener información detallada sobre los dispositivos vecinos de conexión directa de Cisco.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figura detalla algunos de los comandos más comunes de Cisco IOS para la recopilación de datos.</p>
+          <p></p>
+          <p>La recolección manual de datos mediante los comandos <b>show</b> en dispositivos de red individuales puede tomar muchísimo tiempo y no es una solución escalable. Por esa razón, la recolección manual de datos se debe reservar para las redes más pequeñas o aquellas que se limitan a los dispositivos de red esenciales. Para diseños de red más simples, en las tareas de línea de base por lo general se combinan la recolección manual de datos con inspectores de protocolos de red simples.</p>
+          <p></p>
+          <p>Suele usarse software sofisticado de administración de redes para establecer los valores de referencia de las redes grandes y complejas. Estos paquetes de software permiten que los administradores creen y revisen automáticamente los informes, comparen los niveles de rendimiento actuales con las observaciones históricas, identifiquen automáticamente los problemas de rendimiento y creen alertas para las aplicaciones que no proporcionan los niveles esperados de servicio. </p>
+          <p></p>
+          <p>Establecer una línea de base inicial o realizar un análisis de monitoreo del rendimiento puede requerir muchas horas o muchos días para reflejar el rendimiento de la red con precisión. Con frecuencia, el software de administración de red o los inspectores y analizadores de protocolos se ejecutan continuamente a lo largo del proceso de recolección de datos. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla con varios comandos comunes para la recopilación de datos en dispositivos de red y sus descripciones. </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

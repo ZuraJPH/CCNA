@@ -1,0 +1,1 @@
+La figura muestra dos routers que se están conectando a una nube de WAN.  La figura muestra la salida del archivo de configuración y la sección de la salida que indica la interfaz serial.  Cada puerto serial se configura con una dirección IP versión 4 y una dirección IP versión 6 y se configura para usar PPP como protocolo de encapsulamiento.

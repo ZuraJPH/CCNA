@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.9 Cambio de la prioridad OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.9_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cambio de la prioridad OSPF</h1>
+        <div>
+          <p>En la topología de la figura 1, el R3 es el DR y el R2 es el BDR. Se decidió lo siguiente:</p>
+          <p>
+            <ul>
+              <li>El R1 debe ser el DR y se configura con una prioridad de 255.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R2 debe ser el BDR y se le deja la prioridad predeterminada de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>El R3 nunca debe ser un DR ni BDR y se configura con una prioridad de 0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 2, se cambia la prioridad de la interfaz Gigabit 0/0 del R1 de 1 a 255. </p>
+          <p></p>
+          <p>En la figura 3, se cambia la prioridad de la interfaz Gigabit 0/0 del R3 de 1 a 0. </p>
+          <p></p>
+          <p>Los cambios no tienen efecto automáticamente, debido a que el DR y el BDR ya fueron seleccionados. Por lo tanto, la elección de OSPF se debe negociar mediante uno de los siguientes métodos:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Desactivar las interfaces del router y volver a habilitarlas de a una: primero el DR, luego el BDR y después todos los demás routers.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Restablecer el proceso OSPF mediante el comando <b>clear ip ospf process</b> del modo EXEC con privilegios en todos los routers.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En la figura 4, se muestra cómo borrar el proceso OSPF en el R1. Suponga que el comando <b>clear ip ospf process</b> del modo EXEC con privilegios también se configuró en el R2 y el R3. Observe la información del estado de OSPF que se genera.</p>
+          <p></p>
+          <p>La salida que se muestra en la figura 5 confirma que el R1 ahora es el DR, con una prioridad de 255, e identifica las nuevas adyacencias de vecinos del R1. </p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 6 para verificar la función y las adyacencias del R2 y el R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran tres routers conectados a un switch:  los routers uno, dos (el BDR) y tres (el DR). En la figura dos, se muestra la sintaxis para configurar la prioridad de interfaz OSPF en el router uno a doscientos cincuenta y cinco. En la figura tres, se muestra la sintaxis para configurar la prioridad de interfaz OSPF en el router tres a cero. En la figura cuatro, se muestra la sintaxis para borrar el proceso de OSPF. En la figura cinco, se muestra la salida del comando "show ip ospf interface gig cero barra diagonal cero" en el router uno, que indica que es el DR. Debajo, aparece la salida del comando "show ip ospf neighbor". La figura seis es una actividad interactiva que permite que el estudiante practique cómo utilizar los comandos "show ip ospf interface" y "show ip ospf neighbor".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

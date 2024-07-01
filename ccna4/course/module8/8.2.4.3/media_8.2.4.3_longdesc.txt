@@ -1,0 +1,1 @@
+La figura muestra la salida del comando show interfaces gigabit ethernet zero slash zero en el router 1.  Se resaltan las colas de entrada y de salida.

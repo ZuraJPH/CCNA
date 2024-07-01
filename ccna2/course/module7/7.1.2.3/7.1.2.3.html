@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.3 Cálculo de la máscara wildcard</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Cálculo de la máscara wildcard</h1>
+        <div>
+          <p>El cálculo de máscaras wildcard puede ser difícil. Un método abreviado es restar la máscara de subred a 255.255.255.255.</p>
+          <p></p>
+          <p>
+            <b>Cálculo de máscara wildcard: ejemplo 1</b>
+          </p>
+          <p></p>
+          <p>En el primer ejemplo en la ilustración, suponga que desea permitir el acceso a todos los usuarios en la red 192.168.3.0. Dado que la máscara de subred es 255.255.255.0, podría tomar 255.255.255.255 y restarle la máscara de subred 255.255.255.0. El resultado genera la máscara wildcard 0.0.0.255.</p>
+          <p></p>
+          <p>
+            <b>Cálculo de máscara wildcard: ejemplo 2</b>
+          </p>
+          <p></p>
+          <p>En el segundo ejemplo en la ilustración, suponga que desea permitir el acceso a la red a los 14 usuarios en la subred 192.168.3.32/28. La máscara de subred para la subred IPv4 es 255.255.255.240; por lo tanto, tome 255.255.255.255 y réstele la máscara de subred 255.255.255.240. Esta vez, el resultado genera la máscara wildcard 0.0.0.15.</p>
+          <p></p>
+          <p>
+            <b>Cálculo de máscara wildcard: ejemplo 3</b>
+          </p>
+          <p></p>
+          <p>En el tercer ejemplo en la ilustración, suponga que solo quiere establecer la coincidencia con las redes 192.168.10.0 y 192.168.11.0. Una vez más, tome 255.255.255.255 y reste la máscara de subred regular que, en este caso, es 255.255.254.0. El resultado es 0.0.1.255.</p>
+          <p></p>
+          <p>Puede lograr el mismo resultado con instrucciones como las dos que se muestran a continuación:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit 192.168.10.0</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit 192.168.11.0</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Resulta mucho más eficaz configurar la máscara wildcard de la siguiente manera:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)#</span>
+            <span class="cmd">
+              <b> access-list 10 permit 192.168.10.0 0.0.1.255</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Considere un ejemplo en el cual se deben hacer coincidir las redes en el rango de 192.168.16.0/24 a 192.168.31.0/24. Estas redes resumirán en 192.168.16.0/20. En este caso, 0.0.15.255 es la máscara wildcard correcta para configurar una declaración eficaz de ACL, como se muestra a continuación:</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)#</span>
+            <span class="cmd">
+              <b> access-list 10 permit 192.168.16.0 0.0.15.255</b>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra tres maneras de calcular las máscaras wildcard que utilizan todos los 255 métodos de resta.  En el primer ejemplo, hay cuatro conjuntos de 255 y debajo aparece la máscara de subred I.P.v.4.  Luego se resta la máscara de subred de los cuatro conjuntos de 255, lo que resulta en la máscara wildcard.  La figura enumera 255 punto 255 punto 255 punto 255 menos 255 punto 255 punto 255 cero.  Esto dará cero punto cero punto cero punto 255 como máscara wildcard.  El ejemplo dos muestra cómo calcular una máscara wildcard de una red de barra diagonal 28.  La figura muestra 255 punto 255 punto 255 punto 255 guion 255 punto 255 punto 255 punto 240.  Esto dará cero punto cero punto cero punto 15 como máscara wildcard.  El ejemplo tres muestra cómo calcular una máscara wildcard con una máscara de subred de barra diagonal 23.  La figura muestra 255 punto 255 punto 255 punto 255 guion 255 punto 255 punto 255 punto 254.  Esto resultará en cero punto cero punto 1 punto 255 como la máscara wildcard.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Modelo cliente-servidor</b>]]></text>
+	</component>
+
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Cliente web]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Cliente de correo electrónico]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Servidor<br>de correo<br>electrónico]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Servidor web]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+	   <text><![CDATA[Servidor de archivos]]></text>
+	   </component>
+	<component id="ID_s1_txt06">
+	   <text><![CDATA[Cliente de archivos]]></text>
+	</component>
+	<component id="ID_s1_txt07">
+		<text><![CDATA[Switch]]></text>
+	</component>
+
+	<component id="ID_set03_header">
+	   <text><![CDATA[Servidor y cliente de correo electrónico]]></text>
+	</component>
+	<component id="ID_set03_body">
+	   <text><![CDATA[El servidor de correo electrónico ejecuta un software de servidor. Los clientes usan un software de correo electrónico, como Microsoft Outlook, para acceder al correo electrónico en el servidor.]]></text>
+	</component>
+	
+	<component id="ID_set02_header">
+	   <text><![CDATA[Servidor y cliente web]]></text>
+	</component>
+	<component id="ID_set02_body">
+	   <text><![CDATA[Un servidor web ejecuta software que ofrece sitios web o servicios a los usuarios finales. Los clientes usan el software del navegador, como Chrome o Firefox, para acceder a los sitios web en el servidor.]]></text>
+	</component>
+	
+	<component id="ID_set01_header">
+	   <text><![CDATA[Servidor y cliente de archivos]]></text>
+	</component>
+	<component id="ID_set01_body">
+	   <text><![CDATA[El servidor de archivos almacena el archivo. Los clientes acceden al archivo mediante un software de cliente, como Windows Explorer.]]></text>
+	</component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+		<text><![CDATA[<b>Modelo de computación en la nube</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt01">
+		<text><![CDATA[<b>Computación en la nube</b>]]></text>
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Computadora portátil]]></text>
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Móvil]]></text>
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Red]]></text>
+	</component>
+	<component id="ID_s2_txt05">
+		<text><![CDATA[PC]]></text>
+	</component>
+	<component id="ID_s2_txt06">
+		<text><![CDATA[Base de datos]]></text>
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[Servidor]]></text>
+	</component><!-- end slide 2 --><!-- slide 3 --><component id="ID_s3_title">
+		<text><![CDATA[<b>Modelo de computación en la niebla</b>]]></text>
+	</component>
+
+	<component id="ID_s3_txt01">
+		<text><![CDATA[Computación en la nube]]></text>
+	</component>
+	<component id="ID_s3_txt02">
+		<text><![CDATA[Computación en la niebla]]></text>
+	</component>
+	<component id="ID_s3_txt03">
+		<text><![CDATA[Computación en la niebla]]></text>
+	</component>
+	<component id="ID_s3_txt04">
+		<text><![CDATA[Internet]]></text>
+	</component>
+	<component id="ID_s3_txt05">
+		<text><![CDATA[Computación en la niebla]]></text>
+	</component>
+	<component id="ID_s3_txt06">
+		<text><![CDATA[Computación en la niebla]]></text>
+	</component>
+	<component id="ID_s3_txt07">
+		<text><![CDATA[Centro de datos]]></text>
+	</component><!-- end slide 3 --></textcomponents>

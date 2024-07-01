@@ -1,0 +1,1 @@
+La figura muestra el formato de trama HDLC estándar y el formato de trama HDLC de Cisco.  HDLC estándar admite solo entornos de un único protocolo. HDLC de Cisco usa un campo de datos de protocolo para admitir entornos multiprotocolo.

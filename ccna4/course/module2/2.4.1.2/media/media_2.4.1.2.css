@@ -1,0 +1,20 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+pre{
+	
+	line-height: 14px;
+}
+.outPut{
+	margin:0;padding:0;
+	
+}
+
+#ID_r1_txt01,#ID_r2_txt01{
+	margin-left: -5px;
+	margin-top: -6px;
+	padding-right: 13px;
+	padding-bottom: 12.5px;
+}

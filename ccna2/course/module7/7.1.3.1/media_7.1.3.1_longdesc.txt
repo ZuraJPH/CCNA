@@ -1,0 +1,1 @@
+La figura muestra un router con dos interfaces activas. Las interfaces entrante y saliente ejecutan I.P.v.4 e I.P.v.6.  Con dos interfaces y dos protocolos en ejecución, este router podría tener un total de ocho ACL distintas aplicadas.

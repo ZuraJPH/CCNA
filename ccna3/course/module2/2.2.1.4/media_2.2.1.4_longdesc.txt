@@ -1,0 +1,1 @@
+La figura ilustra un problema de configuración de un puerto de switch configurado incorrectamente como VLAN predeterminada en una topología de routing entre VLAN antigua.

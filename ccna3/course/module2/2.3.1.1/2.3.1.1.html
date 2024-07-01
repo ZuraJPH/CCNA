@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.1 Introducción al switching de capa 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introducción al switching de capa 3</h1>
+        <div>
+          <p>El routing entre VLAN mediante el método router-on-a-stick era fácil de implementar porque los routers solían estar disponibles en cada red. Sin embargo, como se muestra en la figura, la mayoría de las redes empresariales modernas utilizan switches de multicapa para obtener altas velocidades de procesamiento de paquetes con switching basado en hardware. Los switches de capa 3 suelen tener un rendimiento de switching de paquetes en el orden de los millones de paquetes por segundo (pps), mientras que los routers tradicionales proporcionan switching de paquetes en el orden de 100 000 a más de 1 millón de pps.</p>
+          <p></p>
+          <p>Todos los switches multicapa Catalyst admiten los siguientes tipos de interfaces de capa 3:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Puerto enrutado:</b> una interfaz puramente de capa 3 similar a la interfaz física de un router IOS de Cisco.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interfaz virtual del switch (SVI):</b> una interfaz VLAN virtual para routing entre VLAN. En otras palabras, las SVI son las interfaces VLAN enrutadas de manera virtual.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Los switches de alto rendimiento, como el Catalyst 6500 y el Catalyst 4500, realizan casi todas las funciones que incluyen a las capas 3 y superiores del modelo OSI con switching basado en hardware y en Cisco Express Forwarding.</p>
+          <p></p>
+          <p>Todos los switches Cisco Catalyst de capa 3 admiten protocolos de routing, pero varios modelos de switches Catalyst requieren un software mejorado para admitir características específicas de protocolos de routing. Los switches de la serie Catalyst 2960 que ejecutan IOS versión 12.2(55) o posterior admiten routing estático.</p>
+          <p></p>
+          <p>Los switches Catalyst utilizan diversas configuraciones predeterminadas para las interfaces. Todos los miembros de las familias de switches Catalyst 3560 y 4500 utilizan interfaces de capa 2 de manera predeterminada, mientras que los miembros de la familia de switches Catalyst 6500 que ejecutan el IOS de Cisco utilizan interfaces de capa 3 de forma predeterminada. Según la familia de switches Catalyst que se utilice, es posible que los comandos <b>switchport</b> o <b>no switchport</b> del modo de configuración de interfaz estén presentes en los archivos de configuración en ejecución o de configuración de inicio.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una topología ordenada con los hosts que se conectan a un clúster de switches redundantes que genera un router de gateway. El router de gateway se conecta a una granja de servidores, a Internet y a los segmentos de intranet de la red.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

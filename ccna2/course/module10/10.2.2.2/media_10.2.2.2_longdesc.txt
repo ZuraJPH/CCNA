@@ -1,0 +1,1 @@
+En la figura se muestra un switch y cuatro destinos para los mensajes de syslog: búfer de registro, línea de la consola, línea del terminal y servidor syslog.

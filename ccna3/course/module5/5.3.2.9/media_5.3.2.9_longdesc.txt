@@ -1,0 +1,1 @@
+Las figuras uno, dos y tres son tres elementos de medios interactivos que permiten que el estudiante vea una topología de red que contiene redes y costos de enlace, y desarrolle el árbol de SPF para dos routers.

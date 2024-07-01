@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.7 Habilitación de IP en un switch</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Habilitación de IP en un switch</h1>
+        <div>
+          <p>Los dispositivos de infraestructura de red requieren direcciones IP para habilitar la administración remota. Con la dirección IP del dispositivo, el administrador de red puede conectarse al dispositivo de forma remota mediante Telnet, SSH, HTTP o HTTPS.</p>
+          <p></p>
+          <p>Los switches no tienen una interfaz dedicada a la que se pueda asignar una dirección IP. En cambio, la información de dirección IP se configura en una interfaz virtual denominada “interfaz virtual conmutada” (SVI). </p>
+          <p></p>
+          <p>Por ejemplo, en la figura 1, se asigna la dirección IP 192.168.10.2/24 y un gateway predeterminado de 192.168.10.1 a la SVI del switch de capa 2 S1.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 2 para configurar el switch de capa 2 S2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura uno muestra una LAN que consta de dos routers y cada uno tiene un switch en cada uno de sus dos puertos de gigabit Ethernet.  Cada uno de los cuatro switches tiene una computadora conectada a él.  La figura muestra los comandos utilizados para configurar una dirección IP en la SVI y el proceso de la figura configura un switch con una dirección IP y un gateway predeterminado.  El primer comando se ejecuta desde el modo de configuración y es interface v lan 1, lo que hace que el switch pase al modo de configuración de interfaz.   El siguiente comando es ip address 192 punto 168 punto 10 punto 2 255 punto 255 punto 255 punto cero.  Ahora la interfaz debe encenderse con el comando no shutdown.  Sigue la configuración del gateway predeterminado, y esto se configura en el modo de configuración global. El comando para la figura es ip default guión gateway 192 punto 168 punto 10 punto 1. La figura dos es una actividad interactiva que permite que el estudiante configure una dirección IP y un gateway predeterminado en un switch.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

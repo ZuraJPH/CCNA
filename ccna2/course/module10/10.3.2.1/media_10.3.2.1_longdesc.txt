@@ -1,0 +1,1 @@
+En la figura número uno se muestran las características presentes en el paquete de IOS correspondiente al IOS del Router SRG2. Seguridad, comunicaciones unificadas y datos son todas las características de IP Base. En la figura número dos se muestra una tabla en la que se enumeran las transiciones sugeridas de IOS doce a quince.  

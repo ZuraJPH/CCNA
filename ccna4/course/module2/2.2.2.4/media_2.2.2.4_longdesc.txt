@@ -1,0 +1,1 @@
+La figura muestra una trama de PPP. Cada campo de la trama se etiqueta.  De izquierda a derecha los campos son indicador, dirección, control, protocolo, datos, FCS y un indicador más.

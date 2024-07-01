@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.1 Adyacencia de vecinos EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Adyacencia de vecinos EIGRP</h1>
+        <div>
+          <p>El objetivo de cualquier protocolo de routing dinámico es detectar redes remotas de otros routers y lograr la convergencia en el dominio de routing. Antes de que se pueda intercambiar cualquier paquete de actualización EIGRP entre routers, EIGRP debe detectar a sus vecinos. Los EIGRP vecinos son otros routers que ejecutan EIGRP en redes conectadas directamente.</p>
+          <p></p>
+          <p>EIGRP utiliza paquetes de saludo para establecer y mantener las adyacencias de vecinos. Para que dos routers EIGRP se conviertan en vecinos, deben coincidir varios parámetros entre ambos. Por ejemplo, dos routers EIGRP deben usar los mismos parámetros de métrica de EIGRP y ambos deben estar configurados con el mismo número de sistema autónomo.</p>
+          <p></p>
+          <p>Cada router EIGRP mantiene una tabla de vecinos, que contiene una lista de los routers en los enlaces compartidos que tienen una adyacencia EIGRP con ese router. La tabla de vecinos se usa para rastrear el estado de estos vecinos EIGRP. </p>
+          <p></p>
+          <p>La figura muestra dos routers EIGRP que intercambian paquetes de saludo EIGRP iniciales. Cuando un router con EIGRP habilitado recibe un paquete de saludo en una interfaz, agrega a ese router a su tabla de vecinos.</p>
+          <p></p>
+          <p>1. Un nuevo router (R1) aparece en el enlace y envía un paquete de saludo EIGRP a través de todas sus interfaces EIGRP configuradas.</p>
+          <p></p>
+          <p>2. El router R2 recibe el paquete de saludo en una interfaz con EIGRP habilitado. El R2 responde con un paquete de actualización EIGRP que contiene todas las rutas incluidas en su tabla de routing, excepto aquellas detectadas por medio de esa interfaz (horizonte dividido). Sin embargo, la adyacencia de vecino no se establece hasta que el R2 también envía un paquete de saludo EIGRP al R1.</p>
+          <p></p>
+          <p>3. Una vez que ambos routers intercambian saludos, se establece la adyacencia de vecino. El R1 y el R2 actualizan sus tablas de vecinos EIGRP y agregan el router adyacente como vecino.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestran dos routers.  Cada router ejecuta EIGRP. El router uno le envía un paquete de saludo al router dos.  El router dos le envía un paquete de actualización y de saludo al router uno.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.6.1 Rutas de host instaladas automáticamente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.6.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Rutas de host instaladas automáticamente</h1>
+        <div>
+          <p>Una ruta de host es una dirección IPv4 con una máscara de 32 bits o una dirección IPv6 con una máscara de 128 bits. Existen tres maneras de agregar una ruta de host a una tabla de routing:</p>
+          <p>
+            <ul>
+              <li>Se instala automáticamente cuando se configura una dirección IP en el router (como se muestra en las figuras 1 y 2)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configurarla como una ruta de host estático</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Obtener la ruta de host automáticamente a través de otros métodos (se analiza en cursos posteriores)</li>
+            </ul>
+          </p>
+          <p>El IOS de Cisco instala automáticamente una ruta de host, también conocida como ruta de host local, cuando se configura una dirección de interfaz en el router. Una ruta host permite un proceso más eficiente para los paquetes que se dirigen al router mismo, en lugar del envío de paquetes. Esto se suma a la ruta conectada, designada con una C en la tabla de routing para la dirección de red de la interfaz.</p>
+          <p></p>
+          <p>Cuando una interfaz activa en un router se configura con una dirección IP, se agrega automáticamente una ruta de host local a la tabla de routing. Las rutas locales se marcan con “L” en el resultado de la tabla de routing. Las direcciones IP asignadas a la interfaz Branch Serial0/0/0 son 198.51.100.1/30 para IPv4 y 2001:DB8:ACAD:1::1/64 para IPv6. Las rutas locales para la interfaz son instaladas por el IOS en la tabla de routing como se muestra en el resultado de la Figura 1 para IPv4 y la Figura 2 para IPv6.</p>
+          <p></p>
+          <p>Nota: Para IPv4, las rutas locales marcadas con una “L” se introdujeron con la versión 15 de IOS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Gráfico estático</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

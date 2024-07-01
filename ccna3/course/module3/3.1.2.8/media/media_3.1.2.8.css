@@ -1,0 +1,8 @@
+/*   load the main media CSS file    */
+@import url('../../../common/styles/media2.css');
+
+#ID_s1_txt07,#ID_s1_txt08,#ID_s1_txt09,#ID_s2_txt07,#ID_s2_txt08,#ID_s2_txt09,#ID_s3_txt07,#ID_s3_txt08,#ID_s3_txt09,
+#ID_s4_txt07,#ID_s4_txt08,#ID_s4_txt09,#ID_s5_txt07,#ID_s5_txt08,#ID_s5_txt09,#ID_s6_txt07,#ID_s6_txt08,#ID_s6_txt09,
+#ID_s7_txt07,#ID_s7_txt08,#ID_s7_txt09,#ID_s8_txt07,#ID_s8_txt08,#ID_s8_txt12,#ID_s9_txt07,#ID_s9_txt08,#ID_s9_txt12{
+	margin-left: -7px !important;
+}

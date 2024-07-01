@@ -1,0 +1,1 @@
+En la figura se muestra la salida que genera el comando “show ip eigrp topology” en el router dos.  Aquí vemos todas las rutas sin bucle hacia redes remotas.  

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.1.3 Topologías WAN </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Topologías WAN </h1>
+        <div>
+          <p>La interconexión de varios sitios a través de WAN puede incluir una variedad de tecnologías del proveedor de servicios y de topologías de WAN. Las topologías de WAN más comunes son:</p>
+          <p>
+            <ul>
+              <li>Punto a punto</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De estrella</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Malla completa</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>De seguridad preventiva doble</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Punto a punto</b>
+          </p>
+          <p></p>
+          <p>Una topología punto a punto, como se muestra en la Figura 1, utiliza un circuito punto a punto entre dos terminales. Generalmente se trata de conexiones de líneas alquiladas dedicadas como las líneas T1/E1. Una conexión punto a punto implica un servicio de transporte de capa 2 a través de la red del proveedor de servicios. Los paquetes enviados desde un sitio se entregan a otro sitio y viceversa. Una conexión punto a punto es transparente para la red del cliente, como si hubiera un enlace físico directo entre dos terminales.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>De estrella</b>
+          </p>
+          <p></p>
+          <p>Si se requiere una conexión de red privada entre varios sitios, entonces una topología punto a punto con múltiples circuitos punto a punto es una opción. Cada circuito punto a punto requiere su propia interfaz de hardware dedicada que requiere múltiples routers con tarjetas de interfaz WAN. Suele ser una opción costosa. Una opción menos costosa es una topología de punto a multipunto, también conocida como topología de estrella (hub and spoke). </p>
+          <p></p>
+          <p>Con una topología de estrella (hub-and-spoke) una sola interfaz a hub puede ser compartida por todos los circuitos de radio.  Por ejemplo, los sitios radiales se pueden interconectar a través del sitio de hubs mediante circuitos virtuales y subinterfaces enrutadas del hub. Una topología de estrella (hub and spoke) también es un ejemplo de una topología de localización simple. La figura 2 muestra una topología de estrella (hub and spoke) de ejemplo, que consta de cuatro routers con un router como concentrador conectado a los otros tres routers radiales a través de una nube WAN.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Malla completa</b>
+          </p>
+          <p></p>
+          <p>Una de las desventajas de las topologías de estrella es que la comunicación debe pasar a través del hub. Con una topología de malla completa con circuitos virtuales, cualquier sitio puede comunicarse directamente con cualquier otro sitio. La desventaja aquí es la gran cantidad de circuitos virtuales que se deben configurar y mantener. La figura 3 muestra una topología de malla completa de ejemplo, que consta de cuatro routers conectados entre sí a través de una nube WAN.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Topología de seguridad preventiva doble</b>
+          </p>
+          <p></p>
+          <p>Una topología de seguridad preventiva doble proporciona redundancia. Como se muestra en la figura 4, dos routers concentradores de seguridad preventiva doble están conectados en redundancia a tres routers radiales a través de una nube WAN. La desventaja de las topologías de seguridad preventiva doble es que son más costosas de implementar que las topologías de localización simple. Esto es porque requieren hardware de red, como routers y switches adicionales. Las topologías de seguridad preventiva doble son más difíciles de implementar porque requieren configuraciones adicionales y complejas. Sin embargo, la ventaja de las topologías de seguridad preventiva doble es que ofrecen redundancia de red, equilibrio de carga, computación o proceso distribuido mejorados, y la capacidad de implementar las conexiones del proveedor de servicio de respaldo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra dos routers marcados como “sitio A” y “sitio B” separados por una nube y conectados entre sí por una sola línea. Figura 2. Muestra 4 routers conectados entre sí a través de una nube, con una topología de estrella (hub and spoke), con el router concentrador rotulado “hub” y los routers radiales etiquetados como Radio A a C. La figura 3 muestra 4 routers conectados entre sí, en la nube, en una topología de malla completa a través de una nube, los routers están marcados como Sitios A a D. La figura 4 muestra 2 routers como los routers concentradores, conectados en una topología de malla completa con 3 routers radiales (A a C) a través de la nube. </div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

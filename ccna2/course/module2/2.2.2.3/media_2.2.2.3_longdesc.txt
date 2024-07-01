@@ -1,0 +1,1 @@
+La figura muestra el diagrama estándar de laboratorio con el resultado del comando “show ip route static”.  Esto muestra la relación entre el gateway de último recurso en la parte superior del resultado y la ruta estática predeterminada en la parte inferior.

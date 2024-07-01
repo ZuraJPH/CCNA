@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.3 Paso 2: Configure el nombre de dominio y la contraseña del VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paso 2: Configure el nombre de dominio y la contraseña del VTP</h1>
+        <div>
+          <p>Para configurar el nombre de dominio, se utiliza el comando de configuración global <b>vtp domain </b><i>domain-name</i> . En la figura 1, el nombre de dominio se configura como <b>CCNA</b> en el S1. El switch S1 luego envía una publicación del VTP al S2 y el S3. Si el S2 y el S3 tienen la configuración predeterminada con el nombre de dominio NULL, entonces ambos switches aceptarán CCNA como el nuevo nombre de dominio del VTP. El cliente VTP debe tener el mismo nombre de dominio que el servidor del VTP antes de que acepte las publicaciones del VTP.</p>
+          <p></p>
+          <p>Por razones de seguridad, se debe configurar una contraseña usando el comando <b>vtp password </b><i>password</i> . En la figura 2, la contraseña de dominio del VTP se configura en <b>cisco12345</b>. Todos los switches en el dominio del VTP deben utilizar la misma contraseña de dominio del VTP.</p>
+          <p></p>
+          <p>Compruebe la contraseña del VTP mediante el comando <b>show vtp password</b>, como se muestra en la figura 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura 1, se muestra la configuración del nombre de dominio.  En la figura 2, se muestra la configuración y la comprobación de la contraseña y el nombre de dominio.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

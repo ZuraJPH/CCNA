@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.7 Formato de trama BPDU 802.1D</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Formato de trama BPDU 802.1D</h1>
+        <div>
+          <p>El algoritmo de árbol de expansión depende del intercambio de BPDU para determinar un puente raíz. Una trama de BPDU contiene 12 campos distintos que transmiten la información de ruta y de prioridad que se utiliza para determinar el puente raíz y las rutas a él.</p>
+          <p></p>
+          <p>Haga clic en los campos de BPDU en la figura 1 para obtener más detalles.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Los primeros cuatro campos identifican el protocolo, la versión, el tipo de mensaje y los señaladores de estado.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los cuatro campos siguientes se utilizan para identificar el puente raíz y el costo de la ruta a él.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Los últimos cuatro campos son todos campos de temporizador que determinan la frecuencia con la que se envían los mensajes de BPDU y el tiempo que se retiene la información que se recibe mediante el proceso de BPDU. </li>
+            </ul>
+          </p>
+          <p>En la figura 2, se muestra una trama BPDU que se capturó mediante Wireshark. En el ejemplo, la trama de BPDU contiene más campos de los que se describieron anteriormente. El mensaje de BPDU se encapsula en una trama de Ethernet cuando se transmite a través de la red. El encabezado 802.3 indica las direcciones de origen y destino de la trama de BPDU. Esta trama tiene la dirección MAC de destino 01:80:C2:00:00:00, que es una dirección de multidifusión para el grupo de árbol de expansión. Cuando se envía una trama con esta dirección MAC, todos los switches que están configurados para árbol de expansión aceptan y leen la información de la trama. Todos los otros dispositivos de la red pasan por alto la trama.</p>
+          <p></p>
+          <p>En este ejemplo, el ID de raíz y el BID son iguales en la trama de BPDU capturada. Esto indica que la trama se capturó de un puente raíz. Todos los temporizadores se establecen en sus valores predeterminados.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una tabla con los campos de BPDU y su tamaño en bytes. La figura 2 muestra una captura de Wireshark de un paquete de árbol de expansión.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

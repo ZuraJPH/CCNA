@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.3 LSA de OSPF de tipo 2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA de OSPF de tipo 2</h1>
+        <div>
+          <p>Una LSA de tipo 2 solo existe para redes multiacceso y redes multiacceso sin difusión (NBMA), en donde se selecciona un DR y al menos dos routers en el segmento de diversos accesos. La LSA de tipo 2 contiene la ID del router y la dirección IP del DR, además de la ID del router de todos los demás routers en el segmento multiacceso. Se crea una LSA de tipo 2 para cada red multiacceso en el área. </p>
+          <p></p>
+          <p>El propósito de una LSA de tipo 2 es proporcionar a otros routers información sobre las redes multiacceso dentro de la misma área.</p>
+          <p></p>
+          <p>El DR emite LSA de tipo 2 masivas solo en el área en que se originan. Las LSA de tipo 2 no se reenvían fuera del área.</p>
+          <p></p>
+          <p>A las LSA de tipo 2 también se las denomina “entradas de enlace de red”. </p>
+          <p></p>
+          <p>Como se muestra en la figura, ABR1 es el DR de la red de Ethernet del área 1. Genera LSA de tipo 2 y los reenvía al área 1. ABR2 es el DR de la red de diversos accesos del área 0. No existen redes de diversos accesos en el área 2; por lo tanto, nunca se propagarán LSA de tipo 2 en dicha área.</p>
+          <p></p>
+          <p>La ID de estado de enlace para una LSA de red es la dirección IP de la interfaz del DR que la anuncia.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra los mensajes de LSA de tipo dos que se propagan entre las áreas después de que los genera el DR.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

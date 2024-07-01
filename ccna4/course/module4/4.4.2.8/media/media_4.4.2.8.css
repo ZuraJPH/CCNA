@@ -1,0 +1,9 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+.alg{
+	letter-spacing: -0.9px !important;
+	margin-left: 5px !important;
+}

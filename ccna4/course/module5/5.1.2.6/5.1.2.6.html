@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.6 Protección de acceso a dispositivos con 802.1X</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protección de acceso a dispositivos con 802.1X</h1>
+        <div>
+          <p>La autenticación de usuarios de red puede obtenerse con autenticación basada en servidor de AAA. El protocolo o estándar 802.1X puede servir para autenticar los dispositivos de red en la red corporativa. Hay otro protocolo que sirve para proteger las computadoras que se conectan a una LAN. </p>
+          <p></p>
+          <p>El estándar IEEE 802.1X define un control de acceso y un protocolo de autenticación basados en puertos. IEEE 802.1X evita que las estaciones de trabajo no autorizadas se conecten a una LAN a través de puertos de switch de acceso público. El servidor de autenticación autentica cada estación de trabajo que está conectada a un puerto del switch antes habilitar cualquier servicio ofrecido por el switch o la LAN.</p>
+          <p></p>
+          <p>Con la autenticación 802.1X basada en puertos, los dispositivos de la red cumplen roles específicos, como se muestra en la figura:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Cliente (suplicante)</b>: suele ser el puerto habilitado para 802.1X en el dispositivo. El dispositivo solicita acceso a los servicios de LAN y switch y luego responde a las solicitudes del switch. En la figura, el dispositivo es una PC que ejecuta software de cliente que cumple con 802.1X. Otro cliente suplicante es un dispositivo inalámbrico que cumple con 802.1X, como una computadora portátil o una tablet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Switch (autenticador)</b>: controla el acceso físico a la red según el estado de autenticación del cliente. El switch funciona como actúa intermediario (proxy) entre el cliente y el servidor de autenticación. Solicita la identificación de la información del cliente, verifica dicha información al servidor de autenticación y transmite una respuesta al cliente. El switch utiliza un agente de software de RADIUS que es responsable de encapsular y desencapsular las tramas del protocolo de autenticación extensible (EAP) y de interactuar con el servidor de autenticación. Otro dispositivo que podría actuar como autenticador es un punto de acceso inalámbrico que actúa como intermediario entre el cliente inalámbrico y el servidor de autenticación.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Servidor de autenticación</b>: realiza la autenticación concreta del cliente. El servidor de autenticación valida la identidad del cliente y notifica al switch o a otro autenticador, como un punto de acceso inalámbrico, si el cliente tiene autorización para acceder a los servicios de LAN y switch. Debido a que el switch actúa como el proxy, el servicio de autenticación es transparente para el cliente. El sistema de seguridad RADIUS con extensiones de EAP es el único servidor de autenticación admitido.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota</b>: Para obtener más información sobre 802.1X, consulte el curso de Seguridad CCNA (CCNA Security). </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura muestra una PC (suplicante) conectada a un switch (autenticador) que a su vez está conectado a un servidor de autenticación RADIUS.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

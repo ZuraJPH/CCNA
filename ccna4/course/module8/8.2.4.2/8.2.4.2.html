@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.2 Problema de conectividad de extremo a extremo que inicia la resolución de problemas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problema de conectividad de extremo a extremo que inicia la resolución de problemas</h1>
+        <div>
+          <p>Generalmente, lo que da inicio a un esfuerzo de resolución de problemas es la detección de un problema con la conectividad de extremo a extremo.  Dos de las utilidades más comunes que se utilizan para verificar un problema con la conectividad de extremo a extremo son <b>ping</b> y <b>traceroute</b>, que se muestran en la figura 1.</p>
+          <p></p>
+          <p>Es probable que ping sea la utilidad de prueba de conectividad más popular en el ámbito de la tecnología de redes y siempre formó parte del software IOS de Cisco.  Esta herramienta envía solicitudes de respuesta desde una dirección host especificada. El comando <b>ping</b> usa un protocolo de capa 3 que forma parte de la suite TCP/IP llamada ICMP. Ping usa la solicitud de eco ICMP y los paquetes de respuesta de eco ICMP. Si el host en la dirección especificada recibe la solicitud de eco ICMP, responde con un paquete de respuesta de eco ICMP. Se puede usar ping para verificar la conectividad de extremo a extremo tanto en IPv4 como en IPv6. En la figura 2, se muestra un ping satisfactorio de la PC1 al SRV1, en la dirección 172.16.1.100.</p>
+          <p></p>
+          <p>El comando <b>traceroute</b> en la figura 3 muestra la ruta que los paquetes IPv4 toman para llegar al destino. De manera similar a lo que sucede con el comando <b>ping</b>, se puede usar el comando <b>traceroute</b> del IOS de Cisco para IPv4 e IPv6. El comando <b>tracert</b> se usa con el sistema operativo Windows. El rastreo genera una lista de saltos, direcciones IP de router y la dirección IP de destino final a las que se llega correctamente a través de la ruta. Esta lista proporciona información importante sobre la verificación y la resolución de problemas. Si los datos llegan al destino, el rastreo indica la interfaz de cada router de la ruta. Si los datos fallan en algún salto de la ruta, se conoce la dirección del último router que respondió al rastreo. Esta dirección es un indicio de dónde se encuentran el problema o las restricciones de seguridad.</p>
+          <p></p>
+          <p>Según lo indicado, al proporcionar la dirección IPv6 como dirección de destino, las utilidades ping y traceroute se pueden usar para probar y diagnosticar la conectividad IPv6 de extremo a extremo. Al usarlas, las utilidades del IOS de Cisco reconocen si la dirección en cuestión es IPv4 o IPv6 y usan el protocolo apropiado para probar la conectividad. En la figura 4, se muestran los comandos <b>ping</b> y <b>traceroute</b> en el router R1 que se usa para probar la conectividad IPv6.</p>
+          <p></p>
+          <p>
+            <b>Nota:</b> El comando <b>traceroute</b> suele ejecutarse cuando falla el comando <b>ping</b>. Si el comando <b>ping</b> se ejecuta correctamente, el comando <b>traceroute</b> generalmente no es necesario porque el técnico ya sabe que existe conectividad.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 muestra una topología de laboratorio estándar de CCNA con asignación de direcciones y una PC que usa ping y traceroute para probar la conectividad de extremo a extremo. La figura 2 muestra la salida del comando ping en PC1 al servidor. La figura 3 muestra la salida del comando traceroute en PC1 al servidor. La figura 4 muestra la salida de los comandos ping y traceroute en el router 1 con direcciones IPv6 .</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

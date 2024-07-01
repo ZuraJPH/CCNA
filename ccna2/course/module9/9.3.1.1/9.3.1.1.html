@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.3.1.1 Los comandos show ip nat</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Los comandos show ip nat</h1>
+        <div>
+          <p>En la figura 1, se muestra el R2 habilitado para PAT, que usa el rango de direcciones de 209.165.200.226 a 209.165.200.240. </p>
+          <p></p>
+          <p>Cuando hay problemas de conectividad IPv4 en un entorno NAT, suele ser difícil determinar la causa del problema. El primer paso para resolverlo es descartar que la causa sea NAT. Siga estos pasos para verificar que NAT funcione como se espera:</p>
+          <p></p>
+          <p>
+            <b>Paso 1:</b> En función de la configuración, defina claramente lo que debe lograr la NAT. Esto puede revelar un problema con la configuración.</p>
+          <p></p>
+          <p>
+            <b>Paso 2:</b> Verifique que las traducciones de la tabla sean correctas con el comando <b>show ip nat translations</b>.</p>
+          <p></p>
+          <p>
+            <b>Paso 3:</b> Utilice los comandos <b>clear</b> y <b>debug</b> para verificar que NAT funcione como se espera. Verifique si se vuelven a crear las entradas dinámicas después de borrarlas.</p>
+          <p></p>
+          <p>
+            <b>Paso 4:</b> Revise en detalle lo que sucede con el paquete y verifique que los routers tengan la información de routing correcta para trasladar el paquete.</p>
+          <p></p>
+          <p></p>
+          <p>En la figura 2, se muestra el resultado de los comandos <b>show ip nat statistics</b> y <b>show ip nat translations</b>. Antes de utilizar los comandos <b>show</b>, se eliminan las estadísticas y entradas de NAT de la tabla de NAT con los comandos <b>clear ip nat statistics</b> y <b>clear ip nat translation *</b>. Una vez que el host en 192.168.10.10 accede mediante Telnet al servidor en 209.165.201.1, se muestran las estadísticas de NAT y la tabla de NAT para verificar que NAT funcione como se espera. </p>
+          <p></p>
+          <p>En un entorno de red simple, es útil controlar las estadísticas de NAT con el comando <b>show ip nat statistics</b>. El comando <b>show ip nat statistics</b> muestra información sobre la cantidad total de traducciones activas, los parámetros de configuración NAT, la cantidad de direcciones en el conjunto y la cantidad que se asignó. Sin embargo, en un entorno NAT más complejo, con varias traducciones en curso, es posible que este comando no identifique el problema de forma clara. Es posible que se deban ejecutar los comandos <b>debug</b> en el router.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra el router 2 con una red interna a la izquierda y una red externa a la derecha. La red interna contiene 2 computadoras y el router uno. La red externa contiene dos servidores.  En el router dos se utiliza PAT.  En la figura número dos se muestran las salidas de varios comandos.  Primero, la del comando "clear i. p. nat statistics", luego la del comando "clear i. p. nat translations star".  Ahora, un host se comunica por telnet con un servidor y se muestra el comando "show i. p. nat statistics" y luego el comando "show i. p. nat translations".</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

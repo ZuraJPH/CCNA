@@ -1,0 +1,27 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+
+#staticTxt{
+	margin-left:20px;
+	}
+pre{overflow-x:hidden !important;}
+
+#ID_s3_title{letter-spacing:-0.4px!important;}
+
+
+@media only screen and (device-width: 768px)
+{
+	#staticTxt
+	{
+	margin-top:13px;
+}
+}
+#static1{color:#f68026 !important;}

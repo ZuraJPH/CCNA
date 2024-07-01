@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.2 Recopilación de síntomas</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Recopilación de síntomas</h1>
+        <div>
+          <p>Al recolectar síntomas, es importante que el administrador reúna datos y evidencia para eliminar de manera progresiva posibles causas y, finalmente, identificar la causa raíz del problema. Al analizar la información, el administrador de red formula una hipótesis para proponer posibles causas y soluciones y, al mismo tiempo, eliminar otras.</p>
+          <p></p>
+          <p>Como se muestra en la figura 1, hay cinco pasos de recopilación de información. </p>
+          <p></p>
+          <p>
+            <b>Paso 1. Recopilación de información</b>: recopile información del informe de problema, los usuarios y los sistemas terminales afectados para definir el problema.</p>
+          <p></p>
+          <p>
+            <b>Paso 2. Determinación de propiedad</b>: si el problema está dentro del alcance de la organización, pase a la etapa siguiente. Si el problema está fuera del límite de control de la organización (por ejemplo, pérdida de conectividad a Internet fuera del sistema autónomo), comuníquese con un administrador del sistema externo antes de recolectar más síntomas de la red.</p>
+          <p></p>
+          <p>
+            <b>Paso 3. Limitación del alcance</b>: determine si el problema está en la capa del núcleo, de distribución o de acceso de la red. En la capa identificada, analice los síntomas existentes y use su conocimiento de la topología de la red para determinar qué equipo es la causa más probable.</p>
+          <p></p>
+          <p>
+            <b>Paso 4. Recopilación de síntomas de dispositivos sospechosos</b>: aplique un enfoque de solución de problemas por capas para recopilar los síntomas de hardware y software de los dispositivos sospechosos. Comience por la posibilidad más probable y use sus conocimientos y experiencia para determinar si es más probable que el problema sea de configuración del hardware o del software.</p>
+          <p></p>
+          <p>
+            <b>Paso 5: Documentación de los síntomas</b>: en ocasiones, el problema puede resolverse a partir de los síntomas documentados. De lo contrario, inicie la etapa de aislamiento del proceso general de resolución de problemas. </p>
+          <p></p>
+          <p>Para recopilar los síntomas de un dispositivo de red sospechoso, use los comandos de Cisco IOS y otras herramientas como:</p>
+          <p>
+            <ul>
+              <li>
+                los comandos <b>ping</b>, <b>traceroute</b> y <b>telnet</b></li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                los comandos <b>show</b> y<b>debug</b></li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Capturas de paquetes</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Registros de dispositivos</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La tabla de la figura 2 describe los comandos de Cisco IOS más comunes que se usan para recopilar los síntomas de un problema de red.</p>
+          <p></p>
+          <p>
+            <b>Nota</b>: El comando <b>debug</b> es una herramienta importante para recopilar síntomas, pero genera mucho tráfico de mensajes de consola y puede afectar notablemente el rendimiento del dispositivo de red. Si el comando <b>debug</b> debe ejecutarse en el horario de trabajo normal, avise a los usuarios de la red que se está ejecutando una medida de solución de problemas y que el rendimiento de la red puede verse afectado. Al terminar, recuerde deshabilitar la depuración.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figura 1 detalla los cinco pasos de recopilación de información. La figura 2 muestra una tabla con varios comandos de recopilación de información y su descripción correspondiente.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

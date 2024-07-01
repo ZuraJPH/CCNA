@@ -1,0 +1,1 @@
+La figura representa el diagrama estándar del laboratorio.  Hay un paquete de actualización que se transmite del router dos al router tres. Hay una leyenda que indica que el EIGRP es un protocolo de routing con vector de distancia sin clase.

@@ -1,0 +1,112 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Actividad: Identificar la terminología de mecanismos de QoS</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instrucciones]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Una cada término con su descripción.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correcto]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Ha relacionado correctamente cada término con su descripción.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrecto]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[No ha relacionado correctamente cada término con su descripción. Haga clic en Restablecer para intentarlo nuevamente.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Verificar]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Restablecer]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font size="15">Términos</font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Políticas con respecto al tráfico]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Prevención de<br>congestión]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Algoritmo WRED]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[Clasificación]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Modelado del tráfico]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[Marcación]]></text>
+</component>
+
+<component id='ID_s1_drag07'>
+	<text><![CDATA[Bits de CoS]]></text>
+</component>
+
+<component id='ID_s1_drag08'>
+	<text><![CDATA[802.1Q]]></text>
+</component><!--Questions--><component id='ID_s1_target_header'>
+	<text><![CDATA[<font size="15">Término</font>]]></text>
+</component>
+<component id='ID_s1_text_header'>
+	<text><![CDATA[<font size="15">Descripción</font>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Cuando la tasa de tráfico alcanza la tasa máxima configurada, se descarta el tráfico excedente.]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[Métodos de cola y planificación donde se almacena el tráfico en exceso mientras espera ser enviado a una interfaz de egreso.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[Provee administración del búfer y permite que el tráfico TCP se restablezca antes de que se agoten los búfers.]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[Determina a qué clase de paquetes o tramas de tráfico pertenecen.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[Conserva los paquetes en exceso en una cola y luego programa el exceso para la transmisión posterior en incrementos de tiempo.]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[Agregar un valor al encabezado de paquetes.]]></text> 
+</component>
+
+<component id="ID_s1_txt07">
+  <text><![CDATA[Se utiliza para identificar una marcación de capa 2 de QoS.]]></text> 
+</component>
+
+<component id="ID_s1_txt08">
+  <text><![CDATA[Una especificación de IEEE para la implementación de VLAN en las redes conmutadas de capa 2.]]></text> 
+</component>
+
+</textcomponents>

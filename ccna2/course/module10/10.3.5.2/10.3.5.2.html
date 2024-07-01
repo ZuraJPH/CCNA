@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.5.2 Activación de una licencia del tipo Evaluation Right-to-Use (derecho de uso para evaluación)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.5.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Activación de una licencia del tipo Evaluation Right-to-Use (derecho de uso para evaluación)</h1>
+        <div>
+          <p>Las licencias de evaluación se reemplazan por las licencias Evaluation Right-to-Use (RTU) después de 60 días. Una licencia de evaluación es válida durante un período de evaluación de 60 días. Después de 60 días, se lleva a cabo la transición de esta licencia a una licencia de RTU de forma automática. Estas licencias se encuentran disponibles en el sistema de honor y requieren que el cliente acepte el EULA. El EULA se aplica automáticamente a todas las licencias del software IOS de Cisco. </p>
+          <p></p>
+          <p>El comando del modo de configuración global <b>license accept end user agreement</b> se utiliza para configurar una aceptación única del EULA para todas las características y paquetes del software IOS de Cisco. Una vez que se emite el comando y que se acepta el EULA, este último se aplica automáticamente a todas las licencias del software IOS de Cisco, y no se le solicita al usuario que acepte el EULA durante la instalación de la licencia.</p>
+          <p></p>
+          <p>En la figura 1, se muestra cómo configurar una aceptación única del EULA:</p>
+          <p></p>
+          <p>Router(config)# <b>license accept end user agreement</b></p>
+          <p></p>
+          <p>Además, en la figura 1 se muestra el comando para activar una licencia de RTU de evaluación:</p>
+          <p></p>
+          <p>Router# <b>license boot module </b><i>nombre-módulo</i><b> technology-package </b><i>nombre-paquete</i></p>
+          <p></p>
+          <p>Utilice el comando <b>? </b>en lugar de los argumentos para determinar qué nombres de módulos y paquetes de software admitidos se encuentran disponibles en el router. Los nombres de los paquetes de tecnología para las plataformas de ISR G2 de Cisco son los siguientes:</p>
+          <p>
+            <ul>
+              <li>
+                <b>ipbasek9 </b>- Paquete de tecnología de IP Base.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>securityk9 </b> - Paquete de tecnología de Seguridad. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>datak9</b> - Paquete de tecnología de Datos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>uck9</b> - Paquete de Comunicaciones unificadas (no disponible en la serie 1900).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Nota:</b> para activar el paquete de software, se requiere volver a cargar mediante el comando <b>reload</b>.</p>
+          <p></p>
+          <p>Las licencias de evaluación son temporales, y se utilizan para evaluar un conjunto de características en hardware nuevo. Las licencias temporales se limitan a un período de uso específico (por ejemplo, 60 días).</p>
+          <p></p>
+          <p>Una vez que se instala correctamente una licencia, vuelva a cargar el router mediante el comando <b>reload</b>. El comando <b>show license</b> de la figura 2 verifica si se instaló la licencia.</p>
+          <p></p>
+          <p>Utilice el verificador de sintaxis de la figura 3 para aceptar el EULA y activar una licencia de paquetes de datos de RTU de evaluación en el router 1900.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura número uno se muestra la sintaxis para aceptar un acuerdo de usuario final e instalar una licencia de evaluación. En la figura número dos se muestra la salida del comando "show license" en el router uno.  El tipo de licencia tiene Eval Right To Use. En la figura número tres se muestra una actividad interactiva que permite que los alumnos practiquen cómo instalar una licencia de evaluación.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

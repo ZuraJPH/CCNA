@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.2 Módulos dependientes de protocolo</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Módulos dependientes de protocolo</h1>
+        <div>
+          <p>EIGRP tiene la capacidad para enrutar diferentes protocolos, incluidos IPv4 e IPv6. EIGRP lo realiza mediante el uso de módulos dependientes del protocolo (PDM, protocol-dependent modules). Los PDM también se utilizaban para admitir los protocolos de capa de red obsoletos Novell IPX y AppleTalk de Apple Computer. </p>
+          <p></p>
+          <p>Los PDM son responsables de tareas específicas de los protocolos de capa de red. Un ejemplo de esto es el módulo de EIGRP, que es responsable de enviar y recibir paquetes EIGRP encapsulados en IPv4. Este módulo también es responsable de analizar los paquetes EIGRP y de informar a DUAL la nueva información recibida. EIGRP pide a DUAL que tome decisiones de routing, pero los resultados se almacenan en la tabla de routing IPv4.</p>
+          <p></p>
+          <p>Los PDM son responsables de las tareas específicas de routing de cada protocolo de capa de red, incluido lo siguiente: </p>
+          <p>
+            <ul>
+              <li>Mantener las tablas de vecinos y de topología de los routers EIGRP que pertenecen a esa suite de protocolos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Armar y traducir paquetes específicos del protocolo para DUAL.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Conectar a DUAL con la tabla de routing específica del protocolo.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Calcular la métrica y pasar esa información a DUAL.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Implementar listas de filtrado y de acceso.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Realizar funciones de redistribución hacia otros protocolos de routing y desde ellos.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Redistribuir rutas detectadas por otros protocolos de routing.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cuando un router detecta un nuevo vecino, registra su dirección y su interfaz como una entrada en la tabla de vecinos. Existe una tabla de vecinos para cada módulo dependiente de protocolo, como IPv4. EIGRP también mantiene una tabla de topología. La tabla de topología contiene todos los destinos que anuncian los routers vecinos. También existe una tabla de topología separada para cada PDM.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura se muestra que el EIGRP mantiene tres tablas distintas para IPv4 e IPv6.  Estas son la tabla de vecinos, la tabla de topología y la tabla de routing.  Hay un total de seis tablas.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.5 Saturación con LSP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Saturación con LSP</h1>
+        <div>
+          <p>El cuarto paso en el proceso de routing de estado de enlace es que cada router satura con LSP a todos los vecinos, quienes luego almacenan todos los LSP recibidos en una base de datos.</p>
+          <p></p>
+          <p>Cada router satura a todos los demás routers de estado de enlace en el área de routing con su información de estado de enlace. Siempre que un router recibe un LSP de un router vecino, envía de inmediato dicho LSP a todas las demás interfaces, excepto la interfaz que recibió el LSP. Este proceso crea un efecto de saturación de los LSP desde todos los routers a través del área de routing.</p>
+          <p></p>
+          <p>Haga clic en <b>Reproducir</b> en la figura para ver una animación del envío masivo de LSP.</p>
+          <p></p>
+          <p>En la animación, observe cómo se lleva a cabo la saturación con LSP de forma casi inmediata después de ser recibidos sin ningún cálculo intermedio. Los protocolos de routing de estado de enlace calculan el algoritmo SPF una vez que finaliza la saturación. Como resultado, los protocolos de routing de estado de enlace logran la convergencia muy rápidamente.</p>
+          <p></p>
+          <p>Recuerde que los LSP no necesitan enviarse periódicamente. Un LSP sólo necesita enviarse:</p>
+          <p>
+            <ul>
+              <li>Durante el arranque inicial del proceso del protocolo de routing (por ejemplo, en el reinicio del router)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Cuando hay un cambio en la topología (por ejemplo, un enlace que se desactiva o activa, o una adyacencia de vecinos que se establece o se rompe)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Además de la información de estado de enlace, se incluye información adicional en el LSP, como los números de secuencia y la información de vencimiento, para ayudar a administrar el proceso de saturación. Cada router utiliza esta información para determinar si ya recibió el LSP de otro router o si el LSP tiene información más nueva que la contenida en la base de datos del estado de enlace. Este proceso permite que un router conserve sólo la información más actual en su base de datos de estado de enlace.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Cambiar el tamaño" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">En la figura uno, se muestran cuatro routers distribuidos en forma de diamante. Cada router está directamente conectado a sus dos routers vecinos.  Hay un router en el medio y está conectado a dos de los otros routers.  La figura es una animación que muestra cuando el router R1 envía paquetes de estado de enlace para todas las interfaces.  Cada router receptor de inmediato envía masivamente los LSP al recibirlos.</div>
+    </div>
+    <div id="login">Inicie sesión en <a href="http://netacad.com">netacad.com</a> antes de acceder a este curso.</div>
+  </body>
+</html>
